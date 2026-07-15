@@ -1,0 +1,143 @@
+// Soma 3D — Backend data model
+// Đa ngữ: mỗi tên có 3 cột vi/en/zh + tên Latin (chuẩn TA2).
+
+generator client {
+  provider = "prisma-client"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+/// Loài: người, chó, mèo... (mở rộng sang thú y)
+model Species {
+  id     String  @id @default(cuid())
+  code   String  @unique // "human", "canine", "feline"
+  nameVi String
+  nameEn String
+  nameZh String
+  latin  String? // Homo sapiens, Canis familiaris...
+
+  systems    AnatomySystem[]
+  structures Structure[]
+
+  @@map("species")
+}
+
+/// Hệ cơ quan (xương, cơ, thần kinh...)
+model AnatomySystem {
+  id     String  @id @default(cuid())
+  code   String  @unique // "skeletal", "muscular"...
+  nameVi String
+  nameEn String
+  nameZh String
+  latin  String?
+  order  Int     @default(0)
+
+  speciesId String
+  species   Species @relation(fields: [speciesId], references: [id])
+
+  structures Structure[]
+  quizzes    QuizQuestion[]
+
+  @@map("anatomy_systems")
+}
+
+/// Cấu trúc giải phẫu — có phân cấp cha/con, gắn với mesh trong model glTF.
+model Structure {
+  id            String  @id @default(cuid())
+  code          String  @unique
+  meshName      String? // tên mesh trong file glTF (khớp Z-Anatomy)
+  nameVi        String
+  nameEn        String
+  nameZh        String
+  latin         String? // tên Latin theo TA2
+  taCode        String? // mã Terminologia Anatomica
+  descriptionVi String? @db.Text
+  descriptionEn String? @db.Text
+  descriptionZh String? @db.Text
+
+  systemId String
+  system   AnatomySystem @relation(fields: [systemId], references: [id])
+
+  speciesId String
+  species   Species @relation(fields: [speciesId], references: [id])
+
+  parentId String?
+  parent   Structure?  @relation("StructureTree", fields: [parentId], references: [id])
+  children Structure[] @relation("StructureTree")
+
+  pathologies Pathology[]
+
+  @@index([systemId])
+  @@index([parentId])
+  @@map("structures")
+}
+
+/// Bệnh lý gắn vào cấu trúc — luôn kèm nguồn trích dẫn.
+model Pathology {
+  id            String  @id @default(cuid())
+  nameVi        String
+  nameEn        String
+  nameZh        String
+  latin         String?
+  icdCode       String? // ICD-11
+  severity      String? // "info" | "warning" | "critical"
+  descriptionVi String? @db.Text
+  source        String // Gray's Anatomy 42e, Braunwald's...
+
+  structureId String
+  structure   Structure @relation(fields: [structureId], references: [id])
+
+  @@index([structureId])
+  @@map("pathologies")
+}
+
+/// Câu hỏi trắc nghiệm theo hệ cơ quan.
+model QuizQuestion {
+  id          String  @id @default(cuid())
+  promptVi    String  @db.Text
+  promptEn    String  @db.Text
+  promptZh    String  @db.Text
+  explanation String? @db.Text
+  source      String? // nguồn y khoa
+
+  systemId String
+  system   AnatomySystem @relation(fields: [systemId], references: [id])
+
+  options QuizOption[]
+
+  @@index([systemId])
+  @@map("quiz_questions")
+}
+
+model QuizOption {
+  id        String  @id @default(cuid())
+  textVi    String
+  textEn    String
+  textZh    String
+  latin     String?
+  isCorrect Boolean @default(false)
+
+  questionId String
+  question   QuizQuestion @relation(fields: [questionId], references: [id], onDelete: Cascade)
+
+  @@index([questionId])
+  @@map("quiz_options")
+}
+
+/// Bộ sưu tập chuyên gia (Expert Collections trên trang home).
+model Collection {
+  id         String  @id @default(cuid())
+  titleVi    String
+  titleEn    String
+  titleZh    String
+  authorName String?
+  authorRole String?
+  isPremium  Boolean @default(false)
+  coverColor String? // màu footer card: blue/purple/teal
+  order      Int     @default(0)
+
+  @@map("collections")
+}

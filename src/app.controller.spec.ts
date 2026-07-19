@@ -15,8 +15,11 @@ describe('AppController', () => {
   });
 
   describe('root', () => {
-    it('should return "Hello World!"', () => {
-      expect(appController.getHello()).toBe('Hello World!');
+    it('should return API info with docs link', () => {
+      const info = appController.getInfo();
+      expect(info.name).toBe('Soma 3D API');
+      expect(info.docs).toBe('/api/docs');
+      expect(info.endpoints).toContain('/api/structures');
     });
   });
 });

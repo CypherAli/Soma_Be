@@ -2,8 +2,7 @@
 // Đa ngữ: mỗi tên có 3 cột vi/en/zh + tên Latin (chuẩn TA2).
 
 generator client {
-  provider = "prisma-client"
-  output   = "../generated/prisma"
+  provider = "prisma-client-js"
 }
 
 datasource db {

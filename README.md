@@ -1,33 +1,74 @@
-# Soma 3D — Backend (Soma_Be)
+# Soma 3D — Backend API
 
-> API + cơ sở dữ liệu cho nền tảng giải phẫu 3D **Soma 3D**.
-> Frontend: [Soma_Fe](https://github.com/CypherAli/Soma_Fe).
+API cho atlas giải phẫu 3D tương tác **Soma 3D**. Dữ liệu đa ngữ (Việt / Anh / Trung),
+chuẩn thuật ngữ Terminologia Anatomica (TA2), thiết kế mở rộng cho cả người và thú y.
 
 ## Công nghệ
 
-NestJS · Prisma · PostgreSQL · TypeScript
+- **NestJS 11** (kiến trúc module hoá)
+- **Prisma 7** ORM + **PostgreSQL** (qua driver adapter `@prisma/adapter-pg`)
+- **Swagger / OpenAPI** — tài liệu API tương tác
+- **class-validator** — kiểm tra dữ liệu đầu vào tự động
 
 ## Mô hình dữ liệu
 
-Xem [`prisma/schema.prisma`](./prisma/schema.prisma):
+| Model | Vai trò |
+|-------|---------|
+| `Species` | Loài (human, canine, feline...) — mở rộng thú y |
+| `AnatomySystem` | Hệ cơ quan (xương, cơ, thần kinh...) |
+| `Structure` | Cấu trúc giải phẫu, phân cấp cha/con, gắn mesh glTF |
+| `Pathology` | Bệnh lý gắn vào cấu trúc — **bắt buộc có nguồn trích dẫn** |
+| `QuizQuestion` / `QuizOption` | Câu hỏi trắc nghiệm theo hệ |
+| `Collection` | Bộ sưu tập chuyên gia |
 
-- **Species** — loài (người, chó...), mở rộng sang thú y
-- **AnatomySystem** — hệ cơ quan
-- **Structure** — cấu trúc giải phẫu (phân cấp cha/con, gắn mesh glTF, tên đa ngữ + Latin/TA2)
-- **Pathology** — bệnh lý gắn cấu trúc, kèm nguồn trích dẫn + mã ICD-11
-- **QuizQuestion / QuizOption** — trắc nghiệm theo hệ
-- **Collection** — bộ sưu tập chuyên gia
-
-## Chạy dự án
+## Chạy local
 
 ```bash
+# 1. Cài phụ thuộc
 npm install
-cp .env.example .env      # điền DATABASE_URL
-npx prisma migrate dev     # tạo bảng
-npm run start:dev          # chạy API
+
+# 2. Tạo file .env từ mẫu, điền DATABASE_URL trỏ tới PostgreSQL của bạn
+cp .env.example .env
+
+# 3. Sinh Prisma client + tạo bảng
+npm run prisma:generate
+npm run prisma:migrate
+
+# 4. Nạp dữ liệu mẫu (loài, hệ, cấu trúc, bệnh lý, trắc nghiệm)
+npm run db:seed
+
+# 5. Chạy server (mặc định cổng 4000)
+npm run start:dev
 ```
 
-## Ghi chú
+- API gốc: `http://localhost:4000/api`
+- Tài liệu Swagger: `http://localhost:4000/api/docs`
+- Kiểm tra sức khoẻ: `http://localhost:4000/api/health`
 
-- Dữ liệu đa ngữ: mỗi tên có 3 cột `vi/en/zh` + `latin`.
-- Deploy dự kiến trên Render.
+## Nhóm endpoint
+
+Mọi endpoint đều có tiền tố `/api`. Chi tiết đầy đủ xem tại `/api/docs`.
+
+| Nhóm | Endpoint chính |
+|------|----------------|
+| `species` | `GET/POST /species`, `GET/PATCH/DELETE /species/:code` |
+| `anatomy-systems` | `GET /anatomy-systems?species=`, `GET /anatomy-systems/:code` |
+| `structures` | `GET /structures?system=&species=&q=`, `GET /structures/:code` |
+| `pathologies` | `GET /pathologies?structure=`, CRUD theo `:id` |
+| `quizzes` | `GET /quizzes?system=`, tạo câu hỏi kèm đáp án lồng nhau |
+| `collections` | CRUD bộ sưu tập chuyên gia |
+| `health` | Kiểm tra API + kết nối database |
+
+## Nguyên tắc dữ liệu
+
+Nội dung y khoa (bệnh lý, giải thích trắc nghiệm) **luôn kèm nguồn trích dẫn thật**
+(Gray's Anatomy, Braunwald's, Sabiston...), không bịa. Dữ liệu cấu trúc khớp 1-1 với
+các model 3D thật đã dựng ở frontend.
+
+## Triển khai (Render)
+
+```bash
+npm run build
+npm run prisma:deploy   # áp migration lên DB production
+npm run start:prod
+```

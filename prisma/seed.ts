@@ -73,6 +73,10 @@ const structures: { code: string; nameVi: string; nameEn: string; nameZh: string
   { code: "co-dui-mong", nameVi: "Cơ Đùi và Mông", nameEn: "Thigh and Gluteal Muscles", nameZh: "大腿与臀部肌肉", system: "muscular" },
   { code: "co-canh-tay", nameVi: "Cơ Cánh tay", nameEn: "Arm Muscles", nameZh: "上臂肌肉", system: "muscular" },
   { code: "co-bung", nameVi: "Cơ Thành bụng trước-bên", nameEn: "Abdominal Wall Muscles", nameZh: "腹前外侧壁肌肉", system: "muscular" },
+  // Hệ hô hấp (3)
+  { code: "giai-phau-phoi", nameVi: "Giải phẫu Phổi", nameEn: "Lung Anatomy", nameZh: "肺解剖", system: "respiratory" },
+  { code: "thanh-quan", nameVi: "Giải phẫu Thanh quản", nameEn: "Larynx Anatomy", nameZh: "喉解剖", system: "respiratory" },
+  { code: "co-hoanh", nameVi: "Cơ hoành", nameEn: "Diaphragm", nameZh: "膈肌", system: "respiratory" },
 ];
 
 async function main() {

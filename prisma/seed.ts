@@ -81,6 +81,8 @@ const structures: { code: string; nameVi: string; nameEn: string; nameZh: string
   { code: "he-tiet-nieu", nameVi: "Hệ tiết niệu", nameEn: "Urinary System", nameZh: "泌尿系统", system: "urinary" },
   // Hệ thị giác (1)
   { code: "giai-phau-mat", nameVi: "Giải phẫu Mắt", nameEn: "Eye Anatomy", nameZh: "眼解剖", system: "visual" },
+  // Hệ nội tiết (1)
+  { code: "he-noi-tiet", nameVi: "Hệ nội tiết", nameEn: "Endocrine System", nameZh: "内分泌系统", system: "endocrine" },
 ];
 
 async function main() {

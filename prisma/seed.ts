@@ -77,6 +77,8 @@ const structures: { code: string; nameVi: string; nameEn: string; nameZh: string
   { code: "giai-phau-phoi", nameVi: "Giải phẫu Phổi", nameEn: "Lung Anatomy", nameZh: "肺解剖", system: "respiratory" },
   { code: "thanh-quan", nameVi: "Giải phẫu Thanh quản", nameEn: "Larynx Anatomy", nameZh: "喉解剖", system: "respiratory" },
   { code: "co-hoanh", nameVi: "Cơ hoành", nameEn: "Diaphragm", nameZh: "膈肌", system: "respiratory" },
+  // Hệ tiết niệu (1)
+  { code: "he-tiet-nieu", nameVi: "Hệ tiết niệu", nameEn: "Urinary System", nameZh: "泌尿系统", system: "urinary" },
 ];
 
 async function main() {

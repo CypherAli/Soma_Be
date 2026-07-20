@@ -83,6 +83,14 @@ const structures: { code: string; nameVi: string; nameEn: string; nameZh: string
   { code: "giai-phau-mat", nameVi: "Giải phẫu Mắt", nameEn: "Eye Anatomy", nameZh: "眼解剖", system: "visual" },
   // Hệ nội tiết (1)
   { code: "he-noi-tiet", nameVi: "Hệ nội tiết", nameEn: "Endocrine System", nameZh: "内分泌系统", system: "endocrine" },
+  // Hệ thính giác (1)
+  { code: "he-thinh-giac", nameVi: "Hệ thính giác", nameEn: "Auditory System", nameZh: "听觉系统", system: "auditory" },
+  // Hệ sinh sản (1) — chỉ có nam; nguồn dữ liệu không có cơ quan sinh dục nữ
+  { code: "he-sinh-san-nam", nameVi: "Hệ sinh sản nam", nameEn: "Male Reproductive System", nameZh: "男性生殖系统", system: "reproductive-male" },
+  // Mạc (1)
+  { code: "he-mac", nameVi: "Hệ mạc", nameEn: "Fascial System", nameZh: "筋膜系统", system: "fascia" },
+  // Mô liên kết (1)
+  { code: "mo-lien-ket", nameVi: "Mô liên kết đặc", nameEn: "Dense Connective Tissue", nameZh: "致密结缔组织", system: "connective" },
 ];
 
 async function main() {

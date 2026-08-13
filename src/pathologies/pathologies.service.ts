@@ -8,8 +8,11 @@ export class PathologiesService {
   constructor(private readonly prisma: PrismaService) {}
 
   private async resolveStructureId(structureCode: string) {
-    const structure = await this.prisma.structure.findUnique({ where: { code: structureCode } });
-    if (!structure) throw new NotFoundException(`Structure "${structureCode}" không tồn tại`);
+    const structure = await this.prisma.structure.findUnique({
+      where: { code: structureCode },
+    });
+    if (!structure)
+      throw new NotFoundException(`Structure "${structureCode}" không tồn tại`);
     return structure.id;
   }
 
@@ -22,7 +25,11 @@ export class PathologiesService {
   findAll(structureCode?: string) {
     return this.prisma.pathology.findMany({
       where: structureCode
-        ? { structure: { OR: [{ code: structureCode }, { meshName: structureCode }] } }
+        ? {
+            structure: {
+              OR: [{ code: structureCode }, { meshName: structureCode }],
+            },
+          }
         : undefined,
       include: {
         structure: {
@@ -33,10 +40,15 @@ export class PathologiesService {
             nameEn: true,
             nameZh: true,
             latin: true,
-            system: { select: { code: true, nameVi: true, nameEn: true, nameZh: true } },
+            system: {
+              select: { code: true, nameVi: true, nameEn: true, nameZh: true },
+            },
           },
         },
-        citations: { include: { source: true }, orderBy: { source: { year: 'desc' } } },
+        citations: {
+          include: { source: true },
+          orderBy: { source: { year: 'desc' } },
+        },
       },
       orderBy: { nameVi: 'asc' },
     });
@@ -47,7 +59,8 @@ export class PathologiesService {
       where: { id },
       include: { structure: true, citations: { include: { source: true } } },
     });
-    if (!pathology) throw new NotFoundException(`Pathology "${id}" không tồn tại`);
+    if (!pathology)
+      throw new NotFoundException(`Pathology "${id}" không tồn tại`);
     return pathology;
   }
 
@@ -55,7 +68,8 @@ export class PathologiesService {
     await this.findOne(id);
     const { structureCode, ...rest } = dto;
     const data: Record<string, unknown> = { ...rest };
-    if (structureCode) data.structureId = await this.resolveStructureId(structureCode);
+    if (structureCode)
+      data.structureId = await this.resolveStructureId(structureCode);
     return this.prisma.pathology.update({ where: { id }, data });
   }
 

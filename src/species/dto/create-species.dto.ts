@@ -2,7 +2,10 @@ import { ApiProperty, ApiPropertyOptional } from '@nestjs/swagger';
 import { IsOptional, IsString, MinLength } from 'class-validator';
 
 export class CreateSpeciesDto {
-  @ApiProperty({ example: 'human', description: 'Mã định danh duy nhất (human, canine, feline...)' })
+  @ApiProperty({
+    example: 'human',
+    description: 'Mã định danh duy nhất (human, canine, feline...)',
+  })
   @IsString()
   @MinLength(2)
   code!: string;
@@ -22,7 +25,10 @@ export class CreateSpeciesDto {
   @MinLength(1)
   nameZh!: string;
 
-  @ApiPropertyOptional({ example: 'Homo sapiens', description: 'Tên Latin (nhị thức)' })
+  @ApiPropertyOptional({
+    example: 'Homo sapiens',
+    description: 'Tên Latin (nhị thức)',
+  })
   @IsOptional()
   @IsString()
   latin?: string;

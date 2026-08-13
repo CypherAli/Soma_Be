@@ -12,14 +12,20 @@ export class AnatomySystemsService {
   constructor(private readonly prisma: PrismaService) {}
 
   private async resolveSpeciesId(speciesCode: string) {
-    const species = await this.prisma.species.findUnique({ where: { code: speciesCode } });
-    if (!species) throw new NotFoundException(`Species "${speciesCode}" không tồn tại`);
+    const species = await this.prisma.species.findUnique({
+      where: { code: speciesCode },
+    });
+    if (!species)
+      throw new NotFoundException(`Species "${speciesCode}" không tồn tại`);
     return species.id;
   }
 
   async create(dto: CreateAnatomySystemDto) {
-    const exists = await this.prisma.anatomySystem.findUnique({ where: { code: dto.code } });
-    if (exists) throw new ConflictException(`Anatomy system "${dto.code}" đã tồn tại`);
+    const exists = await this.prisma.anatomySystem.findUnique({
+      where: { code: dto.code },
+    });
+    if (exists)
+      throw new ConflictException(`Anatomy system "${dto.code}" đã tồn tại`);
     const { speciesCode, ...rest } = dto;
     const speciesId = await this.resolveSpeciesId(speciesCode);
     return this.prisma.anatomySystem.create({ data: { ...rest, speciesId } });
@@ -38,7 +44,8 @@ export class AnatomySystemsService {
       where: { code },
       include: { structures: { orderBy: { nameVi: 'asc' } }, species: true },
     });
-    if (!system) throw new NotFoundException(`Anatomy system "${code}" không tồn tại`);
+    if (!system)
+      throw new NotFoundException(`Anatomy system "${code}" không tồn tại`);
     return system;
   }
 

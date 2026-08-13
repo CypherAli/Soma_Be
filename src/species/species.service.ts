@@ -12,8 +12,11 @@ export class SpeciesService {
   constructor(private readonly prisma: PrismaService) {}
 
   async create(dto: CreateSpeciesDto) {
-    const exists = await this.prisma.species.findUnique({ where: { code: dto.code } });
-    if (exists) throw new ConflictException(`Species code "${dto.code}" đã tồn tại`);
+    const exists = await this.prisma.species.findUnique({
+      where: { code: dto.code },
+    });
+    if (exists)
+      throw new ConflictException(`Species code "${dto.code}" đã tồn tại`);
     return this.prisma.species.create({ data: dto });
   }
 
@@ -26,7 +29,8 @@ export class SpeciesService {
       where: { code },
       include: { _count: { select: { systems: true, structures: true } } },
     });
-    if (!species) throw new NotFoundException(`Species "${code}" không tồn tại`);
+    if (!species)
+      throw new NotFoundException(`Species "${code}" không tồn tại`);
     return species;
   }
 

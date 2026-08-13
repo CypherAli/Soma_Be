@@ -46,7 +46,10 @@ async function bootstrap() {
 
   const port = process.env.PORT ?? 4000;
   await app.listen(port);
-  // eslint-disable-next-line no-console
-  console.log(`Soma 3D API chạy tại http://localhost:${port}/api — tài liệu: /api/docs`);
+
+  console.log(
+    `Soma 3D API chạy tại http://localhost:${port}/api — tài liệu: /api/docs`,
+  );
 }
-bootstrap();
+// `void`: bootstrap là promise chạy suốt vòng đời tiến trình, không ai await.
+void bootstrap();

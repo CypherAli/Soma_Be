@@ -2,12 +2,18 @@ import { ApiProperty, ApiPropertyOptional } from '@nestjs/swagger';
 import { IsOptional, IsString, MinLength } from 'class-validator';
 
 export class CreateStructureDto {
-  @ApiProperty({ example: 'giai-phau-tim', description: 'Mã cấu trúc duy nhất (thường là slug scene)' })
+  @ApiProperty({
+    example: 'giai-phau-tim',
+    description: 'Mã cấu trúc duy nhất (thường là slug scene)',
+  })
   @IsString()
   @MinLength(2)
   code!: string;
 
-  @ApiPropertyOptional({ example: 'Heart', description: 'Tên mesh trong file glTF (khớp Z-Anatomy)' })
+  @ApiPropertyOptional({
+    example: 'Heart',
+    description: 'Tên mesh trong file glTF (khớp Z-Anatomy)',
+  })
   @IsOptional()
   @IsString()
   meshName?: string;
@@ -32,7 +38,10 @@ export class CreateStructureDto {
   @IsString()
   latin?: string;
 
-  @ApiPropertyOptional({ example: 'A12.1.00.001', description: 'Mã Terminologia Anatomica' })
+  @ApiPropertyOptional({
+    example: 'A12.1.00.001',
+    description: 'Mã Terminologia Anatomica',
+  })
   @IsOptional()
   @IsString()
   taCode?: string;
@@ -52,7 +61,10 @@ export class CreateStructureDto {
   @IsString()
   descriptionZh?: string;
 
-  @ApiProperty({ example: 'cardiovascular', description: 'Mã hệ cơ quan chứa cấu trúc' })
+  @ApiProperty({
+    example: 'cardiovascular',
+    description: 'Mã hệ cơ quan chứa cấu trúc',
+  })
   @IsString()
   systemCode!: string;
 

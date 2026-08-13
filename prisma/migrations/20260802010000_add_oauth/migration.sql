@@ -1,0 +1,10 @@
+ALTER TABLE "users" ALTER COLUMN "passwordHash" DROP NOT NULL;
+ALTER TABLE "users" ADD COLUMN "googleId" TEXT;
+ALTER TABLE "users" ADD COLUMN "githubId" TEXT;
+ALTER TABLE "users" ADD COLUMN "facebookId" TEXT;
+CREATE UNIQUE INDEX "users_googleId_key" ON "users"("googleId");
+CREATE UNIQUE INDEX "users_githubId_key" ON "users"("githubId");
+CREATE UNIQUE INDEX "users_facebookId_key" ON "users"("facebookId");
+CREATE TABLE "oauth_states" ("id" TEXT NOT NULL,"stateHash" TEXT NOT NULL,"provider" TEXT NOT NULL,"codeVerifier" TEXT NOT NULL,"expiresAt" TIMESTAMP(3) NOT NULL,"createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,CONSTRAINT "oauth_states_pkey" PRIMARY KEY ("id"));
+CREATE UNIQUE INDEX "oauth_states_stateHash_key" ON "oauth_states"("stateHash");
+CREATE INDEX "oauth_states_expiresAt_idx" ON "oauth_states"("expiresAt");

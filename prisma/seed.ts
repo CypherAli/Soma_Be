@@ -91,6 +91,10 @@ const structures: { code: string; nameVi: string; nameEn: string; nameZh: string
   { code: "he-mac", nameVi: "Hệ mạc", nameEn: "Fascial System", nameZh: "筋膜系统", system: "fascia" },
   // Mô liên kết (1)
   { code: "mo-lien-ket", nameVi: "Mô liên kết đặc", nameEn: "Dense Connective Tissue", nameZh: "致密结缔组织", system: "connective" },
+  // Hệ thần kinh (3, còn đang tiếp tục)
+  { code: "than-nao-day-so", nameVi: "Thân não & 12 Đôi Dây Thần Kinh Sọ", nameEn: "Brainstem & 12 Cranial Nerves", nameZh: "脑干与12对脑神经", system: "nervous" },
+  { code: "tieu-nao", nameVi: "Tiểu Não", nameEn: "Cerebellum", nameZh: "小脑", system: "nervous" },
+  { code: "gian-nao-he-vien", nameVi: "Gian Não, Nhân Nền & Hệ Viền", nameEn: "Diencephalon, Basal Ganglia & Limbic System", nameZh: "间脑、基底核与边缘系统", system: "nervous" },
 ];
 
 async function main() {

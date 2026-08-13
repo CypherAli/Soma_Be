@@ -21,8 +21,23 @@ export class PathologiesService {
 
   findAll(structureCode?: string) {
     return this.prisma.pathology.findMany({
-      where: structureCode ? { structure: { code: structureCode } } : undefined,
-      include: { structure: { select: { code: true, nameVi: true, nameEn: true } } },
+      where: structureCode
+        ? { structure: { OR: [{ code: structureCode }, { meshName: structureCode }] } }
+        : undefined,
+      include: {
+        structure: {
+          select: {
+            code: true,
+            meshName: true,
+            nameVi: true,
+            nameEn: true,
+            nameZh: true,
+            latin: true,
+            system: { select: { code: true, nameVi: true, nameEn: true, nameZh: true } },
+          },
+        },
+        citations: { include: { source: true }, orderBy: { source: { year: 'desc' } } },
+      },
       orderBy: { nameVi: 'asc' },
     });
   }
@@ -30,7 +45,7 @@ export class PathologiesService {
   async findOne(id: string) {
     const pathology = await this.prisma.pathology.findUnique({
       where: { id },
-      include: { structure: true },
+      include: { structure: true, citations: { include: { source: true } } },
     });
     if (!pathology) throw new NotFoundException(`Pathology "${id}" không tồn tại`);
     return pathology;

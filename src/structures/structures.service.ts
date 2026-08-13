@@ -14,21 +14,36 @@ export class StructuresService {
   private async resolveRefs(dto: Partial<CreateStructureDto>) {
     const data: Record<string, unknown> = {};
     if (dto.systemCode) {
-      const system = await this.prisma.anatomySystem.findUnique({ where: { code: dto.systemCode } });
-      if (!system) throw new NotFoundException(`Anatomy system "${dto.systemCode}" không tồn tại`);
+      const system = await this.prisma.anatomySystem.findUnique({
+        where: { code: dto.systemCode },
+      });
+      if (!system)
+        throw new NotFoundException(
+          `Anatomy system "${dto.systemCode}" không tồn tại`,
+        );
       data.systemId = system.id;
     }
     if (dto.speciesCode) {
-      const species = await this.prisma.species.findUnique({ where: { code: dto.speciesCode } });
-      if (!species) throw new NotFoundException(`Species "${dto.speciesCode}" không tồn tại`);
+      const species = await this.prisma.species.findUnique({
+        where: { code: dto.speciesCode },
+      });
+      if (!species)
+        throw new NotFoundException(
+          `Species "${dto.speciesCode}" không tồn tại`,
+        );
       data.speciesId = species.id;
     }
     if (dto.parentCode !== undefined) {
       if (dto.parentCode === null || dto.parentCode === '') {
         data.parentId = null;
       } else {
-        const parent = await this.prisma.structure.findUnique({ where: { code: dto.parentCode } });
-        if (!parent) throw new NotFoundException(`Structure cha "${dto.parentCode}" không tồn tại`);
+        const parent = await this.prisma.structure.findUnique({
+          where: { code: dto.parentCode },
+        });
+        if (!parent)
+          throw new NotFoundException(
+            `Structure cha "${dto.parentCode}" không tồn tại`,
+          );
         data.parentId = parent.id;
       }
     }
@@ -36,11 +51,20 @@ export class StructuresService {
   }
 
   async create(dto: CreateStructureDto) {
-    const exists = await this.prisma.structure.findUnique({ where: { code: dto.code } });
-    if (exists) throw new ConflictException(`Structure "${dto.code}" đã tồn tại`);
+    const exists = await this.prisma.structure.findUnique({
+      where: { code: dto.code },
+    });
+    if (exists)
+      throw new ConflictException(`Structure "${dto.code}" đã tồn tại`);
     const { systemCode, speciesCode, parentCode, ...rest } = dto;
-    const refs = await this.resolveRefs({ systemCode, speciesCode, parentCode });
-    return this.prisma.structure.create({ data: { ...rest, ...(refs as object) } as never });
+    const refs = await this.resolveRefs({
+      systemCode,
+      speciesCode,
+      parentCode,
+    });
+    return this.prisma.structure.create({
+      data: { ...rest, ...(refs as object) } as never,
+    });
   }
 
   findAll(params: { system?: string; species?: string; q?: string }) {
@@ -74,14 +98,19 @@ export class StructuresService {
         children: { orderBy: { nameVi: 'asc' } },
       },
     });
-    if (!structure) throw new NotFoundException(`Structure "${code}" không tồn tại`);
+    if (!structure)
+      throw new NotFoundException(`Structure "${code}" không tồn tại`);
     return structure;
   }
 
   async update(code: string, dto: UpdateStructureDto) {
     await this.findOne(code);
     const { systemCode, speciesCode, parentCode, ...rest } = dto;
-    const refs = await this.resolveRefs({ systemCode, speciesCode, parentCode });
+    const refs = await this.resolveRefs({
+      systemCode,
+      speciesCode,
+      parentCode,
+    });
     return this.prisma.structure.update({
       where: { code },
       data: { ...rest, ...(refs as object) } as never,

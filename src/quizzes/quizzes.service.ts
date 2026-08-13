@@ -7,8 +7,13 @@ export class QuizzesService {
   constructor(private readonly prisma: PrismaService) {}
 
   private async resolveSystemId(systemCode: string) {
-    const system = await this.prisma.anatomySystem.findUnique({ where: { code: systemCode } });
-    if (!system) throw new NotFoundException(`Anatomy system "${systemCode}" không tồn tại`);
+    const system = await this.prisma.anatomySystem.findUnique({
+      where: { code: systemCode },
+    });
+    if (!system)
+      throw new NotFoundException(
+        `Anatomy system "${systemCode}" không tồn tại`,
+      );
     return system.id;
   }
 
@@ -24,7 +29,10 @@ export class QuizzesService {
   findAll(systemCode?: string) {
     return this.prisma.quizQuestion.findMany({
       where: systemCode ? { system: { code: systemCode } } : undefined,
-      include: { options: true, system: { select: { code: true, nameVi: true } } },
+      include: {
+        options: true,
+        system: { select: { code: true, nameVi: true } },
+      },
       orderBy: { id: 'asc' },
     });
   }

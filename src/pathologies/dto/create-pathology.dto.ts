@@ -27,7 +27,10 @@ export class CreatePathologyDto {
   @IsString()
   icdCode?: string;
 
-  @ApiPropertyOptional({ example: 'critical', enum: ['info', 'warning', 'critical'] })
+  @ApiPropertyOptional({
+    example: 'critical',
+    enum: ['info', 'warning', 'critical'],
+  })
   @IsOptional()
   @IsIn(['info', 'warning', 'critical'])
   severity?: string;
@@ -45,7 +48,10 @@ export class CreatePathologyDto {
   @MinLength(3)
   source!: string;
 
-  @ApiProperty({ example: 'giai-phau-tim', description: 'Mã cấu trúc mà bệnh lý gắn vào' })
+  @ApiProperty({
+    example: 'giai-phau-tim',
+    description: 'Mã cấu trúc mà bệnh lý gắn vào',
+  })
   @IsString()
   structureCode!: string;
 }

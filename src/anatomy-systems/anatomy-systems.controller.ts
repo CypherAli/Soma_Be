@@ -26,7 +26,11 @@ export class AnatomySystemsController {
 
   @Get()
   @ApiOperation({ summary: 'Danh sách hệ cơ quan (kèm số cấu trúc)' })
-  @ApiQuery({ name: 'species', required: false, description: 'Lọc theo mã loài' })
+  @ApiQuery({
+    name: 'species',
+    required: false,
+    description: 'Lọc theo mã loài',
+  })
   findAll(@Query('species') species?: string) {
     return this.anatomySystemsService.findAll(species);
   }

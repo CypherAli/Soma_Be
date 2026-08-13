@@ -66,7 +66,10 @@ export class CreateQuizDto {
   @IsString()
   systemCode!: string;
 
-  @ApiProperty({ type: [CreateQuizOptionDto], description: 'Danh sách đáp án (ít nhất 2)' })
+  @ApiProperty({
+    type: [CreateQuizOptionDto],
+    description: 'Danh sách đáp án (ít nhất 2)',
+  })
   @IsArray()
   @ArrayMinSize(2)
   @ValidateNested({ each: true })

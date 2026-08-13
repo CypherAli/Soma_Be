@@ -5,7 +5,8 @@ export class AppService {
   getInfo() {
     return {
       name: 'Soma 3D API',
-      description: 'Atlas giải phẫu 3D tương tác — API dữ liệu đa ngữ Việt/Anh/Trung',
+      description:
+        'Atlas giải phẫu 3D tương tác — API dữ liệu đa ngữ Việt/Anh/Trung',
       version: '1.0',
       docs: '/api/docs',
       endpoints: [

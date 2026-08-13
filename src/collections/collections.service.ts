@@ -16,8 +16,11 @@ export class CollectionsService {
   }
 
   async findOne(id: string) {
-    const collection = await this.prisma.collection.findUnique({ where: { id } });
-    if (!collection) throw new NotFoundException(`Collection "${id}" không tồn tại`);
+    const collection = await this.prisma.collection.findUnique({
+      where: { id },
+    });
+    if (!collection)
+      throw new NotFoundException(`Collection "${id}" không tồn tại`);
     return collection;
   }
 

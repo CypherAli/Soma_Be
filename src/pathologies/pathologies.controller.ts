@@ -26,7 +26,11 @@ export class PathologiesController {
 
   @Get()
   @ApiOperation({ summary: 'Danh sách bệnh lý' })
-  @ApiQuery({ name: 'structure', required: false, description: 'Lọc theo mã cấu trúc' })
+  @ApiQuery({
+    name: 'structure',
+    required: false,
+    description: 'Lọc theo mã cấu trúc',
+  })
   findAll(@Query('structure') structure?: string) {
     return this.pathologiesService.findAll(structure);
   }

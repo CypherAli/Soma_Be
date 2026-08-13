@@ -26,9 +26,21 @@ export class StructuresController {
 
   @Get()
   @ApiOperation({ summary: 'Danh sách cấu trúc (lọc theo hệ/loài/từ khoá)' })
-  @ApiQuery({ name: 'system', required: false, description: 'Lọc theo mã hệ cơ quan' })
-  @ApiQuery({ name: 'species', required: false, description: 'Lọc theo mã loài' })
-  @ApiQuery({ name: 'q', required: false, description: 'Tìm theo tên VI/EN/Latin' })
+  @ApiQuery({
+    name: 'system',
+    required: false,
+    description: 'Lọc theo mã hệ cơ quan',
+  })
+  @ApiQuery({
+    name: 'species',
+    required: false,
+    description: 'Lọc theo mã loài',
+  })
+  @ApiQuery({
+    name: 'q',
+    required: false,
+    description: 'Tìm theo tên VI/EN/Latin',
+  })
   findAll(
     @Query('system') system?: string,
     @Query('species') species?: string,

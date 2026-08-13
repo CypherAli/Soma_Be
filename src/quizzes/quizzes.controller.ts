@@ -24,7 +24,11 @@ export class QuizzesController {
 
   @Get()
   @ApiOperation({ summary: 'Danh sách câu hỏi (lọc theo hệ)' })
-  @ApiQuery({ name: 'system', required: false, description: 'Lọc theo mã hệ cơ quan' })
+  @ApiQuery({
+    name: 'system',
+    required: false,
+    description: 'Lọc theo mã hệ cơ quan',
+  })
   findAll(@Query('system') system?: string) {
     return this.quizzesService.findAll(system);
   }

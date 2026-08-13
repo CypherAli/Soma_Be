@@ -1,5 +1,12 @@
 import { ApiProperty, ApiPropertyOptional } from '@nestjs/swagger';
-import { IsBoolean, IsInt, IsOptional, IsString, Min, MinLength } from 'class-validator';
+import {
+  IsBoolean,
+  IsInt,
+  IsOptional,
+  IsString,
+  Min,
+  MinLength,
+} from 'class-validator';
 
 export class CreateCollectionDto {
   @ApiProperty({ example: 'Giải phẫu tim mạch nâng cao' })
@@ -32,7 +39,10 @@ export class CreateCollectionDto {
   @IsBoolean()
   isPremium?: boolean;
 
-  @ApiPropertyOptional({ example: 'blue', description: 'Màu footer card: blue/purple/teal' })
+  @ApiPropertyOptional({
+    example: 'blue',
+    description: 'Màu footer card: blue/purple/teal',
+  })
   @IsOptional()
   @IsString()
   coverColor?: string;

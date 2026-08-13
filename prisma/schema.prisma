@@ -88,6 +88,7 @@ model Pathology {
 
   structureId String
   structure   Structure @relation(fields: [structureId], references: [id])
+  citations   PathologyCitation[]
 
   @@index([structureId])
   @@map("pathologies")
@@ -139,4 +140,78 @@ model Collection {
   order      Int     @default(0)
 
   @@map("collections")
+}
+
+/// Tài liệu y khoa được phép sử dụng, quản lý độc lập với bệnh lý.
+model MedicalSource {
+  id          String @id
+  title       String
+  publisher   String
+  year        Int?
+  url         String
+  localFile   String?
+  status      String
+  licenseNote String? @db.Text
+  checkedAt   DateTime @default(now())
+  citations   PathologyCitation[]
+
+  @@map("medical_sources")
+}
+
+/// Một bệnh có thể có nhiều trích dẫn; luôn lưu trang/mục để kiểm chứng.
+model PathologyCitation {
+  id            String @id @default(cuid())
+  pathologyId   String
+  pathology     Pathology @relation(fields: [pathologyId], references: [id], onDelete: Cascade)
+  sourceId      String
+  source        MedicalSource @relation(fields: [sourceId], references: [id], onDelete: Restrict)
+  pageOrSection String?
+  quote         String? @db.Text
+  verified      Boolean @default(false)
+  verifiedBy    String?
+  verifiedAt    DateTime?
+
+  @@unique([pathologyId, sourceId, pageOrSection])
+  @@index([pathologyId])
+  @@index([sourceId])
+  @@map("pathology_citations")
+}
+
+model User {
+  id           String   @id @default(cuid())
+  name         String
+  email        String   @unique
+  passwordHash String?
+  googleId     String?  @unique
+  githubId     String?  @unique
+  facebookId   String?  @unique
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  sessions     Session[]
+
+  @@map("users")
+}
+
+model OAuthState {
+  id           String   @id @default(cuid())
+  stateHash    String   @unique
+  provider     String
+  codeVerifier String
+  expiresAt    DateTime
+  createdAt    DateTime @default(now())
+  @@index([expiresAt])
+  @@map("oauth_states")
+}
+
+model Session {
+  id        String   @id @default(cuid())
+  tokenHash String   @unique
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([expiresAt])
+  @@map("sessions")
 }

@@ -10,6 +10,8 @@ import { PathologiesModule } from './pathologies/pathologies.module';
 import { QuizzesModule } from './quizzes/quizzes.module';
 import { CollectionsModule } from './collections/collections.module';
 import { HealthModule } from './health/health.module';
+import { AuthModule } from './auth/auth.module';
+import { MedicalKnowledgeModule } from './medical-knowledge/medical-knowledge.module';
 
 @Module({
   imports: [
@@ -22,6 +24,8 @@ import { HealthModule } from './health/health.module';
     QuizzesModule,
     CollectionsModule,
     HealthModule,
+    AuthModule,
+    MedicalKnowledgeModule,
   ],
   controllers: [AppController],
   providers: [AppService],

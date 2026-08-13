@@ -1,5 +1,14 @@
-import { ConflictException, Injectable, UnauthorizedException } from '@nestjs/common';
-import { createHash, randomBytes, scrypt as scryptCallback, timingSafeEqual } from 'crypto';
+import {
+  ConflictException,
+  Injectable,
+  UnauthorizedException,
+} from '@nestjs/common';
+import {
+  createHash,
+  randomBytes,
+  scrypt as scryptCallback,
+  timingSafeEqual,
+} from 'crypto';
 import { promisify } from 'util';
 import { PrismaService } from '../prisma/prisma.service';
 import { LoginDto } from './dto/login.dto';
@@ -8,6 +17,26 @@ import { RegisterDto } from './dto/register.dto';
 const scrypt = promisify(scryptCallback);
 const SESSION_LIFETIME_MS = 1000 * 60 * 60 * 24 * 30;
 type Provider = 'google' | 'github' | 'facebook';
+
+/** Hồ sơ tài khoản đã chuẩn hoá về cùng một hình dạng cho cả ba nhà cung cấp. */
+type OAuthProfile = { id: string; name: string; email: string };
+
+/** Thân JSON của Google (OIDC dùng `sub`) và Facebook (dùng `id`). */
+type OidcProfileBody = {
+  sub?: string;
+  id?: string;
+  email?: string;
+  name?: string;
+};
+
+type GithubUserBody = {
+  id: number | string;
+  name?: string | null;
+  login?: string;
+  email?: string | null;
+};
+
+type GithubEmailBody = { email: string; primary: boolean; verified: boolean };
 
 @Injectable()
 export class AuthService {
@@ -19,7 +48,11 @@ export class AuthService {
       throw new ConflictException('Email này đã được sử dụng');
     }
     const user = await this.prisma.user.create({
-      data: { name: dto.name.trim(), email, passwordHash: await this.hashPassword(dto.password) },
+      data: {
+        name: dto.name.trim(),
+        email,
+        passwordHash: await this.hashPassword(dto.password),
+      },
     });
     return this.createSession(user);
   }
@@ -28,7 +61,10 @@ export class AuthService {
     const user = await this.prisma.user.findUnique({
       where: { email: dto.email.trim().toLowerCase() },
     });
-    if (!user?.passwordHash || !(await this.verifyPassword(dto.password, user.passwordHash))) {
+    if (
+      !user?.passwordHash ||
+      !(await this.verifyPassword(dto.password, user.passwordHash))
+    ) {
       throw new UnauthorizedException('Email hoặc mật khẩu không đúng');
     }
     return this.createSession(user);
@@ -36,12 +72,18 @@ export class AuthService {
 
   async me(token?: string) {
     const session = await this.findSession(token);
-    if (!session) throw new UnauthorizedException('Phiên đăng nhập không hợp lệ hoặc đã hết hạn');
+    if (!session)
+      throw new UnauthorizedException(
+        'Phiên đăng nhập không hợp lệ hoặc đã hết hạn',
+      );
     return { user: this.publicUser(session.user) };
   }
 
   async logout(token?: string) {
-    if (token) await this.prisma.session.deleteMany({ where: { tokenHash: this.hashToken(token) } });
+    if (token)
+      await this.prisma.session.deleteMany({
+        where: { tokenHash: this.hashToken(token) },
+      });
     return { success: true };
   }
 
@@ -50,55 +92,192 @@ export class AuthService {
     const state = randomBytes(32).toString('base64url');
     const verifier = randomBytes(32).toString('base64url');
     const challenge = createHash('sha256').update(verifier).digest('base64url');
-    await this.prisma.oAuthState.create({ data: { stateHash: this.hashToken(state), provider, codeVerifier: verifier, expiresAt: new Date(Date.now() + 600000) } });
-    const params = new URLSearchParams({ client_id: config.id, redirect_uri: config.callback, response_type: 'code', scope: config.scope, state, code_challenge: challenge, code_challenge_method: 'S256' });
+    await this.prisma.oAuthState.create({
+      data: {
+        stateHash: this.hashToken(state),
+        provider,
+        codeVerifier: verifier,
+        expiresAt: new Date(Date.now() + 600000),
+      },
+    });
+    const params = new URLSearchParams({
+      client_id: config.id,
+      redirect_uri: config.callback,
+      response_type: 'code',
+      scope: config.scope,
+      state,
+      code_challenge: challenge,
+      code_challenge_method: 'S256',
+    });
     return `${config.authorize}?${params}`;
   }
 
   async oauthCallback(provider: Provider, code: string, state: string) {
-    const record = await this.prisma.oAuthState.findFirst({ where: { stateHash: this.hashToken(state), provider, expiresAt: { gt: new Date() } } });
-    if (!record) throw new UnauthorizedException('Yêu cầu OAuth không hợp lệ hoặc đã hết hạn');
+    const record = await this.prisma.oAuthState.findFirst({
+      where: {
+        stateHash: this.hashToken(state),
+        provider,
+        expiresAt: { gt: new Date() },
+      },
+    });
+    if (!record)
+      throw new UnauthorizedException(
+        'Yêu cầu OAuth không hợp lệ hoặc đã hết hạn',
+      );
     await this.prisma.oAuthState.delete({ where: { id: record.id } });
     const c = this.providerConfig(provider);
-    const tokenResponse = await fetch(c.token, { method: 'POST', headers: { Accept: 'application/json', 'Content-Type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams({ client_id: c.id, client_secret: c.secret, code, redirect_uri: c.callback, grant_type: 'authorization_code', code_verifier: record.codeVerifier }) });
-    const tokens = await tokenResponse.json() as { access_token?: string };
-    if (!tokens.access_token) throw new UnauthorizedException('Không thể xác thực với nhà cung cấp');
+    const tokenResponse = await fetch(c.token, {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      body: new URLSearchParams({
+        client_id: c.id,
+        client_secret: c.secret,
+        code,
+        redirect_uri: c.callback,
+        grant_type: 'authorization_code',
+        code_verifier: record.codeVerifier,
+      }),
+    });
+    const tokens = (await tokenResponse.json()) as { access_token?: string };
+    if (!tokens.access_token)
+      throw new UnauthorizedException('Không thể xác thực với nhà cung cấp');
     const profile = await this.providerProfile(provider, tokens.access_token);
-    const idField = `${provider}Id` as 'googleId' | 'githubId' | 'facebookId';
-    let user = await this.prisma.user.findFirst({ where: { OR: [{ [idField]: profile.id }, { email: profile.email }] } });
-    user = user ? await this.prisma.user.update({ where: { id: user.id }, data: { [idField]: profile.id } }) : await this.prisma.user.create({ data: { name: profile.name, email: profile.email, [idField]: profile.id } });
+    const idField = `${provider}Id`;
+    let user = await this.prisma.user.findFirst({
+      where: { OR: [{ [idField]: profile.id }, { email: profile.email }] },
+    });
+    user = user
+      ? await this.prisma.user.update({
+          where: { id: user.id },
+          data: { [idField]: profile.id },
+        })
+      : await this.prisma.user.create({
+          data: {
+            name: profile.name,
+            email: profile.email,
+            [idField]: profile.id,
+          },
+        });
     return this.createSession(user);
   }
 
   private providerConfig(provider: Provider) {
     const base = process.env.API_URL ?? 'http://localhost:4000/api';
     const configs = {
-      google: { id: process.env.GOOGLE_CLIENT_ID, secret: process.env.GOOGLE_CLIENT_SECRET, authorize: 'https://accounts.google.com/o/oauth2/v2/auth', token: 'https://oauth2.googleapis.com/token', scope: 'openid email profile' },
-      github: { id: process.env.GITHUB_CLIENT_ID, secret: process.env.GITHUB_CLIENT_SECRET, authorize: 'https://github.com/login/oauth/authorize', token: 'https://github.com/login/oauth/access_token', scope: 'read:user user:email' },
-      facebook: { id: process.env.FACEBOOK_CLIENT_ID, secret: process.env.FACEBOOK_CLIENT_SECRET, authorize: 'https://www.facebook.com/v23.0/dialog/oauth', token: 'https://graph.facebook.com/v23.0/oauth/access_token', scope: 'email public_profile' },
+      google: {
+        id: process.env.GOOGLE_CLIENT_ID,
+        secret: process.env.GOOGLE_CLIENT_SECRET,
+        authorize: 'https://accounts.google.com/o/oauth2/v2/auth',
+        token: 'https://oauth2.googleapis.com/token',
+        scope: 'openid email profile',
+      },
+      github: {
+        id: process.env.GITHUB_CLIENT_ID,
+        secret: process.env.GITHUB_CLIENT_SECRET,
+        authorize: 'https://github.com/login/oauth/authorize',
+        token: 'https://github.com/login/oauth/access_token',
+        scope: 'read:user user:email',
+      },
+      facebook: {
+        id: process.env.FACEBOOK_CLIENT_ID,
+        secret: process.env.FACEBOOK_CLIENT_SECRET,
+        authorize: 'https://www.facebook.com/v23.0/dialog/oauth',
+        token: 'https://graph.facebook.com/v23.0/oauth/access_token',
+        scope: 'email public_profile',
+      },
     }[provider];
-    if (!configs?.id || !configs.secret) throw new ConflictException(`Đăng nhập ${provider} chưa được cấu hình`);
-    return { ...configs, id: configs.id, secret: configs.secret, callback: `${base}/auth/oauth/${provider}/callback` };
+    if (!configs?.id || !configs.secret)
+      throw new ConflictException(`Đăng nhập ${provider} chưa được cấu hình`);
+    return {
+      ...configs,
+      id: configs.id,
+      secret: configs.secret,
+      callback: `${base}/auth/oauth/${provider}/callback`,
+    };
   }
 
-  private async providerProfile(provider: Provider, token: string) {
-    if (provider === 'google') return this.fetchProfile('https://openidconnect.googleapis.com/v1/userinfo', token);
-    if (provider === 'facebook') return this.fetchProfile(`https://graph.facebook.com/me?fields=id,name,email&access_token=${encodeURIComponent(token)}`);
-    const user = await this.fetchProfile('https://api.github.com/user', token) as { id: string; name?: string; login?: string; email?: string };
-    if (!user.email) { const emails = await this.fetchProfile('https://api.github.com/user/emails', token) as Array<{ email: string; primary: boolean; verified: boolean }>; user.email = emails.find((e) => e.primary && e.verified)?.email; }
-    if (!user.email) throw new UnauthorizedException('Tài khoản không cung cấp email đã xác minh');
-    return { id: String(user.id), name: user.name || user.login || 'GitHub user', email: user.email };
+  private async providerProfile(
+    provider: Provider,
+    token: string,
+  ): Promise<OAuthProfile> {
+    if (provider === 'google')
+      return this.normalizeOidcProfile(
+        await this.fetchJson<OidcProfileBody>(
+          'https://openidconnect.googleapis.com/v1/userinfo',
+          token,
+        ),
+      );
+    if (provider === 'facebook')
+      return this.normalizeOidcProfile(
+        await this.fetchJson<OidcProfileBody>(
+          `https://graph.facebook.com/me?fields=id,name,email&access_token=${encodeURIComponent(token)}`,
+        ),
+      );
+
+    const user = await this.fetchJson<GithubUserBody>(
+      'https://api.github.com/user',
+      token,
+    );
+    // GitHub KHÔNG trả email nếu người dùng đặt địa chỉ ở chế độ riêng tư, phải
+    // hỏi thêm /user/emails. Trước đây nhánh dự phòng này không bao giờ chạy
+    // tới: hàm tải hồ sơ dùng chung đã ném lỗi "không cung cấp email" ngay ở
+    // lượt gọi đầu, nên đăng nhập GitHub hỏng với đúng nhóm người dùng đó.
+    const email =
+      user.email ??
+      (
+        await this.fetchJson<GithubEmailBody[]>(
+          'https://api.github.com/user/emails',
+          token,
+        )
+      ).find((e) => e.primary && e.verified)?.email;
+    if (!email)
+      throw new UnauthorizedException(
+        'Tài khoản không cung cấp email đã xác minh',
+      );
+    return {
+      id: String(user.id),
+      name: user.name || user.login || 'GitHub user',
+      email,
+    };
   }
 
-  private async fetchProfile(url: string, token?: string): Promise<any> {
-    const response = await fetch(url, { headers: token ? { Authorization: `Bearer ${token}`, Accept: 'application/json', 'User-Agent': 'Soma3D' } : {} });
-    if (!response.ok) throw new UnauthorizedException('Không lấy được thông tin tài khoản');
-    const data = await response.json();
-    if (!data.email) throw new UnauthorizedException('Tài khoản không cung cấp email');
-    return { ...data, id: String(data.sub ?? data.id), name: data.name ?? data.email };
+  /** Google và Facebook trả cùng một hình dạng, chỉ khác tên trường định danh. */
+  private normalizeOidcProfile(body: OidcProfileBody): OAuthProfile {
+    const id = body.sub ?? body.id;
+    if (!id || !body.email)
+      throw new UnauthorizedException('Tài khoản không cung cấp email');
+    return { id: String(id), name: body.name ?? body.email, email: body.email };
   }
 
-  private async createSession(user: { id: string; name: string; email: string }) {
+  /**
+   * Gọi API của nhà cung cấp và ép kiểu thân JSON.
+   *
+   * KHÔNG kiểm tra email ở đây: cùng hàm này còn dùng để lấy DANH SÁCH email
+   * của GitHub, mà một mảng thì không có trường `email` nào cả.
+   */
+  private async fetchJson<T>(url: string, token?: string): Promise<T> {
+    const response = await fetch(url, {
+      headers: token
+        ? {
+            Authorization: `Bearer ${token}`,
+            Accept: 'application/json',
+            'User-Agent': 'Soma3D',
+          }
+        : {},
+    });
+    if (!response.ok)
+      throw new UnauthorizedException('Không lấy được thông tin tài khoản');
+    return (await response.json()) as T;
+  }
+
+  private async createSession(user: {
+    id: string;
+    name: string;
+    email: string;
+  }) {
     const token = randomBytes(32).toString('base64url');
     const expiresAt = new Date(Date.now() + SESSION_LIFETIME_MS);
     await this.prisma.session.create({
@@ -110,7 +289,10 @@ export class AuthService {
   private findSession(token?: string) {
     if (!token) return null;
     return this.prisma.session.findFirst({
-      where: { tokenHash: this.hashToken(token), expiresAt: { gt: new Date() } },
+      where: {
+        tokenHash: this.hashToken(token),
+        expiresAt: { gt: new Date() },
+      },
       include: { user: true },
     });
   }

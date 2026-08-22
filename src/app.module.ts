@@ -11,6 +11,8 @@ import { QuizzesModule } from './quizzes/quizzes.module';
 import { CollectionsModule } from './collections/collections.module';
 import { HealthModule } from './health/health.module';
 import { AuthModule } from './auth/auth.module';
+import { StudyModule } from './study/study.module';
+import { PersonalDocsModule } from './personal-docs/personal-docs.module';
 import { MedicalKnowledgeModule } from './medical-knowledge/medical-knowledge.module';
 
 @Module({
@@ -26,6 +28,8 @@ import { MedicalKnowledgeModule } from './medical-knowledge/medical-knowledge.mo
     HealthModule,
     AuthModule,
     MedicalKnowledgeModule,
+    StudyModule,
+    PersonalDocsModule,
   ],
   controllers: [AppController],
   providers: [AppService],

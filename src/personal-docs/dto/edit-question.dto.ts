@@ -1,0 +1,42 @@
+import { ApiPropertyOptional } from '@nestjs/swagger';
+import {
+  IsBoolean,
+  IsObject,
+  IsOptional,
+  IsString,
+  Matches,
+  MaxLength,
+} from 'class-validator';
+
+export class EditQuestionDto {
+  @ApiPropertyOptional()
+  @IsOptional()
+  @IsString()
+  @MaxLength(4000)
+  stem?: string;
+
+  @ApiPropertyOptional({
+    description:
+      'Bảng phương án theo nhãn chữ cái, ví dụ { "A": "...", "B": "..." }',
+  })
+  @IsOptional()
+  @IsObject()
+  options?: Record<string, string>;
+
+  @ApiPropertyOptional({ description: 'Nhãn phương án đúng: A–F' })
+  @IsOptional()
+  @IsString()
+  @Matches(/^[A-F]$/, { message: 'Đáp án phải là một chữ cái A–F' })
+  answer?: string;
+
+  @ApiPropertyOptional()
+  @IsOptional()
+  @IsString()
+  @MaxLength(4000)
+  explanation?: string;
+
+  @ApiPropertyOptional({ description: 'Duyệt câu này cho phép ra đề' })
+  @IsOptional()
+  @IsBoolean()
+  approved?: boolean;
+}

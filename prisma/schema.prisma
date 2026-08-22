@@ -190,6 +190,10 @@ model User {
   sessions     Session[]
 
   @@map("users")
+  quizAttempts QuizAttempt[]
+  studyPath    StudyPath?
+  reviewItems  ReviewItem[]
+  personalDocs PersonalDoc[]
 }
 
 model OAuthState {
@@ -214,4 +218,128 @@ model Session {
   @@index([userId])
   @@index([expiresAt])
   @@map("sessions")
+}
+
+/// Một lượt làm bài ĐÃ NỘP.
+///
+/// Đây là dữ liệu duy nhất nói được người học yếu ở đâu, nên nó gắn theo TÀI
+/// KHOẢN chứ không theo trình duyệt — cùng lý do với [ChatMemory]. Chưa đăng
+/// nhập thì phía web tự lùi về localStorage, không ép phải có tài khoản mới
+/// làm được bài.
+model QuizAttempt {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  /// model | book | atlas | personal
+  source    String
+  /// mã hệ cơ quan, tên vùng cơ thể, hoặc "all"
+  scope     String   @default("all")
+  /// practice | exam
+  mode      String   @default("practice")
+  score     Int
+  total     Int
+  /// số giây thực làm, 0 khi không đo được
+  seconds   Int      @default(0)
+  createdAt DateTime @default(now())
+
+  @@index([userId, createdAt])
+  @@map("quiz_attempts")
+}
+
+/// Lộ trình học đang hoạt động — mỗi tài khoản đúng MỘT lộ trình.
+///
+/// Không lưu lịch cứng từng ngày: người học nghỉ hai hôm là lịch cứng sai hết
+/// và chỉ tổ làm người ta bỏ. Lộ trình chỉ giữ mục tiêu và nhịp; buổi học hôm
+/// nay được tính ra từ [ReviewItem] đến hạn tại thời điểm mở trang.
+model StudyPath {
+  id            String   @id @default(cuid())
+  userId        String   @unique
+  user          User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  goal          String
+  daysPerWeek   Int      @default(4)
+  minutesPerDay Int      @default(25)
+  /// hệ ưu tiên, hoặc "all"
+  systemKey     String   @default("all")
+  /// độ dài quãng học người dùng đặt ra: 7 = một tuần, 28 = một tháng, 365 = một năm
+  horizonDays   Int      @default(28)
+  /// mốc gốc để đổi khối của dàn bài thành ngày lịch thật
+  startedAt     DateTime @default(now())
+  /// thứ tự hệ cơ quan muốn học, ví dụ ["nervous","visceral"]; rỗng thì học đều
+  focusSystems  String[] @default([])
+  brief         String?  @db.Text
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  @@map("study_paths")
+}
+
+/// Một cấu trúc / câu hỏi trong hàng đợi ôn theo khoảng cách (SM-2 rút gọn).
+///
+/// Trả lời đúng thì giãn khoảng cách ra, sai thì kéo về ôn lại ngay hôm sau.
+/// Nhờ vậy "buổi học hôm nay" luôn tính được, không cần lịch cố định.
+model ReviewItem {
+  id           String   @id @default(cuid())
+  userId       String
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  /// khoá ổn định của câu: "model:<factId>", "book:<qid>", "atlas:<id>", "personal:<id>"
+  itemKey      String
+  source       String
+  scope        String   @default("all")
+  /// hệ số dễ SM-2; càng thấp càng phải gặp lại nhiều
+  ease         Float    @default(2.5)
+  intervalDays Int      @default(0)
+  reps         Int      @default(0)
+  lapses       Int      @default(0)
+  dueAt        DateTime @default(now())
+  lastAt       DateTime @default(now())
+
+  @@unique([userId, itemKey])
+  @@index([userId, dueAt])
+  @@map("review_items")
+}
+
+/// Tài liệu PDF người dùng tải lên để tạo bộ đề riêng.
+///
+/// CHỈ lưu phần kê khai và các câu bóc được — KHÔNG lưu lại tệp PDF gốc. Trang
+/// web hứa "chỉ tài khoản của bạn truy cập", mà cách chắc chắn nhất để giữ lời
+/// hứa đó là máy chủ không giữ bản sao tài liệu sau khi bóc xong.
+model PersonalDoc {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  filename  String
+  bytes     Int
+  pages     Int      @default(0)
+  /// processing | ready | failed
+  status    String   @default("processing")
+  note      String?  @db.Text
+  createdAt DateTime @default(now())
+  questions PersonalQuestion[]
+
+  @@index([userId, createdAt])
+  @@map("personal_docs")
+}
+
+/// Một câu bóc ra từ tài liệu cá nhân, mặc định CHỜ DUYỆT.
+///
+/// Máy bóc đề từ PDF không bao giờ đúng hết. Câu chưa được người tải lên duyệt
+/// thì không được đem ra hỏi — sai một dấu trong câu giải phẫu là học sai luôn.
+model PersonalQuestion {
+  id          String  @id @default(cuid())
+  docId       String
+  doc         PersonalDoc @relation(fields: [docId], references: [id], onDelete: Cascade)
+  userId      String
+  stem        String  @db.Text
+  /// { "A": "...", "B": "..." } — giữ nguyên nhãn chữ cái của tài liệu gốc
+  options     Json
+  answer      String
+  explanation String? @db.Text
+  page        Int?
+  approved    Boolean @default(false)
+  /// "parser" = bộ luật bóc ra, "ai" = mô hình ngôn ngữ đọc hộ khi bộ luật bó tay
+  origin      String  @default("parser")
+
+  @@index([userId, approved])
+  @@index([docId])
+  @@map("personal_questions")
 }

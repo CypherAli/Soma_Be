@@ -15,15 +15,15 @@ import {
 export class GradedItemDto {
   @ApiProperty({
     description:
-      'Khoá ổn định của câu, có tiền tố nguồn: "model:<factId>", "book:<qid>", "atlas:<id>", "personal:<id>"',
+      'Khoá ổn định của câu, có tiền tố nguồn: "model:<factId>", "book:<qid>", "atlas:<id>", "personal:<id>", "vet:<factId>"',
     example: 'book:yhn-anatomy-head_neck-004',
   })
   @IsString()
   @MaxLength(200)
   itemKey!: string;
 
-  @ApiProperty({ enum: ['model', 'book', 'atlas', 'personal'] })
-  @IsIn(['model', 'book', 'atlas', 'personal'])
+  @ApiProperty({ enum: ['model', 'book', 'atlas', 'personal', 'vet'] })
+  @IsIn(['model', 'book', 'atlas', 'personal', 'vet'])
   source!: string;
 
   @ApiPropertyOptional({ description: 'Mã hệ cơ quan hoặc tên vùng cơ thể' })
@@ -38,8 +38,8 @@ export class GradedItemDto {
 }
 
 export class RecordAttemptDto {
-  @ApiProperty({ enum: ['model', 'book', 'atlas', 'personal'] })
-  @IsIn(['model', 'book', 'atlas', 'personal'])
+  @ApiProperty({ enum: ['model', 'book', 'atlas', 'personal', 'vet'] })
+  @IsIn(['model', 'book', 'atlas', 'personal', 'vet'])
   source!: string;
 
   @ApiPropertyOptional()

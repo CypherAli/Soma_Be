@@ -1,7 +1,13 @@
 {
   "extends": "../tsconfig.json",
   "compilerOptions": {
-    "module": "commonjs"
+    "module": "commonjs",
+    "resolveJsonModule": true
   },
-  "include": ["seed.ts"]
+  "include": [
+    "seed.ts",
+    "seed-vet.ts",
+    "sync-medical-sources.ts",
+    "import-translations.ts"
+  ]
 }

@@ -1,0 +1,963 @@
+{
+  "format": 1,
+  "species": [
+    {
+      "code": "dog",
+      "nameVi": "Chó",
+      "nameEn": "Dog",
+      "nameZh": "犬",
+      "latin": "Canis lupus familiaris"
+    },
+    {
+      "code": "cat",
+      "nameVi": "Mèo",
+      "nameEn": "Cat",
+      "nameZh": "猫",
+      "latin": "Felis catus"
+    },
+    {
+      "code": "horse",
+      "nameVi": "Ngựa",
+      "nameEn": "Horse",
+      "nameZh": "马",
+      "latin": "Equus caballus"
+    },
+    {
+      "code": "cattle",
+      "nameVi": "Bò",
+      "nameEn": "Cattle",
+      "nameZh": "牛",
+      "latin": "Bos taurus"
+    },
+    {
+      "code": "pig",
+      "nameVi": "Lợn",
+      "nameEn": "Pig",
+      "nameZh": "猪",
+      "latin": "Sus scrofa domesticus"
+    },
+    {
+      "code": "chicken",
+      "nameVi": "Gà",
+      "nameEn": "Chicken",
+      "nameZh": "鸡",
+      "latin": "Gallus gallus domesticus"
+    }
+  ],
+  "systems": [
+    {
+      "code": "vet-dog-digestive",
+      "speciesCode": "dog",
+      "nameVi": "Hệ tiêu hoá",
+      "nameEn": "Digestive system",
+      "nameZh": "消化系统",
+      "order": 0
+    },
+    {
+      "code": "vet-dog-skeletal",
+      "speciesCode": "dog",
+      "nameVi": "Hệ xương",
+      "nameEn": "Skeletal system",
+      "nameZh": "骨骼系统",
+      "order": 1
+    },
+    {
+      "code": "vet-dog-urogenital",
+      "speciesCode": "dog",
+      "nameVi": "Hệ tiết niệu – sinh dục",
+      "nameEn": "Urogenital system",
+      "nameZh": "泌尿生殖系统",
+      "order": 2
+    },
+    {
+      "code": "vet-dog-integument",
+      "speciesCode": "dog",
+      "nameVi": "Da và phần phụ",
+      "nameEn": "Skin and appendages",
+      "nameZh": "皮肤及其附属结构",
+      "order": 3
+    },
+    {
+      "code": "vet-dog-senses",
+      "speciesCode": "dog",
+      "nameVi": "Cơ quan cảm giác",
+      "nameEn": "Sense organs",
+      "nameZh": "感觉器官",
+      "order": 4
+    },
+    {
+      "code": "vet-dog-muscular",
+      "speciesCode": "dog",
+      "nameVi": "Hệ cơ",
+      "nameEn": "Muscular system",
+      "nameZh": "肌肉系统",
+      "order": 5
+    },
+    {
+      "code": "vet-cat-digestive",
+      "speciesCode": "cat",
+      "nameVi": "Hệ tiêu hoá",
+      "nameEn": "Digestive system",
+      "nameZh": "消化系统",
+      "order": 0
+    },
+    {
+      "code": "vet-cat-skeletal",
+      "speciesCode": "cat",
+      "nameVi": "Hệ xương",
+      "nameEn": "Skeletal system",
+      "nameZh": "骨骼系统",
+      "order": 1
+    },
+    {
+      "code": "vet-cat-integument",
+      "speciesCode": "cat",
+      "nameVi": "Da và phần phụ",
+      "nameEn": "Skin and appendages",
+      "nameZh": "皮肤及其附属结构",
+      "order": 2
+    },
+    {
+      "code": "vet-cat-urogenital",
+      "speciesCode": "cat",
+      "nameVi": "Hệ tiết niệu – sinh dục",
+      "nameEn": "Urogenital system",
+      "nameZh": "泌尿生殖系统",
+      "order": 3
+    },
+    {
+      "code": "vet-cat-senses",
+      "speciesCode": "cat",
+      "nameVi": "Cơ quan cảm giác",
+      "nameEn": "Sense organs",
+      "nameZh": "感觉器官",
+      "order": 4
+    },
+    {
+      "code": "vet-cat-muscular",
+      "speciesCode": "cat",
+      "nameVi": "Hệ cơ",
+      "nameEn": "Muscular system",
+      "nameZh": "肌肉系统",
+      "order": 5
+    },
+    {
+      "code": "vet-horse-senses",
+      "speciesCode": "horse",
+      "nameVi": "Cơ quan cảm giác",
+      "nameEn": "Sense organs",
+      "nameZh": "感觉器官",
+      "order": 0
+    },
+    {
+      "code": "vet-horse-muscular",
+      "speciesCode": "horse",
+      "nameVi": "Hệ cơ",
+      "nameEn": "Muscular system",
+      "nameZh": "肌肉系统",
+      "order": 1
+    },
+    {
+      "code": "vet-horse-integument",
+      "speciesCode": "horse",
+      "nameVi": "Da và phần phụ",
+      "nameEn": "Skin and appendages",
+      "nameZh": "皮肤及其附属结构",
+      "order": 2
+    },
+    {
+      "code": "vet-horse-digestive",
+      "speciesCode": "horse",
+      "nameVi": "Hệ tiêu hoá",
+      "nameEn": "Digestive system",
+      "nameZh": "消化系统",
+      "order": 3
+    },
+    {
+      "code": "vet-horse-respiratory",
+      "speciesCode": "horse",
+      "nameVi": "Hệ hô hấp",
+      "nameEn": "Respiratory system",
+      "nameZh": "呼吸系统",
+      "order": 4
+    },
+    {
+      "code": "vet-horse-skeletal",
+      "speciesCode": "horse",
+      "nameVi": "Hệ xương",
+      "nameEn": "Skeletal system",
+      "nameZh": "骨骼系统",
+      "order": 5
+    },
+    {
+      "code": "vet-horse-cardiovascular",
+      "speciesCode": "horse",
+      "nameVi": "Hệ tuần hoàn",
+      "nameEn": "Cardiovascular system",
+      "nameZh": "循环系统",
+      "order": 6
+    },
+    {
+      "code": "vet-cattle-senses",
+      "speciesCode": "cattle",
+      "nameVi": "Cơ quan cảm giác",
+      "nameEn": "Sense organs",
+      "nameZh": "感觉器官",
+      "order": 0
+    },
+    {
+      "code": "vet-cattle-muscular",
+      "speciesCode": "cattle",
+      "nameVi": "Hệ cơ",
+      "nameEn": "Muscular system",
+      "nameZh": "肌肉系统",
+      "order": 1
+    },
+    {
+      "code": "vet-cattle-digestive",
+      "speciesCode": "cattle",
+      "nameVi": "Hệ tiêu hoá",
+      "nameEn": "Digestive system",
+      "nameZh": "消化系统",
+      "order": 2
+    },
+    {
+      "code": "vet-cattle-integument",
+      "speciesCode": "cattle",
+      "nameVi": "Da và phần phụ",
+      "nameEn": "Skin and appendages",
+      "nameZh": "皮肤及其附属结构",
+      "order": 3
+    },
+    {
+      "code": "vet-cattle-skeletal",
+      "speciesCode": "cattle",
+      "nameVi": "Hệ xương",
+      "nameEn": "Skeletal system",
+      "nameZh": "骨骼系统",
+      "order": 4
+    },
+    {
+      "code": "vet-cattle-cardiovascular",
+      "speciesCode": "cattle",
+      "nameVi": "Hệ tuần hoàn",
+      "nameEn": "Cardiovascular system",
+      "nameZh": "循环系统",
+      "order": 5
+    },
+    {
+      "code": "vet-pig-senses",
+      "speciesCode": "pig",
+      "nameVi": "Cơ quan cảm giác",
+      "nameEn": "Sense organs",
+      "nameZh": "感觉器官",
+      "order": 0
+    },
+    {
+      "code": "vet-pig-integument",
+      "speciesCode": "pig",
+      "nameVi": "Da và phần phụ",
+      "nameEn": "Skin and appendages",
+      "nameZh": "皮肤及其附属结构",
+      "order": 1
+    },
+    {
+      "code": "vet-pig-urogenital",
+      "speciesCode": "pig",
+      "nameVi": "Hệ tiết niệu – sinh dục",
+      "nameEn": "Urogenital system",
+      "nameZh": "泌尿生殖系统",
+      "order": 2
+    },
+    {
+      "code": "vet-pig-digestive",
+      "speciesCode": "pig",
+      "nameVi": "Hệ tiêu hoá",
+      "nameEn": "Digestive system",
+      "nameZh": "消化系统",
+      "order": 3
+    },
+    {
+      "code": "vet-pig-cardiovascular",
+      "speciesCode": "pig",
+      "nameVi": "Hệ tuần hoàn",
+      "nameEn": "Cardiovascular system",
+      "nameZh": "循环系统",
+      "order": 4
+    },
+    {
+      "code": "vet-chicken-respiratory",
+      "speciesCode": "chicken",
+      "nameVi": "Hệ hô hấp",
+      "nameEn": "Respiratory system",
+      "nameZh": "呼吸系统",
+      "order": 0
+    },
+    {
+      "code": "vet-chicken-digestive",
+      "speciesCode": "chicken",
+      "nameVi": "Hệ tiêu hoá",
+      "nameEn": "Digestive system",
+      "nameZh": "消化系统",
+      "order": 1
+    },
+    {
+      "code": "vet-chicken-urogenital",
+      "speciesCode": "chicken",
+      "nameVi": "Hệ tiết niệu – sinh dục",
+      "nameEn": "Urogenital system",
+      "nameZh": "泌尿生殖系统",
+      "order": 2
+    },
+    {
+      "code": "vet-chicken-skeletal",
+      "speciesCode": "chicken",
+      "nameVi": "Hệ xương",
+      "nameEn": "Skeletal system",
+      "nameZh": "骨骼系统",
+      "order": 3
+    },
+    {
+      "code": "vet-chicken-cardiovascular",
+      "speciesCode": "chicken",
+      "nameVi": "Hệ tuần hoàn",
+      "nameEn": "Cardiovascular system",
+      "nameZh": "循环系统",
+      "order": 4
+    },
+    {
+      "code": "vet-chicken-integument",
+      "speciesCode": "chicken",
+      "nameVi": "Da và phần phụ",
+      "nameEn": "Skin and appendages",
+      "nameZh": "皮肤及其附属结构",
+      "order": 5
+    }
+  ],
+  "structures": [
+    {
+      "code": "vet-dog-dog-dental-formula",
+      "speciesCode": "dog",
+      "systemCode": "vet-dog-digestive",
+      "nameVi": "Công thức răng chó",
+      "nameEn": "Dental formula of the dog",
+      "nameZh": "犬齿式",
+      "latin": "Dentes permanentes",
+      "descriptionVi": "Mô tả: Chó trưởng thành có 42 răng vĩnh viễn: 2×(I 3/3, C 1/1, P 4/4, M 2/3). Răng sữa chỉ có 28 chiếc (không có răng hàm M) và mọc đủ lúc 6–8 tuần; thay răng xong khoảng 6–7 tháng tuổi. Răng ăn thịt (carnassial) là P4 hàm trên và M1 hàm dưới — cặp răng lớn nhất, cắt như lưỡi kéo.\n\nKhác biệt: Người 32 răng, răng hàm phẳng để nghiền; chó 42 răng, thân răng nhọn hình chóp để cắt và giữ mồi. Chó không nhai theo kiểu nghiền ngang — khớp thái dương hàm chỉ cho chuyển động lên xuống.\n\nÝ nghĩa lâm sàng: Răng sữa nanh không rụng (persistent deciduous canine) rất hay gặp ở chó nhỏ giống toy, phải nhổ để tránh lệch khớp cắn và bệnh nha chu. Răng ăn thịt P4 hàm trên là răng hay gãy nhất do gặm xương, và áp-xe chân răng của nó gây rò dưới mắt.\n\nNguồn: Evans & de Lahunta, Miller's Anatomy of the Dog, 4th ed. (2013)",
+      "descriptionEn": "Description: The adult dog has 42 permanent teeth: 2×(I 3/3, C 1/1, P 4/4, M 2/3). The deciduous set has only 28 teeth (no molars) and is complete by 6–8 weeks; permanent dentition is in place by about 6–7 months. The carnassial pair — upper P4 and lower M1 — are the largest cheek teeth and shear against each other like scissor blades.\n\nDifference: Humans have 32 teeth with flat grinding molars; the dog has 42 teeth with pointed cusps built for cutting and holding. Dogs cannot grind laterally — the temporomandibular joint allows essentially only a hinge movement.\n\nClinical relevance: Persistent deciduous canines are common in toy breeds and must be extracted to prevent malocclusion and periodontal disease. The upper P4 carnassial is the tooth most often fractured by bone chewing; a root abscess of this tooth drains as the classic infraorbital fistula below the eye.\n\nSource: Evans & de Lahunta, Miller's Anatomy of the Dog, 4th ed. (2013)",
+      "descriptionZh": "描述: 成年犬有 42 枚恒齿：2×(I 3/3, C 1/1, P 4/4, M 2/3)。乳齿仅 28 枚（无臼齿），6–8 周龄出齐，约 6–7 月龄换牙完成。裂齿为上颌 P4 与下颌 M1，是最大的颊齿，如剪刀般剪切。\n\n差异: 人有 32 枚牙、臼齿面平用于研磨；犬有 42 枚牙、牙尖锐利，用于切割与咬持。犬不能横向研磨——颞下颌关节基本只能作铰链式开合。\n\n临床意义: 小型玩赏犬常见乳犬齿滞留，需拔除以免咬合不正与牙周病。上颌 P4 裂齿因啃骨最易折断，其齿根脓肿可在眼下形成典型的眶下瘘管。\n\n来源: Evans & de Lahunta, Miller's Anatomy of the Dog, 4th ed. (2013)"
+    },
+    {
+      "code": "vet-dog-dogcat-vertebral-formula",
+      "speciesCode": "dog",
+      "systemCode": "vet-dog-skeletal",
+      "nameVi": "Công thức đốt sống",
+      "nameEn": "Vertebral formula",
+      "nameZh": "椎式",
+      "latin": "Columna vertebralis",
+      "descriptionVi": "Mô tả: Chó và mèo: C7 T13 L7 S3 Cd20–23 (đuôi thay đổi nhiều theo giống). Bảy đốt sống cổ là hằng số của gần như mọi thú có vú, dù cổ dài hay ngắn. Ba đốt cùng hợp nhất thành xương cùng.\n\nKhác biệt: Người C7 T12 L5 S5 Cc4. Chó mèo có thêm một đốt ngực (13 đôi xương sườn thay vì 12) và nhiều hơn hai đốt thắt lưng — cột sống thắt lưng dài và mềm chính là thứ cho phép chúng phi nước đại kiểu uốn lưng.\n\nÝ nghĩa lâm sàng: Thoát vị đĩa đệm Hansen type I hay xảy ra ở khoảng T12–L2 của các giống lùn sụn (dachshund, beagle, bulldog Pháp); vị trí này là bản lề giữa đoạn ngực cứng và đoạn thắt lưng mềm.\n\nNguồn: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)",
+      "descriptionEn": "Description: Dog and cat: C7 T13 L7 S3 Cd20–23 (the caudal count varies widely with breed). Seven cervical vertebrae is near-invariant across mammals regardless of neck length. The three sacral vertebrae fuse into the sacrum.\n\nDifference: Humans are C7 T12 L5 S5 Cc4. Dogs and cats have one extra thoracic vertebra (13 rib pairs instead of 12) and two extra lumbar vertebrae — that long, flexible lumbar spine is what allows the bounding gallop.\n\nClinical relevance: Hansen type I disc extrusion clusters around T12–L2 in chondrodystrophic breeds (dachshund, beagle, French bulldog); that level is the hinge between the stiff thoracic and the mobile lumbar spine.\n\nSource: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)",
+      "descriptionZh": "描述: 犬与猫：C7 T13 L7 S3 Cd20–23（尾椎数随品种差异大）。七枚颈椎在哺乳动物中几乎恒定，与颈的长短无关。三枚荐椎融合为荐骨。\n\n差异: 人为 C7 T12 L5 S5 Cc4。犬猫多一枚胸椎（13 对肋而非 12 对）、多两枚腰椎——腰段长而柔韧，正是其屈伸式奔跑的基础。\n\n临床意义: Hansen I 型椎间盘突出多集中于软骨发育不良品种（腊肠犬、比格犬、法斗）的 T12–L2；该处正是僵硬胸段与灵活腰段之间的枢纽。\n\n来源: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)"
+    },
+    {
+      "code": "vet-dog-dogcat-clavicle",
+      "speciesCode": "dog",
+      "systemCode": "vet-dog-skeletal",
+      "nameVi": "Xương đòn tiêu giảm và khớp nối chi trước",
+      "nameEn": "Reduced clavicle and the forelimb attachment",
+      "nameZh": "退化的锁骨与前肢连接",
+      "latin": "Clavicula",
+      "descriptionVi": "Mô tả: Chó gần như không còn xương đòn (chỉ là một mảnh gân nhỏ trong cơ đòn cánh tay, thường không thấy trên phim); mèo còn một xương đòn nhỏ hình thoi nhưng KHÔNG khớp với xương ức hay xương bả vai — nó nằm lơ lửng trong cơ. Chi trước nối vào thân hoàn toàn bằng cơ (synsarcosis), không có khớp xương nào.\n\nKhác biệt: Ở người, xương đòn chống đỡ vai ra xa thân và cho cánh tay xoay rộng để cầm nắm. Chó mèo hy sinh biên độ đó để lấy sải chân dài và giảm chấn khi chạy — bả vai trượt trên thành ngực như một cái nhíp.\n\nÝ nghĩa lâm sàng: Vì không có khớp xương, chi trước chó mèo không bao giờ 'trật khớp vai với thân' như trật khớp ức–đòn ở người; nhưng ngã từ trên cao có thể rách toác các cơ này (brachial avulsion) và làm chi trước lệch hẳn.\n\nNguồn: Evans & de Lahunta, Miller's Anatomy of the Dog, 4th ed. (2013)",
+      "descriptionEn": "Description: The dog's clavicle is reduced to a small tendinous intersection within the brachiocephalicus (often invisible radiographically); the cat retains a small spindle-shaped clavicle that articulates with nothing — it floats within muscle. The forelimb is attached to the trunk purely by muscle (synsarcosis), with no bony joint at all.\n\nDifference: In humans the clavicle struts the shoulder away from the trunk and gives the arm the wide arc needed for manipulation. Dogs and cats trade that range for stride length and shock absorption — the scapula slides on the chest wall like a leaf spring.\n\nClinical relevance: Because there is no bony joint, the canine or feline forelimb never dislocates from the trunk the way a human sternoclavicular joint does; a fall from height can, however, tear these muscles (brachial avulsion) and displace the whole limb.\n\nSource: Evans & de Lahunta, Miller's Anatomy of the Dog, 4th ed. (2013)",
+      "descriptionZh": "描述: 犬的锁骨退化为臂头肌内的一小段腱划（X 线常不可见）；猫保留一枚梭形小锁骨，但不与胸骨或肩胛骨形成关节，游离于肌肉之中。前肢完全以肌肉与躯干相连（肌连结），无任何骨性关节。\n\n差异: 人的锁骨把肩支离躯干，使上肢获得抓握所需的大范围活动。犬猫以此换取步幅与缓冲——肩胛骨如板簧般在胸壁上滑动。\n\n临床意义: 因无骨性关节，犬猫前肢不会像人的胸锁关节那样脱位；但高处坠落可撕裂这些肌肉（臂部撕脱），使整个前肢移位。\n\n来源: Evans & de Lahunta, Miller's Anatomy of the Dog, 4th ed. (2013)"
+    },
+    {
+      "code": "vet-dog-dog-gastric-torsion-anatomy",
+      "speciesCode": "dog",
+      "systemCode": "vet-dog-digestive",
+      "nameVi": "Dạ dày chó và cơ sở giải phẫu của xoắn dạ dày",
+      "nameEn": "The dog's stomach and the anatomy behind GDV",
+      "nameZh": "犬胃与胃扩张扭转的解剖基础",
+      "latin": "Ventriculus, ligamentum hepatogastricum",
+      "descriptionVi": "Mô tả: Dạ dày chó là dạ dày đơn giản, dung tích lớn, nằm gần như hoàn toàn trong vòm sườn khi rỗng. Nó chỉ được cố định chắc ở hai đầu — tâm vị bởi thực quản, môn vị bởi tá tràng và mạc nối nhỏ — còn phần thân thì tự do trong ổ bụng.\n\nKhác biệt: Cùng là dạ dày đơn như người, nhưng người có mạc treo ngắn và tư thế đứng nên dạ dày ít xoay; chó ngực sâu (Great Dane, becgie) có khoang bụng trước rộng, dạ dày căng hơi có thể xoay quanh trục thực quản–môn vị tới 180–360°.\n\nÝ nghĩa lâm sàng: Giãn–xoắn dạ dày (GDV) là cấp cứu ngoại khoa: dạ dày xoắn làm tắc tĩnh mạch cửa và tĩnh mạch chủ sau, gây sốc trong vài giờ. Phẫu thuật gắn dạ dày vào thành bụng phải (gastropexy) là biện pháp dự phòng tái phát, dựa đúng vào chỗ yếu giải phẫu nói trên.\n\nNguồn: Evans & de Lahunta, Miller's Anatomy of the Dog, 4th ed. (2013)",
+      "descriptionEn": "Description: The dog's stomach is a simple, capacious single-chambered organ lying almost entirely within the costal arch when empty. It is firmly anchored only at its two ends — the cardia by the oesophagus and the pylorus by the duodenum and lesser omentum — while the body hangs free.\n\nDifference: It is a simple stomach as in humans, but the human stomach is held short by its mesentery and the upright posture; in deep-chested dogs (Great Dane, German shepherd) the roomy cranial abdomen lets a gas-filled stomach rotate 180–360° about the oesophago-pyloric axis.\n\nClinical relevance: Gastric dilatation–volvulus is a surgical emergency: the twisted stomach obstructs the portal vein and caudal vena cava and causes shock within hours. Right-sided gastropexy prevents recurrence by fixing precisely the anatomical weak point described above.\n\nSource: Evans & de Lahunta, Miller's Anatomy of the Dog, 4th ed. (2013)",
+      "descriptionZh": "描述: 犬胃为单室简单胃，容量大，空虚时几乎完全位于肋弓内。仅两端被牢固固定——贲门借食管、幽门借十二指肠与小网膜——胃体则游离于腹腔。\n\n差异: 与人同为单室胃，但人体直立且系膜短，胃不易旋转；深胸犬种（大丹、德牧）前腹腔宽大，充气之胃可绕食管—幽门轴旋转 180–360°。\n\n临床意义: 胃扩张扭转为外科急症：扭转之胃压迫门静脉与后腔静脉，数小时内致休克。右侧胃固定术正是针对上述解剖薄弱点以防复发。\n\n来源: Evans & de Lahunta, Miller's Anatomy of the Dog, 4th ed. (2013)"
+    },
+    {
+      "code": "vet-dog-dogcat-os-penis-bone",
+      "speciesCode": "dog",
+      "systemCode": "vet-dog-urogenital",
+      "nameVi": "Xương dương vật (os penis)",
+      "nameEn": "The os penis",
+      "nameZh": "阴茎骨",
+      "latin": "Os penis",
+      "descriptionVi": "Mô tả: Chó và mèo đực có một xương thật nằm trong dương vật, mang một rãnh ở mặt bụng chứa niệu đạo. Ở chó xương này dài và chắc; ở mèo nhỏ hơn nhiều.\n\nKhác biệt: Người không có xương này. Ngựa, bò và lợn cũng không — nên đây là đặc điểm phân biệt rõ của thú ăn thịt trong nhóm gia súc nuôi.\n\nÝ nghĩa lâm sàng: Rãnh niệu đạo trong xương này là chỗ hẹp nhất của đường tiểu chó đực, nên sỏi tiết niệu hầu như luôn kẹt ở đó; đặt ống thông phải men theo rãnh. Đây là kiến thức giải phẫu quyết định trong cấp cứu tắc niệu đạo.\n\nNguồn: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)",
+      "descriptionEn": "Description: Male dogs and cats have a true bone within the penis, grooved ventrally to carry the urethra. In the dog it is long and stout; in the cat much smaller.\n\nDifference: Humans have no such bone. Neither do horses, cattle or pigs — so it is a clear distinguishing feature of the carnivores among domestic species.\n\nClinical relevance: The urethral groove within this bone is the narrowest point of the male dog's urinary tract, so uroliths almost always lodge there; a catheter must be threaded along the groove. This is the decisive anatomical fact in urethral obstruction emergencies.\n\nSource: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)",
+      "descriptionZh": "描述: 公犬与公猫的阴茎内有一真骨，腹侧有沟容纳尿道。犬的较长而粗壮，猫的则小得多。\n\n差异: 人无此骨。马、牛、猪亦无——故为家养动物中食肉类的明显区别特征。\n\n临床意义: 该骨内的尿道沟是公犬尿路最狭窄处，尿石几乎总嵌顿于此；导尿须沿沟推进。此为尿道阻塞急救中的关键解剖要点。\n\n来源: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)"
+    },
+    {
+      "code": "vet-dog-dogcat-anal-sacs",
+      "speciesCode": "dog",
+      "systemCode": "vet-dog-integument",
+      "nameVi": "Túi hậu môn",
+      "nameEn": "Anal sacs",
+      "nameZh": "肛门腺囊",
+      "latin": "Sinus paranales",
+      "descriptionVi": "Mô tả: Hai túi nằm giữa cơ thắt hậu môn trong và ngoài, ở vị trí 4 giờ và 8 giờ quanh hậu môn, đổ ra ngoài qua một ống ngắn ngay rìa hậu môn. Chất tiết nặng mùi, dùng để đánh dấu.\n\nKhác biệt: Người không có cấu trúc tương ứng. Đây là tuyến da biệt hoá riêng của thú ăn thịt.\n\nÝ nghĩa lâm sàng: Tắc và viêm túi hậu môn là lý do khiến chó 'lê mông' trên sàn; áp-xe vỡ ra ngoài cạnh hậu môn. Cắt bỏ túi phải rất thận trọng vì thần kinh trực tràng đuôi đi ngay sát — tổn thương gây mất trương lực cơ thắt hậu môn.\n\nNguồn: Evans & de Lahunta, Miller's Anatomy of the Dog, 4th ed. (2013)",
+      "descriptionEn": "Description: A pair of sacs lying between the internal and external anal sphincters at the four- and eight-o'clock positions, draining through a short duct at the anal margin. The secretion is pungent and serves in scent marking.\n\nDifference: There is no human counterpart; these are specialised skin glands of carnivores.\n\nClinical relevance: Impaction and infection make dogs scoot along the floor; abscesses rupture beside the anus. Sacculectomy demands care because the caudal rectal nerve runs immediately adjacent — damaging it leaves the anal sphincter atonic.\n\nSource: Evans & de Lahunta, Miller's Anatomy of the Dog, 4th ed. (2013)",
+      "descriptionZh": "描述: 位于肛门内、外括约肌之间，约在四点与八点位置的一对囊，经短导管开口于肛缘。分泌物气味强烈，用于标记。\n\n差异: 人无对应结构；此为食肉动物特化的皮肤腺。\n\n临床意义: 阻塞与感染使犬在地面「拖臀」；脓肿可于肛旁破溃。摘除术须谨慎，因尾直肠神经紧邻其旁，损伤可致肛门括约肌失张。\n\n来源: Evans & de Lahunta, Miller's Anatomy of the Dog, 4th ed. (2013)"
+    },
+    {
+      "code": "vet-dog-dog-tympanic-bulla",
+      "speciesCode": "dog",
+      "systemCode": "vet-dog-senses",
+      "nameVi": "Bọng nhĩ và ống tai ngoài hình chữ L",
+      "nameEn": "Tympanic bulla and the L-shaped ear canal",
+      "nameZh": "鼓泡与 L 形外耳道",
+      "latin": "Bulla tympanica, meatus acusticus externus",
+      "descriptionVi": "Mô tả: Ống tai ngoài của chó mèo gồm một đoạn thẳng đứng rồi gấp gần vuông góc thành đoạn nằm ngang mới tới màng nhĩ. Tai giữa nằm trong bọng nhĩ — một khoang xương phồng ở nền sọ; ở mèo bọng nhĩ bị một vách xương chia thành hai ngăn.\n\nKhác biệt: Ống tai người ngắn và gần như thẳng, soi tai là thấy màng nhĩ ngay. Ở chó mèo phải kéo vành tai lên và ra ngoài để duỗi thẳng chỗ gấp mới nhìn được màng nhĩ.\n\nÝ nghĩa lâm sàng: Chỗ gấp giữ lại ráy và dịch viêm nên viêm tai ngoài rất hay tái phát, nhất là chó tai cụp. Ở mèo, vách chia bọng nhĩ khiến polyp mũi hầu hay nằm ở ngăn lưng và khiến hội chứng Horner xuất hiện sau can thiệp tai giữa.\n\nNguồn: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionEn": "Description: The external canal of dog and cat runs vertically, then turns nearly at a right angle into a horizontal segment before reaching the eardrum. The middle ear lies in the tympanic bulla, a bony bubble on the skull base; in the cat a bony septum divides the bulla into two compartments.\n\nDifference: The human canal is short and nearly straight, so the eardrum is seen at once. In dog and cat the pinna must be pulled up and out to straighten the bend before the eardrum comes into view.\n\nClinical relevance: The bend traps wax and exudate, so otitis externa recurs readily, especially in drop-eared breeds. In the cat the divided bulla harbours nasopharyngeal polyps in the dorsal compartment and explains Horner's syndrome after middle-ear procedures.\n\nSource: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionZh": "描述: 犬猫外耳道先垂直下行，再近乎直角转为水平段方达鼓膜。中耳位于颅底膨大的鼓泡内；猫的鼓泡被骨性隔分为两室。\n\n差异: 人的外耳道短而近直，检耳即见鼓膜。犬猫须将耳廓向上外牵拉以拉直弯曲处，方能看到鼓膜。\n\n临床意义: 弯曲处滞留耵聍与渗出，故外耳炎易复发，垂耳品种尤甚。猫鼓泡分隔，鼻咽息肉常位于背侧室，也解释了中耳操作后出现的霍纳氏综合征。\n\n来源: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)"
+    },
+    {
+      "code": "vet-dog-dogcat-third-eyelid",
+      "speciesCode": "dog",
+      "systemCode": "vet-dog-senses",
+      "nameVi": "Mí mắt thứ ba (màng nictitans)",
+      "nameEn": "The third eyelid",
+      "nameZh": "第三眼睑（瞬膜）",
+      "latin": "Palpebra tertia, glandula palpebrae tertiae",
+      "descriptionVi": "Mô tả: Một nếp kết mạc có sụn nâng đỡ, nằm ở góc trong mắt, quét ngang giác mạc khi nhãn cầu thụt vào. Tuyến của mí thứ ba tiết khoảng 30–50% lượng nước mắt.\n\nKhác biệt: Ở người chỉ còn dấu vết là nếp bán nguyệt nhỏ ở góc trong mắt, không cử động được và không có tuyến.\n\nÝ nghĩa lâm sàng: Sa tuyến mí thứ ba ('cherry eye') phải khâu vùi lại chứ KHÔNG cắt bỏ — cắt tuyến gây khô mắt (KCS) suốt đời. Mí thứ ba nhô ra cả hai bên ở mèo là dấu hiệu bệnh toàn thân, một bên kèm co đồng tử là hội chứng Horner.\n\nNguồn: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionEn": "Description: A conjunctival fold supported by cartilage at the medial canthus, sweeping across the cornea as the globe retracts. Its gland produces roughly 30–50% of the tear film.\n\nDifference: In humans only a vestige remains — the small immobile plica semilunaris at the medial canthus, without a gland.\n\nClinical relevance: Prolapse of the gland ('cherry eye') must be repositioned surgically, never excised — removal causes lifelong keratoconjunctivitis sicca. Bilateral third-eyelid protrusion in cats signals systemic illness; unilateral protrusion with miosis suggests Horner's syndrome.\n\nSource: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionZh": "描述: 位于内眼角、由软骨支撑的结膜褶，眼球回缩时横扫角膜。其腺体分泌约占泪液的 30–50%。\n\n差异: 人仅遗留内眼角处不能活动的半月襞，且无腺体。\n\n临床意义: 腺体脱出（「樱桃眼」）须手术复位，切不可切除——切除将致终身干性角结膜炎。猫双侧瞬膜突出提示全身性疾病；单侧突出伴瞳孔缩小则提示霍纳氏综合征。\n\n来源: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)"
+    },
+    {
+      "code": "vet-dog-dog-thoracic-limb-weight",
+      "speciesCode": "dog",
+      "systemCode": "vet-dog-muscular",
+      "nameVi": "Phân bố trọng lượng lên bốn chân",
+      "nameEn": "Weight distribution over four limbs",
+      "nameZh": "四肢负重分配",
+      "latin": "Membrum thoracicum, membrum pelvinum",
+      "descriptionVi": "Mô tả: Ở thú bốn chân đứng yên, chi trước chịu khoảng 60% trọng lượng, chi sau khoảng 40%. Chi trước đỡ tải, chi sau tạo lực đẩy.\n\nKhác biệt: Người đứng hai chân dồn 100% lên chi dưới, chi trên tự do hoàn toàn. Đây là khác biệt cơ học nền tảng, kéo theo mọi khác biệt về hình dạng xương chậu, cột sống và bàn chân.\n\nÝ nghĩa lâm sàng: Vì thế chó què chi trước thường biểu hiện bằng gật đầu khi bước xuống chân lành, còn què chi sau thì thấy hông nhô lên bên chân đau — hai kiểu quan sát khác nhau khi khám dáng đi.\n\nNguồn: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)",
+      "descriptionEn": "Description: In a standing quadruped the forelimbs carry about 60% of body weight and the hindlimbs about 40%. The forelimb supports; the hindlimb propels.\n\nDifference: A biped puts 100% on the hindlimbs and frees the forelimbs entirely. This is the fundamental mechanical difference from which all the differences in pelvis, spine and foot shape follow.\n\nClinical relevance: Consequently forelimb lameness shows as a head nod that drops onto the sound limb, whereas hindlimb lameness shows as a hip hike over the painful side — two distinct observations in a gait examination.\n\nSource: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)",
+      "descriptionZh": "描述: 四足动物站立时，前肢约承担体重的 60%，后肢约 40%。前肢负重，后肢提供推进。\n\n差异: 人两足站立时 100% 由下肢承担，上肢完全解放。这一根本力学差异衍生出骨盆、脊柱与足形态的一切不同。\n\n临床意义: 因此前肢跛行表现为头随健肢着地而下点，后肢跛行则表现为患侧髋部上抬——步态检查中的两种不同观察点。\n\n来源: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)"
+    },
+    {
+      "code": "vet-cat-cat-dental-formula",
+      "speciesCode": "cat",
+      "systemCode": "vet-cat-digestive",
+      "nameVi": "Công thức răng mèo",
+      "nameEn": "Dental formula of the cat",
+      "nameZh": "猫齿式",
+      "latin": "Dentes permanentes",
+      "descriptionVi": "Mô tả: Mèo trưởng thành có 30 răng vĩnh viễn: 2×(I 3/3, C 1/1, P 3/2, M 1/1). Ít răng hơn chó vì tiêu giảm các răng tiền hàm và hàm — mèo là loài ăn thịt bắt buộc, hầu như không nghiền thức ăn. Răng ăn thịt cũng là P4 trên và M1 dưới.\n\nKhác biệt: Chó 42 răng, mèo 30 răng. Chó còn giữ răng hàm dưới M3 để nghiền chút ít (chó là loài ăn tạp thiên thịt), mèo mất hẳn.\n\nÝ nghĩa lâm sàng: Tổn thương tiêu răng do hủy cốt bào (FORL/tooth resorption) gặp ở hơn một phần ba mèo trưởng thành, hay bắt đầu ở P3–P4 hàm dưới; chỉ chụp X-quang trong miệng mới phân loại được, và răng đã tiêu chân thì nhổ theo kiểu cắt thân răng.\n\nNguồn: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionEn": "Description: The adult cat has 30 permanent teeth: 2×(I 3/3, C 1/1, P 3/2, M 1/1). It has fewer teeth than the dog because premolars and molars are reduced — the cat is an obligate carnivore and barely grinds food at all. The carnassials are again upper P4 and lower M1.\n\nDifference: 42 teeth in the dog against 30 in the cat. The dog keeps a lower M3 for some grinding (it is an omnivorous-leaning carnivore); the cat has lost it entirely.\n\nClinical relevance: Tooth resorption (FORL) affects over a third of adult cats, typically starting at the mandibular P3–P4; only intraoral radiographs allow classification, and teeth with resorbed roots are managed by crown amputation rather than full extraction.\n\nSource: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionZh": "描述: 成年猫有 30 枚恒齿：2×(I 3/3, C 1/1, P 3/2, M 1/1)。因前臼齿与臼齿退化而少于犬——猫为专性肉食动物，几乎不研磨食物。裂齿同为上颌 P4 与下颌 M1。\n\n差异: 犬 42 枚、猫 30 枚。犬保留下颌 M3 以作少量研磨（偏杂食性），猫则完全缺失。\n\n临床意义: 牙吸收（FORL）见于三分之一以上成年猫，多始于下颌 P3–P4；须口内 X 线片方能分型，齿根已吸收者行冠切术而非完整拔除。\n\n来源: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)"
+    },
+    {
+      "code": "vet-cat-dogcat-vertebral-formula",
+      "speciesCode": "cat",
+      "systemCode": "vet-cat-skeletal",
+      "nameVi": "Công thức đốt sống",
+      "nameEn": "Vertebral formula",
+      "nameZh": "椎式",
+      "latin": "Columna vertebralis",
+      "descriptionVi": "Mô tả: Chó và mèo: C7 T13 L7 S3 Cd20–23 (đuôi thay đổi nhiều theo giống). Bảy đốt sống cổ là hằng số của gần như mọi thú có vú, dù cổ dài hay ngắn. Ba đốt cùng hợp nhất thành xương cùng.\n\nKhác biệt: Người C7 T12 L5 S5 Cc4. Chó mèo có thêm một đốt ngực (13 đôi xương sườn thay vì 12) và nhiều hơn hai đốt thắt lưng — cột sống thắt lưng dài và mềm chính là thứ cho phép chúng phi nước đại kiểu uốn lưng.\n\nÝ nghĩa lâm sàng: Thoát vị đĩa đệm Hansen type I hay xảy ra ở khoảng T12–L2 của các giống lùn sụn (dachshund, beagle, bulldog Pháp); vị trí này là bản lề giữa đoạn ngực cứng và đoạn thắt lưng mềm.\n\nNguồn: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)",
+      "descriptionEn": "Description: Dog and cat: C7 T13 L7 S3 Cd20–23 (the caudal count varies widely with breed). Seven cervical vertebrae is near-invariant across mammals regardless of neck length. The three sacral vertebrae fuse into the sacrum.\n\nDifference: Humans are C7 T12 L5 S5 Cc4. Dogs and cats have one extra thoracic vertebra (13 rib pairs instead of 12) and two extra lumbar vertebrae — that long, flexible lumbar spine is what allows the bounding gallop.\n\nClinical relevance: Hansen type I disc extrusion clusters around T12–L2 in chondrodystrophic breeds (dachshund, beagle, French bulldog); that level is the hinge between the stiff thoracic and the mobile lumbar spine.\n\nSource: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)",
+      "descriptionZh": "描述: 犬与猫：C7 T13 L7 S3 Cd20–23（尾椎数随品种差异大）。七枚颈椎在哺乳动物中几乎恒定，与颈的长短无关。三枚荐椎融合为荐骨。\n\n差异: 人为 C7 T12 L5 S5 Cc4。犬猫多一枚胸椎（13 对肋而非 12 对）、多两枚腰椎——腰段长而柔韧，正是其屈伸式奔跑的基础。\n\n临床意义: Hansen I 型椎间盘突出多集中于软骨发育不良品种（腊肠犬、比格犬、法斗）的 T12–L2；该处正是僵硬胸段与灵活腰段之间的枢纽。\n\n来源: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)"
+    },
+    {
+      "code": "vet-cat-dogcat-clavicle",
+      "speciesCode": "cat",
+      "systemCode": "vet-cat-skeletal",
+      "nameVi": "Xương đòn tiêu giảm và khớp nối chi trước",
+      "nameEn": "Reduced clavicle and the forelimb attachment",
+      "nameZh": "退化的锁骨与前肢连接",
+      "latin": "Clavicula",
+      "descriptionVi": "Mô tả: Chó gần như không còn xương đòn (chỉ là một mảnh gân nhỏ trong cơ đòn cánh tay, thường không thấy trên phim); mèo còn một xương đòn nhỏ hình thoi nhưng KHÔNG khớp với xương ức hay xương bả vai — nó nằm lơ lửng trong cơ. Chi trước nối vào thân hoàn toàn bằng cơ (synsarcosis), không có khớp xương nào.\n\nKhác biệt: Ở người, xương đòn chống đỡ vai ra xa thân và cho cánh tay xoay rộng để cầm nắm. Chó mèo hy sinh biên độ đó để lấy sải chân dài và giảm chấn khi chạy — bả vai trượt trên thành ngực như một cái nhíp.\n\nÝ nghĩa lâm sàng: Vì không có khớp xương, chi trước chó mèo không bao giờ 'trật khớp vai với thân' như trật khớp ức–đòn ở người; nhưng ngã từ trên cao có thể rách toác các cơ này (brachial avulsion) và làm chi trước lệch hẳn.\n\nNguồn: Evans & de Lahunta, Miller's Anatomy of the Dog, 4th ed. (2013)",
+      "descriptionEn": "Description: The dog's clavicle is reduced to a small tendinous intersection within the brachiocephalicus (often invisible radiographically); the cat retains a small spindle-shaped clavicle that articulates with nothing — it floats within muscle. The forelimb is attached to the trunk purely by muscle (synsarcosis), with no bony joint at all.\n\nDifference: In humans the clavicle struts the shoulder away from the trunk and gives the arm the wide arc needed for manipulation. Dogs and cats trade that range for stride length and shock absorption — the scapula slides on the chest wall like a leaf spring.\n\nClinical relevance: Because there is no bony joint, the canine or feline forelimb never dislocates from the trunk the way a human sternoclavicular joint does; a fall from height can, however, tear these muscles (brachial avulsion) and displace the whole limb.\n\nSource: Evans & de Lahunta, Miller's Anatomy of the Dog, 4th ed. (2013)",
+      "descriptionZh": "描述: 犬的锁骨退化为臂头肌内的一小段腱划（X 线常不可见）；猫保留一枚梭形小锁骨，但不与胸骨或肩胛骨形成关节，游离于肌肉之中。前肢完全以肌肉与躯干相连（肌连结），无任何骨性关节。\n\n差异: 人的锁骨把肩支离躯干，使上肢获得抓握所需的大范围活动。犬猫以此换取步幅与缓冲——肩胛骨如板簧般在胸壁上滑动。\n\n临床意义: 因无骨性关节，犬猫前肢不会像人的胸锁关节那样脱位；但高处坠落可撕裂这些肌肉（臂部撕脱），使整个前肢移位。\n\n来源: Evans & de Lahunta, Miller's Anatomy of the Dog, 4th ed. (2013)"
+    },
+    {
+      "code": "vet-cat-cat-claw-retraction",
+      "speciesCode": "cat",
+      "systemCode": "vet-cat-integument",
+      "nameVi": "Vuốt thu rút được của mèo",
+      "nameEn": "The cat's retractile claw",
+      "nameZh": "猫的可伸缩爪",
+      "latin": "Unguicula, ligamenta dorsalia elastica",
+      "descriptionVi": "Mô tả: Đốt ngón III của mèo mang vuốt và được giữ ở tư thế thu vào nhờ dây chằng đàn hồi mặt lưng; vuốt chỉ bung ra khi cơ gấp sâu các ngón co chủ động. Vì thế trạng thái nghỉ là vuốt được cất kín, không mòn khi đi.\n\nKhác biệt: Chó không có cơ chế này: vuốt luôn lộ, chạm đất khi đi nên mòn tự nhiên và cùn. Đó là lý do vết cào của mèo sắc và sâu hơn hẳn, còn vuốt chó thì dùng để bám khi chạy.\n\nÝ nghĩa lâm sàng: Cắt vuốt kiểu onychectomy thực chất là cắt bỏ cả đốt ngón III, gây đau mạn và thay đổi dáng đi — nhiều nước đã cấm. Vuốt mọc quá dài ở mèo già hoặc mèo ít vận động có thể xuyên vào đệm thịt.\n\nNguồn: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionEn": "Description: The cat's third phalanx carries the claw and is held retracted by dorsal elastic ligaments; the claw is protracted only by active contraction of the deep digital flexor. The resting state is therefore claw-sheathed, so it never wears down on the ground.\n\nDifference: The dog has no such mechanism: its claws are permanently exposed, contact the ground and are worn blunt. Hence a cat scratch is far sharper and deeper, while dog claws serve as running spikes.\n\nClinical relevance: Onychectomy is in fact amputation of the entire third phalanx, causing chronic pain and altered gait — it is banned in many countries. In old or inactive cats an overgrown claw can curl into the digital pad.\n\nSource: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionZh": "描述: 猫的第三指（趾）骨携爪，由背侧弹性韧带维持于收回位；仅当指深屈肌主动收缩时爪方伸出。故静息时爪被收鞘，行走不磨损。\n\n差异: 犬无此机制：爪常露、着地磨钝。故猫抓伤远比犬更锐深，而犬爪用于奔跑抓地。\n\n临床意义: 去爪术实为切除整个第三指骨，可致慢性疼痛与步态改变，多国已禁止。老年或活动少的猫，爪过长可刺入趾垫。\n\n来源: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)"
+    },
+    {
+      "code": "vet-cat-cat-obligate-carnivore-gi",
+      "speciesCode": "cat",
+      "systemCode": "vet-cat-digestive",
+      "nameVi": "Ống tiêu hoá mèo — loài ăn thịt bắt buộc",
+      "nameEn": "The cat's gut — an obligate carnivore",
+      "nameZh": "猫的消化道——专性肉食",
+      "latin": "Intestinum tenue, caecum",
+      "descriptionVi": "Mô tả: Ruột mèo ngắn: tổng chiều dài ống tiêu hoá chỉ khoảng 4 lần chiều dài thân, manh tràng bé tí và không có ý nghĩa lên men. Thức ăn thịt tiêu hoá nhanh, không cần đoạn ruột dài để lên men chất xơ.\n\nKhác biệt: Tỉ lệ chiều dài ruột trên thân: mèo ~4:1, chó ~6:1, lợn ~14:1, ngựa ~12:1, bò ~20:1. Con số này phản ánh thẳng khẩu phần — càng nhiều chất xơ thì đường ruột càng dài và càng có buồng lên men lớn.\n\nÝ nghĩa lâm sàng: Vì là loài ăn thịt bắt buộc, mèo không tự tổng hợp đủ taurine, arginine, vitamin A dạng hoạt động và acid arachidonic — cho mèo ăn khẩu phần chó hoặc khẩu phần chay gây bệnh cơ tim giãn và thoái hoá võng mạc do thiếu taurine.\n\nNguồn: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionEn": "Description: The cat's gut is short: total length is only about four times body length, and the caecum is vestigial with no fermentative role. Meat is digested quickly and needs no long fermentation chamber.\n\nDifference: Gut-to-body-length ratios: cat ≈4:1, dog ≈6:1, pig ≈14:1, horse ≈12:1, cattle ≈20:1. The figure maps directly onto diet — the more fibre, the longer the gut and the bigger the fermentation chamber.\n\nClinical relevance: As an obligate carnivore the cat cannot make enough taurine, arginine, preformed vitamin A or arachidonic acid — feeding dog food or a vegetarian diet causes taurine-deficiency dilated cardiomyopathy and retinal degeneration.\n\nSource: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionZh": "描述: 猫肠道短：消化道全长约为体长的四倍，盲肠极小、无发酵作用。肉类消化迅速，无需长段发酵。\n\n差异: 肠道与体长之比：猫约 4:1，犬约 6:1，猪约 14:1，马约 12:1，牛约 20:1。该比值直接反映食性——纤维越多，肠道越长、发酵腔越大。\n\n临床意义: 作为专性肉食动物，猫无法自足合成牛磺酸、精氨酸、活性维生素 A 与花生四烯酸——喂犬粮或素食日粮可致牛磺酸缺乏性扩张型心肌病与视网膜变性。\n\n来源: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)"
+    },
+    {
+      "code": "vet-cat-dogcat-os-penis-bone",
+      "speciesCode": "cat",
+      "systemCode": "vet-cat-urogenital",
+      "nameVi": "Xương dương vật (os penis)",
+      "nameEn": "The os penis",
+      "nameZh": "阴茎骨",
+      "latin": "Os penis",
+      "descriptionVi": "Mô tả: Chó và mèo đực có một xương thật nằm trong dương vật, mang một rãnh ở mặt bụng chứa niệu đạo. Ở chó xương này dài và chắc; ở mèo nhỏ hơn nhiều.\n\nKhác biệt: Người không có xương này. Ngựa, bò và lợn cũng không — nên đây là đặc điểm phân biệt rõ của thú ăn thịt trong nhóm gia súc nuôi.\n\nÝ nghĩa lâm sàng: Rãnh niệu đạo trong xương này là chỗ hẹp nhất của đường tiểu chó đực, nên sỏi tiết niệu hầu như luôn kẹt ở đó; đặt ống thông phải men theo rãnh. Đây là kiến thức giải phẫu quyết định trong cấp cứu tắc niệu đạo.\n\nNguồn: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)",
+      "descriptionEn": "Description: Male dogs and cats have a true bone within the penis, grooved ventrally to carry the urethra. In the dog it is long and stout; in the cat much smaller.\n\nDifference: Humans have no such bone. Neither do horses, cattle or pigs — so it is a clear distinguishing feature of the carnivores among domestic species.\n\nClinical relevance: The urethral groove within this bone is the narrowest point of the male dog's urinary tract, so uroliths almost always lodge there; a catheter must be threaded along the groove. This is the decisive anatomical fact in urethral obstruction emergencies.\n\nSource: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)",
+      "descriptionZh": "描述: 公犬与公猫的阴茎内有一真骨，腹侧有沟容纳尿道。犬的较长而粗壮，猫的则小得多。\n\n差异: 人无此骨。马、牛、猪亦无——故为家养动物中食肉类的明显区别特征。\n\n临床意义: 该骨内的尿道沟是公犬尿路最狭窄处，尿石几乎总嵌顿于此；导尿须沿沟推进。此为尿道阻塞急救中的关键解剖要点。\n\n来源: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)"
+    },
+    {
+      "code": "vet-cat-dogcat-anal-sacs",
+      "speciesCode": "cat",
+      "systemCode": "vet-cat-integument",
+      "nameVi": "Túi hậu môn",
+      "nameEn": "Anal sacs",
+      "nameZh": "肛门腺囊",
+      "latin": "Sinus paranales",
+      "descriptionVi": "Mô tả: Hai túi nằm giữa cơ thắt hậu môn trong và ngoài, ở vị trí 4 giờ và 8 giờ quanh hậu môn, đổ ra ngoài qua một ống ngắn ngay rìa hậu môn. Chất tiết nặng mùi, dùng để đánh dấu.\n\nKhác biệt: Người không có cấu trúc tương ứng. Đây là tuyến da biệt hoá riêng của thú ăn thịt.\n\nÝ nghĩa lâm sàng: Tắc và viêm túi hậu môn là lý do khiến chó 'lê mông' trên sàn; áp-xe vỡ ra ngoài cạnh hậu môn. Cắt bỏ túi phải rất thận trọng vì thần kinh trực tràng đuôi đi ngay sát — tổn thương gây mất trương lực cơ thắt hậu môn.\n\nNguồn: Evans & de Lahunta, Miller's Anatomy of the Dog, 4th ed. (2013)",
+      "descriptionEn": "Description: A pair of sacs lying between the internal and external anal sphincters at the four- and eight-o'clock positions, draining through a short duct at the anal margin. The secretion is pungent and serves in scent marking.\n\nDifference: There is no human counterpart; these are specialised skin glands of carnivores.\n\nClinical relevance: Impaction and infection make dogs scoot along the floor; abscesses rupture beside the anus. Sacculectomy demands care because the caudal rectal nerve runs immediately adjacent — damaging it leaves the anal sphincter atonic.\n\nSource: Evans & de Lahunta, Miller's Anatomy of the Dog, 4th ed. (2013)",
+      "descriptionZh": "描述: 位于肛门内、外括约肌之间，约在四点与八点位置的一对囊，经短导管开口于肛缘。分泌物气味强烈，用于标记。\n\n差异: 人无对应结构；此为食肉动物特化的皮肤腺。\n\n临床意义: 阻塞与感染使犬在地面「拖臀」；脓肿可于肛旁破溃。摘除术须谨慎，因尾直肠神经紧邻其旁，损伤可致肛门括约肌失张。\n\n来源: Evans & de Lahunta, Miller's Anatomy of the Dog, 4th ed. (2013)"
+    },
+    {
+      "code": "vet-cat-dog-tympanic-bulla",
+      "speciesCode": "cat",
+      "systemCode": "vet-cat-senses",
+      "nameVi": "Bọng nhĩ và ống tai ngoài hình chữ L",
+      "nameEn": "Tympanic bulla and the L-shaped ear canal",
+      "nameZh": "鼓泡与 L 形外耳道",
+      "latin": "Bulla tympanica, meatus acusticus externus",
+      "descriptionVi": "Mô tả: Ống tai ngoài của chó mèo gồm một đoạn thẳng đứng rồi gấp gần vuông góc thành đoạn nằm ngang mới tới màng nhĩ. Tai giữa nằm trong bọng nhĩ — một khoang xương phồng ở nền sọ; ở mèo bọng nhĩ bị một vách xương chia thành hai ngăn.\n\nKhác biệt: Ống tai người ngắn và gần như thẳng, soi tai là thấy màng nhĩ ngay. Ở chó mèo phải kéo vành tai lên và ra ngoài để duỗi thẳng chỗ gấp mới nhìn được màng nhĩ.\n\nÝ nghĩa lâm sàng: Chỗ gấp giữ lại ráy và dịch viêm nên viêm tai ngoài rất hay tái phát, nhất là chó tai cụp. Ở mèo, vách chia bọng nhĩ khiến polyp mũi hầu hay nằm ở ngăn lưng và khiến hội chứng Horner xuất hiện sau can thiệp tai giữa.\n\nNguồn: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionEn": "Description: The external canal of dog and cat runs vertically, then turns nearly at a right angle into a horizontal segment before reaching the eardrum. The middle ear lies in the tympanic bulla, a bony bubble on the skull base; in the cat a bony septum divides the bulla into two compartments.\n\nDifference: The human canal is short and nearly straight, so the eardrum is seen at once. In dog and cat the pinna must be pulled up and out to straighten the bend before the eardrum comes into view.\n\nClinical relevance: The bend traps wax and exudate, so otitis externa recurs readily, especially in drop-eared breeds. In the cat the divided bulla harbours nasopharyngeal polyps in the dorsal compartment and explains Horner's syndrome after middle-ear procedures.\n\nSource: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionZh": "描述: 犬猫外耳道先垂直下行，再近乎直角转为水平段方达鼓膜。中耳位于颅底膨大的鼓泡内；猫的鼓泡被骨性隔分为两室。\n\n差异: 人的外耳道短而近直，检耳即见鼓膜。犬猫须将耳廓向上外牵拉以拉直弯曲处，方能看到鼓膜。\n\n临床意义: 弯曲处滞留耵聍与渗出，故外耳炎易复发，垂耳品种尤甚。猫鼓泡分隔，鼻咽息肉常位于背侧室，也解释了中耳操作后出现的霍纳氏综合征。\n\n来源: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)"
+    },
+    {
+      "code": "vet-cat-dogcat-third-eyelid",
+      "speciesCode": "cat",
+      "systemCode": "vet-cat-senses",
+      "nameVi": "Mí mắt thứ ba (màng nictitans)",
+      "nameEn": "The third eyelid",
+      "nameZh": "第三眼睑（瞬膜）",
+      "latin": "Palpebra tertia, glandula palpebrae tertiae",
+      "descriptionVi": "Mô tả: Một nếp kết mạc có sụn nâng đỡ, nằm ở góc trong mắt, quét ngang giác mạc khi nhãn cầu thụt vào. Tuyến của mí thứ ba tiết khoảng 30–50% lượng nước mắt.\n\nKhác biệt: Ở người chỉ còn dấu vết là nếp bán nguyệt nhỏ ở góc trong mắt, không cử động được và không có tuyến.\n\nÝ nghĩa lâm sàng: Sa tuyến mí thứ ba ('cherry eye') phải khâu vùi lại chứ KHÔNG cắt bỏ — cắt tuyến gây khô mắt (KCS) suốt đời. Mí thứ ba nhô ra cả hai bên ở mèo là dấu hiệu bệnh toàn thân, một bên kèm co đồng tử là hội chứng Horner.\n\nNguồn: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionEn": "Description: A conjunctival fold supported by cartilage at the medial canthus, sweeping across the cornea as the globe retracts. Its gland produces roughly 30–50% of the tear film.\n\nDifference: In humans only a vestige remains — the small immobile plica semilunaris at the medial canthus, without a gland.\n\nClinical relevance: Prolapse of the gland ('cherry eye') must be repositioned surgically, never excised — removal causes lifelong keratoconjunctivitis sicca. Bilateral third-eyelid protrusion in cats signals systemic illness; unilateral protrusion with miosis suggests Horner's syndrome.\n\nSource: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionZh": "描述: 位于内眼角、由软骨支撑的结膜褶，眼球回缩时横扫角膜。其腺体分泌约占泪液的 30–50%。\n\n差异: 人仅遗留内眼角处不能活动的半月襞，且无腺体。\n\n临床意义: 腺体脱出（「樱桃眼」）须手术复位，切不可切除——切除将致终身干性角结膜炎。猫双侧瞬膜突出提示全身性疾病；单侧突出伴瞳孔缩小则提示霍纳氏综合征。\n\n来源: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)"
+    },
+    {
+      "code": "vet-cat-dog-thoracic-limb-weight",
+      "speciesCode": "cat",
+      "systemCode": "vet-cat-muscular",
+      "nameVi": "Phân bố trọng lượng lên bốn chân",
+      "nameEn": "Weight distribution over four limbs",
+      "nameZh": "四肢负重分配",
+      "latin": "Membrum thoracicum, membrum pelvinum",
+      "descriptionVi": "Mô tả: Ở thú bốn chân đứng yên, chi trước chịu khoảng 60% trọng lượng, chi sau khoảng 40%. Chi trước đỡ tải, chi sau tạo lực đẩy.\n\nKhác biệt: Người đứng hai chân dồn 100% lên chi dưới, chi trên tự do hoàn toàn. Đây là khác biệt cơ học nền tảng, kéo theo mọi khác biệt về hình dạng xương chậu, cột sống và bàn chân.\n\nÝ nghĩa lâm sàng: Vì thế chó què chi trước thường biểu hiện bằng gật đầu khi bước xuống chân lành, còn què chi sau thì thấy hông nhô lên bên chân đau — hai kiểu quan sát khác nhau khi khám dáng đi.\n\nNguồn: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)",
+      "descriptionEn": "Description: In a standing quadruped the forelimbs carry about 60% of body weight and the hindlimbs about 40%. The forelimb supports; the hindlimb propels.\n\nDifference: A biped puts 100% on the hindlimbs and frees the forelimbs entirely. This is the fundamental mechanical difference from which all the differences in pelvis, spine and foot shape follow.\n\nClinical relevance: Consequently forelimb lameness shows as a head nod that drops onto the sound limb, whereas hindlimb lameness shows as a hip hike over the painful side — two distinct observations in a gait examination.\n\nSource: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)",
+      "descriptionZh": "描述: 四足动物站立时，前肢约承担体重的 60%，后肢约 40%。前肢负重，后肢提供推进。\n\n差异: 人两足站立时 100% 由下肢承担，上肢完全解放。这一根本力学差异衍生出骨盆、脊柱与足形态的一切不同。\n\n临床意义: 因此前肢跛行表现为头随健肢着地而下点，后肢跛行则表现为患侧髋部上抬——步态检查中的两种不同观察点。\n\n来源: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)"
+    },
+    {
+      "code": "vet-horse-dogcat-third-eyelid",
+      "speciesCode": "horse",
+      "systemCode": "vet-horse-senses",
+      "nameVi": "Mí mắt thứ ba (màng nictitans)",
+      "nameEn": "The third eyelid",
+      "nameZh": "第三眼睑（瞬膜）",
+      "latin": "Palpebra tertia, glandula palpebrae tertiae",
+      "descriptionVi": "Mô tả: Một nếp kết mạc có sụn nâng đỡ, nằm ở góc trong mắt, quét ngang giác mạc khi nhãn cầu thụt vào. Tuyến của mí thứ ba tiết khoảng 30–50% lượng nước mắt.\n\nKhác biệt: Ở người chỉ còn dấu vết là nếp bán nguyệt nhỏ ở góc trong mắt, không cử động được và không có tuyến.\n\nÝ nghĩa lâm sàng: Sa tuyến mí thứ ba ('cherry eye') phải khâu vùi lại chứ KHÔNG cắt bỏ — cắt tuyến gây khô mắt (KCS) suốt đời. Mí thứ ba nhô ra cả hai bên ở mèo là dấu hiệu bệnh toàn thân, một bên kèm co đồng tử là hội chứng Horner.\n\nNguồn: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionEn": "Description: A conjunctival fold supported by cartilage at the medial canthus, sweeping across the cornea as the globe retracts. Its gland produces roughly 30–50% of the tear film.\n\nDifference: In humans only a vestige remains — the small immobile plica semilunaris at the medial canthus, without a gland.\n\nClinical relevance: Prolapse of the gland ('cherry eye') must be repositioned surgically, never excised — removal causes lifelong keratoconjunctivitis sicca. Bilateral third-eyelid protrusion in cats signals systemic illness; unilateral protrusion with miosis suggests Horner's syndrome.\n\nSource: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionZh": "描述: 位于内眼角、由软骨支撑的结膜褶，眼球回缩时横扫角膜。其腺体分泌约占泪液的 30–50%。\n\n差异: 人仅遗留内眼角处不能活动的半月襞，且无腺体。\n\n临床意义: 腺体脱出（「樱桃眼」）须手术复位，切不可切除——切除将致终身干性角结膜炎。猫双侧瞬膜突出提示全身性疾病；单侧突出伴瞳孔缩小则提示霍纳氏综合征。\n\n来源: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)"
+    },
+    {
+      "code": "vet-horse-dog-thoracic-limb-weight",
+      "speciesCode": "horse",
+      "systemCode": "vet-horse-muscular",
+      "nameVi": "Phân bố trọng lượng lên bốn chân",
+      "nameEn": "Weight distribution over four limbs",
+      "nameZh": "四肢负重分配",
+      "latin": "Membrum thoracicum, membrum pelvinum",
+      "descriptionVi": "Mô tả: Ở thú bốn chân đứng yên, chi trước chịu khoảng 60% trọng lượng, chi sau khoảng 40%. Chi trước đỡ tải, chi sau tạo lực đẩy.\n\nKhác biệt: Người đứng hai chân dồn 100% lên chi dưới, chi trên tự do hoàn toàn. Đây là khác biệt cơ học nền tảng, kéo theo mọi khác biệt về hình dạng xương chậu, cột sống và bàn chân.\n\nÝ nghĩa lâm sàng: Vì thế chó què chi trước thường biểu hiện bằng gật đầu khi bước xuống chân lành, còn què chi sau thì thấy hông nhô lên bên chân đau — hai kiểu quan sát khác nhau khi khám dáng đi.\n\nNguồn: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)",
+      "descriptionEn": "Description: In a standing quadruped the forelimbs carry about 60% of body weight and the hindlimbs about 40%. The forelimb supports; the hindlimb propels.\n\nDifference: A biped puts 100% on the hindlimbs and frees the forelimbs entirely. This is the fundamental mechanical difference from which all the differences in pelvis, spine and foot shape follow.\n\nClinical relevance: Consequently forelimb lameness shows as a head nod that drops onto the sound limb, whereas hindlimb lameness shows as a hip hike over the painful side — two distinct observations in a gait examination.\n\nSource: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)",
+      "descriptionZh": "描述: 四足动物站立时，前肢约承担体重的 60%，后肢约 40%。前肢负重，后肢提供推进。\n\n差异: 人两足站立时 100% 由下肢承担，上肢完全解放。这一根本力学差异衍生出骨盆、脊柱与足形态的一切不同。\n\n临床意义: 因此前肢跛行表现为头随健肢着地而下点，后肢跛行则表现为患侧髋部上抬——步态检查中的两种不同观察点。\n\n来源: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)"
+    },
+    {
+      "code": "vet-horse-horse-stay-apparatus",
+      "speciesCode": "horse",
+      "systemCode": "vet-horse-muscular",
+      "nameVi": "Bộ máy đứng (stay apparatus)",
+      "nameEn": "The stay apparatus",
+      "nameZh": "站立装置",
+      "latin": "Apparatus staticus",
+      "descriptionVi": "Mô tả: Hệ thống gân và dây chằng cho ngựa đứng ngủ mà gần như không tốn công cơ. Ở chi sau, mấu bánh chè trong móc lên mào xương bánh chè khiến khớp đùi–chày–bánh chè khoá lại; chi trước thì cơ nhị đầu và cơ gấp các ngón có phần gân chạy suốt (lacertus fibrosus, dây chằng phụ) giữ khớp thẳng.\n\nKhác biệt: Người và chó phải dùng cơ liên tục để đứng nên đều nằm khi ngủ sâu. Bò cũng nằm để nhai lại. Chỉ ngựa (và các loài họ ngựa) có cơ chế khoá khớp hoàn chỉnh này — di sản của loài thú chạy trốn trên đồng cỏ trống.\n\nÝ nghĩa lâm sàng: Khoá bánh chè lên trên (upward fixation of the patella) là khi cơ chế này không nhả ra được: chi sau cứng ở tư thế duỗi, ngựa kéo chân theo. Ngược lại, ngựa buộc phải nằm lâu (như sau mổ) rất dễ tiêu cơ và loét tì đè vì cả cơ thể không được thiết kế để nằm.\n\nNguồn: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)",
+      "descriptionEn": "Description: A system of tendons and ligaments that lets the horse sleep standing with almost no muscular effort. In the hindlimb the medial patellar ligament hooks over the trochlear ridge of the femur and locks the stifle; in the forelimb the biceps and digital flexors have through-running tendinous cords (lacertus fibrosus, accessory ligaments) that hold the joints extended.\n\nDifference: Humans and dogs need continuous muscle activity to stand, so both lie down for deep sleep; cattle also lie to ruminate. Only the horse and its relatives have this complete joint-locking mechanism — the legacy of a flight animal on open grassland.\n\nClinical relevance: Upward fixation of the patella is this mechanism failing to release: the hindlimb locks in extension and the horse drags the leg. Conversely a horse forced to stay recumbent (after surgery) readily develops myopathy and pressure sores, because the whole body is not built for lying down.\n\nSource: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)",
+      "descriptionZh": "描述: 一套肌腱与韧带系统，使马几乎不耗肌力即可站立睡眠。后肢的内侧膝直韧带钩挂于股骨滑车嵴而锁定膝关节；前肢的肱二头肌与指屈肌具贯通性腱索（腱弓、附韧带）维持关节伸直。\n\n差异: 人与犬站立需持续肌肉活动，故深睡时卧下；牛亦卧地反刍。唯马属动物具备这一完整的关节锁定机制——开阔草原上逃避型动物的遗产。\n\n临床意义: 膝盖骨上方固定即该机制无法解锁：后肢僵于伸展位，马拖行患肢。反之，被迫长期躺卧（如术后）的马易发肌病与压迫性溃疡，因其整体构造本不适于卧位。\n\n来源: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)"
+    },
+    {
+      "code": "vet-horse-horse-hoof",
+      "speciesCode": "horse",
+      "systemCode": "vet-horse-integument",
+      "nameVi": "Móng ngựa và lá móng",
+      "nameEn": "The hoof and its laminae",
+      "nameZh": "马蹄与蹄叶",
+      "latin": "Ungula, lamellae epidermales",
+      "descriptionVi": "Mô tả: Ngựa đi trên một ngón duy nhất (ngón III), bao bọc trong móng sừng. Xương móng (đốt ngón III) được treo vào thành móng bằng khoảng 600 lá biểu bì lồng vào lá chân bì — không phải đặt lên nền móng. Đệm gót và vòm móng có chức năng bơm máu trở về khi bước.\n\nKhác biệt: Người đi bằng cả bàn chân (bàn chân dẹt tiếp đất), chó mèo đi bằng ngón, ngựa đi bằng đầu ngón — ba mức nâng cao dần: plantigrade, digitigrade, unguligrade. Bò và lợn cũng unguligrade nhưng đi trên hai ngón chẵn.\n\nÝ nghĩa lâm sàng: Viêm lá móng (laminitis) là hư hại chính hệ treo này: xương móng tụt xuống và xoay, có thể xuyên qua nền móng. Vì thế bệnh cực đau và có thể phải chấm dứt sinh mạng — hiểu cơ chế treo là hiểu vì sao nó nặng đến vậy.\n\nNguồn: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionEn": "Description: The horse walks on a single digit (III) enclosed in a horny hoof. The distal phalanx is suspended from the hoof wall by some 600 epidermal laminae interlocking with dermal laminae — it does not rest on the sole. The digital cushion and hoof arch pump blood back up with every step.\n\nDifference: Humans are plantigrade (whole sole down), dogs and cats digitigrade (on the toes), horses unguligrade (on the tip of the digit) — three successive degrees of elevation. Cattle and pigs are also unguligrade but walk on two even-numbered digits.\n\nClinical relevance: Laminitis is failure of that suspensory system: the distal phalanx sinks and rotates and may penetrate the sole. That is why the disease is so painful and can be life-ending — understanding the suspension explains its severity.\n\nSource: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionZh": "描述: 马以单趾（第三趾）行走，包于角质蹄内。蹄骨（第三趾骨）借约 600 片表皮蹄叶与真皮蹄叶互嵌而悬吊于蹄壁，并非坐落于蹄底。蹄枕与蹄拱在每一步中将血液泵回。\n\n差异: 人为跖行（全掌着地），犬猫为趾行（以趾着地），马为蹄行（以趾端着地）——三级递进。牛与猪亦为蹄行，但以两个偶数趾着地。\n\n临床意义: 蹄叶炎即该悬吊系统的破坏：蹄骨下沉并旋转，甚至穿透蹄底。故此病极痛且可致命——理解悬吊机制便理解其严重性。\n\n来源: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)"
+    },
+    {
+      "code": "vet-horse-horse-large-colon",
+      "speciesCode": "horse",
+      "systemCode": "vet-horse-digestive",
+      "nameVi": "Đại tràng ngựa và lên men ở ruột sau",
+      "nameEn": "The equine large colon and hindgut fermentation",
+      "nameZh": "马的大结肠与后肠发酵",
+      "latin": "Colon crassum, caecum",
+      "descriptionVi": "Mô tả: Ngựa lên men chất xơ ở RUỘT SAU: manh tràng dung tích 25–35 lít và đại tràng lớn gấp đôi hình chữ U kép, tổng cộng chứa được gần 100 lít. Đại tràng lớn có bốn đoạn với hai chỗ hẹp đột ngột — khúc gấp xương chậu và khúc gấp hoành phải.\n\nKhác biệt: Bò lên men ở DẠ DÀY TRƯỚC (dạ cỏ) rồi mới tiêu hoá bằng men; ngựa tiêu hoá bằng men trước, lên men sau. Hệ quả: bò tận dụng protein vi sinh vật tốt hơn, còn ngựa ăn được cỏ chất lượng thấp nhưng đổi lại rất dễ đau bụng.\n\nÝ nghĩa lâm sàng: Hai chỗ hẹp nói trên là nơi tắc phân hay xảy ra nhất, và cả đại tràng lớn chỉ neo lỏng nên có thể di lệch hoặc xoắn. Khám qua trực tràng nhằm sờ đúng khúc gấp xương chậu là bước cơ bản khi ngựa đau bụng.\n\nNguồn: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)",
+      "descriptionEn": "Description: The horse ferments fibre in the HINDGUT: a caecum of 25–35 litres and a double-horseshoe large colon, together holding nearly 100 litres. The large colon has four segments with two abrupt narrowings — the pelvic flexure and the right dorsal/diaphragmatic flexure.\n\nDifference: Cattle ferment in the FOREstomach and only then digest enzymatically; the horse digests enzymatically first and ferments afterwards. As a result cattle harvest microbial protein far better, while the horse can live on poorer forage but pays for it with a colic-prone gut.\n\nClinical relevance: Those two narrowings are the commonest sites of impaction, and the whole large colon is only loosely anchored, so it can displace or volvulate. Rectal palpation aimed at the pelvic flexure is a basic step in every colic examination.\n\nSource: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)",
+      "descriptionZh": "描述: 马在后肠发酵纤维：盲肠容积 25–35 升，大结肠呈双马蹄形，两者合计可容近 100 升。大结肠分四段，并有两处骨性狭窄——骨盆曲与右背（膈）曲。\n\n差异: 牛先在前胃发酵、后行酶解；马先酶解、后发酵。故牛更善于利用微生物蛋白，马虽可利用较差草料，代价是极易发生腹痛。\n\n临床意义: 上述两处狭窄是便塞最常见部位，且整段大结肠仅松散固定，可发生移位或扭转。腹痛检查中，经直肠触摸骨盆曲是基本步骤。\n\n来源: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)"
+    },
+    {
+      "code": "vet-horse-horse-no-vomiting",
+      "speciesCode": "horse",
+      "systemCode": "vet-horse-digestive",
+      "nameVi": "Ngựa không nôn được",
+      "nameEn": "Why the horse cannot vomit",
+      "nameZh": "马为何不能呕吐",
+      "latin": "Cardia, ostium cardiacum",
+      "descriptionVi": "Mô tả: Tâm vị ngựa có lớp cơ vòng rất dày và thực quản đi vào dạ dày theo góc rất xiên, tạo một van một chiều gần như tuyệt đối. Dạ dày lại nhỏ (8–15 lít) so với khối lượng cơ thể.\n\nKhác biệt: Chó nôn rất dễ (là phản xạ bảo vệ hữu ích khi ăn phải chất độc); người nôn được; loài nhai lại thì trào ngược có chủ đích để nhai lại. Ngựa là ngoại lệ — không nôn, không nhai lại.\n\nÝ nghĩa lâm sàng: Vì thế dạ dày ngựa căng hơi hoặc đầy dịch có thể VỠ, và đó là lý do phải đặt ống thông mũi–dạ dày để giải áp ngay khi ngựa đau bụng nặng. Cũng vì thế không thể gây nôn để xử lý ngộ độc ở ngựa.\n\nNguồn: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionEn": "Description: The equine cardia has an exceptionally thick muscular ring and the oesophagus enters the stomach at a very oblique angle, forming an almost absolute one-way valve. The stomach itself is small (8–15 litres) for the body mass.\n\nDifference: Dogs vomit readily (a useful protective reflex after eating poison); humans vomit; ruminants regurgitate on purpose to chew the cud. The horse is the exception — it neither vomits nor ruminates.\n\nClinical relevance: A distended equine stomach can therefore RUPTURE, which is why nasogastric intubation to decompress is mandatory in severe colic. It also means poisoning in horses can never be managed by inducing emesis.\n\nSource: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionZh": "描述: 马的贲门肌环极厚，食管以很斜的角度进入胃，形成近乎绝对的单向阀。胃本身容积偏小（8–15 升），与体重不相称。\n\n差异: 犬极易呕吐（误食毒物时的有益保护反射）；人可呕吐；反刍动物有意逆呕以反刍。马是例外——既不呕吐也不反刍。\n\n临床意义: 因此马胃胀满可致破裂，故重症腹痛必须下鼻胃管减压。也因此马中毒时无法以催吐处理。\n\n来源: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)"
+    },
+    {
+      "code": "vet-horse-horse-guttural-pouch",
+      "speciesCode": "horse",
+      "systemCode": "vet-horse-respiratory",
+      "nameVi": "Túi khí hầu (guttural pouch)",
+      "nameEn": "The guttural pouch",
+      "nameZh": "咽鼓管囊（喉囊）",
+      "latin": "Diverticulum tubae auditivae",
+      "descriptionVi": "Mô tả: Hai túi khí lớn là chỗ phình của ống tai giữa, nằm hai bên vùng hầu, mỗi túi chứa được khoảng 300–500 ml. Thành túi có động mạch cảnh trong, các dây thần kinh sọ IX, X, XI, XII và thân giao cảm cổ chạy sát ngay dưới lớp niêm mạc.\n\nKhác biệt: Người và các loài gia súc khác không có cấu trúc này — đây là đặc điểm riêng của họ ngựa. Ở người, ống tai giữa chỉ là một ống hẹp không phình thành túi.\n\nÝ nghĩa lâm sàng: Nhiễm nấm trong túi (guttural pouch mycosis) ăn mòn động mạch cảnh trong gây chảy máu mũi ồ ạt, có thể tử vong; viêm túi sau bệnh viêm hạch truyền nhiễm (strangles) tạo ổ mủ đóng cục và biến ngựa thành vật mang trùng. Tổn thương thần kinh trong thành túi gây khó nuốt hoặc hội chứng Horner.\n\nNguồn: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)",
+      "descriptionEn": "Description: Two large air sacs, diverticula of the auditory tube, lie on either side of the pharynx and hold roughly 300–500 ml each. Their walls carry the internal carotid artery and cranial nerves IX, X, XI, XII plus the cervical sympathetic trunk immediately beneath the mucosa.\n\nDifference: Neither humans nor other domestic species have this structure — it is peculiar to equids. In humans the auditory tube is a narrow channel with no such diverticulum.\n\nClinical relevance: Guttural pouch mycosis erodes the internal carotid and causes fatal epistaxis; empyema after strangles leaves inspissated pus (chondroids) and turns the horse into a carrier. Damage to the nerves in the pouch wall causes dysphagia or Horner's syndrome.\n\nSource: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)",
+      "descriptionZh": "描述: 两个大气囊为咽鼓管的膨出，位于咽两侧，每侧容积约 300–500 毫升。囊壁黏膜下紧贴走行内颈动脉与第 IX、X、XI、XII 对脑神经及颈交感干。\n\n差异: 人与其他家畜均无此结构，为马属动物特有。人的咽鼓管仅为狭窄管道，无此膨出。\n\n临床意义: 喉囊真菌病可侵蚀内颈动脉致致命性鼻出血；马腺疫后的囊脓肿遗留干结脓块（软骨样体），使马成为带菌者。囊壁神经受损则致吞咽困难或霍纳氏综合征。\n\n来源: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)"
+    },
+    {
+      "code": "vet-horse-horse-splint-bones",
+      "speciesCode": "horse",
+      "systemCode": "vet-horse-skeletal",
+      "nameVi": "Xương bàn tiêu giảm (splint bones)",
+      "nameEn": "The splint bones",
+      "nameZh": "残余掌（跖）骨",
+      "latin": "Os metacarpale II et IV",
+      "descriptionVi": "Mô tả: Ngựa chỉ còn xương bàn III chịu lực; xương bàn II và IV thoái hoá thành hai que xương mảnh áp hai bên, gọi là splint bone, không tiếp đất. Ngón I và V mất hoàn toàn.\n\nKhác biệt: Người có đủ 5 xương bàn; chó có 5 (ngón I là ngón treo); bò và lợn còn hai ngón chức năng; ngựa chỉ còn một. Đây là chuỗi tiêu giảm ngón kinh điển theo hướng chạy nhanh trên nền cứng.\n\nÝ nghĩa lâm sàng: Viêm màng xương ở chỗ dây chằng gian cốt nối splint bone với xương bàn III sinh 'splints' — cục xương nổi đau ở ngựa non tập luyện nặng. Gãy đầu dưới splint bone hay đi kèm viêm dây chằng treo móng.\n\nNguồn: Sisson & Grossman, The Anatomy of the Domestic Animals, 5th ed.",
+      "descriptionEn": "Description: Only metacarpal III bears weight in the horse; metacarpals II and IV are reduced to slender splints applied to its sides and never touch the ground. Digits I and V are lost entirely.\n\nDifference: Humans have five metacarpals; the dog has five (digit I being the dewclaw); cattle and pigs retain two functional digits; the horse just one. This is the classic reduction series toward speed on hard ground.\n\nClinical relevance: Periostitis where the interosseous ligament binds a splint bone to metacarpal III produces 'splints' — painful bony swellings in young horses in hard training. Fracture of the distal splint bone often accompanies suspensory ligament desmitis.\n\nSource: Sisson & Grossman, The Anatomy of the Domestic Animals, 5th ed.",
+      "descriptionZh": "描述: 马仅第三掌骨承重；第二、第四掌骨退化为贴附其两侧的细骨条，不着地。第一、第五指完全缺失。\n\n差异: 人有五枚掌骨；犬有五枚（第一指为悬趾）；牛与猪保留两个功能趾；马仅一个。这是趋向硬地高速奔跑的经典趾数退化序列。\n\n临床意义: 骨间韧带将残余掌骨与第三掌骨相连处的骨膜炎形成「掌骨骨瘤」——重训幼马的疼痛性骨性隆起。远端残余掌骨骨折常伴悬韧带炎。\n\n来源: Sisson & Grossman, The Anatomy of the Domestic Animals, 5th ed."
+    },
+    {
+      "code": "vet-horse-cattle-jugular-groove",
+      "speciesCode": "horse",
+      "systemCode": "vet-horse-cardiovascular",
+      "nameVi": "Rãnh tĩnh mạch cổ",
+      "nameEn": "The jugular groove",
+      "nameZh": "颈静脉沟",
+      "latin": "Sulcus jugularis, vena jugularis externa",
+      "descriptionVi": "Mô tả: Rãnh dọc bên cổ giữa cơ ức–đầu và cơ đòn–cánh tay, chứa tĩnh mạch cổ ngoài — mạch to nhất dễ tiếp cận nhất trên gia súc lớn. Ép ở đầu dưới rãnh thì tĩnh mạch nổi căng lên.\n\nKhác biệt: Ở người, tĩnh mạch cổ trong nằm sâu cạnh động mạch cảnh trong bao cảnh và không dùng để lấy máu thường quy; tĩnh mạch tay là chỗ tiêm. Ở bò và ngựa, tĩnh mạch cổ ngoài là đường tiêm truyền chuẩn.\n\nÝ nghĩa lâm sàng: Lấy máu, truyền dịch số lượng lớn và tiêm thuốc đều qua rãnh này. Ở ngựa phải cẩn thận vì động mạch cảnh chung nằm ngay sâu dưới đó — tiêm thuốc nhầm vào động mạch gây co giật và tử vong tức thì.\n\nNguồn: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)",
+      "descriptionEn": "Description: A longitudinal furrow on the side of the neck between the sternocephalicus and brachiocephalicus, containing the external jugular vein — the largest and most accessible vessel in large animals. Pressure at its lower end distends the vein.\n\nDifference: In humans the internal jugular lies deep in the carotid sheath and is not used for routine sampling; arm veins are. In cattle and horses the external jugular is the standard route for sampling and infusion.\n\nClinical relevance: Blood sampling, large-volume fluid therapy and injections all use this groove. In the horse care is essential because the common carotid artery lies just deep to it — inadvertent intra-arterial injection causes immediate seizures and death.\n\nSource: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)",
+      "descriptionZh": "描述: 颈侧胸头肌与臂头肌之间的纵沟，内含颈外静脉——大动物最粗且最易接近的血管。在沟的下端加压可使静脉充盈显现。\n\n差异: 人的颈内静脉深藏于颈动脉鞘内，不作常规采血；常用上肢静脉。在牛与马，颈外静脉是采血与输液的标准途径。\n\n临床意义: 采血、大量输液与注射均经此沟。马须格外小心，因颈总动脉紧位其深面——误行动脉内注射可立即引起抽搐与死亡。\n\n来源: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)"
+    },
+    {
+      "code": "vet-cattle-dogcat-third-eyelid",
+      "speciesCode": "cattle",
+      "systemCode": "vet-cattle-senses",
+      "nameVi": "Mí mắt thứ ba (màng nictitans)",
+      "nameEn": "The third eyelid",
+      "nameZh": "第三眼睑（瞬膜）",
+      "latin": "Palpebra tertia, glandula palpebrae tertiae",
+      "descriptionVi": "Mô tả: Một nếp kết mạc có sụn nâng đỡ, nằm ở góc trong mắt, quét ngang giác mạc khi nhãn cầu thụt vào. Tuyến của mí thứ ba tiết khoảng 30–50% lượng nước mắt.\n\nKhác biệt: Ở người chỉ còn dấu vết là nếp bán nguyệt nhỏ ở góc trong mắt, không cử động được và không có tuyến.\n\nÝ nghĩa lâm sàng: Sa tuyến mí thứ ba ('cherry eye') phải khâu vùi lại chứ KHÔNG cắt bỏ — cắt tuyến gây khô mắt (KCS) suốt đời. Mí thứ ba nhô ra cả hai bên ở mèo là dấu hiệu bệnh toàn thân, một bên kèm co đồng tử là hội chứng Horner.\n\nNguồn: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionEn": "Description: A conjunctival fold supported by cartilage at the medial canthus, sweeping across the cornea as the globe retracts. Its gland produces roughly 30–50% of the tear film.\n\nDifference: In humans only a vestige remains — the small immobile plica semilunaris at the medial canthus, without a gland.\n\nClinical relevance: Prolapse of the gland ('cherry eye') must be repositioned surgically, never excised — removal causes lifelong keratoconjunctivitis sicca. Bilateral third-eyelid protrusion in cats signals systemic illness; unilateral protrusion with miosis suggests Horner's syndrome.\n\nSource: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionZh": "描述: 位于内眼角、由软骨支撑的结膜褶，眼球回缩时横扫角膜。其腺体分泌约占泪液的 30–50%。\n\n差异: 人仅遗留内眼角处不能活动的半月襞，且无腺体。\n\n临床意义: 腺体脱出（「樱桃眼」）须手术复位，切不可切除——切除将致终身干性角结膜炎。猫双侧瞬膜突出提示全身性疾病；单侧突出伴瞳孔缩小则提示霍纳氏综合征。\n\n来源: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)"
+    },
+    {
+      "code": "vet-cattle-dog-thoracic-limb-weight",
+      "speciesCode": "cattle",
+      "systemCode": "vet-cattle-muscular",
+      "nameVi": "Phân bố trọng lượng lên bốn chân",
+      "nameEn": "Weight distribution over four limbs",
+      "nameZh": "四肢负重分配",
+      "latin": "Membrum thoracicum, membrum pelvinum",
+      "descriptionVi": "Mô tả: Ở thú bốn chân đứng yên, chi trước chịu khoảng 60% trọng lượng, chi sau khoảng 40%. Chi trước đỡ tải, chi sau tạo lực đẩy.\n\nKhác biệt: Người đứng hai chân dồn 100% lên chi dưới, chi trên tự do hoàn toàn. Đây là khác biệt cơ học nền tảng, kéo theo mọi khác biệt về hình dạng xương chậu, cột sống và bàn chân.\n\nÝ nghĩa lâm sàng: Vì thế chó què chi trước thường biểu hiện bằng gật đầu khi bước xuống chân lành, còn què chi sau thì thấy hông nhô lên bên chân đau — hai kiểu quan sát khác nhau khi khám dáng đi.\n\nNguồn: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)",
+      "descriptionEn": "Description: In a standing quadruped the forelimbs carry about 60% of body weight and the hindlimbs about 40%. The forelimb supports; the hindlimb propels.\n\nDifference: A biped puts 100% on the hindlimbs and frees the forelimbs entirely. This is the fundamental mechanical difference from which all the differences in pelvis, spine and foot shape follow.\n\nClinical relevance: Consequently forelimb lameness shows as a head nod that drops onto the sound limb, whereas hindlimb lameness shows as a hip hike over the painful side — two distinct observations in a gait examination.\n\nSource: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)",
+      "descriptionZh": "描述: 四足动物站立时，前肢约承担体重的 60%，后肢约 40%。前肢负重，后肢提供推进。\n\n差异: 人两足站立时 100% 由下肢承担，上肢完全解放。这一根本力学差异衍生出骨盆、脊柱与足形态的一切不同。\n\n临床意义: 因此前肢跛行表现为头随健肢着地而下点，后肢跛行则表现为患侧髋部上抬——步态检查中的两种不同观察点。\n\n来源: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)"
+    },
+    {
+      "code": "vet-cattle-cattle-four-stomachs",
+      "speciesCode": "cattle",
+      "systemCode": "vet-cattle-digestive",
+      "nameVi": "Bốn túi dạ dày của loài nhai lại",
+      "nameEn": "The four-chambered ruminant stomach",
+      "nameZh": "反刍动物的四室胃",
+      "latin": "Rumen, reticulum, omasum, abomasum",
+      "descriptionVi": "Mô tả: Dạ cỏ (rumen) 100–200 lít chiếm gần hết nửa bụng trái; dạ tổ ong (reticulum) nhỏ, nằm trước nhất, sát cơ hoành ngang mức xương sườn 6–7; dạ lá sách (omasum) có hàng trăm lá hút nước; dạ múi khế (abomasum) là dạ dày thật, tiết HCl và pepsin. Ba túi đầu là dạ dày trước, không có tuyến tiêu hoá.\n\nKhác biệt: Chó, mèo, ngựa, lợn và người đều chỉ có một túi dạ dày có tuyến. Loài nhai lại 'nuôi' vi sinh vật trong dạ cỏ để phân giải cellulose — thứ mà không enzym nào của động vật có vú làm được.\n\nÝ nghĩa lâm sàng: Vị trí dạ tổ ong ngay sát cơ hoành và màng ngoài tim giải thích bệnh viêm dạ tổ ong–màng tim do dị vật ('hardware disease'): dây thép, đinh lẫn trong thức ăn xuyên qua thành dạ tổ ong đâm vào màng ngoài tim. Chướng hơi dạ cỏ cấp thì chọc dò ở hõm hông TRÁI.\n\nNguồn: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionEn": "Description: The rumen (100–200 L) fills most of the left half of the abdomen; the reticulum is small and most cranial, against the diaphragm at rib 6–7; the omasum has hundreds of laminae that absorb water; the abomasum is the true glandular stomach secreting HCl and pepsin. The first three are the forestomachs and have no digestive glands.\n\nDifference: Dog, cat, horse, pig and human all have a single glandular stomach. Ruminants instead farm microbes in the rumen to break down cellulose — something no mammalian enzyme can do.\n\nClinical relevance: The reticulum's position against the diaphragm and pericardium explains traumatic reticulopericarditis ('hardware disease'): swallowed wire or nails perforate its wall into the pericardium. Acute ruminal bloat is relieved by trocarisation in the LEFT paralumbar fossa.\n\nSource: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionZh": "描述: 瘤胃（100–200 升）几乎占据左半腹；网胃小而最靠前，紧贴膈，位于第 6–7 肋水平；瓣胃具数百片瓣叶以吸收水分；真胃分泌盐酸与胃蛋白酶。前三室为前胃，无消化腺。\n\n差异: 犬、猫、马、猪与人均仅有一个具腺胃。反刍动物则在瘤胃中「养殖」微生物以分解纤维素——任何哺乳动物自身的酶都无法做到。\n\n临床意义: 网胃紧贴膈与心包，故有创伤性网胃—心包炎（「金属异物病」）：随饲料吞入的铁丝、钉子穿透网胃壁刺入心包。急性瘤胃胀气须在左侧肷窝穿刺放气。\n\n来源: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)"
+    },
+    {
+      "code": "vet-cattle-cattle-dental-pad",
+      "speciesCode": "cattle",
+      "systemCode": "vet-cattle-digestive",
+      "nameVi": "Gối răng và cách bò cắt cỏ",
+      "nameEn": "The dental pad and how cattle graze",
+      "nameZh": "齿垫与牛的采食方式",
+      "latin": "Pulvinus dentalis",
+      "descriptionVi": "Mô tả: Bò không có răng cửa và răng nanh ở hàm TRÊN — thay vào đó là một tấm sừng dày gọi là gối răng. Công thức răng: 2×(I 0/4, C 0/0, P 3/3, M 3/3) = 32 răng. Bò cuộn lưỡi quanh búi cỏ rồi ép cỏ vào gối răng và dùng răng cửa hàm dưới cắt.\n\nKhác biệt: Ngựa có đủ răng cửa cả hai hàm nên gặm được cỏ sát đất — vì thế ngựa có thể gặm trụi bãi cỏ, còn bò chỉ cắt được phần cỏ đủ dài để lưỡi cuộn. Đây là kiến thức nền của quản lý bãi chăn.\n\nÝ nghĩa lâm sàng: Xem mức mòn và thay của bốn đôi răng cửa dưới là cách đoán tuổi bò trên thực địa (răng cửa vĩnh viễn thứ nhất mọc ~2 tuổi, đủ bốn đôi ~4 tuổi).\n\nNguồn: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)",
+      "descriptionEn": "Description: Cattle have no upper incisors or canines — a thick horny dental pad replaces them. Dental formula: 2×(I 0/4, C 0/0, P 3/3, M 3/3) = 32 teeth. The animal wraps its tongue round a tuft of grass, presses it against the pad and shears with the lower incisors.\n\nDifference: Horses have incisors in both jaws and can crop grass close to the ground — which is why horses can graze a pasture bare while cattle can only take grass long enough for the tongue to gather. This underpins pasture management.\n\nClinical relevance: Wear and eruption of the four pairs of lower incisors is the field method for ageing cattle (first permanent incisor at about 2 years, all four pairs by about 4 years).\n\nSource: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)",
+      "descriptionZh": "描述: 牛无上门齿与犬齿，代之以厚角质齿垫。齿式：2×(I 0/4, C 0/0, P 3/3, M 3/3) = 32 枚。牛以舌卷绕草束，压于齿垫，再用下门齿切断。\n\n差异: 马上下颌均有门齿，可贴地啃食——故马能把草地啃光，而牛只能采食足够长以供舌卷绕的草。这是牧场管理的基础。\n\n临床意义: 观察下颌四对门齿的磨损与替换是现场估算牛龄的方法（第一对恒门齿约 2 岁萌出，四对齐全约 4 岁）。\n\n来源: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)"
+    },
+    {
+      "code": "vet-cattle-cattle-udder-suspension",
+      "speciesCode": "cattle",
+      "systemCode": "vet-cattle-integument",
+      "nameVi": "Vú bò và hệ thống treo",
+      "nameEn": "The bovine udder and its suspensory apparatus",
+      "nameZh": "牛乳房与其悬吊装置",
+      "latin": "Uber, ligamentum suspensorium uberis",
+      "descriptionVi": "Mô tả: Vú bò gồm bốn tuyến riêng biệt (bốn 'khoang'), mỗi khoang có bể sữa và núm vú riêng, không thông nhau. Toàn bộ khối vú nặng 30–50 kg khi đầy sữa được treo bằng dây chằng treo giữa (lá đàn hồi từ thành bụng) và các lá bên.\n\nKhác biệt: Vú người là hai tuyến trên thành ngực, mỗi tuyến có 15–20 ống dẫn mở riêng ở núm; bò có bốn tuyến ở vùng bẹn với ống dẫn tập trung về một bể mỗi khoang. Chó và lợn có nhiều đôi vú dọc hai bên bụng (chó 4–5 đôi, lợn 6–8 đôi).\n\nÝ nghĩa lâm sàng: Vì bốn khoang độc lập, viêm vú có thể chỉ ở một khoang và điều trị theo từng khoang. Dây chằng treo giữa đứt làm vú tụt xuống, núm chĩa ra ngoài, máy vắt sữa không gắn được — lý do loại thải bò sữa rất thường gặp.\n\nNguồn: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionEn": "Description: The bovine udder consists of four separate glands (quarters), each with its own gland sinus and teat, with no communication between them. The whole mass, 30–50 kg when full, is slung by the median suspensory ligament (elastic sheets from the abdominal wall) and lateral laminae.\n\nDifference: The human breast is a pair of glands on the chest wall, each opening by 15–20 separate ducts; the cow has four inguinal glands, each draining into a single sinus. Dogs and pigs have several pairs along the belly (dog 4–5, pig 6–8 pairs).\n\nClinical relevance: Because the quarters are independent, mastitis can involve one quarter only and is treated quarter by quarter. Breakdown of the median suspensory ligament drops the udder and turns the teats outward so the milking cluster will not attach — a common reason for culling dairy cows.\n\nSource: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionZh": "描述: 牛乳房由四个彼此独立的腺体（乳区）组成，各有乳窦与乳头，互不相通。充满乳汁时重 30–50 公斤的整个乳房由正中悬韧带（来自腹壁的弹性板）与侧板悬吊。\n\n差异: 人乳房为胸壁上一对腺体，各以 15–20 条乳管开口；牛为腹股沟区四个腺体，各汇入一个乳窦。犬与猪沿腹壁有多对乳头（犬 4–5 对，猪 6–8 对）。\n\n临床意义: 四个乳区各自独立，故乳房炎可仅累及一区，并按区治疗。正中悬韧带断裂使乳房下垂、乳头外翻，挤奶杯无法附着——奶牛淘汰的常见原因。\n\n来源: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)"
+    },
+    {
+      "code": "vet-cattle-cattle-paralumbar-fossa",
+      "speciesCode": "cattle",
+      "systemCode": "vet-cattle-skeletal",
+      "nameVi": "Hõm hông trái — cửa vào ổ bụng bò",
+      "nameEn": "The left paralumbar fossa",
+      "nameZh": "左侧肷窝",
+      "latin": "Fossa paralumbalis",
+      "descriptionVi": "Mô tả: Vùng tam giác lõm giữa mỏm ngang các đốt thắt lưng, xương sườn cuối và cơ chéo bụng. Bên trái, ngay dưới thành bụng là dạ cỏ; bên phải là ruột và manh tràng. Bò có 13 đôi xương sườn, công thức đốt sống C7 T13 L6 S5 Cd18–20.\n\nKhác biệt: Người không có 'hõm hông' dùng làm cửa mổ vì tư thế đứng và cơ thành bụng khác hẳn; ở bò, đây là đường vào ổ bụng chuẩn và mổ được trên con vật đang ĐỨNG, chỉ cần gây tê vùng.\n\nÝ nghĩa lâm sàng: Mở dạ cỏ (rumenotomy), chọc hơi, mổ lấy thai và xử lý xoắn dạ múi khế đều đi qua hõm hông. Nghe và gõ vùng này để đánh giá nhu động dạ cỏ (bình thường 1–2 lần/phút) là bước khám cơ bản.\n\nNguồn: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)",
+      "descriptionEn": "Description: The triangular hollow between the lumbar transverse processes, the last rib and the abdominal oblique muscles. On the left the rumen lies immediately beneath the wall; on the right, intestine and caecum. Cattle have 13 rib pairs; vertebral formula C7 T13 L6 S5 Cd18–20.\n\nDifference: Humans have no comparable surgical fossa, given upright posture and different abdominal musculature; in cattle it is the standard approach to the abdomen and allows surgery on the STANDING animal under regional anaesthesia alone.\n\nClinical relevance: Rumenotomy, trocarisation, caesarean section and correction of abomasal volvulus are all performed through this fossa. Auscultation and percussion here to assess ruminal contractions (normally 1–2 per minute) is a routine examination step.\n\nSource: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)",
+      "descriptionZh": "描述: 位于腰椎横突、最后肋与腹斜肌之间的三角形凹陷。左侧腹壁下即为瘤胃，右侧为肠与盲肠。牛有 13 对肋；椎式 C7 T13 L6 S5 Cd18–20。\n\n差异: 人因直立姿势与腹壁肌肉不同而无类似的手术凹窝；在牛，此处是进入腹腔的标准入路，仅需区域麻醉即可对站立的牛施术。\n\n临床意义: 瘤胃切开术、穿刺放气、剖宫产与真胃扭转矫正均经此窝进行。在此听诊与叩诊以评估瘤胃蠕动（正常每分钟 1–2 次）是常规检查步骤。\n\n来源: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)"
+    },
+    {
+      "code": "vet-cattle-cattle-cloven-hoof",
+      "speciesCode": "cattle",
+      "systemCode": "vet-cattle-integument",
+      "nameVi": "Móng chẻ hai ngón",
+      "nameEn": "The cloven hoof",
+      "nameZh": "偶蹄",
+      "latin": "Ungulae, digiti III et IV",
+      "descriptionVi": "Mô tả: Bò và lợn đi trên hai ngón chức năng III và IV, mỗi ngón có móng riêng; ngón II và V thành hai móng treo phía sau, không tiếp đất khi đi trên nền cứng. Ở bò, ngón ngoài của chân sau thường to hơn và chịu tải nhiều hơn.\n\nKhác biệt: Ngựa một ngón, bò lợn hai ngón, chó mèo bốn ngón chạm đất, người cả bàn — bốn kiểu nâng đỡ khác nhau, và mỗi kiểu quyết định bệnh chân đặc trưng của loài đó.\n\nÝ nghĩa lâm sàng: Vì ngón ngoài chân sau chịu tải nặng hơn, loét gan bàn chân và bệnh móng thối ở bò hầu như luôn ở ngón đó; cắt sửa móng theo nguyên tắc là chuyển tải sang ngón trong. Què chân là tổn thất kinh tế lớn thứ ba của đàn bò sữa.\n\nNguồn: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionEn": "Description: Cattle and pigs walk on two functional digits, III and IV, each with its own claw; digits II and V remain as dewclaws that do not touch firm ground. In cattle the lateral claw of the hindlimb is usually larger and carries more load.\n\nDifference: One digit in the horse, two in cattle and pigs, four ground-contact digits in dog and cat, the whole sole in humans — four different support patterns, each dictating that species' characteristic foot disease.\n\nClinical relevance: Because the lateral hind claw is overloaded, sole ulcers and claw horn lesions in cattle almost always occur there; corrective trimming works by shifting load to the medial claw. Lameness is the third largest economic loss in dairy herds.\n\nSource: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionZh": "描述: 牛与猪以第三、第四功能趾行走，各具一蹄；第二、第五趾退化为悬蹄，在硬地不着地。牛后肢外侧蹄通常较大且负重更多。\n\n差异: 马一趾、牛猪二趾、犬猫四趾着地、人全掌——四种支撑方式，各自决定该物种特有的足病。\n\n临床意义: 因后肢外侧蹄超负荷，牛的蹄底溃疡与蹄角质病变几乎总发生于此；修蹄的原理即把负荷转移至内侧蹄。跛行是奶牛群第三大经济损失。\n\n来源: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)"
+    },
+    {
+      "code": "vet-cattle-cattle-jugular-groove",
+      "speciesCode": "cattle",
+      "systemCode": "vet-cattle-cardiovascular",
+      "nameVi": "Rãnh tĩnh mạch cổ",
+      "nameEn": "The jugular groove",
+      "nameZh": "颈静脉沟",
+      "latin": "Sulcus jugularis, vena jugularis externa",
+      "descriptionVi": "Mô tả: Rãnh dọc bên cổ giữa cơ ức–đầu và cơ đòn–cánh tay, chứa tĩnh mạch cổ ngoài — mạch to nhất dễ tiếp cận nhất trên gia súc lớn. Ép ở đầu dưới rãnh thì tĩnh mạch nổi căng lên.\n\nKhác biệt: Ở người, tĩnh mạch cổ trong nằm sâu cạnh động mạch cảnh trong bao cảnh và không dùng để lấy máu thường quy; tĩnh mạch tay là chỗ tiêm. Ở bò và ngựa, tĩnh mạch cổ ngoài là đường tiêm truyền chuẩn.\n\nÝ nghĩa lâm sàng: Lấy máu, truyền dịch số lượng lớn và tiêm thuốc đều qua rãnh này. Ở ngựa phải cẩn thận vì động mạch cảnh chung nằm ngay sâu dưới đó — tiêm thuốc nhầm vào động mạch gây co giật và tử vong tức thì.\n\nNguồn: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)",
+      "descriptionEn": "Description: A longitudinal furrow on the side of the neck between the sternocephalicus and brachiocephalicus, containing the external jugular vein — the largest and most accessible vessel in large animals. Pressure at its lower end distends the vein.\n\nDifference: In humans the internal jugular lies deep in the carotid sheath and is not used for routine sampling; arm veins are. In cattle and horses the external jugular is the standard route for sampling and infusion.\n\nClinical relevance: Blood sampling, large-volume fluid therapy and injections all use this groove. In the horse care is essential because the common carotid artery lies just deep to it — inadvertent intra-arterial injection causes immediate seizures and death.\n\nSource: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)",
+      "descriptionZh": "描述: 颈侧胸头肌与臂头肌之间的纵沟，内含颈外静脉——大动物最粗且最易接近的血管。在沟的下端加压可使静脉充盈显现。\n\n差异: 人的颈内静脉深藏于颈动脉鞘内，不作常规采血；常用上肢静脉。在牛与马，颈外静脉是采血与输液的标准途径。\n\n临床意义: 采血、大量输液与注射均经此沟。马须格外小心，因颈总动脉紧位其深面——误行动脉内注射可立即引起抽搐与死亡。\n\n来源: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)"
+    },
+    {
+      "code": "vet-pig-dogcat-third-eyelid",
+      "speciesCode": "pig",
+      "systemCode": "vet-pig-senses",
+      "nameVi": "Mí mắt thứ ba (màng nictitans)",
+      "nameEn": "The third eyelid",
+      "nameZh": "第三眼睑（瞬膜）",
+      "latin": "Palpebra tertia, glandula palpebrae tertiae",
+      "descriptionVi": "Mô tả: Một nếp kết mạc có sụn nâng đỡ, nằm ở góc trong mắt, quét ngang giác mạc khi nhãn cầu thụt vào. Tuyến của mí thứ ba tiết khoảng 30–50% lượng nước mắt.\n\nKhác biệt: Ở người chỉ còn dấu vết là nếp bán nguyệt nhỏ ở góc trong mắt, không cử động được và không có tuyến.\n\nÝ nghĩa lâm sàng: Sa tuyến mí thứ ba ('cherry eye') phải khâu vùi lại chứ KHÔNG cắt bỏ — cắt tuyến gây khô mắt (KCS) suốt đời. Mí thứ ba nhô ra cả hai bên ở mèo là dấu hiệu bệnh toàn thân, một bên kèm co đồng tử là hội chứng Horner.\n\nNguồn: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionEn": "Description: A conjunctival fold supported by cartilage at the medial canthus, sweeping across the cornea as the globe retracts. Its gland produces roughly 30–50% of the tear film.\n\nDifference: In humans only a vestige remains — the small immobile plica semilunaris at the medial canthus, without a gland.\n\nClinical relevance: Prolapse of the gland ('cherry eye') must be repositioned surgically, never excised — removal causes lifelong keratoconjunctivitis sicca. Bilateral third-eyelid protrusion in cats signals systemic illness; unilateral protrusion with miosis suggests Horner's syndrome.\n\nSource: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionZh": "描述: 位于内眼角、由软骨支撑的结膜褶，眼球回缩时横扫角膜。其腺体分泌约占泪液的 30–50%。\n\n差异: 人仅遗留内眼角处不能活动的半月襞，且无腺体。\n\n临床意义: 腺体脱出（「樱桃眼」）须手术复位，切不可切除——切除将致终身干性角结膜炎。猫双侧瞬膜突出提示全身性疾病；单侧突出伴瞳孔缩小则提示霍纳氏综合征。\n\n来源: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)"
+    },
+    {
+      "code": "vet-pig-cattle-cloven-hoof",
+      "speciesCode": "pig",
+      "systemCode": "vet-pig-integument",
+      "nameVi": "Móng chẻ hai ngón",
+      "nameEn": "The cloven hoof",
+      "nameZh": "偶蹄",
+      "latin": "Ungulae, digiti III et IV",
+      "descriptionVi": "Mô tả: Bò và lợn đi trên hai ngón chức năng III và IV, mỗi ngón có móng riêng; ngón II và V thành hai móng treo phía sau, không tiếp đất khi đi trên nền cứng. Ở bò, ngón ngoài của chân sau thường to hơn và chịu tải nhiều hơn.\n\nKhác biệt: Ngựa một ngón, bò lợn hai ngón, chó mèo bốn ngón chạm đất, người cả bàn — bốn kiểu nâng đỡ khác nhau, và mỗi kiểu quyết định bệnh chân đặc trưng của loài đó.\n\nÝ nghĩa lâm sàng: Vì ngón ngoài chân sau chịu tải nặng hơn, loét gan bàn chân và bệnh móng thối ở bò hầu như luôn ở ngón đó; cắt sửa móng theo nguyên tắc là chuyển tải sang ngón trong. Què chân là tổn thất kinh tế lớn thứ ba của đàn bò sữa.\n\nNguồn: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionEn": "Description: Cattle and pigs walk on two functional digits, III and IV, each with its own claw; digits II and V remain as dewclaws that do not touch firm ground. In cattle the lateral claw of the hindlimb is usually larger and carries more load.\n\nDifference: One digit in the horse, two in cattle and pigs, four ground-contact digits in dog and cat, the whole sole in humans — four different support patterns, each dictating that species' characteristic foot disease.\n\nClinical relevance: Because the lateral hind claw is overloaded, sole ulcers and claw horn lesions in cattle almost always occur there; corrective trimming works by shifting load to the medial claw. Lameness is the third largest economic loss in dairy herds.\n\nSource: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionZh": "描述: 牛与猪以第三、第四功能趾行走，各具一蹄；第二、第五趾退化为悬蹄，在硬地不着地。牛后肢外侧蹄通常较大且负重更多。\n\n差异: 马一趾、牛猪二趾、犬猫四趾着地、人全掌——四种支撑方式，各自决定该物种特有的足病。\n\n临床意义: 因后肢外侧蹄超负荷，牛的蹄底溃疡与蹄角质病变几乎总发生于此；修蹄的原理即把负荷转移至内侧蹄。跛行是奶牛群第三大经济损失。\n\n来源: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)"
+    },
+    {
+      "code": "vet-pig-pig-skin-model",
+      "speciesCode": "pig",
+      "systemCode": "vet-pig-integument",
+      "nameVi": "Da lợn — mô hình gần người nhất",
+      "nameEn": "Pig skin as a human model",
+      "nameZh": "猪皮——最接近人的模型",
+      "latin": "Integumentum commune",
+      "descriptionVi": "Mô tả: Da lợn có lớp sừng dày, ít lông, mỡ dưới da dày và mạng mạch da theo kiểu nhánh xuyên cơ — cấu trúc và tính chất cơ học rất gần da người. Lợn cũng gần như không có tuyến mồ hôi có chức năng điều nhiệt.\n\nKhác biệt: Da chó mèo mỏng hơn, lông dày, mạch da đi theo kiểu nhánh da trực tiếp — nên vạt da chó lành khác hẳn và không suy ra được cho người. Đó là lý do y học tái tạo dùng lợn làm mô hình, không dùng chó.\n\nÝ nghĩa lâm sàng: Vì không có tuyến mồ hôi hữu hiệu, lợn tản nhiệt bằng cách thở gấp và dầm nước — chuồng nuôi thiếu nước tắm hoặc phun sương là gây stress nhiệt thật sự, không phải chuyện tiện nghi.\n\nNguồn: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionEn": "Description: Pig skin has a thick stratum corneum, sparse hair, thick subcutis and a musculocutaneous pattern of blood supply — structurally and mechanically the closest of all domestic species to human skin. Pigs also have virtually no thermoregulatory sweat glands.\n\nDifference: Dog and cat skin is thinner, densely haired and supplied by direct cutaneous arteries — canine skin flaps therefore behave differently and do not extrapolate to humans. Hence reconstructive research uses the pig, not the dog.\n\nClinical relevance: Lacking effective sweat glands, pigs lose heat by panting and wallowing — housing without wallows or sprinklers causes genuine heat stress, not merely discomfort.\n\nSource: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionZh": "描述: 猪皮角质层厚、被毛稀疏、皮下脂肪厚，血供为肌皮型——在结构与力学上是家畜中最接近人皮的。猪也几乎没有具体温调节功能的汗腺。\n\n差异: 犬猫皮较薄、被毛密，由直接皮动脉供血——故犬皮瓣行为不同，不能外推至人。因此重建医学采用猪而非犬作模型。\n\n临床意义: 因缺乏有效汗腺，猪靠喘息与泥浴散热——没有泥浴或喷淋的猪舍会造成真正的热应激，而非仅是舒适度问题。\n\n来源: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)"
+    },
+    {
+      "code": "vet-pig-pig-inguinal-hernia",
+      "speciesCode": "pig",
+      "systemCode": "vet-pig-urogenital",
+      "nameVi": "Ống bẹn rộng và thoát vị bẹn ở lợn",
+      "nameEn": "The wide inguinal canal and scrotal hernia in pigs",
+      "nameZh": "猪的宽阔腹股沟管与腹股沟疝",
+      "latin": "Canalis inguinalis",
+      "descriptionVi": "Mô tả: Ống bẹn của lợn ngắn và rộng, vòng bẹn trong lớn hơn hẳn so với chó hay ngựa. Ở lợn đực, ống này là đường tinh hoàn đi xuống và vẫn rộng sau khi xuống.\n\nKhác biệt: Chó, mèo và ngựa có vòng bẹn hẹp hơn nên thoát vị bẹn bẩm sinh ít gặp hơn; ở lợn thì đây là tật di truyền phổ biến, tỉ lệ đủ cao để ảnh hưởng chọn giống.\n\nÝ nghĩa lâm sàng: Thoát vị bẹn/bìu ở lợn con thường phải mổ và loại khỏi đàn giống. Thiến lợn con qua đường bìu là thao tác thường quy, nhưng ở con có vòng bẹn rộng thì rất dễ gây thoát vị ruột sau thiến nếu không khâu đúng lớp.\n\nNguồn: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)",
+      "descriptionEn": "Description: The pig's inguinal canal is short and wide, with an internal ring notably larger than in dog or horse. In the boar it is the route of testicular descent and remains wide afterwards.\n\nDifference: Dog, cat and horse have narrower rings, so congenital inguinal hernia is less common; in pigs it is a frequent heritable defect at rates high enough to matter in breeding selection.\n\nClinical relevance: Scrotal hernia in piglets usually needs surgery and exclusion from the breeding herd. Open castration through the scrotum is routine, but in a piglet with a wide ring it readily leads to intestinal herniation unless the layers are closed correctly.\n\nSource: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)",
+      "descriptionZh": "描述: 猪的腹股沟管短而宽，内环明显大于犬或马。在公猪，此管为睾丸下降的通路，且下降后仍保持宽阔。\n\n差异: 犬、猫与马的腹股沟环较窄，故先天性腹股沟疝较少；在猪则为常见的遗传缺陷，其发生率足以影响育种选择。\n\n临床意义: 仔猪腹股沟／阴囊疝通常需手术，并从种群中剔除。经阴囊的开放去势为常规操作，但腹股沟环宽者若未正确缝合各层，极易术后发生肠疝。\n\n来源: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)"
+    },
+    {
+      "code": "vet-pig-pig-single-stomach-omnivore",
+      "speciesCode": "pig",
+      "systemCode": "vet-pig-digestive",
+      "nameVi": "Dạ dày và ruột lợn — ăn tạp thật sự",
+      "nameEn": "The pig's gut — a true omnivore",
+      "nameZh": "猪的胃肠——真正的杂食者",
+      "latin": "Ventriculus, diverticulum ventriculi, colon spirale",
+      "descriptionVi": "Mô tả: Lợn có một dạ dày đơn nhưng mang một túi phụ nhỏ ở tâm vị (diverticulum ventriculi) và một dải mô sừng quanh tâm vị. Đại tràng cuộn thành hình xoắn ốc gọn trong bụng trái; manh tràng có dung tích đáng kể và vẫn lên men được chất xơ ở mức trung bình.\n\nKhác biệt: So sánh khả năng dùng chất xơ: bò (dạ cỏ) > ngựa (manh–đại tràng) > lợn (manh tràng vừa) > chó > mèo. Ống tiêu hoá lợn giống người nhất về men và cấu tạo — nên lợn là mô hình dinh dưỡng cho người.\n\nÝ nghĩa lâm sàng: Xoắn ruột/xoắn mạc treo là nguyên nhân chết đột ngột hay gặp ở lợn vỗ béo cho ăn nhiều bữa lớn; vùng tâm vị có mô sừng dễ loét khi khẩu phần nghiền quá mịn — loét dạ dày vùng tâm vị là bệnh của chăn nuôi công nghiệp.\n\nNguồn: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionEn": "Description: The pig has a single stomach but with a small gastric diverticulum at the cardia and a horny area around it. The colon is coiled into a compact spiral in the left abdomen; the caecum is sizeable and still ferments a moderate amount of fibre.\n\nDifference: Fibre-handling capacity ranks: cattle (rumen) > horse (caecum–colon) > pig (moderate caecum) > dog > cat. The pig's gut is the closest to the human in enzymes and structure, which is why it serves as a nutritional model for humans.\n\nClinical relevance: Intestinal or mesenteric volvulus is a common cause of sudden death in finishing pigs fed large infrequent meals; the horny cardiac region ulcerates readily when the diet is ground too finely — gastric ulceration of the pars oesophagea is a disease of intensive production.\n\nSource: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionZh": "描述: 猪为单胃，但贲门处有一小胃盲囊，周围有角质区。结肠在左腹盘成紧凑的螺旋；盲肠容积可观，仍可发酵中等量的纤维。\n\n差异: 利用纤维的能力排序：牛（瘤胃）>马（盲结肠）>猪（中等盲肠）>犬>猫。猪的消化道在酶与结构上最接近人，故用作人的营养学模型。\n\n临床意义: 肠或肠系膜扭转是育肥猪采食大而少餐时突然死亡的常见原因；饲料粉碎过细时贲门角质区易发溃疡——食管部胃溃疡是集约化生产的疾病。\n\n来源: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)"
+    },
+    {
+      "code": "vet-pig-pig-teeth-needle",
+      "speciesCode": "pig",
+      "systemCode": "vet-pig-digestive",
+      "nameVi": "Răng nanh sữa và công thức răng lợn",
+      "nameEn": "Needle teeth and the pig's dental formula",
+      "nameZh": "仔猪犬齿与猪齿式",
+      "latin": "Dentes decidui, dentes permanentes",
+      "descriptionVi": "Mô tả: Lợn có bộ răng đầy đủ nhất trong các loài gia súc: 44 răng vĩnh viễn, 2×(I 3/3, C 1/1, P 4/4, M 3/3) — đúng bộ răng nguyên thuỷ của thú có vú. Lợn con sinh ra đã có 8 răng sữa nhọn (răng nanh và răng cửa góc), gọi là 'răng kim'.\n\nKhác biệt: 44 răng của lợn nhiều hơn chó (42), người (32), mèo (30) và bò (32). Con số này phản ánh chế độ ăn tạp: lợn vừa cắn vừa nghiền được.\n\nÝ nghĩa lâm sàng: Răng kim làm rách vú lợn mẹ và mặt các con cùng ổ khi tranh vú, nên trước đây bị bấm hàng loạt; nay khuyến cáo chỉ mài tròn khi thật cần vì bấm sát gây lộ tuỷ và áp-xe. Răng nanh lợn đực trưởng thành mọc liên tục và phải cắt định kỳ để an toàn cho người nuôi.\n\nNguồn: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionEn": "Description: The pig has the most complete dentition of the domestic species: 44 permanent teeth, 2×(I 3/3, C 1/1, P 4/4, M 3/3) — the ancestral mammalian formula. Piglets are born with eight sharp deciduous teeth (canines and corner incisors), the so-called needle teeth.\n\nDifference: The pig's 44 teeth exceed the dog's 42, the human's 32, the cat's 30 and cattle's 32. The number reflects an omnivorous diet: the pig both cuts and grinds.\n\nClinical relevance: Needle teeth lacerate the sow's udder and littermates' faces during teat fighting, so they used to be clipped routinely; current advice is to grind them only when necessary, since close clipping exposes pulp and causes abscesses. The boar's canines grow continuously and are trimmed periodically for handler safety.\n\nSource: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionZh": "描述: 猪的牙列在家畜中最完整：恒齿 44 枚，2×(I 3/3, C 1/1, P 4/4, M 3/3)——即哺乳动物的原始齿式。仔猪出生即有 8 枚锐利乳齿（犬齿与角门齿），俗称「针齿」。\n\n差异: 猪的 44 枚牙多于犬 42、人 32、猫 30 与牛 32。该数目反映杂食性：猪既能切割又能研磨。\n\n临床意义: 针齿在争乳时会划伤母猪乳房与同窝仔猪面部，过去常规剪除；现主张仅在必要时磨圆，因贴根剪断会暴露牙髓并致脓肿。公猪犬齿终生生长，须定期修剪以保障人员安全。\n\n来源: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)"
+    },
+    {
+      "code": "vet-pig-pig-heart-model",
+      "speciesCode": "pig",
+      "systemCode": "vet-pig-cardiovascular",
+      "nameVi": "Tim lợn — quả tim gần tim người nhất",
+      "nameEn": "The pig heart as a human analogue",
+      "nameZh": "猪心——最接近人心的心脏",
+      "latin": "Cor, valva atrioventricularis",
+      "descriptionVi": "Mô tả: Tim lợn trưởng thành nặng khoảng 300–500 g, kích thước và tỉ lệ buồng rất gần tim người; van hai lá, van động mạch chủ và hệ mạch vành cũng tương tự. Khác biệt chính: lợn có tĩnh mạch đơn trái (vena azygos sinistra) đổ vào xoang vành, người thì không.\n\nKhác biệt: Tim bò và ngựa lớn hơn nhiều và có xương tim (os cordis) trong bộ khung sợi — lợn và người thì không. Đó là lý do van tim lợn được dùng làm van sinh học cấy cho người, chứ không phải van bò dùng nguyên hình.\n\nÝ nghĩa lâm sàng: Vì sự tương đồng này, lợn là mô hình chuẩn cho phẫu thuật tim, đặt stent và nghiên cứu ghép dị loài. Trên thực địa, mốc nghe tim lợn nằm ở khoang liên sườn 3–5 bên trái, ngay sau khuỷu.\n\nNguồn: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)",
+      "descriptionEn": "Description: The adult pig heart weighs about 300–500 g, with chamber proportions very close to the human heart; the mitral and aortic valves and the coronary tree are likewise similar. The main difference: the pig has a left azygos vein draining into the coronary sinus, which humans lack.\n\nDifference: Cattle and horse hearts are far larger and contain an os cordis within the fibrous skeleton; pig and human hearts do not. That is why porcine valves are used as bioprosthetic valves in humans, rather than bovine valves used whole.\n\nClinical relevance: This similarity makes the pig the standard model for cardiac surgery, stenting and xenotransplantation research. In the field, the pig's heart is auscultated in the third to fifth left intercostal space, just behind the elbow.\n\nSource: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)",
+      "descriptionZh": "描述: 成年猪心重约 300–500 克，腔室比例与人心极为接近；二尖瓣、主动脉瓣与冠状动脉分布亦相似。主要差异：猪有左奇静脉汇入冠状窦，人则无。\n\n差异: 牛与马的心脏大得多，纤维骨架中含心骨；猪与人则无。故临床采用猪瓣膜作生物瓣植入人体，而非整体使用牛瓣。\n\n临床意义: 正因如此相似，猪成为心脏外科、支架置入与异种移植研究的标准模型。现场听诊猪心的位置在左侧第 3–5 肋间、紧靠肘后。\n\n来源: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)"
+    },
+    {
+      "code": "vet-pig-pig-nose-snout",
+      "speciesCode": "pig",
+      "systemCode": "vet-pig-senses",
+      "nameVi": "Mõm lợn và xương mõm",
+      "nameEn": "The snout and the os rostri",
+      "nameZh": "猪吻与吻骨",
+      "latin": "Rostrum, os rostri",
+      "descriptionVi": "Mô tả: Đầu mõm lợn có một xương nhỏ riêng — xương mõm (os rostri) — nằm trong sụn vách mũi, cứng hoá để chịu lực khi ủi đất. Đĩa mõm giàu thụ thể xúc giác và tuyến, là cơ quan thăm dò chính của lợn.\n\nKhác biệt: Không loài gia súc nào khác có xương này. Mũi người, chó, bò đều chỉ có sụn ở đầu mũi.\n\nÝ nghĩa lâm sàng: Ủi đất là tập tính bắt buộc chứ không phải thói quen: nuôi nền cứng không cho ủi gây stress và cắn đuôi nhau. Xỏ vòng mũi để chặn ủi là biện pháp gây đau, nhiều quy chuẩn phúc lợi đã hạn chế.\n\nNguồn: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionEn": "Description: The tip of the pig's snout contains its own small bone, the os rostri, ossified within the nasal septal cartilage to withstand the force of rooting. The snout disc is densely supplied with tactile receptors and glands and is the pig's main exploratory organ.\n\nDifference: No other domestic species has this bone; the nose of human, dog and cattle ends in cartilage alone.\n\nClinical relevance: Rooting is a behavioural need, not a habit: housing on hard floors that prevents it causes stress and tail biting. Nose-ringing to stop rooting is painful and is restricted under many welfare standards.\n\nSource: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionZh": "描述: 猪吻端含一枚独有小骨——吻骨，在鼻中隔软骨内骨化，以承受拱土之力。吻盘富含触觉感受器与腺体，是猪主要的探查器官。\n\n差异: 其他家畜均无此骨；人、犬、牛的鼻端仅为软骨。\n\n临床意义: 拱土是行为需求而非习惯：硬地饲养无法拱土会引起应激与咬尾。为阻止拱土而穿鼻环会造成疼痛，多项福利标准已加以限制。\n\n来源: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)"
+    },
+    {
+      "code": "vet-chicken-chicken-air-sacs",
+      "speciesCode": "chicken",
+      "systemCode": "vet-chicken-respiratory",
+      "nameVi": "Túi khí và phổi không giãn nở",
+      "nameEn": "Air sacs and the rigid lung",
+      "nameZh": "气囊与不扩张的肺",
+      "latin": "Sacci pneumatici, pulmo",
+      "descriptionVi": "Mô tả: Gà có chín túi khí (một túi cổ, hai túi ngực trước, hai túi ngực sau, hai túi bụng, một túi đòn, một túi gian đòn) nối với phổi. Phổi gà nhỏ, DÍNH chặt vào xương sườn và KHÔNG giãn nở; khí đi một chiều qua các ống khí (parabronchi) nhờ hai chu kỳ thở, nên phổi luôn được thông khí kể cả khi thở ra.\n\nKhác biệt: Phổi thú có vú là túi cụt: khí vào rồi ra cùng đường, luôn còn khí cặn. Phổi chim hiệu quả hơn hẳn — đó là lý do chim bay được ở độ cao mà thú có vú đã thiếu oxy. Chim cũng KHÔNG có cơ hoành; hô hấp nhờ cử động xương ức và sườn.\n\nÝ nghĩa lâm sàng: Giữ chặt gà hoặc đè lên ngực làm gà ngạt rất nhanh vì không có cơ hoành để bù. Túi khí thông với xoang khí trong xương nên nhiễm trùng đường hô hấp lan tới xương và khớp; đây cũng là lý do gây mê gia cầm cần theo dõi rất sát.\n\nNguồn: King & McLelland, Birds: Their Structure and Function, 2nd ed.",
+      "descriptionEn": "Description: The chicken has nine air sacs (cervical, two cranial thoracic, two caudal thoracic, two abdominal, clavicular and interclavicular) connected to the lungs. The lung is small, firmly attached to the ribs and does NOT expand; air moves one-way through parabronchi over two breathing cycles, so gas exchange continues even during expiration.\n\nDifference: The mammalian lung is a blind sac: air enters and leaves by the same route and residual air always remains. The avian lung is far more efficient — which is why birds fly at altitudes where mammals are already hypoxic. Birds also have NO diaphragm; breathing is driven by movement of the sternum and ribs.\n\nClinical relevance: Restraining a bird tightly or pressing on its chest asphyxiates it quickly, since there is no diaphragm to compensate. The air sacs communicate with pneumatised bones, so respiratory infection spreads to bone and joints; this is also why avian anaesthesia demands close monitoring.\n\nSource: King & McLelland, Birds: Their Structure and Function, 2nd ed.",
+      "descriptionZh": "描述: 鸡有九个气囊（颈气囊、两个前胸气囊、两个后胸气囊、两个腹气囊、锁骨气囊与锁间气囊）与肺相连。禽肺小，紧附于肋骨且不扩张；空气经副支气管作单向流动，需两个呼吸周期，故呼气时仍进行气体交换。\n\n差异: 哺乳动物的肺为盲囊：气体经同一路径进出，始终残留余气。禽肺效率高得多——故鸟类可在哺乳动物已缺氧的高度飞行。鸟亦无膈；呼吸依靠胸骨与肋骨的运动。\n\n临床意义: 紧握禽体或压迫胸部会迅速导致窒息，因无膈可代偿。气囊与气化骨相通，故呼吸道感染可蔓延至骨与关节；这也是禽类麻醉需密切监护的原因。\n\n来源: King & McLelland, Birds: Their Structure and Function, 2nd ed."
+    },
+    {
+      "code": "vet-chicken-chicken-crop-gizzard",
+      "speciesCode": "chicken",
+      "systemCode": "vet-chicken-digestive",
+      "nameVi": "Diều, dạ dày tuyến và mề",
+      "nameEn": "Crop, proventriculus and gizzard",
+      "nameZh": "嗉囊、腺胃与肌胃",
+      "latin": "Ingluvies, proventriculus, ventriculus muscularis",
+      "descriptionVi": "Mô tả: Thức ăn xuống diều (túi chứa ở thực quản, trước lối vào ngực), rồi tới dạ dày tuyến tiết HCl và pepsin, cuối cùng vào mề — khối cơ dày lót màng sừng, nghiền thức ăn cùng với sỏi nuốt vào. Gà không có răng; mề thay hoàn toàn chức năng nhai.\n\nKhác biệt: Thú có vú nhai bằng răng rồi mới nuốt; gà nuốt trước, nghiền sau. Nếu ví von: mề của gà làm việc của răng hàm, còn dạ dày tuyến làm việc của dạ dày người.\n\nÝ nghĩa lâm sàng: Diều bị nghẽn (impacted crop) hoặc chua diều là bệnh thường gặp khi ăn chất độn chuồng, dây, cỏ dài. Thiếu sỏi trong khẩu phần chăn thả làm giảm hiệu quả nghiền của mề. Khi mổ khám, mở mề là bước tìm dị vật và độc chất.\n\nNguồn: King & McLelland, Birds: Their Structure and Function, 2nd ed.",
+      "descriptionEn": "Description: Food passes into the crop (an oesophageal storage sac at the thoracic inlet), then the proventriculus which secretes HCl and pepsin, and finally the gizzard — a thick muscular mill lined by a horny membrane that grinds food together with swallowed grit. Chickens have no teeth; the gizzard replaces mastication entirely.\n\nDifference: Mammals chew before swallowing; the bird swallows first and grinds afterwards. By analogy: the gizzard does the work of the molars while the proventriculus does the work of the human stomach.\n\nClinical relevance: Impacted or sour crop is common when birds eat litter, string or long fibre. Lack of grit in free-range diets reduces gizzard grinding. At post-mortem, opening the gizzard is the step that reveals foreign bodies and toxins.\n\nSource: King & McLelland, Birds: Their Structure and Function, 2nd ed.",
+      "descriptionZh": "描述: 食物先入嗉囊（胸腔入口前的食管贮存囊），再至分泌盐酸与胃蛋白酶的腺胃，最后进入肌胃——内衬角质膜的厚肌质磨盘，与吞入的砂砾共同磨碎食物。鸡无牙，肌胃完全取代咀嚼。\n\n差异: 哺乳动物先咀嚼后吞咽；禽则先吞后磨。可作类比：肌胃行臼齿之职，腺胃行人胃之职。\n\n临床意义: 误食垫料、绳线或长纤维时常见嗉囊阻塞或酸嗉。放养禽日粮缺砂砾会降低肌胃研磨效率。剖检时，切开肌胃是发现异物与毒物的关键步骤。\n\n来源: King & McLelland, Birds: Their Structure and Function, 2nd ed."
+    },
+    {
+      "code": "vet-chicken-chicken-cloaca",
+      "speciesCode": "chicken",
+      "systemCode": "vet-chicken-urogenital",
+      "nameVi": "Ổ nhớp (cloaca)",
+      "nameEn": "The cloaca",
+      "nameZh": "泄殖腔",
+      "latin": "Cloaca: coprodeum, urodeum, proctodeum",
+      "descriptionVi": "Mô tả: Một khoang chung cuối cùng nhận cả phân, nước tiểu và sản phẩm sinh dục, chia thành ba ngăn: coprodeum (phân), urodeum (niệu–sinh dục) và proctodeum (mở ra ngoài). Gà không có bàng quang; nước tiểu là urat đặc màu trắng thải cùng phân.\n\nKhác biệt: Thú có vú tách ba đường: hậu môn, niệu đạo, đường sinh dục riêng (trừ vài loài đơn huyệt). Gà gộp cả ba — nên phân gà bình thường luôn có 'mũ' trắng, đó là nước tiểu chứ không phải bất thường.\n\nÝ nghĩa lâm sàng: Sa ổ nhớp hay gặp ở gà mái đẻ trứng quá to hoặc đẻ sớm. Xác định giới tính gà con bằng cách banh ổ nhớp (vent sexing) dựa trên gờ sinh dục rất nhỏ trong proctodeum. Thụ tinh tự nhiên là 'hôn ổ nhớp' vì gà trống không có dương vật thật.\n\nNguồn: Nomina Anatomica Avium, 2nd ed. (1993)",
+      "descriptionEn": "Description: A single terminal chamber receiving faeces, urine and reproductive products, divided into coprodeum (faeces), urodeum (urogenital) and proctodeum (opening outward). Chickens have no urinary bladder; urine is a white urate paste voided with the droppings.\n\nDifference: Mammals separate the three tracts — anus, urethra and genital passage (except monotremes). Birds combine all three, which is why normal chicken droppings always carry a white cap: that is urine, not an abnormality.\n\nClinical relevance: Cloacal prolapse is common in hens laying oversized eggs or coming into lay too early. Vent sexing of chicks reads the tiny genital eminence within the proctodeum. Natural mating is a 'cloacal kiss' — the cock has no true penis.\n\nSource: Nomina Anatomica Avium, 2nd ed. (1993)",
+      "descriptionZh": "描述: 末端共用腔，接纳粪便、尿液与生殖产物，分为粪道、泄殖道与肛道三部。鸡无膀胱；尿为白色尿酸盐糊状物，与粪便一同排出。\n\n差异: 哺乳动物将三条通道分开——肛门、尿道与生殖道（单孔类除外）。禽则三者合一，故正常鸡粪总带白色「帽」，那是尿液而非异常。\n\n临床意义: 产过大蛋或过早开产的母鸡常见泄殖腔脱垂。雏鸡翻肛鉴别依据肛道内极小的生殖突起。自然交配为「泄殖腔吻」——公鸡无真正的阴茎。\n\n来源: Nomina Anatomica Avium, 2nd ed. (1993)"
+    },
+    {
+      "code": "vet-chicken-chicken-left-ovary",
+      "speciesCode": "chicken",
+      "systemCode": "vet-chicken-urogenital",
+      "nameVi": "Chỉ buồng trứng trái phát triển",
+      "nameEn": "Only the left ovary develops",
+      "nameZh": "仅左侧卵巢发育",
+      "latin": "Ovarium sinistrum, oviductus sinister",
+      "descriptionVi": "Mô tả: Ở gà mái, chỉ buồng trứng và ống dẫn trứng BÊN TRÁI phát triển; bên phải thoái hoá từ giai đoạn phôi. Ống dẫn trứng trái dài 60–70 cm gồm năm đoạn: phễu (thụ tinh), phần tạo lòng trắng, eo (tạo màng vỏ), tử cung/tuyến vỏ (tạo vỏ canxi, ~20 giờ) và âm đạo.\n\nKhác biệt: Thú có vú giữ cả hai buồng trứng và hai sừng tử cung. Chim bỏ hẳn một bên để giảm khối lượng khi bay — cùng lý do với xương rỗng khí.\n\nÝ nghĩa lâm sàng: Vì trứng hình thành trong ống dẫn khoảng 24–26 giờ, gà đẻ tối đa gần một quả mỗi ngày và đẻ muộn dần trong ngày. Viêm phúc mạc do lòng đỏ (egg yolk peritonitis) xảy ra khi trứng rụng lọt ra ngoài phễu — nguyên nhân chết hay gặp của gà mái đẻ.\n\nNguồn: King & McLelland, Birds: Their Structure and Function, 2nd ed.",
+      "descriptionEn": "Description: In the hen only the LEFT ovary and oviduct develop; the right side regresses in the embryo. The 60–70 cm left oviduct has five parts: infundibulum (fertilisation), magnum (albumen), isthmus (shell membranes), uterus/shell gland (calcified shell, about 20 hours) and vagina.\n\nDifference: Mammals keep both ovaries and both uterine horns. Birds abandoned one side to save weight for flight — the same logic as pneumatised bones.\n\nClinical relevance: Because an egg takes 24–26 hours in the oviduct, a hen can lay at most about one egg a day and lays progressively later each day. Egg yolk peritonitis occurs when an ovulated yolk misses the infundibulum — a common cause of death in laying hens.\n\nSource: King & McLelland, Birds: Their Structure and Function, 2nd ed.",
+      "descriptionZh": "描述: 母鸡仅左侧卵巢与输卵管发育，右侧于胚胎期退化。长 60–70 厘米的左输卵管分五段：漏斗部（受精）、膨大部（蛋白）、峡部（壳膜）、子宫／壳腺部（钙化蛋壳，约 20 小时）与阴道部。\n\n差异: 哺乳动物保留双侧卵巢与双子宫角。鸟类舍弃一侧以减轻飞行重量——与骨骼气化同理。\n\n临床意义: 蛋在输卵管中形成需 24–26 小时，故母鸡每日至多产一枚，且每日产蛋时间渐晚。排出的卵黄未被漏斗部接住即发生卵黄性腹膜炎——产蛋鸡常见死因。\n\n来源: King & McLelland, Birds: Their Structure and Function, 2nd ed."
+    },
+    {
+      "code": "vet-chicken-chicken-pneumatic-bones",
+      "speciesCode": "chicken",
+      "systemCode": "vet-chicken-skeletal",
+      "nameVi": "Xương rỗng khí và lườn ức",
+      "nameEn": "Pneumatic bones and the keel",
+      "nameZh": "含气骨与龙骨突",
+      "latin": "Ossa pneumatica, carina sterni",
+      "descriptionVi": "Mô tả: Nhiều xương của gà (xương cánh tay, xương ức, đốt sống, một số xương sọ) chứa khoang khí nối thẳng với hệ túi khí. Xương ức mang một mào lớn — lườn ức — là chỗ bám của cơ ngực chiếm tới 15–20% khối lượng cơ thể.\n\nKhác biệt: Xương thú có vú chứa tuỷ ở mọi xương dài. Ở gà, tuỷ tạo máu tập trung nhiều hơn ở xương chi dưới và trong 'xương tuỷ' (medullary bone) — kho canxi đặc biệt hình thành ở gà mái trước khi đẻ để làm vỏ trứng.\n\nÝ nghĩa lâm sàng: Không truyền dịch hay tiêm vào xương rỗng khí (xương cánh tay) vì thuốc chảy thẳng vào túi khí gây chết đuối trong; đường tiêm trong xương ở gia cầm dùng xương chày hoặc xương trụ. Lườn ức nhô rõ là dấu hiệu sụt cân — đánh giá thể trạng gia cầm sờ chính chỗ này.\n\nNguồn: King & McLelland, Birds: Their Structure and Function, 2nd ed.",
+      "descriptionEn": "Description: Many bones of the chicken (humerus, sternum, vertebrae, some skull bones) contain air spaces continuous with the air-sac system. The sternum bears a large crest — the keel — the origin of pectoral muscles that make up 15–20% of body mass.\n\nDifference: Mammalian long bones all contain marrow. In the chicken haematopoietic marrow is concentrated more in the leg bones, and hens form a special calcium store, medullary bone, before lay to supply the eggshell.\n\nClinical relevance: Never give intraosseous fluids into a pneumatic bone (the humerus): fluid runs straight into the air sacs and drowns the bird; use the tibiotarsus or ulna instead. A prominent keel indicates weight loss — body condition scoring in poultry is done by palpating exactly there.\n\nSource: King & McLelland, Birds: Their Structure and Function, 2nd ed.",
+      "descriptionZh": "描述: 鸡的许多骨（肱骨、胸骨、椎骨、部分颅骨）含有与气囊系统相通的气腔。胸骨具大嵴——龙骨突——是占体重 15–20% 的胸肌的起点。\n\n差异: 哺乳动物长骨皆含骨髓。鸡的造血骨髓更集中于腿骨，母鸡在开产前形成特殊的钙贮备——髓质骨，用以形成蛋壳。\n\n临床意义: 切勿经含气骨（肱骨）作骨内输液：液体会直接流入气囊致「内溺」；应使用胫跗骨或尺骨。龙骨突明显提示体重下降——禽类体况评分正是触摸此处。\n\n来源: King & McLelland, Birds: Their Structure and Function, 2nd ed."
+    },
+    {
+      "code": "vet-chicken-chicken-syrinx",
+      "speciesCode": "chicken",
+      "systemCode": "vet-chicken-respiratory",
+      "nameVi": "Syrinx — cơ quan phát âm của chim",
+      "nameEn": "The syrinx",
+      "nameZh": "鸣管",
+      "latin": "Syrinx",
+      "descriptionVi": "Mô tả: Chim phát âm bằng syrinx, nằm ở chỗ khí quản chia đôi thành hai phế quản gốc, sâu trong lồng ngực — không phải bằng thanh quản. Thanh quản của chim có sụn nhưng không có dây thanh.\n\nKhác biệt: Người và thú có vú phát âm ở thanh quản, ngay đầu trên khí quản. Vì syrinx nằm ở chỗ chia đôi, nhiều loài chim điều khiển hai bên độc lập và hát được hai nốt cùng lúc — điều bất khả với thanh quản người.\n\nÝ nghĩa lâm sàng: Tiếng thở khò khè hoặc mất tiếng ở gia cầm thường do tổn thương sâu tại syrinx (nấm Aspergillus, giun khí quản Syngamus) chứ không phải viêm thanh quản; nội soi phải đưa ống xuống tận chỗ chia đôi khí quản mới nhìn thấy.\n\nNguồn: Nomina Anatomica Avium, 2nd ed. (1993)",
+      "descriptionEn": "Description: Birds produce sound with the syrinx, located where the trachea divides into the two primary bronchi, deep within the thorax — not with the larynx. The avian larynx has cartilages but no vocal folds.\n\nDifference: Humans and mammals phonate at the larynx, at the top of the trachea. Because the syrinx sits at the bifurcation, many birds control the two sides independently and can sing two notes at once — impossible for the human larynx.\n\nClinical relevance: Wheezing or voice loss in poultry usually reflects disease deep at the syrinx (Aspergillus, the gapeworm Syngamus) rather than laryngitis; endoscopy must reach the tracheal bifurcation to see it.\n\nSource: Nomina Anatomica Avium, 2nd ed. (1993)",
+      "descriptionZh": "描述: 鸟以鸣管发声，位于气管分为两支主支气管处、胸腔深部，而非借喉。禽喉有软骨但无声带。\n\n差异: 人与哺乳动物在气管上端的喉发声。鸣管位于分叉处，故许多鸟可分别控制两侧、同时发出两个音——人喉无法做到。\n\n临床意义: 禽的喘鸣或失声通常源于鸣管深部病变（曲霉、气管开口虫），而非喉炎；内镜须抵达气管分叉方能观察。\n\n来源: Nomina Anatomica Avium, 2nd ed. (1993)"
+    },
+    {
+      "code": "vet-chicken-chicken-red-blood-cells",
+      "speciesCode": "chicken",
+      "systemCode": "vet-chicken-cardiovascular",
+      "nameVi": "Hồng cầu có nhân và tim gia cầm",
+      "nameEn": "Nucleated red cells and the avian heart",
+      "nameZh": "有核红细胞与禽心脏",
+      "latin": "Erythrocytus, cor",
+      "descriptionVi": "Mô tả: Hồng cầu gia cầm hình bầu dục và CÓ NHÂN. Tim gà lớn tương đối (khoảng 0,5–0,8% khối lượng cơ thể) và nhịp rất nhanh: 250–350 lần/phút ở gà trưởng thành. Thân nhiệt bình thường 40,5–42 °C.\n\nKhác biệt: Hồng cầu thú có vú mất nhân khi trưởng thành (trừ lạc đà giữ hình bầu dục nhưng vẫn không nhân). Vì thế đếm hồng cầu gia cầm bằng máy đếm tự động của thú có vú sẽ sai — máy đọc nhân thành bạch cầu.\n\nÝ nghĩa lâm sàng: Công thức máu gia cầm phải đếm tay trên tiêu bản. Thân nhiệt cao và nhịp tim nhanh khiến gia cầm chịu stress nhiệt kém — chỉ cần chuồng nóng thêm vài độ là chết hàng loạt.\n\nNguồn: King & McLelland, Birds: Their Structure and Function, 2nd ed.",
+      "descriptionEn": "Description: Avian erythrocytes are oval and NUCLEATED. The heart is relatively large (about 0.5–0.8% of body mass) and beats fast: 250–350 per minute in an adult chicken. Normal body temperature is 40.5–42 °C.\n\nDifference: Mammalian red cells lose their nucleus at maturity (camelids keep an oval shape but are still anucleate). Consequently automated mammalian haematology analysers misread avian blood — they count the nuclei as leucocytes.\n\nClinical relevance: Avian haematology must be done manually on a smear. The high body temperature and heart rate leave little reserve against heat stress — a few degrees of extra house temperature causes mass mortality.\n\nSource: King & McLelland, Birds: Their Structure and Function, 2nd ed.",
+      "descriptionZh": "描述: 禽红细胞呈椭圆形且有核。心脏相对较大（约占体重 0.5–0.8%），心率快：成年鸡每分钟 250–350 次。正常体温 40.5–42 °C。\n\n差异: 哺乳动物红细胞成熟时脱核（骆驼科呈椭圆形但仍无核）。故哺乳动物用自动血液分析仪会误读禽血——把细胞核计为白细胞。\n\n临床意义: 禽类血常规须在涂片上人工计数。体温高、心率快使其耐热储备很小——舍温仅升高数度即可造成大批死亡。\n\n来源: King & McLelland, Birds: Their Structure and Function, 2nd ed."
+    },
+    {
+      "code": "vet-chicken-chicken-comb-wattles",
+      "speciesCode": "chicken",
+      "systemCode": "vet-chicken-integument",
+      "nameVi": "Mào và tích — bộ tản nhiệt kiêm chỉ báo sức khoẻ",
+      "nameEn": "Comb and wattles",
+      "nameZh": "鸡冠与肉髯",
+      "latin": "Crista, palea",
+      "descriptionVi": "Mô tả: Mào và tích là những nếp da giàu mạch máu, không có lông và không có tuyến mồ hôi; máu chảy qua đây thải nhiệt trực tiếp ra không khí. Kích thước và màu sắc phụ thuộc hormone sinh dục.\n\nKhác biệt: Thú có vú tản nhiệt bằng mồ hôi (người, ngựa) hoặc thở gấp (chó, lợn). Gia cầm không có tuyến mồ hôi nên dựa vào thở gấp cộng với các vùng da trần này — tai thỏ giữ vai trò tương tự ở loài gặm nhấm nuôi.\n\nÝ nghĩa lâm sàng: Mào nhợt gợi thiếu máu hoặc nhiễm ký sinh trùng; mào tím tái là dấu hiệu thiếu oxy hoặc bệnh tim–hô hấp; mào teo nhỏ ở gà mái nghĩa là đã ngừng đẻ. Đây là chỉ báo khám nhanh cả đàn.\n\nNguồn: King & McLelland, Birds: Their Structure and Function, 2nd ed.",
+      "descriptionEn": "Description: Comb and wattles are richly vascular skin folds, featherless and without sweat glands; blood flowing through them dumps heat straight into the air. Their size and colour depend on sex hormones.\n\nDifference: Mammals shed heat by sweating (human, horse) or panting (dog, pig). Poultry have no sweat glands and rely on panting plus these bare skin areas — the rabbit's ear plays the same role among pet mammals.\n\nClinical relevance: A pale comb suggests anaemia or parasitism; a cyanotic comb indicates hypoxia or cardio-respiratory disease; a shrunken comb in a hen means she has stopped laying. It is the quickest flock-level indicator.\n\nSource: King & McLelland, Birds: Their Structure and Function, 2nd ed.",
+      "descriptionZh": "描述: 鸡冠与肉髯为血管丰富的皮肤褶，无羽、无汗腺；流经其中的血液将热量直接散入空气。其大小与颜色取决于性激素。\n\n差异: 哺乳动物通过出汗（人、马）或喘息（犬、猪）散热。禽无汗腺，依靠喘息与这些裸露皮肤区——兔耳在宠物哺乳动物中扮演相同角色。\n\n临床意义: 冠色苍白提示贫血或寄生虫病；发绀提示缺氧或心肺疾病；母鸡冠萎缩表示已停产。这是群体快速判断的指标。\n\n来源: King & McLelland, Birds: Their Structure and Function, 2nd ed."
+    }
+  ]
+}

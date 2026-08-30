@@ -94,6 +94,14 @@
       "order": 5
     },
     {
+      "code": "vet-dog-respiratory",
+      "speciesCode": "dog",
+      "nameVi": "Hệ hô hấp",
+      "nameEn": "Respiratory system",
+      "nameZh": "呼吸系统",
+      "order": 6
+    },
+    {
       "code": "vet-cat-digestive",
       "speciesCode": "cat",
       "nameVi": "Hệ tiêu hoá",
@@ -244,6 +252,14 @@
       "nameEn": "Cardiovascular system",
       "nameZh": "循环系统",
       "order": 5
+    },
+    {
+      "code": "vet-cattle-urogenital",
+      "speciesCode": "cattle",
+      "nameVi": "Hệ tiết niệu – sinh dục",
+      "nameEn": "Urogenital system",
+      "nameZh": "泌尿生殖系统",
+      "order": 6
     },
     {
       "code": "vet-pig-senses",
@@ -444,6 +460,42 @@
       "descriptionZh": "描述: 四足动物站立时，前肢约承担体重的 60%，后肢约 40%。前肢负重，后肢提供推进。\n\n差异: 人两足站立时 100% 由下肢承担，上肢完全解放。这一根本力学差异衍生出骨盆、脊柱与足形态的一切不同。\n\n临床意义: 因此前肢跛行表现为头随健肢着地而下点，后肢跛行则表现为患侧髋部上抬——步态检查中的两种不同观察点。\n\n来源: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)"
     },
     {
+      "code": "vet-dog-dog-prostate",
+      "speciesCode": "dog",
+      "systemCode": "vet-dog-urogenital",
+      "nameVi": "Tuyến tiền liệt — tuyến sinh dục phụ duy nhất của chó",
+      "nameEn": "The prostate — the dog's only accessory sex gland",
+      "nameZh": "前列腺——犬唯一的副性腺",
+      "latin": "Prostata",
+      "descriptionVi": "Mô tả: Ở chó đực, tuyến tiền liệt bọc quanh cổ bàng quang và niệu đạo chậu, và là tuyến sinh dục phụ DUY NHẤT — chó không có túi tinh, không có tuyến củ hành niệu đạo, không có tuyến bóng ống dẫn tinh. Tuyến to dần suốt đời dưới tác dụng của androgen.\n\nKhác biệt: Người có tuyến tiền liệt và cả túi tinh lẫn tuyến hành niệu đạo. Ngựa, bò, lợn có đủ bộ tuyến phụ, riêng lợn tuyến củ hành to bằng ngón tay. Mèo thì có tuyến tiền liệt và tuyến củ hành nhưng không có túi tinh.\n\nÝ nghĩa lâm sàng: Phì đại tuyến tiền liệt lành tính gặp ở hầu hết chó đực chưa triệt sản trên 5 tuổi: tuyến to đè trực tràng gây táo bón và phân dẹt, chứ ít khi gây bí tiểu như ở người. Sờ được qua trực tràng — đây là lý do khám trực tràng nằm trong khám thường quy chó đực già.\n\nNguồn: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionEn": "Description: In the male dog the prostate surrounds the bladder neck and pelvic urethra, and is the ONLY accessory sex gland — the dog has no vesicular glands, no bulbourethral glands and no ampullary glands. It enlarges throughout life under androgen drive.\n\nDifference: Humans have a prostate plus vesicular and bulbourethral glands. Horse, ox and pig have the full set — in the boar the bulbourethral glands are finger-sized. The cat has a prostate and bulbourethral glands but no vesicular glands.\n\nClinical relevance: Benign prostatic hyperplasia affects most intact male dogs over five: the enlarged gland presses on the rectum, causing constipation and ribbon-like faeces, rather than the urinary obstruction typical in men. It is palpable per rectum — which is why rectal examination belongs in the routine work-up of the older male dog.\n\nSource: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionZh": "描述: 公犬前列腺环绕膀胱颈与骨盆部尿道，且为唯一的副性腺——犬无精囊腺、无尿道球腺、无输精管壶腹腺。在雄激素作用下终生持续增大。\n\n差异: 人除前列腺外尚有精囊腺与尿道球腺。马、牛、猪副性腺齐全，公猪的尿道球腺粗如手指。猫有前列腺与尿道球腺，但无精囊腺。\n\n临床意义: 五岁以上未去势公犬多发良性前列腺增生：腺体增大压迫直肠，导致便秘与扁带状粪便，而非人类常见的排尿梗阻。可经直肠触诊——故直肠检查属老年公犬常规检查项目。\n\n来源: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)"
+    },
+    {
+      "code": "vet-dog-dog-brachycephalic-airway",
+      "speciesCode": "dog",
+      "systemCode": "vet-dog-respiratory",
+      "nameVi": "Đường thở của giống đầu ngắn",
+      "nameEn": "The brachycephalic airway",
+      "nameZh": "短头品种的气道",
+      "latin": "Nares, palatum molle, sacculi laryngis",
+      "descriptionVi": "Mô tả: Chọn giống lấy mặt ngắn đã rút ngắn xương hàm trên và xương mũi, nhưng phần mô mềm bên trong thì KHÔNG ngắn theo: lỗ mũi hẹp lại, màn hầu quá dài thò vào thanh quản, cuốn mũi mọc lấn ra sau, khí quản nhỏ hơn bình thường.\n\nKhác biệt: Chó sói và chó đầu dài có tỉ lệ xương – mô mềm cân đối nên đường thở thông suốt. Đây là khác biệt do CON NGƯỜI tạo ra trong vài trăm năm, không phải do tiến hoá — điểm hiếm hoi trong giải phẫu so sánh mà nguyên nhân là chọn giống.\n\nÝ nghĩa lâm sàng: Hội chứng tắc nghẽn đường thở giống đầu ngắn (BOAS): thở ồn, không chịu nóng, ngất khi gắng sức, dễ trào ngược. Gây mê là lúc nguy hiểm nhất — mất trương lực cơ là đường thở sập, nên phải đặt nội khí quản nhanh và rút ống muộn, chỉ khi con vật đã tỉnh hẳn.\n\nNguồn: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionEn": "Description: Breeding for a short face shortened the maxilla and nasal bones, but the soft tissue inside did NOT shorten with them: the nostrils are stenotic, the soft palate overlong and dipping into the larynx, the nasal conchae grow backwards, and the trachea is hypoplastic.\n\nDifference: Wolves and dolichocephalic dogs keep bone and soft tissue in proportion, so the airway stays clear. This difference was made by humans within a few centuries rather than by evolution — one of the rare places in comparative anatomy where the cause is selective breeding.\n\nClinical relevance: Brachycephalic obstructive airway syndrome: noisy breathing, heat intolerance, exercise syncope and frequent regurgitation. Anaesthesia is the dangerous moment — loss of muscle tone collapses the airway, so intubate early and extubate late, only once the animal is fully awake.\n\nSource: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionZh": "描述: 为短吻而进行的选育缩短了上颌骨与鼻骨，但其内软组织并未随之缩短：鼻孔狭窄，软腭过长而垂入喉腔，鼻甲向后增生，气管发育不良。\n\n差异: 狼与长头犬的骨与软组织比例协调，气道通畅。此差异由人类在数百年间造成而非进化所致——是比较解剖学中罕见的以选育为成因的例子。\n\n临床意义: 短头品种阻塞性气道综合征：呼吸有声、不耐热、运动性晕厥、易反流。麻醉期最为危险——肌张力丧失即致气道塌陷，故应尽早插管、延迟拔管，须待动物完全清醒。\n\n来源: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)"
+    },
+    {
+      "code": "vet-dog-cat-tapetum-lucidum",
+      "speciesCode": "dog",
+      "systemCode": "vet-dog-senses",
+      "nameVi": "Thảm sáng (tapetum lucidum)",
+      "nameEn": "The tapetum lucidum",
+      "nameZh": "照膜（明毯）",
+      "latin": "Tapetum lucidum cellulosum",
+      "descriptionVi": "Mô tả: Một lớp phản chiếu nằm trong màng mạch, ngay sau võng mạc ở nửa trên đáy mắt. Ánh sáng đi qua võng mạc mà chưa bị hấp thụ sẽ dội lại cho tế bào cảm quang bắt lần thứ hai, tăng độ nhạy khoảng sáu lần trong đêm. Ở mèo thảm sáng cấu tạo từ các phiến tinh thể riboflavin–kẽm.\n\nKhác biệt: Người KHÔNG có thảm sáng — đáy mắt người hấp thụ hết ánh sáng thừa, nên ảnh sắc nét hơn nhưng nhìn đêm kém hẳn. Lợn cũng không có. Đây chính là lý do mắt chó mèo loé xanh lục khi chụp đèn flash còn mắt người thì đỏ (màu của mạch máu võng mạc).\n\nÝ nghĩa lâm sàng: Soi đáy mắt phải biết vùng có thảm sáng sáng loé và vùng không có thảm sáng tối màu là BÌNH THƯỜNG, không phải tổn thương. Teo võng mạc tiến triển làm vùng thảm sáng phản quang mạnh bất thường; ngược lại phù võng mạc làm vùng ấy tối đi.\n\nNguồn: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionEn": "Description: A reflective layer in the choroid, immediately behind the retina over the upper half of the fundus. Light that crosses the retina without being absorbed is bounced back for a second pass at the photoreceptors, raising night sensitivity roughly sixfold. In the cat it is built from crystalline riboflavin–zinc plates.\n\nDifference: Humans have NO tapetum — the human fundus absorbs the surplus light, giving a sharper image but far poorer night vision. The pig has none either. This is exactly why a dog's or cat's eyes flash green in a photograph while human eyes go red (the colour of the retinal vessels).\n\nClinical relevance: On fundoscopy the brightly reflective tapetal zone and the dark non-tapetal zone are both NORMAL, not lesions. Progressive retinal atrophy makes the tapetal zone abnormally hyper-reflective; retinal oedema, conversely, dulls it.\n\nSource: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionZh": "描述: 位于脉络膜内、眼底上半部视网膜正后方的反光层。未被吸收而穿过视网膜的光线被反射回来，供感光细胞二次捕获，使夜间敏感度约提高六倍。猫的照膜由核黄素–锌结晶板构成。\n\n差异: 人无照膜——人眼底吸收多余光线，成像更锐利但夜视差得多。猪亦无。这正是闪光灯下犬猫眼睛反绿光、而人眼呈红色（视网膜血管之色）的原因。\n\n临床意义: 眼底检查时，明亮反光的照膜区与暗色的无照膜区均属正常，并非病变。进行性视网膜萎缩使照膜区反光异常增强；视网膜水肿则相反，使其变暗。\n\n来源: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)"
+    },
+    {
       "code": "vet-cat-cat-dental-formula",
       "speciesCode": "cat",
       "systemCode": "vet-cat-digestive",
@@ -564,6 +616,30 @@
       "descriptionZh": "描述: 四足动物站立时，前肢约承担体重的 60%，后肢约 40%。前肢负重，后肢提供推进。\n\n差异: 人两足站立时 100% 由下肢承担，上肢完全解放。这一根本力学差异衍生出骨盆、脊柱与足形态的一切不同。\n\n临床意义: 因此前肢跛行表现为头随健肢着地而下点，后肢跛行则表现为患侧髋部上抬——步态检查中的两种不同观察点。\n\n来源: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)"
     },
     {
+      "code": "vet-cat-cat-tapetum-lucidum",
+      "speciesCode": "cat",
+      "systemCode": "vet-cat-senses",
+      "nameVi": "Thảm sáng (tapetum lucidum)",
+      "nameEn": "The tapetum lucidum",
+      "nameZh": "照膜（明毯）",
+      "latin": "Tapetum lucidum cellulosum",
+      "descriptionVi": "Mô tả: Một lớp phản chiếu nằm trong màng mạch, ngay sau võng mạc ở nửa trên đáy mắt. Ánh sáng đi qua võng mạc mà chưa bị hấp thụ sẽ dội lại cho tế bào cảm quang bắt lần thứ hai, tăng độ nhạy khoảng sáu lần trong đêm. Ở mèo thảm sáng cấu tạo từ các phiến tinh thể riboflavin–kẽm.\n\nKhác biệt: Người KHÔNG có thảm sáng — đáy mắt người hấp thụ hết ánh sáng thừa, nên ảnh sắc nét hơn nhưng nhìn đêm kém hẳn. Lợn cũng không có. Đây chính là lý do mắt chó mèo loé xanh lục khi chụp đèn flash còn mắt người thì đỏ (màu của mạch máu võng mạc).\n\nÝ nghĩa lâm sàng: Soi đáy mắt phải biết vùng có thảm sáng sáng loé và vùng không có thảm sáng tối màu là BÌNH THƯỜNG, không phải tổn thương. Teo võng mạc tiến triển làm vùng thảm sáng phản quang mạnh bất thường; ngược lại phù võng mạc làm vùng ấy tối đi.\n\nNguồn: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionEn": "Description: A reflective layer in the choroid, immediately behind the retina over the upper half of the fundus. Light that crosses the retina without being absorbed is bounced back for a second pass at the photoreceptors, raising night sensitivity roughly sixfold. In the cat it is built from crystalline riboflavin–zinc plates.\n\nDifference: Humans have NO tapetum — the human fundus absorbs the surplus light, giving a sharper image but far poorer night vision. The pig has none either. This is exactly why a dog's or cat's eyes flash green in a photograph while human eyes go red (the colour of the retinal vessels).\n\nClinical relevance: On fundoscopy the brightly reflective tapetal zone and the dark non-tapetal zone are both NORMAL, not lesions. Progressive retinal atrophy makes the tapetal zone abnormally hyper-reflective; retinal oedema, conversely, dulls it.\n\nSource: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionZh": "描述: 位于脉络膜内、眼底上半部视网膜正后方的反光层。未被吸收而穿过视网膜的光线被反射回来，供感光细胞二次捕获，使夜间敏感度约提高六倍。猫的照膜由核黄素–锌结晶板构成。\n\n差异: 人无照膜——人眼底吸收多余光线，成像更锐利但夜视差得多。猪亦无。这正是闪光灯下犬猫眼睛反绿光、而人眼呈红色（视网膜血管之色）的原因。\n\n临床意义: 眼底检查时，明亮反光的照膜区与暗色的无照膜区均属正常，并非病变。进行性视网膜萎缩使照膜区反光异常增强；视网膜水肿则相反，使其变暗。\n\n来源: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)"
+    },
+    {
+      "code": "vet-cat-cat-tongue-papillae",
+      "speciesCode": "cat",
+      "systemCode": "vet-cat-digestive",
+      "nameVi": "Gai lưỡi hoá sừng của mèo",
+      "nameEn": "The cat's keratinised lingual papillae",
+      "nameZh": "猫舌的角化乳头",
+      "latin": "Papillae filiformes linguae",
+      "descriptionVi": "Mô tả: Mặt lưng lưỡi mèo phủ gai hình chỉ hoá sừng cứng, đầu cong về phía sau như hàng móc. Chúng không có chức năng vị giác mà là công cụ cơ học: cạo thịt bám xương, và chải lông — mỗi gai rỗng ở đầu, hút nước bọt rồi nhả xuống lông khi liếm.\n\nKhác biệt: Gai chỉ ở người mềm, chỉ làm nhiệm vụ xúc giác. Chó cũng có gai chỉ nhưng mềm hơn nhiều và không hoá sừng thành móc. Bò thì có gai chỉ lớn và thô để vơ cỏ, nhưng cong theo hướng khác vì bò dùng lưỡi để CUỐN cỏ vào chứ không cạo.\n\nÝ nghĩa lâm sàng: Hàng móc hướng về sau khiến mèo KHÔNG nhả ra được thứ đã vào miệng: dây, chỉ, kim khâu chỉ có một chiều là nuốt xuống. Đây là nền tảng giải phẫu của dị vật dạng dây ở mèo — dây mắc dưới lưỡi còn đầu kia đi xuống ruột, cắt ngang thành ruột nhiều chỗ. Khám mèo nôn cấp phải nâng lưỡi kiểm tra hãm lưỡi.\n\nNguồn: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionEn": "Description: The dorsum of the cat's tongue is covered in stiff keratinised filiform papillae whose tips curve backwards like rows of hooks. They carry no taste function; they are mechanical tools — for rasping meat off bone and for grooming, each papilla being hollow-tipped so it wicks saliva and releases it into the coat.\n\nDifference: The human filiform papillae are soft and purely tactile. The dog also has filiform papillae, but far softer and not keratinised into hooks. Cattle have large coarse ones for gathering grass, curved differently because the ox uses its tongue to sweep herbage in rather than to rasp.\n\nClinical relevance: The backward-facing hooks mean a cat CANNOT spit out what has entered its mouth: string, thread and needles can only go one way — down. This is the anatomical basis of the feline linear foreign body, where thread anchors under the tongue while the far end travels on and saws through the bowel at several points. Any acutely vomiting cat needs the tongue lifted and the frenulum inspected.\n\nSource: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionZh": "描述: 猫舌背覆有坚硬角化的丝状乳头，尖端向后弯曲如成排倒钩。其无味觉功能，纯为机械工具：刮离骨上之肉，并用于梳理被毛——每个乳头尖端中空，可吸取唾液再释于毛被。\n\n差异: 人的丝状乳头柔软，仅司触觉。犬亦有丝状乳头，但柔软得多且未角化成钩。牛的丝状乳头粗大，用于卷取牧草，弯曲方向不同——牛以舌卷草而非刮削。\n\n临床意义: 向后的倒钩使猫无法吐出已入口之物：线、缝线与缝针只能一路下行。此即猫线性异物的解剖学基础——线端固定于舌下，远端随肠管前行并在多处切割肠壁。急性呕吐的猫必须抬舌检查舌系带。\n\n来源: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)"
+    },
+    {
       "code": "vet-horse-dogcat-third-eyelid",
       "speciesCode": "horse",
       "systemCode": "vet-horse-senses",
@@ -672,6 +748,30 @@
       "descriptionZh": "描述: 颈侧胸头肌与臂头肌之间的纵沟，内含颈外静脉——大动物最粗且最易接近的血管。在沟的下端加压可使静脉充盈显现。\n\n差异: 人的颈内静脉深藏于颈动脉鞘内，不作常规采血；常用上肢静脉。在牛与马，颈外静脉是采血与输液的标准途径。\n\n临床意义: 采血、大量输液与注射均经此沟。马须格外小心，因颈总动脉紧位其深面——误行动脉内注射可立即引起抽搐与死亡。\n\n来源: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)"
     },
     {
+      "code": "vet-horse-horse-obligate-nasal-breather",
+      "speciesCode": "horse",
+      "systemCode": "vet-horse-respiratory",
+      "nameVi": "Ngựa thở bắt buộc bằng mũi",
+      "nameEn": "The horse as an obligate nasal breather",
+      "nameZh": "马为专性鼻呼吸动物",
+      "latin": "Palatum molle, arcus palatopharyngeus",
+      "descriptionVi": "Mô tả: Màn hầu của ngựa rất dài và bám vòng quanh phía dưới thanh quản, khoá nắp thanh quản nằm hẳn TRÊN màn hầu. Đường thở vì thế thông suốt từ mũi xuống khí quản nhưng bị ngăn hoàn toàn với khoang miệng: ngựa không thở qua mồm được, kể cả khi ngạt.\n\nKhác biệt: Người, chó và lợn chuyển sang thở miệng dễ dàng khi mũi tắc. Bò cũng thở miệng được khi khó thở nặng — thở miệng ở bò là dấu hiệu cấp cứu chính vì nó bất thường. Chỉ ngựa là mất hẳn lối thoát ấy.\n\nÝ nghĩa lâm sàng: Tắc mũi hai bên ở ngựa là cấp cứu ngạt thở thật sự, không phải khó chịu. Phù mũi sau gây mê, chảy máu mũi lấp đầy đường thở, hay khối u xoang đều có thể giết con vật — nên khi ngựa nằm mê phải đặt ống thông mũi hầu. Ngược lại, 'màn hầu lệch lên trên' lúc phi nhanh làm ngựa phát tiếng thở khò khè và mất sức đột ngột.\n\nNguồn: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)",
+      "descriptionEn": "Description: The horse's soft palate is very long and its free border encircles the larynx from below, so the epiglottis sits entirely ABOVE the palate. The airway therefore runs uninterrupted from nostril to trachea but is completely separated from the mouth: a horse cannot breathe through its mouth, not even when suffocating.\n\nDifference: Humans, dogs and pigs switch to mouth breathing readily when the nose is blocked. Cattle can also mouth-breathe in severe dyspnoea — and open-mouth breathing in an ox is an emergency sign precisely because it is abnormal. Only the horse has no such escape route.\n\nClinical relevance: Bilateral nasal obstruction in a horse is a genuine asphyxial emergency, not a discomfort. Post-anaesthetic nasal oedema, epistaxis filling the airway, or a sinus mass can all kill — which is why a recumbent anaesthetised horse gets a nasopharyngeal tube. Conversely, dorsal displacement of the soft palate at the gallop produces a gurgling noise and sudden loss of performance.\n\nSource: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)",
+      "descriptionZh": "描述: 马的软腭甚长，其游离缘自下方环抱喉部，故会厌完全位于软腭之上。气道因而自鼻孔至气管畅通无阻，却与口腔完全隔绝：马无法经口呼吸，即使窒息时亦然。\n\n差异: 人、犬、猪在鼻塞时可轻易改为口呼吸。牛在重度呼吸困难时亦可张口呼吸——牛张口呼吸之所以是急症征象，正因其属异常。唯马全无此退路。\n\n临床意义: 马双侧鼻腔阻塞是真正的窒息性急症，而非不适。麻醉后鼻黏膜水肿、鼻出血充塞气道或鼻窦肿物均可致死——故卧位麻醉的马须置鼻咽管。反之，疾驰中软腭背侧移位会产生咕噜声并致突然失速。\n\n来源: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)"
+    },
+    {
+      "code": "vet-horse-horse-hypsodont-teeth",
+      "speciesCode": "horse",
+      "systemCode": "vet-horse-digestive",
+      "nameVi": "Răng má mọc dài liên tục (hypsodont)",
+      "nameEn": "Continuously erupting cheek teeth (hypsodont)",
+      "nameZh": "持续萌出的颊齿（长冠齿）",
+      "latin": "Dentes premolares et molares, hypsodontia",
+      "descriptionVi": "Mô tả: Răng má ngựa có thân răng rất dài nằm vùi trong xương hàm, mỗi năm trồi ra 2–3 mm để bù phần bị mòn khi nghiền cỏ có silic. Sáu răng má trên và dưới mỗi bên khớp thành một bàn nghiền liên tục; hàm trên rộng hơn hàm dưới (anisognathia) nên ngựa nhai bằng cách đưa hàm sang một bên.\n\nKhác biệt: Răng người và răng chó là brachyodont — mọc xong là thôi, mòn hết thì hỏng hẳn. Bò và cừu cũng hypsodont như ngựa vì cùng ăn cỏ mài răng. Lợn ăn tạp nên vẫn brachyodont, giống người.\n\nÝ nghĩa lâm sàng: Vì hàm trên rộng hơn, mép ngoài răng trên và mép trong răng dưới không được mài tới, tạo gai men sắc cứa vào má và lưỡi — phải giũa răng ('floating') định kỳ. Ngựa già trên 25 tuổi thì thân răng đã trồi hết, răng rụng dần và con vật không nhai nổi cỏ khô nữa: sụt cân ở ngựa già trước hết phải khám răng.\n\nNguồn: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)",
+      "descriptionEn": "Description: The horse's cheek teeth have a very long crown buried in the jaw, erupting 2–3 mm a year to replace what silica-rich forage wears away. Six upper and six lower cheek teeth on each side interlock into one continuous grinding table; the upper jaw is wider than the lower (anisognathia), so the horse chews with a sideways sweep.\n\nDifference: Human and dog teeth are brachyodont — once erupted they are finished, and once worn they are lost. Cattle and sheep are hypsodont like the horse, for the same abrasive diet. The omnivorous pig stays brachyodont, as we do.\n\nClinical relevance: Because the upper jaw is wider, the outer edge of the upper teeth and the inner edge of the lower escape wear and grow sharp enamel points that lacerate cheek and tongue — hence routine rasping ('floating'). Past about 25 the reserve crown is used up, teeth are shed, and the horse can no longer chew hay: weight loss in an old horse means examine the mouth first.\n\nSource: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)",
+      "descriptionZh": "描述: 马的颊齿齿冠甚长并埋于颌骨内，每年萌出2–3毫米，以补偿富含硅质的草料所造成的磨损。每侧上下各六枚颊齿咬合成连续的研磨面；上颌宽于下颌（颌宽不等），故马以侧向运动咀嚼。\n\n差异: 人与犬的牙齿为短冠齿——萌出即止，磨尽即废。牛与羊因同样的磨蚀性食物而与马一样为长冠齿。杂食的猪则与人相同，仍属短冠齿。\n\n临床意义: 因上颌较宽，上齿外缘与下齿内缘未被磨及，形成锐利釉质尖刺划伤颊与舌——故须定期锉齿。约25岁后储备齿冠耗尽，牙齿脱落，马已无法咀嚼干草：老龄马消瘦应首先检查口腔。\n\n来源: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)"
+    },
+    {
       "code": "vet-cattle-dogcat-third-eyelid",
       "speciesCode": "cattle",
       "systemCode": "vet-cattle-senses",
@@ -766,6 +866,30 @@
       "descriptionVi": "Mô tả: Rãnh dọc bên cổ giữa cơ ức–đầu và cơ đòn–cánh tay, chứa tĩnh mạch cổ ngoài — mạch to nhất dễ tiếp cận nhất trên gia súc lớn. Ép ở đầu dưới rãnh thì tĩnh mạch nổi căng lên.\n\nKhác biệt: Ở người, tĩnh mạch cổ trong nằm sâu cạnh động mạch cảnh trong bao cảnh và không dùng để lấy máu thường quy; tĩnh mạch tay là chỗ tiêm. Ở bò và ngựa, tĩnh mạch cổ ngoài là đường tiêm truyền chuẩn.\n\nÝ nghĩa lâm sàng: Lấy máu, truyền dịch số lượng lớn và tiêm thuốc đều qua rãnh này. Ở ngựa phải cẩn thận vì động mạch cảnh chung nằm ngay sâu dưới đó — tiêm thuốc nhầm vào động mạch gây co giật và tử vong tức thì.\n\nNguồn: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)",
       "descriptionEn": "Description: A longitudinal furrow on the side of the neck between the sternocephalicus and brachiocephalicus, containing the external jugular vein — the largest and most accessible vessel in large animals. Pressure at its lower end distends the vein.\n\nDifference: In humans the internal jugular lies deep in the carotid sheath and is not used for routine sampling; arm veins are. In cattle and horses the external jugular is the standard route for sampling and infusion.\n\nClinical relevance: Blood sampling, large-volume fluid therapy and injections all use this groove. In the horse care is essential because the common carotid artery lies just deep to it — inadvertent intra-arterial injection causes immediate seizures and death.\n\nSource: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)",
       "descriptionZh": "描述: 颈侧胸头肌与臂头肌之间的纵沟，内含颈外静脉——大动物最粗且最易接近的血管。在沟的下端加压可使静脉充盈显现。\n\n差异: 人的颈内静脉深藏于颈动脉鞘内，不作常规采血；常用上肢静脉。在牛与马，颈外静脉是采血与输液的标准途径。\n\n临床意义: 采血、大量输液与注射均经此沟。马须格外小心，因颈总动脉紧位其深面——误行动脉内注射可立即引起抽搐与死亡。\n\n来源: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)"
+    },
+    {
+      "code": "vet-cattle-cattle-reticular-groove",
+      "speciesCode": "cattle",
+      "systemCode": "vet-cattle-digestive",
+      "nameVi": "Rãnh thực quản của bê",
+      "nameEn": "The reticular (oesophageal) groove of the calf",
+      "nameZh": "犊牛的食管沟",
+      "latin": "Sulcus reticuli",
+      "descriptionVi": "Mô tả: Một máng cơ chạy từ lỗ thực quản dọc thành dạ tổ ong tới lỗ dạ lá sách. Khi bê bú, phản xạ khép hai mép máng lại thành một cái ống kín, đưa sữa đi THẲNG qua dạ cỏ xuống dạ múi khế. Phản xạ do động tác mút và thành phần sữa khởi động, và tắt dần khi bê cai sữa.\n\nKhác biệt: Người và các loài một dạ dày không cần cơ chế này vì không có dạ cỏ để mà đi vòng. Cừu và dê cũng có rãnh thực quản y hệt bò. Ở bò trưởng thành rãnh gần như không còn hoạt động — đó là điểm mấu chốt trên lâm sàng.\n\nÝ nghĩa lâm sàng: Cho bê uống bằng xô mà uống vội hoặc uống sữa nguội thì rãnh không khép kín, sữa rơi vào dạ cỏ chưa có hệ vi sinh và lên men thối — đây là nguyên nhân giải phẫu của tiêu chảy bê nuôi bằng xô. Ngược lại, ở bò trưởng thành rãnh không còn khép nên thuốc uống sẽ vào dạ cỏ và bị pha loãng trong hàng trăm lít dịch: liều uống ở bò không so được với liều ở loài một dạ dày.\n\nNguồn: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)",
+      "descriptionEn": "Description: A muscular gutter running from the oesophageal opening along the wall of the reticulum to the omasal orifice. When the calf suckles, a reflex closes its two lips into a sealed tube that carries milk STRAIGHT past the rumen into the abomasum. The reflex is triggered by suckling and by milk itself, and fades as the calf is weaned.\n\nDifference: Humans and other monogastrics need no such mechanism, having no rumen to bypass. Sheep and goats have the identical groove. In the adult ox the groove is all but non-functional — and that is the clinically decisive point.\n\nClinical relevance: A calf drinking too fast from a bucket, or drinking cold milk, fails to close the groove; milk drops into a rumen that has no microflora yet and putrefies — the anatomical cause of bucket-fed calf scours. In the adult, conversely, the groove no longer closes, so oral medication lands in the rumen and is diluted in hundreds of litres: oral doses in cattle cannot be extrapolated from monogastric doses.\n\nSource: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)",
+      "descriptionZh": "描述: 自食管口沿网胃壁延伸至瓣胃口的肌性沟槽。犊牛吮吸时，反射使其两唇闭合成密闭管道，将乳汁直接越过瘤胃送入皱胃。该反射由吮吸动作与乳成分触发，随断奶而逐渐消失。\n\n差异: 人及其他单胃动物无需此机制，因无瘤胃可绕。绵羊与山羊具完全相同的沟。成年牛的该沟几近失去功能——此正是临床关键所在。\n\n临床意义: 犊牛以桶饮乳过快或饮用冷乳时，该沟无法闭合，乳汁落入尚无微生物区系的瘤胃而腐败——此即桶饲犊牛腹泻的解剖学成因。反之在成年牛，该沟不再闭合，口服药物进入瘤胃并被数百升胃液稀释：牛的口服剂量不可由单胃动物推算。\n\n来源: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)"
+    },
+    {
+      "code": "vet-cattle-cattle-cotyledonary-placenta",
+      "speciesCode": "cattle",
+      "systemCode": "vet-cattle-urogenital",
+      "nameVi": "Nhau đa đài của bò",
+      "nameEn": "The cotyledonary placenta of cattle",
+      "nameZh": "牛的子叶型胎盘",
+      "latin": "Placenta cotyledonaria, caruncula et cotyledo",
+      "descriptionVi": "Mô tả: Trao đổi mẹ – con ở bò không diễn ra trên toàn bề mặt nhau mà tập trung ở 70–120 điểm rời rạc: mỗi điểm là một núm thịt của tử cung mẹ (caruncula) khớp với một đài nhau của thai (cotyledo), hợp thành một placentome hình nấm. Phần màng nhau giữa các placentome chỉ hấp thu chất tiết tử cung.\n\nKhác biệt: Người có nhau hình đĩa, một khối duy nhất, và mô thai ăn sâu phá huỷ nội mạc mẹ. Chó mèo có nhau hình đai quấn quanh. Ngựa có nhau khuếch tán phủ đều toàn bộ. Lợn cũng nhau khuếch tán. Bò, cừu, dê là nhóm duy nhất có kiểu đa đài.\n\nÝ nghĩa lâm sàng: Vì mối nối là cơ học chứ không xâm lấn, bò đẻ gần như không mất máu — khác hẳn người. Nhưng cũng chính vì phải tách rời ở hàng trăm điểm mà sót nhau ở bò rất thường gặp (5–15% ca đẻ thường, cao hơn nhiều sau đẻ khó hay đẻ non). KHÔNG được kéo nhau ra: giật đứt núm thịt gây chảy máu và viêm tử cung nặng hơn hẳn.\n\nNguồn: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionEn": "Description: Maternal–fetal exchange in cattle does not occur over the whole membrane but at 70–120 discrete sites: each is a uterine caruncle interlocking with a fetal cotyledon to form a mushroom-shaped placentome. The chorion between placentomes only absorbs uterine secretion.\n\nDifference: Humans have a discoid placenta — a single mass, with fetal tissue invading and destroying maternal endometrium. Dog and cat have a zonary belt. The horse has a diffuse placenta spread evenly over the whole surface, as does the pig. Cattle, sheep and goats are the only group with the cotyledonary pattern.\n\nClinical relevance: Because the union is mechanical rather than invasive, the cow loses almost no blood at calving — quite unlike a woman. But precisely because separation must occur at hundreds of points, retained fetal membranes are common in cattle (5–15% of normal calvings, far higher after dystocia or premature birth). The membranes must NOT be pulled: tearing the caruncles causes haemorrhage and a far worse metritis.\n\nSource: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionZh": "描述: 牛的母胎交换并非发生于整个胎膜，而集中于70–120个离散部位：每处由母体子宫阜与胎儿子叶嵌合成蘑菇状胎盘突。胎盘突之间的绒毛膜仅吸收子宫分泌物。\n\n差异: 人为盘状胎盘——单一团块，胎儿组织侵入并破坏母体子宫内膜。犬猫为带状。马为弥散型，均布于整个表面，猪亦然。牛、羊、山羊是唯一具子叶型的类群。\n\n临床意义: 因结合为机械性而非侵入性，母牛分娩几乎不失血——与人截然不同。但也正因须在数百处分离，牛胎衣不下十分常见（正常分娩5–15%，难产或早产后更高）。切不可强拉胎衣：扯裂子宫阜将致出血与远为严重的子宫炎。\n\n来源: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)"
     },
     {
       "code": "vet-pig-dogcat-third-eyelid",
@@ -864,6 +988,30 @@
       "descriptionZh": "描述: 猪吻端含一枚独有小骨——吻骨，在鼻中隔软骨内骨化，以承受拱土之力。吻盘富含触觉感受器与腺体，是猪主要的探查器官。\n\n差异: 其他家畜均无此骨；人、犬、牛的鼻端仅为软骨。\n\n临床意义: 拱土是行为需求而非习惯：硬地饲养无法拱土会引起应激与咬尾。为阻止拱土而穿鼻环会造成疼痛，多项福利标准已加以限制。\n\n来源: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)"
     },
     {
+      "code": "vet-pig-pig-ear-vein",
+      "speciesCode": "pig",
+      "systemCode": "vet-pig-cardiovascular",
+      "nameVi": "Tĩnh mạch tai lợn",
+      "nameEn": "The auricular veins of the pig",
+      "nameZh": "猪的耳静脉",
+      "latin": "Vv. auriculares laterales",
+      "descriptionVi": "Mô tả: Mặt lưng vành tai lợn có ba tĩnh mạch chạy dọc nằm ngay dưới da mỏng, cố định vào sụn tai nên không lăn đi khi đâm kim. Chúng nổi rõ khi bóp gốc tai hoặc chườm ấm.\n\nKhác biệt: Ở người, chó, mèo, ngựa và bò, lấy máu và truyền dịch đều làm ở tĩnh mạch cổ hoặc tĩnh mạch chi. Lợn thì lớp mỡ dày và cổ ngắn khiến tĩnh mạch cổ gần như không sờ thấy, còn chi thì ngắn và giãy mạnh — nên vành tai thành đường vào mạch tiêu chuẩn, điều không đúng với loài nào khác.\n\nÝ nghĩa lâm sàng: Đây là nơi tiêm tĩnh mạch, đặt ống lưu và lấy máu ở lợn. Lưu ý: thuốc tiêm ra ngoài mạch ở vành tai gây hoại tử da và có thể rụng cả một mảng tai, vì da tai mỏng và ít tuần hoàn phụ. Ở lợn thí nghiệm và lợn làm mô hình y sinh, đặt ống tai là thao tác thường quy.\n\nNguồn: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionEn": "Description: The dorsal surface of the pig's ear carries three longitudinal veins lying just beneath thin skin and anchored to the auricular cartilage, so they do not roll away from a needle. They stand out when the base of the ear is compressed or warmed.\n\nDifference: In humans, dogs, cats, horses and cattle, blood sampling and infusion use the jugular or a limb vein. In the pig a thick fat layer and short neck make the jugular all but impalpable, and the limbs are short and violently withdrawn — so the ear becomes the standard vascular access, which is true of no other species.\n\nClinical relevance: This is the site for intravenous injection, indwelling catheters and blood sampling in pigs. Note that perivascular injection here causes skin necrosis and can slough a whole patch of the pinna, the ear skin being thin with little collateral circulation. In laboratory and biomedical-model pigs, ear catheterisation is routine.\n\nSource: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionZh": "描述: 猪耳背面有三条纵行静脉，位于薄皮下并固定于耳软骨，故进针时不会滚动。压迫耳根或热敷可使其充盈显现。\n\n差异: 人、犬、猫、马、牛的采血与输液均取颈静脉或四肢静脉。猪因脂肪层厚、颈短，颈静脉几不可触，四肢又短且剧烈挣扎——故耳廓成为标准血管通路，此点为猪所独有。\n\n临床意义: 此为猪静脉注射、留置导管与采血的部位。须注意：此处药液外漏可致皮肤坏死，甚至整片耳廓皮肤脱落，因耳皮薄且侧支循环少。实验用猪与生物医学模型猪的耳静脉置管属常规操作。\n\n来源: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)"
+    },
+    {
+      "code": "vet-pig-pig-bicornuate-uterus",
+      "speciesCode": "pig",
+      "systemCode": "vet-pig-urogenital",
+      "nameVi": "Tử cung hai sừng rất dài của lợn",
+      "nameEn": "The pig's very long bicornuate uterus",
+      "nameZh": "猪特长的双角子宫",
+      "latin": "Uterus bicornis, cornua uteri",
+      "descriptionVi": "Mô tả: Thân tử cung lợn chỉ dài chừng 5 cm, nhưng hai sừng dài 1,0–1,5 mét mỗi bên, cuộn trong ổ bụng như ruột. Phôi tự dàn đều dọc suốt chiều dài đó và làm tổ cách nhau, mỗi thai một đoạn sừng riêng với nhau thai kiểu khuếch tán không xâm lấn.\n\nKhác biệt: Tử cung người là một khối cơ duy nhất, hầu như chỉ mang một thai. Chó mèo cũng tử cung hai sừng và đẻ nhiều con, nhưng sừng chỉ dài 10–15 cm. Bò và ngựa tử cung hai sừng nhưng mỗi lứa một con. Chiều dài sừng ở lợn là mức cực đoan trong các loài nuôi — hệ quả trực tiếp của việc mang 10–16 thai một lứa.\n\nÝ nghĩa lâm sàng: Sừng dài và cuộn nhiều khiến KHÔNG sờ được tử cung lợn qua trực tràng như ở bò và ngựa — chẩn đoán mang thai ở lợn phải dùng siêu âm. Đẻ khó ở lợn thường không phải do thai to mà do tử cung mỏi sau nhiều giờ rặn, hoặc do một thai nằm chắn ngang; và vì nhau không xâm lấn nên nhau ra dễ, sót nhau hiếm hơn bò nhiều.\n\nNguồn: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionEn": "Description: The pig's uterine body is only about 5 cm long, but each horn runs 1.0–1.5 metres and coils in the abdomen like intestine. Embryos space themselves evenly along that length and implant apart, each fetus occupying its own segment of horn with a non-invasive diffuse placenta.\n\nDifference: The human uterus is a single muscular body carrying, as a rule, one fetus. Dog and cat are also bicornuate and litter-bearing, but their horns are only 10–15 cm. Cattle and horses are bicornuate yet bear one at a time. The pig's horn length is the extreme among domestic species — the direct consequence of carrying 10–16 fetuses at once.\n\nClinical relevance: The long coiled horns mean the pig's uterus CANNOT be palpated per rectum as in cattle and horses — pregnancy diagnosis in the sow relies on ultrasound. Dystocia in the sow is usually not fetal oversize but uterine fatigue after hours of straining, or one fetus lying across the exit; and because the placenta is non-invasive, the membranes come away easily and retention is far rarer than in cattle.\n\nSource: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionZh": "描述: 猪的子宫体仅约5厘米，但每侧子宫角长达1.0–1.5米，在腹腔内盘曲如肠。胚胎沿其全长自行均匀分布并分开着床，每个胎儿占据一段子宫角，配以非侵入性的弥散型胎盘。\n\n差异: 人子宫为单一肌性体，通常仅孕一胎。犬猫亦为双角且产仔成窝，但子宫角仅10–15厘米。牛马虽为双角，却每胎一仔。猪的子宫角长度为家养物种之最——正是一次孕育10–16胎的直接结果。\n\n临床意义: 子宫角长而盘曲，故猪的子宫不能像牛马那样经直肠触诊——母猪妊娠诊断依赖超声。母猪难产通常并非胎儿过大，而是数小时努责后的子宫疲劳，或某一胎横位阻塞产道；又因胎盘非侵入性，胎衣易于排出，胎衣不下远较牛少见。\n\n来源: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)"
+    },
+    {
       "code": "vet-chicken-chicken-air-sacs",
       "speciesCode": "chicken",
       "systemCode": "vet-chicken-respiratory",
@@ -958,6 +1106,30 @@
       "descriptionVi": "Mô tả: Mào và tích là những nếp da giàu mạch máu, không có lông và không có tuyến mồ hôi; máu chảy qua đây thải nhiệt trực tiếp ra không khí. Kích thước và màu sắc phụ thuộc hormone sinh dục.\n\nKhác biệt: Thú có vú tản nhiệt bằng mồ hôi (người, ngựa) hoặc thở gấp (chó, lợn). Gia cầm không có tuyến mồ hôi nên dựa vào thở gấp cộng với các vùng da trần này — tai thỏ giữ vai trò tương tự ở loài gặm nhấm nuôi.\n\nÝ nghĩa lâm sàng: Mào nhợt gợi thiếu máu hoặc nhiễm ký sinh trùng; mào tím tái là dấu hiệu thiếu oxy hoặc bệnh tim–hô hấp; mào teo nhỏ ở gà mái nghĩa là đã ngừng đẻ. Đây là chỉ báo khám nhanh cả đàn.\n\nNguồn: King & McLelland, Birds: Their Structure and Function, 2nd ed.",
       "descriptionEn": "Description: Comb and wattles are richly vascular skin folds, featherless and without sweat glands; blood flowing through them dumps heat straight into the air. Their size and colour depend on sex hormones.\n\nDifference: Mammals shed heat by sweating (human, horse) or panting (dog, pig). Poultry have no sweat glands and rely on panting plus these bare skin areas — the rabbit's ear plays the same role among pet mammals.\n\nClinical relevance: A pale comb suggests anaemia or parasitism; a cyanotic comb indicates hypoxia or cardio-respiratory disease; a shrunken comb in a hen means she has stopped laying. It is the quickest flock-level indicator.\n\nSource: King & McLelland, Birds: Their Structure and Function, 2nd ed.",
       "descriptionZh": "描述: 鸡冠与肉髯为血管丰富的皮肤褶，无羽、无汗腺；流经其中的血液将热量直接散入空气。其大小与颜色取决于性激素。\n\n差异: 哺乳动物通过出汗（人、马）或喘息（犬、猪）散热。禽无汗腺，依靠喘息与这些裸露皮肤区——兔耳在宠物哺乳动物中扮演相同角色。\n\n临床意义: 冠色苍白提示贫血或寄生虫病；发绀提示缺氧或心肺疾病；母鸡冠萎缩表示已停产。这是群体快速判断的指标。\n\n来源: King & McLelland, Birds: Their Structure and Function, 2nd ed."
+    },
+    {
+      "code": "vet-chicken-chicken-medullary-bone",
+      "speciesCode": "chicken",
+      "systemCode": "vet-chicken-skeletal",
+      "nameVi": "Xương tuỷ — kho canxi làm vỏ trứng",
+      "nameEn": "Medullary bone — the calcium store for the eggshell",
+      "nameZh": "髓质骨——蛋壳的钙库",
+      "latin": "Os medullare",
+      "descriptionVi": "Mô tả: Trước khi bắt đầu đẻ, estrogen khiến gà mái lấp đầy lòng tuỷ của xương đùi, xương chày và xương sườn bằng một loại xương xốp riêng gọi là xương tuỷ. Mỗi vỏ trứng cần khoảng 2 g canxi, phần lớn phải huy động trong đêm khi diều đã rỗng — xương tuỷ tan ra để cấp, rồi được xây lại vào ban ngày.\n\nKhác biệt: Không loài thú có vú nào có mô này. Người mang thai và bò vắt sữa cũng huy động canxi từ xương, nhưng lấy từ chính xương đặc và xương xốp sẵn có chứ không dựng thêm một kho riêng. Xương tuỷ chỉ thấy ở chim mái đang đẻ — đây cũng là cách các nhà cổ sinh vật xác định giới tính và trạng thái sinh sản của hoá thạch khủng long.\n\nÝ nghĩa lâm sàng: Gà mái đẻ sản lượng cao mà khẩu phần thiếu canxi hoặc vitamin D3 sẽ rút cạn cả xương tuỷ lẫn xương đặc, dẫn tới 'mệt mỏi gà lồng' (cage layer fatigue): gà liệt, xương đùi gãy tự phát. Cho ăn canxi hạt thô vào buổi chiều để canxi còn nằm lại trong mề suốt đêm là biện pháp dựa thẳng trên giải phẫu này.\n\nNguồn: King & McLelland, Birds: Their Structure and Function, 2nd ed.",
+      "descriptionEn": "Description: Before lay begins, oestrogen makes the hen fill the marrow cavity of femur, tibiotarsus and ribs with a special spongy bone called medullary bone. Each shell needs about 2 g of calcium, most of it mobilised overnight when the crop is empty — medullary bone dissolves to supply it and is rebuilt during the day.\n\nDifference: No mammal has this tissue. Pregnant women and dairy cows also mobilise skeletal calcium, but from existing cortical and trabecular bone rather than by building a dedicated store. Medullary bone is found only in laying female birds — and is how palaeontologists sex dinosaur fossils and read their reproductive state.\n\nClinical relevance: A high-producing hen on a diet short of calcium or vitamin D3 depletes both medullary and cortical bone, giving cage layer fatigue: the hen goes down and the femur fractures spontaneously. Feeding coarse particulate calcium in the afternoon, so that it stays in the gizzard overnight, is a management measure resting directly on this anatomy.\n\nSource: King & McLelland, Birds: Their Structure and Function, 2nd ed.",
+      "descriptionZh": "描述: 开产前，雌激素促使母鸡在股骨、胫跗骨与肋骨的骨髓腔内充填一种特殊的海绵状骨，称髓质骨。每枚蛋壳约需2克钙，其中大部分须于夜间嗉囊排空时动员——髓质骨溶解以供给，白昼再行重建。\n\n差异: 哺乳类无此组织。孕妇与泌乳奶牛亦动员骨钙，但取自既有的皮质骨与松质骨，而非另建专门储库。髓质骨仅见于产蛋期雌鸟——古生物学家亦据此判定恐龙化石的性别与生殖状态。\n\n临床意义: 高产蛋鸡若日粮缺钙或缺维生素D3，将耗竭髓质骨与皮质骨，导致笼养蛋鸡疲劳症：母鸡瘫痪，股骨自发性骨折。于下午投喂粗颗粒钙源，使其整夜滞留于肌胃，正是直接基于该解剖特点的管理措施。\n\n来源: King & McLelland, Birds: Their Structure and Function, 2nd ed."
+    },
+    {
+      "code": "vet-chicken-chicken-caeca",
+      "speciesCode": "chicken",
+      "systemCode": "vet-chicken-digestive",
+      "nameVi": "Hai manh tràng của gà",
+      "nameEn": "The paired caeca of the fowl",
+      "nameZh": "鸡的成对盲肠",
+      "latin": "Caeca (intestinum caecum dextrum et sinistrum)",
+      "descriptionVi": "Mô tả: Gà có HAI manh tràng dài 12–25 cm, mọc đối xứng ở chỗ nối ruột non với ruột già. Chúng lên men vi sinh phần xơ còn sót và hấp thu nước; chỉ nhận được phần dịch mịn vì nhu động ngược lọc lại ở lỗ manh tràng. Manh tràng xả 1–2 lần mỗi ngày, ra phân nhão màu nâu sẫm khác hẳn phân thường.\n\nKhác biệt: Người chỉ còn một manh tràng ngắn với ruột thừa tiêu giảm. Ngựa có một manh tràng khổng lồ 25–35 lít là thùng lên men chính. Chó mèo manh tràng nhỏ, gần như vô dụng. Bò không có manh tràng đáng kể vì việc lên men đã làm ở dạ cỏ. Kiểu MỘT ĐÔI manh tràng là đặc trưng của chim.\n\nÝ nghĩa lâm sàng: Manh tràng là nơi cư trú của Eimeria tenella (cầu trùng manh tràng) và của Histomonas meleagridis — phân manh tràng lẫn máu là dấu hiệu kinh điển của cầu trùng manh tràng. Đây cũng là ổ chứa Salmonella và Campylobacter trong chuỗi thực phẩm, nên lấy mẫu giám sát an toàn thực phẩm là lấy dịch manh tràng chứ không lấy phân trực tràng.\n\nNguồn: King & McLelland, Birds: Their Structure and Function, 2nd ed.",
+      "descriptionEn": "Description: The fowl has TWO caeca, 12–25 cm long, arising symmetrically at the junction of small and large intestine. They ferment residual fibre and absorb water, receiving only the fine fraction because antiperistalsis sorts material at the caecal openings. They empty once or twice a day as a pasty dark-brown dropping quite unlike normal faeces.\n\nDifference: Humans keep a single short caecum with a vestigial appendix. The horse has one enormous 25–35 litre caecum as its main fermentation vat. Dog and cat have a small, nearly functionless caecum. Cattle have no caecum worth the name, fermentation happening in the rumen. The PAIRED pattern is characteristic of birds.\n\nClinical relevance: The caeca house Eimeria tenella (caecal coccidiosis) and Histomonas meleagridis — bloody caecal droppings are the classic sign of caecal coccidiosis. They are also the reservoir of Salmonella and Campylobacter in the food chain, which is why food-safety surveillance samples caecal content rather than rectal faeces.\n\nSource: King & McLelland, Birds: Their Structure and Function, 2nd ed.",
+      "descriptionZh": "描述: 鸡有两条盲肠，长12–25厘米，对称起于小肠与大肠交界处。其发酵残余纤维并吸收水分，因盲肠口的逆蠕动筛选，仅接纳细微食糜。盲肠每日排空一至两次，排出糊状深褐色粪便，与常粪迥异。\n\n差异: 人仅保留一条短盲肠及退化的阑尾。马有一条25–35升的巨大盲肠，为其主要发酵罐。犬猫盲肠短小，近乎无功能。牛无值得一提的盲肠，发酵在瘤胃完成。成对盲肠则为鸟类特征。\n\n临床意义: 盲肠是柔嫩艾美耳球虫（盲肠球虫病）与火鸡组织滴虫的寄居部位——血性盲肠粪便是盲肠球虫病的典型征象。盲肠亦为食物链中沙门氏菌与弯曲菌的贮存所，故食品安全监测采集盲肠内容物而非直肠粪便。\n\n来源: King & McLelland, Birds: Their Structure and Function, 2nd ed."
     }
   ]
 }

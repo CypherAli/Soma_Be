@@ -5,11 +5,20 @@ import { AdminService } from './admin.service';
 import { AnatomyAdminController } from './anatomy.controller';
 import { AnatomyAdminService } from './anatomy.service';
 import { AuditService } from './audit.service';
+import { OpsController } from './ops.controller';
+import { OpsService } from './ops.service';
+import { QueuesService } from './queues.service';
 
 @Module({
   imports: [PrismaModule],
-  controllers: [AdminController, AnatomyAdminController],
-  providers: [AdminService, AnatomyAdminService, AuditService],
+  controllers: [AdminController, AnatomyAdminController, OpsController],
+  providers: [
+    AdminService,
+    AnatomyAdminService,
+    OpsService,
+    QueuesService,
+    AuditService,
+  ],
   exports: [AuditService],
 })
 export class AdminModule {}

@@ -1,6 +1,9 @@
 import { ApiProperty, ApiPropertyOptional } from '@nestjs/swagger';
 import { Severity, UserRole } from '@prisma/client';
 import {
+  ArrayMaxSize,
+  ArrayNotEmpty,
+  IsArray,
   IsBoolean,
   IsIn,
   IsInt,
@@ -252,4 +255,24 @@ export class UpdateQuizOptionDto {
   @IsOptional()
   @IsBoolean()
   isCorrect?: boolean;
+}
+
+/**
+ * Thao tác bật/tắt một cờ cho NHIỀU bản ghi một lượt.
+ *
+ * Trần 50 khai ngay ở tầng DTO, không chỉ ở service: ràng buộc nằm cả ở hợp
+ * đồng API thì tài liệu Swagger nói đúng, và lời gọi vượt trần bị chặn trước
+ * khi chạm vào cơ sở dữ liệu.
+ */
+export class BulkFlagDto {
+  @ApiProperty({ type: [String], maxItems: 50 })
+  @IsArray()
+  @ArrayNotEmpty()
+  @ArrayMaxSize(50)
+  @IsString({ each: true })
+  ids!: string[];
+
+  @ApiProperty({ description: 'Giá trị mới của cờ (duyệt / đã đối chiếu)' })
+  @IsBoolean()
+  value!: boolean;
 }

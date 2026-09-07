@@ -13,6 +13,7 @@ import { promisify } from 'util';
 import { UserRole } from '@prisma/client';
 import { PrismaService } from '../prisma/prisma.service';
 import type { AuthUser } from './roles';
+import { ChangePasswordDto } from './dto/change-password.dto';
 import { LoginDto } from './dto/login.dto';
 import { RegisterDto } from './dto/register.dto';
 
@@ -80,6 +81,45 @@ export class AuthService {
         'Phiên đăng nhập không hợp lệ hoặc đã hết hạn',
       );
     return { user: this.publicUser(session.user) };
+  }
+
+  /**
+   * Tự đổi mật khẩu.
+   *
+   * Bắt nhập mật khẩu HIỆN TẠI dù người dùng đã đăng nhập: một phiên bị bỏ quên
+   * trên máy công cộng mà đổi được mật khẩu thì kẻ ngồi sau chiếm luôn tài
+   * khoản, còn chủ tài khoản mất đường vào.
+   *
+   * Đổi xong CẮT HẾT phiên khác và cấp phiên mới cho chính người vừa đổi. Đây
+   * là điểm chính của việc đổi mật khẩu — nếu các phiên cũ vẫn sống thì đổi
+   * mật khẩu không đuổi được ai ra cả.
+   *
+   * Tài khoản chỉ đăng nhập bằng Google/GitHub (`passwordHash` rỗng) thì không
+   * có mật khẩu để đổi; nói thẳng thay vì im lặng đặt một mật khẩu mới.
+   */
+  async changePassword(dto: ChangePasswordDto, token?: string) {
+    const session = await this.findSession(token);
+    if (!session) throw new UnauthorizedException('Cần đăng nhập');
+    const user = session.user;
+
+    if (!user.passwordHash) {
+      throw new ConflictException(
+        'Tài khoản này đăng nhập bằng nhà cung cấp bên ngoài, không có mật khẩu để đổi',
+      );
+    }
+    if (!(await this.verifyPassword(dto.currentPassword, user.passwordHash))) {
+      throw new UnauthorizedException('Mật khẩu hiện tại không đúng');
+    }
+    if (dto.currentPassword === dto.newPassword) {
+      throw new ConflictException('Mật khẩu mới phải khác mật khẩu hiện tại');
+    }
+
+    await this.prisma.user.update({
+      where: { id: user.id },
+      data: { passwordHash: await this.hashPassword(dto.newPassword) },
+    });
+    await this.prisma.session.deleteMany({ where: { userId: user.id } });
+    return this.createSession(user);
   }
 
   async logout(token?: string) {

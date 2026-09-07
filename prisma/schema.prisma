@@ -67,31 +67,103 @@ model Structure {
   parent   Structure?  @relation("StructureTree", fields: [parentId], references: [id])
   children Structure[] @relation("StructureTree")
 
-  pathologies Pathology[]
+  pathologies        Pathology[]
+  relatedPathologies PathologyStructure[]
 
   @@index([systemId])
   @@index([parentId])
   @@map("structures")
 }
 
-/// Bệnh lý gắn vào cấu trúc — luôn kèm nguồn trích dẫn.
-model Pathology {
-  id            String  @id @default(cuid())
-  nameVi        String
-  nameEn        String
-  nameZh        String
-  latin         String?
-  icdCode       String? // ICD-11
-  severity      String? // "info" | "warning" | "critical"
-  descriptionVi String? @db.Text
-  source        String // Gray's Anatomy 42e, Braunwald's...
+/// Mức độ ưu tiên hiển thị. Trước đây là String tự do nên dữ liệu nhập ngoài
+/// API có thể mang giá trị sai; nay ràng buộc ở tầng cơ sở dữ liệu.
+enum Severity {
+  info
+  warning
+  critical
+}
 
-  structureId String
-  structure   Structure @relation(fields: [structureId], references: [id])
-  citations   PathologyCitation[]
+/// Bệnh lý — luôn kèm nguồn trích dẫn.
+///
+/// `structureId` ĐỂ RỖNG ĐƯỢC: 22 bệnh huyết học và hồi sức cấp cứu không thuộc
+/// về một cấu trúc 3D đơn lẻ nào (sốc, rối loạn kali máu, ngộ độc cấp…). Trước
+/// đây trường này bắt buộc nên những bệnh đó không thể nhập vào.
+/// Cấu trúc phụ đi qua `relatedStructures` vì nhiều bệnh tổn thương đa cơ quan.
+model Pathology {
+  id       String  @id @default(cuid())
+  slug     String  @unique
+  nameVi   String
+  nameEn   String
+  nameZh   String
+  latin    String?
+  icdCode  String? // ICD-11 — để trống nếu chưa tra được từ nguồn chính thức
+  severity Severity?
+
+  /// Hệ lâm sàng theo giáo trình (Hô hấp, Tim mạch…), khác với hệ giải phẫu.
+  clinicalSystem String?
+
+  source     String
+  sourcePage Int?
+
+  /// true = metadata máy dựng từ mục lục, nội dung y khoa chưa có người duyệt.
+  needsReview Boolean @default(true)
+
+  structureId String?
+  structure   Structure? @relation(fields: [structureId], references: [id])
+
+  /// Tên mesh glTF của ĐÚNG vị trí tổn thương, trong model TOÀN THÂN mà
+  /// /viewer nạp (skeletal/muscular/nervous/cardiovascular/visceral/
+  /// lymphoid/joints) — KHÔNG phải model theo scene.
+  /// Chỉ đặt khi có mesh tương ứng thật và đúng về giải phẫu; bệnh lan toả
+  /// (xơ gan, COPD) để trống thay vì neo bừa vào một phần cơ quan.
+  /// Kiểm bằng: cd Soma_Fe && npm run verify:lesions
+  lesionMesh   String?
+  /// Hệ phải bật để mesh trên hiện ra trong viewer.
+  lesionSystem String?
+
+  relatedStructures PathologyStructure[]
+  content           PathologyContent[]
+  citations         PathologyCitation[]
 
   @@index([structureId])
+  @@index([clinicalSystem])
   @@map("pathologies")
+}
+
+/// Cấu trúc phụ mà bệnh còn ảnh hưởng tới (lupus, suy tim, đái tháo đường…).
+model PathologyStructure {
+  pathologyId String
+  pathology   Pathology @relation(fields: [pathologyId], references: [id], onDelete: Cascade)
+  structureId String
+  structure   Structure @relation(fields: [structureId], references: [id], onDelete: Cascade)
+
+  @@id([pathologyId, structureId])
+  @@index([structureId])
+  @@map("pathology_structures")
+}
+
+/// Nội dung bệnh học tách theo ngôn ngữ — tránh phình 15 cột trên `pathologies`
+/// và cho phép thêm ngôn ngữ mà không cần migration.
+model PathologyContent {
+  id          String @id @default(cuid())
+  pathologyId String
+  pathology   Pathology @relation(fields: [pathologyId], references: [id], onDelete: Cascade)
+  locale      String // vi | en | zh
+
+  description String? @db.Text
+  clinical    String? @db.Text // lâm sàng & cận lâm sàng
+  imaging     String? @db.Text // chẩn đoán hình ảnh
+  progression String? @db.Text // tiến triển & biến chứng
+  treatment   String? @db.Text // điều trị tham khảo
+
+  /// true = bản dịch do máy sinh, CHƯA có người chuyên môn duyệt.
+  /// Bản tiếng Việt gốc soạn tay nên luôn false. Cờ này đi thẳng ra giao diện:
+  /// người đọc phải biết mình đang đọc bản dịch máy, không được giấu.
+  machineTranslated Boolean @default(false)
+
+  @@unique([pathologyId, locale])
+  @@index([pathologyId])
+  @@map("pathology_content")
 }
 
 /// Câu hỏi trắc nghiệm theo hệ cơ quan.
@@ -127,20 +199,6 @@ model QuizOption {
   @@map("quiz_options")
 }
 
-/// Bộ sưu tập chuyên gia (Expert Collections trên trang home).
-model Collection {
-  id         String  @id @default(cuid())
-  titleVi    String
-  titleEn    String
-  titleZh    String
-  authorName String?
-  authorRole String?
-  isPremium  Boolean @default(false)
-  coverColor String? // màu footer card: blue/purple/teal
-  order      Int     @default(0)
-
-  @@map("collections")
-}
 
 /// Tài liệu y khoa được phép sử dụng, quản lý độc lập với bệnh lý.
 model MedicalSource {
@@ -177,10 +235,30 @@ model PathologyCitation {
   @@map("pathology_citations")
 }
 
+/// Quyền trên trang quản trị, xếp từ thấp lên cao.
+///
+/// Cố ý KHÔNG dùng cờ boolean `isAdmin`: back office cần tách "người soạn nội
+/// dung" khỏi "người đổi quyền của người khác", mà một cờ thì không nói được
+/// điều đó. Bậc quyền so bằng thứ tự khai ở `ROLE_RANK` (auth/roles.ts).
+enum UserRole {
+  /// Người học bình thường — không vào được back office.
+  user
+  /// Soạn và sửa nội dung: bệnh lý, cấu trúc, hệ, quiz, nguồn.
+  editor
+  /// Thêm quyền kiểm duyệt và xem dữ liệu người dùng.
+  admin
+  /// Toàn quyền, kể cả cấp/thu quyền và xoá tài khoản.
+  super_admin
+}
+
 model User {
   id           String   @id @default(cuid())
   name         String
   email        String   @unique
+  role         UserRole @default(user)
+  /// Khoá tài khoản: còn giữ lịch sử học nhưng không đăng nhập được nữa.
+  /// Xoá hẳn là mất luôn dữ liệu tiến độ, nên khoá mới là hành động mặc định.
+  disabledAt   DateTime?
   passwordHash String?
   googleId     String?  @unique
   githubId     String?  @unique
@@ -188,12 +266,13 @@ model User {
   createdAt    DateTime @default(now())
   updatedAt    DateTime @updatedAt
   sessions     Session[]
-
-  @@map("users")
+  chatMemory   ChatMemory?
   quizAttempts QuizAttempt[]
   studyPath    StudyPath?
   reviewItems  ReviewItem[]
   personalDocs PersonalDoc[]
+
+  @@map("users")
 }
 
 model OAuthState {
@@ -220,6 +299,24 @@ model Session {
   @@map("sessions")
 }
 
+
+/// Bộ nhớ hội thoại của trợ lý, gắn theo TÀI KHOẢN chứ không theo trình duyệt.
+/// Đăng nhập ở máy khác vẫn còn mạch hội thoại cũ. Chưa đăng nhập thì phía web
+/// tự lùi về localStorage — không ép người dùng phải có tài khoản mới hỏi được.
+model ChatMemory {
+  id     String @id @default(cuid())
+  userId String @unique
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  /// [{ role: "user"|"bot", text: string }] — chỉ giữ số lượt gần nhất,
+  /// cắt ở phía máy chủ để một tài khoản không phình vô hạn.
+  turns Json @default("[]")
+
+  updatedAt DateTime @updatedAt
+
+  @@map("chat_memory")
+}
+
 /// Một lượt làm bài ĐÃ NỘP.
 ///
 /// Đây là dữ liệu duy nhất nói được người học yếu ở đâu, nên nó gắn theo TÀI
@@ -230,7 +327,7 @@ model QuizAttempt {
   id        String   @id @default(cuid())
   userId    String
   user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-  /// model | book | atlas | personal
+  /// model | book | atlas | personal | vet
   source    String
   /// mã hệ cơ quan, tên vùng cơ thể, hoặc "all"
   scope     String   @default("all")
@@ -281,7 +378,7 @@ model ReviewItem {
   id           String   @id @default(cuid())
   userId       String
   user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-  /// khoá ổn định của câu: "model:<factId>", "book:<qid>", "atlas:<id>", "personal:<id>"
+  /// khoá ổn định của câu: "model:<factId>", "book:<qid>", "atlas:<id>", "personal:<id>", "vet:<factId>"
   itemKey      String
   source       String
   scope        String   @default("all")
@@ -342,4 +439,34 @@ model PersonalQuestion {
   @@index([userId, approved])
   @@index([docId])
   @@map("personal_questions")
+}
+
+/// Nhật ký thao tác trên back office.
+///
+/// Nội dung y khoa mà ai sửa cũng được và không ai truy được là nội dung không
+/// dùng được: có bệnh bị đổi liều thuốc thì phải biết ai đổi, đổi từ gì sang
+/// gì. Ghi cả giá trị TRƯỚC khi sửa, vì bản ghi sau khi sửa thì đã nằm trong
+/// chính bảng dữ liệu rồi — cái mất là bản cũ.
+model AuditLog {
+  id        String   @id @default(cuid())
+  /// Ai làm. Giữ cả email tại thời điểm đó: tài khoản có thể bị xoá sau này,
+  /// nhật ký thì phải đọc được mãi.
+  actorId    String?
+  actorEmail String
+  /// create | update | delete | verify | role_change | disable | enable
+  action     String
+  /// Tên bảng/thực thể: pathology, structure, user...
+  entity     String
+  entityId   String
+  /// Nhãn dễ đọc để danh sách nhật ký không phải join tới bảng gốc.
+  entityLabel String?
+  /// Ảnh chụp bản ghi TRƯỚC khi sửa; null với hành động tạo mới.
+  before     Json?
+  /// Phần dữ liệu đã gửi lên; null với hành động xoá.
+  after      Json?
+  createdAt  DateTime @default(now())
+
+  @@index([createdAt])
+  @@index([entity, entityId])
+  @@map("audit_logs")
 }

@@ -215,7 +215,12 @@ export class StudyService {
     const userId = await this.userIdOf(token);
     const path = await this.prisma.studyPath.findUnique({ where: { userId } });
     if (!path) throw new UnauthorizedException('Chưa có lộ trình');
-    return expandBlock(planInputOf(path), clampInt(index, 1, 366)) ?? { parent: null, blocks: [] };
+    return (
+      expandBlock(planInputOf(path), clampInt(index, 1, 366)) ?? {
+        parent: null,
+        blocks: [],
+      }
+    );
   }
 
   async deletePath(token?: string) {
@@ -308,7 +313,10 @@ function planInputOf(path: {
 
 /** Danh sách hệ ưu tiên: bỏ trùng, bỏ "all", và luôn có hệ chọn ở ô đơn lẻ. */
 function normaliseSystems(list: unknown, single?: string): string[] {
-  const raw = Array.isArray(list) ? list : [];
+  // Chú kiểu `unknown[]`: `Array.isArray` trên một `unknown` chỉ thu hẹp được
+  // tới `any[]`, và trải một `any[]` ra là mất sạch kiểm tra kiểu ở dòng sau —
+  // chính bộ lọc `typeof s === 'string'` bên dưới mới là chỗ thu hẹp thật.
+  const raw: unknown[] = Array.isArray(list) ? list : [];
   const all = [...raw, single]
     .filter((s): s is string => typeof s === 'string' && !!s && s !== 'all')
     .map((s) => s.slice(0, 64));

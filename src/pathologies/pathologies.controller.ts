@@ -9,6 +9,8 @@ import {
   Query,
 } from '@nestjs/common';
 import { ApiOperation, ApiQuery, ApiTags } from '@nestjs/swagger';
+import { UserRole } from '@prisma/client';
+import { MinRole } from '../auth/roles.decorator';
 import { PathologiesService } from './pathologies.service';
 import { CreatePathologyDto } from './dto/create-pathology.dto';
 import { UpdatePathologyDto } from './dto/update-pathology.dto';
@@ -18,6 +20,7 @@ import { UpdatePathologyDto } from './dto/update-pathology.dto';
 export class PathologiesController {
   constructor(private readonly pathologiesService: PathologiesService) {}
 
+  @MinRole(UserRole.editor)
   @Post()
   @ApiOperation({ summary: 'Tạo bệnh lý mới (bắt buộc có nguồn)' })
   create(@Body() dto: CreatePathologyDto) {
@@ -41,12 +44,14 @@ export class PathologiesController {
     return this.pathologiesService.findOne(id);
   }
 
+  @MinRole(UserRole.editor)
   @Patch(':id')
   @ApiOperation({ summary: 'Cập nhật bệnh lý' })
   update(@Param('id') id: string, @Body() dto: UpdatePathologyDto) {
     return this.pathologiesService.update(id, dto);
   }
 
+  @MinRole(UserRole.admin)
   @Delete(':id')
   @ApiOperation({ summary: 'Xoá bệnh lý' })
   remove(@Param('id') id: string) {

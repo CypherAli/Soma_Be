@@ -157,7 +157,12 @@ export function expandBlock(
         // Khối con thừa hưởng nội dung của khối cha — bung ra là để xem lịch
         // chi tiết, không phải để đổi thứ đang học.
         systemKey: parent.systemKey,
-        kind: sessions === 0 ? 'rest' : parent.kind === 'rest' ? 'mixed' : parent.kind,
+        kind:
+          sessions === 0
+            ? 'rest'
+            : parent.kind === 'rest'
+              ? 'mixed'
+              : parent.kind,
         sessions,
         questions: sessions * perQuestion,
       },
@@ -203,7 +208,11 @@ function sliceBlocks(
   return spans.map((span, i) => {
     const isReview = i === reviewAt;
     const systemKey = isReview ? 'all' : order[i % order.length];
-    const kind: BlockKind = isReview ? 'review' : seen.has(systemKey) ? 'mixed' : 'new';
+    const kind: BlockKind = isReview
+      ? 'review'
+      : seen.has(systemKey)
+        ? 'mixed'
+        : 'new';
     seen.add(systemKey);
 
     const sessions = sessionsIn(span.startDay, span.days, studyDays);
@@ -259,7 +268,10 @@ function evenSpans(
   if (preferred) {
     for (let i = 0; i < count; i += 1) {
       const startDay = offset + i * preferred;
-      spans.push({ startDay, days: Math.min(preferred, offset + total - startDay) });
+      spans.push({
+        startDay,
+        days: Math.min(preferred, offset + total - startDay),
+      });
     }
     return spans;
   }
@@ -284,7 +296,11 @@ export function studyDaySet(daysPerWeek: number): Set<number> {
   return set;
 }
 
-function sessionsIn(startDay: number, days: number, studyDays: Set<number>): number {
+function sessionsIn(
+  startDay: number,
+  days: number,
+  studyDays: Set<number>,
+): number {
   let n = 0;
   for (let d = startDay; d < startDay + days; d += 1) {
     if (studyDays.has(((d % 7) + 7) % 7)) n += 1;
@@ -301,7 +317,9 @@ function systemOrder(focus: string[]): string[] {
 }
 
 function daysSince(from: Date, to: Date): number {
-  return Math.floor((startOfDay(to).getTime() - startOfDay(from).getTime()) / DAY_MS);
+  return Math.floor(
+    (startOfDay(to).getTime() - startOfDay(from).getTime()) / DAY_MS,
+  );
 }
 
 function startOfDay(d: Date): Date {

@@ -8,12 +8,13 @@ import { AnatomySystemsModule } from './anatomy-systems/anatomy-systems.module';
 import { StructuresModule } from './structures/structures.module';
 import { PathologiesModule } from './pathologies/pathologies.module';
 import { QuizzesModule } from './quizzes/quizzes.module';
-import { CollectionsModule } from './collections/collections.module';
 import { HealthModule } from './health/health.module';
 import { AuthModule } from './auth/auth.module';
+import { ChatMemoryModule } from './chat-memory/chat-memory.module';
+import { MedicalKnowledgeModule } from './medical-knowledge/medical-knowledge.module';
 import { StudyModule } from './study/study.module';
 import { PersonalDocsModule } from './personal-docs/personal-docs.module';
-import { MedicalKnowledgeModule } from './medical-knowledge/medical-knowledge.module';
+import { AdminModule } from './admin/admin.module';
 
 @Module({
   imports: [
@@ -24,12 +25,13 @@ import { MedicalKnowledgeModule } from './medical-knowledge/medical-knowledge.mo
     StructuresModule,
     PathologiesModule,
     QuizzesModule,
-    CollectionsModule,
     HealthModule,
     AuthModule,
     MedicalKnowledgeModule,
+    ChatMemoryModule,
     StudyModule,
     PersonalDocsModule,
+    AdminModule,
   ],
   controllers: [AppController],
   providers: [AppService],

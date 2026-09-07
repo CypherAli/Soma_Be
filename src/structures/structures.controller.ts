@@ -9,6 +9,8 @@ import {
   Query,
 } from '@nestjs/common';
 import { ApiOperation, ApiQuery, ApiTags } from '@nestjs/swagger';
+import { UserRole } from '@prisma/client';
+import { MinRole } from '../auth/roles.decorator';
 import { StructuresService } from './structures.service';
 import { CreateStructureDto } from './dto/create-structure.dto';
 import { UpdateStructureDto } from './dto/update-structure.dto';
@@ -18,6 +20,7 @@ import { UpdateStructureDto } from './dto/update-structure.dto';
 export class StructuresController {
   constructor(private readonly structuresService: StructuresService) {}
 
+  @MinRole(UserRole.editor)
   @Post()
   @ApiOperation({ summary: 'Tạo cấu trúc giải phẫu mới' })
   create(@Body() dto: CreateStructureDto) {
@@ -55,12 +58,14 @@ export class StructuresController {
     return this.structuresService.findOne(code);
   }
 
+  @MinRole(UserRole.editor)
   @Patch(':code')
   @ApiOperation({ summary: 'Cập nhật cấu trúc' })
   update(@Param('code') code: string, @Body() dto: UpdateStructureDto) {
     return this.structuresService.update(code, dto);
   }
 
+  @MinRole(UserRole.admin)
   @Delete(':code')
   @ApiOperation({ summary: 'Xoá cấu trúc' })
   remove(@Param('code') code: string) {

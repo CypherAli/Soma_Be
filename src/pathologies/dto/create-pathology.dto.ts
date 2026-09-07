@@ -1,5 +1,6 @@
 import { ApiProperty, ApiPropertyOptional } from '@nestjs/swagger';
-import { IsIn, IsOptional, IsString, MinLength } from 'class-validator';
+import { IsIn, IsInt, IsOptional, IsString, MinLength } from 'class-validator';
+import { Severity } from '@prisma/client';
 
 export class CreatePathologyDto {
   @ApiProperty({ example: 'Nhồi máu cơ tim' })
@@ -27,18 +28,31 @@ export class CreatePathologyDto {
   @IsString()
   icdCode?: string;
 
+  @ApiPropertyOptional({ example: 'critical', enum: Severity })
+  @IsOptional()
+  @IsIn(Object.values(Severity))
+  severity?: Severity;
+
+  @ApiProperty({ example: 'nhoi-mau-co-tim', description: 'Định danh ổn định' })
+  @IsString()
+  @MinLength(1)
+  slug!: string;
+
   @ApiPropertyOptional({
-    example: 'critical',
-    enum: ['info', 'warning', 'critical'],
+    example: 'Tim mạch',
+    description: 'Hệ lâm sàng theo giáo trình, khác hệ giải phẫu',
   })
   @IsOptional()
-  @IsIn(['info', 'warning', 'critical'])
-  severity?: string;
-
-  @ApiPropertyOptional({ description: 'Mô tả bệnh lý (tiếng Việt)' })
-  @IsOptional()
   @IsString()
-  descriptionVi?: string;
+  clinicalSystem?: string;
+
+  @ApiPropertyOptional({
+    example: 227,
+    description: 'Trang trong tài liệu nguồn',
+  })
+  @IsOptional()
+  @IsInt()
+  sourcePage?: number;
 
   @ApiProperty({
     example: "Braunwald's Heart Disease, 12th ed.",
@@ -48,10 +62,13 @@ export class CreatePathologyDto {
   @MinLength(3)
   source!: string;
 
-  @ApiProperty({
+  @ApiPropertyOptional({
     example: 'giai-phau-tim',
-    description: 'Mã cấu trúc mà bệnh lý gắn vào',
+    description:
+      'Mã cấu trúc 3D. ĐỂ TRỐNG ĐƯỢC: bệnh huyết học, rối loạn điện giải, ' +
+      'bệnh tự miễn hệ thống không thuộc về một cấu trúc đơn lẻ nào.',
   })
+  @IsOptional()
   @IsString()
-  structureCode!: string;
+  structureCode?: string;
 }

@@ -34,7 +34,8 @@ export class SavePathDto {
   systemKey?: string;
 
   @ApiPropertyOptional({
-    description: 'Độ dài quãng học: 7 = một tuần, 28 = một tháng, 365 = một năm',
+    description:
+      'Độ dài quãng học: 7 = một tuần, 28 = một tháng, 365 = một năm',
     minimum: 1,
     maximum: 366,
   })

@@ -322,6 +322,21 @@ type CleanQuestion = {
 };
 
 /**
+ * Chuỗi từ một giá trị KHÔNG BIẾT KIỂU do mô hình trả về.
+ *
+ * `String(x)` là cái bẫy ở đây: mô hình thỉnh thoảng trả `stem` là một object
+ * (kiểu `{ text: "..." }`), và `String()` biến nó thành `"[object Object]"` —
+ * đúng 15 ký tự, dài hơn ngưỡng tối thiểu, nên câu rác đó lọt thẳng vào hàng
+ * chờ duyệt trông như một câu thật. Chỉ nhận chuỗi và số; mọi thứ khác coi như
+ * không có.
+ */
+function textOf(value: unknown): string {
+  if (typeof value === 'string') return value;
+  if (typeof value === 'number' && Number.isFinite(value)) return String(value);
+  return '';
+}
+
+/**
  * Lọc một câu do AI trả về.
  *
  * Bỏ thẳng câu có khoá đáp án không trỏ vào phương án nào: giữ lại là đưa vào
@@ -330,23 +345,23 @@ type CleanQuestion = {
 function sanitiseQuestion(raw: unknown): CleanQuestion | null {
   if (!raw || typeof raw !== 'object') return null;
   const q = raw as Record<string, unknown>;
-  const stem = String(q.stem ?? '').trim().slice(0, 4000);
+  const stem = textOf(q.stem).trim().slice(0, 4000);
   if (stem.length < 8) return null;
 
   const options: Record<string, string> = {};
   const src = (q.options ?? {}) as Record<string, unknown>;
   for (const [key, value] of Object.entries(src)) {
     const label = key.trim().toUpperCase().slice(0, 2);
-    const text = String(value ?? '').trim().slice(0, 1000);
+    const text = textOf(value).trim().slice(0, 1000);
     if (/^[A-F]$/.test(label) && text) options[label] = text;
   }
   if (Object.keys(options).length < 3) return null;
 
-  const answer = String(q.answer ?? '').trim().toUpperCase().slice(0, 2);
+  const answer = textOf(q.answer).trim().toUpperCase().slice(0, 2);
   if (!options[answer]) return null;
 
   const page = Number(q.page);
-  const explanation = q.explanation ? String(q.explanation).slice(0, 4000) : null;
+  const explanation = textOf(q.explanation).slice(0, 4000) || null;
   return {
     stem,
     options,

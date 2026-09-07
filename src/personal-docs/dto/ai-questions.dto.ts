@@ -11,7 +11,8 @@ import { IsArray, ArrayMaxSize } from 'class-validator';
  */
 export class AiQuestionsDto {
   @ApiProperty({
-    description: 'Danh sách câu: { stem, options: {A,B,C,D}, answer, explanation, page }',
+    description:
+      'Danh sách câu: { stem, options: {A,B,C,D}, answer, explanation, page }',
     type: 'array',
     items: { type: 'object' },
   })

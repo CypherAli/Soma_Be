@@ -102,6 +102,14 @@
       "order": 6
     },
     {
+      "code": "vet-dog-cardiovascular",
+      "speciesCode": "dog",
+      "nameVi": "Hệ tuần hoàn",
+      "nameEn": "Cardiovascular system",
+      "nameZh": "循环系统",
+      "order": 7
+    },
+    {
       "code": "vet-cat-digestive",
       "speciesCode": "cat",
       "nameVi": "Hệ tiêu hoá",
@@ -150,6 +158,14 @@
       "order": 5
     },
     {
+      "code": "vet-cat-cardiovascular",
+      "speciesCode": "cat",
+      "nameVi": "Hệ tuần hoàn",
+      "nameEn": "Cardiovascular system",
+      "nameZh": "循环系统",
+      "order": 6
+    },
+    {
       "code": "vet-horse-senses",
       "speciesCode": "horse",
       "nameVi": "Cơ quan cảm giác",
@@ -166,28 +182,12 @@
       "order": 1
     },
     {
-      "code": "vet-horse-integument",
-      "speciesCode": "horse",
-      "nameVi": "Da và phần phụ",
-      "nameEn": "Skin and appendages",
-      "nameZh": "皮肤及其附属结构",
-      "order": 2
-    },
-    {
       "code": "vet-horse-digestive",
       "speciesCode": "horse",
       "nameVi": "Hệ tiêu hoá",
       "nameEn": "Digestive system",
       "nameZh": "消化系统",
-      "order": 3
-    },
-    {
-      "code": "vet-horse-respiratory",
-      "speciesCode": "horse",
-      "nameVi": "Hệ hô hấp",
-      "nameEn": "Respiratory system",
-      "nameZh": "呼吸系统",
-      "order": 4
+      "order": 2
     },
     {
       "code": "vet-horse-skeletal",
@@ -195,6 +195,22 @@
       "nameVi": "Hệ xương",
       "nameEn": "Skeletal system",
       "nameZh": "骨骼系统",
+      "order": 3
+    },
+    {
+      "code": "vet-horse-integument",
+      "speciesCode": "horse",
+      "nameVi": "Da và phần phụ",
+      "nameEn": "Skin and appendages",
+      "nameZh": "皮肤及其附属结构",
+      "order": 4
+    },
+    {
+      "code": "vet-horse-respiratory",
+      "speciesCode": "horse",
+      "nameVi": "Hệ hô hấp",
+      "nameEn": "Respiratory system",
+      "nameZh": "呼吸系统",
       "order": 5
     },
     {
@@ -230,19 +246,19 @@
       "order": 2
     },
     {
-      "code": "vet-cattle-integument",
-      "speciesCode": "cattle",
-      "nameVi": "Da và phần phụ",
-      "nameEn": "Skin and appendages",
-      "nameZh": "皮肤及其附属结构",
-      "order": 3
-    },
-    {
       "code": "vet-cattle-skeletal",
       "speciesCode": "cattle",
       "nameVi": "Hệ xương",
       "nameEn": "Skeletal system",
       "nameZh": "骨骼系统",
+      "order": 3
+    },
+    {
+      "code": "vet-cattle-integument",
+      "speciesCode": "cattle",
+      "nameVi": "Da và phần phụ",
+      "nameEn": "Skin and appendages",
+      "nameZh": "皮肤及其附属结构",
       "order": 4
     },
     {
@@ -496,6 +512,246 @@
       "descriptionZh": "描述: 位于脉络膜内、眼底上半部视网膜正后方的反光层。未被吸收而穿过视网膜的光线被反射回来，供感光细胞二次捕获，使夜间敏感度约提高六倍。猫的照膜由核黄素–锌结晶板构成。\n\n差异: 人无照膜——人眼底吸收多余光线，成像更锐利但夜视差得多。猪亦无。这正是闪光灯下犬猫眼睛反绿光、而人眼呈红色（视网膜血管之色）的原因。\n\n临床意义: 眼底检查时，明亮反光的照膜区与暗色的无照膜区均属正常，并非病变。进行性视网膜萎缩使照膜区反光异常增强；视网膜水肿则相反，使其变暗。\n\n来源: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)"
     },
     {
+      "code": "vet-dog-dogcat-brachiocephalicus",
+      "speciesCode": "dog",
+      "systemCode": "vet-dog-muscular",
+      "nameVi": "Cơ cánh tay – đầu",
+      "nameEn": "Brachiocephalic muscle",
+      "nameZh": "臂头肌",
+      "latin": "M. brachiocephalicus",
+      "descriptionVi": "Mô tả: Dải cơ dài chạy từ xương cánh tay lên đầu và cổ, tạo nên đường gờ nổi rõ nhất ở mặt bên cổ. Ở thú bốn chân nó gồm hai phần nối nhau bằng một vạch gân ngang (clavicular intersection) — chính là di tích của xương đòn đã tiêu biến. Khi chi trước tì đất, cơ kéo đầu và cổ nghiêng sang bên; khi chi trước đưa lên, nó đẩy chi ra trước.\n\nKhác biệt: Ở người phần tương ứng tách hẳn thành cơ ức–đòn–chũm và cơ thang, vì xương đòn của người còn nguyên và làm chỗ bám thật. Chó mèo mất xương đòn nên hai phần dính liền thành một dải duy nhất — đó là lý do chi trước thú bốn chân nối với thân chỉ bằng cơ, không bằng khớp xương.\n\nÝ nghĩa lâm sàng: Rãnh cảnh (sulcus jugularis) nằm ngay dưới bờ bụng của cơ này — đây là mốc sờ để lấy máu tĩnh mạch cảnh, thao tác thường quy ở mèo và chó nhỏ khi tĩnh mạch chi quá bé. Bấm nhẹ đầu dưới rãnh cho tĩnh mạch nổi rồi đâm kim theo hướng về đầu.\n\nNguồn: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionEn": "Description: A long strap running from the humerus up to the head and neck, forming the most prominent ridge on the side of the neck. In quadrupeds it consists of two portions joined by a transverse clavicular intersection — the remnant of the vanished clavicle. With the forelimb planted it draws the head and neck laterally; with the limb raised it protracts the limb.\n\nDifference: In humans the equivalent splits into sternocleidomastoid and trapezius because the human clavicle persists and gives a real bony attachment. Dog and cat have lost the clavicle, so the two parts remain fused into a single strap — this is why the quadruped forelimb attaches to the trunk by muscle alone, with no bony joint.\n\nClinical relevance: The jugular groove lies immediately ventral to the ventral border of this muscle — the palpation landmark for jugular venepuncture, routine in cats and small dogs whose limb veins are too small. Occlude the groove at its lower end to raise the vein, then direct the needle towards the head.\n\nSource: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionZh": "描述: 自肱骨延至头颈的长带状肌，构成颈侧最明显的隆起。四足动物中该肌由两部分经横行的锁骨腱划相连——即退化锁骨的遗迹。前肢着地时牵引头颈侧偏；前肢抬起时则前伸该肢。\n\n差异: 人类因锁骨完整并提供真正的骨性附着，相应结构分化为胸锁乳突肌与斜方肌。犬猫锁骨退化，两部分融合为单一肌带——这正是四足动物前肢仅以肌肉、而非骨关节与躯干相连的原因。\n\n临床意义: 颈静脉沟紧位于该肌腹侧缘之下，是颈静脉采血的触诊标志；猫与小型犬四肢静脉过细时常规采用此法。于沟下端压迫使静脉充盈，再朝头侧进针。\n\n来源: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)"
+    },
+    {
+      "code": "vet-dog-dogcat-trapezius",
+      "speciesCode": "dog",
+      "systemCode": "vet-dog-muscular",
+      "nameVi": "Cơ thang",
+      "nameEn": "Trapezius",
+      "nameZh": "斜方肌",
+      "latin": "M. trapezius",
+      "descriptionVi": "Mô tả: Cơ mỏng hình tam giác phủ vùng u vai, bám từ dây chằng gáy và các mỏm gai đốt sống ngực xuống gai xương bả vai. Chia hai phần cổ và ngực. Nhiệm vụ là nâng và giữ xương bả vai áp vào thành ngực — nó là một trong những dây treo giữ cả chi trước vào thân.\n\nKhác biệt: Ở người cơ thang kéo xương bả và xương đòn, và vì người đứng hai chân nên nó chủ yếu chống lại trọng lượng cánh tay treo xuống. Ở chó mèo nó là thành phần của BỘ MÁY TREO NGỰC: chi trước không có khớp với thân, toàn bộ trọng lượng phần trước cơ thể truyền qua các cơ này chứ không qua xương.\n\nÝ nghĩa lâm sàng: Vùng cơ thang và dưới da giữa hai bả vai là chỗ tiêm dưới da quy ước ở chó mèo vì da ở đây lỏng và nhấc lên được. Tuy nhiên với mèo, hướng dẫn hiện nay khuyên KHÔNG tiêm vaccine ở vùng này mà chuyển xuống phần xa của chi, vì sarcoma tại chỗ tiêm ở mèo nếu mọc giữa hai bả vai thì gần như không cắt hết được.\n\nNguồn: Evans & de Lahunta, Miller's Anatomy of the Dog, 4th ed. (2013)",
+      "descriptionEn": "Description: A thin triangular sheet over the withers, running from the nuchal ligament and thoracic spinous processes down to the scapular spine. It has cervical and thoracic parts. Its job is to elevate the scapula and hold it against the chest wall — one of the slings by which the whole forelimb hangs from the trunk.\n\nDifference: In humans the trapezius moves scapula and clavicle, and because we stand bipedally it mainly resists the hanging weight of the arm. In dog and cat it is part of the thoracic sling: the forelimb has no joint with the trunk, so the entire weight of the forequarters passes through these muscles rather than through bone.\n\nClinical relevance: The trapezius region and the loose skin between the shoulder blades is the conventional subcutaneous injection site in dogs and cats, because the skin here lifts freely. For cats, however, current guidance is NOT to give vaccines here but distally on a limb: a feline injection-site sarcoma arising between the scapulae is very nearly impossible to excise completely.\n\nSource: Evans & de Lahunta, Miller's Anatomy of the Dog, 4th ed. (2013)",
+      "descriptionZh": "描述: 覆于鬐甲部的薄三角形肌片，起自项韧带与胸椎棘突，止于肩胛冈，分颈部与胸部两部。作用为提升肩胛骨并使其贴附胸壁——是悬吊整个前肢于躯干的吊带之一。\n\n差异: 人的斜方肌牵动肩胛骨与锁骨，因直立行走主要对抗上肢下垂之重量。犬猫的斜方肌则是胸廓吊带的组成部分：前肢与躯干无关节相连，前躯全部体重经由这些肌肉而非骨骼传递。\n\n临床意义: 斜方肌区及两肩胛间的松弛皮肤是犬猫常规皮下注射部位，因该处皮肤易于提起。但对猫，现行指南主张疫苗不在此处注射而改于肢体远端：猫注射部位肉瘤若发生于肩胛间，几乎无法完整切除。\n\n来源: Evans & de Lahunta, Miller's Anatomy of the Dog, 4th ed. (2013)"
+    },
+    {
+      "code": "vet-dog-dogcat-deltoideus",
+      "speciesCode": "dog",
+      "systemCode": "vet-dog-muscular",
+      "nameVi": "Cơ delta",
+      "nameEn": "Deltoid muscle",
+      "nameZh": "三角肌",
+      "latin": "M. deltoideus",
+      "descriptionVi": "Mô tả: Cơ phủ mặt ngoài khớp vai, bám từ gai xương bả vai và mỏm cùng vai xuống lồi củ delta của xương cánh tay. Ở chó mèo cơ có hai phần: phần gai (pars scapularis) và phần mỏm cùng (pars acromialis). Nhiệm vụ chính là gấp khớp vai và xoay xương cánh tay ra ngoài.\n\nKhác biệt: Cơ delta người có ba phần và bám cả vào xương đòn, nên nâng được cánh tay lên ngang vai và cao hơn — cử động mà chó mèo không làm được. Chó mèo mất xương đòn nên phần đòn của cơ delta cũng mất, biên độ vai vì thế gần như chỉ còn gấp – duỗi trong mặt phẳng đứng dọc.\n\nÝ nghĩa lâm sàng: Thần kinh nách (n. axillaris) chi phối cơ này chạy vòng quanh cổ xương cánh tay, nên trật khớp vai hoặc gãy đầu gần xương cánh tay dễ làm tổn thương nó. Dấu hiệu là con vật không gấp được vai và teo cơ vùng delta thấy rõ sau vài tuần.\n\nNguồn: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionEn": "Description: Covers the lateral aspect of the shoulder joint, arising from the scapular spine and acromion and inserting on the deltoid tuberosity of the humerus. In dog and cat it has two parts — pars scapularis and pars acromialis. Its main action is to flex the shoulder and rotate the humerus laterally.\n\nDifference: The human deltoid has three parts and also attaches to the clavicle, which is what allows the arm to be abducted to shoulder height and beyond — a movement dog and cat cannot perform. Having lost the clavicle they also lost the clavicular part, so shoulder excursion is essentially limited to flexion and extension in the sagittal plane.\n\nClinical relevance: The axillary nerve supplying this muscle winds around the neck of the humerus, so shoulder luxation or a proximal humeral fracture readily injures it. The sign is loss of shoulder flexion, with visible wasting over the deltoid region within a few weeks.\n\nSource: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionZh": "描述: 覆盖肩关节外侧，起自肩胛冈与肩峰，止于肱骨三角肌粗隆。犬猫的三角肌分肩胛部与肩峰部两部。主要作用为屈肩关节并使肱骨外旋。\n\n差异: 人的三角肌分三部并附着于锁骨，故上肢可外展至肩高以上——此动作犬猫无法完成。犬猫锁骨退化，三角肌锁骨部亦随之消失，肩关节活动基本限于矢状面的屈伸。\n\n临床意义: 支配该肌的腋神经绕肱骨颈走行，故肩关节脱位或肱骨近端骨折易致其损伤。表现为肩关节不能屈曲，数周内三角肌区可见明显萎缩。\n\n来源: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)"
+    },
+    {
+      "code": "vet-dog-dogcat-triceps-brachii",
+      "speciesCode": "dog",
+      "systemCode": "vet-dog-muscular",
+      "nameVi": "Cơ tam đầu cánh tay",
+      "nameEn": "Triceps brachii",
+      "nameZh": "肱三头肌",
+      "latin": "M. triceps brachii",
+      "descriptionVi": "Mô tả: Khối cơ lớn nhất của chi trước, chiếm gần trọn góc giữa xương bả vai và xương cánh tay. Gồm bốn đầu ở chó mèo (dài, ngoài, trong, phụ) — đầu dài bám vào bờ sau xương bả vai, ba đầu còn lại bám vào xương cánh tay; tất cả tụ về mỏm khuỷu. Nhiệm vụ là duỗi khớp khuỷu và chống đỡ trọng lượng khi chi tì đất.\n\nKhác biệt: Người có ba đầu, chó mèo có bốn — thêm đầu phụ (caput accessorium). Khác biệt quan trọng hơn là chức năng: ở người cơ tam đầu chỉ duỗi khuỷu, ở thú bốn chân nó phải GIỮ khuỷu khỏi gập lại dưới sức nặng cơ thể suốt thời gian đứng, nên khối cơ to hơn hẳn so với tỉ lệ cơ thể.\n\nÝ nghĩa lâm sàng: Liệt thần kinh quay đoạn cao làm mất chức năng cơ này: con vật không duỗi được khuỷu, chi khuỵu xuống và mu bàn chân quét đất khi đi. Phân biệt với liệt quay đoạn thấp — đoạn thấp vẫn duỗi được khuỷu, chỉ mất duỗi cổ chân và ngón.\n\nNguồn: Evans & de Lahunta, Miller's Anatomy of the Dog, 4th ed. (2013)",
+      "descriptionEn": "Description: The largest muscle mass of the forelimb, filling most of the angle between scapula and humerus. Dog and cat have four heads (long, lateral, medial, accessory) — the long head from the caudal border of the scapula, the others from the humerus; all converge on the olecranon. It extends the elbow and props the limb against body weight in stance.\n\nDifference: Humans have three heads, dog and cat four — the extra one is the accessory head. The more important difference is functional: in humans the triceps merely extends the elbow, whereas in a quadruped it must hold the elbow from collapsing under body weight throughout standing, so the muscle mass is proportionally far larger.\n\nClinical relevance: High radial nerve paralysis abolishes this muscle: the animal cannot extend the elbow, the limb buckles and the dorsum of the paw is dragged along the ground. Distinguish it from low radial paralysis, in which elbow extension is preserved and only carpal and digital extension are lost.\n\nSource: Evans & de Lahunta, Miller's Anatomy of the Dog, 4th ed. (2013)",
+      "descriptionZh": "描述: 前肢最大的肌块，几乎充满肩胛骨与肱骨之间的夹角。犬猫有四个头（长头、外侧头、内侧头、副头）——长头起自肩胛骨后缘，其余起自肱骨，共同止于鹰嘴。作用为伸肘并在站立负重时支撑该肢。\n\n差异: 人有三个头，犬猫有四个——多出副头。更重要的差异在功能：人的肱三头肌仅伸肘，而四足动物需在整个站立过程中防止肘关节在体重下塌陷，故其肌块比例明显更大。\n\n临床意义: 高位桡神经麻痹使该肌功能丧失：动物不能伸肘，患肢塌陷，行走时以爪背拖地。须与低位桡神经麻痹鉴别——后者伸肘功能保留，仅丧失腕与指的伸展。\n\n来源: Evans & de Lahunta, Miller's Anatomy of the Dog, 4th ed. (2013)"
+    },
+    {
+      "code": "vet-dog-dogcat-latissimus-dorsi",
+      "speciesCode": "dog",
+      "systemCode": "vet-dog-muscular",
+      "nameVi": "Cơ lưng rộng",
+      "nameEn": "Latissimus dorsi",
+      "nameZh": "背阔肌",
+      "latin": "M. latissimus dorsi",
+      "descriptionVi": "Mô tả: Tấm cơ rộng hình quạt phủ thành ngực bên, bám gốc vào cân ngực–thắt lưng và các xương sườn cuối, hội tụ thành một gân dẹt bám vào lồi củ tròn lớn mặt trong xương cánh tay. Cơ kéo chi trước về sau và về sát thân; khi chi tì đất thì nó kéo THÂN tiến về phía trước — đây mới là vai trò chính lúc chạy.\n\nKhác biệt: Cùng tên cùng chỗ bám như ở người, nhưng nhiệm vụ đảo ngược: người dùng nó để kéo cánh tay xuống (leo trèo, bơi), thú bốn chân dùng nó để kéo thân qua chi đang tì đất. Ở mèo cơ này mỏng và dài hơn chó — phù hợp với biên độ vươn mình lớn khi chạy nước rút và khi leo.\n\nÝ nghĩa lâm sàng: Bờ sau của cơ là mốc rạch da chuẩn cho phẫu thuật mở lồng ngực khoang liên sườn: đường rạch đi ngay sau bờ cơ để tách cơ ra trước chứ không cắt qua. Cơ này cũng hay được dùng làm vạt cơ có cuống che khuyết hổng thành ngực rộng.\n\nNguồn: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)",
+      "descriptionEn": "Description: A broad fan over the lateral chest wall, arising from the thoracolumbar fascia and last ribs and converging into a flat tendon on the teres major tuberosity of the medial humerus. It draws the forelimb caudally and towards the body; with the limb planted it instead pulls the TRUNK forwards — its principal role in locomotion.\n\nDifference: Same name and same attachments as in humans, but the task is reversed: humans use it to pull the arm down (climbing, swimming), the quadruped uses it to pull the trunk over the planted limb. In the cat it is thinner and longer than in the dog, matching the greater trunk extension used in sprinting and climbing.\n\nClinical relevance: Its caudal border is the standard skin-incision landmark for intercostal thoracotomy: the incision runs just behind the border so the muscle is retracted forwards rather than cut. It is also a common pedicled muscle flap for covering large chest-wall defects.\n\nSource: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)",
+      "descriptionZh": "描述: 覆于胸侧壁的宽阔扇形肌，起自胸腰筋膜与后位肋骨，汇成扁腱止于肱骨内侧的大圆肌粗隆。作用为向后并向内牵引前肢；当前肢着地时则牵引躯干前移——这才是奔跑时的主要作用。\n\n差异: 名称与附着与人相同，但功用相反：人用以下拉上肢（攀爬、游泳），四足动物则用以将躯干拉过着地的前肢。猫的背阔肌较犬更薄更长，与其冲刺及攀爬时更大的躯干伸展幅度相称。\n\n临床意义: 其后缘是肋间开胸术皮肤切口的标准标志：切口紧沿后缘，使该肌向前牵开而非切断。该肌亦常用作带蒂肌瓣以修补胸壁大面积缺损。\n\n来源: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)"
+    },
+    {
+      "code": "vet-dog-dogcat-obliquus-externus",
+      "speciesCode": "dog",
+      "systemCode": "vet-dog-muscular",
+      "nameVi": "Cơ chéo bụng ngoài",
+      "nameEn": "External abdominal oblique",
+      "nameZh": "腹外斜肌",
+      "latin": "M. obliquus externus abdominis",
+      "descriptionVi": "Mô tả: Lớp ngoài cùng trong bốn lớp cơ thành bụng. Bám gốc bằng những mấu răng cưa vào mặt ngoài các xương sườn — chính hàng răng cưa này nhìn thấy rõ trên mẫu vật lột da — rồi chạy chếch xuống dưới và về sau, tận cùng bằng một cân rộng góp phần tạo đường trắng. Sợi cơ hướng từ trên–trước xuống dưới–sau.\n\nKhác biệt: Cùng hướng sợi như ở người, nhưng gánh nặng khác hẳn: bụng người treo theo chiều dọc còn bụng thú bốn chân treo ngang như chiếc võng, nên bốn lớp cơ bụng phải chịu lực kéo liên tục của toàn bộ nội tạng. Đó là lý do thoát vị thành bụng ở chó mèo hay xảy ra sau chấn thương hơn là do yếu cơ đơn thuần.\n\nÝ nghĩa lâm sàng: Cân của cơ này tạo nên vòng bẹn nông — nơi thoát vị bẹn đi qua, và ở chó đực là đường đi của thừng tinh. Đường mổ sườn bên (flank approach) khi triệt sản mèo cái đi xuyên qua đúng cơ này: tách theo hướng sợi chứ không cắt ngang thì thành bụng liền tốt hơn nhiều.\n\nNguồn: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionEn": "Description: The outermost of the four abdominal wall layers. It arises by serrated digitations from the outer surface of the ribs — the row of serrations clearly visible on an écorché — then runs obliquely caudoventrally and ends in a broad aponeurosis contributing to the linea alba. Its fibres run cranio-dorsal to caudo-ventral.\n\nDifference: The fibre direction is the same as in humans, but the load is quite different: the human abdomen hangs vertically whereas the quadruped abdomen hangs sideways like a hammock, so the four layers carry the continuous pull of the whole viscera. This is why abdominal wall hernias in dog and cat follow trauma more often than simple muscular weakness.\n\nClinical relevance: Its aponeurosis forms the superficial inguinal ring — the exit of inguinal hernias and, in the male dog, the route of the spermatic cord. The flank approach for feline ovariectomy passes through this very muscle: splitting it along its fibres rather than cutting across them gives a far sounder body wall.\n\nSource: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionZh": "描述: 腹壁四层肌中最外层。以锯齿状肌齿起自肋骨外面——去皮标本上清晰可见的锯齿列即此——继而斜向后下走行，终于宽阔腱膜并参与构成白线。肌纤维方向为前上至后下。\n\n差异: 肌纤维方向与人相同，但受力迥异：人的腹部纵向悬垂，四足动物的腹部则如吊床般横向悬挂，四层腹肌须持续承受全部内脏的牵拉。故犬猫腹壁疝多继发于外伤，而非单纯肌力不足。\n\n临床意义: 其腱膜构成腹股沟浅环——腹股沟疝的出口，在公犬亦为精索通路。母猫卵巢摘除的肋腹入路正穿经此肌：顺纤维方向钝性分离而非横断，腹壁愈合远为牢固。\n\n来源: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)"
+    },
+    {
+      "code": "vet-dog-dogcat-gluteus-medius",
+      "speciesCode": "dog",
+      "systemCode": "vet-dog-muscular",
+      "nameVi": "Cơ mông giữa",
+      "nameEn": "Middle gluteal muscle",
+      "nameZh": "臀中肌",
+      "latin": "M. gluteus medius",
+      "descriptionVi": "Mô tả: Cơ mông lớn nhất và khoẻ nhất ở chó mèo, phủ mặt ngoài cánh xương chậu và bám vào mấu chuyển lớn xương đùi. Nó duỗi khớp háng và dạng chi — là cơ sinh lực đẩy chính khi bật nhảy và khi tăng tốc. Ở thú bốn chân cơ mông giữa lớn hơn cơ mông nông, ngược hẳn với người.\n\nKhác biệt: Ở người cơ mông LỚN mới là cơ mông to nhất, vì đứng hai chân cần giữ thân thẳng trên háng. Chó mèo không có nhu cầu ấy nên cơ mông nông nhỏ đi, còn cơ mông giữa phình ra để đẩy. Mèo có cơ mông giữa dày hơn chó theo tỉ lệ — đó là một phần lý do mèo bật cao gấp nhiều lần chiều cao thân.\n\nÝ nghĩa lâm sàng: Khối cơ này là vị trí tiêm bắp cổ điển ở chó, nhưng phải tiêm vào phần TRƯỚC của khối, tránh xa phía sau nơi thần kinh toạ đi qua khuyết ngồi lớn — tiêm sai chỗ gây liệt toạ, con vật lê bàn chân sau. Với mèo hiện nay ưu tiên tiêm bắp ở cơ lưng thắt lưng hoặc cơ tứ đầu vì khối mông của mèo mỏng.\n\nNguồn: Evans & de Lahunta, Miller's Anatomy of the Dog, 4th ed. (2013)",
+      "descriptionEn": "Description: The largest and strongest gluteal muscle in dog and cat, covering the lateral face of the ilial wing and inserting on the greater trochanter of the femur. It extends the hip and abducts the limb — the main propulsive muscle in jumping and acceleration. In quadrupeds the middle gluteal is larger than the superficial gluteal, the reverse of the human arrangement.\n\nDifference: In humans the gluteus MAXIMUS is the largest, because bipedal stance requires the trunk to be held upright over the hip. Dog and cat have no such need, so the superficial gluteal is reduced while the middle gluteal enlarges for propulsion. The cat's middle gluteal is proportionally thicker than the dog's — part of why a cat can jump many times its own body height.\n\nClinical relevance: This mass is the classical intramuscular injection site in the dog, but the needle must go into the CRANIAL part, well away from the sciatic nerve passing through the greater sciatic notch — a misplaced injection causes sciatic paralysis and the animal knuckles the hind paw. In cats the lumbar epaxial or quadriceps muscles are now preferred, because the feline gluteal mass is thin.\n\nSource: Evans & de Lahunta, Miller's Anatomy of the Dog, 4th ed. (2013)",
+      "descriptionZh": "描述: 犬猫最大最强的臀肌，覆盖髂骨翼外面，止于股骨大转子。作用为伸髋并外展该肢——是跳跃与加速时的主要推进肌。四足动物的臀中肌大于臀浅肌，与人恰好相反。\n\n差异: 人以臀大肌为最大，因直立姿势需将躯干撑于髋上。犬猫无此需求，臀浅肌因而缩小，臀中肌则增大以供推进。猫的臀中肌比例上厚于犬——这是猫能跃起数倍体高的原因之一。\n\n临床意义: 该肌块是犬的经典肌肉注射部位，但须注入其前部，远离经坐骨大切迹走行的坐骨神经——注射位置不当可致坐骨神经麻痹，动物后爪拖曳。猫因臀部肌块菲薄，现多首选腰背最长肌或股四头肌注射。\n\n来源: Evans & de Lahunta, Miller's Anatomy of the Dog, 4th ed. (2013)"
+    },
+    {
+      "code": "vet-dog-dogcat-biceps-femoris",
+      "speciesCode": "dog",
+      "systemCode": "vet-dog-muscular",
+      "nameVi": "Cơ hai đầu đùi",
+      "nameEn": "Biceps femoris",
+      "nameZh": "股二头肌",
+      "latin": "M. biceps femoris",
+      "descriptionVi": "Mô tả: Cơ dài nhất và nông nhất trong nhóm cơ sau đùi, tạo nên toàn bộ đường viền sau của đùi nhìn từ bên. Bám gốc ở ụ ngồi và dây chằng cùng–ngồi, toả xuống bám vào xương bánh chè, mào xương chày và qua gân gót. Duỗi háng, gấp gối và tham gia duỗi cổ chân.\n\nKhác biệt: Người có cơ hai đầu đùi hai đầu (dài và ngắn); chó mèo chỉ có một đầu ở ụ ngồi và không có đầu ngắn ở xương đùi. Điểm khác đáng nói hơn là cơ ở thú bốn chân bám tới tận gân gót, nên nó nối háng với cổ chân thành một chuỗi truyền lực — cử động một khớp kéo theo khớp kia, không tách rời như ở người.\n\nÝ nghĩa lâm sàng: Thần kinh toạ chạy sát mặt sâu của cơ này, nên đây là đường vào chuẩn để bộc lộ thần kinh toạ khi nối thần kinh hoặc khi phong bế. Bờ trước của cơ cũng là mốc để sờ tìm gân gót và đánh giá đứt gân gót — chấn thương hay gặp ở chó chạy nhiều.\n\nNguồn: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionEn": "Description: The longest and most superficial of the caudal thigh muscles, forming the entire caudal contour of the thigh in lateral view. It arises from the ischiatic tuber and sacrotuberous ligament and spreads to the patella, tibial crest and the common calcanean tendon. It extends the hip, flexes the stifle and assists hock extension.\n\nDifference: The human biceps femoris has two heads (long and short); dog and cat have only the ischiatic head and no short femoral head. The more telling difference is that in quadrupeds the muscle reaches the calcanean tendon, linking hip to hock in a single force chain — moving one joint necessarily moves the other, unlike the more independent human arrangement.\n\nClinical relevance: The sciatic nerve runs immediately deep to this muscle, making it the standard approach for exposing the nerve for repair or for a regional block. Its cranial border is also the landmark for palpating the common calcanean tendon and assessing rupture — a frequent injury in active working dogs.\n\nSource: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionZh": "描述: 股后肌群中最长最浅者，构成侧面观整个股部后缘轮廓。起自坐骨结节与骶结节韧带，分布止于髌骨、胫骨嵴及跟总腱。作用为伸髋、屈膝并协助伸跗关节。\n\n差异: 人的股二头肌有长短两头；犬猫仅有坐骨头而无股骨短头。更值得注意的差异是四足动物该肌延伸至跟腱，将髋与跗连成一条力链——一个关节的活动必然牵动另一个，不似人的相对独立。\n\n临床意义: 坐骨神经紧贴该肌深面走行，故此处是显露坐骨神经以行修补或神经阻滞的标准入路。其前缘亦为触诊跟总腱及判断其断裂的标志——此损伤在活动量大的工作犬中常见。\n\n来源: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)"
+    },
+    {
+      "code": "vet-dog-dogcat-quadriceps",
+      "speciesCode": "dog",
+      "systemCode": "vet-dog-muscular",
+      "nameVi": "Cơ tứ đầu đùi",
+      "nameEn": "Quadriceps femoris",
+      "nameZh": "股四头肌",
+      "latin": "M. quadriceps femoris",
+      "descriptionVi": "Mô tả: Khối cơ mặt trước đùi gồm bốn phần: cơ thẳng đùi bám ở xương chậu, ba cơ rộng bám quanh thân xương đùi. Cả bốn tụ vào một gân chung ôm lấy xương bánh chè rồi bám vào mào xương chày. Đây là cơ duỗi gối duy nhất — không có cơ nào thay thế được nó.\n\nKhác biệt: Cấu tạo giống người, nhưng ở chó mèo khớp gối luôn hơi gấp khi đứng chứ không duỗi thẳng khoá lại như đầu gối người. Nghĩa là cơ tứ đầu phải co giữ liên tục suốt thời gian đứng — thú bốn chân không có cơ chế 'khoá gối' tiết kiệm sức như người, còn ngựa thì có (bộ máy đứng).\n\nÝ nghĩa lâm sàng: Co rút cơ tứ đầu (quadriceps contracture) là biến chứng đáng sợ sau gãy xương đùi ở chó con: cơ dính vào ổ gãy, gối bị khoá ở tư thế duỗi cứng và chi thành vô dụng. Phòng bằng cách vận động sớm sau kết hợp xương chứ không bó bột bất động lâu.\n\nNguồn: Evans & de Lahunta, Miller's Anatomy of the Dog, 4th ed. (2013)",
+      "descriptionEn": "Description: The mass on the cranial thigh, of four parts: rectus femoris from the pelvis and three vasti from the shaft of the femur. All four converge on a common tendon that encloses the patella and inserts on the tibial crest. It is the sole extensor of the stifle — no other muscle can substitute for it.\n\nDifference: Structurally as in humans, but in dog and cat the stifle is always somewhat flexed in stance rather than locked straight as the human knee is. The quadriceps must therefore contract continuously throughout standing — these species have no energy-saving knee-locking mechanism, unlike the horse with its stay apparatus.\n\nClinical relevance: Quadriceps contracture is the feared complication of femoral fracture in puppies: the muscle adheres to the fracture callus, the stifle locks in rigid extension and the limb becomes useless. Prevention is early mobilisation after fixation, not prolonged immobilisation in a cast.\n\nSource: Evans & de Lahunta, Miller's Anatomy of the Dog, 4th ed. (2013)",
+      "descriptionZh": "描述: 股前部肌块，由四部分组成：起自骨盆的股直肌与起自股骨体的三块股肌。四者汇成包绕髌骨的总腱，止于胫骨嵴。此为膝关节唯一的伸肌——无其他肌肉可代偿。\n\n差异: 结构与人相同，但犬猫站立时膝关节始终略屈，不似人膝可伸直锁定。故股四头肌在整个站立期间须持续收缩——此类动物无人类式的省力锁膝机制，而马则具备（站立装置）。\n\n临床意义: 股四头肌挛缩是幼犬股骨骨折的可怕并发症：肌肉与骨痂粘连，膝关节被锁定于强直伸展位，患肢丧失功能。预防在于内固定后早期活动，而非长期石膏制动。\n\n来源: Evans & de Lahunta, Miller's Anatomy of the Dog, 4th ed. (2013)"
+    },
+    {
+      "code": "vet-dog-dogcat-gastrocnemius",
+      "speciesCode": "dog",
+      "systemCode": "vet-dog-muscular",
+      "nameVi": "Cơ bụng chân",
+      "nameEn": "Gastrocnemius",
+      "nameZh": "腓肠肌",
+      "latin": "M. gastrocnemius",
+      "descriptionVi": "Mô tả: Cơ tạo nên khối bắp chân, có hai đầu bám vào hai lồi trên lồi cầu xương đùi và tận cùng bằng phần lớn nhất của gân gót chung bám vào mỏm gót. Duỗi cổ chân và gấp gối. Trong mỗi đầu cơ thường có một xương vừng nhỏ (fabella) nằm ngay sau lồi cầu đùi.\n\nKhác biệt: Người đi bằng cả bàn chân (plantigrade) nên cơ bụng chân chỉ nhấc gót khi bước; chó mèo đi bằng ngón (digitigrade), cổ chân luôn nâng khỏi mặt đất và cơ này phải chịu tải suốt. Xương vừng fabella thì người không có — thấy nó trên phim X-quang gối chó mèo là bình thường, đừng nhầm là mảnh xương vỡ.\n\nÝ nghĩa lâm sàng: Đứt gân gót chung làm con vật đi bằng cả bàn chân sau, cổ chân sát đất — dáng đi rất đặc trưng, nhìn là nhận ra. Hay gặp ở chó lớn tuổi giống Doberman và ở vết cắt do mảnh kim loại. Phải cố định cổ chân ở tư thế duỗi nhiều tuần sau khi khâu gân.\n\nNguồn: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)",
+      "descriptionEn": "Description: Forms the calf mass, arising by two heads from the supracondylar tuberosities of the femur and ending as the largest component of the common calcanean tendon on the calcaneal tuber. It extends the hock and flexes the stifle. Each head usually contains a small sesamoid — the fabella — lying just behind the femoral condyle.\n\nDifference: Humans are plantigrade, so the gastrocnemius merely lifts the heel during gait; dog and cat are digitigrade, the hock never touches the ground and the muscle is loaded throughout stance. The fabella has no human counterpart — seeing it on a canine or feline stifle radiograph is normal and must not be mistaken for a fracture fragment.\n\nClinical relevance: Rupture of the common calcanean tendon makes the animal walk on the whole hind foot with the hock down to the ground — a plantigrade stance so characteristic it is recognised at a glance. It is seen in older large-breed dogs, notably Dobermanns, and after lacerations from sheet metal. The hock must be immobilised in extension for several weeks after tendon repair.\n\nSource: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)",
+      "descriptionZh": "描述: 构成小腿肌块，以两头起自股骨髁上结节，终为跟总腱最大的组成部分，止于跟结节。作用为伸跗关节、屈膝关节。每头内通常含一小籽骨（腓肠豆），位于股骨髁后方。\n\n差异: 人为跖行，腓肠肌仅在步态中抬起足跟；犬猫为趾行，跗关节始终离地，该肌在整个支撑期持续负荷。腓肠豆为人所无——犬猫膝关节 X 线片上见到它属正常，切勿误认为骨折碎片。\n\n临床意义: 跟总腱断裂使动物以整个后足着地行走、跗关节触地——此跖行姿势极具特征，一望即知。多见于老龄大型犬（尤其杜宾）及金属片割伤之后。腱修补后须将跗关节固定于伸展位数周。\n\n来源: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)"
+    },
+    {
+      "code": "vet-dog-dogcat-biceps-brachii",
+      "speciesCode": "dog",
+      "systemCode": "vet-dog-muscular",
+      "nameVi": "Cơ hai đầu cánh tay",
+      "nameEn": "Biceps brachii",
+      "nameZh": "肱二头肌",
+      "latin": "M. biceps brachii",
+      "descriptionVi": "Mô tả: Cơ nằm ở mặt trước xương cánh tay, bám gốc bằng một gân duy nhất vào lồi củ trên ổ chảo của xương bả vai, gân ấy chạy trong rãnh gian củ rồi bám vào xương quay và xương trụ. Gấp khuỷu và duỗi vai. Vì gân đầu dài bắc qua khớp vai, cơ này còn giữ vai khỏi bung ra khi chi chịu tải.\n\nKhác biệt: Người có HAI đầu (nên mới gọi là cơ hai đầu) và cơ này còn ngửa được cẳng tay — động tác xoay lòng bàn tay lên. Chó mèo chỉ có MỘT đầu, và cẳng tay của chúng gần như không ngửa được vì xương quay và xương trụ dính chặt vào nhau. Mèo còn xoay được chút ít nên vờn và ôm mồi được; chó thì gần như không.\n\nÝ nghĩa lâm sàng: Viêm gân đầu dài cơ hai đầu là nguyên nhân què chi trước mạn tính hay gặp ở chó lớn vận động nhiều. Khám bằng cách gấp vai đồng thời duỗi khuỷu để căng gân — con vật đau thì rụt chi lại. Chẩn đoán xác nhận bằng siêu âm rãnh gian củ, chỗ gân dễ dày lên và có dịch.\n\nNguồn: Evans & de Lahunta, Miller's Anatomy of the Dog, 4th ed. (2013)",
+      "descriptionEn": "Description: Lies on the cranial aspect of the humerus, arising by a single tendon from the supraglenoid tubercle of the scapula; that tendon runs in the intertubercular groove before the muscle inserts on radius and ulna. It flexes the elbow and extends the shoulder. Because the tendon of origin bridges the shoulder joint, the muscle also stabilises that joint under load.\n\nDifference: Humans have TWO heads (hence the name) and the muscle also supinates the forearm — turning the palm up. Dog and cat have only ONE head, and their forearm barely supinates because radius and ulna are tightly bound together. The cat retains a little rotation, enough to bat and to clasp prey; the dog has almost none.\n\nClinical relevance: Bicipital tenosynovitis is a common cause of chronic forelimb lameness in active large-breed dogs. Test it by flexing the shoulder while extending the elbow to put the tendon on stretch — a painful dog withdraws the limb. Confirm by ultrasound of the intertubercular groove, where the tendon thickens and effusion collects.\n\nSource: Evans & de Lahunta, Miller's Anatomy of the Dog, 4th ed. (2013)",
+      "descriptionZh": "描述: 位于肱骨前面，以单一肌腱起自肩胛骨盂上结节，该腱经结节间沟走行，肌止于桡骨与尺骨。作用为屈肘、伸肩。因起始腱跨越肩关节，该肌亦在负重时稳定肩关节。\n\n差异: 人有两个头（故名二头肌），且该肌尚能使前臂旋后——即掌心向上。犬猫仅一个头，且因桡尺骨紧密结合，前臂几乎不能旋后。猫尚保留少许旋转，足以拨弄并抱持猎物；犬则几乎没有。\n\n临床意义: 肱二头肌腱鞘炎是活跃大型犬慢性前肢跛行的常见原因。检查时屈肩同时伸肘以牵张该腱——疼痛者会缩回患肢。确诊依靠结节间沟超声检查，可见腱增厚并伴积液。\n\n来源: Evans & de Lahunta, Miller's Anatomy of the Dog, 4th ed. (2013)"
+    },
+    {
+      "code": "vet-dog-dogcat-masseter",
+      "speciesCode": "dog",
+      "systemCode": "vet-dog-muscular",
+      "nameVi": "Cơ cắn",
+      "nameEn": "Masseter",
+      "nameZh": "咬肌",
+      "latin": "M. masseter",
+      "descriptionVi": "Mô tả: Khối cơ dày phủ mặt ngoài nhánh xương hàm dưới, bám từ cung gò má xuống hố cơ cắn. Cùng với cơ thái dương, nó là cơ khép hàm chính và sinh gần như toàn bộ lực cắn. Ở mèo cơ thái dương lớn hơn cơ cắn; ở chó tỉ lệ hai cơ thay đổi mạnh theo giống.\n\nKhác biệt: Người có cơ cắn khoẻ để nghiền ngang, và khớp thái dương hàm cho hàm trượt sang bên. Chó mèo thì khớp ấy gần như là bản lề thuần: hàm chỉ mở ra khép vào. Vì thế lực cắn của chúng dồn hết vào răng ăn thịt để CẮT, không dàn ra mặt răng để nghiền.\n\nÝ nghĩa lâm sàng: Viêm cơ nhai ở chó là bệnh tự miễn đánh vào sợi cơ loại 2M chỉ có ở nhóm cơ này: giai đoạn cấp mặt sưng và đau, giai đoạn mạn thì cơ teo lõm hai bên đầu và con vật KHÔNG há được miệng. Chẩn đoán bằng kháng thể kháng 2M; điều trị corticoid liều cao, để muộn thì xơ hoá không hồi phục.\n\nNguồn: Evans & de Lahunta, Miller's Anatomy of the Dog, 4th ed. (2013)",
+      "descriptionEn": "Description: The thick mass covering the lateral face of the mandibular ramus, from the zygomatic arch down into the masseteric fossa. With the temporalis it is the principal jaw-closing muscle and generates almost all of the bite force. In the cat the temporalis outweighs the masseter; in the dog the ratio varies widely with breed.\n\nDifference: Humans have a strong masseter for lateral grinding, and a temporomandibular joint that lets the jaw slide sideways. In dog and cat that joint is essentially a pure hinge: the jaw only opens and closes. Their bite force is therefore concentrated on the carnassial teeth for shearing rather than spread over grinding surfaces.\n\nClinical relevance: Masticatory muscle myositis in the dog is an autoimmune attack on type 2M fibres found only in this muscle group: acutely the face is swollen and painful, chronically the muscles waste into hollows over the skull and the animal CANNOT open its mouth. Diagnosis is by anti-2M antibody titre; treatment is high-dose corticosteroid, and if left late the fibrosis is irreversible.\n\nSource: Evans & de Lahunta, Miller's Anatomy of the Dog, 4th ed. (2013)",
+      "descriptionZh": "描述: 覆盖下颌支外面的厚实肌块，起自颧弓，止于咬肌窝。与颞肌共同构成闭颌的主要肌肉，几乎产生全部咬合力。猫的颞肌大于咬肌；犬两肌之比则因品种差异极大。\n\n差异: 人的咬肌强大以行横向研磨，颞下颌关节允许下颌侧滑。犬猫的该关节基本为纯铰链：下颌仅能开合。故其咬合力集中于裂齿以行剪切，而非分散于研磨面。\n\n临床意义: 犬咀嚼肌炎是针对仅存于该肌群的 2M 型肌纤维的自身免疫病：急性期面部肿胀疼痛，慢性期肌肉萎缩致头部两侧凹陷，动物无法张口。经抗 2M 抗体效价确诊；以大剂量糖皮质激素治疗，延误则纤维化不可逆。\n\n来源: Evans & de Lahunta, Miller's Anatomy of the Dog, 4th ed. (2013)"
+    },
+    {
+      "code": "vet-dog-dogcat-pectoralis",
+      "speciesCode": "dog",
+      "systemCode": "vet-dog-muscular",
+      "nameVi": "Cơ ngực",
+      "nameEn": "Pectoral muscles",
+      "nameZh": "胸肌",
+      "latin": "Mm. pectorales",
+      "descriptionVi": "Mô tả: Nhóm cơ nằm giữa xương ức và mặt trong chi trước, gồm phần nông và phần sâu. Chúng khép chi trước vào thân và giữ cho thân khỏi tụt xuống giữa hai chi khi đứng — cùng với cơ răng bụng và cơ thang, chúng làm nên bộ máy treo ngực.\n\nKhác biệt: Cơ ngực người to và khoẻ vì tay dùng để kéo và đẩy; ở chó mèo nó tương đối mỏng, vì gánh nặng chính do cơ răng bụng chịu. Điểm khác quyết định: người có xương đòn chống ngang giữ vai ra xa thân, thú bốn chân không có — nên cơ ngực của chúng vừa treo vừa giữ ngang, hai việc cùng lúc.\n\nÝ nghĩa lâm sàng: Vùng cơ ngực nông là chỗ đặt kim gây tê thấm khi mổ thoát vị rốn hoặc rạch da đường giữa bụng trước. Quan trọng hơn: chó con mắc hội chứng bơi có lồng ngực bẹt do nằm sấp lâu, cơ ngực co rút khép chi vào — sửa bằng buộc chân tạm và cho nằm nghiêng, càng sớm càng phục hồi hoàn toàn.\n\nNguồn: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionEn": "Description: The group between the sternum and the medial side of the forelimb, in superficial and deep parts. They adduct the limb and stop the trunk from sinking between the forelimbs in stance — with serratus ventralis and trapezius they form the thoracic sling.\n\nDifference: The human pectoralis is large and powerful because the arm pulls and pushes; in dog and cat it is relatively thin, the main load being borne by serratus ventralis. The decisive difference: humans have a clavicle strutting the shoulder away from the trunk, quadrupeds do not — so their pectorals both suspend and stabilise laterally at the same time.\n\nClinical relevance: The superficial pectoral region is where infiltration anaesthesia is placed for umbilical hernia repair or a cranial ventral midline incision. More importantly: swimmer puppies develop a flattened thorax from lying sternally, with contracted pectorals holding the limbs adducted — corrected by temporary hobbles and lateral recumbency, and the earlier this is done the more complete the recovery.\n\nSource: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionZh": "描述: 位于胸骨与前肢内侧之间的肌群，分浅部与深部。作用为内收前肢，并在站立时防止躯干下沉于两前肢之间——与腹侧锯肌、斜方肌共同构成胸廓吊带。\n\n差异: 人的胸大肌粗壮，因上肢需推拉发力；犬猫的胸肌相对菲薄，主要负荷由腹侧锯肌承担。关键差异在于：人有锁骨将肩撑离躯干，四足动物没有——故其胸肌须同时承担悬吊与侧向稳定两项任务。\n\n临床意义: 胸浅肌区为脐疝修补或腹前正中切口浸润麻醉的进针部位。更重要的是：游泳幼犬综合征因长期伏卧致胸廓扁平、胸肌挛缩使四肢内收——以临时绑腿并改侧卧矫正，越早处理恢复越完全。\n\n来源: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)"
+    },
+    {
+      "code": "vet-dog-dogcat-antebrachial-extensors",
+      "speciesCode": "dog",
+      "systemCode": "vet-dog-muscular",
+      "nameVi": "Nhóm cơ duỗi cẳng tay",
+      "nameEn": "Extensor group of the antebrachium",
+      "nameZh": "前臂伸肌群",
+      "latin": "Mm. extensores antebrachii",
+      "descriptionVi": "Mô tả: Nhóm cơ nằm ở mặt trước – ngoài cẳng tay, gồm cơ duỗi cổ tay quay, cơ duỗi chung các ngón và cơ duỗi ngoài các ngón. Bụng cơ nằm ở nửa trên cẳng tay rồi thu thành gân dài chạy qua cổ tay xuống các ngón — vì thế nửa dưới cẳng tay thú bốn chân gần như chỉ còn gân và da.\n\nKhác biệt: Người có thêm cơ ngửa và cơ sấp cho phép xoay lòng bàn tay; chó mèo gần như mất hẳn động tác ấy vì xương quay và xương trụ dính chặt. Đổi lại phần xa chi nhẹ bẫng — khối cơ dồn hết về gần thân, quán tính nhỏ, nên guồng chân nhanh hơn nhiều so với tay người.\n\nÝ nghĩa lâm sàng: Vì phần xa chi chỉ có gân và da, vết thương ở cẳng tay dưới và cổ tay chó mèo rất dễ lộ gân và không có cơ để che kín — đó là lý do vết thương vùng này lâu liền, hay phải ghép da hoặc để liền thứ phát. Ống truyền tĩnh mạch đầu cũng đi dọc mặt trước cẳng tay ngay trên nhóm cơ này.\n\nNguồn: Evans & de Lahunta, Miller's Anatomy of the Dog, 4th ed. (2013)",
+      "descriptionEn": "Description: The group on the craniolateral antebrachium: extensor carpi radialis, common digital extensor and lateral digital extensor. The bellies sit in the proximal half of the forearm and taper into long tendons crossing the carpus to the digits — which is why the distal half of a quadruped forearm is little more than tendon and skin.\n\nDifference: Humans also have supinator and pronator muscles that rotate the palm; dog and cat have essentially lost that movement because radius and ulna are bound together. In exchange the distal limb is very light — the muscle mass is concentrated proximally, inertia is low, and the limb can be cycled far faster than a human arm.\n\nClinical relevance: Because the distal limb is only tendon and skin, wounds of the distal forearm and carpus in dog and cat readily expose tendon with no muscle to cover them — which is why wounds here heal slowly and often need a skin graft or second-intention healing. The cephalic vein used for intravenous catheters also runs down the cranial forearm directly over this group.\n\nSource: Evans & de Lahunta, Miller's Anatomy of the Dog, 4th ed. (2013)",
+      "descriptionZh": "描述: 位于前臂前外侧的肌群，包括桡侧腕伸肌、指总伸肌与指外侧伸肌。肌腹位于前臂近半，向下移行为跨越腕关节至各指的长腱——故四足动物前臂远半几乎只剩肌腱与皮肤。\n\n差异: 人另有旋后肌与旋前肌可使掌心翻转；犬猫因桡尺骨紧密结合基本丧失此动作。代价换来的是远端肢体极轻——肌块集中于近端，惯量小，摆动频率远高于人的上肢。\n\n临床意义: 因远端肢体仅有肌腱与皮肤，犬猫前臂远端及腕部创伤极易暴露肌腱且无肌肉可供覆盖——故此处创口愈合缓慢，常需植皮或二期愈合。静脉留置针所用的头静脉亦沿前臂前面、正走行于该肌群之上。\n\n来源: Evans & de Lahunta, Miller's Anatomy of the Dog, 4th ed. (2013)"
+    },
+    {
+      "code": "vet-dog-dogcat-semitendinosus",
+      "speciesCode": "dog",
+      "systemCode": "vet-dog-muscular",
+      "nameVi": "Cơ bán gân",
+      "nameEn": "Semitendinosus",
+      "nameZh": "半腱肌",
+      "latin": "M. semitendinosus",
+      "descriptionVi": "Mô tả: Cơ nằm ở mặt sau đùi, ngay sau cơ hai đầu đùi, tạo nên đường viền sau cùng của đùi nhìn từ bên. Bám gốc ở ụ ngồi, xuống bám vào mào xương chày và gân gót. Duỗi háng, gấp gối, và khi chi tì đất thì đẩy thân tiến về trước.\n\nKhác biệt: Cùng tên với cơ bán gân của người, nhưng ở chó mèo nó dày và ngắn hơn nhiều theo tỉ lệ, vì háng của thú bốn chân luôn gấp chứ không duỗi thẳng như người đứng. Ở bò và ngựa cơ này là khối thịt lớn nhất của đùi sau — chính là phần thịt mông người ta vẫn ăn.\n\nÝ nghĩa lâm sàng: Cơ bán gân là nơi lấy vạt cơ có cuống che khuyết hổng vùng đáy chậu và trực tràng sau khi cắt u quanh hậu môn. Ở chó chăn cừu và chó làm việc còn gặp bệnh xơ hoá cơ bán gân: dáng đi giật đặc trưng, bước sau ngắn và xoay vào trong, hầu như không chữa được.\n\nNguồn: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)",
+      "descriptionEn": "Description: Lies on the caudal thigh immediately behind biceps femoris, forming the hindmost contour of the thigh in lateral view. It arises from the ischiatic tuber and inserts on the tibial crest and the calcanean tendon. It extends the hip, flexes the stifle, and with the limb planted drives the body forwards.\n\nDifference: The same name as the human semitendinosus, but in dog and cat it is proportionally much thicker and shorter, because the quadruped hip is always flexed rather than extended as in human stance. In cattle and horses this is the largest meat mass of the caudal thigh — the cut sold as topside.\n\nClinical relevance: Semitendinosus is the donor for a pedicled muscle flap covering perineal and rectal defects after perianal tumour excision. Working and herding dogs also suffer gracilis-semitendinosus fibrotic myopathy: a characteristic snapping gait with a shortened, internally rotated hind stride, for which there is essentially no cure.\n\nSource: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)",
+      "descriptionZh": "描述: 位于股后部，紧邻股二头肌之后，构成侧面观股部最后缘。起自坐骨结节，止于胫骨嵴与跟腱。作用为伸髋、屈膝，并在该肢着地时推动躯体前进。\n\n差异: 与人的半腱肌同名，但犬猫的该肌比例上更厚更短，因四足动物髋关节始终屈曲，不似人直立时伸展。牛马的此肌为股后最大的肉块——即市售的后腿肉。\n\n临床意义: 半腱肌是肛周肿瘤切除后修补会阴与直肠缺损的带蒂肌瓣供体。牧羊犬与工作犬另可发生股薄肌-半腱肌纤维性肌病：步态呈特征性弹跳、后肢步幅缩短并内旋，基本无法治愈。\n\n来源: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)"
+    },
+    {
+      "code": "vet-dog-dogcat-heart-position",
+      "speciesCode": "dog",
+      "systemCode": "vet-dog-cardiovascular",
+      "nameVi": "Vị trí quả tim trong lồng ngực",
+      "nameEn": "Position of the heart in the thorax",
+      "nameZh": "心脏在胸腔内的位置",
+      "latin": "Cor",
+      "descriptionVi": "Mô tả: Tim chó mèo nằm gần như giữa lồng ngực, chiếm khoảng khoang liên sườn 3 đến 6, hơi lệch trái. Trục dài của tim chạy chếch từ trên–trước xuống dưới–sau, mỏm tim chạm sát xương ức ở khoang liên sườn 5–6. Tim chiếm khoảng 2,5–3,5 lần bề rộng một đốt sống ngực trên phim nghiêng — thước đo VHS dùng để đánh giá tim to.\n\nKhác biệt: Tim người nằm lệch trái rõ rệt và mỏm tim chỉ sang trái, vì lồng ngực người dẹt theo chiều trước–sau. Lồng ngực chó mèo dẹt theo chiều BÊN, nên tim nằm giữa hơn và nghe tim hai bên đều rõ — điều không đúng ở người.\n\nÝ nghĩa lâm sàng: Bốn điểm nghe van theo thứ tự PAM–T: bên TRÁI từ trên xuống là van động mạch phổi (KLS 3), van động mạch chủ (KLS 4), van hai lá (KLS 5); bên PHẢI là van ba lá (KLS 3–4). Tiếng thổi tâm thu mạnh nhất ở mỏm tim trái là dấu hiệu kinh điển của bệnh thoái hoá van hai lá — bệnh tim mắc phải hay gặp nhất ở chó nhỏ.\n\nNguồn: Evans & de Lahunta, Miller's Anatomy of the Dog, 4th ed. (2013)",
+      "descriptionEn": "Description: The heart of dog and cat sits almost mid-thorax, spanning roughly the 3rd to 6th intercostal spaces and displaced slightly to the left. Its long axis runs craniodorsal to caudoventral, the apex resting near the sternum at the 5th–6th space. On a lateral radiograph it measures about 2.5–3.5 vertebral body lengths — the basis of the vertebral heart score used to judge cardiomegaly.\n\nDifference: The human heart is markedly left-shifted with the apex pointing left, because the human chest is flattened front-to-back. The canine and feline chest is flattened side-to-side, so the heart lies more centrally and is clearly audible on both sides — which is not true in humans.\n\nClinical relevance: The four valve auscultation points follow PAM–T: on the LEFT from dorsal to ventral, pulmonic (ICS 3), aortic (ICS 4), mitral (ICS 5); on the RIGHT, tricuspid (ICS 3–4). A systolic murmur loudest over the left apex is the classic sign of myxomatous mitral valve disease — the commonest acquired heart disease of small-breed dogs.\n\nSource: Evans & de Lahunta, Miller's Anatomy of the Dog, 4th ed. (2013)",
+      "descriptionZh": "描述: 犬猫心脏几乎位于胸腔中部，约占第 3 至第 6 肋间隙，略偏左侧。心长轴自前上斜向后下，心尖于第 5–6 肋间贴近胸骨。侧位片上约相当于 2.5–3.5 个胸椎椎体长——即评估心脏增大的椎体心脏评分依据。\n\n差异: 人的心脏明显偏左、心尖指向左侧，因人胸廓前后扁平。犬猫胸廓左右扁平，故心脏位置更居中，两侧听诊均清晰——此点与人不同。\n\n临床意义: 四个瓣膜听诊点按 PAM–T 顺序：左侧自上而下为肺动脉瓣（第 3 肋间）、主动脉瓣（第 4 肋间）、二尖瓣（第 5 肋间）；右侧为三尖瓣（第 3–4 肋间）。左心尖部最响的收缩期杂音是黏液瘤性二尖瓣病的典型体征——小型犬最常见的后天性心脏病。\n\n来源: Evans & de Lahunta, Miller's Anatomy of the Dog, 4th ed. (2013)"
+    },
+    {
+      "code": "vet-dog-dogcat-aortic-arch",
+      "speciesCode": "dog",
+      "systemCode": "vet-dog-cardiovascular",
+      "nameVi": "Cung động mạch chủ",
+      "nameEn": "Aortic arch",
+      "nameZh": "主动脉弓",
+      "latin": "Arcus aortae",
+      "descriptionVi": "Mô tả: Động mạch chủ rời tâm thất trái, vòng lên rồi bẻ sang TRÁI và ra sau, đi tiếp thành động mạch chủ ngực nằm dưới cột sống. Ở chó mèo cung này chỉ cho hai nhánh lớn: thân cánh tay–đầu (brachiocephalic trunk) rồi động mạch dưới đòn trái. Thực quản và khí quản chui qua vòng do cung động mạch chủ, dây chằng động mạch và thân phổi quây lại.\n\nKhác biệt: Cung động mạch chủ người cho BA nhánh (thân cánh tay–đầu, cảnh chung trái, dưới đòn trái); chó mèo chỉ có hai vì động mạch cảnh chung trái tách ra từ thân cánh tay–đầu. Bò và lợn còn gộp nhiều hơn nữa — chỉ một thân chung duy nhất. Biết kiểu phân nhánh của từng loài là bắt buộc khi luồn ống thông hoặc đọc hình mạch.\n\nÝ nghĩa lâm sàng: Tồn tại cung động mạch chủ phải (PRAA) là dị tật vòng mạch hay gặp nhất: cung nằm bên phải nên vòng mạch siết lấy thực quản, thức ăn đặc không qua được. Chó con nôn ra thức ăn chưa tiêu NGAY SAU KHI cai sữa sang thức ăn đặc, thực quản phình to phía trước tim trên phim — mổ cắt dây chằng động mạch là chữa được, để muộn thì thực quản giãn vĩnh viễn.\n\nNguồn: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionEn": "Description: The aorta leaves the left ventricle, arches upward then bends to the LEFT and caudally, continuing as the thoracic aorta beneath the vertebral column. In dog and cat the arch gives only two large branches: the brachiocephalic trunk, then the left subclavian artery. The oesophagus and trachea pass through the ring formed by the arch, the ligamentum arteriosum and the pulmonary trunk.\n\nDifference: The human aortic arch gives THREE branches (brachiocephalic trunk, left common carotid, left subclavian); dog and cat give only two, because the left common carotid arises from the brachiocephalic trunk. Cattle and pig consolidate further, into a single common trunk. Knowing each species' branching pattern is essential for catheterisation and for reading angiograms.\n\nClinical relevance: Persistent right aortic arch is the commonest vascular ring anomaly: the arch lies on the right, so the ring strangles the oesophagus and solid food cannot pass. The puppy regurgitates undigested food from the moment it is weaned onto solids, with the oesophagus ballooning cranial to the heart on radiographs. Surgical division of the ligamentum arteriosum is curative — left late, the oesophagus stays permanently dilated.\n\nSource: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionZh": "描述: 主动脉自左心室发出，先弓向上再折向左侧并向后延续为胸主动脉，位于脊柱下方。犬猫主动脉弓仅发出两大分支：臂头干与左锁骨下动脉。食管与气管穿行于主动脉弓、动脉韧带及肺动脉干围成的环内。\n\n差异: 人的主动脉弓发出三大分支（臂头干、左颈总动脉、左锁骨下动脉）；犬猫仅两支，因左颈总动脉起自臂头干。牛与猪进一步合并为单一总干。掌握各物种的分支型式，对插管与血管造影判读必不可少。\n\n临床意义: 永存右主动脉弓是最常见的血管环畸形：弓位于右侧，血管环勒紧食管，固体食物无法通过。幼犬自断奶改食固体食物起即反流未消化食物，X 线可见心前食管球状扩张。手术切断动脉韧带可治愈；延误则食管永久扩张。\n\n来源: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)"
+    },
+    {
+      "code": "vet-dog-dogcat-liver-lobes",
+      "speciesCode": "dog",
+      "systemCode": "vet-dog-digestive",
+      "nameVi": "Các thuỳ gan",
+      "nameEn": "Lobes of the liver",
+      "nameZh": "肝叶",
+      "latin": "Lobi hepatis",
+      "descriptionVi": "Mô tả: Gan chó mèo chia thuỳ SÂU và rõ, gồm sáu thuỳ: trái ngoài, trái trong, vuông, phải trong, phải ngoài và thuỳ đuôi (thuỳ đuôi có thêm mỏm đuôi và mỏm nhú). Gan nằm gần trọn dưới vòm sườn, mặt trước áp vào cơ hoành. Ở con vật khoẻ mạnh KHÔNG sờ thấy gan quá bờ sườn cuối.\n\nKhác biệt: Gan người chỉ chia bốn thuỳ nông, gần như một khối liền. Gan chó mèo chia sâu tới mức mỗi thuỳ gần như một cơ quan riêng có cuống mạch riêng — điều này khiến XOẮN THUỲ GAN xảy ra được ở chó mèo mà ở người thì gần như không. Đổi lại, cắt một thuỳ gan ở chó mèo dễ hơn nhiều so với cắt gan phân thuỳ ở người.\n\nÝ nghĩa lâm sàng: Sinh thiết gan qua da nhắm vào thuỳ trái ngoài, đâm kim ngay sau mỏm ức lệch trái dưới hướng dẫn siêu âm — tránh túi mật và mạch rốn gan. Gan sờ được quá bờ sườn ở chó là bất thường: nghĩ tới gan to do suy tim phải, u lympho hoặc bệnh nội tiết (cường vỏ thượng thận).\n\nNguồn: Evans & de Lahunta, Miller's Anatomy of the Dog, 4th ed. (2013)",
+      "descriptionEn": "Description: The liver of dog and cat is deeply and clearly lobated, with six lobes: left lateral, left medial, quadrate, right medial, right lateral and caudate (the caudate bearing caudate and papillary processes). It lies almost entirely under the costal arch, its cranial surface against the diaphragm. In a healthy animal the liver is NOT palpable beyond the last rib.\n\nDifference: The human liver has only four shallow lobes and is nearly a single mass. In dog and cat the division is so deep that each lobe is almost an organ in itself with its own vascular pedicle — which makes liver LOBE TORSION possible in these species, whereas it is virtually unknown in humans. In exchange, removing a single lobe is far simpler than human segmental hepatectomy.\n\nClinical relevance: Percutaneous liver biopsy targets the left lateral lobe, the needle entering just caudal to the xiphoid slightly to the left under ultrasound guidance — avoiding the gallbladder and the hilar vessels. A liver palpable beyond the costal arch in a dog is abnormal: think right-sided heart failure, lymphoma, or endocrine disease such as hyperadrenocorticism.\n\nSource: Evans & de Lahunta, Miller's Anatomy of the Dog, 4th ed. (2013)",
+      "descriptionZh": "描述: 犬猫肝分叶深而清晰，共六叶：左外叶、左内叶、方叶、右内叶、右外叶与尾状叶（尾状叶另具尾状突与乳头突）。肝几乎完全位于肋弓之下，前面贴附膈。健康动物的肝不应超出最后肋触及。\n\n差异: 人肝仅四叶且分叶浅，近乎一整块。犬猫的分叶极深，每叶几乎自成一器官并有独立血管蒂——故犬猫可发生肝叶扭转，而人几乎不见。相应地，犬猫切除单一肝叶远较人的肝段切除简便。\n\n临床意义: 经皮肝活检以左外叶为目标，超声引导下于剑突后稍偏左进针，避开胆囊与肝门血管。犬肝超出肋弓可触及即属异常：应考虑右心衰、淋巴瘤或内分泌病（肾上腺皮质功能亢进）。\n\n来源: Evans & de Lahunta, Miller's Anatomy of the Dog, 4th ed. (2013)"
+    },
+    {
+      "code": "vet-dog-dogcat-gallbladder",
+      "speciesCode": "dog",
+      "systemCode": "vet-dog-digestive",
+      "nameVi": "Túi mật",
+      "nameEn": "Gallbladder",
+      "nameZh": "胆囊",
+      "latin": "Vesica biliaris",
+      "descriptionVi": "Mô tả: Túi hình quả lê nằm trong hố giữa thuỳ vuông và thuỳ phải trong của gan, chứa và cô đặc mật giữa các bữa. Ống túi mật hợp với ống gan thành ống mật chủ, đổ vào tá tràng ở nhú tá lớn. Ở MÈO ống mật chủ và ống tuỵ hợp lại TRƯỚC khi vào tá tràng — ở chó thì hai ống đổ riêng.\n\nKhác biệt: NGỰA VÀ HƯƠU KHÔNG CÓ TÚI MẬT — chúng ăn liên tục cả ngày nên mật chảy thẳng vào ruột, không cần chỗ chứa. Đây là ví dụ sạch nhất của nguyên tắc 'hình thái theo kiểu ăn': loài ăn theo bữa (chó, mèo, người, bò) thì có túi mật, loài gặm cỏ liên tục thì không.\n\nÝ nghĩa lâm sàng: Mucocele túi mật ở chó là khối mật đặc như thạch làm tắc và có thể vỡ túi mật — trên siêu âm cho hình 'quả kiwi cắt đôi', là chỉ định mổ cắt túi mật. Ở mèo, do ống mật và ống tuỵ chung một lối vào, viêm đường mật thường kéo theo viêm tuỵ và viêm ruột cùng lúc — gọi là bộ ba viêm (triaditis), một hội chứng KHÔNG có ở chó.\n\nNguồn: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionEn": "Description: A pear-shaped sac lying in the fossa between the quadrate and right medial lobes, storing and concentrating bile between meals. The cystic duct joins the hepatic ducts as the bile duct, which opens into the duodenum at the major duodenal papilla. In the CAT the bile duct and pancreatic duct unite BEFORE entering the duodenum — in the dog they open separately.\n\nDifference: THE HORSE AND DEER HAVE NO GALLBLADDER — they eat continuously all day, so bile flows straight into the gut and no reservoir is needed. This is the cleanest illustration of form following feeding pattern: meal-eaters (dog, cat, human, ox) have a gallbladder, continuous grazers do not.\n\nClinical relevance: Canine gallbladder mucocele is a mass of gelatinous bile that obstructs and may rupture the gallbladder — the ultrasonographic 'kiwi-fruit' pattern is an indication for cholecystectomy. In the cat, because bile and pancreatic ducts share one entry, cholangitis commonly drags pancreatitis and enteritis along with it — feline triaditis, a syndrome the dog does NOT get.\n\nSource: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionZh": "描述: 梨形囊，位于方叶与右内叶之间的胆囊窝内，在两餐之间贮存并浓缩胆汁。胆囊管与肝管合成胆总管，开口于十二指肠大乳头。猫的胆总管与胰管在进入十二指肠前即已汇合，而犬则分别开口。\n\n差异: 马与鹿无胆囊——它们全天持续采食，胆汁直接流入肠道，无需贮存。这是「形态随采食方式」原则最清晰的例证：分餐进食者（犬、猫、人、牛）有胆囊，持续采食者则无。\n\n临床意义: 犬胆囊黏液囊肿为胶冻样胆汁团块，可致梗阻甚至胆囊破裂——超声呈「猕猴桃切面」征，是胆囊切除的指征。猫因胆管与胰管共用一个开口，胆管炎常同时牵连胰腺炎与肠炎——称猫三联炎，此综合征犬不发生。\n\n来源: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)"
+    },
+    {
+      "code": "vet-dog-dogcat-ear-canal",
+      "speciesCode": "dog",
+      "systemCode": "vet-dog-senses",
+      "nameVi": "Ống tai ngoài hình chữ L",
+      "nameEn": "The L-shaped external ear canal",
+      "nameZh": "L 形外耳道",
+      "latin": "Meatus acusticus externus",
+      "descriptionVi": "Mô tả: Ống tai ngoài của chó mèo gồm HAI đoạn gập góc gần vuông: đoạn đứng đi từ loa tai xuống dưới, rồi gập vào trong thành đoạn ngang chạy tới màng nhĩ. Chỗ gập ấy làm ống tai thành một cái bẫy: dịch tiết, ráy và nước đọng lại ở đáy đoạn đứng chứ không tự chảy ra được.\n\nKhác biệt: Ống tai người gần như thẳng và ngắn, nên tự làm sạch được và soi tai chỉ cần kéo nhẹ vành tai. Ống tai chó mèo dài, gập góc và có lông — muốn nhìn màng nhĩ phải kéo THẲNG loa tai lên trên và ra ngoài để duỗi chỗ gập, không làm thế thì ống soi chỉ chạm vào thành ống.\n\nÝ nghĩa lâm sàng: Chỗ gập chữ L là lý do giải phẫu khiến viêm tai ngoài ở chó tai cụp (Cocker, Poodle) tái đi tái lại: thuốc nhỏ khó tới đáy ống mà dịch viêm thì không thoát. Viêm mạn tính lâu ngày làm sụn ống tai vôi hoá, ống hẹp bít lại — lúc đó chỉ còn cách cắt bỏ toàn bộ ống tai kèm nạo bóng nhĩ (TECA-BO).\n\nNguồn: Evans & de Lahunta, Miller's Anatomy of the Dog, 4th ed. (2013)",
+      "descriptionEn": "Description: The external ear canal of dog and cat has TWO segments meeting at nearly a right angle: a vertical canal running down from the pinna, then bending medially into a horizontal canal that reaches the eardrum. That bend turns the canal into a trap: discharge, wax and water collect at the bottom of the vertical canal instead of draining out.\n\nDifference: The human ear canal is short and nearly straight, so it self-cleans and otoscopy needs only a gentle pull on the auricle. The canine and feline canal is long, angled and hairy — to see the eardrum the pinna must be pulled straight up and out to straighten the bend, otherwise the otoscope merely abuts the canal wall.\n\nClinical relevance: The L-bend is the anatomical reason otitis externa recurs in drop-eared dogs (Cocker, Poodle): drops struggle to reach the depths while inflammatory discharge cannot escape. Long-standing inflammation calcifies the canal cartilage and the lumen closes — at which point total ear canal ablation with bulla osteotomy is the only remaining option.\n\nSource: Evans & de Lahunta, Miller's Anatomy of the Dog, 4th ed. (2013)",
+      "descriptionZh": "描述: 犬猫外耳道由近乎直角相接的两段构成：自耳廓向下的垂直部，随后向内折转为通向鼓膜的水平部。此折角使耳道成为陷阱：分泌物、耵聍与积水滞留于垂直部底部而无法自行排出。\n\n差异: 人的外耳道短而近直，可自洁，耳镜检查仅需轻拉耳廓。犬猫耳道长、成角且有毛——欲窥鼓膜须将耳廓向上外方拉直以展平折角，否则耳镜只能抵住道壁。\n\n临床意义: L 形折角是垂耳犬（可卡、贵宾）外耳炎反复发作的解剖学原因：滴剂难达深部，炎性分泌物又无法排出。长期炎症使耳道软骨钙化、管腔闭塞——此时唯有全耳道切除加鼓泡骨切开术可行。\n\n来源: Evans & de Lahunta, Miller's Anatomy of the Dog, 4th ed. (2013)"
+    },
+    {
       "code": "vet-cat-cat-dental-formula",
       "speciesCode": "cat",
       "systemCode": "vet-cat-digestive",
@@ -640,6 +896,246 @@
       "descriptionZh": "描述: 猫舌背覆有坚硬角化的丝状乳头，尖端向后弯曲如成排倒钩。其无味觉功能，纯为机械工具：刮离骨上之肉，并用于梳理被毛——每个乳头尖端中空，可吸取唾液再释于毛被。\n\n差异: 人的丝状乳头柔软，仅司触觉。犬亦有丝状乳头，但柔软得多且未角化成钩。牛的丝状乳头粗大，用于卷取牧草，弯曲方向不同——牛以舌卷草而非刮削。\n\n临床意义: 向后的倒钩使猫无法吐出已入口之物：线、缝线与缝针只能一路下行。此即猫线性异物的解剖学基础——线端固定于舌下，远端随肠管前行并在多处切割肠壁。急性呕吐的猫必须抬舌检查舌系带。\n\n来源: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)"
     },
     {
+      "code": "vet-cat-dogcat-brachiocephalicus",
+      "speciesCode": "cat",
+      "systemCode": "vet-cat-muscular",
+      "nameVi": "Cơ cánh tay – đầu",
+      "nameEn": "Brachiocephalic muscle",
+      "nameZh": "臂头肌",
+      "latin": "M. brachiocephalicus",
+      "descriptionVi": "Mô tả: Dải cơ dài chạy từ xương cánh tay lên đầu và cổ, tạo nên đường gờ nổi rõ nhất ở mặt bên cổ. Ở thú bốn chân nó gồm hai phần nối nhau bằng một vạch gân ngang (clavicular intersection) — chính là di tích của xương đòn đã tiêu biến. Khi chi trước tì đất, cơ kéo đầu và cổ nghiêng sang bên; khi chi trước đưa lên, nó đẩy chi ra trước.\n\nKhác biệt: Ở người phần tương ứng tách hẳn thành cơ ức–đòn–chũm và cơ thang, vì xương đòn của người còn nguyên và làm chỗ bám thật. Chó mèo mất xương đòn nên hai phần dính liền thành một dải duy nhất — đó là lý do chi trước thú bốn chân nối với thân chỉ bằng cơ, không bằng khớp xương.\n\nÝ nghĩa lâm sàng: Rãnh cảnh (sulcus jugularis) nằm ngay dưới bờ bụng của cơ này — đây là mốc sờ để lấy máu tĩnh mạch cảnh, thao tác thường quy ở mèo và chó nhỏ khi tĩnh mạch chi quá bé. Bấm nhẹ đầu dưới rãnh cho tĩnh mạch nổi rồi đâm kim theo hướng về đầu.\n\nNguồn: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionEn": "Description: A long strap running from the humerus up to the head and neck, forming the most prominent ridge on the side of the neck. In quadrupeds it consists of two portions joined by a transverse clavicular intersection — the remnant of the vanished clavicle. With the forelimb planted it draws the head and neck laterally; with the limb raised it protracts the limb.\n\nDifference: In humans the equivalent splits into sternocleidomastoid and trapezius because the human clavicle persists and gives a real bony attachment. Dog and cat have lost the clavicle, so the two parts remain fused into a single strap — this is why the quadruped forelimb attaches to the trunk by muscle alone, with no bony joint.\n\nClinical relevance: The jugular groove lies immediately ventral to the ventral border of this muscle — the palpation landmark for jugular venepuncture, routine in cats and small dogs whose limb veins are too small. Occlude the groove at its lower end to raise the vein, then direct the needle towards the head.\n\nSource: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionZh": "描述: 自肱骨延至头颈的长带状肌，构成颈侧最明显的隆起。四足动物中该肌由两部分经横行的锁骨腱划相连——即退化锁骨的遗迹。前肢着地时牵引头颈侧偏；前肢抬起时则前伸该肢。\n\n差异: 人类因锁骨完整并提供真正的骨性附着，相应结构分化为胸锁乳突肌与斜方肌。犬猫锁骨退化，两部分融合为单一肌带——这正是四足动物前肢仅以肌肉、而非骨关节与躯干相连的原因。\n\n临床意义: 颈静脉沟紧位于该肌腹侧缘之下，是颈静脉采血的触诊标志；猫与小型犬四肢静脉过细时常规采用此法。于沟下端压迫使静脉充盈，再朝头侧进针。\n\n来源: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)"
+    },
+    {
+      "code": "vet-cat-dogcat-trapezius",
+      "speciesCode": "cat",
+      "systemCode": "vet-cat-muscular",
+      "nameVi": "Cơ thang",
+      "nameEn": "Trapezius",
+      "nameZh": "斜方肌",
+      "latin": "M. trapezius",
+      "descriptionVi": "Mô tả: Cơ mỏng hình tam giác phủ vùng u vai, bám từ dây chằng gáy và các mỏm gai đốt sống ngực xuống gai xương bả vai. Chia hai phần cổ và ngực. Nhiệm vụ là nâng và giữ xương bả vai áp vào thành ngực — nó là một trong những dây treo giữ cả chi trước vào thân.\n\nKhác biệt: Ở người cơ thang kéo xương bả và xương đòn, và vì người đứng hai chân nên nó chủ yếu chống lại trọng lượng cánh tay treo xuống. Ở chó mèo nó là thành phần của BỘ MÁY TREO NGỰC: chi trước không có khớp với thân, toàn bộ trọng lượng phần trước cơ thể truyền qua các cơ này chứ không qua xương.\n\nÝ nghĩa lâm sàng: Vùng cơ thang và dưới da giữa hai bả vai là chỗ tiêm dưới da quy ước ở chó mèo vì da ở đây lỏng và nhấc lên được. Tuy nhiên với mèo, hướng dẫn hiện nay khuyên KHÔNG tiêm vaccine ở vùng này mà chuyển xuống phần xa của chi, vì sarcoma tại chỗ tiêm ở mèo nếu mọc giữa hai bả vai thì gần như không cắt hết được.\n\nNguồn: Evans & de Lahunta, Miller's Anatomy of the Dog, 4th ed. (2013)",
+      "descriptionEn": "Description: A thin triangular sheet over the withers, running from the nuchal ligament and thoracic spinous processes down to the scapular spine. It has cervical and thoracic parts. Its job is to elevate the scapula and hold it against the chest wall — one of the slings by which the whole forelimb hangs from the trunk.\n\nDifference: In humans the trapezius moves scapula and clavicle, and because we stand bipedally it mainly resists the hanging weight of the arm. In dog and cat it is part of the thoracic sling: the forelimb has no joint with the trunk, so the entire weight of the forequarters passes through these muscles rather than through bone.\n\nClinical relevance: The trapezius region and the loose skin between the shoulder blades is the conventional subcutaneous injection site in dogs and cats, because the skin here lifts freely. For cats, however, current guidance is NOT to give vaccines here but distally on a limb: a feline injection-site sarcoma arising between the scapulae is very nearly impossible to excise completely.\n\nSource: Evans & de Lahunta, Miller's Anatomy of the Dog, 4th ed. (2013)",
+      "descriptionZh": "描述: 覆于鬐甲部的薄三角形肌片，起自项韧带与胸椎棘突，止于肩胛冈，分颈部与胸部两部。作用为提升肩胛骨并使其贴附胸壁——是悬吊整个前肢于躯干的吊带之一。\n\n差异: 人的斜方肌牵动肩胛骨与锁骨，因直立行走主要对抗上肢下垂之重量。犬猫的斜方肌则是胸廓吊带的组成部分：前肢与躯干无关节相连，前躯全部体重经由这些肌肉而非骨骼传递。\n\n临床意义: 斜方肌区及两肩胛间的松弛皮肤是犬猫常规皮下注射部位，因该处皮肤易于提起。但对猫，现行指南主张疫苗不在此处注射而改于肢体远端：猫注射部位肉瘤若发生于肩胛间，几乎无法完整切除。\n\n来源: Evans & de Lahunta, Miller's Anatomy of the Dog, 4th ed. (2013)"
+    },
+    {
+      "code": "vet-cat-dogcat-deltoideus",
+      "speciesCode": "cat",
+      "systemCode": "vet-cat-muscular",
+      "nameVi": "Cơ delta",
+      "nameEn": "Deltoid muscle",
+      "nameZh": "三角肌",
+      "latin": "M. deltoideus",
+      "descriptionVi": "Mô tả: Cơ phủ mặt ngoài khớp vai, bám từ gai xương bả vai và mỏm cùng vai xuống lồi củ delta của xương cánh tay. Ở chó mèo cơ có hai phần: phần gai (pars scapularis) và phần mỏm cùng (pars acromialis). Nhiệm vụ chính là gấp khớp vai và xoay xương cánh tay ra ngoài.\n\nKhác biệt: Cơ delta người có ba phần và bám cả vào xương đòn, nên nâng được cánh tay lên ngang vai và cao hơn — cử động mà chó mèo không làm được. Chó mèo mất xương đòn nên phần đòn của cơ delta cũng mất, biên độ vai vì thế gần như chỉ còn gấp – duỗi trong mặt phẳng đứng dọc.\n\nÝ nghĩa lâm sàng: Thần kinh nách (n. axillaris) chi phối cơ này chạy vòng quanh cổ xương cánh tay, nên trật khớp vai hoặc gãy đầu gần xương cánh tay dễ làm tổn thương nó. Dấu hiệu là con vật không gấp được vai và teo cơ vùng delta thấy rõ sau vài tuần.\n\nNguồn: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionEn": "Description: Covers the lateral aspect of the shoulder joint, arising from the scapular spine and acromion and inserting on the deltoid tuberosity of the humerus. In dog and cat it has two parts — pars scapularis and pars acromialis. Its main action is to flex the shoulder and rotate the humerus laterally.\n\nDifference: The human deltoid has three parts and also attaches to the clavicle, which is what allows the arm to be abducted to shoulder height and beyond — a movement dog and cat cannot perform. Having lost the clavicle they also lost the clavicular part, so shoulder excursion is essentially limited to flexion and extension in the sagittal plane.\n\nClinical relevance: The axillary nerve supplying this muscle winds around the neck of the humerus, so shoulder luxation or a proximal humeral fracture readily injures it. The sign is loss of shoulder flexion, with visible wasting over the deltoid region within a few weeks.\n\nSource: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionZh": "描述: 覆盖肩关节外侧，起自肩胛冈与肩峰，止于肱骨三角肌粗隆。犬猫的三角肌分肩胛部与肩峰部两部。主要作用为屈肩关节并使肱骨外旋。\n\n差异: 人的三角肌分三部并附着于锁骨，故上肢可外展至肩高以上——此动作犬猫无法完成。犬猫锁骨退化，三角肌锁骨部亦随之消失，肩关节活动基本限于矢状面的屈伸。\n\n临床意义: 支配该肌的腋神经绕肱骨颈走行，故肩关节脱位或肱骨近端骨折易致其损伤。表现为肩关节不能屈曲，数周内三角肌区可见明显萎缩。\n\n来源: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)"
+    },
+    {
+      "code": "vet-cat-dogcat-triceps-brachii",
+      "speciesCode": "cat",
+      "systemCode": "vet-cat-muscular",
+      "nameVi": "Cơ tam đầu cánh tay",
+      "nameEn": "Triceps brachii",
+      "nameZh": "肱三头肌",
+      "latin": "M. triceps brachii",
+      "descriptionVi": "Mô tả: Khối cơ lớn nhất của chi trước, chiếm gần trọn góc giữa xương bả vai và xương cánh tay. Gồm bốn đầu ở chó mèo (dài, ngoài, trong, phụ) — đầu dài bám vào bờ sau xương bả vai, ba đầu còn lại bám vào xương cánh tay; tất cả tụ về mỏm khuỷu. Nhiệm vụ là duỗi khớp khuỷu và chống đỡ trọng lượng khi chi tì đất.\n\nKhác biệt: Người có ba đầu, chó mèo có bốn — thêm đầu phụ (caput accessorium). Khác biệt quan trọng hơn là chức năng: ở người cơ tam đầu chỉ duỗi khuỷu, ở thú bốn chân nó phải GIỮ khuỷu khỏi gập lại dưới sức nặng cơ thể suốt thời gian đứng, nên khối cơ to hơn hẳn so với tỉ lệ cơ thể.\n\nÝ nghĩa lâm sàng: Liệt thần kinh quay đoạn cao làm mất chức năng cơ này: con vật không duỗi được khuỷu, chi khuỵu xuống và mu bàn chân quét đất khi đi. Phân biệt với liệt quay đoạn thấp — đoạn thấp vẫn duỗi được khuỷu, chỉ mất duỗi cổ chân và ngón.\n\nNguồn: Evans & de Lahunta, Miller's Anatomy of the Dog, 4th ed. (2013)",
+      "descriptionEn": "Description: The largest muscle mass of the forelimb, filling most of the angle between scapula and humerus. Dog and cat have four heads (long, lateral, medial, accessory) — the long head from the caudal border of the scapula, the others from the humerus; all converge on the olecranon. It extends the elbow and props the limb against body weight in stance.\n\nDifference: Humans have three heads, dog and cat four — the extra one is the accessory head. The more important difference is functional: in humans the triceps merely extends the elbow, whereas in a quadruped it must hold the elbow from collapsing under body weight throughout standing, so the muscle mass is proportionally far larger.\n\nClinical relevance: High radial nerve paralysis abolishes this muscle: the animal cannot extend the elbow, the limb buckles and the dorsum of the paw is dragged along the ground. Distinguish it from low radial paralysis, in which elbow extension is preserved and only carpal and digital extension are lost.\n\nSource: Evans & de Lahunta, Miller's Anatomy of the Dog, 4th ed. (2013)",
+      "descriptionZh": "描述: 前肢最大的肌块，几乎充满肩胛骨与肱骨之间的夹角。犬猫有四个头（长头、外侧头、内侧头、副头）——长头起自肩胛骨后缘，其余起自肱骨，共同止于鹰嘴。作用为伸肘并在站立负重时支撑该肢。\n\n差异: 人有三个头，犬猫有四个——多出副头。更重要的差异在功能：人的肱三头肌仅伸肘，而四足动物需在整个站立过程中防止肘关节在体重下塌陷，故其肌块比例明显更大。\n\n临床意义: 高位桡神经麻痹使该肌功能丧失：动物不能伸肘，患肢塌陷，行走时以爪背拖地。须与低位桡神经麻痹鉴别——后者伸肘功能保留，仅丧失腕与指的伸展。\n\n来源: Evans & de Lahunta, Miller's Anatomy of the Dog, 4th ed. (2013)"
+    },
+    {
+      "code": "vet-cat-dogcat-latissimus-dorsi",
+      "speciesCode": "cat",
+      "systemCode": "vet-cat-muscular",
+      "nameVi": "Cơ lưng rộng",
+      "nameEn": "Latissimus dorsi",
+      "nameZh": "背阔肌",
+      "latin": "M. latissimus dorsi",
+      "descriptionVi": "Mô tả: Tấm cơ rộng hình quạt phủ thành ngực bên, bám gốc vào cân ngực–thắt lưng và các xương sườn cuối, hội tụ thành một gân dẹt bám vào lồi củ tròn lớn mặt trong xương cánh tay. Cơ kéo chi trước về sau và về sát thân; khi chi tì đất thì nó kéo THÂN tiến về phía trước — đây mới là vai trò chính lúc chạy.\n\nKhác biệt: Cùng tên cùng chỗ bám như ở người, nhưng nhiệm vụ đảo ngược: người dùng nó để kéo cánh tay xuống (leo trèo, bơi), thú bốn chân dùng nó để kéo thân qua chi đang tì đất. Ở mèo cơ này mỏng và dài hơn chó — phù hợp với biên độ vươn mình lớn khi chạy nước rút và khi leo.\n\nÝ nghĩa lâm sàng: Bờ sau của cơ là mốc rạch da chuẩn cho phẫu thuật mở lồng ngực khoang liên sườn: đường rạch đi ngay sau bờ cơ để tách cơ ra trước chứ không cắt qua. Cơ này cũng hay được dùng làm vạt cơ có cuống che khuyết hổng thành ngực rộng.\n\nNguồn: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)",
+      "descriptionEn": "Description: A broad fan over the lateral chest wall, arising from the thoracolumbar fascia and last ribs and converging into a flat tendon on the teres major tuberosity of the medial humerus. It draws the forelimb caudally and towards the body; with the limb planted it instead pulls the TRUNK forwards — its principal role in locomotion.\n\nDifference: Same name and same attachments as in humans, but the task is reversed: humans use it to pull the arm down (climbing, swimming), the quadruped uses it to pull the trunk over the planted limb. In the cat it is thinner and longer than in the dog, matching the greater trunk extension used in sprinting and climbing.\n\nClinical relevance: Its caudal border is the standard skin-incision landmark for intercostal thoracotomy: the incision runs just behind the border so the muscle is retracted forwards rather than cut. It is also a common pedicled muscle flap for covering large chest-wall defects.\n\nSource: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)",
+      "descriptionZh": "描述: 覆于胸侧壁的宽阔扇形肌，起自胸腰筋膜与后位肋骨，汇成扁腱止于肱骨内侧的大圆肌粗隆。作用为向后并向内牵引前肢；当前肢着地时则牵引躯干前移——这才是奔跑时的主要作用。\n\n差异: 名称与附着与人相同，但功用相反：人用以下拉上肢（攀爬、游泳），四足动物则用以将躯干拉过着地的前肢。猫的背阔肌较犬更薄更长，与其冲刺及攀爬时更大的躯干伸展幅度相称。\n\n临床意义: 其后缘是肋间开胸术皮肤切口的标准标志：切口紧沿后缘，使该肌向前牵开而非切断。该肌亦常用作带蒂肌瓣以修补胸壁大面积缺损。\n\n来源: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)"
+    },
+    {
+      "code": "vet-cat-dogcat-obliquus-externus",
+      "speciesCode": "cat",
+      "systemCode": "vet-cat-muscular",
+      "nameVi": "Cơ chéo bụng ngoài",
+      "nameEn": "External abdominal oblique",
+      "nameZh": "腹外斜肌",
+      "latin": "M. obliquus externus abdominis",
+      "descriptionVi": "Mô tả: Lớp ngoài cùng trong bốn lớp cơ thành bụng. Bám gốc bằng những mấu răng cưa vào mặt ngoài các xương sườn — chính hàng răng cưa này nhìn thấy rõ trên mẫu vật lột da — rồi chạy chếch xuống dưới và về sau, tận cùng bằng một cân rộng góp phần tạo đường trắng. Sợi cơ hướng từ trên–trước xuống dưới–sau.\n\nKhác biệt: Cùng hướng sợi như ở người, nhưng gánh nặng khác hẳn: bụng người treo theo chiều dọc còn bụng thú bốn chân treo ngang như chiếc võng, nên bốn lớp cơ bụng phải chịu lực kéo liên tục của toàn bộ nội tạng. Đó là lý do thoát vị thành bụng ở chó mèo hay xảy ra sau chấn thương hơn là do yếu cơ đơn thuần.\n\nÝ nghĩa lâm sàng: Cân của cơ này tạo nên vòng bẹn nông — nơi thoát vị bẹn đi qua, và ở chó đực là đường đi của thừng tinh. Đường mổ sườn bên (flank approach) khi triệt sản mèo cái đi xuyên qua đúng cơ này: tách theo hướng sợi chứ không cắt ngang thì thành bụng liền tốt hơn nhiều.\n\nNguồn: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionEn": "Description: The outermost of the four abdominal wall layers. It arises by serrated digitations from the outer surface of the ribs — the row of serrations clearly visible on an écorché — then runs obliquely caudoventrally and ends in a broad aponeurosis contributing to the linea alba. Its fibres run cranio-dorsal to caudo-ventral.\n\nDifference: The fibre direction is the same as in humans, but the load is quite different: the human abdomen hangs vertically whereas the quadruped abdomen hangs sideways like a hammock, so the four layers carry the continuous pull of the whole viscera. This is why abdominal wall hernias in dog and cat follow trauma more often than simple muscular weakness.\n\nClinical relevance: Its aponeurosis forms the superficial inguinal ring — the exit of inguinal hernias and, in the male dog, the route of the spermatic cord. The flank approach for feline ovariectomy passes through this very muscle: splitting it along its fibres rather than cutting across them gives a far sounder body wall.\n\nSource: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionZh": "描述: 腹壁四层肌中最外层。以锯齿状肌齿起自肋骨外面——去皮标本上清晰可见的锯齿列即此——继而斜向后下走行，终于宽阔腱膜并参与构成白线。肌纤维方向为前上至后下。\n\n差异: 肌纤维方向与人相同，但受力迥异：人的腹部纵向悬垂，四足动物的腹部则如吊床般横向悬挂，四层腹肌须持续承受全部内脏的牵拉。故犬猫腹壁疝多继发于外伤，而非单纯肌力不足。\n\n临床意义: 其腱膜构成腹股沟浅环——腹股沟疝的出口，在公犬亦为精索通路。母猫卵巢摘除的肋腹入路正穿经此肌：顺纤维方向钝性分离而非横断，腹壁愈合远为牢固。\n\n来源: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)"
+    },
+    {
+      "code": "vet-cat-dogcat-gluteus-medius",
+      "speciesCode": "cat",
+      "systemCode": "vet-cat-muscular",
+      "nameVi": "Cơ mông giữa",
+      "nameEn": "Middle gluteal muscle",
+      "nameZh": "臀中肌",
+      "latin": "M. gluteus medius",
+      "descriptionVi": "Mô tả: Cơ mông lớn nhất và khoẻ nhất ở chó mèo, phủ mặt ngoài cánh xương chậu và bám vào mấu chuyển lớn xương đùi. Nó duỗi khớp háng và dạng chi — là cơ sinh lực đẩy chính khi bật nhảy và khi tăng tốc. Ở thú bốn chân cơ mông giữa lớn hơn cơ mông nông, ngược hẳn với người.\n\nKhác biệt: Ở người cơ mông LỚN mới là cơ mông to nhất, vì đứng hai chân cần giữ thân thẳng trên háng. Chó mèo không có nhu cầu ấy nên cơ mông nông nhỏ đi, còn cơ mông giữa phình ra để đẩy. Mèo có cơ mông giữa dày hơn chó theo tỉ lệ — đó là một phần lý do mèo bật cao gấp nhiều lần chiều cao thân.\n\nÝ nghĩa lâm sàng: Khối cơ này là vị trí tiêm bắp cổ điển ở chó, nhưng phải tiêm vào phần TRƯỚC của khối, tránh xa phía sau nơi thần kinh toạ đi qua khuyết ngồi lớn — tiêm sai chỗ gây liệt toạ, con vật lê bàn chân sau. Với mèo hiện nay ưu tiên tiêm bắp ở cơ lưng thắt lưng hoặc cơ tứ đầu vì khối mông của mèo mỏng.\n\nNguồn: Evans & de Lahunta, Miller's Anatomy of the Dog, 4th ed. (2013)",
+      "descriptionEn": "Description: The largest and strongest gluteal muscle in dog and cat, covering the lateral face of the ilial wing and inserting on the greater trochanter of the femur. It extends the hip and abducts the limb — the main propulsive muscle in jumping and acceleration. In quadrupeds the middle gluteal is larger than the superficial gluteal, the reverse of the human arrangement.\n\nDifference: In humans the gluteus MAXIMUS is the largest, because bipedal stance requires the trunk to be held upright over the hip. Dog and cat have no such need, so the superficial gluteal is reduced while the middle gluteal enlarges for propulsion. The cat's middle gluteal is proportionally thicker than the dog's — part of why a cat can jump many times its own body height.\n\nClinical relevance: This mass is the classical intramuscular injection site in the dog, but the needle must go into the CRANIAL part, well away from the sciatic nerve passing through the greater sciatic notch — a misplaced injection causes sciatic paralysis and the animal knuckles the hind paw. In cats the lumbar epaxial or quadriceps muscles are now preferred, because the feline gluteal mass is thin.\n\nSource: Evans & de Lahunta, Miller's Anatomy of the Dog, 4th ed. (2013)",
+      "descriptionZh": "描述: 犬猫最大最强的臀肌，覆盖髂骨翼外面，止于股骨大转子。作用为伸髋并外展该肢——是跳跃与加速时的主要推进肌。四足动物的臀中肌大于臀浅肌，与人恰好相反。\n\n差异: 人以臀大肌为最大，因直立姿势需将躯干撑于髋上。犬猫无此需求，臀浅肌因而缩小，臀中肌则增大以供推进。猫的臀中肌比例上厚于犬——这是猫能跃起数倍体高的原因之一。\n\n临床意义: 该肌块是犬的经典肌肉注射部位，但须注入其前部，远离经坐骨大切迹走行的坐骨神经——注射位置不当可致坐骨神经麻痹，动物后爪拖曳。猫因臀部肌块菲薄，现多首选腰背最长肌或股四头肌注射。\n\n来源: Evans & de Lahunta, Miller's Anatomy of the Dog, 4th ed. (2013)"
+    },
+    {
+      "code": "vet-cat-dogcat-biceps-femoris",
+      "speciesCode": "cat",
+      "systemCode": "vet-cat-muscular",
+      "nameVi": "Cơ hai đầu đùi",
+      "nameEn": "Biceps femoris",
+      "nameZh": "股二头肌",
+      "latin": "M. biceps femoris",
+      "descriptionVi": "Mô tả: Cơ dài nhất và nông nhất trong nhóm cơ sau đùi, tạo nên toàn bộ đường viền sau của đùi nhìn từ bên. Bám gốc ở ụ ngồi và dây chằng cùng–ngồi, toả xuống bám vào xương bánh chè, mào xương chày và qua gân gót. Duỗi háng, gấp gối và tham gia duỗi cổ chân.\n\nKhác biệt: Người có cơ hai đầu đùi hai đầu (dài và ngắn); chó mèo chỉ có một đầu ở ụ ngồi và không có đầu ngắn ở xương đùi. Điểm khác đáng nói hơn là cơ ở thú bốn chân bám tới tận gân gót, nên nó nối háng với cổ chân thành một chuỗi truyền lực — cử động một khớp kéo theo khớp kia, không tách rời như ở người.\n\nÝ nghĩa lâm sàng: Thần kinh toạ chạy sát mặt sâu của cơ này, nên đây là đường vào chuẩn để bộc lộ thần kinh toạ khi nối thần kinh hoặc khi phong bế. Bờ trước của cơ cũng là mốc để sờ tìm gân gót và đánh giá đứt gân gót — chấn thương hay gặp ở chó chạy nhiều.\n\nNguồn: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionEn": "Description: The longest and most superficial of the caudal thigh muscles, forming the entire caudal contour of the thigh in lateral view. It arises from the ischiatic tuber and sacrotuberous ligament and spreads to the patella, tibial crest and the common calcanean tendon. It extends the hip, flexes the stifle and assists hock extension.\n\nDifference: The human biceps femoris has two heads (long and short); dog and cat have only the ischiatic head and no short femoral head. The more telling difference is that in quadrupeds the muscle reaches the calcanean tendon, linking hip to hock in a single force chain — moving one joint necessarily moves the other, unlike the more independent human arrangement.\n\nClinical relevance: The sciatic nerve runs immediately deep to this muscle, making it the standard approach for exposing the nerve for repair or for a regional block. Its cranial border is also the landmark for palpating the common calcanean tendon and assessing rupture — a frequent injury in active working dogs.\n\nSource: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionZh": "描述: 股后肌群中最长最浅者，构成侧面观整个股部后缘轮廓。起自坐骨结节与骶结节韧带，分布止于髌骨、胫骨嵴及跟总腱。作用为伸髋、屈膝并协助伸跗关节。\n\n差异: 人的股二头肌有长短两头；犬猫仅有坐骨头而无股骨短头。更值得注意的差异是四足动物该肌延伸至跟腱，将髋与跗连成一条力链——一个关节的活动必然牵动另一个，不似人的相对独立。\n\n临床意义: 坐骨神经紧贴该肌深面走行，故此处是显露坐骨神经以行修补或神经阻滞的标准入路。其前缘亦为触诊跟总腱及判断其断裂的标志——此损伤在活动量大的工作犬中常见。\n\n来源: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)"
+    },
+    {
+      "code": "vet-cat-dogcat-quadriceps",
+      "speciesCode": "cat",
+      "systemCode": "vet-cat-muscular",
+      "nameVi": "Cơ tứ đầu đùi",
+      "nameEn": "Quadriceps femoris",
+      "nameZh": "股四头肌",
+      "latin": "M. quadriceps femoris",
+      "descriptionVi": "Mô tả: Khối cơ mặt trước đùi gồm bốn phần: cơ thẳng đùi bám ở xương chậu, ba cơ rộng bám quanh thân xương đùi. Cả bốn tụ vào một gân chung ôm lấy xương bánh chè rồi bám vào mào xương chày. Đây là cơ duỗi gối duy nhất — không có cơ nào thay thế được nó.\n\nKhác biệt: Cấu tạo giống người, nhưng ở chó mèo khớp gối luôn hơi gấp khi đứng chứ không duỗi thẳng khoá lại như đầu gối người. Nghĩa là cơ tứ đầu phải co giữ liên tục suốt thời gian đứng — thú bốn chân không có cơ chế 'khoá gối' tiết kiệm sức như người, còn ngựa thì có (bộ máy đứng).\n\nÝ nghĩa lâm sàng: Co rút cơ tứ đầu (quadriceps contracture) là biến chứng đáng sợ sau gãy xương đùi ở chó con: cơ dính vào ổ gãy, gối bị khoá ở tư thế duỗi cứng và chi thành vô dụng. Phòng bằng cách vận động sớm sau kết hợp xương chứ không bó bột bất động lâu.\n\nNguồn: Evans & de Lahunta, Miller's Anatomy of the Dog, 4th ed. (2013)",
+      "descriptionEn": "Description: The mass on the cranial thigh, of four parts: rectus femoris from the pelvis and three vasti from the shaft of the femur. All four converge on a common tendon that encloses the patella and inserts on the tibial crest. It is the sole extensor of the stifle — no other muscle can substitute for it.\n\nDifference: Structurally as in humans, but in dog and cat the stifle is always somewhat flexed in stance rather than locked straight as the human knee is. The quadriceps must therefore contract continuously throughout standing — these species have no energy-saving knee-locking mechanism, unlike the horse with its stay apparatus.\n\nClinical relevance: Quadriceps contracture is the feared complication of femoral fracture in puppies: the muscle adheres to the fracture callus, the stifle locks in rigid extension and the limb becomes useless. Prevention is early mobilisation after fixation, not prolonged immobilisation in a cast.\n\nSource: Evans & de Lahunta, Miller's Anatomy of the Dog, 4th ed. (2013)",
+      "descriptionZh": "描述: 股前部肌块，由四部分组成：起自骨盆的股直肌与起自股骨体的三块股肌。四者汇成包绕髌骨的总腱，止于胫骨嵴。此为膝关节唯一的伸肌——无其他肌肉可代偿。\n\n差异: 结构与人相同，但犬猫站立时膝关节始终略屈，不似人膝可伸直锁定。故股四头肌在整个站立期间须持续收缩——此类动物无人类式的省力锁膝机制，而马则具备（站立装置）。\n\n临床意义: 股四头肌挛缩是幼犬股骨骨折的可怕并发症：肌肉与骨痂粘连，膝关节被锁定于强直伸展位，患肢丧失功能。预防在于内固定后早期活动，而非长期石膏制动。\n\n来源: Evans & de Lahunta, Miller's Anatomy of the Dog, 4th ed. (2013)"
+    },
+    {
+      "code": "vet-cat-dogcat-gastrocnemius",
+      "speciesCode": "cat",
+      "systemCode": "vet-cat-muscular",
+      "nameVi": "Cơ bụng chân",
+      "nameEn": "Gastrocnemius",
+      "nameZh": "腓肠肌",
+      "latin": "M. gastrocnemius",
+      "descriptionVi": "Mô tả: Cơ tạo nên khối bắp chân, có hai đầu bám vào hai lồi trên lồi cầu xương đùi và tận cùng bằng phần lớn nhất của gân gót chung bám vào mỏm gót. Duỗi cổ chân và gấp gối. Trong mỗi đầu cơ thường có một xương vừng nhỏ (fabella) nằm ngay sau lồi cầu đùi.\n\nKhác biệt: Người đi bằng cả bàn chân (plantigrade) nên cơ bụng chân chỉ nhấc gót khi bước; chó mèo đi bằng ngón (digitigrade), cổ chân luôn nâng khỏi mặt đất và cơ này phải chịu tải suốt. Xương vừng fabella thì người không có — thấy nó trên phim X-quang gối chó mèo là bình thường, đừng nhầm là mảnh xương vỡ.\n\nÝ nghĩa lâm sàng: Đứt gân gót chung làm con vật đi bằng cả bàn chân sau, cổ chân sát đất — dáng đi rất đặc trưng, nhìn là nhận ra. Hay gặp ở chó lớn tuổi giống Doberman và ở vết cắt do mảnh kim loại. Phải cố định cổ chân ở tư thế duỗi nhiều tuần sau khi khâu gân.\n\nNguồn: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)",
+      "descriptionEn": "Description: Forms the calf mass, arising by two heads from the supracondylar tuberosities of the femur and ending as the largest component of the common calcanean tendon on the calcaneal tuber. It extends the hock and flexes the stifle. Each head usually contains a small sesamoid — the fabella — lying just behind the femoral condyle.\n\nDifference: Humans are plantigrade, so the gastrocnemius merely lifts the heel during gait; dog and cat are digitigrade, the hock never touches the ground and the muscle is loaded throughout stance. The fabella has no human counterpart — seeing it on a canine or feline stifle radiograph is normal and must not be mistaken for a fracture fragment.\n\nClinical relevance: Rupture of the common calcanean tendon makes the animal walk on the whole hind foot with the hock down to the ground — a plantigrade stance so characteristic it is recognised at a glance. It is seen in older large-breed dogs, notably Dobermanns, and after lacerations from sheet metal. The hock must be immobilised in extension for several weeks after tendon repair.\n\nSource: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)",
+      "descriptionZh": "描述: 构成小腿肌块，以两头起自股骨髁上结节，终为跟总腱最大的组成部分，止于跟结节。作用为伸跗关节、屈膝关节。每头内通常含一小籽骨（腓肠豆），位于股骨髁后方。\n\n差异: 人为跖行，腓肠肌仅在步态中抬起足跟；犬猫为趾行，跗关节始终离地，该肌在整个支撑期持续负荷。腓肠豆为人所无——犬猫膝关节 X 线片上见到它属正常，切勿误认为骨折碎片。\n\n临床意义: 跟总腱断裂使动物以整个后足着地行走、跗关节触地——此跖行姿势极具特征，一望即知。多见于老龄大型犬（尤其杜宾）及金属片割伤之后。腱修补后须将跗关节固定于伸展位数周。\n\n来源: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)"
+    },
+    {
+      "code": "vet-cat-dogcat-biceps-brachii",
+      "speciesCode": "cat",
+      "systemCode": "vet-cat-muscular",
+      "nameVi": "Cơ hai đầu cánh tay",
+      "nameEn": "Biceps brachii",
+      "nameZh": "肱二头肌",
+      "latin": "M. biceps brachii",
+      "descriptionVi": "Mô tả: Cơ nằm ở mặt trước xương cánh tay, bám gốc bằng một gân duy nhất vào lồi củ trên ổ chảo của xương bả vai, gân ấy chạy trong rãnh gian củ rồi bám vào xương quay và xương trụ. Gấp khuỷu và duỗi vai. Vì gân đầu dài bắc qua khớp vai, cơ này còn giữ vai khỏi bung ra khi chi chịu tải.\n\nKhác biệt: Người có HAI đầu (nên mới gọi là cơ hai đầu) và cơ này còn ngửa được cẳng tay — động tác xoay lòng bàn tay lên. Chó mèo chỉ có MỘT đầu, và cẳng tay của chúng gần như không ngửa được vì xương quay và xương trụ dính chặt vào nhau. Mèo còn xoay được chút ít nên vờn và ôm mồi được; chó thì gần như không.\n\nÝ nghĩa lâm sàng: Viêm gân đầu dài cơ hai đầu là nguyên nhân què chi trước mạn tính hay gặp ở chó lớn vận động nhiều. Khám bằng cách gấp vai đồng thời duỗi khuỷu để căng gân — con vật đau thì rụt chi lại. Chẩn đoán xác nhận bằng siêu âm rãnh gian củ, chỗ gân dễ dày lên và có dịch.\n\nNguồn: Evans & de Lahunta, Miller's Anatomy of the Dog, 4th ed. (2013)",
+      "descriptionEn": "Description: Lies on the cranial aspect of the humerus, arising by a single tendon from the supraglenoid tubercle of the scapula; that tendon runs in the intertubercular groove before the muscle inserts on radius and ulna. It flexes the elbow and extends the shoulder. Because the tendon of origin bridges the shoulder joint, the muscle also stabilises that joint under load.\n\nDifference: Humans have TWO heads (hence the name) and the muscle also supinates the forearm — turning the palm up. Dog and cat have only ONE head, and their forearm barely supinates because radius and ulna are tightly bound together. The cat retains a little rotation, enough to bat and to clasp prey; the dog has almost none.\n\nClinical relevance: Bicipital tenosynovitis is a common cause of chronic forelimb lameness in active large-breed dogs. Test it by flexing the shoulder while extending the elbow to put the tendon on stretch — a painful dog withdraws the limb. Confirm by ultrasound of the intertubercular groove, where the tendon thickens and effusion collects.\n\nSource: Evans & de Lahunta, Miller's Anatomy of the Dog, 4th ed. (2013)",
+      "descriptionZh": "描述: 位于肱骨前面，以单一肌腱起自肩胛骨盂上结节，该腱经结节间沟走行，肌止于桡骨与尺骨。作用为屈肘、伸肩。因起始腱跨越肩关节，该肌亦在负重时稳定肩关节。\n\n差异: 人有两个头（故名二头肌），且该肌尚能使前臂旋后——即掌心向上。犬猫仅一个头，且因桡尺骨紧密结合，前臂几乎不能旋后。猫尚保留少许旋转，足以拨弄并抱持猎物；犬则几乎没有。\n\n临床意义: 肱二头肌腱鞘炎是活跃大型犬慢性前肢跛行的常见原因。检查时屈肩同时伸肘以牵张该腱——疼痛者会缩回患肢。确诊依靠结节间沟超声检查，可见腱增厚并伴积液。\n\n来源: Evans & de Lahunta, Miller's Anatomy of the Dog, 4th ed. (2013)"
+    },
+    {
+      "code": "vet-cat-dogcat-masseter",
+      "speciesCode": "cat",
+      "systemCode": "vet-cat-muscular",
+      "nameVi": "Cơ cắn",
+      "nameEn": "Masseter",
+      "nameZh": "咬肌",
+      "latin": "M. masseter",
+      "descriptionVi": "Mô tả: Khối cơ dày phủ mặt ngoài nhánh xương hàm dưới, bám từ cung gò má xuống hố cơ cắn. Cùng với cơ thái dương, nó là cơ khép hàm chính và sinh gần như toàn bộ lực cắn. Ở mèo cơ thái dương lớn hơn cơ cắn; ở chó tỉ lệ hai cơ thay đổi mạnh theo giống.\n\nKhác biệt: Người có cơ cắn khoẻ để nghiền ngang, và khớp thái dương hàm cho hàm trượt sang bên. Chó mèo thì khớp ấy gần như là bản lề thuần: hàm chỉ mở ra khép vào. Vì thế lực cắn của chúng dồn hết vào răng ăn thịt để CẮT, không dàn ra mặt răng để nghiền.\n\nÝ nghĩa lâm sàng: Viêm cơ nhai ở chó là bệnh tự miễn đánh vào sợi cơ loại 2M chỉ có ở nhóm cơ này: giai đoạn cấp mặt sưng và đau, giai đoạn mạn thì cơ teo lõm hai bên đầu và con vật KHÔNG há được miệng. Chẩn đoán bằng kháng thể kháng 2M; điều trị corticoid liều cao, để muộn thì xơ hoá không hồi phục.\n\nNguồn: Evans & de Lahunta, Miller's Anatomy of the Dog, 4th ed. (2013)",
+      "descriptionEn": "Description: The thick mass covering the lateral face of the mandibular ramus, from the zygomatic arch down into the masseteric fossa. With the temporalis it is the principal jaw-closing muscle and generates almost all of the bite force. In the cat the temporalis outweighs the masseter; in the dog the ratio varies widely with breed.\n\nDifference: Humans have a strong masseter for lateral grinding, and a temporomandibular joint that lets the jaw slide sideways. In dog and cat that joint is essentially a pure hinge: the jaw only opens and closes. Their bite force is therefore concentrated on the carnassial teeth for shearing rather than spread over grinding surfaces.\n\nClinical relevance: Masticatory muscle myositis in the dog is an autoimmune attack on type 2M fibres found only in this muscle group: acutely the face is swollen and painful, chronically the muscles waste into hollows over the skull and the animal CANNOT open its mouth. Diagnosis is by anti-2M antibody titre; treatment is high-dose corticosteroid, and if left late the fibrosis is irreversible.\n\nSource: Evans & de Lahunta, Miller's Anatomy of the Dog, 4th ed. (2013)",
+      "descriptionZh": "描述: 覆盖下颌支外面的厚实肌块，起自颧弓，止于咬肌窝。与颞肌共同构成闭颌的主要肌肉，几乎产生全部咬合力。猫的颞肌大于咬肌；犬两肌之比则因品种差异极大。\n\n差异: 人的咬肌强大以行横向研磨，颞下颌关节允许下颌侧滑。犬猫的该关节基本为纯铰链：下颌仅能开合。故其咬合力集中于裂齿以行剪切，而非分散于研磨面。\n\n临床意义: 犬咀嚼肌炎是针对仅存于该肌群的 2M 型肌纤维的自身免疫病：急性期面部肿胀疼痛，慢性期肌肉萎缩致头部两侧凹陷，动物无法张口。经抗 2M 抗体效价确诊；以大剂量糖皮质激素治疗，延误则纤维化不可逆。\n\n来源: Evans & de Lahunta, Miller's Anatomy of the Dog, 4th ed. (2013)"
+    },
+    {
+      "code": "vet-cat-dogcat-pectoralis",
+      "speciesCode": "cat",
+      "systemCode": "vet-cat-muscular",
+      "nameVi": "Cơ ngực",
+      "nameEn": "Pectoral muscles",
+      "nameZh": "胸肌",
+      "latin": "Mm. pectorales",
+      "descriptionVi": "Mô tả: Nhóm cơ nằm giữa xương ức và mặt trong chi trước, gồm phần nông và phần sâu. Chúng khép chi trước vào thân và giữ cho thân khỏi tụt xuống giữa hai chi khi đứng — cùng với cơ răng bụng và cơ thang, chúng làm nên bộ máy treo ngực.\n\nKhác biệt: Cơ ngực người to và khoẻ vì tay dùng để kéo và đẩy; ở chó mèo nó tương đối mỏng, vì gánh nặng chính do cơ răng bụng chịu. Điểm khác quyết định: người có xương đòn chống ngang giữ vai ra xa thân, thú bốn chân không có — nên cơ ngực của chúng vừa treo vừa giữ ngang, hai việc cùng lúc.\n\nÝ nghĩa lâm sàng: Vùng cơ ngực nông là chỗ đặt kim gây tê thấm khi mổ thoát vị rốn hoặc rạch da đường giữa bụng trước. Quan trọng hơn: chó con mắc hội chứng bơi có lồng ngực bẹt do nằm sấp lâu, cơ ngực co rút khép chi vào — sửa bằng buộc chân tạm và cho nằm nghiêng, càng sớm càng phục hồi hoàn toàn.\n\nNguồn: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionEn": "Description: The group between the sternum and the medial side of the forelimb, in superficial and deep parts. They adduct the limb and stop the trunk from sinking between the forelimbs in stance — with serratus ventralis and trapezius they form the thoracic sling.\n\nDifference: The human pectoralis is large and powerful because the arm pulls and pushes; in dog and cat it is relatively thin, the main load being borne by serratus ventralis. The decisive difference: humans have a clavicle strutting the shoulder away from the trunk, quadrupeds do not — so their pectorals both suspend and stabilise laterally at the same time.\n\nClinical relevance: The superficial pectoral region is where infiltration anaesthesia is placed for umbilical hernia repair or a cranial ventral midline incision. More importantly: swimmer puppies develop a flattened thorax from lying sternally, with contracted pectorals holding the limbs adducted — corrected by temporary hobbles and lateral recumbency, and the earlier this is done the more complete the recovery.\n\nSource: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionZh": "描述: 位于胸骨与前肢内侧之间的肌群，分浅部与深部。作用为内收前肢，并在站立时防止躯干下沉于两前肢之间——与腹侧锯肌、斜方肌共同构成胸廓吊带。\n\n差异: 人的胸大肌粗壮，因上肢需推拉发力；犬猫的胸肌相对菲薄，主要负荷由腹侧锯肌承担。关键差异在于：人有锁骨将肩撑离躯干，四足动物没有——故其胸肌须同时承担悬吊与侧向稳定两项任务。\n\n临床意义: 胸浅肌区为脐疝修补或腹前正中切口浸润麻醉的进针部位。更重要的是：游泳幼犬综合征因长期伏卧致胸廓扁平、胸肌挛缩使四肢内收——以临时绑腿并改侧卧矫正，越早处理恢复越完全。\n\n来源: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)"
+    },
+    {
+      "code": "vet-cat-dogcat-antebrachial-extensors",
+      "speciesCode": "cat",
+      "systemCode": "vet-cat-muscular",
+      "nameVi": "Nhóm cơ duỗi cẳng tay",
+      "nameEn": "Extensor group of the antebrachium",
+      "nameZh": "前臂伸肌群",
+      "latin": "Mm. extensores antebrachii",
+      "descriptionVi": "Mô tả: Nhóm cơ nằm ở mặt trước – ngoài cẳng tay, gồm cơ duỗi cổ tay quay, cơ duỗi chung các ngón và cơ duỗi ngoài các ngón. Bụng cơ nằm ở nửa trên cẳng tay rồi thu thành gân dài chạy qua cổ tay xuống các ngón — vì thế nửa dưới cẳng tay thú bốn chân gần như chỉ còn gân và da.\n\nKhác biệt: Người có thêm cơ ngửa và cơ sấp cho phép xoay lòng bàn tay; chó mèo gần như mất hẳn động tác ấy vì xương quay và xương trụ dính chặt. Đổi lại phần xa chi nhẹ bẫng — khối cơ dồn hết về gần thân, quán tính nhỏ, nên guồng chân nhanh hơn nhiều so với tay người.\n\nÝ nghĩa lâm sàng: Vì phần xa chi chỉ có gân và da, vết thương ở cẳng tay dưới và cổ tay chó mèo rất dễ lộ gân và không có cơ để che kín — đó là lý do vết thương vùng này lâu liền, hay phải ghép da hoặc để liền thứ phát. Ống truyền tĩnh mạch đầu cũng đi dọc mặt trước cẳng tay ngay trên nhóm cơ này.\n\nNguồn: Evans & de Lahunta, Miller's Anatomy of the Dog, 4th ed. (2013)",
+      "descriptionEn": "Description: The group on the craniolateral antebrachium: extensor carpi radialis, common digital extensor and lateral digital extensor. The bellies sit in the proximal half of the forearm and taper into long tendons crossing the carpus to the digits — which is why the distal half of a quadruped forearm is little more than tendon and skin.\n\nDifference: Humans also have supinator and pronator muscles that rotate the palm; dog and cat have essentially lost that movement because radius and ulna are bound together. In exchange the distal limb is very light — the muscle mass is concentrated proximally, inertia is low, and the limb can be cycled far faster than a human arm.\n\nClinical relevance: Because the distal limb is only tendon and skin, wounds of the distal forearm and carpus in dog and cat readily expose tendon with no muscle to cover them — which is why wounds here heal slowly and often need a skin graft or second-intention healing. The cephalic vein used for intravenous catheters also runs down the cranial forearm directly over this group.\n\nSource: Evans & de Lahunta, Miller's Anatomy of the Dog, 4th ed. (2013)",
+      "descriptionZh": "描述: 位于前臂前外侧的肌群，包括桡侧腕伸肌、指总伸肌与指外侧伸肌。肌腹位于前臂近半，向下移行为跨越腕关节至各指的长腱——故四足动物前臂远半几乎只剩肌腱与皮肤。\n\n差异: 人另有旋后肌与旋前肌可使掌心翻转；犬猫因桡尺骨紧密结合基本丧失此动作。代价换来的是远端肢体极轻——肌块集中于近端，惯量小，摆动频率远高于人的上肢。\n\n临床意义: 因远端肢体仅有肌腱与皮肤，犬猫前臂远端及腕部创伤极易暴露肌腱且无肌肉可供覆盖——故此处创口愈合缓慢，常需植皮或二期愈合。静脉留置针所用的头静脉亦沿前臂前面、正走行于该肌群之上。\n\n来源: Evans & de Lahunta, Miller's Anatomy of the Dog, 4th ed. (2013)"
+    },
+    {
+      "code": "vet-cat-dogcat-semitendinosus",
+      "speciesCode": "cat",
+      "systemCode": "vet-cat-muscular",
+      "nameVi": "Cơ bán gân",
+      "nameEn": "Semitendinosus",
+      "nameZh": "半腱肌",
+      "latin": "M. semitendinosus",
+      "descriptionVi": "Mô tả: Cơ nằm ở mặt sau đùi, ngay sau cơ hai đầu đùi, tạo nên đường viền sau cùng của đùi nhìn từ bên. Bám gốc ở ụ ngồi, xuống bám vào mào xương chày và gân gót. Duỗi háng, gấp gối, và khi chi tì đất thì đẩy thân tiến về trước.\n\nKhác biệt: Cùng tên với cơ bán gân của người, nhưng ở chó mèo nó dày và ngắn hơn nhiều theo tỉ lệ, vì háng của thú bốn chân luôn gấp chứ không duỗi thẳng như người đứng. Ở bò và ngựa cơ này là khối thịt lớn nhất của đùi sau — chính là phần thịt mông người ta vẫn ăn.\n\nÝ nghĩa lâm sàng: Cơ bán gân là nơi lấy vạt cơ có cuống che khuyết hổng vùng đáy chậu và trực tràng sau khi cắt u quanh hậu môn. Ở chó chăn cừu và chó làm việc còn gặp bệnh xơ hoá cơ bán gân: dáng đi giật đặc trưng, bước sau ngắn và xoay vào trong, hầu như không chữa được.\n\nNguồn: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)",
+      "descriptionEn": "Description: Lies on the caudal thigh immediately behind biceps femoris, forming the hindmost contour of the thigh in lateral view. It arises from the ischiatic tuber and inserts on the tibial crest and the calcanean tendon. It extends the hip, flexes the stifle, and with the limb planted drives the body forwards.\n\nDifference: The same name as the human semitendinosus, but in dog and cat it is proportionally much thicker and shorter, because the quadruped hip is always flexed rather than extended as in human stance. In cattle and horses this is the largest meat mass of the caudal thigh — the cut sold as topside.\n\nClinical relevance: Semitendinosus is the donor for a pedicled muscle flap covering perineal and rectal defects after perianal tumour excision. Working and herding dogs also suffer gracilis-semitendinosus fibrotic myopathy: a characteristic snapping gait with a shortened, internally rotated hind stride, for which there is essentially no cure.\n\nSource: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)",
+      "descriptionZh": "描述: 位于股后部，紧邻股二头肌之后，构成侧面观股部最后缘。起自坐骨结节，止于胫骨嵴与跟腱。作用为伸髋、屈膝，并在该肢着地时推动躯体前进。\n\n差异: 与人的半腱肌同名，但犬猫的该肌比例上更厚更短，因四足动物髋关节始终屈曲，不似人直立时伸展。牛马的此肌为股后最大的肉块——即市售的后腿肉。\n\n临床意义: 半腱肌是肛周肿瘤切除后修补会阴与直肠缺损的带蒂肌瓣供体。牧羊犬与工作犬另可发生股薄肌-半腱肌纤维性肌病：步态呈特征性弹跳、后肢步幅缩短并内旋，基本无法治愈。\n\n来源: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)"
+    },
+    {
+      "code": "vet-cat-dogcat-heart-position",
+      "speciesCode": "cat",
+      "systemCode": "vet-cat-cardiovascular",
+      "nameVi": "Vị trí quả tim trong lồng ngực",
+      "nameEn": "Position of the heart in the thorax",
+      "nameZh": "心脏在胸腔内的位置",
+      "latin": "Cor",
+      "descriptionVi": "Mô tả: Tim chó mèo nằm gần như giữa lồng ngực, chiếm khoảng khoang liên sườn 3 đến 6, hơi lệch trái. Trục dài của tim chạy chếch từ trên–trước xuống dưới–sau, mỏm tim chạm sát xương ức ở khoang liên sườn 5–6. Tim chiếm khoảng 2,5–3,5 lần bề rộng một đốt sống ngực trên phim nghiêng — thước đo VHS dùng để đánh giá tim to.\n\nKhác biệt: Tim người nằm lệch trái rõ rệt và mỏm tim chỉ sang trái, vì lồng ngực người dẹt theo chiều trước–sau. Lồng ngực chó mèo dẹt theo chiều BÊN, nên tim nằm giữa hơn và nghe tim hai bên đều rõ — điều không đúng ở người.\n\nÝ nghĩa lâm sàng: Bốn điểm nghe van theo thứ tự PAM–T: bên TRÁI từ trên xuống là van động mạch phổi (KLS 3), van động mạch chủ (KLS 4), van hai lá (KLS 5); bên PHẢI là van ba lá (KLS 3–4). Tiếng thổi tâm thu mạnh nhất ở mỏm tim trái là dấu hiệu kinh điển của bệnh thoái hoá van hai lá — bệnh tim mắc phải hay gặp nhất ở chó nhỏ.\n\nNguồn: Evans & de Lahunta, Miller's Anatomy of the Dog, 4th ed. (2013)",
+      "descriptionEn": "Description: The heart of dog and cat sits almost mid-thorax, spanning roughly the 3rd to 6th intercostal spaces and displaced slightly to the left. Its long axis runs craniodorsal to caudoventral, the apex resting near the sternum at the 5th–6th space. On a lateral radiograph it measures about 2.5–3.5 vertebral body lengths — the basis of the vertebral heart score used to judge cardiomegaly.\n\nDifference: The human heart is markedly left-shifted with the apex pointing left, because the human chest is flattened front-to-back. The canine and feline chest is flattened side-to-side, so the heart lies more centrally and is clearly audible on both sides — which is not true in humans.\n\nClinical relevance: The four valve auscultation points follow PAM–T: on the LEFT from dorsal to ventral, pulmonic (ICS 3), aortic (ICS 4), mitral (ICS 5); on the RIGHT, tricuspid (ICS 3–4). A systolic murmur loudest over the left apex is the classic sign of myxomatous mitral valve disease — the commonest acquired heart disease of small-breed dogs.\n\nSource: Evans & de Lahunta, Miller's Anatomy of the Dog, 4th ed. (2013)",
+      "descriptionZh": "描述: 犬猫心脏几乎位于胸腔中部，约占第 3 至第 6 肋间隙，略偏左侧。心长轴自前上斜向后下，心尖于第 5–6 肋间贴近胸骨。侧位片上约相当于 2.5–3.5 个胸椎椎体长——即评估心脏增大的椎体心脏评分依据。\n\n差异: 人的心脏明显偏左、心尖指向左侧，因人胸廓前后扁平。犬猫胸廓左右扁平，故心脏位置更居中，两侧听诊均清晰——此点与人不同。\n\n临床意义: 四个瓣膜听诊点按 PAM–T 顺序：左侧自上而下为肺动脉瓣（第 3 肋间）、主动脉瓣（第 4 肋间）、二尖瓣（第 5 肋间）；右侧为三尖瓣（第 3–4 肋间）。左心尖部最响的收缩期杂音是黏液瘤性二尖瓣病的典型体征——小型犬最常见的后天性心脏病。\n\n来源: Evans & de Lahunta, Miller's Anatomy of the Dog, 4th ed. (2013)"
+    },
+    {
+      "code": "vet-cat-dogcat-aortic-arch",
+      "speciesCode": "cat",
+      "systemCode": "vet-cat-cardiovascular",
+      "nameVi": "Cung động mạch chủ",
+      "nameEn": "Aortic arch",
+      "nameZh": "主动脉弓",
+      "latin": "Arcus aortae",
+      "descriptionVi": "Mô tả: Động mạch chủ rời tâm thất trái, vòng lên rồi bẻ sang TRÁI và ra sau, đi tiếp thành động mạch chủ ngực nằm dưới cột sống. Ở chó mèo cung này chỉ cho hai nhánh lớn: thân cánh tay–đầu (brachiocephalic trunk) rồi động mạch dưới đòn trái. Thực quản và khí quản chui qua vòng do cung động mạch chủ, dây chằng động mạch và thân phổi quây lại.\n\nKhác biệt: Cung động mạch chủ người cho BA nhánh (thân cánh tay–đầu, cảnh chung trái, dưới đòn trái); chó mèo chỉ có hai vì động mạch cảnh chung trái tách ra từ thân cánh tay–đầu. Bò và lợn còn gộp nhiều hơn nữa — chỉ một thân chung duy nhất. Biết kiểu phân nhánh của từng loài là bắt buộc khi luồn ống thông hoặc đọc hình mạch.\n\nÝ nghĩa lâm sàng: Tồn tại cung động mạch chủ phải (PRAA) là dị tật vòng mạch hay gặp nhất: cung nằm bên phải nên vòng mạch siết lấy thực quản, thức ăn đặc không qua được. Chó con nôn ra thức ăn chưa tiêu NGAY SAU KHI cai sữa sang thức ăn đặc, thực quản phình to phía trước tim trên phim — mổ cắt dây chằng động mạch là chữa được, để muộn thì thực quản giãn vĩnh viễn.\n\nNguồn: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionEn": "Description: The aorta leaves the left ventricle, arches upward then bends to the LEFT and caudally, continuing as the thoracic aorta beneath the vertebral column. In dog and cat the arch gives only two large branches: the brachiocephalic trunk, then the left subclavian artery. The oesophagus and trachea pass through the ring formed by the arch, the ligamentum arteriosum and the pulmonary trunk.\n\nDifference: The human aortic arch gives THREE branches (brachiocephalic trunk, left common carotid, left subclavian); dog and cat give only two, because the left common carotid arises from the brachiocephalic trunk. Cattle and pig consolidate further, into a single common trunk. Knowing each species' branching pattern is essential for catheterisation and for reading angiograms.\n\nClinical relevance: Persistent right aortic arch is the commonest vascular ring anomaly: the arch lies on the right, so the ring strangles the oesophagus and solid food cannot pass. The puppy regurgitates undigested food from the moment it is weaned onto solids, with the oesophagus ballooning cranial to the heart on radiographs. Surgical division of the ligamentum arteriosum is curative — left late, the oesophagus stays permanently dilated.\n\nSource: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionZh": "描述: 主动脉自左心室发出，先弓向上再折向左侧并向后延续为胸主动脉，位于脊柱下方。犬猫主动脉弓仅发出两大分支：臂头干与左锁骨下动脉。食管与气管穿行于主动脉弓、动脉韧带及肺动脉干围成的环内。\n\n差异: 人的主动脉弓发出三大分支（臂头干、左颈总动脉、左锁骨下动脉）；犬猫仅两支，因左颈总动脉起自臂头干。牛与猪进一步合并为单一总干。掌握各物种的分支型式，对插管与血管造影判读必不可少。\n\n临床意义: 永存右主动脉弓是最常见的血管环畸形：弓位于右侧，血管环勒紧食管，固体食物无法通过。幼犬自断奶改食固体食物起即反流未消化食物，X 线可见心前食管球状扩张。手术切断动脉韧带可治愈；延误则食管永久扩张。\n\n来源: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)"
+    },
+    {
+      "code": "vet-cat-dogcat-liver-lobes",
+      "speciesCode": "cat",
+      "systemCode": "vet-cat-digestive",
+      "nameVi": "Các thuỳ gan",
+      "nameEn": "Lobes of the liver",
+      "nameZh": "肝叶",
+      "latin": "Lobi hepatis",
+      "descriptionVi": "Mô tả: Gan chó mèo chia thuỳ SÂU và rõ, gồm sáu thuỳ: trái ngoài, trái trong, vuông, phải trong, phải ngoài và thuỳ đuôi (thuỳ đuôi có thêm mỏm đuôi và mỏm nhú). Gan nằm gần trọn dưới vòm sườn, mặt trước áp vào cơ hoành. Ở con vật khoẻ mạnh KHÔNG sờ thấy gan quá bờ sườn cuối.\n\nKhác biệt: Gan người chỉ chia bốn thuỳ nông, gần như một khối liền. Gan chó mèo chia sâu tới mức mỗi thuỳ gần như một cơ quan riêng có cuống mạch riêng — điều này khiến XOẮN THUỲ GAN xảy ra được ở chó mèo mà ở người thì gần như không. Đổi lại, cắt một thuỳ gan ở chó mèo dễ hơn nhiều so với cắt gan phân thuỳ ở người.\n\nÝ nghĩa lâm sàng: Sinh thiết gan qua da nhắm vào thuỳ trái ngoài, đâm kim ngay sau mỏm ức lệch trái dưới hướng dẫn siêu âm — tránh túi mật và mạch rốn gan. Gan sờ được quá bờ sườn ở chó là bất thường: nghĩ tới gan to do suy tim phải, u lympho hoặc bệnh nội tiết (cường vỏ thượng thận).\n\nNguồn: Evans & de Lahunta, Miller's Anatomy of the Dog, 4th ed. (2013)",
+      "descriptionEn": "Description: The liver of dog and cat is deeply and clearly lobated, with six lobes: left lateral, left medial, quadrate, right medial, right lateral and caudate (the caudate bearing caudate and papillary processes). It lies almost entirely under the costal arch, its cranial surface against the diaphragm. In a healthy animal the liver is NOT palpable beyond the last rib.\n\nDifference: The human liver has only four shallow lobes and is nearly a single mass. In dog and cat the division is so deep that each lobe is almost an organ in itself with its own vascular pedicle — which makes liver LOBE TORSION possible in these species, whereas it is virtually unknown in humans. In exchange, removing a single lobe is far simpler than human segmental hepatectomy.\n\nClinical relevance: Percutaneous liver biopsy targets the left lateral lobe, the needle entering just caudal to the xiphoid slightly to the left under ultrasound guidance — avoiding the gallbladder and the hilar vessels. A liver palpable beyond the costal arch in a dog is abnormal: think right-sided heart failure, lymphoma, or endocrine disease such as hyperadrenocorticism.\n\nSource: Evans & de Lahunta, Miller's Anatomy of the Dog, 4th ed. (2013)",
+      "descriptionZh": "描述: 犬猫肝分叶深而清晰，共六叶：左外叶、左内叶、方叶、右内叶、右外叶与尾状叶（尾状叶另具尾状突与乳头突）。肝几乎完全位于肋弓之下，前面贴附膈。健康动物的肝不应超出最后肋触及。\n\n差异: 人肝仅四叶且分叶浅，近乎一整块。犬猫的分叶极深，每叶几乎自成一器官并有独立血管蒂——故犬猫可发生肝叶扭转，而人几乎不见。相应地，犬猫切除单一肝叶远较人的肝段切除简便。\n\n临床意义: 经皮肝活检以左外叶为目标，超声引导下于剑突后稍偏左进针，避开胆囊与肝门血管。犬肝超出肋弓可触及即属异常：应考虑右心衰、淋巴瘤或内分泌病（肾上腺皮质功能亢进）。\n\n来源: Evans & de Lahunta, Miller's Anatomy of the Dog, 4th ed. (2013)"
+    },
+    {
+      "code": "vet-cat-dogcat-gallbladder",
+      "speciesCode": "cat",
+      "systemCode": "vet-cat-digestive",
+      "nameVi": "Túi mật",
+      "nameEn": "Gallbladder",
+      "nameZh": "胆囊",
+      "latin": "Vesica biliaris",
+      "descriptionVi": "Mô tả: Túi hình quả lê nằm trong hố giữa thuỳ vuông và thuỳ phải trong của gan, chứa và cô đặc mật giữa các bữa. Ống túi mật hợp với ống gan thành ống mật chủ, đổ vào tá tràng ở nhú tá lớn. Ở MÈO ống mật chủ và ống tuỵ hợp lại TRƯỚC khi vào tá tràng — ở chó thì hai ống đổ riêng.\n\nKhác biệt: NGỰA VÀ HƯƠU KHÔNG CÓ TÚI MẬT — chúng ăn liên tục cả ngày nên mật chảy thẳng vào ruột, không cần chỗ chứa. Đây là ví dụ sạch nhất của nguyên tắc 'hình thái theo kiểu ăn': loài ăn theo bữa (chó, mèo, người, bò) thì có túi mật, loài gặm cỏ liên tục thì không.\n\nÝ nghĩa lâm sàng: Mucocele túi mật ở chó là khối mật đặc như thạch làm tắc và có thể vỡ túi mật — trên siêu âm cho hình 'quả kiwi cắt đôi', là chỉ định mổ cắt túi mật. Ở mèo, do ống mật và ống tuỵ chung một lối vào, viêm đường mật thường kéo theo viêm tuỵ và viêm ruột cùng lúc — gọi là bộ ba viêm (triaditis), một hội chứng KHÔNG có ở chó.\n\nNguồn: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionEn": "Description: A pear-shaped sac lying in the fossa between the quadrate and right medial lobes, storing and concentrating bile between meals. The cystic duct joins the hepatic ducts as the bile duct, which opens into the duodenum at the major duodenal papilla. In the CAT the bile duct and pancreatic duct unite BEFORE entering the duodenum — in the dog they open separately.\n\nDifference: THE HORSE AND DEER HAVE NO GALLBLADDER — they eat continuously all day, so bile flows straight into the gut and no reservoir is needed. This is the cleanest illustration of form following feeding pattern: meal-eaters (dog, cat, human, ox) have a gallbladder, continuous grazers do not.\n\nClinical relevance: Canine gallbladder mucocele is a mass of gelatinous bile that obstructs and may rupture the gallbladder — the ultrasonographic 'kiwi-fruit' pattern is an indication for cholecystectomy. In the cat, because bile and pancreatic ducts share one entry, cholangitis commonly drags pancreatitis and enteritis along with it — feline triaditis, a syndrome the dog does NOT get.\n\nSource: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionZh": "描述: 梨形囊，位于方叶与右内叶之间的胆囊窝内，在两餐之间贮存并浓缩胆汁。胆囊管与肝管合成胆总管，开口于十二指肠大乳头。猫的胆总管与胰管在进入十二指肠前即已汇合，而犬则分别开口。\n\n差异: 马与鹿无胆囊——它们全天持续采食，胆汁直接流入肠道，无需贮存。这是「形态随采食方式」原则最清晰的例证：分餐进食者（犬、猫、人、牛）有胆囊，持续采食者则无。\n\n临床意义: 犬胆囊黏液囊肿为胶冻样胆汁团块，可致梗阻甚至胆囊破裂——超声呈「猕猴桃切面」征，是胆囊切除的指征。猫因胆管与胰管共用一个开口，胆管炎常同时牵连胰腺炎与肠炎——称猫三联炎，此综合征犬不发生。\n\n来源: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)"
+    },
+    {
+      "code": "vet-cat-dogcat-ear-canal",
+      "speciesCode": "cat",
+      "systemCode": "vet-cat-senses",
+      "nameVi": "Ống tai ngoài hình chữ L",
+      "nameEn": "The L-shaped external ear canal",
+      "nameZh": "L 形外耳道",
+      "latin": "Meatus acusticus externus",
+      "descriptionVi": "Mô tả: Ống tai ngoài của chó mèo gồm HAI đoạn gập góc gần vuông: đoạn đứng đi từ loa tai xuống dưới, rồi gập vào trong thành đoạn ngang chạy tới màng nhĩ. Chỗ gập ấy làm ống tai thành một cái bẫy: dịch tiết, ráy và nước đọng lại ở đáy đoạn đứng chứ không tự chảy ra được.\n\nKhác biệt: Ống tai người gần như thẳng và ngắn, nên tự làm sạch được và soi tai chỉ cần kéo nhẹ vành tai. Ống tai chó mèo dài, gập góc và có lông — muốn nhìn màng nhĩ phải kéo THẲNG loa tai lên trên và ra ngoài để duỗi chỗ gập, không làm thế thì ống soi chỉ chạm vào thành ống.\n\nÝ nghĩa lâm sàng: Chỗ gập chữ L là lý do giải phẫu khiến viêm tai ngoài ở chó tai cụp (Cocker, Poodle) tái đi tái lại: thuốc nhỏ khó tới đáy ống mà dịch viêm thì không thoát. Viêm mạn tính lâu ngày làm sụn ống tai vôi hoá, ống hẹp bít lại — lúc đó chỉ còn cách cắt bỏ toàn bộ ống tai kèm nạo bóng nhĩ (TECA-BO).\n\nNguồn: Evans & de Lahunta, Miller's Anatomy of the Dog, 4th ed. (2013)",
+      "descriptionEn": "Description: The external ear canal of dog and cat has TWO segments meeting at nearly a right angle: a vertical canal running down from the pinna, then bending medially into a horizontal canal that reaches the eardrum. That bend turns the canal into a trap: discharge, wax and water collect at the bottom of the vertical canal instead of draining out.\n\nDifference: The human ear canal is short and nearly straight, so it self-cleans and otoscopy needs only a gentle pull on the auricle. The canine and feline canal is long, angled and hairy — to see the eardrum the pinna must be pulled straight up and out to straighten the bend, otherwise the otoscope merely abuts the canal wall.\n\nClinical relevance: The L-bend is the anatomical reason otitis externa recurs in drop-eared dogs (Cocker, Poodle): drops struggle to reach the depths while inflammatory discharge cannot escape. Long-standing inflammation calcifies the canal cartilage and the lumen closes — at which point total ear canal ablation with bulla osteotomy is the only remaining option.\n\nSource: Evans & de Lahunta, Miller's Anatomy of the Dog, 4th ed. (2013)",
+      "descriptionZh": "描述: 犬猫外耳道由近乎直角相接的两段构成：自耳廓向下的垂直部，随后向内折转为通向鼓膜的水平部。此折角使耳道成为陷阱：分泌物、耵聍与积水滞留于垂直部底部而无法自行排出。\n\n差异: 人的外耳道短而近直，可自洁，耳镜检查仅需轻拉耳廓。犬猫耳道长、成角且有毛——欲窥鼓膜须将耳廓向上外方拉直以展平折角，否则耳镜只能抵住道壁。\n\n临床意义: L 形折角是垂耳犬（可卡、贵宾）外耳炎反复发作的解剖学原因：滴剂难达深部，炎性分泌物又无法排出。长期炎症使耳道软骨钙化、管腔闭塞——此时唯有全耳道切除加鼓泡骨切开术可行。\n\n来源: Evans & de Lahunta, Miller's Anatomy of the Dog, 4th ed. (2013)"
+    },
+    {
       "code": "vet-horse-dogcat-third-eyelid",
       "speciesCode": "horse",
       "systemCode": "vet-horse-senses",
@@ -662,6 +1158,42 @@
       "descriptionVi": "Mô tả: Ở thú bốn chân đứng yên, chi trước chịu khoảng 60% trọng lượng, chi sau khoảng 40%. Chi trước đỡ tải, chi sau tạo lực đẩy.\n\nKhác biệt: Người đứng hai chân dồn 100% lên chi dưới, chi trên tự do hoàn toàn. Đây là khác biệt cơ học nền tảng, kéo theo mọi khác biệt về hình dạng xương chậu, cột sống và bàn chân.\n\nÝ nghĩa lâm sàng: Vì thế chó què chi trước thường biểu hiện bằng gật đầu khi bước xuống chân lành, còn què chi sau thì thấy hông nhô lên bên chân đau — hai kiểu quan sát khác nhau khi khám dáng đi.\n\nNguồn: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)",
       "descriptionEn": "Description: In a standing quadruped the forelimbs carry about 60% of body weight and the hindlimbs about 40%. The forelimb supports; the hindlimb propels.\n\nDifference: A biped puts 100% on the hindlimbs and frees the forelimbs entirely. This is the fundamental mechanical difference from which all the differences in pelvis, spine and foot shape follow.\n\nClinical relevance: Consequently forelimb lameness shows as a head nod that drops onto the sound limb, whereas hindlimb lameness shows as a hip hike over the painful side — two distinct observations in a gait examination.\n\nSource: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)",
       "descriptionZh": "描述: 四足动物站立时，前肢约承担体重的 60%，后肢约 40%。前肢负重，后肢提供推进。\n\n差异: 人两足站立时 100% 由下肢承担，上肢完全解放。这一根本力学差异衍生出骨盆、脊柱与足形态的一切不同。\n\n临床意义: 因此前肢跛行表现为头随健肢着地而下点，后肢跛行则表现为患侧髋部上抬——步态检查中的两种不同观察点。\n\n来源: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)"
+    },
+    {
+      "code": "vet-horse-horse-pelvic-flexure",
+      "speciesCode": "horse",
+      "systemCode": "vet-horse-digestive",
+      "nameVi": "Khúc gấp chậu hông",
+      "nameEn": "Pelvic flexure",
+      "nameZh": "骨盆曲",
+      "latin": "Flexura pelvina",
+      "descriptionVi": "Mô tả: Chỗ ngoặt hình chữ U ở đầu sau của đại tràng lớn, nơi đại tràng bụng trái quặt ngược lên thành đại tràng lưng trái. Đây là điểm HẸP NHẤT trên toàn bộ đại tràng lớn: lòng ống thu nhỏ đột ngột ngay tại khúc quành, rồi lại nở ra ngay sau đó.\n\nKhác biệt: Người và chó không có cấu trúc tương đương — đại tràng của chúng đường kính khá đều. Chỗ hẹp đột ngột giữa một ống rộng là hệ quả của việc ngựa nhét cả một thùng lên men vào ổ bụng: đại tràng lớn phải gập đôi lại hai lần mới nằm vừa, và mỗi chỗ gập là một điểm yếu.\n\nÝ nghĩa lâm sàng: Đây là VỊ TRÍ TẮC PHÂN HAY GẶP NHẤT trong đau bụng ngựa. Ngựa ăn cỏ khô thô, uống ít nước hoặc đổi thức ăn đột ngột thì phân đóng lại đúng chỗ hẹp này. Khám trực tràng sờ thấy một khối chắc như khúc dồi ở phía trước bên trái khoang chậu là chẩn đoán gần như chắc chắn — phần lớn ca chữa nội khoa được bằng dầu khoáng và bù dịch, không phải mổ.\n\nNguồn: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)",
+      "descriptionEn": "Description: The U-turn at the caudal end of the large colon, where the left ventral colon doubles back to become the left dorsal colon. It is the NARROWEST point of the entire large colon: the lumen contracts abruptly at the bend and widens again immediately beyond it.\n\nDifference: Neither human nor dog has an equivalent — their colons are of fairly even calibre. An abrupt narrowing in the middle of a wide tube is the consequence of packing an entire fermentation vat into the abdomen: the equine large colon must fold on itself twice to fit, and every fold is a weak point.\n\nClinical relevance: This is the COMMONEST SITE OF IMPACTION in equine colic. A horse on coarse hay, drinking little, or changed abruptly onto new feed packs ingesta at exactly this narrowing. Rectal examination finding a firm sausage-like mass cranio-ventral and to the left is near-diagnostic — most cases resolve medically with mineral oil and fluids rather than surgery.\n\nSource: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)",
+      "descriptionZh": "描述: 大结肠后端的 U 形折转处，左下大结肠于此回折为左上大结肠。此处是整个大结肠最狭窄之点：肠腔于折转处骤然缩窄，其后随即又扩张。\n\n差异: 人与犬无对应结构——其结肠管径较为均一。宽阔管道中骤然出现的狭窄，是将整个发酵桶塞入腹腔的后果：马的大结肠须两度折叠方能容纳，而每一处折叠都是薄弱点。\n\n临床意义: 此处是马疝痛中最常见的阻塞部位。饲喂粗硬干草、饮水不足或突然换料的马，食糜恰在此狭窄处堆积。直肠检查于左前下方触及腊肠样坚实团块几可确诊——多数病例经石蜡油与补液内科治疗即可缓解，无需手术。\n\n来源: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)"
+    },
+    {
+      "code": "vet-horse-horse-colon-taeniae",
+      "speciesCode": "horse",
+      "systemCode": "vet-horse-digestive",
+      "nameVi": "Dải cơ dọc và túi phình của đại tràng",
+      "nameEn": "Taeniae and haustra of the large colon",
+      "nameZh": "大结肠的结肠带与肠袋",
+      "latin": "Taeniae coli · Haustra coli",
+      "descriptionVi": "Mô tả: Lớp cơ dọc của đại tràng ngựa không phủ đều mà tụ thành những DẢI dày gọi là taenia. Dải ngắn hơn ống ruột nên kéo thành ruột dồn lại thành từng TÚI PHÌNH (haustra) — chính là những ngấn nhìn thấy rõ trên mẫu vật. Số dải khác nhau theo đoạn: đại tràng bụng có 4 dải và nhiều túi phình, đại tràng lưng trái chỉ 1 dải và gần như nhẵn.\n\nKhác biệt: Người có 3 dải taenia trên đại tràng, chó gần như không có dải rõ. Ngựa dùng đại tràng làm thùng lên men nên cần diện tích và thời gian lưu lâu — túi phình chính là cách kéo dài thời gian ấy. Bò không cần vì đã lên men ở dạ cỏ phía TRƯỚC, nên đại tràng bò trơn hơn nhiều.\n\nÝ nghĩa lâm sàng: Đếm số dải taenia là cách bác sĩ phẫu thuật NHẬN RA mình đang cầm đoạn ruột nào khi mở bụng ngựa — trong ổ bụng đầy ruột giống nhau, đây là mốc định danh đáng tin nhất. Nhầm đoạn khi tháo xoắn là sai lầm chết người: đặt lại đại tràng sai chiều thì xoắn tái phát ngay.\n\nNguồn: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionEn": "Description: The longitudinal muscle of the equine colon is not spread evenly but gathered into thick BANDS, the taeniae. Being shorter than the gut tube they pucker the wall into pouches — the haustra, the sacculations clearly visible on the specimen. The number of bands differs by segment: the ventral colon has four taeniae and abundant haustra, the left dorsal colon only one and is nearly smooth.\n\nDifference: Humans have three taeniae on the colon; the dog has almost none that are distinct. The horse uses its colon as a fermentation vat and so needs surface area and long retention — the haustra are how that time is bought. Cattle need none of this because fermentation already happened FORWARD in the rumen, so the bovine colon is far smoother.\n\nClinical relevance: Counting the taeniae is how the surgeon IDENTIFIES which segment is in hand during equine laparotomy — in an abdomen full of similar-looking bowel it is the most reliable landmark. Mistaking the segment while derotating is a fatal error: replace the colon the wrong way round and the volvulus recurs at once.\n\nSource: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionZh": "描述: 马结肠的纵行肌并非均匀分布，而是聚成粗厚的结肠带。因带短于肠管，遂将肠壁牵拢成袋状隆起，即标本上清晰可见的肠袋。各段带数不同：下大结肠有 4 条带、肠袋丰富，左上大结肠仅 1 条带且近乎平滑。\n\n差异: 人的结肠有 3 条结肠带，犬则几无明显带。马以结肠为发酵桶，需要表面积与长滞留时间——肠袋正是争取时间的方式。牛无此需求，因发酵已在前段瘤胃完成，故牛结肠平滑得多。\n\n临床意义: 清点结肠带数是外科医生在马开腹术中辨认所持肠段的方法——腹腔内诸肠外观相近，此为最可靠的标志。整复扭转时辨错肠段是致命错误：结肠方向放反，扭转立即复发。\n\n来源: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)"
+    },
+    {
+      "code": "vet-horse-horse-patellar-locking",
+      "speciesCode": "horse",
+      "systemCode": "vet-horse-skeletal",
+      "nameVi": "Cơ chế khoá xương bánh chè",
+      "nameEn": "The patellar locking mechanism",
+      "nameZh": "髌骨锁定机制",
+      "latin": "Patella · Ligamentum patellae mediale",
+      "descriptionVi": "Mô tả: Ròng rọc xương đùi ngựa có gờ TRONG phình to bất thường, và xương bánh chè có thêm sụn bánh chè phụ kéo dài về phía trong. Ngựa móc vòng dây chằng bánh chè trong qua gờ ấy như móc một cái then — gối bị khoá cứng ở tư thế duỗi, chi đứng vững mà cơ tứ đầu gần như không phải co. Đây là bộ phận khoá của bộ máy đứng, thứ cho phép ngựa ngủ đứng.\n\nKhác biệt: Không loài nào khác trong sáu loài có cơ chế này. Chó mèo phải co cơ tứ đầu liên tục để đứng (nên nằm bất cứ khi nào được); người có khoá gối nhưng bằng cách xoay khoá cơ học của lồi cầu, không bằng dây chằng móc qua gờ xương. Bò đứng lâu được nhưng bằng sức cơ chứ không có then khoá.\n\nÝ nghĩa lâm sàng: Then khoá có thể không nhả ra được — gọi là kẹt xương bánh chè lên trên (upward fixation of the patella): chi sau duỗi cứng về phía sau, ngựa lê móng, rồi bật ra kèm tiếng khục. Hay gặp ở ngựa non gầy, cơ đùi yếu và góc chi thẳng. Chữa trước hết bằng cho vận động và tăng khối cơ tứ đầu; cắt dây chằng bánh chè trong là biện pháp cuối cùng vì hay để lại tổn thương xương bánh chè.\n\nNguồn: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)",
+      "descriptionEn": "Description: The equine femoral trochlea has a markedly enlarged MEDIAL ridge, and the patella carries an additional parapatellar fibrocartilage extending medially. The horse hooks the loop of the medial patellar ligament over that ridge like throwing a latch — the stifle locks in extension and the limb stands firm with the quadriceps barely contracting. This is the locking element of the stay apparatus, and the reason a horse can sleep standing.\n\nDifference: No other of the six species has this. Dog and cat must contract the quadriceps continuously to stand (hence they lie down whenever they can); humans do lock the knee, but by the screw-home rotation of the condyles rather than by a ligament hooked over a bony ridge. Cattle stand for long periods on muscular effort alone, with no latch.\n\nClinical relevance: The latch can fail to release — upward fixation of the patella: the hindlimb locks rigidly in extension behind the horse, the toe drags, then it snaps free with a click. It is seen in young, thin, straight-limbed horses with poor thigh muscle. Treatment starts with exercise to build the quadriceps; medial patellar desmotomy is a last resort because it often leaves patellar damage behind.\n\nSource: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)",
+      "descriptionZh": "描述: 马的股骨滑车内侧嵴异常增大，髌骨另具向内延伸的副髌软骨。马将内侧髌韧带的环套挂于该嵴之上，如同扣上门闩——膝关节即锁定于伸展位，股四头肌几乎无需收缩即可稳固站立。此为站立装置的锁定环节，亦是马能站着睡觉的原因。\n\n差异: 六个物种中唯马独有此机制。犬猫须持续收缩股四头肌方能站立（故一有机会即卧下）；人虽能锁膝，但依靠髁的旋锁运动，而非韧带挂于骨嵴。牛可长时间站立，却全凭肌力，并无门闩。\n\n临床意义: 门闩可能无法解除——即髌骨向上固着：后肢强直伸于体后，蹄尖拖地，随后伴弹响突然解脱。多见于消瘦、肢势过直、股部肌肉薄弱的幼马。治疗首选运动以增强股四头肌；内侧髌韧带切断术为最后手段，因常遗留髌骨损伤。\n\n来源: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)"
     },
     {
       "code": "vet-horse-horse-stay-apparatus",
@@ -794,6 +1326,42 @@
       "descriptionVi": "Mô tả: Ở thú bốn chân đứng yên, chi trước chịu khoảng 60% trọng lượng, chi sau khoảng 40%. Chi trước đỡ tải, chi sau tạo lực đẩy.\n\nKhác biệt: Người đứng hai chân dồn 100% lên chi dưới, chi trên tự do hoàn toàn. Đây là khác biệt cơ học nền tảng, kéo theo mọi khác biệt về hình dạng xương chậu, cột sống và bàn chân.\n\nÝ nghĩa lâm sàng: Vì thế chó què chi trước thường biểu hiện bằng gật đầu khi bước xuống chân lành, còn què chi sau thì thấy hông nhô lên bên chân đau — hai kiểu quan sát khác nhau khi khám dáng đi.\n\nNguồn: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)",
       "descriptionEn": "Description: In a standing quadruped the forelimbs carry about 60% of body weight and the hindlimbs about 40%. The forelimb supports; the hindlimb propels.\n\nDifference: A biped puts 100% on the hindlimbs and frees the forelimbs entirely. This is the fundamental mechanical difference from which all the differences in pelvis, spine and foot shape follow.\n\nClinical relevance: Consequently forelimb lameness shows as a head nod that drops onto the sound limb, whereas hindlimb lameness shows as a hip hike over the painful side — two distinct observations in a gait examination.\n\nSource: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)",
       "descriptionZh": "描述: 四足动物站立时，前肢约承担体重的 60%，后肢约 40%。前肢负重，后肢提供推进。\n\n差异: 人两足站立时 100% 由下肢承担，上肢完全解放。这一根本力学差异衍生出骨盆、脊柱与足形态的一切不同。\n\n临床意义: 因此前肢跛行表现为头随健肢着地而下点，后肢跛行则表现为患侧髋部上抬——步态检查中的两种不同观察点。\n\n来源: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)"
+    },
+    {
+      "code": "vet-cattle-cattle-rumen-sacs",
+      "speciesCode": "cattle",
+      "systemCode": "vet-cattle-digestive",
+      "nameVi": "Túi lưng, túi bụng và rãnh dọc dạ cỏ",
+      "nameEn": "Dorsal and ventral sacs and the longitudinal groove",
+      "nameZh": "瘤胃背囊、腹囊与纵沟",
+      "latin": "Saccus dorsalis · Saccus ventralis · Sulcus longitudinalis",
+      "descriptionVi": "Mô tả: Dạ cỏ chiếm gần trọn nửa trái ổ bụng bò, chia thành túi lưng và túi bụng bởi một rãnh chạy vòng quanh ngoài mặt; bên trong rãnh ấy tương ứng với các TRỤ CƠ (pillars) dày nhô vào lòng dạ cỏ. Túi lưng chứa khí lên men, túi bụng chứa phần thức ăn đặc và dịch — hai pha luôn tách lớp theo trọng lực.\n\nKhác biệt: Không loài dạ dày đơn nào có cấu trúc này. Ngựa cũng lên men vi sinh nhưng đặt thùng lên men ở SAU (manh tràng và đại tràng lớn), nên ngựa không ợ hơi được và chướng hơi ở ngựa là chuyện khác hẳn. Nguyên tắc chung: lên men trước dạ dày thì thu được cả protein vi sinh, lên men sau thì không.\n\nÝ nghĩa lâm sàng: Khí luôn nổi lên túi lưng, nên chọc dò giải áp chướng hơi dạ cỏ phải đâm vào hõm hông TRÁI, ở đỉnh tam giác giữa mỏm ngang đốt thắt lưng, xương sườn cuối và mỏm hông. Chướng hơi bọt (frothy bloat, do ăn cỏ họ đậu non) thì chọc không ra vì khí nằm trong bọt — phải cho thuốc phá bọt, chọc chỉ tổ mất thì giờ.\n\nNguồn: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionEn": "Description: The rumen fills nearly the whole left half of the bovine abdomen and is divided into dorsal and ventral sacs by a groove encircling its exterior; internally that groove corresponds to thick muscular PILLARS projecting into the lumen. The dorsal sac holds fermentation gas, the ventral sac the solid ingesta and fluid — the two phases always stratified by gravity.\n\nDifference: No monogastric species has this. The horse also ferments microbially but places the vat BEHIND (caecum and large colon), so the horse cannot eructate and equine tympany is an entirely different problem. The general rule: fermenting before the stomach harvests the microbial protein as well, fermenting after it does not.\n\nClinical relevance: Gas always rises into the dorsal sac, so trocarisation for bloat must enter the LEFT paralumbar fossa, at the apex of the triangle between the lumbar transverse processes, the last rib and the tuber coxae. Frothy bloat (from lush legume pasture) will not release through a trocar because the gas is trapped in foam — an antifoaming agent is required and trocarisation only wastes time.\n\nSource: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionZh": "描述: 瘤胃几乎充满牛腹腔整个左半部，由环绕其外表面的沟分为背囊与腹囊；该沟在内部对应突入胃腔的厚实肉柱。背囊容纳发酵气体，腹囊容纳固体食糜与液体——两相始终因重力而分层。\n\n差异: 单胃动物无此结构。马亦行微生物发酵，但发酵桶置于后段（盲肠与大结肠），故马不能嗳气，其臌气是完全不同的问题。通则：胃前发酵可一并获取微生物蛋白，胃后发酵则不能。\n\n临床意义: 气体恒上浮至背囊，故臌气穿刺放气须于左侧肋腹窝进针，位于腰椎横突、最后肋与髋结节所围三角的顶点。泡沫性臌气（采食幼嫩豆科牧草所致）穿刺无法放气，因气体被困于泡沫中——须投予消泡剂，穿刺徒然贻误时机。\n\n来源: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)"
+    },
+    {
+      "code": "vet-cattle-cattle-hardware-disease",
+      "speciesCode": "cattle",
+      "systemCode": "vet-cattle-digestive",
+      "nameVi": "Bệnh ngoại vật — viêm dạ tổ ong màng bụng do chấn thương",
+      "nameEn": "Hardware disease — traumatic reticuloperitonitis",
+      "nameZh": "创伤性网胃腹膜炎（金属异物病）",
+      "latin": "Reticulum",
+      "descriptionVi": "Mô tả: Bò nuốt không chọn lọc và không nhai kỹ trước khi nuốt, nên đinh, dây thép hay mảnh kim loại đi thẳng xuống dạ tổ ong — túi thấp nhất và nằm trước nhất trong bốn túi. Vật nhọn nằm đó, mỗi lần dạ tổ ong co bóp lại bị đẩy về phía trước, xuyên qua thành dạ dày rồi qua cơ hoành vào lồng ngực.\n\nKhác biệt: Chó mèo nuốt dị vật thì tắc ruột hoặc thủng ruột; bò thì ra một bệnh hoàn toàn khác vì vị trí dạ tổ ong nằm NGAY sát cơ hoành và ngay dưới tim. Đó là lý do cùng một cái đinh, chó chết vì viêm màng bụng còn bò chết vì viêm màng ngoài tim.\n\nÝ nghĩa lâm sàng: Bò đứng ưỡn lưng, ngại đi xuống dốc, rên khi nằm xuống, sốt và tụt sữa đột ngột. Nghiệm pháp bấm vùng ức hoặc nhấc nếp da vai làm con vật rên là dấu hiệu đau. Vật nhọn xuyên tới màng ngoài tim thì nghe được tiếng lép bép như vò giấy — tiên lượng xấu, thường phải loại thải. Phòng bằng cho nuốt NAM CHÂM lồng, giữ kim loại lại trong dạ tổ ong suốt đời con vật.\n\nNguồn: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)",
+      "descriptionEn": "Description: Cattle swallow indiscriminately and without chewing thoroughly first, so nails, wire and metal fragments pass straight into the reticulum — the lowest and most cranial of the four compartments. The sharp object lodges there and, with every reticular contraction, is driven forwards through the stomach wall and on through the diaphragm into the chest.\n\nDifference: A swallowed foreign body in dog or cat causes obstruction or bowel perforation; in cattle it produces an entirely different disease because the reticulum lies IMMEDIATELY against the diaphragm and directly below the heart. Hence the same nail kills a dog through peritonitis and an ox through pericarditis.\n\nClinical relevance: The cow stands with an arched back, is reluctant to walk downhill, grunts on lying down, is febrile and drops milk abruptly. A grunt on sternal pressure or on lifting a withers skin fold indicates pain. Once the object reaches the pericardium a crackling, paper-crumpling sound is heard — the prognosis is poor and culling usually follows. Prevention is an oral cage MAGNET, which retains metal in the reticulum for the animal's lifetime.\n\nSource: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)",
+      "descriptionZh": "描述: 牛采食不加选择且吞咽前咀嚼不充分，故钉、铁丝与金属碎片径入网胃——四胃中位置最低最靠前者。尖锐异物滞留其中，随网胃每次收缩被推向前方，穿透胃壁并继续穿过膈进入胸腔。\n\n差异: 犬猫吞入异物导致梗阻或肠穿孔；牛则引发完全不同的疾病，因网胃紧贴膈并正位于心脏下方。故同一枚铁钉，犬死于腹膜炎，牛死于心包炎。\n\n临床意义: 病牛弓背站立、不愿下坡、卧下时呻吟、发热并突然减产。胸骨部按压或提起鬐甲皮褶时呻吟，提示疼痛。异物一旦到达心包，可闻及揉纸样捻发音——预后不良，通常需淘汰。预防措施为投服笼式磁铁，可终生将金属滞留于网胃内。\n\n来源: Dyce, Sack & Wensing, Textbook of Veterinary Anatomy, 5th ed. (2018)"
+    },
+    {
+      "code": "vet-cattle-cattle-pelvis-calving",
+      "speciesCode": "cattle",
+      "systemCode": "vet-cattle-skeletal",
+      "nameVi": "Khung chậu và đường sinh",
+      "nameEn": "The pelvis and the birth canal",
+      "nameZh": "骨盆与产道",
+      "latin": "Pelvis · Aditus pelvis",
+      "descriptionVi": "Mô tả: Khung chậu bò gồm hai xương chậu hợp với xương cùng, quây thành một ống mà bê con phải chui qua. Lối vào chậu hình bầu dục, chiều đứng dài hơn chiều ngang; sàn chậu gần phẳng và dốc nhẹ lên phía sau. Hai mốc sờ được từ ngoài là mỏm hông (tuber coxae) ở trước trên và ụ ngồi (tuber ischiadicum) ở sau dưới.\n\nKhác biệt: Khung chậu người rộng theo chiều ngang và trục sinh cong hình chữ C, nên thai người phải xoay khi đi qua. Trục sinh của bò gần như THẲNG — bê không cần xoay, nhưng đổi lại kích thước chậu là giới hạn cứng: bê quá to thì không có cách nào lách qua. Ngựa có chậu rộng hơn tương đối nên đẻ khó do bất tương xứng kích thước hiếm hơn hẳn ở bò.\n\nÝ nghĩa lâm sàng: Bất tương xứng thai – khung chậu là nguyên nhân đẻ khó số một ở bò tơ, nhất là khi phối bò tơ với giống bò thịt to. Đo chiều đứng và chiều ngang lối vào chậu qua trực tràng để chọn bò cái làm giống là biện pháp phòng có thật, làm được ngay tại trại. Khi kéo thai, phải kéo THEO trục chậu — kéo thẳng ra sau khi bê chưa qua khỏi lối vào là làm gãy chậu bò mẹ.\n\nNguồn: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionEn": "Description: The bovine pelvis is two hip bones articulating with the sacrum, enclosing a canal through which the calf must pass. The pelvic inlet is oval, taller than it is wide; the pelvic floor is nearly flat and slopes gently upward caudally. Two externally palpable landmarks are the tuber coxae craniodorsally and the tuber ischiadicum caudoventrally.\n\nDifference: The human pelvis is transversely wide with a C-shaped birth axis, so the human fetus must rotate on its way through. The bovine birth axis is nearly STRAIGHT — the calf need not rotate, but in exchange the pelvic dimensions are a hard limit: an oversized calf simply cannot squeeze through. The mare's pelvis is relatively roomier, which is why feto-pelvic disproportion is far rarer in horses than in cattle.\n\nClinical relevance: Feto-pelvic disproportion is the leading cause of dystocia in heifers, especially when heifers are bred to large beef sires. Measuring the vertical and transverse diameters of the pelvic inlet per rectum when selecting replacement heifers is a real preventive measure that can be done on the farm. When traction is applied it must follow the pelvic axis — pulling straight backwards before the calf has cleared the inlet fractures the dam's pelvis.\n\nSource: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)",
+      "descriptionZh": "描述: 牛骨盆由两块髋骨与荐骨构成，围成犊牛必须通过的产道。骨盆入口呈卵圆形，纵径大于横径；骨盆底近乎平坦并向后微微上倾。体外可触及的两个标志为前上方的髋结节与后下方的坐骨结节。\n\n差异: 人骨盆横径宽阔、产轴呈 C 形，故胎儿须于通过时旋转。牛的产轴近乎直线——犊牛无需旋转，但骨盆尺寸因而成为硬性限制：过大的犊牛根本无法通过。马骨盆相对宽敞，故胎骨盆不相称在马远比在牛罕见。\n\n临床意义: 胎骨盆不相称是初产母牛难产的首要原因，尤以初产牛配大型肉用种公牛时为甚。选留后备母牛时经直肠测量骨盆入口的纵径与横径，是可在场内实施的有效预防措施。牵引时必须顺产轴方向——犊牛尚未通过入口即向后直拉，会造成母牛骨盆骨折。\n\n来源: König & Liebich, Veterinary Anatomy of Domestic Mammals, 7th ed. (2020)"
     },
     {
       "code": "vet-cattle-cattle-four-stomachs",

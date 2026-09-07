@@ -97,7 +97,9 @@ describe('expandBlock', () => {
     expect(out?.granularity).toBe('day');
     expect(out?.blocks).toHaveLength(7);
     expect(out?.blocks[0].from).toBe('2026-08-27');
-    expect(out?.blocks.every((b) => b.systemKey === out.parent.systemKey)).toBe(true);
+    expect(out?.blocks.every((b) => b.systemKey === out.parent.systemKey)).toBe(
+      true,
+    );
     expect(out?.blocks.filter((b) => b.kind !== 'rest')).toHaveLength(4);
   });
 

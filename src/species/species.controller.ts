@@ -8,6 +8,8 @@ import {
   Post,
 } from '@nestjs/common';
 import { ApiOperation, ApiTags } from '@nestjs/swagger';
+import { UserRole } from '@prisma/client';
+import { MinRole } from '../auth/roles.decorator';
 import { SpeciesService } from './species.service';
 import { CreateSpeciesDto } from './dto/create-species.dto';
 import { UpdateSpeciesDto } from './dto/update-species.dto';
@@ -17,6 +19,7 @@ import { UpdateSpeciesDto } from './dto/update-species.dto';
 export class SpeciesController {
   constructor(private readonly speciesService: SpeciesService) {}
 
+  @MinRole(UserRole.editor)
   @Post()
   @ApiOperation({ summary: 'Tạo loài mới' })
   create(@Body() dto: CreateSpeciesDto) {
@@ -35,12 +38,14 @@ export class SpeciesController {
     return this.speciesService.findOne(code);
   }
 
+  @MinRole(UserRole.editor)
   @Patch(':code')
   @ApiOperation({ summary: 'Cập nhật 1 loài' })
   update(@Param('code') code: string, @Body() dto: UpdateSpeciesDto) {
     return this.speciesService.update(code, dto);
   }
 
+  @MinRole(UserRole.admin)
   @Delete(':code')
   @ApiOperation({ summary: 'Xoá 1 loài' })
   remove(@Param('code') code: string) {

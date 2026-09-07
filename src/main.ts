@@ -36,8 +36,10 @@ async function bootstrap() {
     .addTag('structures', 'Cấu trúc giải phẫu (gắn model 3D)')
     .addTag('pathologies', 'Bệnh lý (kèm nguồn trích dẫn)')
     .addTag('quizzes', 'Câu hỏi trắc nghiệm')
-    .addTag('collections', 'Bộ sưu tập chuyên gia')
     .addTag('health', 'Kiểm tra tình trạng hệ thống')
+    .addTag('study', 'Tiến độ học: lượt làm bài, lộ trình, hàng đợi ôn')
+    .addTag('personal-docs', 'Tài liệu cá nhân và bộ đề riêng')
+    .addTag('admin', 'Back office: quản trị nội dung, tài khoản, nhật ký')
     .build();
   const document = SwaggerModule.createDocument(app, swaggerConfig);
   SwaggerModule.setup('api/docs', app, document, {

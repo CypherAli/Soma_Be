@@ -15,7 +15,6 @@ export class AppService {
         '/api/structures',
         '/api/pathologies',
         '/api/quizzes',
-        '/api/collections',
         '/api/health',
       ],
     };

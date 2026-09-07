@@ -9,6 +9,8 @@ import {
   Query,
 } from '@nestjs/common';
 import { ApiOperation, ApiQuery, ApiTags } from '@nestjs/swagger';
+import { UserRole } from '@prisma/client';
+import { MinRole } from '../auth/roles.decorator';
 import { AnatomySystemsService } from './anatomy-systems.service';
 import { CreateAnatomySystemDto } from './dto/create-anatomy-system.dto';
 import { UpdateAnatomySystemDto } from './dto/update-anatomy-system.dto';
@@ -18,6 +20,7 @@ import { UpdateAnatomySystemDto } from './dto/update-anatomy-system.dto';
 export class AnatomySystemsController {
   constructor(private readonly anatomySystemsService: AnatomySystemsService) {}
 
+  @MinRole(UserRole.editor)
   @Post()
   @ApiOperation({ summary: 'Tạo hệ cơ quan mới' })
   create(@Body() dto: CreateAnatomySystemDto) {
@@ -41,12 +44,14 @@ export class AnatomySystemsController {
     return this.anatomySystemsService.findOne(code);
   }
 
+  @MinRole(UserRole.editor)
   @Patch(':code')
   @ApiOperation({ summary: 'Cập nhật 1 hệ' })
   update(@Param('code') code: string, @Body() dto: UpdateAnatomySystemDto) {
     return this.anatomySystemsService.update(code, dto);
   }
 
+  @MinRole(UserRole.admin)
   @Delete(':code')
   @ApiOperation({ summary: 'Xoá 1 hệ' })
   remove(@Param('code') code: string) {

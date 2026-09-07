@@ -10,7 +10,9 @@ import {
   timingSafeEqual,
 } from 'crypto';
 import { promisify } from 'util';
+import { UserRole } from '@prisma/client';
 import { PrismaService } from '../prisma/prisma.service';
+import type { AuthUser } from './roles';
 import { LoginDto } from './dto/login.dto';
 import { RegisterDto } from './dto/register.dto';
 
@@ -67,6 +69,7 @@ export class AuthService {
     ) {
       throw new UnauthorizedException('Email hoặc mật khẩu không đúng');
     }
+    this.assertEnabled(user);
     return this.createSession(user);
   }
 
@@ -161,7 +164,21 @@ export class AuthService {
             [idField]: profile.id,
           },
         });
+    this.assertEnabled(user);
     return this.createSession(user);
+  }
+
+  /**
+   * Chặn tài khoản đã bị khoá ở CẢ hai lối vào (mật khẩu và OAuth).
+   *
+   * Chỉ chặn ở `login` thì người bị khoá vẫn vào được bằng nút "Đăng nhập với
+   * Google" — mà OAuth còn tự tạo lại tài khoản nếu khớp email, nên lỗ hổng đó
+   * im lặng hoàn toàn.
+   */
+  private assertEnabled(user: { disabledAt: Date | null }) {
+    if (user.disabledAt) {
+      throw new UnauthorizedException('Tài khoản đã bị khoá');
+    }
   }
 
   private providerConfig(provider: Provider) {
@@ -273,10 +290,25 @@ export class AuthService {
     return (await response.json()) as T;
   }
 
+  /**
+   * Người dùng của token, hoặc `null` khi thiếu / sai / hết hạn / bị khoá.
+   *
+   * [AuthGuard] gọi hàm này. Trả `null` thay vì ném lỗi để phía gọi tự quyết
+   * định là chặn hay chỉ bỏ qua — endpoint công khai vẫn muốn biết ai đang xem.
+   */
+  async userFromToken(token?: string): Promise<AuthUser | null> {
+    const session = await this.findSession(token);
+    // Tài khoản bị khoá thì phiên cũ phải mất hiệu lực ngay, không đợi hết hạn:
+    // khoá một tài khoản mà nó vẫn dùng được thêm 30 ngày là không khoá gì cả.
+    if (!session || session.user.disabledAt) return null;
+    return this.publicUser(session.user);
+  }
+
   private async createSession(user: {
     id: string;
     name: string;
     email: string;
+    role: UserRole;
   }) {
     const token = randomBytes(32).toString('base64url');
     const expiresAt = new Date(Date.now() + SESSION_LIFETIME_MS);
@@ -297,8 +329,13 @@ export class AuthService {
     });
   }
 
-  private publicUser(user: { id: string; name: string; email: string }) {
-    return { id: user.id, name: user.name, email: user.email };
+  private publicUser(user: {
+    id: string;
+    name: string;
+    email: string;
+    role: UserRole;
+  }) {
+    return { id: user.id, name: user.name, email: user.email, role: user.role };
   }
 
   private hashToken(token: string) {

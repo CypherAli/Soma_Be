@@ -12,7 +12,13 @@ import { GradedItemDto, RecordAttemptDto } from './record-attempt.dto';
 const errorsOf = (dto: object) => validateSync(dto, { whitelist: true });
 
 describe('RecordAttemptDto — nguồn hợp lệ', () => {
-  const base = { scope: 'all', mode: 'practice', score: 3, total: 5, seconds: 42 };
+  const base = {
+    scope: 'all',
+    mode: 'practice',
+    score: 3,
+    total: 5,
+    seconds: 42,
+  };
 
   for (const source of ['model', 'book', 'atlas', 'personal', 'vet']) {
     it(`nhận source "${source}"`, () => {
@@ -22,7 +28,10 @@ describe('RecordAttemptDto — nguồn hợp lệ', () => {
   }
 
   it('từ chối nguồn lạ', () => {
-    const dto = plainToInstance(RecordAttemptDto, { ...base, source: 'khong-ton-tai' });
+    const dto = plainToInstance(RecordAttemptDto, {
+      ...base,
+      source: 'khong-ton-tai',
+    });
     const errs = errorsOf(dto);
     expect(errs.map((e) => e.property)).toContain('source');
   });
@@ -31,7 +40,14 @@ describe('RecordAttemptDto — nguồn hợp lệ', () => {
     const dto = plainToInstance(RecordAttemptDto, {
       ...base,
       source: 'vet',
-      items: [{ itemKey: 'vet:cattle-rumen', source: 'vet', scope: 'cattle', correct: true }],
+      items: [
+        {
+          itemKey: 'vet:cattle-rumen',
+          source: 'vet',
+          scope: 'cattle',
+          correct: true,
+        },
+      ],
     });
     expect(errorsOf(dto)).toHaveLength(0);
   });

@@ -133,3 +133,118 @@ export class UpdatePathologyMetaDto {
 
   @ApiPropertyOptional() @IsOptional() @IsInt() sourcePage?: number;
 }
+
+/** Tên ba ngôn ngữ + Latin — dùng chung cho loài, hệ cơ quan và cấu trúc. */
+class MultilingualNameDto {
+  @ApiPropertyOptional()
+  @IsOptional()
+  @IsString()
+  @MaxLength(200)
+  nameVi?: string;
+  @ApiPropertyOptional()
+  @IsOptional()
+  @IsString()
+  @MaxLength(200)
+  nameEn?: string;
+  @ApiPropertyOptional()
+  @IsOptional()
+  @IsString()
+  @MaxLength(200)
+  nameZh?: string;
+
+  @ApiPropertyOptional({ description: 'Tên Latin theo TA2' })
+  @IsOptional()
+  @IsString()
+  @MaxLength(200)
+  latin?: string;
+}
+
+export class UpdateSpeciesDto extends MultilingualNameDto {}
+
+export class UpdateSystemDto extends MultilingualNameDto {
+  @ApiPropertyOptional({
+    description: 'Thứ tự hiển thị, nhỏ hơn thì lên trước',
+  })
+  @IsOptional()
+  @IsInt()
+  order?: number;
+}
+
+/**
+ * Cấu trúc giải phẫu.
+ *
+ * KHÔNG có `meshName`: cùng loại rủi ro với `lesionMesh` — nó phải khớp đúng tên
+ * mesh mà Z-Anatomy gắn trong file glTF, và cái giữ cho khớp là script
+ * `npm run verify:scenes` / `verify:models` ở phía web. Gõ tay sai một ký tự thì
+ * cấu trúc mất khả năng chọn trong /viewer mà không có lỗi nào báo ra.
+ *
+ * Cũng KHÔNG có `code`, `systemId`, `speciesId`, `parentId`: đổi mã là làm chết
+ * mọi thứ đang trỏ tới nó (hotspot trong scene, bệnh lý, cây cha-con), còn dời
+ * cây phân cấp là việc của dữ liệu nguồn chứ không phải một ô chọn.
+ */
+export class UpdateStructureDto extends MultilingualNameDto {
+  @ApiPropertyOptional({ description: 'Mã Terminologia Anatomica' })
+  @IsOptional()
+  @IsString()
+  @MaxLength(64)
+  taCode?: string;
+
+  @ApiPropertyOptional() @IsOptional() @IsString() descriptionVi?: string;
+  @ApiPropertyOptional() @IsOptional() @IsString() descriptionEn?: string;
+  @ApiPropertyOptional() @IsOptional() @IsString() descriptionZh?: string;
+}
+
+/** Neo một bệnh lý vào cấu trúc 3D, hoặc bỏ neo. */
+export class LinkStructureDto {
+  @ApiPropertyOptional({
+    description:
+      'Mã cấu trúc. Để trống hoặc null nghĩa là BỎ neo — nhiều bệnh (huyết học, rối loạn điện giải) không thuộc về một cấu trúc đơn lẻ nào và neo bừa thì tệ hơn để trống.',
+    nullable: true,
+  })
+  @IsOptional()
+  @IsString()
+  structureCode?: string | null;
+}
+
+export class UpdateQuizDto {
+  @ApiPropertyOptional() @IsOptional() @IsString() promptVi?: string;
+  @ApiPropertyOptional() @IsOptional() @IsString() promptEn?: string;
+  @ApiPropertyOptional() @IsOptional() @IsString() promptZh?: string;
+  @ApiPropertyOptional() @IsOptional() @IsString() explanation?: string;
+  @ApiPropertyOptional()
+  @IsOptional()
+  @IsString()
+  @MaxLength(300)
+  source?: string;
+}
+
+export class UpdateQuizOptionDto {
+  @ApiPropertyOptional()
+  @IsOptional()
+  @IsString()
+  @MaxLength(500)
+  textVi?: string;
+  @ApiPropertyOptional()
+  @IsOptional()
+  @IsString()
+  @MaxLength(500)
+  textEn?: string;
+  @ApiPropertyOptional()
+  @IsOptional()
+  @IsString()
+  @MaxLength(500)
+  textZh?: string;
+  @ApiPropertyOptional()
+  @IsOptional()
+  @IsString()
+  @MaxLength(200)
+  latin?: string;
+
+  @ApiPropertyOptional({
+    description:
+      'Đặt true sẽ tự BỎ đúng ở mọi phương án khác của cùng câu: một câu trắc nghiệm có hai đáp án đúng là một câu không thể trả lời.',
+  })
+  @IsOptional()
+  @IsBoolean()
+  isCorrect?: boolean;
+}

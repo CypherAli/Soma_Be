@@ -18,8 +18,8 @@ import {
   LinkStructureDto,
   UpdateQuizDto,
   UpdateQuizOptionDto,
-  UpdateSpeciesDto,
-  UpdateStructureDto,
+  AdminUpdateSpeciesDto,
+  AdminUpdateStructureDto,
   UpdateSystemDto,
 } from './dto/admin.dto';
 
@@ -50,7 +50,7 @@ export class AnatomyAdminController {
   @ApiOperation({ summary: 'Sửa tên ba ngôn ngữ và tên Latin của một loài' })
   updateSpecies(
     @Param('id') id: string,
-    @Body() dto: UpdateSpeciesDto,
+    @Body() dto: AdminUpdateSpeciesDto,
     @CurrentUser() actor: AuthUser,
   ) {
     return this.anatomy.updateSpecies(actor, id, dto);
@@ -111,7 +111,7 @@ export class AnatomyAdminController {
   })
   updateStructure(
     @Param('id') id: string,
-    @Body() dto: UpdateStructureDto,
+    @Body() dto: AdminUpdateStructureDto,
     @CurrentUser() actor: AuthUser,
   ) {
     return this.anatomy.updateStructure(actor, id, dto);

@@ -7,7 +7,6 @@ import {
   IsOptional,
   IsString,
   MaxLength,
-  Min,
 } from 'class-validator';
 
 /** Ba ngôn ngữ giao diện đang phục vụ; nội dung bệnh lý tách theo đúng bộ này. */
@@ -66,11 +65,6 @@ export class UpdateSourceDto {
   @ApiPropertyOptional() @IsOptional() @IsString() url?: string;
   @ApiPropertyOptional() @IsOptional() @IsString() status?: string;
   @ApiPropertyOptional() @IsOptional() @IsString() licenseNote?: string;
-}
-
-export class ListQueryDto {
-  @ApiPropertyOptional() @IsOptional() @IsString() q?: string;
-  @ApiPropertyOptional() @IsOptional() @IsInt() @Min(1) page?: number;
 }
 
 /**
@@ -159,7 +153,15 @@ class MultilingualNameDto {
   latin?: string;
 }
 
-export class UpdateSpeciesDto extends MultilingualNameDto {}
+/**
+ * Tiền tố `Admin`: `src/species/dto/update-species.dto.ts` đã có một
+ * `UpdateSpeciesDto` khác hình dạng (nó nhận cả `code`). Hai class cùng tên
+ * trong cùng tài liệu Swagger làm Nest cảnh báo "Duplicate DTO detected" và
+ * lấy hình dạng của một trong hai một cách không xác định — tức tài liệu API
+ * nói sai về endpoint này. Nest cũng đã báo việc đó SẼ THÀNH LỖI ở phiên bản
+ * lớn kế tiếp.
+ */
+export class AdminUpdateSpeciesDto extends MultilingualNameDto {}
 
 export class UpdateSystemDto extends MultilingualNameDto {
   @ApiPropertyOptional({
@@ -181,8 +183,11 @@ export class UpdateSystemDto extends MultilingualNameDto {
  * Cũng KHÔNG có `code`, `systemId`, `speciesId`, `parentId`: đổi mã là làm chết
  * mọi thứ đang trỏ tới nó (hotspot trong scene, bệnh lý, cây cha-con), còn dời
  * cây phân cấp là việc của dữ liệu nguồn chứ không phải một ô chọn.
+ *
+ * Tiền tố `Admin` vì `src/structures/dto/update-structure.dto.ts` đã dùng tên
+ * `UpdateStructureDto` — xem chú thích ở [AdminUpdateSpeciesDto].
  */
-export class UpdateStructureDto extends MultilingualNameDto {
+export class AdminUpdateStructureDto extends MultilingualNameDto {
   @ApiPropertyOptional({ description: 'Mã Terminologia Anatomica' })
   @IsOptional()
   @IsString()

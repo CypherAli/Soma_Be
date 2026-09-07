@@ -11,8 +11,8 @@ import {
   LinkStructureDto,
   UpdateQuizDto,
   UpdateQuizOptionDto,
-  UpdateSpeciesDto,
-  UpdateStructureDto,
+  AdminUpdateSpeciesDto,
+  AdminUpdateStructureDto,
   UpdateSystemDto,
 } from './dto/admin.dto';
 
@@ -49,7 +49,7 @@ export class AnatomyAdminService {
     }));
   }
 
-  async updateSpecies(actor: AuthUser, id: string, dto: UpdateSpeciesDto) {
+  async updateSpecies(actor: AuthUser, id: string, dto: AdminUpdateSpeciesDto) {
     const before = await this.prisma.species.findUnique({ where: { id } });
     if (!before) throw new NotFoundException('Không có loài này');
     const after = await this.prisma.species.update({
@@ -208,7 +208,11 @@ export class AnatomyAdminService {
     };
   }
 
-  async updateStructure(actor: AuthUser, id: string, dto: UpdateStructureDto) {
+  async updateStructure(
+    actor: AuthUser,
+    id: string,
+    dto: AdminUpdateStructureDto,
+  ) {
     const before = await this.prisma.structure.findUnique({ where: { id } });
     if (!before) throw new NotFoundException('Không có cấu trúc này');
     const after = await this.prisma.structure.update({

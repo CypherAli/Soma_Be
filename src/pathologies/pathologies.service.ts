@@ -18,7 +18,9 @@ export class PathologiesService {
 
   async create(dto: CreatePathologyDto) {
     const { structureCode, ...rest } = dto;
-    const structureId = await this.resolveStructureId(structureCode);
+    const structureId = structureCode
+      ? await this.resolveStructureId(structureCode)
+      : null;
     return this.prisma.pathology.create({ data: { ...rest, structureId } });
   }
 
@@ -45,19 +47,28 @@ export class PathologiesService {
             },
           },
         },
+        content: true,
         citations: {
           include: { source: true },
           orderBy: { source: { year: 'desc' } },
         },
       },
-      orderBy: { nameVi: 'asc' },
+      // Gom theo hệ lâm sàng trước, trong mỗi hệ xếp theo tên — khớp cách chỉ
+      // mục hiển thị ngoài giao diện.
+      orderBy: [{ clinicalSystem: 'asc' }, { nameVi: 'asc' }],
     });
   }
 
   async findOne(id: string) {
     const pathology = await this.prisma.pathology.findUnique({
       where: { id },
-      include: { structure: true, citations: { include: { source: true } } },
+      // `content` BẮT BUỘC có: panel trong /viewer lấy bệnh qua endpoint này,
+      // thiếu nó là panel báo "chưa có nội dung" dù dữ liệu đã có trong DB.
+      include: {
+        structure: true,
+        content: true,
+        citations: { include: { source: true } },
+      },
     });
     if (!pathology)
       throw new NotFoundException(`Pathology "${id}" không tồn tại`);

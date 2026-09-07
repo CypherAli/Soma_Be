@@ -18,6 +18,34 @@ import {
 
 const PAGE = 25;
 
+/**
+ * Cấu trúc thiếu mô tả ở BẤT KỲ ngôn ngữ nào.
+ *
+ * Mô tả trống có hai dạng trong dữ liệu thật: `NULL` và chuỗi rỗng. Chỉ lọc
+ * `NULL` thì bỏ sót đúng những bản ghi đã từng được ghi rồi xoá trắng.
+ */
+const STRUCTURE_MISSING_DESCRIPTION: Prisma.StructureWhereInput = {
+  OR: [
+    { descriptionVi: null },
+    { descriptionVi: '' },
+    { descriptionEn: null },
+    { descriptionEn: '' },
+    { descriptionZh: null },
+    { descriptionZh: '' },
+  ],
+};
+
+/**
+ * Nguồn không còn lấy được toàn văn để đối chiếu.
+ *
+ * `downloaded` và `official-link` là hai trạng thái lành. Còn lại — liên kết
+ * chính thức đã hỏng, cần đăng nhập thư viện, sách thương mại — nghĩa là người
+ * duyệt sau này không mở được tài liệu ra mà kiểm.
+ */
+const SOURCE_AT_RISK: Prisma.MedicalSourceWhereInput = {
+  status: { notIn: ['downloaded', 'official-link'] },
+};
+
 @Injectable()
 export class AdminService {
   constructor(
@@ -113,6 +141,195 @@ export class AdminService {
       },
       people: { users, disabledUsers, attempts },
       recentAudit,
+      attention: await this.attention(),
+    };
+  }
+
+  /** Số mục mẫu kèm theo mỗi hạng mục tồn đọng. */
+  private static readonly SAMPLE = 5;
+
+  /**
+   * Từng hạng mục việc TỒN ĐỌNG, kèm vài mục cụ thể để bấm vào được.
+   *
+   * Con số một mình không dùng được: "106 bài chưa duyệt" thì người ngồi đây
+   * vẫn phải mở tab khác, lọc, rồi mới bắt đầu. Trả kèm năm mục đầu là bảng
+   * điều khiển thành chỗ BẮT ĐẦU LÀM VIỆC chứ không phải chỗ đọc báo cáo.
+   *
+   * Chỉ trả DỮ LIỆU, không trả tiêu đề hay màu: chữ nghĩa và cách tô là việc
+   * của giao diện. Nhét tiêu đề vào đây là muốn sửa một nhãn cũng phải deploy
+   * lại backend.
+   */
+  private async attention() {
+    const take = AdminService.SAMPLE;
+
+    const [
+      needsReview,
+      needsReviewItems,
+      unverifiedCitations,
+      unverifiedCitationItems,
+      machineTranslated,
+      machineTranslatedItems,
+      withoutStructure,
+      withoutStructureItems,
+      withoutCitation,
+      withoutCitationItems,
+      structuresMissingDesc,
+      structuresMissingDescItems,
+      sourcesAtRisk,
+      sourcesAtRiskItems,
+    ] = await Promise.all([
+      this.prisma.pathology.count({ where: { needsReview: true } }),
+      this.prisma.pathology.findMany({
+        where: { needsReview: true },
+        orderBy: [{ clinicalSystem: 'asc' }, { nameVi: 'asc' }],
+        take,
+        select: { id: true, slug: true, nameVi: true, clinicalSystem: true },
+      }),
+
+      this.prisma.pathologyCitation.count({ where: { verified: false } }),
+      this.prisma.pathologyCitation.findMany({
+        where: { verified: false },
+        orderBy: { pathology: { nameVi: 'asc' } },
+        take,
+        select: {
+          id: true,
+          pageOrSection: true,
+          pathology: { select: { id: true, slug: true, nameVi: true } },
+          source: { select: { title: true } },
+        },
+      }),
+
+      this.prisma.pathologyContent.count({
+        where: { machineTranslated: true },
+      }),
+      this.prisma.pathologyContent.findMany({
+        where: { machineTranslated: true },
+        orderBy: [{ locale: 'asc' }, { pathology: { nameVi: 'asc' } }],
+        take,
+        select: {
+          id: true,
+          locale: true,
+          pathology: { select: { id: true, slug: true, nameVi: true } },
+        },
+      }),
+
+      this.prisma.pathology.count({ where: { structureId: null } }),
+      this.prisma.pathology.findMany({
+        where: { structureId: null },
+        orderBy: { nameVi: 'asc' },
+        take,
+        select: { id: true, slug: true, nameVi: true, clinicalSystem: true },
+      }),
+
+      this.prisma.pathology.count({ where: { citations: { none: {} } } }),
+      this.prisma.pathology.findMany({
+        where: { citations: { none: {} } },
+        orderBy: { nameVi: 'asc' },
+        take,
+        select: { id: true, slug: true, nameVi: true, source: true },
+      }),
+
+      // Cấu trúc thiếu mô tả ở BẤT KỲ ngôn ngữ nào. Trống có hai dạng trong dữ
+      // liệu thật — NULL và chuỗi rỗng — nên phải bắt cả hai.
+      this.prisma.structure.count({ where: STRUCTURE_MISSING_DESCRIPTION }),
+      this.prisma.structure.findMany({
+        where: STRUCTURE_MISSING_DESCRIPTION,
+        orderBy: { nameVi: 'asc' },
+        take,
+        select: {
+          id: true,
+          code: true,
+          nameVi: true,
+          descriptionVi: true,
+          descriptionEn: true,
+          descriptionZh: true,
+          system: { select: { nameVi: true } },
+        },
+      }),
+
+      // Nguồn không còn lấy được toàn văn: liên kết chính thức đã hỏng, hoặc
+      // cần đăng nhập thư viện. Bệnh nào dựa vào đó thì không ai kiểm chứng lại
+      // được, nên đây là việc tồn chứ không phải ghi chú.
+      this.prisma.medicalSource.count({ where: SOURCE_AT_RISK }),
+      this.prisma.medicalSource.findMany({
+        where: SOURCE_AT_RISK,
+        orderBy: { title: 'asc' },
+        take,
+        select: {
+          id: true,
+          title: true,
+          status: true,
+          _count: { select: { citations: true } },
+        },
+      }),
+    ]);
+
+    return {
+      needsReview: {
+        total: needsReview,
+        items: needsReviewItems.map((p) => ({
+          id: p.id,
+          title: p.nameVi,
+          subtitle: [p.slug, p.clinicalSystem].filter(Boolean).join(' · '),
+        })),
+      },
+      unverifiedCitations: {
+        total: unverifiedCitations,
+        items: unverifiedCitationItems.map((c) => ({
+          id: c.pathology.id,
+          title: c.pathology.nameVi,
+          subtitle: [c.source.title, c.pageOrSection]
+            .filter(Boolean)
+            .join(' · '),
+        })),
+      },
+      machineTranslated: {
+        total: machineTranslated,
+        items: machineTranslatedItems.map((c) => ({
+          id: c.pathology.id,
+          title: c.pathology.nameVi,
+          subtitle: `bản ${c.locale} · ${c.pathology.slug}`,
+        })),
+      },
+      withoutStructure: {
+        total: withoutStructure,
+        items: withoutStructureItems.map((p) => ({
+          id: p.id,
+          title: p.nameVi,
+          subtitle: [p.slug, p.clinicalSystem].filter(Boolean).join(' · '),
+        })),
+      },
+      withoutCitation: {
+        total: withoutCitation,
+        items: withoutCitationItems.map((p) => ({
+          id: p.id,
+          title: p.nameVi,
+          subtitle: p.source,
+        })),
+      },
+      structuresMissingDescription: {
+        total: structuresMissingDesc,
+        items: structuresMissingDescItems.map((st) => ({
+          id: st.id,
+          title: st.nameVi,
+          subtitle: `${st.system.nameVi} · thiếu ${LOCALES.filter(
+            (locale) =>
+              !(locale === 'vi'
+                ? st.descriptionVi
+                : locale === 'en'
+                  ? st.descriptionEn
+                  : st.descriptionZh),
+          ).join('/')}`,
+        })),
+      },
+      sourcesAtRisk: {
+        total: sourcesAtRisk,
+        items: sourcesAtRiskItems.map((src) => ({
+          id: src.id,
+          title: src.title,
+          subtitle: `${src.status} · ${src._count.citations} trích dẫn đang dựa vào`,
+        })),
+      },
     };
   }
 

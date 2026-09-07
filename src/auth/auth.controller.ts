@@ -11,6 +11,7 @@ import {
 } from '@nestjs/common';
 import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
 import { AuthService } from './auth.service';
+import { ChangePasswordDto } from './dto/change-password.dto';
 import { LoginDto } from './dto/login.dto';
 import { RegisterDto } from './dto/register.dto';
 
@@ -33,6 +34,16 @@ export class AuthController {
   @Get('me')
   me(@Headers('authorization') value?: string) {
     return this.authService.me(this.bearerToken(value));
+  }
+
+  @ApiBearerAuth()
+  @HttpCode(200)
+  @Post('change-password')
+  changePassword(
+    @Body() dto: ChangePasswordDto,
+    @Headers('authorization') value?: string,
+  ) {
+    return this.authService.changePassword(dto, this.bearerToken(value));
   }
 
   @ApiBearerAuth()

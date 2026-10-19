@@ -98,4 +98,20 @@ ${ANSWER_PAGE}`;
 
     expect(report.questions).toHaveLength(0);
   });
+
+  it('nhận câu viết "Câu N." kiểu file Review Word', () => {
+    const report = parseMcq([
+      `Câu 1. Cơ nào gấp cẳng tay? A. Cơ tam đầu B. Cơ nhị đầu C. Cơ delta D. Cơ ngực lớn E. Cơ thang. Đáp án: B
+Câu 2: Thần kinh nào chi phối cơ delta? A. TK quay B. TK trụ C. TK nách D. TK giữa E. TK cơ bì (đáp án C)`,
+    ]);
+
+    expect(report.questions.map((q) => `${q.number}${q.answer}`)).toEqual([
+      '1B',
+      '2C',
+    ]);
+    expect(report.questions[0].options.B).toBe('Cơ nhị đầu');
+    expect(report.questions[0].explanation).toBeNull();
+    // đáp án inline không được dính vào phương án cuối
+    expect(report.questions[0].options.E).toBe('Cơ thang');
+  });
 });

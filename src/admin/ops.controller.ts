@@ -101,7 +101,7 @@ export class OpsController {
       'Duyệt hoặc trả về hàng chờ nhiều bài một lượt (tối đa 50). value: true = ĐÃ DUYỆT, cùng chiều với endpoint trích dẫn.',
   })
   bulkReview(@Body() dto: BulkFlagDto, @CurrentUser() actor: AuthUser) {
-    return this.queues.bulkReview(actor, dto.ids, dto.value);
+    return this.queues.bulkReview(actor, dto.ids, dto.value, dto.revisions);
   }
 
   // ------------------------------------------------------- trích dẫn

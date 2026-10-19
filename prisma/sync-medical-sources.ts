@@ -8,12 +8,12 @@ type CatalogSource = { id: string; title: string; publisher: string; year?: numb
 const prisma = new PrismaClient({ adapter: new PrismaPg({ connectionString: process.env.DATABASE_URL }) });
 
 async function main() {
-  const catalogPath = process.env.MEDICAL_KB_CATALOG || resolve(process.cwd(), "..", "medical_kb", "catalog.json");
+  const catalogPath = process.env.MEDICAL_KB_CATALOG || resolve(process.env.MEDICAL_KB_ROOT || resolve(process.cwd(), "resources", "medical_kb"), "catalog.json");
   const catalog = JSON.parse(await readFile(catalogPath, "utf8")) as { sources: CatalogSource[] };
   for (const source of catalog.sources) {
     await prisma.medicalSource.upsert({
       where: { id: source.id },
-      update: { title: source.title, publisher: source.publisher, year: source.year, url: source.url, localFile: source.file, status: source.status, licenseNote: source.licenseNote, checkedAt: new Date() },
+      update: {}, // BO owns existing source metadata; sync only adds missing sources.
       create: { id: source.id, title: source.title, publisher: source.publisher, year: source.year, url: source.url, localFile: source.file, status: source.status, licenseNote: source.licenseNote },
     });
   }

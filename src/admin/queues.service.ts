@@ -1,4 +1,14 @@
-import { BadRequestException, Injectable } from '@nestjs/common';
+import {
+  REVIEW_INCLUDE,
+  reviewReady,
+  reviewRevision,
+} from './review-readiness';
+import { withRevision } from './revisions';
+import {
+  BadRequestException,
+  ConflictException,
+  Injectable,
+} from '@nestjs/common';
 import { Prisma } from '@prisma/client';
 import { PrismaService } from '../prisma/prisma.service';
 import { AuditService } from './audit.service';
@@ -55,25 +65,15 @@ export class QueuesService {
         orderBy: [{ clinicalSystem: 'asc' }, { nameVi: 'asc' }],
         skip: (page - 1) * PAGE,
         take: PAGE,
-        select: {
-          id: true,
-          slug: true,
-          nameVi: true,
-          clinicalSystem: true,
-          severity: true,
-          icdCode: true,
-          source: true,
-          sourcePage: true,
-          content: { select: { locale: true, machineTranslated: true } },
-          _count: { select: { citations: true } },
-        },
+        include: { ...REVIEW_INCLUDE, _count: { select: { citations: true } } },
       }),
       this.prisma.pathology.count({ where }),
     ]);
 
     return {
-      items: items.map(({ content, _count, ...p }) => ({
+      items: items.map(({ content, citations, _count, ...p }) => ({
         ...p,
+        reviewRevision: reviewRevision({ ...p, content, citations }),
         citations: _count.citations,
         locales: content.map((c) => c.locale),
         machineLocales: content
@@ -85,7 +85,7 @@ export class QueuesService {
          * chưa có gì để đọc hoặc không truy ngược được về tài liệu nào — giao
          * diện dựa vào cờ này để chặn duyệt hàng loạt.
          */
-        ready: content.some((c) => c.locale === 'vi') && _count.citations > 0,
+        ready: reviewReady({ content, citations }),
       })),
       total,
       page,
@@ -106,68 +106,74 @@ export class QueuesService {
    * "việc này đã xong". Để nguyên chiều của cột thì một hôm ai đó gửi
    * `value: true` với ý duyệt và duyệt ngược 50 bài mà không có lỗi nào báo ra.
    */
-  async bulkReview(actor: AuthUser, ids: string[], approved: boolean) {
-    const needsReview = !approved;
-    const unique = [...new Set(ids)];
-    if (unique.length === 0) throw new BadRequestException('Chưa chọn bài nào');
-    if (unique.length > BULK_MAX) {
-      throw new BadRequestException(
-        `Mỗi lượt tối đa ${BULK_MAX} bài — duyệt chuyên môn là xác nhận về nội dung y khoa, không phải thao tác dọn hàng đợi.`,
-      );
-    }
-
-    const rows = await this.prisma.pathology.findMany({
-      where: { id: { in: unique } },
-      select: {
-        id: true,
-        slug: true,
-        needsReview: true,
-        content: { select: { locale: true } },
-        _count: { select: { citations: true } },
-      },
-    });
-    if (rows.length !== unique.length) {
-      throw new BadRequestException(
-        'Có id không tồn tại trong danh sách gửi lên',
-      );
-    }
-
-    // Chỉ chặn khi ĐANG duyệt. Trả về hàng chờ thì không cần điều kiện gì —
-    // rút lại một lời xác nhận phải luôn làm được.
-    if (approved) {
-      const notReady = rows.filter(
-        (r) =>
-          !r.content.some((c) => c.locale === 'vi') || r._count.citations === 0,
-      );
-      if (notReady.length) {
+  async bulkReview(
+    actor: AuthUser,
+    ids: string[],
+    approved: boolean,
+    revisions: Record<string, string> = {},
+  ) {
+    return this.audit.atomic(async (tx) => {
+      const needsReview = !approved;
+      const unique = [...new Set(ids)];
+      if (unique.length === 0)
+        throw new BadRequestException('Chưa chọn bài nào');
+      if (unique.length > BULK_MAX) {
         throw new BadRequestException(
-          `${notReady.length} bài chưa đủ điều kiện duyệt (thiếu nội dung tiếng Việt hoặc thiếu trích dẫn): ${notReady
-            .slice(0, 5)
-            .map((r) => r.slug)
-            .join(', ')}`,
+          `Mỗi lượt tối đa ${BULK_MAX} bài — duyệt chuyên môn là xác nhận về nội dung y khoa, không phải thao tác dọn hàng đợi.`,
         );
       }
-    }
 
-    const changed = rows.filter((r) => r.needsReview !== needsReview);
-    await this.prisma.pathology.updateMany({
-      where: { id: { in: changed.map((r) => r.id) } },
-      data: { needsReview },
+      const rows = await tx.pathology.findMany({
+        where: { id: { in: unique } },
+        include: REVIEW_INCLUDE,
+      });
+      if (rows.length !== unique.length) {
+        throw new BadRequestException(
+          'Có id không tồn tại trong danh sách gửi lên',
+        );
+      }
+
+      // Chỉ chặn khi ĐANG duyệt. Trả về hàng chờ thì không cần điều kiện gì —
+      // rút lại một lời xác nhận phải luôn làm được.
+      if (rows.some((row) => revisions[row.id] !== reviewRevision(row)))
+        throw new ConflictException(
+          'Có bài vừa thay đổi. Tải lại và đọc bản mới trước khi duyệt.',
+        );
+      if (approved) {
+        const notReady = rows.filter((r) => !reviewReady(r));
+        if (notReady.length) {
+          throw new BadRequestException(
+            `${notReady.length} bài chưa đủ điều kiện duyệt (thiếu nội dung tiếng Việt hoặc thiếu trích dẫn): ${notReady
+              .slice(0, 5)
+              .map((r) => r.slug)
+              .join(', ')}`,
+          );
+        }
+      }
+
+      const changed = rows.filter((r) => r.needsReview !== needsReview);
+      await tx.pathology.updateMany({
+        where: { id: { in: changed.map((r) => r.id) } },
+        data: { needsReview },
+      });
+
+      // Một dòng nhật ký cho CẢ lượt, kèm danh sách slug: ghi 50 dòng rời thì
+      // nhật ký thành không đọc được, mà mất luôn thông tin "đây là một lượt".
+      await this.audit.record(
+        {
+          actor,
+          action: 'verify',
+          entity: 'pathology',
+          entityId: `bulk:${changed.length}`,
+          entityLabel: `${changed.length} bài · ${needsReview ? 'trả về chờ duyệt' : 'đánh dấu đã duyệt'}`,
+          before: { needsReview: !needsReview },
+          after: { needsReview, slugs: changed.map((r) => r.slug) },
+        },
+        tx,
+      );
+
+      return { updated: changed.length, skipped: rows.length - changed.length };
     });
-
-    // Một dòng nhật ký cho CẢ lượt, kèm danh sách slug: ghi 50 dòng rời thì
-    // nhật ký thành không đọc được, mà mất luôn thông tin "đây là một lượt".
-    await this.audit.record({
-      actor,
-      action: 'verify',
-      entity: 'pathology',
-      entityId: `bulk:${changed.length}`,
-      entityLabel: `${changed.length} bài · ${needsReview ? 'trả về chờ duyệt' : 'đánh dấu đã duyệt'}`,
-      before: { needsReview: !needsReview },
-      after: { needsReview, slugs: changed.map((r) => r.slug) },
-    });
-
-    return { updated: changed.length, skipped: rows.length - changed.length };
   }
 
   // ----------------------------------------------------------- trích dẫn
@@ -225,42 +231,51 @@ export class QueuesService {
    * cho 106 trích dẫn bằng một cái tick là nói dối, dù nói dối bằng máy.
    */
   async bulkVerifyCitations(actor: AuthUser, ids: string[], verified: boolean) {
-    const unique = [...new Set(ids)];
-    if (unique.length === 0)
-      throw new BadRequestException('Chưa chọn trích dẫn nào');
-    if (unique.length > BULK_MAX) {
-      throw new BadRequestException(
-        `Mỗi lượt tối đa ${BULK_MAX} trích dẫn — đây là xác nhận đã mở tài liệu ra kiểm, không phải thao tác dọn hàng đợi.`,
+    return this.audit.atomic(async (tx) => {
+      const unique = [...new Set(ids)];
+      if (unique.length === 0)
+        throw new BadRequestException('Chưa chọn trích dẫn nào');
+      if (unique.length > BULK_MAX) {
+        throw new BadRequestException(
+          `Mỗi lượt tối đa ${BULK_MAX} trích dẫn — đây là xác nhận đã mở tài liệu ra kiểm, không phải thao tác dọn hàng đợi.`,
+        );
+      }
+      const rows = await tx.pathologyCitation.findMany({
+        where: { id: { in: unique } },
+        select: { id: true, verified: true, sourceId: true, pathologyId: true },
+      });
+      if (rows.length !== unique.length) {
+        throw new BadRequestException(
+          'Có id không tồn tại trong danh sách gửi lên',
+        );
+      }
+      const changed = rows.filter((r) => r.verified !== verified);
+      await tx.pathologyCitation.updateMany({
+        where: { id: { in: changed.map((r) => r.id) } },
+        data: {
+          verified,
+          verifiedBy: verified ? actor.email : null,
+          verifiedAt: verified ? new Date() : null,
+        },
+      });
+      await tx.pathology.updateMany({
+        where: { id: { in: changed.map((r) => r.pathologyId) } },
+        data: { needsReview: true },
+      });
+      await this.audit.record(
+        {
+          actor,
+          action: 'verify',
+          entity: 'pathology_citation',
+          entityId: `bulk:${changed.length}`,
+          entityLabel: `${changed.length} trích dẫn · ${verified ? 'đã đối chiếu' : 'bỏ đối chiếu'}`,
+          before: { verified: !verified },
+          after: { verified, ids: changed.map((r) => r.id) },
+        },
+        tx,
       );
-    }
-    const rows = await this.prisma.pathologyCitation.findMany({
-      where: { id: { in: unique } },
-      select: { id: true, verified: true, sourceId: true },
+      return { updated: changed.length, skipped: rows.length - changed.length };
     });
-    if (rows.length !== unique.length) {
-      throw new BadRequestException(
-        'Có id không tồn tại trong danh sách gửi lên',
-      );
-    }
-    const changed = rows.filter((r) => r.verified !== verified);
-    await this.prisma.pathologyCitation.updateMany({
-      where: { id: { in: changed.map((r) => r.id) } },
-      data: {
-        verified,
-        verifiedBy: verified ? actor.email : null,
-        verifiedAt: verified ? new Date() : null,
-      },
-    });
-    await this.audit.record({
-      actor,
-      action: 'verify',
-      entity: 'pathology_citation',
-      entityId: `bulk:${changed.length}`,
-      entityLabel: `${changed.length} trích dẫn · ${verified ? 'đã đối chiếu' : 'bỏ đối chiếu'}`,
-      before: { verified: !verified },
-      after: { verified, ids: changed.map((r) => r.id) },
-    });
-    return { updated: changed.length, skipped: rows.length - changed.length };
   }
 
   // ------------------------------------------------------------- bản dịch
@@ -352,7 +367,7 @@ export class QueuesService {
         return {
           ...p,
           source: content.find((c) => c.locale === 'vi') ?? null,
-          target: target ?? null,
+          target: target ? withRevision('pathology_content', target) : null,
           state: !target
             ? ('missing' as const)
             : target.machineTranslated

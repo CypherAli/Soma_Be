@@ -7,6 +7,7 @@ import {
   IsBoolean,
   IsIn,
   IsInt,
+  IsObject,
   IsOptional,
   IsString,
   MaxLength,
@@ -14,6 +15,12 @@ import {
 
 /** Ba ngôn ngữ giao diện đang phục vụ; nội dung bệnh lý tách theo đúng bộ này. */
 export const LOCALES = ['vi', 'en', 'zh'] as const;
+
+export class RevisionDto {
+  @ApiProperty({ description: 'Phiên bản nhận khi mở biểu mẫu' })
+  @IsString()
+  expectedRevision!: string;
+}
 
 export class UpdateRoleDto {
   @ApiProperty({ enum: UserRole })
@@ -28,7 +35,7 @@ export class SetDisabledDto {
 }
 
 /** Một mục nội dung bệnh lý của MỘT ngôn ngữ. */
-export class UpsertContentDto {
+export class UpsertContentDto extends RevisionDto {
   @ApiPropertyOptional() @IsOptional() @IsString() description?: string;
   @ApiPropertyOptional() @IsOptional() @IsString() clinical?: string;
   @ApiPropertyOptional() @IsOptional() @IsString() imaging?: string;
@@ -61,10 +68,10 @@ export class CreateCitationDto {
   quote?: string;
 }
 
-export class UpdateSourceDto {
+export class UpdateSourceDto extends RevisionDto {
   @ApiPropertyOptional() @IsOptional() @IsString() title?: string;
   @ApiPropertyOptional() @IsOptional() @IsString() publisher?: string;
-  @ApiPropertyOptional() @IsOptional() @IsInt() year?: number;
+  @ApiPropertyOptional() @IsOptional() @IsInt() year?: number | null;
   @ApiPropertyOptional() @IsOptional() @IsString() url?: string;
   @ApiPropertyOptional() @IsOptional() @IsString() status?: string;
   @ApiPropertyOptional() @IsOptional() @IsString() licenseNote?: string;
@@ -81,7 +88,7 @@ export class UpdateSourceDto {
  * Cũng KHÔNG có `slug`: slug đang là địa chỉ công khai của bài bệnh và nằm
  * trong `data/slug-alias.json`; đổi ở đây là làm chết liên kết ngoài.
  */
-export class UpdatePathologyMetaDto {
+export class UpdatePathologyMetaDto extends RevisionDto {
   @ApiPropertyOptional()
   @IsOptional()
   @IsString()
@@ -107,18 +114,18 @@ export class UpdatePathologyMetaDto {
   @IsOptional()
   @IsString()
   @MaxLength(32)
-  icdCode?: string;
+  icdCode?: string | null;
 
   @ApiPropertyOptional({ enum: Severity })
   @IsOptional()
   @IsIn(Object.values(Severity))
-  severity?: Severity;
+  severity?: Severity | null;
 
   @ApiPropertyOptional({ description: 'Hệ lâm sàng theo giáo trình' })
   @IsOptional()
   @IsString()
   @MaxLength(120)
-  clinicalSystem?: string;
+  clinicalSystem?: string | null;
 
   @ApiPropertyOptional({
     description: 'Nguồn trích dẫn dạng chữ trên chính bản ghi',
@@ -128,11 +135,11 @@ export class UpdatePathologyMetaDto {
   @MaxLength(300)
   source?: string;
 
-  @ApiPropertyOptional() @IsOptional() @IsInt() sourcePage?: number;
+  @ApiPropertyOptional() @IsOptional() @IsInt() sourcePage?: number | null;
 }
 
 /** Tên ba ngôn ngữ + Latin — dùng chung cho loài, hệ cơ quan và cấu trúc. */
-class MultilingualNameDto {
+class MultilingualNameDto extends RevisionDto {
   @ApiPropertyOptional()
   @IsOptional()
   @IsString()
@@ -203,7 +210,7 @@ export class AdminUpdateStructureDto extends MultilingualNameDto {
 }
 
 /** Neo một bệnh lý vào cấu trúc 3D, hoặc bỏ neo. */
-export class LinkStructureDto {
+export class LinkStructureDto extends RevisionDto {
   @ApiPropertyOptional({
     description:
       'Mã cấu trúc. Để trống hoặc null nghĩa là BỎ neo — nhiều bệnh (huyết học, rối loạn điện giải) không thuộc về một cấu trúc đơn lẻ nào và neo bừa thì tệ hơn để trống.',
@@ -214,7 +221,7 @@ export class LinkStructureDto {
   structureCode?: string | null;
 }
 
-export class UpdateQuizDto {
+export class UpdateQuizDto extends RevisionDto {
   @ApiPropertyOptional() @IsOptional() @IsString() promptVi?: string;
   @ApiPropertyOptional() @IsOptional() @IsString() promptEn?: string;
   @ApiPropertyOptional() @IsOptional() @IsString() promptZh?: string;
@@ -226,7 +233,7 @@ export class UpdateQuizDto {
   source?: string;
 }
 
-export class UpdateQuizOptionDto {
+export class UpdateQuizOptionDto extends RevisionDto {
   @ApiPropertyOptional()
   @IsOptional()
   @IsString()
@@ -265,6 +272,7 @@ export class UpdateQuizOptionDto {
  * khi chạm vào cơ sở dữ liệu.
  */
 export class BulkFlagDto {
+  @IsOptional() @IsObject() revisions?: Record<string, string>;
   @ApiProperty({ type: [String], maxItems: 50 })
   @IsArray()
   @ArrayNotEmpty()
@@ -275,4 +283,9 @@ export class BulkFlagDto {
   @ApiProperty({ description: 'Giá trị mới của cờ (duyệt / đã đối chiếu)' })
   @IsBoolean()
   value!: boolean;
+}
+
+export class SetReviewedDto {
+  @IsBoolean() needsReview!: boolean;
+  @IsString() expectedReviewRevision!: string;
 }

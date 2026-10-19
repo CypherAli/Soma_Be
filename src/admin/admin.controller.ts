@@ -1,4 +1,9 @@
+import { SourcesService } from './sources.service';
+import { CreateSourceDto } from './dto/source.dto';
+import { FileInterceptor } from '@nestjs/platform-express';
 import {
+  UploadedFile,
+  UseInterceptors,
   Body,
   Controller,
   Delete,
@@ -17,6 +22,8 @@ import type { AuthUser } from '../auth/roles';
 import { AdminService } from './admin.service';
 import { AuditService } from './audit.service';
 import {
+  RevisionDto,
+  SetReviewedDto,
   CreateCitationDto,
   SetDisabledDto,
   UpdatePathologyMetaDto,
@@ -39,6 +46,7 @@ import {
 export class AdminController {
   constructor(
     private readonly admin: AdminService,
+    private readonly sourceLibrary: SourcesService,
     private readonly audit: AuditService,
   ) {}
 
@@ -159,10 +167,15 @@ export class AdminController {
   })
   setReviewed(
     @Param('id') id: string,
-    @Body() body: { needsReview: boolean },
+    @Body() body: SetReviewedDto,
     @CurrentUser() actor: AuthUser,
   ) {
-    return this.admin.setReviewed(actor, id, body.needsReview);
+    return this.admin.setReviewed(
+      actor,
+      id,
+      body.needsReview,
+      body.expectedReviewRevision,
+    );
   }
 
   // --------------------------------------------------------------- trích dẫn
@@ -203,6 +216,20 @@ export class AdminController {
     return this.admin.sources();
   }
 
+  @Post('sources')
+  @UseInterceptors(
+    FileInterceptor('file', {
+      limits: { fileSize: 30 * 1024 * 1024, files: 1 },
+    }),
+  )
+  createSource(
+    @Body() dto: CreateSourceDto,
+    @UploadedFile() file: Express.Multer.File | undefined,
+    @CurrentUser() actor: AuthUser,
+  ) {
+    return this.sourceLibrary.create(actor, dto, file);
+  }
+
   @Patch('sources/:id')
   @ApiOperation({ summary: 'Sửa thông tin một tài liệu' })
   updateSource(
@@ -211,6 +238,22 @@ export class AdminController {
     @CurrentUser() actor: AuthUser,
   ) {
     return this.admin.updateSource(actor, id, dto);
+  }
+
+  @MinRole(UserRole.admin)
+  @Get('audit/:id/restore')
+  restorePreview(@Param('id') id: string) {
+    return this.audit.restorePreview(id);
+  }
+
+  @MinRole(UserRole.admin)
+  @Post('audit/:id/restore')
+  restoreAudit(
+    @Param('id') id: string,
+    @Body() dto: RevisionDto,
+    @CurrentUser() actor: AuthUser,
+  ) {
+    return this.audit.restore(actor, id, dto.expectedRevision);
   }
 
   // ----------------------------------------------------------------- nhật ký

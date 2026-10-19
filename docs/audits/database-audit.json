@@ -1,0 +1,333 @@
+{
+  "startedAt": "2026-10-15T05:17:47.210Z",
+  "checks": [
+    {
+      "name": "Prisma tables exist",
+      "passed": true,
+      "issues": 0,
+      "detail": []
+    },
+    {
+      "name": "Prisma scalar columns exist",
+      "passed": true,
+      "issues": 0,
+      "detail": []
+    },
+    {
+      "name": "Required and nullable columns match Prisma",
+      "passed": true,
+      "issues": 0,
+      "detail": []
+    },
+    {
+      "name": "Scalar column types match Prisma",
+      "passed": true,
+      "issues": 0,
+      "detail": []
+    },
+    {
+      "name": "Foreign keys have no orphan rows",
+      "passed": true,
+      "issues": 0
+    },
+    {
+      "name": "Foreign keys are validated",
+      "passed": true,
+      "issues": 0
+    },
+    {
+      "name": "All indexes are valid and ready",
+      "passed": true,
+      "issues": 0,
+      "detail": []
+    },
+    {
+      "name": "Repository migrations are applied",
+      "passed": true,
+      "issues": 0,
+      "detail": []
+    },
+    {
+      "name": "No unfinished failed migrations",
+      "passed": true,
+      "issues": 0
+    },
+    {
+      "name": "Contact emails are normalized and password identities are unique and consistent",
+      "passed": true,
+      "issues": 0
+    },
+    {
+      "name": "Active sessions do not belong to disabled accounts",
+      "passed": true,
+      "issues": 0
+    },
+    {
+      "name": "Session lifetimes are valid",
+      "passed": true,
+      "issues": 0
+    },
+    {
+      "name": "Quiz scores and durations are in range",
+      "passed": true,
+      "issues": 0
+    },
+    {
+      "name": "Study path limits are valid",
+      "passed": true,
+      "issues": 0
+    },
+    {
+      "name": "Review counters and intervals are nonnegative",
+      "passed": true,
+      "issues": 0
+    },
+    {
+      "name": "Personal questions belong to the same owner as their document",
+      "passed": true,
+      "issues": 0
+    },
+    {
+      "name": "Personal document sizes and statuses are valid",
+      "passed": true,
+      "issues": 0
+    },
+    {
+      "name": "Personal question options are objects with a valid answer key",
+      "passed": true,
+      "issues": 0
+    },
+    {
+      "name": "Quiz bank entries have options and a correct answer",
+      "passed": true,
+      "issues": 0
+    },
+    {
+      "name": "Structure parents have matching species",
+      "passed": true,
+      "issues": 0
+    },
+    {
+      "name": "Structure hierarchy has no cycle",
+      "passed": true,
+      "issues": 0
+    },
+    {
+      "name": "Personal review items still reference an existing approved question",
+      "passed": true,
+      "issues": 0
+    }
+  ],
+  "tables": [
+    {
+      "table": "_prisma_migrations",
+      "rows": 16
+    },
+    {
+      "table": "anatomy_systems",
+      "rows": 55
+    },
+    {
+      "table": "audit_logs",
+      "rows": 140
+    },
+    {
+      "table": "chat_memory",
+      "rows": 0
+    },
+    {
+      "table": "medical_sources",
+      "rows": 18
+    },
+    {
+      "table": "oauth_states",
+      "rows": 5
+    },
+    {
+      "table": "password_reset_tokens",
+      "rows": 0
+    },
+    {
+      "table": "pathologies",
+      "rows": 106
+    },
+    {
+      "table": "pathology_citations",
+      "rows": 106
+    },
+    {
+      "table": "pathology_content",
+      "rows": 318
+    },
+    {
+      "table": "pathology_structures",
+      "rows": 0
+    },
+    {
+      "table": "personal_docs",
+      "rows": 2
+    },
+    {
+      "table": "personal_questions",
+      "rows": 20
+    },
+    {
+      "table": "quiz_attempts",
+      "rows": 3
+    },
+    {
+      "table": "quiz_options",
+      "rows": 20
+    },
+    {
+      "table": "quiz_questions",
+      "rows": 5
+    },
+    {
+      "table": "review_items",
+      "rows": 37
+    },
+    {
+      "table": "sessions",
+      "rows": 9
+    },
+    {
+      "table": "species",
+      "rows": 7
+    },
+    {
+      "table": "structures",
+      "rows": 200
+    },
+    {
+      "table": "study_paths",
+      "rows": 2
+    },
+    {
+      "table": "users",
+      "rows": 3
+    }
+  ],
+  "foreignKeys": [
+    {
+      "name": "anatomy_systems_speciesId_fkey",
+      "validated": true,
+      "orphans": 0
+    },
+    {
+      "name": "chat_memory_userId_fkey",
+      "validated": true,
+      "orphans": 0
+    },
+    {
+      "name": "password_reset_tokens_userId_fkey",
+      "validated": true,
+      "orphans": 0
+    },
+    {
+      "name": "pathologies_structureId_fkey",
+      "validated": true,
+      "orphans": 0
+    },
+    {
+      "name": "pathology_citations_pathologyId_fkey",
+      "validated": true,
+      "orphans": 0
+    },
+    {
+      "name": "pathology_citations_sourceId_fkey",
+      "validated": true,
+      "orphans": 0
+    },
+    {
+      "name": "pathology_content_pathologyId_fkey",
+      "validated": true,
+      "orphans": 0
+    },
+    {
+      "name": "pathology_structures_pathologyId_fkey",
+      "validated": true,
+      "orphans": 0
+    },
+    {
+      "name": "pathology_structures_structureId_fkey",
+      "validated": true,
+      "orphans": 0
+    },
+    {
+      "name": "personal_docs_userId_fkey",
+      "validated": true,
+      "orphans": 0
+    },
+    {
+      "name": "personal_questions_docId_fkey",
+      "validated": true,
+      "orphans": 0
+    },
+    {
+      "name": "quiz_attempts_userId_fkey",
+      "validated": true,
+      "orphans": 0
+    },
+    {
+      "name": "quiz_options_questionId_fkey",
+      "validated": true,
+      "orphans": 0
+    },
+    {
+      "name": "quiz_questions_systemId_fkey",
+      "validated": true,
+      "orphans": 0
+    },
+    {
+      "name": "review_items_userId_fkey",
+      "validated": true,
+      "orphans": 0
+    },
+    {
+      "name": "sessions_userId_fkey",
+      "validated": true,
+      "orphans": 0
+    },
+    {
+      "name": "structures_parentId_fkey",
+      "validated": true,
+      "orphans": 0
+    },
+    {
+      "name": "structures_speciesId_fkey",
+      "validated": true,
+      "orphans": 0
+    },
+    {
+      "name": "structures_systemId_fkey",
+      "validated": true,
+      "orphans": 0
+    },
+    {
+      "name": "study_paths_userId_fkey",
+      "validated": true,
+      "orphans": 0
+    }
+  ],
+  "server": {
+    "version": "18.3",
+    "bytes": "12474047",
+    "timezone": "Asia/Bangkok"
+  },
+  "migrations": {
+    "repository": 16,
+    "completed": 16
+  },
+  "sessionSummary": {
+    "total": "9",
+    "active": "1",
+    "expired": "8"
+  },
+  "contentReview": {
+    "total": "106",
+    "pending": "0"
+  },
+  "finishedAt": "2026-10-15T05:17:47.349Z",
+  "failures": []
+}

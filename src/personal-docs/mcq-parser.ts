@@ -40,12 +40,29 @@ export type ParseReport = {
 
 /** Chữ C thường và dấu chấm rơi mất là hai lỗi OCR gặp ở gần như mọi bản scan. */
 const OPT_RE = /(?:(?<=^)|(?<=\s))([A-Ea-e])[.)]?\s+(?=\S)/g;
-const Q_START_RE = /^[ \t]*(\d{1,3})[.)]\s+(?=\D)/gm;
+/**
+ * Mở đầu câu hỏi: "12.", "12)", "Câu 12.", "Câu 12:" — đề ôn Word ở Việt Nam
+ * viết "Câu N" nhiều hơn đánh số trần, regex cũ bỏ sót gần hết file Review.
+ */
+const Q_START_RE = /^[ \t]*(?:câu\s+)?(\d{1,3})[.):)]\s+(?=\D)/gim;
 /** "12-C." hoặc "12 – c" — kèm lời giải phía sau. */
-const ANS_EXPL_RE = /^[ \t]*(\d{1,3})\s*[-–—]\s*([A-Ea-e])[.\s]/gm;
-/** Tiêu đề mở đầu vùng đáp án, đứng ngay trước mục đầu tiên. */
+const ANS_EXPL_RE = /^[ \t]*(?:câu\s+)?(\d{1,3})\s*[-–—]\s*([A-Ea-e])[.\s]/gim;
+/**
+ * Đáp án nằm ngay cuối khối câu: "Đáp án: C", "Đáp án C", "(đáp án C)".
+ * File Review thường không có vùng đáp án tập trung mà chốt đáp án sau mỗi
+ * câu — không đọc dạng này thì cả file thành "không dò được đáp án".
+ */
+const INLINE_ANS_RE =
+  /[(\-–—]?\s*(?:đáp\s*án|answer|key)\s*[:–-]?\s*([A-Ea-e])\s*[)\]]?\s*$/i;
+/**
+ * Tiêu đề mở đầu vùng đáp án, đứng ngay trước mục đầu tiên.
+ *
+ * Ngoại lệ: dòng kết thúc bằng đáp án inline ("…Đáp án: C") thì KHÔNG phải
+ * tiêu đề — không có lookahead này, đáp án chốt sau mỗi câu bị cắt mất trước
+ * khi bộ bóc kịp đọc, cả file Review thành "không dò được đáp án".
+ */
 const ANS_HEADING_RE =
-  /\s*(ĐÁP\s*ÁN|DAP\s*AN|ANSWERS?(\s*KEY)?|答案)[^\n]*\s*$/i;
+  /\s*(ĐÁP\s*ÁN|DAP\s*AN|ANSWERS?(\s*KEY)?|答案)(?!\s*[:–-]?\s*[A-Ea-e]\s*[)\]]?\s*$)[^\n]*\s*$/i;
 /** Bảng đáp án gọn: "1-A 2-B 3-C" hoặc "1.A, 2.B" nằm bất kỳ đâu trong dòng. */
 const ANS_TABLE_RE = /\b(\d{1,3})\s*[-–—.:]\s*([A-Ea-e])\b(?![)\w])/g;
 
@@ -84,7 +101,7 @@ export function parseMcq(pages: string[]): ParseReport {
       .slice(from, Math.min(nextQuestion, nextAnswer))
       .replace(ANS_HEADING_RE, '');
 
-    const { options, stem } = splitOptions(raw);
+    const { options, stem, tail } = splitOptions(raw);
     // số trang ở chân trang hay dính vào cuối phần dẫn ("...nhất? 480")
     const cleanStem = stem.replace(/\s+\d{2,4}$/, '').trim();
 
@@ -92,7 +109,16 @@ export function parseMcq(pages: string[]): ParseReport {
       report.malformed += 1;
       continue;
     }
-    const hit = answers.get(num);
+    let hit = answers.get(num);
+    if ((!hit || !options[hit.letter]) && tail) {
+      // Rớt vùng đáp án tập trung thì thử đáp án chốt ngay cuối câu
+      // ("…Đáp án: C") trước khi bỏ — đúng khuôn file Review.
+      const inline = tail.match(INLINE_ANS_RE);
+      if (inline) {
+        const letter = inline[1].toUpperCase();
+        if (options[letter]) hit = { letter, explanation: null };
+      }
+    }
     if (!hit || !options[hit.letter]) {
       // Không có đáp án, HOẶC khoá đáp án trỏ vào phương án không tồn tại —
       // cả hai đều là câu không dùng được, đừng đoán bừa sang phương án khác.
@@ -169,10 +195,14 @@ function collectAnswers(full: string): {
   return { answers: out, marks: marks.sort((a, b) => a - b) };
 }
 
-/** Tách "...A. x B. y c z" thành { A: x, B: y, C: z } + phần dẫn phía trước. */
+/**
+ * Tách "...A. x B. y c z" thành { A: x, B: y, C: z } + phần dẫn phía trước +
+ * đuôi sau phương án cuối (chỗ "Đáp án: C" hay đứng).
+ */
 function splitOptions(block: string): {
   options: Record<string, string>;
   stem: string;
+  tail: string;
 } {
   OPT_RE.lastIndex = 0;
   const marks = [...block.matchAll(OPT_RE)].map((m) => ({
@@ -190,15 +220,28 @@ function splitOptions(block: string): {
     seq.push(mark);
     want = String.fromCharCode(want.charCodeAt(0) + 1);
   }
-  if (seq.length < 2) return { options: {}, stem: block.trim() };
+  if (seq.length < 2) return { options: {}, stem: block.trim(), tail: '' };
 
   const options: Record<string, string> = {};
+  // Đuôi sau phương án cuối là của đáp án inline ("Đáp án: C") chứ không phải
+  // nội dung phương án — cắt ra trước, đừng nhét vào option cuối.
+  const lastText = block.slice(seq[seq.length - 1].end);
+  const inlineAt = lastText.search(
+    /[(\-–—]?\s*(?:đáp\s*án|answer|key)\s*[:–-]?\s*[A-Ea-e]\s*[)\]]?\s*$/i,
+  );
+  const lastOptionText =
+    inlineAt === -1 ? lastText : lastText.slice(0, inlineAt);
+  const tail = (
+    inlineAt === -1 ? lastText.slice(-150) : lastText.slice(inlineAt)
+  )
+    .replace(/\s+/g, ' ')
+    .trim();
   for (let i = 0; i < seq.length; i += 1) {
-    const stop = i + 1 < seq.length ? seq[i + 1].start : block.length;
-    const text = block
-      .slice(seq[i].end, stop)
-      .replace(/\s+/g, ' ')
-      .replace(/^[.\s]+|[.;\s]+$/g, '');
+    const chunk =
+      i + 1 < seq.length
+        ? block.slice(seq[i].end, seq[i + 1].start)
+        : lastOptionText;
+    const text = chunk.replace(/\s+/g, ' ').replace(/^[.\s]+|[.;\s]+$/g, '');
     if (text) options[seq[i].letter] = text.slice(0, 600);
   }
   return {
@@ -208,6 +251,7 @@ function splitOptions(block: string): {
       .replace(/\s+/g, ' ')
       .trim()
       .slice(0, 2000),
+    tail,
   };
 }
 

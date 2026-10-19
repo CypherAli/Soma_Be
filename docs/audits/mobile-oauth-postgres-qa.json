@@ -1,0 +1,15 @@
+{
+  "at": "2026-10-19T10:57:56.807Z",
+  "provider": "local simulated Google; real PostgreSQL and session persistence",
+  "checks": [
+    "existing web identity reused",
+    "session token absent from deep link",
+    "wrong verifier rejected",
+    "handoff survives backend restart",
+    "real PostgreSQL concurrent redemption exactly once",
+    "issued mobile session accepted by shared auth/me",
+    "provider denial returns to app and consumes state"
+  ],
+  "passed": true,
+  "cleaned": true
+}

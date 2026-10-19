@@ -1,3 +1,4 @@
+import { SourcesService } from './sources.service';
 import { Module } from '@nestjs/common';
 import { PrismaModule } from '../prisma/prisma.module';
 import { AdminController } from './admin.controller';
@@ -14,6 +15,7 @@ import { QueuesService } from './queues.service';
   controllers: [AdminController, AnatomyAdminController, OpsController],
   providers: [
     AdminService,
+    SourcesService,
     AnatomyAdminService,
     OpsService,
     QueuesService,

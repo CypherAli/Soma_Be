@@ -1,0 +1,31 @@
+{
+  "models": [
+    {
+      "filename": "hand_bones.glb",
+      "bytes": 97472,
+      "sha256": "b31ecb812728f68674680755227db01ccbb0e224860e77172cc6ea7e2b7a1a08"
+    },
+    {
+      "filename": "heart_anatomy.glb",
+      "bytes": 217872,
+      "sha256": "89683f03b159733ff87bcc709617143c69ef2a2c4769cf7281fd436ab5f38c4d"
+    },
+    {
+      "filename": "lung_anatomy.glb",
+      "bytes": 74128,
+      "sha256": "7bc7507bdee29b51c92482d8af18f8851e1ba3afa777ae2bf785f754857b033c"
+    },
+    {
+      "filename": "liver_anatomy.glb",
+      "bytes": 36204,
+      "sha256": "09457a099a0defba67a1d76a5dd7cfd853833c900b774d45904d1fd7b6910762"
+    },
+    {
+      "filename": "brainstem_cranial_nerves.glb",
+      "bytes": 909864,
+      "sha256": "837697abe82bba2c9743e5c03b29eb009db3dc4bdac568b31e55eb6ae823a5d2"
+    }
+  ],
+  "viewerSha256": "49fc52873a25839f32de3239cf3d9eb45afae7789ca15032cee5ba9225731eac",
+  "source": "Soma_Fe/public/models; viewer materials: Soma_Fe/src/lib/anatomy/layers.ts"
+}

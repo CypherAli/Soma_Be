@@ -33,7 +33,7 @@ async function main() {
     throw new Error('Dùng: import-translations.ts <en|zh>');
   }
 
-  const path = join(__dirname, '..', '..', 'medical_kb', 'translations', `${lang}.json`);
+  const path = join(process.env.MEDICAL_KB_ROOT || join(__dirname, '..', 'resources', 'medical_kb'), 'translations', `${lang}.json`);
   if (!existsSync(path)) throw new Error(`Không thấy ${path}`);
 
   const data = JSON.parse(readFileSync(path, 'utf8')) as Record<string, Partial<Record<Field, string>>>;

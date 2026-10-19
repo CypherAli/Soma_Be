@@ -1,10 +1,14 @@
-import { Injectable, NotFoundException } from '@nestjs/common';
+import {
+  ForbiddenException,
+  Injectable,
+  NotFoundException,
+} from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { existsSync, statSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { PrismaService } from '../prisma/prisma.service';
 import { AuditService } from './audit.service';
-import type { AuthUser } from '../auth/roles';
+import { hasAtLeast, type AuthUser } from '../auth/roles';
 
 const PAGE = 25;
 
@@ -49,7 +53,12 @@ export class OpsService {
 
     const indexPath =
       this.config.get<string>('MEDICAL_KB_INDEX') ||
-      resolve(process.cwd(), '..', 'medical_kb', 'text', 'chunks.jsonl');
+      resolve(
+        this.config.get<string>('MEDICAL_KB_ROOT') ||
+          resolve(process.cwd(), 'resources', 'medical_kb'),
+        'text',
+        'chunks.jsonl',
+      );
     const indexExists = existsSync(indexPath);
     const indexStat = indexExists ? statSync(indexPath) : null;
 
@@ -275,20 +284,35 @@ export class OpsService {
   }
 
   async revokeSession(actor: AuthUser, id: string) {
-    const session = await this.prisma.session.findUnique({
-      where: { id },
-      select: { id: true, user: { select: { id: true, email: true } } },
+    return this.audit.atomic(async (tx) => {
+      const session = await tx.session.findUnique({
+        where: { id },
+        select: {
+          id: true,
+          user: { select: { id: true, email: true, role: true } },
+        },
+      });
+      if (!session) throw new NotFoundException('Không có phiên này');
+      if (
+        session.user.id !== actor.id &&
+        hasAtLeast(session.user.role, actor.role)
+      )
+        throw new ForbiddenException(
+          'Không thể thu hồi phiên của tài khoản ngang hoặc cao hơn bạn',
+        );
+      await tx.session.delete({ where: { id } });
+      await this.audit.record(
+        {
+          actor,
+          action: 'delete',
+          entity: 'session',
+          entityId: id,
+          entityLabel: session.user.email,
+          before: { userEmail: session.user.email },
+        },
+        tx,
+      );
+      return { revoked: true, id, self: session.user.id === actor.id };
     });
-    if (!session) throw new NotFoundException('Không có phiên này');
-    await this.prisma.session.delete({ where: { id } });
-    await this.audit.record({
-      actor,
-      action: 'delete',
-      entity: 'session',
-      entityId: id,
-      entityLabel: session.user.email,
-      before: { userEmail: session.user.email },
-    });
-    return { revoked: true, id, self: session.user.id === actor.id };
   }
 }

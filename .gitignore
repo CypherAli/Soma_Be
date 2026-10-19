@@ -7,3 +7,13 @@ node_modules
 
 # Prisma generated client (sinh lại bằng `npm run prisma:generate`)
 /generated
+
+# Ephemeral full database backups used only by the restore drill.
+/.backup-qa/
+
+# Local knowledge repository preserves its own history and corpus rules.
+/resources/medical_kb/
+
+# Local server logs and temporary QA process output.
+*.log
+/tmp/

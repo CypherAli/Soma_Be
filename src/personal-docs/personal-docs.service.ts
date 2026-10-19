@@ -33,7 +33,7 @@ export type EditQuestionInput = {
  */
 @Injectable()
 export class PersonalDocsService {
-  static readonly MAX_BYTES = 25 * 1024 * 1024;
+  static readonly MAX_BYTES = 50 * 1024 * 1024;
   /** Trần số câu một tài liệu, chặn PDF khổng lồ làm nghẽn cơ sở dữ liệu. */
   private static readonly MAX_QUESTIONS = 1000;
 
@@ -48,28 +48,57 @@ export class PersonalDocsService {
     return me.user.id;
   }
 
+  /** PDF và Word hiện đại (.docx) — .doc đời cũ không đọc được trực tiếp. */
+  static readonly PDF_MIME = 'application/pdf';
+  static readonly DOCX_MIME =
+    'application/vnd.openxmlformats-officedocument.wordprocessingml.document';
+
   async upload(file: Express.Multer.File | undefined, token?: string) {
     const userId = await this.userIdOf(token);
     if (!file) throw new BadRequestException('Chưa chọn tệp');
-    if (file.mimetype !== 'application/pdf') {
-      throw new BadRequestException('Chỉ nhận tệp PDF');
+    // Một số trình duyệt/tình huống tải lên báo mimetype chung chung
+    // (octet-stream, rỗng) — chốt thêm bằng đuôi tên file cho chắc.
+    const name = (file.originalname ?? '').toLowerCase();
+    const isPdf =
+      file.mimetype === PersonalDocsService.PDF_MIME || name.endsWith('.pdf');
+    const isDocx =
+      file.mimetype === PersonalDocsService.DOCX_MIME || name.endsWith('.docx');
+    if (!isPdf && !isDocx) {
+      throw new BadRequestException(
+        file.mimetype === 'application/msword' || name.endsWith('.doc')
+          ? 'File .doc đời cũ không đọc được — hãy mở bằng Word và Lưu thành .docx rồi tải lên.'
+          : 'Chỉ nhận tệp PDF hoặc Word (.docx)',
+      );
     }
     if (file.size > PersonalDocsService.MAX_BYTES) {
-      throw new BadRequestException('Tệp lớn hơn 25 MB');
+      throw new BadRequestException('Tệp lớn hơn 50 MB');
     }
 
     const doc = await this.prisma.personalDoc.create({
       data: {
         userId,
-        filename: file.originalname.slice(0, 240),
+        filename: decodeFilename(file.originalname).slice(0, 240),
         bytes: file.size,
         status: 'processing',
       },
     });
 
     try {
-      const { pages } = await readPdf(file.buffer);
-      const report = parseMcq(pages);
+      // Loại file chốt theo đuôi tên khi mimetype chung chung (xem ở trên).
+      const kind =
+        file.mimetype === PersonalDocsService.DOCX_MIME ||
+        (file.originalname ?? '').toLowerCase().endsWith('.docx')
+          ? PersonalDocsService.DOCX_MIME
+          : PersonalDocsService.PDF_MIME;
+      const { pages: rawPages } = await readDocument(file.buffer, kind);
+      // PDF tiếng Việt hay bị đọc ra chữ vỡ font (ToUnicode hỏng) hoặc
+      // UTF-8 bị giải mã thành latin1 ("Triệu" → "Triã…u"). Sửa ngay sau khi
+      // đọc để bộ bóc regex A–E và AI đọc hộ đều thấy chữ đúng.
+      const pages = rawPages.map(fixPdfText);
+      const garbled = garbledRatio(pages);
+      const report = garbled
+        ? { questions: [], missingAnswer: 0, malformed: 0 }
+        : parseMcq(pages);
       const keep = report.questions.slice(0, PersonalDocsService.MAX_QUESTIONS);
 
       if (keep.length) {
@@ -89,15 +118,21 @@ export class PersonalDocsService {
       // Nói RÕ vì sao hỏng, đừng chỉ báo con số: "bỏ 25 câu" khiến người dùng
       // tưởng tài liệu đúng chuẩn mà bộ bóc kém, trong khi hai nguyên nhân
       // dưới đây đòi hai cách xử lý hoàn toàn khác nhau.
-      const note = keep.length
-        ? `Bóc được ${keep.length} câu. Bỏ ${report.missingAnswer} câu không dò được đáp án, ` +
-          `${report.malformed} câu vỡ cấu trúc. Hãy duyệt trước khi dùng.`
-        : report.missingAnswer
-          ? `Thấy ${report.missingAnswer} câu đánh số nhưng không có vùng đáp án ("12-C") nên không dùng được câu nào.`
-          : report.malformed
-            ? `Thấy ${report.malformed} đoạn đánh số nhưng không phải câu trắc nghiệm (thiếu phương án A–E).`
-            : 'Không nhận ra bộ câu hỏi trắc nghiệm nào trong tài liệu này. ' +
-              'Bộ bóc cần câu đánh số ("12.") kèm phương án A–E và một vùng đáp án ("12-C").';
+      const note = garbled
+        ? 'Không đọc được chữ trong PDF này (font nhúng hỏng — chữ tiếng Việt vỡ nát khi bóc). ' +
+          'Hãy thử bản PDF text khác, hoặc chụp/scan rõ rồi dùng công cụ OCR tiếng Việt trước khi tải lên.'
+        : keep.length
+          ? `Bóc được ${keep.length} câu. Bỏ ${report.missingAnswer} câu không dò được đáp án, ` +
+            `${report.malformed} câu vỡ cấu trúc. Hãy duyệt trước khi dùng.`
+          : report.missingAnswer
+            ? `Thấy ${report.missingAnswer} câu đánh số nhưng không có vùng đáp án ("12-C") nên không dùng được câu nào.`
+            : report.malformed
+              ? `Thấy ${report.malformed} đoạn đánh số nhưng không phải câu trắc nghiệm (thiếu phương án A–E).`
+              : 'Không nhận ra bộ câu hỏi trắc nghiệm nào trong tài liệu này. ' +
+                'Bộ bóc cần câu đánh số ("12." hoặc "Câu 12.") kèm phương án A–E và đáp án ' +
+                '(vùng đáp án "12-C" hoặc chốt ngay sau câu "Đáp án: C"). ' +
+                'Nếu đây là giáo trình/bài giảng (không phải bộ đề), hãy dùng nút "Nhờ AI đọc lại" — ' +
+                'AI cũng chỉ đọc được khi văn bản bóc ra còn đọc được.';
 
       return {
         doc: await this.prisma.personalDoc.update({
@@ -114,7 +149,8 @@ export class PersonalDocsService {
         // Bộ luật bó tay thì trả VĂN BẢN về cho phía web, để người dùng có thể
         // tự quyết định có nhờ AI đọc hộ hay không. Trả sẵn ở đây vì máy chủ
         // KHÔNG giữ tệp gốc — hỏi lại lần nữa là phải tải lên lại từ đầu.
-        text: keep.length ? null : joinPages(pages),
+        // Chữ vỡ font thì không trả: AI đọc rác cũng ra rác, chỉ tốn hạn mức.
+        text: keep.length || garbled ? null : joinPages(pages),
       };
     } catch (error) {
       const note = `Không đọc được tệp: ${(error as Error).message}`.slice(
@@ -199,13 +235,26 @@ export class PersonalDocsService {
     const approvedByDoc = new Map(
       approved.map((a) => [a.docId, a._count._all]),
     );
-    return {
-      docs: docs.map((d) => ({
-        ...d,
-        questionCount: d._count.questions,
-        approvedCount: approvedByDoc.get(d.id) ?? 0,
-      })),
-    };
+    // Tự chữa tên file vỡ chữ của các bản upload cũ (trước khi có
+    // decodeFilename đúng): chữa xong ghi luôn xuống DB, lần sau khỏi chữa.
+    const healed = await Promise.all(
+      docs.map(async (d) => {
+        const filename = decodeFilename(d.filename);
+        if (filename !== d.filename) {
+          await this.prisma.personalDoc.update({
+            where: { id: d.id },
+            data: { filename },
+          });
+        }
+        return {
+          ...d,
+          filename,
+          questionCount: d._count.questions,
+          approvedCount: approvedByDoc.get(d.id) ?? 0,
+        };
+      }),
+    );
+    return { docs: healed };
   }
 
   async questions(docId: string, token?: string) {
@@ -220,7 +269,10 @@ export class PersonalDocsService {
       where: { docId, userId },
       orderBy: { page: 'asc' },
     });
-    return { doc, questions };
+    return {
+      doc: { ...doc, filename: decodeFilename(doc.filename) },
+      questions,
+    };
   }
 
   /** Ngân hàng đề cá nhân: chỉ câu ĐÃ DUYỆT mới ra đề. */
@@ -238,7 +290,7 @@ export class PersonalDocsService {
         answer: q.answer,
         explanation: q.explanation,
         page: q.page,
-        region: q.doc.filename,
+        region: decodeFilename(q.doc.filename),
       })),
     };
   }
@@ -261,25 +313,38 @@ export class PersonalDocsService {
       );
     }
 
-    return this.prisma.personalQuestion.update({
-      where: { id },
-      data: {
-        stem: input.stem?.slice(0, 4000) ?? current.stem,
-        options,
-        answer,
-        explanation:
-          input.explanation === undefined
-            ? current.explanation
-            : input.explanation
-              ? input.explanation.slice(0, 4000)
-              : null,
-        approved: input.approved ?? current.approved,
-      },
+    return this.prisma.$transaction(async (tx) => {
+      const updated = await tx.personalQuestion.update({
+        where: { id },
+        data: {
+          stem: input.stem?.slice(0, 4000) ?? current.stem,
+          options,
+          answer,
+          explanation:
+            input.explanation === undefined
+              ? current.explanation
+              : input.explanation
+                ? input.explanation.slice(0, 4000)
+                : null,
+          approved: input.approved ?? current.approved,
+        },
+      });
+      if (!updated.approved) {
+        await tx.reviewItem.deleteMany({
+          where: { userId, source: 'personal', itemKey: `personal:${id}` },
+        });
+      }
+      return updated;
     });
   }
 
   async approveAll(docId: string, token?: string) {
     const userId = await this.userIdOf(token);
+    const doc = await this.prisma.personalDoc.findFirst({
+      where: { id: docId, userId },
+      select: { id: true },
+    });
+    if (!doc) throw new NotFoundException('Không có tài liệu này');
     const rows = await this.prisma.personalQuestion.findMany({
       where: { docId, userId },
     });
@@ -296,20 +361,42 @@ export class PersonalDocsService {
 
   async deleteQuestion(id: string, token?: string) {
     const userId = await this.userIdOf(token);
-    const { count } = await this.prisma.personalQuestion.deleteMany({
-      where: { id, userId },
+    return this.prisma.$transaction(async (tx) => {
+      const { count } = await tx.personalQuestion.deleteMany({
+        where: { id, userId },
+      });
+      if (!count) throw new NotFoundException('Không có câu này');
+      await tx.reviewItem.deleteMany({
+        where: { userId, source: 'personal', itemKey: `personal:${id}` },
+      });
+      return { success: true };
     });
-    if (!count) throw new NotFoundException('Không có câu này');
-    return { success: true };
   }
 
   async deleteDoc(id: string, token?: string) {
     const userId = await this.userIdOf(token);
-    const { count } = await this.prisma.personalDoc.deleteMany({
-      where: { id, userId },
+    return this.prisma.$transaction(async (tx) => {
+      const questions = await tx.personalQuestion.findMany({
+        where: { docId: id, userId },
+        select: { id: true },
+      });
+      const { count } = await tx.personalDoc.deleteMany({
+        where: { id, userId },
+      });
+      if (!count) throw new NotFoundException('Không có tài liệu này');
+      if (questions.length) {
+        await tx.reviewItem.deleteMany({
+          where: {
+            userId,
+            source: 'personal',
+            itemKey: {
+              in: questions.map((question) => `personal:${question.id}`),
+            },
+          },
+        });
+      }
+      return { success: true };
     });
-    if (!count) throw new NotFoundException('Không có tài liệu này');
-    return { success: true };
   }
 }
 
@@ -371,6 +458,67 @@ function sanitiseQuestion(raw: unknown): CleanQuestion | null {
   };
 }
 
+/**
+ * Multer giải mã tên tệp multipart theo latin1, nên tên tiếng Việt vỡ chữ
+ * ("Review đề Giải Phẫu…" → "Review Ä…").
+ *
+ * Dấu hiệu nhận diện KHÔNG phải tỷ lệ chữ Việt: chuỗi vỡ vẫn đầy ký tự trông
+ * giống tiếng Việt (á, â) nên so tỷ lệ là thua — "Review Ä|»â…" chấm cao hơn
+ * cả bản đúng. Dấu hiệu đúng là ký tự điều khiển U+0080–U+009F: văn bản đọc
+ * đúng không bao giờ chứa chúng, nhưng byte UTF-8 của đ (C4 91), ề (E1 BB 81)
+ * khi đọc thành latin1 thì rớt đúng vào vùng này. Có mặt chúng là chắc chắn vỡ.
+ */
+/** Export để test trực tiếp — logic giải mã tên file vỡ chữ latin1. */
+export function decodeFilename(name: string): string {
+  if (!name || !/[\u0080-\u009F]/.test(name)) return name;
+  try {
+    const once = Buffer.from(name, 'latin1').toString('utf8');
+    // Mã hoá kép: giải một lần vẫn còn ký tự điều khiển thì giải tiếp lần nữa.
+    if (/[\u0080-\u009F�]/.test(once)) {
+      const twice = Buffer.from(once, 'latin1').toString('utf8');
+      if (!/[\u0080-\u009F�]/.test(twice)) return twice;
+    }
+    // Bản giải mã mà vẫn còn rác điều khiển/thay thế thì giữ tên gốc còn hơn.
+    if (/[\u0080-\u009F�]/.test(once)) return name;
+    return once;
+  } catch {
+    return name;
+  }
+}
+
+/**
+ * Sửa chữ tài liệu vỡ kiểu mã hoá (UTF-8 bị đọc thành latin1) từng trang.
+ *
+ * Cùng nguyên tắc với `decodeFilename`: ký tự điều khiển U+0080–U+009F là bằng
+ * chứng vỡ chắc chắn, không so tỷ lệ chữ Việt (chuỗi vỡ vẫn đầy á/â nên so là
+ * thua). Không có chúng thì giữ nguyên — chữ vỡ font ToUnicode là bệnh khác,
+ * giải mã ngược chỉ làm nát thêm.
+ */
+/** Export để test trực tiếp. */
+export function fixPdfText(page: string): string {
+  if (!page || !/[\u0080-\u009F]/.test(page)) return page;
+  try {
+    const fixed = Buffer.from(page, 'latin1').toString('utf8');
+    if (/[\u0080-\u009F�]/.test(fixed)) return page;
+    return fixed;
+  } catch {
+    return page;
+  }
+}
+
+/**
+ * Chữ vỡ font ToUnicode: ký tự rời rạc, gần như không có nguyên âm —
+ * regex bóc đề và cả AI đều không đọc nổi. Đếm trên mẫu đầu tài liệu.
+ */
+function garbledRatio(pages: string[]): boolean {
+  const sample = pages.slice(0, 5).join('\n').replace(/\s/g, '');
+  if (sample.length < 200) return false;
+  const vowels = sample.match(
+    /[aeiouyàáạảãâầấậẩẫăằắặẳẵèéẹẻẽêềếệểễìíịỉĩòóọỏõôồốộổỗơờớợởỡùúụủũưừứựửữỳýỵỷỹđAEIOUYÀÁẠẢÃÂẦẤẬẨẪĂẰẮẶẲẴÈÉẸẺẼÊỀẾỆỂỄÌÍỊỈĨÒÓỌỎÕÔỒỐỘỔỖƠỜỚỢỞỠÙÚỤỦŨƯỪỨỰỬỮỲÝỴỶỸĐ]/g,
+  );
+  return (vowels?.length ?? 0) / sample.length < 0.15;
+}
+
 /** Ghép trang có đánh dấu số trang, để AI trả lại được `page` cho từng câu. */
 function joinPages(pages: string[]): string {
   const MAX_CHARS = 120_000;
@@ -386,12 +534,24 @@ ${pages[i]}`;
 }
 
 /**
- * Đọc văn bản từng trang.
+ * Đọc văn bản từng trang từ PDF hoặc Word (.docx).
  *
- * `pdf-parse` nạp động để tiến trình khởi động không phải kéo theo cả bộ máy
- * PDF khi chưa ai tải tài liệu nào lên.
+ * Cả hai thư viện đều nạp động để tiến trình khởi động không phải kéo theo bộ
+ * máy đọc file khi chưa ai tải tài liệu nào lên. Word không có khái niệm trang
+ * nên cắt văn bản thành từng đoạn ~4000 ký tự làm "trang giả" — đủ để bộ bóc
+ * gắn số trang đối chiếu và AI trả lại `page` cho từng câu.
  */
-async function readPdf(data: Buffer): Promise<{ pages: string[] }> {
+async function readDocument(
+  data: Buffer,
+  mimetype: string,
+): Promise<{ pages: string[] }> {
+  if (mimetype === PersonalDocsService.DOCX_MIME) {
+    const mammoth = await import('mammoth');
+    const result = await mammoth.extractRawText({ buffer: data });
+    const text = result.value ?? '';
+    if (!text.trim()) throw new Error('Không đọc được chữ trong file Word này');
+    return { pages: splitPseudoPages(text) };
+  }
   const { PDFParse } = await import('pdf-parse');
   const parser = new PDFParse({ data });
   try {
@@ -401,4 +561,21 @@ async function readPdf(data: Buffer): Promise<{ pages: string[] }> {
   } finally {
     await parser.destroy();
   }
+}
+
+/** Cắt văn bản Word thành trang giả theo đoạn văn, mỗi trang ~4000 ký tự. */
+function splitPseudoPages(text: string): string[] {
+  const PAGE_CHARS = 4000;
+  const paragraphs = text.split(/\n{2,}|\r?\n/);
+  const pages: string[] = [];
+  let current = '';
+  for (const para of paragraphs) {
+    if ((current + para).length > PAGE_CHARS && current.trim()) {
+      pages.push(current.trim());
+      current = '';
+    }
+    current += (current ? '\n' : '') + para;
+  }
+  if (current.trim()) pages.push(current.trim());
+  return pages.length ? pages : [text];
 }

@@ -1,0 +1,70 @@
+# Từ thư mục đồ án: `docker compose -f soma_be/deploy/docker-compose.yml up --build`
+#  - db: PostgreSQL 16 (port 5432)
+#  - be: NestJS API (port 4000, tự migrate deploy lúc khởi động)
+#  - fe: trang ngoài (port 3000)
+#  - bo: back office nội bộ (port 3001)
+#
+# Biến môi trường thật (OAuth, SMTP, AI_API_KEY, SOMA_VISION_*) đặt trong file
+# `.env` cạnh file này — xem `.env.compose.example`.
+services:
+  db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: soma
+      POSTGRES_PASSWORD: soma
+      POSTGRES_DB: soma3d
+    volumes:
+      - soma-pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U soma -d soma3d"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  be:
+    build: ..
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: postgresql://soma:soma@db:5432/soma3d?schema=public
+      PORT: 4000
+      API_URL: http://localhost:4000/api
+      FRONTEND_URL: http://localhost:3000
+      MEDICAL_KB_ROOT: /app/resources/medical_kb
+      MEDICAL_PATHOLOGY_INDEX: /app/resources/pathology-chunks.jsonl
+    env_file:
+      - path: .env
+        required: false # chưa có .env thì vẫn chạy bằng giá trị mặc định ở trên
+    ports:
+      - "4000:4000"
+    volumes:
+      - ../resources/medical_kb:/app/resources/medical_kb:ro
+      - ../../Soma_Fe/data/pathology-chunks.jsonl:/app/resources/pathology-chunks.jsonl:ro
+
+  fe:
+    build: ../../Soma_Fe
+    restart: unless-stopped
+    depends_on:
+      - be
+    environment:
+      # Trình duyệt gọi thẳng BE trên máy host, nên giữ localhost ở đây.
+      NEXT_PUBLIC_API_URL: http://localhost:4000/api
+    ports:
+      - "3000:3000"
+
+  bo:
+    build: ../../Soma_Bo
+    restart: unless-stopped
+    depends_on:
+      - be
+    environment:
+      NEXT_PUBLIC_API_URL: http://localhost:4000/api
+      NEXT_PUBLIC_SITE_URL: http://localhost:3000
+    ports:
+      - "3001:3001"
+
+volumes:
+  soma-pgdata:

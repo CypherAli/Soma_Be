@@ -1,3 +1,4 @@
+import { withRevision } from './revisions';
 import {
   BadRequestException,
   Injectable,
@@ -43,29 +44,14 @@ export class AnatomyAdminService {
       include: { _count: { select: { systems: true, structures: true } } },
     });
     return rows.map(({ _count, ...species }) => ({
-      ...species,
+      ...withRevision('species', species),
       systems: _count.systems,
       structures: _count.structures,
     }));
   }
 
   async updateSpecies(actor: AuthUser, id: string, dto: AdminUpdateSpeciesDto) {
-    const before = await this.prisma.species.findUnique({ where: { id } });
-    if (!before) throw new NotFoundException('Không có loài này');
-    const after = await this.prisma.species.update({
-      where: { id },
-      data: dto,
-    });
-    await this.audit.record({
-      actor,
-      action: 'update',
-      entity: 'species',
-      entityId: id,
-      entityLabel: before.code,
-      before: this.changedOnly(before, dto),
-      after: dto,
-    });
-    return after;
+    return this.audit.update(actor, 'species', id, dto);
   }
 
   // -------------------------------------------------------------- hệ cơ quan
@@ -96,31 +82,14 @@ export class AnatomyAdminService {
       },
     });
     return rows.map(({ _count, ...system }) => ({
-      ...system,
+      ...withRevision('anatomy_system', system),
       structures: _count.structures,
       quizzes: _count.quizzes,
     }));
   }
 
   async updateSystem(actor: AuthUser, id: string, dto: UpdateSystemDto) {
-    const before = await this.prisma.anatomySystem.findUnique({
-      where: { id },
-    });
-    if (!before) throw new NotFoundException('Không có hệ cơ quan này');
-    const after = await this.prisma.anatomySystem.update({
-      where: { id },
-      data: dto,
-    });
-    await this.audit.record({
-      actor,
-      action: 'update',
-      entity: 'anatomy_system',
-      entityId: id,
-      entityLabel: before.code,
-      before: this.changedOnly(before, dto),
-      after: dto,
-    });
-    return after;
+    return this.audit.update(actor, 'anatomy_system', id, dto);
   }
 
   // ---------------------------------------------------------------- cấu trúc
@@ -198,7 +167,7 @@ export class AnatomyAdminService {
 
     return {
       items: items.map(({ _count, ...structure }) => ({
-        ...structure,
+        ...withRevision('structure', structure),
         children: _count.children,
         pathologies: _count.pathologies,
       })),
@@ -213,22 +182,7 @@ export class AnatomyAdminService {
     id: string,
     dto: AdminUpdateStructureDto,
   ) {
-    const before = await this.prisma.structure.findUnique({ where: { id } });
-    if (!before) throw new NotFoundException('Không có cấu trúc này');
-    const after = await this.prisma.structure.update({
-      where: { id },
-      data: dto,
-    });
-    await this.audit.record({
-      actor,
-      action: 'update',
-      entity: 'structure',
-      entityId: id,
-      entityLabel: before.code,
-      before: this.changedOnly(before, dto),
-      after: dto,
-    });
-    return after;
+    return this.audit.update(actor, 'structure', id, dto);
   }
 
   /**
@@ -242,44 +196,50 @@ export class AnatomyAdminService {
     pathologyId: string,
     dto: LinkStructureDto,
   ) {
-    const before = await this.prisma.pathology.findUnique({
-      where: { id: pathologyId },
-      select: { id: true, slug: true, structure: { select: { code: true } } },
-    });
-    if (!before) throw new NotFoundException('Không có bệnh lý này');
-
-    const code = dto.structureCode?.trim();
-    let structureId: string | null = null;
-    if (code) {
-      const structure = await this.prisma.structure.findUnique({
-        where: { code },
-        select: { id: true },
+    return this.audit.atomic(async (tx) => {
+      const before = await tx.pathology.findUnique({
+        where: { id: pathologyId },
+        include: { structure: { select: { code: true } } },
       });
-      if (!structure) {
-        throw new BadRequestException(`Không có cấu trúc mã "${code}"`);
-      }
-      structureId = structure.id;
-    }
+      if (!before) throw new NotFoundException('Không có bệnh lý này');
 
-    const after = await this.prisma.pathology.update({
-      where: { id: pathologyId },
-      data: { structureId },
-      select: {
-        id: true,
-        slug: true,
-        structure: { select: { code: true, nameVi: true } },
-      },
+      this.audit.assertRevision('pathology', before, dto.expectedRevision);
+      const code = dto.structureCode?.trim();
+      let structureId: string | null = null;
+      if (code) {
+        const structure = await tx.structure.findUnique({
+          where: { code },
+          select: { id: true },
+        });
+        if (!structure) {
+          throw new BadRequestException(`Không có cấu trúc mã "${code}"`);
+        }
+        structureId = structure.id;
+      }
+
+      const after = await tx.pathology.update({
+        where: { id: pathologyId },
+        data: { structureId, needsReview: true },
+        select: {
+          id: true,
+          slug: true,
+          structure: { select: { code: true, nameVi: true } },
+        },
+      });
+      await this.audit.record(
+        {
+          actor,
+          action: 'update',
+          entity: 'pathology',
+          entityId: pathologyId,
+          entityLabel: before.slug,
+          before: { structureCode: before.structure?.code ?? null },
+          after: { structureCode: code ?? null },
+        },
+        tx,
+      );
+      return after;
     });
-    await this.audit.record({
-      actor,
-      action: 'update',
-      entity: 'pathology',
-      entityId: pathologyId,
-      entityLabel: before.slug,
-      before: { structureCode: before.structure?.code ?? null },
-      after: { structureCode: code ?? null },
-    });
-    return after;
   }
 
   /**
@@ -295,50 +255,59 @@ export class AnatomyAdminService {
     pathologyId: string,
     structureCode: string,
   ) {
-    const code = structureCode.trim();
-    if (!code) throw new BadRequestException('Thiếu mã cấu trúc');
+    return this.audit.atomic(async (tx) => {
+      const code = structureCode.trim();
+      if (!code) throw new BadRequestException('Thiếu mã cấu trúc');
 
-    const [pathology, structure] = await Promise.all([
-      this.prisma.pathology.findUnique({
+      const [pathology, structure] = await Promise.all([
+        tx.pathology.findUnique({
+          where: { id: pathologyId },
+          select: { id: true, slug: true, structureId: true },
+        }),
+        tx.structure.findUnique({
+          where: { code },
+          select: { id: true, nameVi: true },
+        }),
+      ]);
+      if (!pathology) throw new NotFoundException('Không có bệnh lý này');
+      if (!structure) {
+        throw new BadRequestException(`Không có cấu trúc mã "${code}"`);
+      }
+      // Cấu trúc CHÍNH không được lặp lại ở danh sách phụ: giao diện sẽ hiện cùng
+      // một cơ quan hai lần và người đọc tưởng đó là hai tổn thương khác nhau.
+      if (pathology.structureId === structure.id) {
+        throw new BadRequestException(
+          'Cấu trúc này đang là cấu trúc chính của bệnh, không cần thêm lại',
+        );
+      }
+      const existing = await tx.pathologyStructure.findUnique({
+        where: {
+          pathologyId_structureId: { pathologyId, structureId: structure.id },
+        },
+      });
+      if (existing)
+        throw new BadRequestException('Cấu trúc này đã có trong danh sách');
+
+      await tx.pathologyStructure.create({
+        data: { pathologyId, structureId: structure.id },
+      });
+      await tx.pathology.update({
         where: { id: pathologyId },
-        select: { id: true, slug: true, structureId: true },
-      }),
-      this.prisma.structure.findUnique({
-        where: { code },
-        select: { id: true, nameVi: true },
-      }),
-    ]);
-    if (!pathology) throw new NotFoundException('Không có bệnh lý này');
-    if (!structure) {
-      throw new BadRequestException(`Không có cấu trúc mã "${code}"`);
-    }
-    // Cấu trúc CHÍNH không được lặp lại ở danh sách phụ: giao diện sẽ hiện cùng
-    // một cơ quan hai lần và người đọc tưởng đó là hai tổn thương khác nhau.
-    if (pathology.structureId === structure.id) {
-      throw new BadRequestException(
-        'Cấu trúc này đang là cấu trúc chính của bệnh, không cần thêm lại',
+        data: { needsReview: true },
+      });
+      await this.audit.record(
+        {
+          actor,
+          action: 'create',
+          entity: 'pathology_structure',
+          entityId: `${pathologyId}:${structure.id}`,
+          entityLabel: `${pathology.slug} ← ${code}`,
+          after: { structureCode: code },
+        },
+        tx,
       );
-    }
-    const existing = await this.prisma.pathologyStructure.findUnique({
-      where: {
-        pathologyId_structureId: { pathologyId, structureId: structure.id },
-      },
+      return { added: true, structure: { code, nameVi: structure.nameVi } };
     });
-    if (existing)
-      throw new BadRequestException('Cấu trúc này đã có trong danh sách');
-
-    await this.prisma.pathologyStructure.create({
-      data: { pathologyId, structureId: structure.id },
-    });
-    await this.audit.record({
-      actor,
-      action: 'create',
-      entity: 'pathology_structure',
-      entityId: `${pathologyId}:${structure.id}`,
-      entityLabel: `${pathology.slug} ← ${code}`,
-      after: { structureCode: code },
-    });
-    return { added: true, structure: { code, nameVi: structure.nameVi } };
   }
 
   async removeRelatedStructure(
@@ -346,27 +315,36 @@ export class AnatomyAdminService {
     pathologyId: string,
     structureId: string,
   ) {
-    const link = await this.prisma.pathologyStructure.findUnique({
-      where: { pathologyId_structureId: { pathologyId, structureId } },
-      include: {
-        pathology: { select: { slug: true } },
-        structure: { select: { code: true } },
-      },
-    });
-    if (!link) throw new NotFoundException('Không có liên kết này');
+    return this.audit.atomic(async (tx) => {
+      const link = await tx.pathologyStructure.findUnique({
+        where: { pathologyId_structureId: { pathologyId, structureId } },
+        include: {
+          pathology: { select: { slug: true } },
+          structure: { select: { code: true } },
+        },
+      });
+      if (!link) throw new NotFoundException('Không có liên kết này');
 
-    await this.prisma.pathologyStructure.delete({
-      where: { pathologyId_structureId: { pathologyId, structureId } },
+      await tx.pathologyStructure.delete({
+        where: { pathologyId_structureId: { pathologyId, structureId } },
+      });
+      await tx.pathology.update({
+        where: { id: pathologyId },
+        data: { needsReview: true },
+      });
+      await this.audit.record(
+        {
+          actor,
+          action: 'delete',
+          entity: 'pathology_structure',
+          entityId: `${pathologyId}:${structureId}`,
+          entityLabel: `${link.pathology.slug} ← ${link.structure.code}`,
+          before: { structureCode: link.structure.code },
+        },
+        tx,
+      );
+      return { deleted: true };
     });
-    await this.audit.record({
-      actor,
-      action: 'delete',
-      entity: 'pathology_structure',
-      entityId: `${pathologyId}:${structureId}`,
-      entityLabel: `${link.pathology.slug} ← ${link.structure.code}`,
-      before: { structureCode: link.structure.code },
-    });
-    return { deleted: true };
   }
 
   // -------------------------------------------------------------- trắc nghiệm
@@ -398,27 +376,21 @@ export class AnatomyAdminService {
       }),
       this.prisma.quizQuestion.count({ where }),
     ]);
-    return { items, total, page, pageSize: PAGE };
+    return {
+      items: items.map((row) => ({
+        ...withRevision('quiz_question', row),
+        options: row.options.map((option) =>
+          withRevision('quiz_option', option),
+        ),
+      })),
+      total,
+      page,
+      pageSize: PAGE,
+    };
   }
 
   async updateQuiz(actor: AuthUser, id: string, dto: UpdateQuizDto) {
-    const before = await this.prisma.quizQuestion.findUnique({ where: { id } });
-    if (!before) throw new NotFoundException('Không có câu hỏi này');
-    const after = await this.prisma.quizQuestion.update({
-      where: { id },
-      data: dto,
-      include: { options: { orderBy: { id: 'asc' } } },
-    });
-    await this.audit.record({
-      actor,
-      action: 'update',
-      entity: 'quiz_question',
-      entityId: id,
-      entityLabel: before.promptVi.slice(0, 80),
-      before: this.changedOnly(before, dto),
-      after: dto,
-    });
-    return after;
+    return this.audit.update(actor, 'quiz_question', id, dto);
   }
 
   /**
@@ -434,32 +406,7 @@ export class AnatomyAdminService {
     id: string,
     dto: UpdateQuizOptionDto,
   ) {
-    const before = await this.prisma.quizOption.findUnique({
-      where: { id },
-      include: { question: { select: { promptVi: true } } },
-    });
-    if (!before) throw new NotFoundException('Không có phương án này');
-
-    const after = await this.prisma.$transaction(async (tx) => {
-      if (dto.isCorrect === true) {
-        await tx.quizOption.updateMany({
-          where: { questionId: before.questionId, id: { not: id } },
-          data: { isCorrect: false },
-        });
-      }
-      return tx.quizOption.update({ where: { id }, data: dto });
-    });
-
-    await this.audit.record({
-      actor,
-      action: 'update',
-      entity: 'quiz_option',
-      entityId: id,
-      entityLabel: `${before.question.promptVi.slice(0, 60)} → ${before.textVi.slice(0, 40)}`,
-      before: this.changedOnly(before, dto),
-      after: dto,
-    });
-    return after;
+    return this.audit.update(actor, 'quiz_option', id, dto);
   }
 
   /**

@@ -35,7 +35,7 @@ export class PersonalDocsController {
   @Post()
   @ApiOperation({
     summary:
-      'Tải PDF lên, bóc câu hỏi (tệp gốc KHÔNG được lưu lại trên máy chủ)',
+      'Tải PDF/Word (.docx) lên, bóc câu hỏi (tệp gốc KHÔNG được lưu lại trên máy chủ)',
   })
   @ApiConsumes('multipart/form-data')
   @ApiBody({

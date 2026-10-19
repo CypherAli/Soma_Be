@@ -19,9 +19,14 @@ chuẩn thuật ngữ Terminologia Anatomica (TA2), thiết kế mở rộng cho
 | `Structure` | Cấu trúc giải phẫu, phân cấp cha/con, gắn mesh glTF |
 | `Pathology` | Bệnh lý gắn vào cấu trúc — **bắt buộc có nguồn trích dẫn** |
 | `QuizQuestion` / `QuizOption` | Câu hỏi trắc nghiệm theo hệ |
-| `Collection` | Bộ sưu tập chuyên gia |
 
 ## Chạy local
+
+Kho y khoa cục bộ nằm trong `resources/medical_kb/`: PDF nguồn, văn bản trích
+xuất, hình và chỉ mục RAG. Kho giữ lịch sử Git riêng; corpus không đưa vào
+repository backend hoặc Docker image. Backend mặc định đọc kho ở đây; có thể
+đặt `MEDICAL_KB_ROOT`, `MEDICAL_KB_INDEX` hoặc `MEDICAL_ANATOMY_TEXT` để dùng
+volume khác. `MEDICAL_DOCS_DIR` vẫn hỗ trợ thư mục PDF bổ sung.
 
 ```bash
 # 1. Cài phụ thuộc
@@ -56,7 +61,6 @@ Mọi endpoint đều có tiền tố `/api`. Chi tiết đầy đủ xem tại 
 | `structures` | `GET /structures?system=&species=&q=`, `GET /structures/:code` |
 | `pathologies` | `GET /pathologies?structure=`, CRUD theo `:id` |
 | `quizzes` | `GET /quizzes?system=`, tạo câu hỏi kèm đáp án lồng nhau |
-| `collections` | CRUD bộ sưu tập chuyên gia |
 | `health` | Kiểm tra API + kết nối database |
 
 ## Nguyên tắc dữ liệu
@@ -72,3 +76,20 @@ npm run build
 npm run prisma:deploy   # áp migration lên DB production
 npm run start:prod
 ```
+
+## Chạy cả ba ứng dụng bằng Docker
+
+Từ thư mục `đồ án`:
+
+```bash
+docker compose -f soma_be/deploy/docker-compose.yml up --build
+```
+
+Mẫu cấu hình nằm trong `deploy/.env.compose.example`. Khi cần, sao chép thành
+`deploy/.env` và điền cấu hình thật. Compose mount kho y khoa và chỉ mục bệnh
+lý ở chế độ chỉ đọc; không chép corpus vào image. Nếu thiếu PDF nguồn thì
+chuẩn bị tệp trong `resources/medical_kb/sources/` hoặc cấu hình volume bổ sung.
+
+Các công cụ biên soạn nằm trong `resources/medical_kb/scripts/`; từ backend
+có thể chạy `python resources/medical_kb/scripts/search_kb.py appendicitis`.
+`npm run kb:sync` vẫn dùng để đồng bộ danh mục nguồn khi chủ động cập nhật dữ liệu.

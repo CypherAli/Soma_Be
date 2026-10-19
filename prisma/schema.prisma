@@ -9,6 +9,54 @@ datasource db {
   provider = "postgresql"
 }
 
+/// Public website content. Drafts never appear in the public content endpoint.
+model SiteContent {
+  id          String   @id
+  draft       Json
+  published   Json?
+  version     Int      @default(1)
+  publishedAt DateTime?
+  updatedAt   DateTime @updatedAt
+  revisions   SiteContentRevision[]
+
+  @@map("site_content")
+}
+
+model SiteContentRevision {
+  id         String      @id @default(cuid())
+  contentId  String
+  content    SiteContent @relation(fields: [contentId], references: [id], onDelete: Cascade)
+  version    Int
+  payload    Json
+  action     String
+  actorEmail String
+  createdAt  DateTime    @default(now())
+
+  @@unique([contentId, version])
+  @@map("site_content_revisions")
+}
+
+model SiteContentPreview {
+  tokenHash String   @id
+  payload   Json
+  expiresAt DateTime
+
+  @@index([expiresAt])
+  @@map("site_content_previews")
+}
+
+model SiteAsset {
+  id        String   @id
+  filename  String
+  mime      String
+  bytes     Int
+  data      Bytes
+  meshNames Json
+  createdAt DateTime @default(now())
+
+  @@map("site_assets")
+}
+
 /// Loài: người, chó, mèo... (mở rộng sang thú y)
 model Species {
   id     String  @id @default(cuid())
@@ -251,11 +299,27 @@ enum UserRole {
   super_admin
 }
 
+/// Gói tài khoản. Chỉ ghi nhận trạng thái — mọi hạn mức (số câu hỏi cho trợ
+/// lý, số tài liệu…) sẽ đọc trường này khi tính năng Pro được làm.
+enum UserPlan {
+  /// Gói thường, mặc định khi đăng ký.
+  free
+  /// Gói trả phí.
+  pro
+}
+
 model User {
   id           String   @id @default(cuid())
   name         String
-  email        String   @unique
+  email        String
+  /// Only password sign-in owns this unique address. OAuth identities are independent.
+  passwordEmail String? @unique
   role         UserRole @default(user)
+  plan         UserPlan @default(free)
+  /// Ảnh đại diện lưu THẲNG dưới dạng data URL (ảnh đã thu nhỏ ở trình duyệt,
+  /// tối đa ~200 KB). Máy chủ chưa có nơi lưu tệp tĩnh nào, dựng thêm thư mục
+  /// upload + đường phục vụ ảnh chỉ để nuôi một tấm avatar là không đáng.
+  avatar       String?
   /// Khoá tài khoản: còn giữ lịch sử học nhưng không đăng nhập được nữa.
   /// Xoá hẳn là mất luôn dữ liệu tiến độ, nên khoá mới là hành động mặc định.
   disabledAt   DateTime?
@@ -266,6 +330,7 @@ model User {
   createdAt    DateTime @default(now())
   updatedAt    DateTime @updatedAt
   sessions     Session[]
+  passwordResets PasswordResetToken[]
   chatMemory   ChatMemory?
   quizAttempts QuizAttempt[]
   studyPath    StudyPath?
@@ -273,6 +338,7 @@ model User {
   personalDocs PersonalDoc[]
 
   @@map("users")
+  @@index([email])
 }
 
 model OAuthState {
@@ -280,23 +346,61 @@ model OAuthState {
   stateHash    String   @unique
   provider     String
   codeVerifier String
+  /// Mobile uses the same provider account, with a separate PKCE handoff.
+  mobileChallenge String?
+  mobileState String?
+  callbackUrl String?
+  /// Khác rỗng nghĩa là luồng "liên kết tài khoản đang đăng nhập" chứ không
+  /// phải luồng đăng nhập: callback sẽ gắn id nhà cung cấp vào đúng người này.
+  linkUserId   String?
   expiresAt    DateTime
   createdAt    DateTime @default(now())
   @@index([expiresAt])
   @@map("oauth_states")
 }
 
-model Session {
-  id        String   @id @default(cuid())
-  tokenHash String   @unique
+model MobileOAuthCode {
+  codeHash String @id
+  userId String
+  challenge String
   expiresAt DateTime
-  createdAt DateTime @default(now())
-  userId    String
+
+  @@index([expiresAt])
+  @@map("mobile_oauth_codes")
+}
+
+model Session {
+  id         String   @id @default(cuid())
+  tokenHash  String   @unique
+  expiresAt  DateTime
+  createdAt  DateTime @default(now())
+  /// Chuỗi User-Agent lúc đăng nhập, để trang Bảo mật gọi tên được thiết bị.
+  userAgent  String?
+  /// Chỉ ghi lại khi đã cũ hơn 5 phút — cập nhật mỗi lần gọi API thì mỗi lần
+  /// đọc dữ liệu lại kèm một lượt ghi.
+  lastSeenAt DateTime @default(now())
+  userId     String
   user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@index([userId])
   @@index([expiresAt])
   @@map("sessions")
+}
+
+/// Token đặt lại mật khẩu qua email: dùng một lần, hết hạn sau 15 phút.
+/// Chỉ lưu hash SHA-256, token thật chỉ nằm trong link gửi qua email.
+model PasswordResetToken {
+  id        String    @id @default(cuid())
+  tokenHash String    @unique
+  userId    String
+  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  expiresAt DateTime
+  usedAt    DateTime?
+  createdAt DateTime  @default(now())
+
+  @@index([userId])
+  @@index([expiresAt])
+  @@map("password_reset_tokens")
 }
 
 
@@ -337,8 +441,12 @@ model QuizAttempt {
   total     Int
   /// số giây thực làm, 0 khi không đo được
   seconds   Int      @default(0)
+  /// Stable client UUID: retries after an ambiguous timeout return the same attempt.
+  clientRequestId String?
+  requestFingerprint String?
   createdAt DateTime @default(now())
 
+  @@unique([userId, clientRequestId])
   @@index([userId, createdAt])
   @@map("quiz_attempts")
 }

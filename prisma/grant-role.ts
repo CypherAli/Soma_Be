@@ -37,8 +37,10 @@ async function main() {
 `);
     process.exit(1);
   }
+  const matches = await prisma.user.findMany({ where: { email: email.trim().toLowerCase() }, take: 2, select: { id: true } });
+  if (matches.length !== 1) throw new Error('Email không xác định duy nhất một tài khoản. Dùng trang quản trị để chọn đúng ID tài khoản cần cấp quyền.');
   const user = await prisma.user.update({
-    where: { email: email.trim().toLowerCase() },
+    where: { id: matches[0].id },
     data: { role: role as UserRole },
   });
   await prisma.auditLog.create({

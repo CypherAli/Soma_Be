@@ -2,12 +2,15 @@ import { ApiProperty, ApiPropertyOptional } from '@nestjs/swagger';
 import { Type } from 'class-transformer';
 import {
   IsArray,
+  ArrayMaxSize,
   IsBoolean,
   IsIn,
   IsInt,
   IsOptional,
   IsString,
+  IsUUID,
   MaxLength,
+  Max,
   Min,
   ValidateNested,
 } from 'class-validator';
@@ -15,15 +18,17 @@ import {
 export class GradedItemDto {
   @ApiProperty({
     description:
-      'Khoá ổn định của câu, có tiền tố nguồn: "model:<factId>", "book:<qid>", "atlas:<id>", "personal:<id>", "vet:<factId>"',
+      'Khoá ổn định của câu, có tiền tố nguồn: "model:<factId>", "book:<qid>", "atlas:<id>", "personal:<id>", "vet:<factId>", "school:<schoolId>:<qid>"',
     example: 'book:yhn-anatomy-head_neck-004',
   })
   @IsString()
   @MaxLength(200)
   itemKey!: string;
 
-  @ApiProperty({ enum: ['model', 'book', 'atlas', 'personal', 'vet'] })
-  @IsIn(['model', 'book', 'atlas', 'personal', 'vet'])
+  @ApiProperty({
+    enum: ['model', 'book', 'atlas', 'personal', 'vet', 'school'],
+  })
+  @IsIn(['model', 'book', 'atlas', 'personal', 'vet', 'school'])
   source!: string;
 
   @ApiPropertyOptional({ description: 'Mã hệ cơ quan hoặc tên vùng cơ thể' })
@@ -38,8 +43,18 @@ export class GradedItemDto {
 }
 
 export class RecordAttemptDto {
-  @ApiProperty({ enum: ['model', 'book', 'atlas', 'personal', 'vet'] })
-  @IsIn(['model', 'book', 'atlas', 'personal', 'vet'])
+  @ApiPropertyOptional({
+    description: 'UUID stable across retries of the same submission',
+    format: 'uuid',
+  })
+  @IsOptional()
+  @IsUUID('4')
+  clientRequestId?: string;
+
+  @ApiProperty({
+    enum: ['model', 'book', 'atlas', 'personal', 'vet', 'school'],
+  })
+  @IsIn(['model', 'book', 'atlas', 'personal', 'vet', 'school'])
   source!: string;
 
   @ApiPropertyOptional()
@@ -60,7 +75,8 @@ export class RecordAttemptDto {
 
   @ApiProperty()
   @IsInt()
-  @Min(0)
+  @Min(1)
+  @Max(500)
   total!: number;
 
   @ApiPropertyOptional({ description: 'Số giây thực làm' })
@@ -76,6 +92,7 @@ export class RecordAttemptDto {
   })
   @IsOptional()
   @IsArray()
+  @ArrayMaxSize(500)
   @ValidateNested({ each: true })
   @Type(() => GradedItemDto)
   items?: GradedItemDto[];

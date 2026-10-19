@@ -15,6 +15,8 @@ import { MedicalKnowledgeModule } from './medical-knowledge/medical-knowledge.mo
 import { StudyModule } from './study/study.module';
 import { PersonalDocsModule } from './personal-docs/personal-docs.module';
 import { AdminModule } from './admin/admin.module';
+import { ContentModule } from './content/content.module';
+import { MobileModule } from './mobile/mobile.module';
 
 @Module({
   imports: [
@@ -32,6 +34,8 @@ import { AdminModule } from './admin/admin.module';
     StudyModule,
     PersonalDocsModule,
     AdminModule,
+    ContentModule,
+    MobileModule,
   ],
   controllers: [AppController],
   providers: [AppService],

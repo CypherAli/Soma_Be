@@ -1,4 +1,11 @@
-import { Injectable, UnauthorizedException } from '@nestjs/common';
+import {
+  BadRequestException,
+  ConflictException,
+  Injectable,
+  UnauthorizedException,
+} from '@nestjs/common';
+import { createHash } from 'node:crypto';
+import { Prisma } from '@prisma/client';
 import { PrismaService } from '../prisma/prisma.service';
 import { AuthService } from '../auth/auth.service';
 import { INITIAL_REVIEW, nextReview, questionsForMinutes } from './review';
@@ -12,6 +19,9 @@ export type GradedItem = {
 };
 
 export type AttemptInput = {
+  clientRequestId?: string;
+  /** Internal server fingerprint for a validated mobile answer payload. Not accepted by the public DTO. */
+  requestFingerprint?: string;
   source: string;
   scope?: string;
   mode?: string;
@@ -68,51 +78,149 @@ export class StudyService {
    */
   async recordAttempt(input: AttemptInput, token?: string) {
     const userId = await this.userIdOf(token);
+    if (
+      !Number.isInteger(input.total) ||
+      input.total < 1 ||
+      input.total > 500 ||
+      !Number.isInteger(input.score) ||
+      input.score < 0 ||
+      input.score > input.total
+    ) {
+      throw new BadRequestException('Điểm và tổng số câu không hợp lệ');
+    }
     const total = clampInt(input.total, 0, 500);
     const score = clampInt(input.score, 0, total);
     const now = new Date();
 
-    const graded = (Array.isArray(input.items) ? input.items : [])
+    const submitted = (Array.isArray(input.items) ? input.items : [])
       .filter((i) => i && typeof i.itemKey === 'string' && i.itemKey.length > 0)
       .slice(0, 500);
+    const byKey = new Map<string, GradedItem>();
+    for (const item of submitted) {
+      if (
+        !item.itemKey.startsWith(`${item.source}:`) ||
+        item.itemKey.length <= item.source.length + 1
+      ) {
+        throw new BadRequestException('Mã câu hỏi không khớp nguồn đề');
+      }
+      // Different question formats may test the same model fact. Schedule that
+      // fact once; any wrong response means it still needs review.
+      const previous = byKey.get(item.itemKey);
+      byKey.set(item.itemKey, {
+        ...item,
+        correct: previous ? previous.correct && item.correct : item.correct,
+      });
+    }
+    const graded = [...byKey.values()];
 
-    const attempt = await this.prisma.$transaction(async (tx) => {
-      const created = await tx.quizAttempt.create({
-        data: {
-          userId,
-          source: String(input.source ?? 'model').slice(0, 32),
-          scope: String(input.scope ?? 'all').slice(0, 120),
-          mode: input.mode === 'exam' ? 'exam' : 'practice',
-          score,
-          total,
-          seconds: clampInt(input.seconds ?? 0, 0, 60 * 60 * 6),
+    const requestFingerprint = input.clientRequestId
+      ? (input.requestFingerprint ??
+        createHash('sha256')
+          .update(
+            JSON.stringify({
+              source: input.source,
+              scope: input.scope ?? 'all',
+              mode: input.mode === 'exam' ? 'exam' : 'practice',
+              score,
+              total,
+              seconds: clampInt(input.seconds ?? 0, 0, 60 * 60 * 6),
+              items: [...graded].sort((a, b) =>
+                a.itemKey.localeCompare(b.itemKey),
+              ),
+            }),
+          )
+          .digest('hex'))
+      : undefined;
+    const existingAttempt = async () => {
+      if (!input.clientRequestId) return null;
+      const existing = await this.prisma.quizAttempt.findUnique({
+        where: {
+          userId_clientRequestId: {
+            userId,
+            clientRequestId: input.clientRequestId,
+          },
         },
       });
-
-      for (const item of graded) {
-        const key = item.itemKey.slice(0, 200);
-        const prev = await tx.reviewItem.findUnique({
-          where: { userId_itemKey: { userId, itemKey: key } },
-        });
-        const next = nextReview(prev ?? INITIAL_REVIEW, item.correct, now);
-        await tx.reviewItem.upsert({
-          where: { userId_itemKey: { userId, itemKey: key } },
-          create: {
-            userId,
-            itemKey: key,
-            source: String(item.source ?? input.source ?? 'model').slice(0, 32),
-            scope: String(item.scope ?? input.scope ?? 'all').slice(0, 120),
-            ...next,
-            lastAt: now,
-          },
-          update: { ...next, lastAt: now },
-        });
+      if (existing && existing.requestFingerprint !== requestFingerprint) {
+        throw new ConflictException(
+          'Mã lượt nộp đã được dùng cho một bài làm khác',
+        );
       }
+      return existing;
+    };
+    const previousAttempt = await existingAttempt();
+    if (previousAttempt) return previousAttempt;
 
-      return created;
-    });
+    try {
+      const attempt = await this.prisma.$transaction(async (tx) => {
+        const personalIds = graded
+          .filter((item) => item.source === 'personal')
+          .map((item) => item.itemKey.slice('personal:'.length));
+        if (personalIds.length) {
+          const available = await tx.personalQuestion.findMany({
+            where: { id: { in: personalIds }, userId, approved: true },
+            select: { id: true },
+          });
+          if (available.length !== personalIds.length) {
+            throw new BadRequestException(
+              'Câu cá nhân không tồn tại hoặc chưa được duyệt',
+            );
+          }
+        }
+        const created = await tx.quizAttempt.create({
+          data: {
+            userId,
+            source: String(input.source ?? 'model').slice(0, 32),
+            scope: String(input.scope ?? 'all').slice(0, 120),
+            mode: input.mode === 'exam' ? 'exam' : 'practice',
+            score,
+            total,
+            seconds: clampInt(input.seconds ?? 0, 0, 60 * 60 * 6),
+            ...(input.clientRequestId
+              ? { clientRequestId: input.clientRequestId, requestFingerprint }
+              : {}),
+          },
+        });
 
-    return attempt;
+        for (const item of graded) {
+          const key = item.itemKey.slice(0, 200);
+          const prev = await tx.reviewItem.findUnique({
+            where: { userId_itemKey: { userId, itemKey: key } },
+          });
+          const next = nextReview(prev ?? INITIAL_REVIEW, item.correct, now);
+          await tx.reviewItem.upsert({
+            where: { userId_itemKey: { userId, itemKey: key } },
+            create: {
+              userId,
+              itemKey: key,
+              source: String(item.source ?? input.source ?? 'model').slice(
+                0,
+                32,
+              ),
+              scope: String(item.scope ?? input.scope ?? 'all').slice(0, 120),
+              ...next,
+              lastAt: now,
+            },
+            update: { ...next, lastAt: now },
+          });
+        }
+
+        return created;
+      });
+
+      return attempt;
+    } catch (error) {
+      // The unique constraint arbitrates simultaneous retries across processes.
+      if (
+        input.clientRequestId &&
+        error instanceof Prisma.PrismaClientKnownRequestError &&
+        error.code === 'P2002'
+      ) {
+        const repeated = await existingAttempt();
+        if (repeated) return repeated;
+      }
+      throw error;
+    }
   }
 
   /** Lịch sử làm bài + vài con số tổng để dựng màn tiến độ. */

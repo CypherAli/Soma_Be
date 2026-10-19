@@ -1,0 +1,161 @@
+{
+  "startedAt": "2026-10-14T13:28:49.717Z",
+  "marker": "SOMA_QA_API_1791984529714",
+  "checks": [
+    {
+      "name": "existing account session authenticates and exposes no password hash",
+      "passed": true
+    },
+    {
+      "name": "personal documents and bank are scoped to the signed-in owner",
+      "passed": true
+    },
+    {
+      "name": "reading another account document returns 404",
+      "passed": true
+    },
+    {
+      "name": "another account personal question cannot enter this account review queue",
+      "passed": true
+    },
+    {
+      "name": "missing document approval returns 404 instead of false success",
+      "passed": true
+    },
+    {
+      "name": "non-document upload is rejected before creating a database row",
+      "passed": true
+    },
+    {
+      "name": "pdf upload parses two questions into pending database records",
+      "passed": true
+    },
+    {
+      "name": "pdf pending personal questions cannot be submitted into the review queue",
+      "passed": true
+    },
+    {
+      "name": "pdf pending questions stay outside the playable bank",
+      "passed": true
+    },
+    {
+      "name": "pdf invalid answer edit is rejected without changing the question",
+      "passed": true
+    },
+    {
+      "name": "pdf editing and approving one question persists exactly the intended values",
+      "passed": true
+    },
+    {
+      "name": "pdf bulk approval adds exactly two fixture questions to the bank",
+      "passed": true
+    },
+    {
+      "name": "pdf submitting a real authenticated attempt persists score and review outcomes",
+      "passed": true
+    },
+    {
+      "name": "pdf unapproval removes that question from bank and review queue",
+      "passed": true
+    },
+    {
+      "name": "pdf deleting a fixture question also cleans its review entry",
+      "passed": true
+    },
+    {
+      "name": "pdf deleting the fixture document cascades its remaining questions",
+      "passed": true
+    },
+    {
+      "name": "docx upload parses two questions into pending database records",
+      "passed": true
+    },
+    {
+      "name": "docx pending personal questions cannot be submitted into the review queue",
+      "passed": true
+    },
+    {
+      "name": "docx pending questions stay outside the playable bank",
+      "passed": true
+    },
+    {
+      "name": "docx invalid answer edit is rejected without changing the question",
+      "passed": true
+    },
+    {
+      "name": "docx editing and approving one question persists exactly the intended values",
+      "passed": true
+    },
+    {
+      "name": "docx bulk approval adds exactly two fixture questions to the bank",
+      "passed": true
+    },
+    {
+      "name": "docx submitting a real authenticated attempt persists score and review outcomes",
+      "passed": true
+    },
+    {
+      "name": "docx unapproval removes that question from bank and review queue",
+      "passed": true
+    },
+    {
+      "name": "docx deleting a fixture question also cleans its review entry",
+      "passed": true
+    },
+    {
+      "name": "docx deleting the fixture document cascades its remaining questions",
+      "passed": true
+    },
+    {
+      "name": "an empty attempt is rejected rather than persisted",
+      "passed": true
+    },
+    {
+      "name": "score exceeding total is rejected rather than silently altered",
+      "passed": true
+    },
+    {
+      "name": "duplicate item keys advance a review schedule only once per attempt",
+      "passed": true
+    },
+    {
+      "name": "unknown personal questions cannot create orphan review entries",
+      "passed": true
+    },
+    {
+      "name": "a review item cannot disguise its source with another prefix",
+      "passed": true
+    },
+    {
+      "name": "existing study path and due queue are accessible",
+      "passed": true
+    },
+    {
+      "name": "saving a temporary year plan persists settings and supports month-to-week expansion",
+      "passed": true
+    },
+    {
+      "name": "deleting the temporary plan returns an empty plan",
+      "passed": true
+    },
+    {
+      "name": "chat memory writes only sanitized last 40 turns and reloads from database",
+      "passed": true
+    },
+    {
+      "name": "clearing temporary chat memory removes its database row",
+      "passed": true
+    },
+    {
+      "name": "existing admin account can read operational views without changing content",
+      "passed": true
+    },
+    {
+      "name": "all pre-existing learning records are unchanged after fixture cleanup",
+      "passed": true
+    }
+  ],
+  "cleanup": [],
+  "finishedAt": "2026-10-14T13:28:56.678Z",
+  "failed": 0
+}

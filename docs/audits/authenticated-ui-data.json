@@ -1,0 +1,17 @@
+{
+  "startedAt": "2026-10-14T12:05:44.515Z",
+  "userId": "cmsy16pdx00002o8t78ds7lhb",
+  "docId": "cmv82cpk5000iy88txctz6zrp",
+  "questionIds": [
+    "cmv82cpss000jy88thf7b91p4",
+    "cmv82cpss000ky88tmdqsqsmp"
+  ],
+  "attemptIds": [],
+  "baselineHash": "d013c30a61b32230c22b6748d9cc5d74d3de1760a9f8b9c6bcea166497e05449",
+  "verified": true,
+  "createdAttemptIds": [
+    "cmv82gvts000ly88t6jeamr3y"
+  ],
+  "cleanedAt": "2026-10-14T12:11:54.120Z",
+  "cleanupVerified": true
+}

@@ -1,0 +1,37 @@
+{
+  "startedAt": "2026-10-15T05:17:46.559Z",
+  "provider": "local fake provider; real PostgreSQL persistence",
+  "checks": [
+    {
+      "name": "an explicitly linked Google identity logs into the password account directly",
+      "passed": true
+    },
+    {
+      "name": "unlinked Google and GitHub create separate accounts with the same contact email",
+      "passed": true
+    },
+    {
+      "name": "repeat provider sign-ins reuse their own account and never ask for linking",
+      "passed": true
+    },
+    {
+      "name": "password sign-in selects only the password identity and preserves its hash",
+      "passed": true
+    },
+    {
+      "name": "password registration rejects only a duplicate password identity",
+      "passed": true
+    },
+    {
+      "name": "forgot/reset password targets the password account despite identical OAuth emails",
+      "passed": true
+    },
+    {
+      "name": "linking refuses to take over an existing independent GitHub account",
+      "passed": true
+    }
+  ],
+  "cleaned": true,
+  "finishedAt": "2026-10-15T05:17:46.956Z",
+  "passed": true
+}

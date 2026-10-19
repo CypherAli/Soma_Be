@@ -1,0 +1,121 @@
+{
+  "startedAt": "2026-10-14T12:49:08.600Z",
+  "target": "isolated disposable QA database",
+  "tables": [
+    {
+      "table": "_prisma_migrations",
+      "rows": 15,
+      "passed": true
+    },
+    {
+      "table": "anatomy_systems",
+      "rows": 55,
+      "passed": true
+    },
+    {
+      "table": "audit_logs",
+      "rows": 140,
+      "passed": true
+    },
+    {
+      "table": "chat_memory",
+      "rows": 0,
+      "passed": true
+    },
+    {
+      "table": "medical_sources",
+      "rows": 18,
+      "passed": true
+    },
+    {
+      "table": "oauth_states",
+      "rows": 2,
+      "passed": true
+    },
+    {
+      "table": "password_reset_tokens",
+      "rows": 0,
+      "passed": true
+    },
+    {
+      "table": "pathologies",
+      "rows": 106,
+      "passed": true
+    },
+    {
+      "table": "pathology_citations",
+      "rows": 106,
+      "passed": true
+    },
+    {
+      "table": "pathology_content",
+      "rows": 318,
+      "passed": true
+    },
+    {
+      "table": "pathology_structures",
+      "rows": 0,
+      "passed": true
+    },
+    {
+      "table": "personal_docs",
+      "rows": 2,
+      "passed": true
+    },
+    {
+      "table": "personal_questions",
+      "rows": 20,
+      "passed": true
+    },
+    {
+      "table": "quiz_attempts",
+      "rows": 3,
+      "passed": true
+    },
+    {
+      "table": "quiz_options",
+      "rows": 20,
+      "passed": true
+    },
+    {
+      "table": "quiz_questions",
+      "rows": 5,
+      "passed": true
+    },
+    {
+      "table": "review_items",
+      "rows": 37,
+      "passed": true
+    },
+    {
+      "table": "sessions",
+      "rows": 9,
+      "passed": true
+    },
+    {
+      "table": "species",
+      "rows": 7,
+      "passed": true
+    },
+    {
+      "table": "structures",
+      "rows": 200,
+      "passed": true
+    },
+    {
+      "table": "study_paths",
+      "rows": 2,
+      "passed": true
+    },
+    {
+      "table": "users",
+      "rows": 2,
+      "passed": true
+    }
+  ],
+  "passed": true,
+  "foreignKeys": 20,
+  "backupBytes": 393528,
+  "cleaned": true,
+  "finishedAt": "2026-10-14T12:49:09.816Z"
+}

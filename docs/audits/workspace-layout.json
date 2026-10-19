@@ -1,0 +1,4142 @@
+{
+  "capturedAt": "2026-10-14T13:43:07.558Z",
+  "records": [
+    {
+      "from": "medical_kb",
+      "to": "soma_be/resources/medical_kb",
+      "files": [
+        {
+          "file": ".git/COMMIT_EDITMSG",
+          "sha256": "aa3db0bc6ae699a864ccf9bdaae1bcba31fb87499490bb449cf5f9a6cf4a9a2c"
+        },
+        {
+          "file": ".git/HEAD",
+          "sha256": "28d25bf82af4c0e2b72f50959b2beb859e3e60b9630a5e8c603dad4ddb2b6e80"
+        },
+        {
+          "file": ".git/config",
+          "sha256": "44b3ad83686d00890d90cdca534da7f6a1d5b77ea90d8a91d00d97730f516a09"
+        },
+        {
+          "file": ".git/description",
+          "sha256": "85ab6c163d43a17ea9cf7788308bca1466f1b0a8d1cc92e26e9bf63da4062aee"
+        },
+        {
+          "file": ".git/hooks/applypatch-msg.sample",
+          "sha256": "0223497a0b8b033aa58a3a521b8629869386cf7ab0e2f101963d328aa62193f7"
+        },
+        {
+          "file": ".git/hooks/commit-msg.sample",
+          "sha256": "1f74d5e9292979b573ebd59741d46cb93ff391acdd083d340b94370753d92437"
+        },
+        {
+          "file": ".git/hooks/fsmonitor-watchman.sample",
+          "sha256": "e0549964e93897b519bd8e333c037e51fff0f88ba13e086a331592bf801fa1d0"
+        },
+        {
+          "file": ".git/hooks/post-update.sample",
+          "sha256": "81765af2daef323061dcbc5e61fc16481cb74b3bac9ad8a174b186523586f6c5"
+        },
+        {
+          "file": ".git/hooks/pre-applypatch.sample",
+          "sha256": "e15c5b469ea3e0a695bea6f2c82bcf8e62821074939ddd85b77e0007ff165475"
+        },
+        {
+          "file": ".git/hooks/pre-commit.sample",
+          "sha256": "57185b7b9f05239d7ab52db045f5b89eb31348d7b2177eab214f5eb872e1971b"
+        },
+        {
+          "file": ".git/hooks/pre-merge-commit.sample",
+          "sha256": "d3825a70337940ebbd0a5c072984e13245920cdf8898bd225c8d27a6dfc9cb53"
+        },
+        {
+          "file": ".git/hooks/pre-push.sample",
+          "sha256": "ecce9c7e04d3f5dd9d8ada81753dd1d549a9634b26770042b58dda00217d086a"
+        },
+        {
+          "file": ".git/hooks/pre-rebase.sample",
+          "sha256": "4febce867790052338076f4e66cc47efb14879d18097d1d61c8261859eaaa7b3"
+        },
+        {
+          "file": ".git/hooks/pre-receive.sample",
+          "sha256": "a4c3d2b9c7bb3fd8d1441c31bd4ee71a595d66b44fcf49ddb310252320169989"
+        },
+        {
+          "file": ".git/hooks/prepare-commit-msg.sample",
+          "sha256": "e9ddcaa4189fddd25ed97fc8c789eca7b6ca16390b2392ae3276f0c8e1aa4619"
+        },
+        {
+          "file": ".git/hooks/push-to-checkout.sample",
+          "sha256": "a53d0741798b287c6dd7afa64aee473f305e65d3f49463bb9d7408ec3b12bf5f"
+        },
+        {
+          "file": ".git/hooks/sendemail-validate.sample",
+          "sha256": "44ebfc923dc5466bc009602f0ecf067b9c65459abfe8868ddc49b78e6ced7a92"
+        },
+        {
+          "file": ".git/hooks/update.sample",
+          "sha256": "8d5f2fa83e103cf08b57eaa67521df9194f45cbdbcb37da52ad586097a14d106"
+        },
+        {
+          "file": ".git/index",
+          "sha256": "98204b85aa457e43d132a51fad5b79463f8df8ec6b89210df4657f07594fb810"
+        },
+        {
+          "file": ".git/info/exclude",
+          "sha256": "6671fe83b7a07c8932ee89164d1f2793b2318058eb8b98dc5c06ee0a5a3b0ec1"
+        },
+        {
+          "file": ".git/logs/HEAD",
+          "sha256": "11e4bf32276a9ac5039a61bd81e506cc921a1ee1e6b4632c63cb5f4da4cfc015"
+        },
+        {
+          "file": ".git/logs/refs/heads/main",
+          "sha256": "11e4bf32276a9ac5039a61bd81e506cc921a1ee1e6b4632c63cb5f4da4cfc015"
+        },
+        {
+          "file": ".git/objects/06/83eaa314a46f2aea537fab09f31e319ed1b358",
+          "sha256": "41e00dd03148cc6a0db08d934526396a48c4eac777f1b03a6913298baa47752d"
+        },
+        {
+          "file": ".git/objects/0a/5b89f1b7c0316dba6e122e5a8b3af45684b008",
+          "sha256": "5fb3a84b72fbb038a1376864406be836f06040987f7de9d77b9566c6c8766565"
+        },
+        {
+          "file": ".git/objects/0f/b4fdee938b767e06baf838e93ab9d43a445589",
+          "sha256": "3c97c413e5029e3804fbd2685949db453f79984e805c91fa6c1669d73610c65b"
+        },
+        {
+          "file": ".git/objects/0f/f75dfddf4a1be9dfed50508f3e2b51602c571d",
+          "sha256": "a50646de4d9e2701a9fd5e0456f9123bfc79eaf307da0a9cec1a1c5660cd842c"
+        },
+        {
+          "file": ".git/objects/19/784bce26c1decf591cf83b5c359efb3eac0699",
+          "sha256": "e1b978ca703dc7b37996cae70b472639b9d0921709924cb12d9432a8e7ff0c60"
+        },
+        {
+          "file": ".git/objects/19/9e3bdaeeb36d35a6f8d3351b3b54edff88586e",
+          "sha256": "1b01545005fbe52ee60adbf4b80ccd595322c7d533ff2277a28c41d0a16d3c95"
+        },
+        {
+          "file": ".git/objects/1e/c0609672bead999051f7378ebedcbdb3c18b34",
+          "sha256": "c50c4494da969c2586d1da7c01dda52dda376eed6adc5e8f4d8d09547a5c698b"
+        },
+        {
+          "file": ".git/objects/1f/0897cd5e208662c237bc5498f4991cbfa4bbb1",
+          "sha256": "9c8e81b061e17aeca074e2f35408a4c4246b9bee6fe7b0c22dc1aac674e605ff"
+        },
+        {
+          "file": ".git/objects/23/592e765f67813142a5b5f7fe0582891e2c5055",
+          "sha256": "19458b213d6d73d982eb95b02f5dfb11aa97a219c0e7446267bf25040d170206"
+        },
+        {
+          "file": ".git/objects/30/d601db4e52d118a0ce4e9b9ba1025af071d996",
+          "sha256": "d945b6f6e5e5469a2ce4ff5f2abede77a485f911c7ea5626378a95667797d504"
+        },
+        {
+          "file": ".git/objects/3e/28ce9e61071e627dd5d1d596e503b4eef60016",
+          "sha256": "1239da5889bae45cb8de9d3f3364a975629ebae8893c3192147834ff44377bb0"
+        },
+        {
+          "file": ".git/objects/55/dc05d2e634748f871dc65a806be44dbe1d1282",
+          "sha256": "04111c1df49d3791c55455b4c357bfb099419dd5a140918615b2734c76349479"
+        },
+        {
+          "file": ".git/objects/70/0b75684874217803e71bdd3427c08c7e4bbd61",
+          "sha256": "abc2abf4e3a0c7d37dd30cd2cb19fcf7a9c578923db5e5efb6c0d265d5a0d42f"
+        },
+        {
+          "file": ".git/objects/78/9ad9778cade542e2d593956676274097883dd0",
+          "sha256": "f5d731e1ce7923f1ffab3095ecda502e1d9c508033c2f150323d6b67d064157d"
+        },
+        {
+          "file": ".git/objects/7f/6b5d25b952a083876faa39d1b6ae174bd4c79e",
+          "sha256": "70783866ffc8602f8ba6f1d05833d10c6d3875796622027bc8910e364e0eb26a"
+        },
+        {
+          "file": ".git/objects/84/346e25cff9c4cdf4dc6e5e643f5db2f55faeaa",
+          "sha256": "e6c4a1a639de434134a7d23c8e522a8763113ef28de5a5780767fbdf119e64a3"
+        },
+        {
+          "file": ".git/objects/92/2c36559326c6d45e2c7c90cb6becf592b9a1e4",
+          "sha256": "422d58c8bd9be10e1cd1d39dba6c09e7d502f24d28fb59775c42b435fe3229ba"
+        },
+        {
+          "file": ".git/objects/92/30b15288b7d86c66378fabf4afc12e6a2bab49",
+          "sha256": "f63ebb3109edcf64beafbe52dbce4cb0c338f0cca3a5569e307ce95da353d9b7"
+        },
+        {
+          "file": ".git/objects/ab/206f4a6f0704e70d3d6b38068048807597be6f",
+          "sha256": "7a5b0614ac2529b2c5d81a8f9d9f37fc75ad9cb8ca9e0cb30ad6f1f0deded919"
+        },
+        {
+          "file": ".git/objects/b2/ff6228641def438fdb4069b3f746df0500745f",
+          "sha256": "7117e681918b49bf73ef13deba69e834afc81106caacdc7c3568199c525d3446"
+        },
+        {
+          "file": ".git/objects/b8/fee819b88cfc195c45aee5d9f6f6da7ba2d628",
+          "sha256": "963c84cb5a02b65912bf1b6378d3ac821c3fc3866bcde83b175541d1663880e3"
+        },
+        {
+          "file": ".git/objects/d4/860afbb9c57db97d06b24952433d9eb5694a4f",
+          "sha256": "2cdec6374cbfa384d224f2350124bdc32e39a8ec4ede7502b04c4077eb128168"
+        },
+        {
+          "file": ".git/objects/d8/5db8d0e8583d4981f9533d0831198baee67942",
+          "sha256": "766bc34ec6b13bb79b80fe8e5664c827ca25fddb8c1b1ed3cf8bcd454a3d7c28"
+        },
+        {
+          "file": ".git/objects/e4/0e81cfa5799dfb8f9e4299f0bd32edb5dbb3f9",
+          "sha256": "6b41b23ee5842b969b10a9a2f27648a6562ce7c02b138f558bead45163e0f8d3"
+        },
+        {
+          "file": ".git/objects/f2/df96756d40c7aa73024915ee9f799b15820e5f",
+          "sha256": "1fe0157fc8c6756a66f8ee05c949bab3dcdce6ac1c52d3b9486f710119ab386f"
+        },
+        {
+          "file": ".git/objects/ff/ba71b78c98a6323eef5d2abb6244bd810a7b9b",
+          "sha256": "4216742eb85bfd30331b4d1c0446837de4db14190fce669b4fcc2acddd2edb51"
+        },
+        {
+          "file": ".git/refs/heads/main",
+          "sha256": "df98e17ab418b5e6350e527989e5503d8ead799ef6a0856d1dca8a0843acb57f"
+        },
+        {
+          "file": ".gitignore",
+          "sha256": "8b57002b72482ae4c5c27cfeb782ae90e9c44087d1860a8705062e02dfc0ef31"
+        },
+        {
+          "file": "catalog.json",
+          "sha256": "f76a6eb50976df379a4f3ae9f1749800ee731f5e8c408888b1c40fef077c30a2"
+        },
+        {
+          "file": "figures/ap-xe-gan/manifest.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "file": "figures/ap-xe-phoi/ap-xe-phoi-01.png",
+          "sha256": "19d5927bea26ee4e90e7f6bcadfd4b54c56793c6b57e2e0f4d513732c840aa62"
+        },
+        {
+          "file": "figures/ap-xe-phoi/ap-xe-phoi-02.png",
+          "sha256": "a3c590021ed018e00fe569eb7e938a9c5f6051b3dddf5ed99a8ebba2eba2bda8"
+        },
+        {
+          "file": "figures/ap-xe-phoi/ap-xe-phoi-03.png",
+          "sha256": "8fadb9f3389d71257bd43cbc4d59e71cc0189e6e81c6816f45e6de4e16f6859c"
+        },
+        {
+          "file": "figures/ap-xe-phoi/manifest.json",
+          "sha256": "3a5c391bc0a89837d549449aae5a1aa9987ee7fda86414b32902930c352d9685"
+        },
+        {
+          "file": "figures/benh-cuong-giap/manifest.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "file": "figures/benh-da-hong-cau-tien-phat/manifest.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "file": "figures/benh-da-u-tuy-xuong/manifest.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "file": "figures/benh-gan-do-ruou/manifest.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "file": "figures/benh-gout/benh-gout-01.png",
+          "sha256": "f864d1c577d8be506bc3fb86f2df59bd6ef6d88b736245a6bb8b367faca0b46e"
+        },
+        {
+          "file": "figures/benh-gout/benh-gout-02.png",
+          "sha256": "4f59b66af7574c5f42a33ca51767d0f4e14f225eeebb76b2743e9814a798c5f6"
+        },
+        {
+          "file": "figures/benh-gout/benh-gout-03.png",
+          "sha256": "a9c69683d28ac10b1476c8d2689165f5eb602957c3afa8c9e128480735c89c6f"
+        },
+        {
+          "file": "figures/benh-gout/benh-gout-04.png",
+          "sha256": "5ad5cc666b8537445491f25be1b984ee85c085e45f8abf0e4f5bc45623033d45"
+        },
+        {
+          "file": "figures/benh-gout/manifest.json",
+          "sha256": "417dbac04aef48d674429ea5def2e5e9ec053381ef712058308d8412887e7712"
+        },
+        {
+          "file": "figures/benh-hemophilia/benh-hemophilia-01.png",
+          "sha256": "7aa9a8c781845141eede1f51147e7c188bc35224b45ceb6edeb6cc78811b0676"
+        },
+        {
+          "file": "figures/benh-hemophilia/manifest.json",
+          "sha256": "5f72bbdeeb4b5a0c6a97d27f93c66c9011fc714efa52c0e879ea235788221781"
+        },
+        {
+          "file": "figures/benh-ly-phan-mem-canh-khop/manifest.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "file": "figures/benh-nhuoc-co/manifest.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "file": "figures/benh-phoi-tac-nghen-man-tinh/benh-phoi-tac-nghen-man-tinh-01.png",
+          "sha256": "7bb5d89257bfbdb92ad88d3f319dcb78f41ded65565a069ed4b5d394e009e832"
+        },
+        {
+          "file": "figures/benh-phoi-tac-nghen-man-tinh/benh-phoi-tac-nghen-man-tinh-02.png",
+          "sha256": "f8304f0e3e9d1684d942f58c4a045b131a6d93ca110f1525783820b97cbeb9b5"
+        },
+        {
+          "file": "figures/benh-phoi-tac-nghen-man-tinh/benh-phoi-tac-nghen-man-tinh-03.png",
+          "sha256": "6d36b27e4a67a6471dbc4b1415eca83ea767280c0533166be02c27a2d64d5fb3"
+        },
+        {
+          "file": "figures/benh-phoi-tac-nghen-man-tinh/manifest.json",
+          "sha256": "183a911c43301e90de15ab2763260e863c06d33da16f2461b67432341d07aff7"
+        },
+        {
+          "file": "figures/benh-suy-giap/manifest.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "file": "figures/benh-than-da-nang/benh-than-da-nang-01.png",
+          "sha256": "3da8180783e7bc4d35c9882e827dea39b9c0d9d5bf7714fc20eb02ba58bf1d16"
+        },
+        {
+          "file": "figures/benh-than-da-nang/manifest.json",
+          "sha256": "bbb5b0cfc4222b39820ce646585443c7f48753818d918cb463d43a8bcfe2933a"
+        },
+        {
+          "file": "figures/benh-than-lupus/benh-than-lupus-01.png",
+          "sha256": "64388e319469869b9a7985d2f185adc7715845bac6264b43376d64b3685821bd"
+        },
+        {
+          "file": "figures/benh-than-lupus/benh-than-lupus-02.png",
+          "sha256": "3ec606055ffe47354fbd22c8ef3ebd373168f6c06a340862fc4c0d8f18eda491"
+        },
+        {
+          "file": "figures/benh-than-lupus/manifest.json",
+          "sha256": "b983ce05114f54a50a28391bd7df726cd73196f7c9a820833740a4e5af4b03cc"
+        },
+        {
+          "file": "figures/benh-than-man-va-suy-than-giai-doan-cuoi-dieu-tri-bao-ton-va-thay-the-than-suy/benh-than-man-va-suy-than-giai-doan-cuoi-dieu-tri-bao-ton-va-thay-the-than-suy-01.png",
+          "sha256": "7a5fccf32a377640b5e44c0fac67e9b67bec0110bed627476000ed85d630f510"
+        },
+        {
+          "file": "figures/benh-than-man-va-suy-than-giai-doan-cuoi-dieu-tri-bao-ton-va-thay-the-than-suy/benh-than-man-va-suy-than-giai-doan-cuoi-dieu-tri-bao-ton-va-thay-the-than-suy-02.png",
+          "sha256": "8cb3f647918a75380a31cbf7067bc8c739f650f34577bb9c5ec483c1cd9abce1"
+        },
+        {
+          "file": "figures/benh-than-man-va-suy-than-giai-doan-cuoi-dieu-tri-bao-ton-va-thay-the-than-suy/benh-than-man-va-suy-than-giai-doan-cuoi-dieu-tri-bao-ton-va-thay-the-than-suy-03.png",
+          "sha256": "7389e9f16df696a214454800a3be8576fc5f753528cba39db1fb4ce879c5336c"
+        },
+        {
+          "file": "figures/benh-than-man-va-suy-than-giai-doan-cuoi-dieu-tri-bao-ton-va-thay-the-than-suy/benh-than-man-va-suy-than-giai-doan-cuoi-dieu-tri-bao-ton-va-thay-the-than-suy-04.png",
+          "sha256": "ac0e1ea2377eb47207086325f5e7786a8d06cc6035276791974a6a4febae347f"
+        },
+        {
+          "file": "figures/benh-than-man-va-suy-than-giai-doan-cuoi-dieu-tri-bao-ton-va-thay-the-than-suy/benh-than-man-va-suy-than-giai-doan-cuoi-dieu-tri-bao-ton-va-thay-the-than-suy-05.png",
+          "sha256": "bca0f5c68d495797914b35f7b845c20f8fa4b05b4910bf90dec0f58810d9ed5c"
+        },
+        {
+          "file": "figures/benh-than-man-va-suy-than-giai-doan-cuoi-dieu-tri-bao-ton-va-thay-the-than-suy/manifest.json",
+          "sha256": "4383137c356cb1e69a974c441f681bf72e4aa0f2d45bbe6dd57622f5a1814965"
+        },
+        {
+          "file": "figures/benh-than-man-va-suy-than-man-tinh/manifest.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "file": "figures/benh-to-cac-vien-cuc/manifest.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "file": "figures/benh-tri/manifest.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "file": "figures/benh-viem-khop-tu-phat-thieu-nien/benh-viem-khop-tu-phat-thieu-nien-01.png",
+          "sha256": "0e433e1a17b9faf3d8fb988ee37b329a06ca2a6db6591ef4c6437da21c1559e6"
+        },
+        {
+          "file": "figures/benh-viem-khop-tu-phat-thieu-nien/benh-viem-khop-tu-phat-thieu-nien-02.png",
+          "sha256": "7b6729432e3f7cf67ebfda7ace60fb5bab060ecb1ba5be00f3b655339ff86122"
+        },
+        {
+          "file": "figures/benh-viem-khop-tu-phat-thieu-nien/benh-viem-khop-tu-phat-thieu-nien-03.png",
+          "sha256": "66c47758cfbdc0f1bf421d4cec049c2c54c1ca1d286f72a5515417d43c03bab8"
+        },
+        {
+          "file": "figures/benh-viem-khop-tu-phat-thieu-nien/benh-viem-khop-tu-phat-thieu-nien-04.png",
+          "sha256": "66c47758cfbdc0f1bf421d4cec049c2c54c1ca1d286f72a5515417d43c03bab8"
+        },
+        {
+          "file": "figures/benh-viem-khop-tu-phat-thieu-nien/manifest.json",
+          "sha256": "d155d1b446a52479a0fe20d281a6c6558e545f60e086afef8e640e9cc684b514"
+        },
+        {
+          "file": "figures/benh-xuat-huyet-giam-tieu-cau-vo-can/manifest.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "file": "figures/buou-giap-don-thuan/manifest.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "file": "figures/cap-cuu-ngung-tuan-hoan/manifest.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "file": "figures/cuong-aldosteron/manifest.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "file": "figures/dai-thao-duong/manifest.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "file": "figures/dai-thao-nhat/manifest.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "file": "figures/dau-vung-that-lung-va-dau-than-kinh-toa-do-thoat-vi-dia-dem/dau-vung-that-lung-va-dau-than-kinh-toa-do-thoat-vi-dia-dem-02.png",
+          "sha256": "80d72009175623036d68ecbe0d6b32bc3ea3cbe5f795b723f864a916049195aa"
+        },
+        {
+          "file": "figures/dau-vung-that-lung-va-dau-than-kinh-toa-do-thoat-vi-dia-dem/dau-vung-that-lung-va-dau-than-kinh-toa-do-thoat-vi-dia-dem-03.png",
+          "sha256": "e7c775654065cc33c9af3d3a2e3c4636b9a679482d6db39d74c8484dbcb76ae6"
+        },
+        {
+          "file": "figures/dau-vung-that-lung-va-dau-than-kinh-toa-do-thoat-vi-dia-dem/manifest.json",
+          "sha256": "7942e1a14a0ceaef9e00bc229b7bc1828b519b7efa7638e7d46f8fae7a405a57"
+        },
+        {
+          "file": "figures/dien-giat/manifest.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "file": "figures/dieu-tri-mot-so-roi-loan-nhip-tim-thuong-gap/dieu-tri-mot-so-roi-loan-nhip-tim-thuong-gap-01.png",
+          "sha256": "74892f2dc500c7508322db1e762840621f82784ed626e5f29c45c60c183ec7af"
+        },
+        {
+          "file": "figures/dieu-tri-mot-so-roi-loan-nhip-tim-thuong-gap/dieu-tri-mot-so-roi-loan-nhip-tim-thuong-gap-02.png",
+          "sha256": "00c6e54e567d1d2dea70d3f4778f2fc8b09a11191b20b1b5f18753633d0a019e"
+        },
+        {
+          "file": "figures/dieu-tri-mot-so-roi-loan-nhip-tim-thuong-gap/dieu-tri-mot-so-roi-loan-nhip-tim-thuong-gap-04.png",
+          "sha256": "ef4f46025bf3d735b9423fe93fcd8f32ca9bf0834dfb2b125a7b982696150006"
+        },
+        {
+          "file": "figures/dieu-tri-mot-so-roi-loan-nhip-tim-thuong-gap/dieu-tri-mot-so-roi-loan-nhip-tim-thuong-gap-05.png",
+          "sha256": "d8a97d90cdfcf3587ddaa6555761472e35a7e42621c31f69bde69bb07cb382d6"
+        },
+        {
+          "file": "figures/dieu-tri-mot-so-roi-loan-nhip-tim-thuong-gap/dieu-tri-mot-so-roi-loan-nhip-tim-thuong-gap-06.png",
+          "sha256": "08cefbd9b01dd48422cbacb989282a4b2beb8677e06cd7d8037c7ad6563cf7bf"
+        },
+        {
+          "file": "figures/dieu-tri-mot-so-roi-loan-nhip-tim-thuong-gap/dieu-tri-mot-so-roi-loan-nhip-tim-thuong-gap-07.png",
+          "sha256": "7fa9719439f58c65e9230e56adfe6c1aab398a302a14245c695f009b819bc7c1"
+        },
+        {
+          "file": "figures/dieu-tri-mot-so-roi-loan-nhip-tim-thuong-gap/dieu-tri-mot-so-roi-loan-nhip-tim-thuong-gap-08.png",
+          "sha256": "ff6a2e0523227a767f5988f23ae2ad8c662be0fbb85f2ce07c3b618360bd152e"
+        },
+        {
+          "file": "figures/dieu-tri-mot-so-roi-loan-nhip-tim-thuong-gap/dieu-tri-mot-so-roi-loan-nhip-tim-thuong-gap-09.png",
+          "sha256": "360d6edf26b9da571c6a043fb23453f76217d76d6c75c38125a5ebb2570b545c"
+        },
+        {
+          "file": "figures/dieu-tri-mot-so-roi-loan-nhip-tim-thuong-gap/dieu-tri-mot-so-roi-loan-nhip-tim-thuong-gap-10.png",
+          "sha256": "3e0a17442e200db0984c03e45b9ec28c1f6c6c101444785e874e934d88d2408b"
+        },
+        {
+          "file": "figures/dieu-tri-mot-so-roi-loan-nhip-tim-thuong-gap/dieu-tri-mot-so-roi-loan-nhip-tim-thuong-gap-11.png",
+          "sha256": "c21974680117d08c63c5505f6aba6eddfba7ffc5ea29543b01c7cfc2b968821c"
+        },
+        {
+          "file": "figures/dieu-tri-mot-so-roi-loan-nhip-tim-thuong-gap/dieu-tri-mot-so-roi-loan-nhip-tim-thuong-gap-13.png",
+          "sha256": "a14550359400c94e2432052bb4467bd90f26958b30b77b4cf8b70379dff30b42"
+        },
+        {
+          "file": "figures/dieu-tri-mot-so-roi-loan-nhip-tim-thuong-gap/dieu-tri-mot-so-roi-loan-nhip-tim-thuong-gap-14.png",
+          "sha256": "a0f89d8a29d49a7b02d6a14d1db25736e50ac37767690ce77bdfe696b664c094"
+        },
+        {
+          "file": "figures/dieu-tri-mot-so-roi-loan-nhip-tim-thuong-gap/dieu-tri-mot-so-roi-loan-nhip-tim-thuong-gap-15.png",
+          "sha256": "cba6c242e9ae578409a88ea4e159d540d65b7b481294b4052263ec467ed9fb86"
+        },
+        {
+          "file": "figures/dieu-tri-mot-so-roi-loan-nhip-tim-thuong-gap/dieu-tri-mot-so-roi-loan-nhip-tim-thuong-gap-16.png",
+          "sha256": "9182cfab17f3079649af60461c06985aabc79897a13f376f4e9eeb65875db4c3"
+        },
+        {
+          "file": "figures/dieu-tri-mot-so-roi-loan-nhip-tim-thuong-gap/dieu-tri-mot-so-roi-loan-nhip-tim-thuong-gap-17.png",
+          "sha256": "bf628da097c4cc6c53ff8cfb9f55cd1107060ef7d7d7cdc8533bbd06d8694a85"
+        },
+        {
+          "file": "figures/dieu-tri-mot-so-roi-loan-nhip-tim-thuong-gap/dieu-tri-mot-so-roi-loan-nhip-tim-thuong-gap-18.png",
+          "sha256": "3147a69187f911eb7ebefa8f733576476458854e6c10f2a5dcee487c56ab0082"
+        },
+        {
+          "file": "figures/dieu-tri-mot-so-roi-loan-nhip-tim-thuong-gap/dieu-tri-mot-so-roi-loan-nhip-tim-thuong-gap-19.png",
+          "sha256": "3bb6d5685ddee835fa8e37a40f3881998b75914cfef66f3c831f79902043a2b9"
+        },
+        {
+          "file": "figures/dieu-tri-mot-so-roi-loan-nhip-tim-thuong-gap/dieu-tri-mot-so-roi-loan-nhip-tim-thuong-gap-20.png",
+          "sha256": "136537a9fd9c92192c978f2e6e5bcfca868a5fc473d6c40d01330875436dd992"
+        },
+        {
+          "file": "figures/dieu-tri-mot-so-roi-loan-nhip-tim-thuong-gap/dieu-tri-mot-so-roi-loan-nhip-tim-thuong-gap-22.png",
+          "sha256": "37994d82b9bf18c799173ebb2cff17aa96e919548857ba992ea32e9d4d5a99ab"
+        },
+        {
+          "file": "figures/dieu-tri-mot-so-roi-loan-nhip-tim-thuong-gap/dieu-tri-mot-so-roi-loan-nhip-tim-thuong-gap-23.png",
+          "sha256": "f9438763a4afc6c45bf9414e88c35a76caedfa4ac78c1ab9ef8754a71656f826"
+        },
+        {
+          "file": "figures/dieu-tri-mot-so-roi-loan-nhip-tim-thuong-gap/dieu-tri-mot-so-roi-loan-nhip-tim-thuong-gap-24.png",
+          "sha256": "92f73e16672d30f82963e631370e223800e90b80c40e2bba4bd90cef60be80cd"
+        },
+        {
+          "file": "figures/dieu-tri-mot-so-roi-loan-nhip-tim-thuong-gap/manifest.json",
+          "sha256": "51b6557f369058ac7a2e90aebf9037fe3b98944813a08dc5eefe86b3a2d5b004"
+        },
+        {
+          "file": "figures/dot-quy-nao/manifest.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "file": "figures/gian-phe-quan/gian-phe-quan-01.png",
+          "sha256": "a6b2c2fd0c72e033b7543bc43a6a2f67a0a6657681487a619a003fe1b36984ad"
+        },
+        {
+          "file": "figures/gian-phe-quan/manifest.json",
+          "sha256": "60e8e2cfd0a1aa82926bca8a3ea879ffe49853a3c6d78b6ba39d67f6071ebf38"
+        },
+        {
+          "file": "figures/ha-glucose-huyet/manifest.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "file": "figures/hen-phe-quan/hen-phe-quan-01.png",
+          "sha256": "d36bb4ba466ee6ebed4bf8850a01b2e954bbca04d08a5ea57f6fb55fae608d1a"
+        },
+        {
+          "file": "figures/hen-phe-quan/manifest.json",
+          "sha256": "e148cb2c741f541b9e1d2fe58767445f6f10edb2faa948450bd1ee9eb8728f76"
+        },
+        {
+          "file": "figures/hep-van-hai-la/hep-van-hai-la-01.png",
+          "sha256": "23835b79368b9b63023a058a13e8747cf591efced9c7a9380c9f94366263769e"
+        },
+        {
+          "file": "figures/hep-van-hai-la/manifest.json",
+          "sha256": "f201e60e421de98ba6c105a6887ad2b10b3860fad7f36d2ce0653ca4edc65d6d"
+        },
+        {
+          "file": "figures/ho-ra-mau/ho-ra-mau-01.png",
+          "sha256": "84326cfd0f4c17d556f2971b0528d5e45744f4c7680c4d1d7d6c73cea0506192"
+        },
+        {
+          "file": "figures/ho-ra-mau/manifest.json",
+          "sha256": "cf1799f60cd6af1f3d55ae0d65dc731ea763fa0cf0ed70f89f4089bc0ee13914"
+        },
+        {
+          "file": "figures/hoi-chung-cushing/hoi-chung-cushing-01.png",
+          "sha256": "fc9227187a02cf439467897494dd46f834befb5d6757a600e05277120feaa2d4"
+        },
+        {
+          "file": "figures/hoi-chung-cushing/manifest.json",
+          "sha256": "cadc7e4125856acd7cf54e53d21ee8bbd96bcee85a23c648b5b771af464c1cd0"
+        },
+        {
+          "file": "figures/hoi-chung-ngung-tho-khi-ngu/hoi-chung-ngung-tho-khi-ngu-01.png",
+          "sha256": "d2a936f59e858b8de52f43e8c2a4206bc165c43e90cba0a908b8104eb77d424c"
+        },
+        {
+          "file": "figures/hoi-chung-ngung-tho-khi-ngu/manifest.json",
+          "sha256": "1b271d54c64302eaa1005e2c36e66b96198405a8a913cc24a56a4e9d9599e14c"
+        },
+        {
+          "file": "figures/hoi-chung-roi-loan-sinh-tuy/manifest.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "file": "figures/hoi-chung-ruot-kich-thich/manifest.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "file": "figures/hoi-chung-sheehan/manifest.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "file": "figures/hoi-chung-than-hu/hoi-chung-than-hu-01.png",
+          "sha256": "c8ac63311c66c3660d3225b714636379f5001c5a33371a04cceab6e8095f6ea0"
+        },
+        {
+          "file": "figures/hoi-chung-than-hu/manifest.json",
+          "sha256": "1858ed8bf5e2ec6e145d341b777b52a87fac064e07c1333964818d57bfedade7"
+        },
+        {
+          "file": "figures/hoi-chung-trung-that/manifest.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "file": "figures/huyet-khoi-tinh-mach-sau-chi-duoi/huyet-khoi-tinh-mach-sau-chi-duoi-01.png",
+          "sha256": "132cc38251c02f84c0f3a3a2348684a06abf1f972e4dfdc509fe64f5ae01ffd5"
+        },
+        {
+          "file": "figures/huyet-khoi-tinh-mach-sau-chi-duoi/huyet-khoi-tinh-mach-sau-chi-duoi-02.png",
+          "sha256": "3586a06a04c7680985a6e8f0997d66b38d75dc0d5cb4fc005333e64c7e56385f"
+        },
+        {
+          "file": "figures/huyet-khoi-tinh-mach-sau-chi-duoi/huyet-khoi-tinh-mach-sau-chi-duoi-04.png",
+          "sha256": "71837f43d1b9220984c85f39c085d5c34a058eee670606d95d22430eace5fa67"
+        },
+        {
+          "file": "figures/huyet-khoi-tinh-mach-sau-chi-duoi/huyet-khoi-tinh-mach-sau-chi-duoi-06.png",
+          "sha256": "eb36a5522ee25edb27a514e95725ef519a4053830108fdef76ec9267837388d7"
+        },
+        {
+          "file": "figures/huyet-khoi-tinh-mach-sau-chi-duoi/manifest.json",
+          "sha256": "a30729597cedcbfb88d07fa2e6a8017b5b5e6383f8757512d0f031789b996d9b"
+        },
+        {
+          "file": "figures/lao-phoi/manifest.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "file": "figures/lo-xe-mi-cap/manifest.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "file": "figures/lo-xe-mi-kinh-dong-bach-cau-hat/manifest.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "file": "figures/loan-duong-co/manifest.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "file": "figures/loang-xuong/manifest.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "file": "figures/loet-da-day-ta-trang/manifest.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "file": "figures/lupus-ban-do-he-thong/manifest.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "file": "figures/mot-so-ngo-doc-cap-thuong-gap/manifest.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "file": "figures/ngat-nuoc/manifest.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "file": "figures/nhiem-khuan-co-xuong-khop/manifest.json",
+          "sha256": "884c2c7e6fceeffc4fbec4edb260ec1cfba25fa024a6d242aa3863439b7f71f4"
+        },
+        {
+          "file": "figures/nhiem-khuan-co-xuong-khop/nhiem-khuan-co-xuong-khop-01.png",
+          "sha256": "7b3d37a1192ab6ba531b17444b965f91d8d7084d52b1acab5679cc67cd4e2b02"
+        },
+        {
+          "file": "figures/nhiem-khuan-co-xuong-khop/nhiem-khuan-co-xuong-khop-02.png",
+          "sha256": "20117389f628d8c4ec3347fa4df40bb70594e7f91a376301cf6250755436ce33"
+        },
+        {
+          "file": "figures/nhiem-khuan-co-xuong-khop/nhiem-khuan-co-xuong-khop-03.png",
+          "sha256": "ca75002caa876966c7f859d10681521aae0696563adf52b3e3ec0100cf8f29fd"
+        },
+        {
+          "file": "figures/nhiem-khuan-co-xuong-khop/nhiem-khuan-co-xuong-khop-04.png",
+          "sha256": "1b27a39a985d0080916436790a9337c31180fb3fe6ec6d5721e5da79db6d08cf"
+        },
+        {
+          "file": "figures/nhiem-khuan-tiet-nieu/manifest.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "file": "figures/nhiem-khuan-tiet-nieu/nhiem-khuan-tiet-nieu-01.png",
+          "sha256": "9e2691b77e7e102e3354860481ab7071cb1134eca5383b27e8e010209f28f0e6"
+        },
+        {
+          "file": "figures/nhoi-mau-co-tim-va-hoi-chung-vanh-cap/manifest.json",
+          "sha256": "18c618bb75c235b016c19947d1da5437781c488d6de9ad19c7e51f2de3259037"
+        },
+        {
+          "file": "figures/nhoi-mau-co-tim-va-hoi-chung-vanh-cap/nhoi-mau-co-tim-va-hoi-chung-vanh-cap-01.png",
+          "sha256": "f5acc10366a01c4f346759459566e1a5405ad8b93aaf0bddc4648572c57e18a9"
+        },
+        {
+          "file": "figures/nhoi-mau-co-tim-va-hoi-chung-vanh-cap/nhoi-mau-co-tim-va-hoi-chung-vanh-cap-02.png",
+          "sha256": "08771a28241527af7696a8405620e41481ca69d0c86dfc003653290ef43f49d8"
+        },
+        {
+          "file": "figures/nhoi-mau-co-tim-va-hoi-chung-vanh-cap/nhoi-mau-co-tim-va-hoi-chung-vanh-cap-03.png",
+          "sha256": "115e57eff8c5fd06ece876369d2cc0299b442ba275f22221390f9daa75a80d55"
+        },
+        {
+          "file": "figures/phi-dai-lanh-tinh-tuyen-tien-liet/manifest.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "file": "figures/phu-phoi-cap/manifest.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "file": "figures/ran-doc-can/manifest.json",
+          "sha256": "badae13ac090056ada2c5acd46d2a15454f7e6734a4d22ca502e009b6263e548"
+        },
+        {
+          "file": "figures/ran-doc-can/ran-doc-can-03.png",
+          "sha256": "9e22e21fc9b5adbd86cf01eedbd9c5a7d89e4ecd68bbd80a9ea6a88db02b1888"
+        },
+        {
+          "file": "figures/ran-doc-can/ran-doc-can-04.png",
+          "sha256": "24d67b61cf4e5f94a5b4a6d2aa375f736a94bf831b09d2eb71afe834e13d97dd"
+        },
+        {
+          "file": "figures/ran-doc-can/ran-doc-can-06.png",
+          "sha256": "ed548058e12e9c4d7ef1b554de98a49bf3b81e0bfd59f7e0a7dc6e07c5a1aa14"
+        },
+        {
+          "file": "figures/roi-loan-kali-mau/manifest.json",
+          "sha256": "d9d1f00a083eadafd2186cb2d4a1fc1e7e07e5ca5cde627ebb45733ec6dcca9a"
+        },
+        {
+          "file": "figures/roi-loan-kali-mau/roi-loan-kali-mau-01.png",
+          "sha256": "c2623b00e80a147319fec97ee950f95ef1a83ee216e821609a677c40f9d1b61f"
+        },
+        {
+          "file": "figures/roi-loan-kali-mau/roi-loan-kali-mau-03.png",
+          "sha256": "6a1daf65229dbd7ad2226a82739e228493ebcd84547dddfc67f2768144f9b9b7"
+        },
+        {
+          "file": "figures/roi-loan-nuoc-va-natri/manifest.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "file": "figures/roi-loan-thang-bang-toan-kiem/manifest.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "file": "figures/sa-sut-tri-tue/manifest.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "file": "figures/soc/manifest.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "file": "figures/soi-tiet-nieu/manifest.json",
+          "sha256": "f169b844e88baadd94272152e2041b873118050b3a9eef30b4341435b933bf93"
+        },
+        {
+          "file": "figures/soi-tiet-nieu/soi-tiet-nieu-01.png",
+          "sha256": "97997c89ddcf6b9f7ab414e5c04927619be984e74e95c1ff75b8fc96ab1dbba2"
+        },
+        {
+          "file": "figures/suy-than-cap/manifest.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "file": "figures/suy-thuong-than-man-tinh/manifest.json",
+          "sha256": "8ae9d79db7393312c00be475b138b81ca1e87204cb7b1a47e130c490c14876dd"
+        },
+        {
+          "file": "figures/suy-thuong-than-man-tinh/suy-thuong-than-man-tinh-01.png",
+          "sha256": "fc9227187a02cf439467897494dd46f834befb5d6757a600e05277120feaa2d4"
+        },
+        {
+          "file": "figures/suy-thuong-than-man-tinh/suy-thuong-than-man-tinh-02.png",
+          "sha256": "8334f608558c31b2097eccdfe1f30a71d6381fc841a8e8d9987f80b937ea398b"
+        },
+        {
+          "file": "figures/suy-tim/manifest.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "file": "figures/suy-tinh-mach-man-tinh/manifest.json",
+          "sha256": "851ec39c7004c289a1fb37249583c518003df79f90a7386595bf921a0a4e40cf"
+        },
+        {
+          "file": "figures/suy-tinh-mach-man-tinh/suy-tinh-mach-man-tinh-02.png",
+          "sha256": "50955d08922d98e987586e01d978e6b3a51bd81c5d19c7514a998c873c3a831e"
+        },
+        {
+          "file": "figures/suy-tinh-mach-man-tinh/suy-tinh-mach-man-tinh-03.png",
+          "sha256": "c2d085ef17e3878cc6912017b33c1cfee24f5f8d41b7c3071f6405e280d52bea"
+        },
+        {
+          "file": "figures/suy-tinh-mach-man-tinh/suy-tinh-mach-man-tinh-04.png",
+          "sha256": "e743390d97d633c41aaba8fa91781dd87f1def34879f639c50a521f103310bc4"
+        },
+        {
+          "file": "figures/suy-tinh-mach-man-tinh/suy-tinh-mach-man-tinh-05.png",
+          "sha256": "84db850dc22ccdd6aa9137e7d45f853253e388aa81ccc7485a8d76466f104e37"
+        },
+        {
+          "file": "figures/suy-tinh-mach-man-tinh/suy-tinh-mach-man-tinh-06.png",
+          "sha256": "4b9ad5b4431e99d71b9d6ebd2e4408b995e26f6004d7a905475268f20634e2d1"
+        },
+        {
+          "file": "figures/suy-tinh-mach-man-tinh/suy-tinh-mach-man-tinh-07.png",
+          "sha256": "1627e0ba48d8bb2dfce40614ed7bcf752e1bf49e9945e6b63c2d259bdd00e72e"
+        },
+        {
+          "file": "figures/suy-tinh-mach-man-tinh/suy-tinh-mach-man-tinh-08.png",
+          "sha256": "7f42b67fbf83d5d76270fb93c66677ee35edbc8017b5e0458b97ae7183f50776"
+        },
+        {
+          "file": "figures/suy-tuy-xuong/manifest.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "file": "figures/tam-phe-man/manifest.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "file": "figures/tang-huyet-ap/manifest.json",
+          "sha256": "8578be3df20156800c56375fa489081f62aa57d6ccd5812b671f77c045aebd35"
+        },
+        {
+          "file": "figures/tang-huyet-ap/tang-huyet-ap-01.png",
+          "sha256": "ff286fc5cf3ae842ec57c85fc58c82483b825eab572f359e2918e0e9ee53664e"
+        },
+        {
+          "file": "figures/tang-huyet-ap/tang-huyet-ap-02.png",
+          "sha256": "66878cfdeb99e28d34def5e5e5c5d39de44a8ab13d37c45717695ae9990c5b81"
+        },
+        {
+          "file": "figures/tang-huyet-ap/tang-huyet-ap-03.png",
+          "sha256": "4140c74377bf9cf56706283243a667e41f6a84862a14a968d3f4df1d71d4a717"
+        },
+        {
+          "file": "figures/tang-huyet-ap/tang-huyet-ap-04.png",
+          "sha256": "d138d18d1c9a70001595b993e6c6dc9667fa57a18818be62a153979e852063b8"
+        },
+        {
+          "file": "figures/tang-huyet-ap/tang-huyet-ap-05.png",
+          "sha256": "66878cfdeb99e28d34def5e5e5c5d39de44a8ab13d37c45717695ae9990c5b81"
+        },
+        {
+          "file": "figures/tang-huyet-ap/tang-huyet-ap-06.png",
+          "sha256": "71c847aea5689eb8f81162ea728fa117d01257e5a4c5149421bfff1d4568b321"
+        },
+        {
+          "file": "figures/tang-huyet-ap/tang-huyet-ap-07.png",
+          "sha256": "03e83e05f76140fe52410b8769c9f91d5f5d3719ade25a804cc430f74fee2ecb"
+        },
+        {
+          "file": "figures/tang-tieu-cau-tien-phat/manifest.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "file": "figures/tao-bon/manifest.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "file": "figures/thieu-mau/manifest.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "file": "figures/thieu-mau-tan-mau/manifest.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "file": "figures/thoai-hoa-khop/manifest.json",
+          "sha256": "2a9262f712d2c4987fbc6197aef322b8dd325960b928d517330b26c1ab40e7c6"
+        },
+        {
+          "file": "figures/thoai-hoa-khop/thoai-hoa-khop-02.png",
+          "sha256": "f54dbb7511529bbbe590a7ed9ad967143f3be8834389cd6c2fdb4227023a7d76"
+        },
+        {
+          "file": "figures/ton-thuong-than-cap/manifest.json",
+          "sha256": "fb9caf7cc2737afae894af9c9304470321d26894172809a2ce56e0ea3aefb77a"
+        },
+        {
+          "file": "figures/ton-thuong-than-cap/ton-thuong-than-cap-01.png",
+          "sha256": "f214df0bbac47bb6dc4c16538e60d18ad3ec279c7be44d8987cf8087d165e453"
+        },
+        {
+          "file": "figures/ton-thuong-than-cap/ton-thuong-than-cap-02.png",
+          "sha256": "97b7df91aa5b65aec7ac91ae8cd3dd8399ce97df758d9b2fc7d58d68c293f29d"
+        },
+        {
+          "file": "figures/tran-dich-mang-phoi/manifest.json",
+          "sha256": "c4e9aeb889edd9f00e029e59416fbe6513a9196aa0a87d5e41e875359ecb0530"
+        },
+        {
+          "file": "figures/tran-dich-mang-phoi/tran-dich-mang-phoi-01.png",
+          "sha256": "9ba74a110f24db2bfc8b11f57fc2c9e9a87e46ae1dd6610ac76f30d08db1e1c5"
+        },
+        {
+          "file": "figures/tran-khi-mang-phoi/manifest.json",
+          "sha256": "52076f761dfe11be56e3320ad52dd3a082f6b5c4ac3daa46b0c5b56ce60e9eb8"
+        },
+        {
+          "file": "figures/tran-khi-mang-phoi/tran-khi-mang-phoi-01.png",
+          "sha256": "1cf679a01e63d6a0378e9d67b36cd1378e13dbcbd554b71453e1cd039f913fd8"
+        },
+        {
+          "file": "figures/tran-khi-mang-phoi/tran-khi-mang-phoi-02.png",
+          "sha256": "5949dce6f5b3220b62f51009959a4d5cd6a676c17d745dedfb3dd053d74711b5"
+        },
+        {
+          "file": "figures/u-lympho-ac-tinh/manifest.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "file": "figures/u-tuy-thuong-than/manifest.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "file": "figures/ung-thu-bieu-mo-te-bao-gan/manifest.json",
+          "sha256": "1c73cab63247fca356d57388e4696ec73eabc3d18f61ccf34438cc8d1b689db1"
+        },
+        {
+          "file": "figures/ung-thu-bieu-mo-te-bao-gan/ung-thu-bieu-mo-te-bao-gan-01.png",
+          "sha256": "ca69424b11cf7e702a5538f9e14aa46b3b3d3377e421bbea859e5c9d76ed22a2"
+        },
+        {
+          "file": "figures/ung-thu-bieu-mo-te-bao-gan/ung-thu-bieu-mo-te-bao-gan-02.png",
+          "sha256": "62d1bc3d92db58485ba415556e3ebbcf492d69b344be9c3a747fe162c24e1918"
+        },
+        {
+          "file": "figures/ung-thu-bieu-mo-te-bao-gan/ung-thu-bieu-mo-te-bao-gan-03.png",
+          "sha256": "7994de597c6a98a6b8e501daa7bfe2fa522cbfac57e978065ac8a62fd28759fa"
+        },
+        {
+          "file": "figures/ung-thu-phoi/manifest.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "file": "figures/viem-cau-than-cap-sau-nhiem-lien-cau/manifest.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "file": "figures/viem-co-nhiem-khuan/manifest.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "file": "figures/viem-cot-song-dinh-khop/manifest.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "file": "figures/viem-da-co-va-viem-da-co-tu-mien/manifest.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "file": "figures/viem-dia-dem-dot-song-do-vi-khuan/manifest.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "file": "figures/viem-gan-virus-b-man-tinh/manifest.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "file": "figures/viem-gan-virus-c/manifest.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "file": "figures/viem-khop-dang-thap/manifest.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "file": "figures/viem-khop-phan-ung/manifest.json",
+          "sha256": "d9848da1f63ce87124f6cc0ed5b57f9f6e561a974a5dee7072abac2c425d600a"
+        },
+        {
+          "file": "figures/viem-khop-phan-ung/viem-khop-phan-ung-01.png",
+          "sha256": "3d3c59bf4d56d56754566749816e6bed759210d1128ef966efdf98d124728f2e"
+        },
+        {
+          "file": "figures/viem-mang-ngoai-tim/manifest.json",
+          "sha256": "bc2e6369113d6c8c8a26691d721b78222b3ba7e9bda3d797d6660379c19ba62f"
+        },
+        {
+          "file": "figures/viem-mang-ngoai-tim/viem-mang-ngoai-tim-01.png",
+          "sha256": "b5f67909cd775676ff2d717d6f124e6fe6c4822414c3044418cc9bb3d4bf2549"
+        },
+        {
+          "file": "figures/viem-mang-ngoai-tim/viem-mang-ngoai-tim-02.png",
+          "sha256": "11daf1e4d8f6931007cfd42ed69b65bfb97b772ff7c1ad45227c75cbddf87699"
+        },
+        {
+          "file": "figures/viem-noi-tam-mac-nhiem-khuan/manifest.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "file": "figures/viem-phe-quan-cap/manifest.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "file": "figures/viem-phoi-benh-vien/manifest.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "file": "figures/viem-phoi-cong-dong/manifest.json",
+          "sha256": "72b485a43ae6906858a44f4dabc1694be32430f8d1a8a36690dafdcda64f520b"
+        },
+        {
+          "file": "figures/viem-phoi-cong-dong/viem-phoi-cong-dong-01.png",
+          "sha256": "1fe80b9657af18193d4a6a6935ee7a882cafa871b583d04ed4c5c39befc5e756"
+        },
+        {
+          "file": "figures/viem-quanh-khop-vai/manifest.json",
+          "sha256": "de16aaebadabfa49b76f48ad41b79c09c7205b61773469798790af41d974fca6"
+        },
+        {
+          "file": "figures/viem-quanh-khop-vai/viem-quanh-khop-vai-01.png",
+          "sha256": "61772df5f0c8687fceeda3f5476e674ea1b4d7be95b23803cb8fc480622f7905"
+        },
+        {
+          "file": "figures/viem-quanh-khop-vai/viem-quanh-khop-vai-02.png",
+          "sha256": "0de11b5ff4498f3768aec141290a97cc9b0439e0392b782da8dc4d3f22b1b6ad"
+        },
+        {
+          "file": "figures/viem-quanh-khop-vai/viem-quanh-khop-vai-03.png",
+          "sha256": "6a58b0de168124d9cdc667c5beee0d44d7792b21dad213b2b8552ef4dc2f4b4b"
+        },
+        {
+          "file": "figures/viem-quanh-khop-vai/viem-quanh-khop-vai-04.png",
+          "sha256": "c026fdbe8851ef4092a28a384dba0706284954f9252a81043a581b4a19e7a581"
+        },
+        {
+          "file": "figures/viem-quanh-khop-vai/viem-quanh-khop-vai-05.png",
+          "sha256": "2e3ed7509245d609034d2d4cb1a437a837f22ea9fd76f840f09d977a68506a7f"
+        },
+        {
+          "file": "figures/viem-tuy-cap/manifest.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "file": "figures/xo-cung-bi/manifest.json",
+          "sha256": "16432d5c8587e670bc1751b9db22540cb343ff68ad761d0f01000c9ddb7fb234"
+        },
+        {
+          "file": "figures/xo-cung-bi/xo-cung-bi-01.png",
+          "sha256": "00a31b1f1255968795202a5f310ae327634ca350dc132307d87e337dc4d05d30"
+        },
+        {
+          "file": "figures/xo-cung-bi/xo-cung-bi-02.png",
+          "sha256": "b26a365b94d215fc12eb0abaf35ade34de8d361150a2d91c62b8d0f3c267b265"
+        },
+        {
+          "file": "figures/xo-cung-bi/xo-cung-bi-03.png",
+          "sha256": "f7f9eaad4a6ac52715c76ef7cf4ebc065eb7d14a777e7ddf6cb8c436fc5df804"
+        },
+        {
+          "file": "figures/xo-gan/manifest.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "file": "figures/xuat-huyet-tieu-hoa-do-loet-da-day-ta-trang/manifest.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "file": "figures/xuat-huyet-tieu-hoa-tren-do-tang-altmc/manifest.json",
+          "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "file": "figures_matched/benh-than-iga/benh-than-iga-ref-01.png",
+          "sha256": "91a3488f4f8d7f580dd9731d1ef42f31f0a413e410c66e7e0592cf18a00a8910"
+        },
+        {
+          "file": "figures_matched/benh-than-iga/manifest.json",
+          "sha256": "ae62298ca59578aba85c5f9cf1d732bf5862d6c5bdca3a52a57e62aea85cfcdb"
+        },
+        {
+          "file": "figures_matched/benh-than-man/benh-than-man-ref-01.png",
+          "sha256": "91a3488f4f8d7f580dd9731d1ef42f31f0a413e410c66e7e0592cf18a00a8910"
+        },
+        {
+          "file": "figures_matched/benh-than-man/manifest.json",
+          "sha256": "b644d34633c084f07f1a708a9d507f287a53b8e678ff5bf272c16585730c7ac9"
+        },
+        {
+          "file": "figures_matched/ngung-tho-khi-ngu/manifest.json",
+          "sha256": "58d82e9f8877735a98ee95478678d595ecbad2fccc2c2b649e01a84bcd0e921a"
+        },
+        {
+          "file": "figures_matched/ngung-tho-khi-ngu/ngung-tho-khi-ngu-ref-01.png",
+          "sha256": "af1a9977a9bb5eb5eda8fc9abd2d0e937d806ddbe5a65eef02dfc473bbdabaa9"
+        },
+        {
+          "file": "figures_matched/nhiem-khuan-tiet-nieu/manifest.json",
+          "sha256": "25a4607c05115f1eda5dd9857d0f3e09dde48f17389c0dd8633cad48fc56cf33"
+        },
+        {
+          "file": "figures_matched/nhiem-khuan-tiet-nieu/nhiem-khuan-tiet-nieu-ref-01.png",
+          "sha256": "91a3488f4f8d7f580dd9731d1ef42f31f0a413e410c66e7e0592cf18a00a8910"
+        },
+        {
+          "file": "figures_matched/suy-than-cap/manifest.json",
+          "sha256": "0decb517ad2fc9765c2dd59a6a9477b9fd6ae913de5f7f4582a789b59a407bd6"
+        },
+        {
+          "file": "figures_matched/suy-than-cap/suy-than-cap-ref-01.png",
+          "sha256": "91a3488f4f8d7f580dd9731d1ef42f31f0a413e410c66e7e0592cf18a00a8910"
+        },
+        {
+          "file": "figures_matched/suy-than-giai-doan-cuoi/manifest.json",
+          "sha256": "80dbd11365b76f1c58bf9b5780b1ccd8afd1fb616f04b3ff1d515cdcb7b9011a"
+        },
+        {
+          "file": "figures_matched/suy-than-giai-doan-cuoi/suy-than-giai-doan-cuoi-ref-01.png",
+          "sha256": "91a3488f4f8d7f580dd9731d1ef42f31f0a413e410c66e7e0592cf18a00a8910"
+        },
+        {
+          "file": "figures_matched/viem-cau-than-cap-sau-lien-cau/manifest.json",
+          "sha256": "318f62387623e5ee031a9fe59f1e5df36d1cb5c4a9320a09d02abcd0d5098654"
+        },
+        {
+          "file": "figures_matched/viem-cau-than-cap-sau-lien-cau/viem-cau-than-cap-sau-lien-cau-ref-01.png",
+          "sha256": "91a3488f4f8d7f580dd9731d1ef42f31f0a413e410c66e7e0592cf18a00a8910"
+        },
+        {
+          "file": "figures_matched/viem-khop-dang-thap/manifest.json",
+          "sha256": "3ea6e63b174fc228c5779fd3d76a50209f2de4bec8dcb729e4a344135ca8431e"
+        },
+        {
+          "file": "figures_matched/viem-khop-dang-thap/viem-khop-dang-thap-ref-01.png",
+          "sha256": "460fb4d4415ad746e55fe99010f0fb3e03cfd5bf9d0004a9286a7992171da8a6"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0001.png",
+          "sha256": "29d57c206140f7dd6a9b79755f80977700c14d94657ea52132c27ed3d4ac5591"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0002.png",
+          "sha256": "6fda727e3596696c94c83142c2172450f843613c889dcb3a0cb805ea186c2ded"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0003.png",
+          "sha256": "4a78ba6023f03f205e8603b5a8e4ba2b50620b3786483ef2cfedab64f1896e59"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0004.png",
+          "sha256": "95b07e738c6cc91f53f9afde3be83dd0ff53eb897ebb25f9bd358886d3297dd4"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0005.png",
+          "sha256": "95b07e738c6cc91f53f9afde3be83dd0ff53eb897ebb25f9bd358886d3297dd4"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0006.png",
+          "sha256": "74190e200e853b4ef7b16ddc836ccd11b8a606af0b3def491b71f187c1936ab2"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0007.png",
+          "sha256": "549164095b6953243c9adb15633f65bbf63ae1b227a4feb5a2408cb2d85d2c50"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0008.png",
+          "sha256": "a98b216213f159e25c42504f464fb39d447f5b87215db8461b588abe39ecea29"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0009.png",
+          "sha256": "0be6c7eea349bbeb98797eeee9a4f7764d67c01a00530d01c8f1f373ac679039"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0010.png",
+          "sha256": "d37d70a91bbe57fd8236ce57cb15fafffdb61e89a991f914ae4b3c079cc56cc7"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0011.png",
+          "sha256": "af49d6f20ce428b8ff8f69ddb07046b62c8dbd5361e808eb8073f9895219e858"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0012.png",
+          "sha256": "f0bc0764e794121be39711a447e95638fb38a21f031e5dac9b3f0300c4a430fd"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0013.png",
+          "sha256": "623747dcd588261690fa1aa1d621f214dd0979d1ade02444cb57ff1200775c20"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0014.png",
+          "sha256": "5994e7ab42915aad53ad98e1bf8e34959a6469e00b0bb559ab008315da02525d"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0015.png",
+          "sha256": "f073ae0572d511f103366ede1c2db7f227c570df21fdcb239242b34695470c0b"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0016.png",
+          "sha256": "932a8d2dc965e23462ea6bbfab949b2a425abf95862ce1415b2f32cf02ee582b"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0017.png",
+          "sha256": "9e449a40bd88930204073075ae9ebc96991d6e3c03d6b111eaa2ea940c239405"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0018.png",
+          "sha256": "7f16044ad660b19af706ec8816dc2a6022bf689019de29884f6364c1f1f1b21b"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0019.png",
+          "sha256": "8b3e6301d02650b3bd0d137f3b16cff8dfa7392ed3524ad33cc8346e759bbb5b"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0020.png",
+          "sha256": "a6cd641684370abdfad97720cb27b6849153c60b89595e8c162eee215718dd33"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0021.png",
+          "sha256": "c7b1a4969e494ab3841343cde0324fa2d2137f2fcf30c7fd4bf0048a77dfc400"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0022.png",
+          "sha256": "19d2d07af5b4d930a37e8aec072371685dfaf3eaf36f2528a6c1ca71bd8f1efe"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0023.png",
+          "sha256": "ca36e98c4b906d2d6f287be9a31d2db5cb55b3bc288d246905f7326d492111aa"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0024.png",
+          "sha256": "24829ea8f2ffd618b5de22563c02d97dda2762fad190a04583cab27baff06577"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0025.png",
+          "sha256": "7bac88424108b4155c0588375bfdb62a6ab67225aec4c4cf51308570402413a5"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0026.png",
+          "sha256": "f06ca278d9cd02ad8a0688e293e766e742baf7f01a50742154aec78cdd474881"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0027.png",
+          "sha256": "21d0bd97a727665d4826567fa00741b16342f519b6bf1cc8b7638135334ea8ed"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0028.png",
+          "sha256": "e7dacca9a926b7b4d4d4402d9718def8f638002325f5138738316ee92815c6bf"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0029.png",
+          "sha256": "80b76119b95a5f8f075f50e8ea226f0ba2e9650ce517668dff739fd2b746a171"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0030.png",
+          "sha256": "26e3b3c057ae847fddf08bf7d0b3c6b60467a2b40245bf5bb243c01a657287e7"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0031.png",
+          "sha256": "f7e1a24ffa79a521169527bf6eac23ad2fe342fe8a7ca7a5e7e71218ca23bced"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0032.png",
+          "sha256": "efb0c5c5732b8a471cda70d2a112531053821cc24b953313acc9f8d0032d2bad"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0033.png",
+          "sha256": "cdcb391907ac5245b320ec41074240be6121092ae4ba08b09578df16f02c9732"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0034.png",
+          "sha256": "28d936ef4ddd417af658fc2159e5992eb1e7ef03f313ee027703939a86a0349c"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0035.png",
+          "sha256": "0691b177260731320d7b2f6f692f43760bc0e50a03246395382ef510f937c4cd"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0036.png",
+          "sha256": "a6f5d90818265426d8d9583d5d9e89083cc619f954664334b6cca7952c6ee441"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0037.png",
+          "sha256": "5951c4fab8ff1671b0a3a62d8dfacf7c3bd7540efe54091feb700c4344d7fc83"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0038.png",
+          "sha256": "e8dbece60edf8aae4062550f8a1cef8ffe7b98d195c8d9076e5944bce09e9277"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0039.png",
+          "sha256": "b5937c603e9d87c48faca6b28b3ae84ae8c5180e30b0ef4079091929cf8f974e"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0040.png",
+          "sha256": "256b67820b99ed31b283e751305ab51c94ec016f6a0bac94255e5ee56a4e1539"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0041.png",
+          "sha256": "698a1604a563cc5c105bc062b31f0d1f9a74035e68e135759926e9a6d135910f"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0042.png",
+          "sha256": "70331d1d3978f30e22a3c25d68200c7df0e935d39d75c9187872457360177569"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0043.png",
+          "sha256": "64df0efa09b9ab09bb4710b33d51f88cc8d198b88b92e2fdedc85109259fac16"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0044.png",
+          "sha256": "7e41c935f3ad9eaae811f640b51f9a72cd18d61b5cee9722a3e00b910e757ba2"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0045.png",
+          "sha256": "c20a8de037f83f5c0439eea01683e6ce91aa9d162548fec8f09b2032e4b8961c"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0046.png",
+          "sha256": "5b96c08d90d2a306de2428db953d437e8e217f320ab232d728f8de9aba66302d"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0047.png",
+          "sha256": "c80115ab4a48c5ac7f08b49d9fdaa690c148d9a096887afc4f299a553e7c1b8c"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0048.png",
+          "sha256": "97a4ef5a692534bae80d256310b61fb9ab29917adbe1a9ef5123bf39ed7f492b"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0049.png",
+          "sha256": "a0503d54a69e092bce1e0aa4ba46498438e9677f3356e1285e51f7766f4ab7a4"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0050.png",
+          "sha256": "338799d466e1cbdcd8696425566cba40a6c8479c1ce250b67bf33c0cb08a2eeb"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0051.png",
+          "sha256": "420f94c3b7adbe126c7f9382328eebdc8ab9021ad629c3001613e66e17c05c99"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0052.png",
+          "sha256": "46121cb6194c2b30e4ce2f23af24ebbc2847cd5a84643cb45e437abdd096f4af"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0053.png",
+          "sha256": "755efc0ae8ef34d2e5a99a20d3d917d8bb32d302a230e2b2653b36383ac90b98"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0054.png",
+          "sha256": "1a2e2c7c048fca10cc829c94fdf6446bc1b03adfdc32e73d1bc3fb845d0baadc"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0055.png",
+          "sha256": "54f20b666524bbf7bafbc720c72ae157de77c4b6e648e3aff1f463f7f685ce77"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0056.png",
+          "sha256": "93fb48fe3d5cf3800c378eabc4007ee0cf0b82e10e09518183732a522c1844c9"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0057.png",
+          "sha256": "951a244e25a56daaf440721c16c49fe2f3163cde6d38eebca7591655c6c41dbd"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0058.png",
+          "sha256": "3d6ea6982c0d8e60c0ef00df20006a7a1af50bd2c466935500e87cfcff8e1b2e"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0059.png",
+          "sha256": "9613224b1f8cb536fdc5c91a0108574b1c191f1b63e07769fb2e27598723a870"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0060.png",
+          "sha256": "88d72305b02f3880120cf697989750ce98353f03e3725a11aa9f2f785137b4fb"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0061.png",
+          "sha256": "5e7f66b62c9788264c03631fea64cfaec5447362e6a502c2931210933616c6be"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0062.png",
+          "sha256": "f96e8c80df0af87cd1ed8c10fffc008c476f3a369f00d5705f1c9d8d45340983"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0063.png",
+          "sha256": "310b5ea4376429faf50173ca9a78b9b4c417ed9344189eb9e26cd9e2dd07d6c6"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0064.png",
+          "sha256": "fdb63d8bd2aef356d5b554c00a5b0dd27d6e388e27c9777c9a513855b6dbeafc"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0065.png",
+          "sha256": "67dfbcf4bec34dcbaa6665ffa645bf60bf92f08552e7b1025ce1e2d44c235453"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0066.png",
+          "sha256": "5c9515bc7deb7608e300f2e802ac29ebbd4550ef56be7230563c94522b3116c4"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0067.png",
+          "sha256": "7d3a8bf5f828aafd1332b8dc98448e09973141372b3d523e6c00ee800a575f60"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0068.png",
+          "sha256": "18bdeaabbb1d1b5d82e24b5947d8728696ce486c89299358651a54c111db3cf1"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0069.png",
+          "sha256": "c9c5183f6e135852d48e1b353f322be333e5dba83dfb89967ff2231d45026671"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0070.png",
+          "sha256": "d236a28948f17b224c1ce12ef1f14e0aa2a34a90909ad565ec8133b86c6867ac"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0071.png",
+          "sha256": "80a26d4817b3d5fa6add13fdd8dd1a1cd0bf202cc6014cdd5b91694a542347f6"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0072.png",
+          "sha256": "ef152626e12b5280f2981fffedc5e866e16885597bb2028b0cc4849688a428a9"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0073.png",
+          "sha256": "8857082f7fdc435a86cf2df48c3e4b9200427af695a57f5d7f3832d55abad0d9"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0074.png",
+          "sha256": "8857082f7fdc435a86cf2df48c3e4b9200427af695a57f5d7f3832d55abad0d9"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0075.png",
+          "sha256": "ccced579d41f6af878bddfda27916de4ba01fe9ce0f41f4deaae6f7ba4cee6f5"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0076.png",
+          "sha256": "e022773432da5d0f54458d9414e6ac55276b4445fc275cafbe24eeec2d4c2d46"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0077.png",
+          "sha256": "288240589f3124eb2aad8cfc11a9c8eb769a2220310e72a4c6a651849ef92b59"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0078.png",
+          "sha256": "3455296cc148aa9d61ac3195dbcdee87bc996a9ce6d77ea8733ddcda87fed72e"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0079.png",
+          "sha256": "ba3522b7cf2efa6f4c477d102e03e7e14b31dd0d1d28a2b1161f8774c663dba4"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0080.png",
+          "sha256": "c7f61d31e68f79ccbc74ad4b60d8adbbb2cb6eb5f87d62adcbfd7b689475fef0"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0081.png",
+          "sha256": "154849fbd594fd0622327dcef791edc19e0a966deceae82164e5d06581c1f453"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0082.png",
+          "sha256": "dfe38476fa10cf0473828eb777b239629486f380732d36cb10a4e4850b5f4540"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0083.png",
+          "sha256": "f261cfca227afebc49a473f74234552efe346569b50118ed9b9f05e0de019154"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0084.png",
+          "sha256": "f1e35bbf01ad38f663084be898b050b128deb92f513b8eac9458c44e17f35f3f"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0085.png",
+          "sha256": "966379ba2b1dd57efc832cd5ae81ae599c4c93401bb5ed16164829a7a7be6820"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0086.png",
+          "sha256": "0acc887f2c984d81a084a0c2caf4e6a2fb0faa96580ad950be0ddc763e432ccb"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0087.png",
+          "sha256": "85ad1cd3b0f3d2c5f0c7a42b63d1a554ca3f6c552df13f8934f74b6a125fa73e"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0088.png",
+          "sha256": "97c8efe1268eb235492d13d66f215fd8581f74d877726809ba04a3b38355faad"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0089.png",
+          "sha256": "25df738de6d74263818547c6ec4b98dee0386ab68df0899ee71fa8b3c1f9e3a2"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0090.png",
+          "sha256": "f03d327f85c2659c999414eeccfd92c3130cb07ea16acff23a06f6cdcacc9c01"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0091.png",
+          "sha256": "6d889e4d71fafbbf31d8d351a94ecdb800dd05378db6ed92230604dec9740418"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0092.png",
+          "sha256": "65c6b3711f67558efccb2d922bb72bf99e1a2efa67621726e48875c7e3bcb8ac"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0093.png",
+          "sha256": "1f5570771649e787c7014ce912fef116fa508b28c5619fa4d487510f351ee91e"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0094.png",
+          "sha256": "3842b5a217329cefac16d7e17526aa71a09eb95aa0738ea188d9693e10212c08"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0095.png",
+          "sha256": "f9b9b041618b4e71c54f0a20b9aa63a000b2a02697294a7a42889f8e619a002b"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0096.png",
+          "sha256": "91a3488f4f8d7f580dd9731d1ef42f31f0a413e410c66e7e0592cf18a00a8910"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0097.png",
+          "sha256": "1184d3795e1d81df4486897cc4af0e29a2c8a59e443c41ced93faa4af0164426"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0098.png",
+          "sha256": "1c2f063465df0aaff7aa20416edacd24b2ad79a146064c9f8301c7ddd8d6c85d"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0099.png",
+          "sha256": "6fb8698e7b462273ef201dca1e0c18d21216748cc7061b84fe82bf1d2af9f9a5"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0100.png",
+          "sha256": "c958f727b9c0fa0338e09b0ddbc3e747c98759e8e3ded64355c197074a34625d"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0101.png",
+          "sha256": "737d63c935e25e10cde63a608521ec05572efb81d58e1331cf8fe98f8f075fde"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0102.png",
+          "sha256": "22475a650669038a8bbde397b08dbb9c7cd691f3bab9b635f60bd2c9db3e6117"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0103.png",
+          "sha256": "3a310cc3e7d24c7878c567750074651044a2d9be36f9e7006455e1ed90bd8020"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0104.png",
+          "sha256": "98d85e5c52ae75cfc7b144b7afe7113e9b4ec172c96529600b1fc9256dc7960e"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0105.png",
+          "sha256": "f56e0ee64ade7e343c3cab058f81d36acb762b57259ebe14d9fe053995415dc2"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0106.png",
+          "sha256": "eea2416b36c965d20454bc1a94e54642c79887c981a3f1eb9f879f536415e9fc"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0107.png",
+          "sha256": "d97ae1f102ce376fb4f8cb6ae440e855629ca6465eee61734b67507605085e50"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0108.png",
+          "sha256": "14c928a4bfe38b0f61fb3041721449763f1e060c6b860ba39841c2a5614a366f"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0109.png",
+          "sha256": "55735b0d9370a8ca0b0784c9ef48a2d847b3d266bde51f3be283bc204396bbba"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0110.png",
+          "sha256": "1a441ed99a87bebe8166d47d5f1aaab1d489a74befcf4c6b544f0064afdf8ef9"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0111.png",
+          "sha256": "44fc7d5782e812bb50139c600be3a2968aa878901deeb0a562f6d6aa74a5c44a"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0112.png",
+          "sha256": "40b6c2be8ee2044ebb2cf150760d3dd54d807fb0cd9ef7466815db91c1435479"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0113.png",
+          "sha256": "55508690303a37a918e56b04ba4778264dfc3350e4c6cea2cc284082fa34abc4"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0114.png",
+          "sha256": "b97077f4f1587562f01d5f64f2706bffeb6127acd80ff2c22f80521410052e1e"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0115.png",
+          "sha256": "1a49ceb369da1c9d111271f62a4d451c6c637d8726ea50c072daf44cbc3e33e6"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0116.png",
+          "sha256": "fdbd4809958b2ccda28d1f7d4aa1ddf9569d13d4425eaf67dfbf83f15d08dd62"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0117.png",
+          "sha256": "97cf254446fffaaa03f26b17d665196e4d0b11e6d892409fbe0267c9a5e5c2ae"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0118.png",
+          "sha256": "89d8621ef673ce5a57821460293b5b071b8a310799dc48713098ba9382620b5d"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0119.png",
+          "sha256": "fd49ee89ecfe1d9fa76f6cf10b7510ac2c48b47e0e47e872a5a6949c0d9fe6d9"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0120.png",
+          "sha256": "2d073825a8643ecf4829ff1df27fbe62b3b5f77032353fd49a45ee5761790834"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0121.png",
+          "sha256": "219e1162f7ed3c91fd514dcad99a03976096110bca0d003ee7054e41d6482a6f"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0122.png",
+          "sha256": "5a2af9f74acdb70bf65f05f11ed75244a96ff9647254ab070cf61cddff2c3992"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0123.png",
+          "sha256": "8c1f30ffa3b887059b3ed89cc52e5c810530341ac6d09c0b3054bc1f5cb2787a"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0124.png",
+          "sha256": "aca6ba08a114fb03213005384a748db8ef7a24bde013f56b4290784d9d9c419b"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0125.png",
+          "sha256": "33fd7ef0d573c81fcacaa6ab76005467aea720a32b052f16faf98b046d65dd4a"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0126.png",
+          "sha256": "1b0e2d5c3ec98abd9e6c29577077f1cc2d287458d97bb060b1a843d66846b22f"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0127.png",
+          "sha256": "89c1a46a74a260207246a991183633d7262a763b3061abfe0500a5af445b0fc7"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0128.png",
+          "sha256": "6bf039028bef7cc1564ad6e694b4af05f373d6276742b8c3fe51f1f12ec19875"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0129.png",
+          "sha256": "55be7f8e2e5205184e6ef1b8300e0e9e2ee199122275dd0917335421e648fac5"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0130.png",
+          "sha256": "3bcaa2026bb22dbf7c9dbc5ef9b69c6b77fdb022d4caf40bd23314d74c44e277"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0131.png",
+          "sha256": "9f3defd54030d7371352522d55ea8e46b5c202a1458ea9218baddb543aca4e36"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0132.png",
+          "sha256": "c90c0f6bf6f1f8d58a8e035b7287011f22f5d191922889c0be2c85c7ef6f46f0"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0133.png",
+          "sha256": "c90c0f6bf6f1f8d58a8e035b7287011f22f5d191922889c0be2c85c7ef6f46f0"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0134.png",
+          "sha256": "f7b0f8ecac999683b6d4b1e5c4c0654c120a011e2f738957504596337bad59a9"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0135.png",
+          "sha256": "74fc086072e30bd74050d97be0d613fc485b5701956ac14ce66338a9fbaebff9"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0136.png",
+          "sha256": "9822ae11a2c8cba6fa294d12cfdb1b65de3390a2865e2c7ad6837cfd357d68d6"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0137.png",
+          "sha256": "cbefcaf878bb2ac962da8468056b0cce27ccaead8762a5c9148488aba5e57d64"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0138.png",
+          "sha256": "2b66bbe83137105d97cd194a9f385d90afbcbbad2591230181ef1e30712b7a68"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0139.png",
+          "sha256": "b322a3d7c58e6123d1bf017e0f38bf8d7bf67e052766c874dcf9be8fcd4a0c96"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0140.png",
+          "sha256": "a9ffc0c58f87f5791cfd000b016865caf81ae76a26daceaaa88f7458fb033ff5"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0141.png",
+          "sha256": "d86a7f5eae5a58bf7803eaa66746ee0b941742046359485b668ed7722440ad2b"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0142.png",
+          "sha256": "dd7cf6da56cf7010dd69a67bf41187886dd846e70f5fd03e4a91c8cdd114d621"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0143.png",
+          "sha256": "edc8c2006cbd26fe74d873f565c82117e9eebe2acabafcebd18234859f685873"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0144.png",
+          "sha256": "f989ac20a2d0bc8ad0a35ee4f783d1b697629da79404959052597ed6e441724c"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0145.png",
+          "sha256": "d55f3c2795bc5a6d474b5b6b7139592ed632756f2f4b8cf2079f2ef2c1e27ce6"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0146.png",
+          "sha256": "93c42168ba51308886d28c8936b5cd27feaaaef70d873851af270ca85668ede5"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0147.png",
+          "sha256": "a1a4fa4c57f86008be6fdb26f396d420b81d4e8001fa752c0eeb803ed7bda347"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0148.png",
+          "sha256": "bea5352911a40a6806f3cb47c42a81cfd557c34c14a4c139ebe831bbadab4927"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0149.png",
+          "sha256": "9d1f41ea21891c652d34b2566ba0b83f492874856fe0ab83ba017ebf095de424"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0150.png",
+          "sha256": "30bcfea88766d5b887caba28aeac1f73060ae3247d0695a9fd51bff82ad777df"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0151.png",
+          "sha256": "379e443aeceb938c2c218e5e25923c989e58abb41ac65b97ca96bd5b61f45b60"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0152.png",
+          "sha256": "cd85f778ed288a9b13b5778ee2b9f052f751904aefffc529a3d9e57c7ace83a5"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0153.png",
+          "sha256": "e1d538a53b758374f927e217af62d049755a5098ab19c2593ee1a81da177d238"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0154.png",
+          "sha256": "f1f2289280f848514ae11e2cf35739b854bfe47cf576017774c711ed84c4eb90"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0155.png",
+          "sha256": "e87d17f6464662bc357fdc1644e0d9148db548660aeca03b66a7c85706152117"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0156.png",
+          "sha256": "353abe020d49fbdd78a880d30a802edb7d1d5b035c9ac40b02a0d5237d8c3e05"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0157.png",
+          "sha256": "9a95d2ffcc7ce83261bbb209b503aaa1e75a3c6af35b12e55c5de9d7defb1aa7"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0158.png",
+          "sha256": "92cd2c986e60ba07c9f18192a6788722d1979bcda0d72930759e7077066188c5"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0159.png",
+          "sha256": "bf5039b9ebca81d6a0c83c4b7cacdeca7526d38bfddd7e796481766d193554c4"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0160.png",
+          "sha256": "460fb4d4415ad746e55fe99010f0fb3e03cfd5bf9d0004a9286a7992171da8a6"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0161.png",
+          "sha256": "61b981c9a41dcfcae692e181d1c6f72abde67bf00de26ace4b07903bb0508150"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0162.png",
+          "sha256": "37dbd6bdbb7c6bdb12869c78a10b5897f702958f8e15da18174ec370cfebea48"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0163.png",
+          "sha256": "cee65bf358bfd571af9c69a3effe58ab49f079e027987878199c212607fbb4ca"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0164.png",
+          "sha256": "2299b1490a08aee695e852c52ff70c3f08afe53fd5cf57dd8e501c4b427b8276"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0165.png",
+          "sha256": "c25b843be7c8eda14dfd130e75d4f88cbbed95ac5b66f014fb35d6aa4041f287"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0166.png",
+          "sha256": "712cdbfef449b2d48beadf072496d5d2724901f80dad0c6ab4c7c736460827d5"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0167.png",
+          "sha256": "722320cb544b37878b1f447f5d5653f5da1cb789f0e54bac8011a59d63b71caf"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0168.png",
+          "sha256": "5e44b546608fe077c7bab403f565495b30b2ce6600e9f52f8b56533a4cc7f6cb"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0169.png",
+          "sha256": "f2c8cf2290a9f89f12007b136832f696b0e7e8a46de4f62eb28d09f69a0b952b"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0170.png",
+          "sha256": "d2ab32004076b80aabf0c92453edaa77d0bd8e41992ffb859242a060ddcc6baf"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0171.png",
+          "sha256": "a44f3081af06d24e74f5e6012f5ee117893c3bf7ae0b11e4a34e41238d4613ac"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0172.png",
+          "sha256": "0a81d07276aa05c922b1f783c784ece1980ba7cf42dc2c627e9856d6fd2d5f26"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0173.png",
+          "sha256": "7a9f46ff37aff8ea0ccf90f08cb693f9d39ea015e0b95c41bcc8d02b47476ea9"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0174.png",
+          "sha256": "ee0169f040695aadcf2df3c64e6a423b32189e5b58f9b0b25e57678eb4baa79d"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0175.png",
+          "sha256": "cd797893698e5921ec2cc4c330678ae5b36a396adda7d2cb9da232d8561db774"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/giai-phau-yhn-0176.png",
+          "sha256": "71f0e9b8a891b10c42e8922d2d9c68f5eb804d5a3a16f014957cd3b5a1816a99"
+        },
+        {
+          "file": "figures_ref/giai-phau-yhn/manifest.json",
+          "sha256": "2cc500456c20903c07d0bb1923265d13c1dc9e6dd00067a59ad0b6ea62f8d695"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0001.png",
+          "sha256": "a532d070b47ffa8d5305f01052155c05d0f39eee01873724fc52cb882c1ea03b"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0002.png",
+          "sha256": "cc92ad7566620cf9001f7e6c0302b127b27084c4187303eed318a6c52a08d4da"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0003.png",
+          "sha256": "140f0cb955e77373565532373a193a5290b0bcf435d0d1afb87257e26af6d63f"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0004.png",
+          "sha256": "e2f6f00f9dba577db93b0e954e6f7f7a112ec0593a0e9e1d624b89bd7b6add47"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0005.png",
+          "sha256": "0ca2af7c32174ac3f8f83ae200ba0aa8e33c8e62f535b4f9e96020dec50b8752"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0006.png",
+          "sha256": "cd324adf4418bea79814bcc439247cbd7bca8c4fe3dd0ac198fc62af980e30ba"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0007.png",
+          "sha256": "dbc99e49bf280cbecccd15da64355f3a84bbcea3f8c2048cdadbf7624ec7f726"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0008.png",
+          "sha256": "c44da1e964b0174094f5ff7833a6b2d13ca4dfe1a6168cb6463876d5dc062f42"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0009.png",
+          "sha256": "7ff0171a6730a095ae53c560f1c45b1a34dac293249abce079e4584c3db958bc"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0010.png",
+          "sha256": "31df2230f63bd7ee291897df73d7de0d8e80cfcc418d7cf922cf67dc6afb8955"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0011.png",
+          "sha256": "2fcdf0a01adce1f377f7f4fd433b022e64bba866f8af0727ff7294f6c6b0870c"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0012.png",
+          "sha256": "843c339478c166763fb04eaa9773cab4b2fe28808b2d832f3ed918709fd5be4a"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0013.png",
+          "sha256": "69ebc938e3fd8737f1882afa4dd3d5e82e2f43960cf54d825abc49b59ce5da35"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0014.png",
+          "sha256": "476fcf71cb7bb5e5b2e6ace37065d8bce2338c99a42274ab1331ebaa04eb3767"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0015.png",
+          "sha256": "fea563e2d2b9d06d4a7dfe89bcd6333fad70075881ac389a543f043a4f36c452"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0016.png",
+          "sha256": "ac5f56eb3523caf6f7cb7d3931eaebc4575f6a75183c973bb6af8d7eab5e6dc1"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0017.png",
+          "sha256": "4035584b4462c8686bed8f4d818dc8bc869d0852c6d55a4c532cf029d5814ec6"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0018.png",
+          "sha256": "d537deec91f0cfb4ea00cf21ca736058bd3cffa9e08bc27906ba7b848d79fd82"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0019.png",
+          "sha256": "9c7ddc3e7e819b8fc5f977ca843a0fc149234604f2c4d82823ef558e586124a7"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0020.png",
+          "sha256": "75722172a59b757758f3ee6f3e84065b9de311c2c778d84f2a41a06373d2b369"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0021.png",
+          "sha256": "7eefa585ab2ff67a9f328517c66af75bcfd8b11e3025d7d342f9750bce5d7592"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0022.png",
+          "sha256": "066315037dd5ec86ccdba89acc368b61aeb382d1cc515d7dd8ccb0c4e75f14cc"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0023.png",
+          "sha256": "50b60f661ecc41d774c181fbb12a426691aa19e855c41f4c243f2a1d5c882841"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0024.png",
+          "sha256": "89910b7449374d76cb80e6fa63034447dbe1171718b1a698ed74f70a5b927cf2"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0025.png",
+          "sha256": "8df249695dbc83f9b3fb36ba44649b8e821342c570063ff24c8a01859a3ddcd5"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0026.png",
+          "sha256": "be44905f192a3dfe5e7eadf8dab0a85ded3e1240240757f45f88d84ba8116333"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0027.png",
+          "sha256": "760e9d5212417465930f91946dfb74b637449db6c27e736ea0c218a6848fccaf"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0028.png",
+          "sha256": "e64289918f1359aa68d3679091e0b3621e0e6dee7299150d333538b97e5a94e8"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0029.png",
+          "sha256": "c6e389c4dbcddcbc93ad4049e1b9d728dd5aedcb9d361e5486c6d0f541f4b308"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0030.png",
+          "sha256": "d342e301bf38eba832ba915b3aa99d731a8a56dc3541ce8dd386d0650045665f"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0031.png",
+          "sha256": "3483d21770871be633f055c1e422f86ea5f41fd119018ed6f70cc8b5cd833f43"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0032.png",
+          "sha256": "1bb5f0015784a4111a18fb203043687f6ff2e2469c632efce0f350b2f2ff7aba"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0033.png",
+          "sha256": "5be5def0ae16ed2da3dac5066f30181c461ac128a0dfa2eaf34d7ff54e10b46a"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0034.png",
+          "sha256": "b8b6bff8576181dc9214f2b42206ed2ea86e30e329bec404f84faee870f751de"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0035.png",
+          "sha256": "b8b6bff8576181dc9214f2b42206ed2ea86e30e329bec404f84faee870f751de"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0036.png",
+          "sha256": "9fdebac6c1a8fc3ad81daefd10a492fa1e87225ea40a17024354d247e5563168"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0037.png",
+          "sha256": "7a00450b6c9b9d43605d71dfb5f12c8b0924d4033e5fb18fbc1fb7db6ec35ac3"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0038.png",
+          "sha256": "5539263cd9eeb946538af377e4c5d48acca80d531b8277203c43665a758293ad"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0039.png",
+          "sha256": "c615f26c989955be0dd60a836a8b19eef86263b56d16d0c34c8b0688b30c0c0c"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0040.png",
+          "sha256": "0ba8202261fb674d21b0f526fd2c76e7fd77836e22e322ef44016054f9b3c699"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0041.png",
+          "sha256": "d034cd392ad99eca0689310d0aea7fd4ee9219ac447ca7516c106791a412f816"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0042.png",
+          "sha256": "00e18b1dcbbda8c678720dbf45c521b65365b6da937ce5bb50a467ab3b04d37d"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0043.png",
+          "sha256": "b2cedff7365597e2a6f419c84183ae0daa9f36771d253d2e8c7b2df24d9bcc51"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0044.png",
+          "sha256": "ffe1632d0497f18faf99ebd83ea105431647aa6ea15525406c61c73313eea004"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0045.png",
+          "sha256": "f2f37f917c7d8b24111d64d8395e07c952cfd52b6596ab2da7fd11d3f9be8c60"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0046.png",
+          "sha256": "5f67f1458723c86615d06963466d007f64650681de01e09ea791d70fe4a50211"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0047.png",
+          "sha256": "5f67f1458723c86615d06963466d007f64650681de01e09ea791d70fe4a50211"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0048.png",
+          "sha256": "5f67f1458723c86615d06963466d007f64650681de01e09ea791d70fe4a50211"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0049.png",
+          "sha256": "08624139a6f187656d5e1d3a11729a16bc08826da64e11d7e4206315bfaa64df"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0050.png",
+          "sha256": "542d1441a296c0d4c125b9d1fa8842416d82ee1fc47435cb2d9acb381c2d6ea2"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0051.png",
+          "sha256": "c43d364c269fa638de5f5e5f8e7e19d0787823bada7aee161a0b5f67d8500b82"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0052.png",
+          "sha256": "0fb89891999ec04ca8c69fb2b642017b35295b71896c0b1cd0353ff89a7c9827"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0053.png",
+          "sha256": "e8caa9229b9a8f6a76c8c9ab0d1aeabb9655204edfae178684c58d634e7ed673"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0054.png",
+          "sha256": "ec896abb71c14498abd6f53770165497bd22bd7da2462b05ff3b53889c63532b"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0055.png",
+          "sha256": "e7bcaca3c1e981884ec23b433a01d12192ce6f1413456ff9bac03d55e5987776"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0056.png",
+          "sha256": "07ff4d33e528b76513327fbcf9f556591c1a4e00162016344a9ecd0677dd30e7"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0057.png",
+          "sha256": "e95fa276b2d4cb1e7063d5ea9e32827b6fed7fa2c7bc037254ac725034a968be"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0058.png",
+          "sha256": "244d2e0106e4d3e5801b10fb19acd0a1977b64a22156aa18ca4fee7202472e16"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0059.png",
+          "sha256": "7ed9d29a3f5060cec2cf93a2b5158b8462dc7a4bcca3cdf15548621450101acd"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0060.png",
+          "sha256": "50cc3fff0907d34c238dc7d9d4c8bed408ea8dfd83c0c14826ab375f9dfab2bf"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0061.png",
+          "sha256": "f14655f3681060371106de8af787ea6c0b131620ac97730fba32f98aa965a8fe"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0062.png",
+          "sha256": "8a259459ed5b16f7278d06563cf9a2dd4ad7c0eb4831f004f18b392fd48b181a"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0063.png",
+          "sha256": "8a259459ed5b16f7278d06563cf9a2dd4ad7c0eb4831f004f18b392fd48b181a"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0064.png",
+          "sha256": "55437acafc95d1fa3eb1c3860c55270edb0b6d5c11890a400a169de9ac3b5136"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0065.png",
+          "sha256": "89b2edc80c9bfc396250f9e6433a2e77ab898877e26570781f44abea8b3727d1"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0066.png",
+          "sha256": "f7d5e823aac3ea04b6355e6adae472ed4de9746a2aa1dc910c8f001029879217"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0067.png",
+          "sha256": "69ce80609dec7e48d83e3248afb93f32f5e849644ec1d3cff0b230eb88cbd69a"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0068.png",
+          "sha256": "e97719bee2f598e02bf024413d1e2a386ae14aed4b68612c6d2496873e98681a"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0069.png",
+          "sha256": "4870a6e788daaa82a2f0bedfa30841a36277ae4f03c78f8394918f660ee8c10d"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0070.png",
+          "sha256": "bf8fde6b08df0790f3410b99ee7383f0e69ff2731dde5421aabc83068b6842ac"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0071.png",
+          "sha256": "639968bfe94f253066860f0ea71ab0f82c457e68aa1969edb658ff0d0394b0c6"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0072.png",
+          "sha256": "ee79b32c8e74a912470c6873d4c98e6e7df4ac7d52a3a8a040c0d60f1f98a911"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0073.png",
+          "sha256": "7dbcfad394cc81b84c04ed35889ef3c668497bb2cab1651e74c6e18af5636830"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0074.png",
+          "sha256": "677d6a2de5ed67a1c2956701a21b340ecd50221641e27cd90a5440227acd396a"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0075.png",
+          "sha256": "c117c6e01a124193f9a9093f313d75ec0a205698cce1b20ff67c8879b07254ff"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0076.png",
+          "sha256": "d5eb252f3a0a0b96ef7a8193474677bf7da7df4be0f8087392f6a55b3e1acf04"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0077.png",
+          "sha256": "f18d351e59eb9c86db5cad5e21115c59758bc8545ca6096bb38d37b30e6d559e"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0078.png",
+          "sha256": "f18d351e59eb9c86db5cad5e21115c59758bc8545ca6096bb38d37b30e6d559e"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0079.png",
+          "sha256": "dde576208896aefa8104238dbedb81b65ad3cbe8800b080f6c370874e2683be8"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0080.png",
+          "sha256": "dde576208896aefa8104238dbedb81b65ad3cbe8800b080f6c370874e2683be8"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0081.png",
+          "sha256": "0d815c9269bfb7440233e72d58d31a6755fa3021ea68bcfb9d79b5d6c35ddca8"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0082.png",
+          "sha256": "d1afed7644f907a680f19b989079b163ef691234b21bf7ae7861a4e5d9277182"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0083.png",
+          "sha256": "849632e0e15cd787a7b2941c0b41813da59cfabffab0c55133742fca016d22ea"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0084.png",
+          "sha256": "cc404bad59a9182fb76d8d9cc0bed705920f785dbf91c6dd124524bc1653af1b"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0085.png",
+          "sha256": "6dd5b54ee14c39d49d5ff16056902edfd82320a8389ecb66763b3b13f15e115b"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0086.png",
+          "sha256": "f51b527bb778a563ce499fc8b879443f9b01e20739fe93210f7f30f91fb44fd9"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0087.png",
+          "sha256": "3fd84bd45525ac23b98a78ca2e9072ecc8a4500eaf0d10675d4cafb19afaf0ac"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0088.png",
+          "sha256": "fe478dd3a1637f436fd5af60b6dccac56c90845f01769afdb3fae3970baeceef"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0089.png",
+          "sha256": "f15e0cdf9e3fdbeadd97de2b930dd90b2b7aefa5a4ac876e10aff19639d8cc8d"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0090.png",
+          "sha256": "bb2216045eaf6ae68a0d3f51ddf95c1c07e06b28c10f51797805ff3823fdd6a0"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0091.png",
+          "sha256": "549202f694ba14cf7ab1113cfb3f08f554a5aa0d2b8f002686d94c3432ab8e41"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0092.png",
+          "sha256": "69e7ddb4078b3d637b0c83f26796abb3d48b764e301c4326b7e1a7985f7b8753"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0093.png",
+          "sha256": "89ed4c1dc9f958c1b3e66fe4fb508c42dfe9929c349068144e40a0fc681467bd"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0094.png",
+          "sha256": "646b0e765935d11df3edd2ddf2c17e0654c6c1dc2deafaadec60b724809900e9"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0095.png",
+          "sha256": "fe304a02c513b5107c17ae6f8ef93b165010196041b085cfcbdeb180d456fc59"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0096.png",
+          "sha256": "4e7b227b6d5b5f687999e208572e51be13e15f9df06eeca133f3b9fd76b1e060"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0097.png",
+          "sha256": "1f3692e541684a6d07f519cfa017d15096092968f55cba9bf0b0b4efa4725f81"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0098.png",
+          "sha256": "50352b60194293508f9a2fcf2d55e5f1a832ad6ca8b2422d641baac02fe6d69a"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0099.png",
+          "sha256": "9ecc9e4aab402c20e229a75575b42f81d55e653b7432346b526a08d83352bbad"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0100.png",
+          "sha256": "501c3d849f0e4b87139ec2b8014cfa5bc6808366faa100d23bf47d694dd88846"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0101.png",
+          "sha256": "2afa0535dcfe98d0ab43a6f505707307b9934b0babe12d3ffb9dc608a84b2f20"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0102.png",
+          "sha256": "b9defb8f782d5b032bb33d46ded1b8e8e2e07e043dbb02d837e131862e3f22f1"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0103.png",
+          "sha256": "6c131e2c388672cb672d86026f54dbe815b5919505acb02c4c18253af0a548e8"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0104.png",
+          "sha256": "6c131e2c388672cb672d86026f54dbe815b5919505acb02c4c18253af0a548e8"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0105.png",
+          "sha256": "d53c5866912524f9cc114fd3830a9339b16a675fdf71cd2ccbcd048fd39217a4"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0106.png",
+          "sha256": "8df5db8a4140574ef4838a58535653e514d9c7f9b1b72e1252d126d53da782f6"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0107.png",
+          "sha256": "981c4c1ed4a43f65ce0fca5eeee5d04512cff17dfe5747687e5ada520e7a20f9"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0108.png",
+          "sha256": "9ceccb9c0381d5ae6775fe51529919b80b7f822cd4bd64aa5980405a25dcc37a"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0109.png",
+          "sha256": "9ceccb9c0381d5ae6775fe51529919b80b7f822cd4bd64aa5980405a25dcc37a"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0110.png",
+          "sha256": "0f02a254745e287eaca2b1e6e3c32a45977ea1917413d809d1a15b2f3fd63d3e"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0111.png",
+          "sha256": "c4299c5cb8999870a4051b0714e17014895971917181b95563e4c83de913b490"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0112.png",
+          "sha256": "cd41622be1bbc45df401135553c05b5dbbbd17a5af9c5aeb4be256ad3a2ff869"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0113.png",
+          "sha256": "a5687353ad910c25cf68f43445dda21604ad0a6bc5cbdc489dc020386627dee9"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0114.png",
+          "sha256": "f98c2fe86081a4cb2f1a709ec38e8e36dfb4b6b053282e32bc137e0aaaa6f6a6"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0115.png",
+          "sha256": "920da03642d2482334294a41a04bac874522f34f311d26bbb4f4940ae52fef6d"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0116.png",
+          "sha256": "6259ec742f720e3fce0749bb2b7eec425133822922960f6ea7354410625bbbe8"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0117.png",
+          "sha256": "fdcc586840c127f7e4a3b7243a3c23a042833ccd0de77455fa3fa40b37455929"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0118.png",
+          "sha256": "397cced9014719fb6614d227017580f7bb608f848213983c017c6937151e4f36"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0119.png",
+          "sha256": "2d1f69cdf25cb1c6476f8fc8d40e96f316d52128bc559b71ac9007f13e3e8636"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0120.png",
+          "sha256": "2668ae3fdaf0d1fdd402273a565814dd5755d0bec4cb104936e215413f75e01a"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0121.png",
+          "sha256": "0a8990a8e21fb10c060cb1ab39a57678376eab2498030c434266d425645b4d9d"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0122.png",
+          "sha256": "05c29f6a85ae8e58faf8dc0307df8ed7d08fe2eca94edabad72c6189963bf7f8"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0123.png",
+          "sha256": "b5c5ebae5d4d910dcd9e8e9a05f132535a83cab60e5fd40a531424b2da0e64f8"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0124.png",
+          "sha256": "89837bb043b65f1c84eb2d9f152e1ab46b62ecd7f8e8af87af894c6a942a2ad5"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0125.png",
+          "sha256": "c998f2006b04733aafb20e41cb475e76f6d5d8f42a0946fd725fe57a1ce605e1"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0126.png",
+          "sha256": "42ab1c441033410849db90a17efc4e0ce0c74fdec9ed917863971a07ec0f512d"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0127.png",
+          "sha256": "df8e57b24f641f2271bbbbb34513e18ecd2b0dc9ac6fa6993a2a8e96e73fcb4a"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0128.png",
+          "sha256": "aa49d379e5aee18b6c14a85c898c16f6ad48a706899add2c08e72ab53f31a5bc"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0129.png",
+          "sha256": "a6750fe3fac3de0ab6b1467cbe58548e2009ae073a9fa36bbee838dacfe90744"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0130.png",
+          "sha256": "0ca7c40356393670af9f17dc553867b93dbfa601f7e4fc618d820ea60c2ba5e6"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0131.png",
+          "sha256": "f0483bbc4617560bff4acce0268f8c038def26b205ebc292f1640c47c2c6a2bd"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0132.png",
+          "sha256": "474601c2e731c6785639574242ee0bce1f2a557b3fd0feffda069b8dc7df5d6d"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0133.png",
+          "sha256": "e041cf47c8d9cc11db9fad59f9e65b27818b50ea20b7b9dab3657ecfd0068090"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0134.png",
+          "sha256": "de5e62beecc549b41de7c0ff9713af4947f9267a5efc168e3e469396b960109b"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0135.png",
+          "sha256": "b40abe971ca04545973fec7c135fd417090fbf52f02bf826eb9535d9e4c2ab37"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0136.png",
+          "sha256": "c0c550caf8b1c9077402a30baa1edcc50e8ecc9dd8032411d577e6ba1ab70209"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0137.png",
+          "sha256": "db608994e0090c3eae194ba78dc16cf55d7671f4ac2102e97a708f8abced8e60"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0138.png",
+          "sha256": "9fe286dd5cadf784a2a4e67e53bcebdf9f485f693a0bd880c1aa4530b55645e5"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0139.png",
+          "sha256": "ff0574afe565d266a96e125b204f681e206b0b052988520bfad8df76ce4e4ce3"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0140.png",
+          "sha256": "ff0574afe565d266a96e125b204f681e206b0b052988520bfad8df76ce4e4ce3"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0141.png",
+          "sha256": "07af99b27e42270e344a489a50c8eba1a47eae9fd9305e837c2292d448ce6b3d"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0142.png",
+          "sha256": "ab54655912cb0a98e9cb04e7d6ea50294b9e7a6f0fe112bbea1918940c86222e"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0143.png",
+          "sha256": "0ba03d6ea4acb6d6e29e146adeead8633db8f2c10cd580480c7848391ff8e019"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0144.png",
+          "sha256": "604f08b96d0bb522870b983ef55ca4603c0fb99b1138f52ca06c4f09e6a99dab"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0145.png",
+          "sha256": "c0482fcd9c71687a87acbfde47c5fe15bda21ea1e2cb57746fbba405281cadc4"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0146.png",
+          "sha256": "04992367e8f7d0061eb8d779954aaab8ed2341c371bfb221738b3b24cb5001dd"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0147.png",
+          "sha256": "a4b09583632675fdee63ad3d89f2ba01304bb7dd0928d954cfc372f17d2bfc2f"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0148.png",
+          "sha256": "6a9d13f27e117c4fbb2ebeb551ab06503ea7679e6881faf82ac29da4ad1712ce"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0149.png",
+          "sha256": "d260c8cc6317ca85ff5db2a4a760817a85e525432b8754b3d249f42e023767a1"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0150.png",
+          "sha256": "6516e3bd3f8f81355bd242796bd4debc06a5b8c1ed7e68ee9994f85cd1c83043"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0151.png",
+          "sha256": "af1a9977a9bb5eb5eda8fc9abd2d0e937d806ddbe5a65eef02dfc473bbdabaa9"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0152.png",
+          "sha256": "382b6631e077d0da28a9b0fa048d777f60773ce0222995b90d516309ce88c7a4"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0153.png",
+          "sha256": "6fb9f17548e65ef85506cf873415589ffd2a3cbc938e02ab037ec7af8558bbdf"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0154.png",
+          "sha256": "6fb9f17548e65ef85506cf873415589ffd2a3cbc938e02ab037ec7af8558bbdf"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0155.png",
+          "sha256": "24f02654deeb9005ead3947ca364bbace9ab298220f487e6a610e1109753aa76"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0156.png",
+          "sha256": "9d80b52389dedc76a2946fd983988320dc3bd586070665a4a592e1a387c36fb7"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0157.png",
+          "sha256": "b65538ed556e72cd3db5c9561b6c45b39066b0b17166d2d6942646653c0cbad0"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0158.png",
+          "sha256": "1bd462336e54fc823453039f396908b922bc24577587434bb3c0ae03b9d553fb"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0159.png",
+          "sha256": "1bd462336e54fc823453039f396908b922bc24577587434bb3c0ae03b9d553fb"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0160.png",
+          "sha256": "90af85172423f169be6964febf357369258be9d8c05610fb24fe944bd6defc4b"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0161.png",
+          "sha256": "7daea94007813588fe727e3bdf598eb296268dbef7bacc5e6c56d2e418fdf032"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0162.png",
+          "sha256": "3230ba542639ee5f19b40a2898ac7e61f8dcd8efedd65686308f656579e83dcc"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0163.png",
+          "sha256": "d0e120628b54fdbe145807793af6dc31a371d63a56d1c0bf0792e8840968e02d"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0164.png",
+          "sha256": "4a57a9195b2a7df5db6bd83ab3730d6d72ed95f7711695245abad582ec192573"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0165.png",
+          "sha256": "f1fb40ef1467e10bacb9aa518852bc3db5cdf39c2cd6abcacfc46257e8a25a0b"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0166.png",
+          "sha256": "ea3cf03d9e4e3ef56c9956683d66a1b3616f9a902a90fd1de9c3676f94b954e3"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0167.png",
+          "sha256": "995e290ad0c0946c6b0aeaf50d29173a86d47bc8641e0c8369a0e910e980f481"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0168.png",
+          "sha256": "3b5a88734950b9cb2db45d432379dea2ac2143f74c8f925a97bcb871540de057"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0169.png",
+          "sha256": "3b5a88734950b9cb2db45d432379dea2ac2143f74c8f925a97bcb871540de057"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0170.png",
+          "sha256": "8e4cf8b0a4e1f205985854e11fc0f0d35ac1f72b17a280b71c40b137dc4e3c89"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0171.png",
+          "sha256": "03c2a10ef173e2b9caf48401166e9c58977519a12fe615a86b52581e3f7f7e90"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0172.png",
+          "sha256": "7020600cbd3b0567ab33dbced9e076d320526b2111b5b80fc242494d6f485896"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0173.png",
+          "sha256": "7adbeb0d65afaf27c7a568e98c418b5d672102c5655cfc6c66f2b132081b61a7"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0174.png",
+          "sha256": "666679fb59931bda74eb1481ebd3e30bc1474ea1dee94aa4fd1d385ec2e01763"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0175.png",
+          "sha256": "c4531c1a573a011d63c5f7d4d3c5b1c739b95c3133bea325478f193d895c91a9"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0176.png",
+          "sha256": "6ec79000816d360debc2d3b1a7dda2a58359c983badb8b38411433a2bd7960ea"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0177.png",
+          "sha256": "bcff90f031175f10e8a45c31fb40b78c73ab0b0b2af7f4336399b1ba3c655cca"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0178.png",
+          "sha256": "5af79942620d5840df7733086a3d26a64ab8c5872be6eac8bb207be7abca2f73"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0179.png",
+          "sha256": "fe5d0cfbda6be78e1764bc96bbee58523afa997e46bfd7ae6e31f138dc7a798a"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0180.png",
+          "sha256": "3f98396580fec64ac09fd6c5ee86b2979c4816242ffd1623b30545bc8f30995f"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0181.png",
+          "sha256": "3f98396580fec64ac09fd6c5ee86b2979c4816242ffd1623b30545bc8f30995f"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0182.png",
+          "sha256": "81e5ceb0743bba0b9126fe168b84d4cb15dfcb20eccfcbf83312e834f2fa8997"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0183.png",
+          "sha256": "0b3bf475b4b09df81c6f7d1bac2df043e753990b9790eb32edce99fa475728a4"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0184.png",
+          "sha256": "8af375a1e3a0a781da18c122e452050a7df80bfaee25e0a67e04076604cb6658"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0185.png",
+          "sha256": "a65a3ac1ff9473851da2623099a971d390c645e911f33d2c3568863db5968dcf"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0186.png",
+          "sha256": "458a12b6d739392a8a77cfcec8562dbf18a81ae9550706d6ba3e52ebff762e62"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0187.png",
+          "sha256": "6215509a230fd2b0addf7a25f50f9817820c1c2c8f38a36d99bdf8825ef2eeab"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0188.png",
+          "sha256": "0e92cd127e1e0c945071cf78aba9dfe81d4161007a8d13d3b95fb61074d0134a"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0189.png",
+          "sha256": "4ed6c6591e0a473ddf30d97ed106a0c529c783d84e937f842900ed0b7cb7b166"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0190.png",
+          "sha256": "ca3b97a4603c0aaac8b3d8980a59e54e075c71b6697c64b8e0238fea8af44d5a"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0191.png",
+          "sha256": "95a00d3dd1ba88b012d2f1d1d1658420ef1d7071a05c4d64019c8d5402a0ea7a"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0192.png",
+          "sha256": "ffe6210070a939c92542c34d82cb36a661991d7ee3fe589fe122fe5ada65cd97"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0193.png",
+          "sha256": "f67aefd7b3059b6d13e3b2ead078d74643b0731b69b7517efa58b434aeba302e"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0194.png",
+          "sha256": "dbbe5b4be7cc74d1214683a9eb4190b4e517619f8aa5859f43868c25878f3fc0"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0195.png",
+          "sha256": "0e30bb68593ffd8029716deab3e8865658f0a5ed1da5855934c2218237029748"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0196.png",
+          "sha256": "8bd5c3060874ea282e93fbbdb416a5b810fa4b9637fc5a074994c3969015a4cd"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0197.png",
+          "sha256": "f78358c4105992f1c5c57647a26d816c9b8aa9dd81b07b09c0ec457e493989e7"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0198.png",
+          "sha256": "25ecd1e9be54ece14dc04166b011863fd94bdad506a8f539538a38fa366881d0"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0199.png",
+          "sha256": "726da1fc916adb8d2e1975cd0448dc5ea368bd3c94f0f518448187a48df2fb91"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0200.png",
+          "sha256": "a5c5a0143d5f5921327069238691eba9fddc6906aa313e12adf477ae950414d0"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0201.png",
+          "sha256": "6782218e1795e6437907a6b695caeab7deaeb484f9c36f3acc58af3d21aa580b"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0202.png",
+          "sha256": "5a1492231ee9c0effbf307e28dd35421b7ba028bcb9e221df6fe29ed7f00b030"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0203.png",
+          "sha256": "dfdae5598ec6ef56147f6cfd541518cd229e91c75c558c31c8d1edcbb61ee3e6"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0204.png",
+          "sha256": "553bb9f68c313b38628bb35756477f70bfc19630239a8bf7e1940cacd72b4e06"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0205.png",
+          "sha256": "959c03c3160eb26473c26631a1e2590a1566c8d9f2a741a3e94d4979cd38a29d"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0206.png",
+          "sha256": "95e9df253b4d5f4e4fa273a1d454fc5998d4236ac091838c982e3ff1dea8a098"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0207.png",
+          "sha256": "e4c66ed71ef873b92bfff30d0766a12b5b5fa65ab3a6c85731ed62147164dff4"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0208.png",
+          "sha256": "e80e9d4e2ba455084fc85458a498327a7fad0d33e8b5b6e58579ba4534504ef3"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0209.png",
+          "sha256": "90b9c7cd95731d1901b451bf646bb49552eb8c375355c91f058f620600663658"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0210.png",
+          "sha256": "4b0973be4a25ee4bb3d18fe85287b1d60e43a7de4cafaffb55a19c54457b367f"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0211.png",
+          "sha256": "4f52e57964eb632999c91ab7ef83bc5fb6d00e84cb9f5b25e9aa3a1c9cdc0ec2"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0212.png",
+          "sha256": "d3bbcc8494db62086f4b9da42148e487b0ad826d08b91d844903e9f710cf5ed4"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0213.png",
+          "sha256": "cc2a662b7d8c6d7b0fc7a3b7901166cfd377749c6a12a8557705b70882a4405e"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0214.png",
+          "sha256": "b19bd789aab8e33436a02fd4e92f986183c2edeea0b173a406e4b1dfc4765412"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0215.png",
+          "sha256": "a447d098839b211235ecdbcc37439ad91bee893e5f945d85b97a7ff069c833ee"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0216.png",
+          "sha256": "654f869b5fbe8891fcc4c95fdc4b0d549116f6041bdfa3482517a51a3a874926"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0217.png",
+          "sha256": "b848d86ae4cf7026a9ef157435db6231e7a318c3b7a401a3557e1af765bc63b1"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0218.png",
+          "sha256": "844afbe807a2616d339e29c58bf46f86f559240bda80d2f2e655db8d0a5f585f"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0219.png",
+          "sha256": "1abe8477fd354dcd8ba05dc3f1f3f342f1b217d54108a1c25f92d24ac6cb9173"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0220.png",
+          "sha256": "9c0884ae19108c84edb8b750a9104d252b82d33cdc6716641139430eb89b6015"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0221.png",
+          "sha256": "4174b4a40bdbab6f98fb3abae85143907a84bcc4935ecb15943d91ac48ee87e9"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0222.png",
+          "sha256": "2ff58cda95cce0542d50b2d2b97ce90a7662c2a0062758d8a8f19651150942cc"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0223.png",
+          "sha256": "feaa074df3a91f08f8ede247d4fa4e050ff2b9855826b6721049dadae6402994"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0224.png",
+          "sha256": "1ca993b9bf10e5a642c1b1a222f160d3b891a715dbcec3c5e3a238c86fb828b2"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0225.png",
+          "sha256": "f1d8b20a62d9e29895f307bb9398c070624b73081e1b1599b7e7240c93907ba3"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0226.png",
+          "sha256": "7699a5b6ba2dab3f978ca5fe9e8d70e57d01d89ac244be1e43387d25cff4afa8"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0227.png",
+          "sha256": "e43448786c28fb89dc362b33a821c8206f5fd7ca6f7eb005c2848a079ce50a96"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0228.png",
+          "sha256": "9a3ed80e4b24fbd3134a4365414d3ad15e09de6261e3af1c00d5404913ad1608"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0229.png",
+          "sha256": "81333f848600e15d0a1b47cc2b3e596c8ddd9bd296842cbf8a0d217550b44b55"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0230.png",
+          "sha256": "7d9b1dca018c61de32cb895afad62a98869a0ad0a76d3041cbcb404b3e36bf0c"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0231.png",
+          "sha256": "742089ebb49414676d5b2051f5da47878ef7beaa3cc130d23a43b910e960252c"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0232.png",
+          "sha256": "fba601b47c9cae136904133964c63baa3754303b66be4630f52fd3b4228fd746"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0233.png",
+          "sha256": "cb3f12b8410e7a8f7d31617b17be2c626f986bda8447d2ed021c4955ca4c1968"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0234.png",
+          "sha256": "24d7620d93958983749822bff3aab92cfe10aa281cb8191029d4f830cc30f92c"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0235.png",
+          "sha256": "51e71840761225d7412145730485791c31f9dfaec12decb7a155639e72e6763a"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0236.png",
+          "sha256": "f5044de5c393872848a8d82d55b64bc7bb48b1cd8c42005bb851abcb5ff44ffd"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0237.png",
+          "sha256": "cc581fc869dc3d4bb0dbe245b650cd6e0d86692375856e76faa73086874b6c26"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0238.png",
+          "sha256": "5e9b36e861ee3a06598469dd9cc6938f741608b97cfd1d8c469655d16e66f782"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0239.png",
+          "sha256": "a6d16f73df998fe774d6e8ba10f2c2ba1a5f5d48f114d1a729ba3b7f30e8646e"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0240.png",
+          "sha256": "dade862e89c37b5557794054a71c4be21431bbbaa4e267578578c1be8f483fe7"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0241.png",
+          "sha256": "476be29605bd7fd4ee74daf766adc9d665a747257bf34f5c8cbaf5b7de9e11a8"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0242.png",
+          "sha256": "8d03a433eb8cb00aa559cdd588cc1289e55b1c66da2c58b34639c0ee8a80f73b"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0243.png",
+          "sha256": "a3d4f8b4d41f6435eb703bda7c104275f839379ea2480a0c99290d8502f63096"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0244.png",
+          "sha256": "46ce72e46c68b417020995416acb245f090744034b5ac8c2b11f786d0a2afda6"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0245.png",
+          "sha256": "bdb9a78c966c01558aac7f59c8c242b73b3b782b422af1406262900068b3bf6c"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0246.png",
+          "sha256": "e066ab6b95ba0a5910cb12918090a6c79ff5c5dfa9844a93bd5f0b2e2f37ca68"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0247.png",
+          "sha256": "165e18b6158daf8f9635a76d150e819bdd9cb84445b37a96bcfaf41c02cf5682"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0248.png",
+          "sha256": "dcb9adb98fec4fb26fb21cc9a1e41b53bfbba072aef7c3d5e0ffacca434a973f"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0249.png",
+          "sha256": "957bed8d1a9d8abeebe6101c3f01d92fc97014d941c610a7b9aa120209f87d61"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0250.png",
+          "sha256": "192a0cf413448c4f16bd594875bc3c9cfda48117e7b86d37d9c0a9f356937f47"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0251.png",
+          "sha256": "7559eb97a0cdc3b2d27bc72d6e9236907da116862bedde969e1447a1baecd3e1"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0252.png",
+          "sha256": "7c33ecf661a73f601cd0010c7467ca7429705689f9dc9b3609c6462c2d0e71ed"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0253.png",
+          "sha256": "b4109ef5400a54bcea74bbfa8feff19c14f37b01c38a7cb8811ddccd4388119c"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0254.png",
+          "sha256": "3a5a4e0bccb3edcfeb832814476f2b13040904e2cb875c2ae9ea641f81c41429"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0255.png",
+          "sha256": "0a36d0729efa9e367cae9134ebffbdb01165b2fc2e41bb36e7d9995464d801be"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0256.png",
+          "sha256": "6bc79a442551296f3188ae12f239f6b8b12de7af7e53d868c317cec260cecfd5"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0257.png",
+          "sha256": "a927bde1541783b1691f591ef5b4fd60ca2f360dfdb2a97ddb1b841751defdc1"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0258.png",
+          "sha256": "5d28cc23c4d99476b0f726a7050e8cb8f88c023507e5024faf909b0951fdae92"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0259.png",
+          "sha256": "20b6c6b3ca9cfb43755aee7342c665971f183a7820e15ae503c2369aba607c35"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0260.png",
+          "sha256": "b54fc6f343b5d8ed0ab5445304f0ce5a1cbad2bb72994282b4ecad621dc5165a"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0261.png",
+          "sha256": "830132aabe4eb8f279ba195fc34ec9c3d702bd92bd080664eb989c4ca4eb85fe"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0262.png",
+          "sha256": "1848913a4c17adb219691b2a66f256ce9c1713bbb5c0d2a8bc79e56606a8f53b"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0263.png",
+          "sha256": "676251607fad39eb855999d61998df1734610e0d02a0f81eb8c355789c6a2bf2"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0264.png",
+          "sha256": "f7fbdcffdad75e834bee4c633b6cf14695e1b1c44e324192dca6ad46d3c89112"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0265.png",
+          "sha256": "a1a44ca374c750afbe720c222ede1f500a84a319853cde0f21b074cb84b25036"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0266.png",
+          "sha256": "76d5fedfabac9ecef99c167fd16e5a1b7f13bbcbffef3233eecf37f72167b923"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0267.png",
+          "sha256": "c5ce711e44b6bddd25948323be4dcc2104fa7f30293904a8e622da3f7e7b3adb"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0268.png",
+          "sha256": "22380346428f185f2da50c05efe8d4fbfa4b9c817056b0d5644a36c8c862bb87"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0269.png",
+          "sha256": "5cc895a569d35a9213bb48dcceae49adb207a7054b7bb66c37d4f946d223f44e"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0270.png",
+          "sha256": "48224b9e12f10bbf9ea3b8ea8cb62e6571d0ff770e347a1a7f1e0efe287e9e62"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0271.png",
+          "sha256": "da2e063d50b45d8040b2032a1df8e309d42d23ab0faf03312a0935c8b396b526"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0272.png",
+          "sha256": "fabb58723a75650b2119235fbf5870a0e750da2905e1bd5fe14cea65e3ac93db"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0273.png",
+          "sha256": "dea916921f0c00b3738ea24e6da04b9b3d0c0343af25a6650fb0ac51e153a1ef"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0274.png",
+          "sha256": "c36e6695c1a1fd5203195ba301dcd7b6f8cb070b5a682a3eaf41591dce31b5f0"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0275.png",
+          "sha256": "84abd4132b20f4aace782edaa342a33c732d078ccdd157b78f7f7214548cb905"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0276.png",
+          "sha256": "e65fd7561d4be5f2c82e260c3baf8fe555a70c18cbca6b1fa28dd4945ba444c8"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0277.png",
+          "sha256": "2a635c9c8c49d78184ec34a795d2abf6dde635b413102ff0e9bba47eccf3c549"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0278.png",
+          "sha256": "8769db70892fd3b3c0e0e7abc3e9918aca19d1a96badc588cab964e51b29a329"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0279.png",
+          "sha256": "d8de9edf06d8e972654dbbb8f598e809e2587bb93a0e3974bd48c6d521e217e2"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0280.png",
+          "sha256": "896c65994c53be799205d5f2003ac9cbf5c69cb674ee2c18625c20c36d3f17d1"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0281.png",
+          "sha256": "e4f4253fc8cef0c5607cd0d31dc69a4f1f4095c893d84c4bdba83ec9b2128d6f"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0282.png",
+          "sha256": "82a32511afb70004e6a75eac7df18a8a9eb22d9baa827ce646930c947753c459"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0283.png",
+          "sha256": "03e76fccb4bad9d702e3324e4b9acbdd8a8f66faefb8c87040014a639786566f"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0284.png",
+          "sha256": "4f65a3e00731ec740a88430b1c12ae0987cd536e5e7eb4ca4b747e0b7749cd31"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0285.png",
+          "sha256": "99a9bdf332c33eb0586cc29e8c74259d049bdb382c6ff86ad6f9f4cd200fcdd3"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0286.png",
+          "sha256": "ecbf98337584232e622a0d0b6b7cc732fa1fb3aa452571e680bb47296f8daa57"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0287.png",
+          "sha256": "92ec234422339b6c29894d79978dba2314c26058ef6e6af7de0cf7fd7d41976e"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0288.png",
+          "sha256": "3fe18298274b105d93218ceffbceff318fb0748f0e7a096d6d82eb0f4d51ef1b"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0289.png",
+          "sha256": "ac46e88fc960c80553782c0b9f5d169784ad86f4863bb661b132e3e979929c0f"
+        },
+        {
+          "file": "figures_ref/guyton/guyton-0290.png",
+          "sha256": "7f7a3c4c435de68e05286d66d1ffa387f01b4425483d223f6bfcad28a0be48e5"
+        },
+        {
+          "file": "figures_ref/guyton/manifest.json",
+          "sha256": "58f8e00149cd8d1ab0cd1a7d9cbd35c7528787c51b92383582774ce66c8691ec"
+        },
+        {
+          "file": "hmu-restricted.md",
+          "sha256": "a23cebf03e22ba9c98d1ed1ad33b247f70645896c1be27bb2f288ea5baed2d4d"
+        },
+        {
+          "file": "pathology-inventory.json",
+          "sha256": "3ce0a1bc6863fa60a8411c823e8a825b2fd3b539f405ccd953a13f396ef78467"
+        },
+        {
+          "file": "section-map.json",
+          "sha256": "57fa74b13ffaa9c2bc452de3748773b52e91e9d3087257e4086ca6bbd16119b8"
+        },
+        {
+          "file": "sections/ap-xe-gan.txt",
+          "sha256": "32d461297f6ac530000dabe9eb9b8551f73750ae7a053c82b092e58b34ac2ca7"
+        },
+        {
+          "file": "sections/ap-xe-phoi.txt",
+          "sha256": "0445d01da1418ac19def30420b00f30c42b680983b11e1b2d2163985201104b2"
+        },
+        {
+          "file": "sections/benh-cuong-giap.txt",
+          "sha256": "ea61f19f2d2d761583b89e40eecb677bdfc6afe773c4d76afdc342e78f98c83d"
+        },
+        {
+          "file": "sections/benh-da-hong-cau-tien-phat.txt",
+          "sha256": "366cf83f94f9f1acc731a539efd877b9f75815c7542fc0b2bfdaefdf2d3d1c67"
+        },
+        {
+          "file": "sections/benh-da-u-tuy-xuong.txt",
+          "sha256": "4894c9067c3eed62886231b1c0d810dc42b8a45ca8aad4c4fbd02a9e768135cb"
+        },
+        {
+          "file": "sections/benh-gan-do-ruou.txt",
+          "sha256": "f3a26191b288a9c57f76eba29241c17c0ea71d5f022891821b4134e4d1f3ace5"
+        },
+        {
+          "file": "sections/benh-gout.txt",
+          "sha256": "59127783596c08dc06f226c08c0853802eadf2ec925e48c51b2c762a1d2b4a40"
+        },
+        {
+          "file": "sections/benh-hemophilia.txt",
+          "sha256": "b4e46a8db7cf2810e9c2c29dfe4c4b7675b309671740bdd9cb5cf805cbb47763"
+        },
+        {
+          "file": "sections/benh-ly-phan-mem-canh-khop.txt",
+          "sha256": "af07ecc53db765526e5f34fea7888b12cb19f6000cffea859ab2854e29709c85"
+        },
+        {
+          "file": "sections/benh-nhuoc-co.txt",
+          "sha256": "67566fc4215299eaac72c724049d64123d79bd6fe7184d966fef493a834fb0a2"
+        },
+        {
+          "file": "sections/benh-phoi-tac-nghen-man-tinh.txt",
+          "sha256": "450214c4ca5a78d52ae60a94bd8ebc5d5fff41d769f63ff212a5dc8bcf3d7a14"
+        },
+        {
+          "file": "sections/benh-suy-giap.txt",
+          "sha256": "67535fde9cef6cd1dae56656af410a65cea50416ee9efdcd8da91010e08a335d"
+        },
+        {
+          "file": "sections/benh-than-da-nang.txt",
+          "sha256": "0d21ade4fd98d476b4255a1ffa15952b1496e611188a01f75c792fb446b29e34"
+        },
+        {
+          "file": "sections/benh-than-iga.txt",
+          "sha256": "7e29f54b3babd9b59206b94983b0bb3ef18cfee733a05f30467b9dff50c32e01"
+        },
+        {
+          "file": "sections/benh-than-lupus.txt",
+          "sha256": "17c9591a697e5c80f8df7aadb83f3b9126be5167b017e89c33561a99e08eed85"
+        },
+        {
+          "file": "sections/benh-than-man-va-suy-than-giai-doan-cuoi-dieu-tri-bao-ton-va-thay-the-than-suy.txt",
+          "sha256": "052fb5cd5acc3e300e52c0d4c1c084505cfe65cfb5ed36fb798ff34b70f1ebc5"
+        },
+        {
+          "file": "sections/benh-than-man-va-suy-than-man-tinh.txt",
+          "sha256": "0aa9b2d583bb517c0316c946d82822c9a3a55e0663bbe745e74263a7ca50ed66"
+        },
+        {
+          "file": "sections/benh-to-cac-vien-cuc.txt",
+          "sha256": "bbb83ce5c045b4f75002c041e5d6e0fb0612ce2e3510f76159a6d344ae991c4e"
+        },
+        {
+          "file": "sections/benh-tri.txt",
+          "sha256": "f7521b7af56820fa14eee7bf6fc8c8b083c0f6d5cf169381904e621e1d69c96e"
+        },
+        {
+          "file": "sections/benh-viem-khop-tu-phat-thieu-nien.txt",
+          "sha256": "341bd206a646dfa538c33e41b40d341d8b4ee0fdb2d8a1853160b8e08453f6c1"
+        },
+        {
+          "file": "sections/benh-xuat-huyet-giam-tieu-cau-vo-can.txt",
+          "sha256": "7db2cc06d2d4182a6f665526ff637d399494be977779e5806ca28bea9db478e8"
+        },
+        {
+          "file": "sections/buou-giap-don-thuan.txt",
+          "sha256": "02a34dc34fd2a09ec3fd7ed03de7bb821f167250bc8d07a541acc2852beb71c7"
+        },
+        {
+          "file": "sections/cap-cuu-ngung-tuan-hoan.txt",
+          "sha256": "b2589ec836c07ff65f5a8a1ba832f57e77d7738ed8346abcc4c385446853b30e"
+        },
+        {
+          "file": "sections/cuong-aldosteron.txt",
+          "sha256": "1815fe5cd1e513fc852bc9ac3e008971dee76cd9093d8737e50bee9c9a94dc3d"
+        },
+        {
+          "file": "sections/dai-thao-duong.txt",
+          "sha256": "61eb30ce66e244b5be1acdce7ce4b3155f416ab42c4e915269c4187b2dcf619a"
+        },
+        {
+          "file": "sections/dai-thao-nhat.txt",
+          "sha256": "3208c3f94b35ef08d2a781181ce2bff837b827f3696896c0171294e748e0914c"
+        },
+        {
+          "file": "sections/dau-vung-that-lung-va-dau-than-kinh-toa-do-thoat-vi-dia-dem.txt",
+          "sha256": "e6f5df49ac7fcb6114abc52eb3ba8c321d578167b9957dfb102d3e5373100df5"
+        },
+        {
+          "file": "sections/dien-giat.txt",
+          "sha256": "1ccb3f17e7be88d4cedd1c03406ee2b7cc21281187397cfb33d043544778d577"
+        },
+        {
+          "file": "sections/dieu-tri-mot-so-roi-loan-nhip-tim-thuong-gap.txt",
+          "sha256": "14e7659188f608c6d62713b3e03317e3ba071e0e2759da28e0e5d7d0c1eaf267"
+        },
+        {
+          "file": "sections/dot-quy-nao.txt",
+          "sha256": "23737f24ab36391cb3762ffa442cd2639e29a7edf67cd1facabc9b6553e82039"
+        },
+        {
+          "file": "sections/gian-phe-quan.txt",
+          "sha256": "ccf0957f843badaef3179de0972227f6864d1d011d728d4c27c9658373e89fb9"
+        },
+        {
+          "file": "sections/ha-glucose-huyet.txt",
+          "sha256": "a4dff4790a0215a3ab6f9976e6a1f81be6170dfa6fd1bba1744f58f492dec47a"
+        },
+        {
+          "file": "sections/hen-phe-quan.txt",
+          "sha256": "9bb3a0423c09cee8e2f37407784fe503152bcc32d36ce209439e5922db24b10f"
+        },
+        {
+          "file": "sections/hep-van-hai-la.txt",
+          "sha256": "1a6c5fc942594d0c13ef12ab792c4aca590575d4bd363e2893879f0a7ecafcea"
+        },
+        {
+          "file": "sections/ho-ra-mau.txt",
+          "sha256": "f49f664f59b66492702e405a67559ba67f32f9d32ec2c80c848904d67f2d995b"
+        },
+        {
+          "file": "sections/hoi-chung-cushing.txt",
+          "sha256": "624c68524d307f5abe7066bc08443e3164fc2d65907080d7984fc34f8cf2a574"
+        },
+        {
+          "file": "sections/hoi-chung-ngung-tho-khi-ngu.txt",
+          "sha256": "a04661489aa4ed61b01f0c973430ba7d026040b3f5f7f44042cddbf0278d6de5"
+        },
+        {
+          "file": "sections/hoi-chung-roi-loan-sinh-tuy.txt",
+          "sha256": "4367f0267ac53af7f220aec7f72cd1e093e917bb913460ae4aba3bdae8d11bb2"
+        },
+        {
+          "file": "sections/hoi-chung-ruot-kich-thich.txt",
+          "sha256": "28b1bf190e3c7db057d6a76e7251e223a91c472fc1931b0498d735ca0107f55b"
+        },
+        {
+          "file": "sections/hoi-chung-sheehan.txt",
+          "sha256": "98eeec94475658c30fc66f879c175320d601bb9918a143aae255fc2a8347d443"
+        },
+        {
+          "file": "sections/hoi-chung-than-hu.txt",
+          "sha256": "1438a4989a647fdb414cd579dbe95673819ba5f2a236a4c6f7492108e3d98d33"
+        },
+        {
+          "file": "sections/hoi-chung-trung-that.txt",
+          "sha256": "f7fff006d81a95e5188ccf54596448fa04fc937e4294a745785035c1faf17ddc"
+        },
+        {
+          "file": "sections/huyet-khoi-tinh-mach-sau-chi-duoi.txt",
+          "sha256": "f253da1989096848554a599a190e7ce08146a84dbac335db0cf5bfd2cf77aa59"
+        },
+        {
+          "file": "sections/lao-phoi.txt",
+          "sha256": "459e36ad1f5514790b30bb31892f8a2b2110864a0c472714a2d97280b5fc819d"
+        },
+        {
+          "file": "sections/lo-xe-mi-cap.txt",
+          "sha256": "9b24a739b7bfe8095d907d975f54fbdb38a429134e7d8c50c944777db6c0aed8"
+        },
+        {
+          "file": "sections/lo-xe-mi-kinh-dong-bach-cau-hat.txt",
+          "sha256": "d91cde1d6ac1455a02675c4ba6aeb8dc09f793163779e310fd81439bc8c8a719"
+        },
+        {
+          "file": "sections/loan-duong-co.txt",
+          "sha256": "6c72e60341c8aff5dc6e0451b2f497fe766ce382cbc7261312426f4c26924a49"
+        },
+        {
+          "file": "sections/loang-xuong.txt",
+          "sha256": "50e2d009b796dd39bcabae690e0f21f61aa8132f13d8f5e3049546aae8924900"
+        },
+        {
+          "file": "sections/loet-da-day-ta-trang.txt",
+          "sha256": "71c23ab2591655b5506de770e766ba49feb5f3ea37da099ef7a8051721713c50"
+        },
+        {
+          "file": "sections/lupus-ban-do-he-thong.txt",
+          "sha256": "6aed284763a1ff2b561962c1cd06ec90b61f9607173cab9260d04dc3a8017cdd"
+        },
+        {
+          "file": "sections/mot-so-ngo-doc-cap-thuong-gap.txt",
+          "sha256": "111e841e89b3e7663b2d6e48a0a2cc96a681c8e69f724ff80d6c8d5ff79eab3c"
+        },
+        {
+          "file": "sections/ngat-nuoc.txt",
+          "sha256": "fc792b943f2a168834ea1df2b0463edc4ad16abc7eb32c8796aa8deaa7b14947"
+        },
+        {
+          "file": "sections/nhiem-khuan-co-xuong-khop.txt",
+          "sha256": "0c674697558ba1d0bf75f7b28e19dff6eb6598754cafc19813a6a06eeb40d833"
+        },
+        {
+          "file": "sections/nhiem-khuan-tiet-nieu.txt",
+          "sha256": "3fc5ebffc9c778b69a4f575b73e6680488d319aab743423629c5f62c9872c578"
+        },
+        {
+          "file": "sections/nhoi-mau-co-tim-va-hoi-chung-vanh-cap.txt",
+          "sha256": "2bf9d724aabdc53a129a42c594907f24c5a695c73cf24bd85c0aa2738ea6f69a"
+        },
+        {
+          "file": "sections/phi-dai-lanh-tinh-tuyen-tien-liet.txt",
+          "sha256": "8c4b59a38b5026cc1224d7ade8783121f0baf5b6eb740019d4be15831e191beb"
+        },
+        {
+          "file": "sections/phu-phoi-cap.txt",
+          "sha256": "ce620d7c7883e0e7a5007877f93db73e71049330ef306d430d4eb095cad5004d"
+        },
+        {
+          "file": "sections/ran-doc-can.txt",
+          "sha256": "bab2392ae1b63a0476169fa96ee318be4016c32ded164a2bf64d3c2eaf3f3924"
+        },
+        {
+          "file": "sections/roi-loan-kali-mau.txt",
+          "sha256": "af58c4ba6837709695a0fd7730188360de5ebc101363f0428a186e510fdfd8e9"
+        },
+        {
+          "file": "sections/roi-loan-nuoc-va-natri.txt",
+          "sha256": "2ca60eedef29d21ea6f45e5f8d97638425302177d5463bce6548f6b5db3b2c25"
+        },
+        {
+          "file": "sections/roi-loan-thang-bang-toan-kiem.txt",
+          "sha256": "e406e7d05ebc6858b58a64bc0ee2ac4fe7aba7f9767dd45a22d0974a1845204c"
+        },
+        {
+          "file": "sections/sa-sut-tri-tue.txt",
+          "sha256": "e43dc5d3df63885d2300f000a56f256424f548f2094c1fb67da8fa5e5b9b0c91"
+        },
+        {
+          "file": "sections/soc.txt",
+          "sha256": "c1e253c2731528aa3fa0298f6aa7bbc6cf07bbed4e9b781ab44680b6967555e5"
+        },
+        {
+          "file": "sections/soi-tiet-nieu.txt",
+          "sha256": "15955054dd361d24c296ab1d85beaa4b1211c4287724e8900125a71ee7e635d3"
+        },
+        {
+          "file": "sections/suy-than-cap.txt",
+          "sha256": "54e05b1165e2e5eb886b40d47a5240b951e7634ce43f2d3ef0b82c60bf05c71c"
+        },
+        {
+          "file": "sections/suy-thuong-than-man-tinh.txt",
+          "sha256": "a6994aaf1346c1bda92e65518c305c782665cb1c60ef7caaca0e2c9e728288ec"
+        },
+        {
+          "file": "sections/suy-tim.txt",
+          "sha256": "7df43348025bd7154af73804978bb4e739e12cd8f76b666e191caa95e2743060"
+        },
+        {
+          "file": "sections/suy-tinh-mach-man-tinh.txt",
+          "sha256": "7ba7652d8adcb4f858ec64fdac2ce2825863fde007adc994bf400b0f71a48fac"
+        },
+        {
+          "file": "sections/suy-tuy-xuong.txt",
+          "sha256": "9ae470eeb4239cd5b5df68d90dea1c602dc77928cbe3396c50e20b3efbfc974e"
+        },
+        {
+          "file": "sections/tam-phe-man.txt",
+          "sha256": "2c5671edc800e6c97cff4685280956ae0f597ae4ec2755fe63fc91dc778fbd7f"
+        },
+        {
+          "file": "sections/tang-huyet-ap.txt",
+          "sha256": "b8dc4c5ed2333b69b4f2f6c78d08bbe162680bf79c48a9e07de72e2406d5d640"
+        },
+        {
+          "file": "sections/tang-tieu-cau-tien-phat.txt",
+          "sha256": "db23d913040df087049f9256ca174861e6efbcef591c3bc5a05b3c5a04408c09"
+        },
+        {
+          "file": "sections/tao-bon.txt",
+          "sha256": "1b8ea94dc0f4332e6716fc9366438a11549b6202d24a6abcb9b7d98ee94ee66f"
+        },
+        {
+          "file": "sections/thieu-mau-tan-mau.txt",
+          "sha256": "76e55c55d63fed991f812d6930d3f679708056a4ada3387ccd24160c5a84deb9"
+        },
+        {
+          "file": "sections/thieu-mau.txt",
+          "sha256": "4ca28d60f67d8df0070e63bab9a6ec87c2290043d7cd0cf1c8ec95f02f5ce7b7"
+        },
+        {
+          "file": "sections/thoai-hoa-khop.txt",
+          "sha256": "219520c991f8beb7962ffdbd888709b4960baadb73cb08b7c58ef99fc9d97639"
+        },
+        {
+          "file": "sections/ton-thuong-than-cap.txt",
+          "sha256": "7ddbd71968dc0933253d97c56313cd9e8be99c735a46396bea41b0eaeee4a073"
+        },
+        {
+          "file": "sections/tran-dich-mang-phoi.txt",
+          "sha256": "e328d92c9898a91288d425f57ac9e04fbf4f353c9cd859a28f4edc288d0a807c"
+        },
+        {
+          "file": "sections/tran-khi-mang-phoi.txt",
+          "sha256": "786ac4423a61217789f9b8b1bc71522e84b7472e9d8196a67c4e3f7ff0fe523c"
+        },
+        {
+          "file": "sections/u-lympho-ac-tinh.txt",
+          "sha256": "8baf6c85928e6914616fc9bd2e0149f77f0d258aec9d095f1a3e31b957d8ff58"
+        },
+        {
+          "file": "sections/u-tuy-thuong-than.txt",
+          "sha256": "424d8c8d33a0fd1a10a8b7435999f3894c172189ecfa55973ff2153adaef9198"
+        },
+        {
+          "file": "sections/ung-thu-bieu-mo-te-bao-gan.txt",
+          "sha256": "83e049ef7841104f6cd1e5e6e72d92f9336ea1f7bd24d0b69adf62f0289231ef"
+        },
+        {
+          "file": "sections/ung-thu-phoi.txt",
+          "sha256": "720ba66401bd8b5ba90003f204c207d6fca65e9a9c20444dcd51efb1c0a25213"
+        },
+        {
+          "file": "sections/viem-cau-than-cap-sau-nhiem-lien-cau.txt",
+          "sha256": "a57053f13845ea9868cfc0a568b52d2c1b53c9f0f2323780f6e20ec48ef77ee3"
+        },
+        {
+          "file": "sections/viem-co-nhiem-khuan.txt",
+          "sha256": "a0ede9727ef2a6f99a808b8033c33ca475b50aa9a75c13bf180a7e919a4b2212"
+        },
+        {
+          "file": "sections/viem-cot-song-dinh-khop.txt",
+          "sha256": "4acbb8a4b1d2cf5adc06ad3d02a3789e841816c681dc1e567d373eb816aa244b"
+        },
+        {
+          "file": "sections/viem-da-co-va-viem-da-co-tu-mien.txt",
+          "sha256": "244e3d6ddf329e3c1342abe2e19a751dadaab1d7261131b339134b83c0991243"
+        },
+        {
+          "file": "sections/viem-dia-dem-dot-song-do-vi-khuan.txt",
+          "sha256": "9869b8dc0ca79627e72d4786707586598af6a5bd2b524b9280a187814603ee8b"
+        },
+        {
+          "file": "sections/viem-gan-virus-b-man-tinh.txt",
+          "sha256": "32acc275308f22e0839ea380bf992bf740a27acffba3544b29c7dd478b2ccc31"
+        },
+        {
+          "file": "sections/viem-gan-virus-c.txt",
+          "sha256": "9fef818fc88c022134c4e10c4db6016901ce69bc023e7cb96681bf75fbae06b0"
+        },
+        {
+          "file": "sections/viem-khop-dang-thap.txt",
+          "sha256": "80c01026f49e31892ae326e2cd3bc78157593979696dc868ea8b072ceb113bda"
+        },
+        {
+          "file": "sections/viem-khop-phan-ung.txt",
+          "sha256": "fe577428c926a309d8e16aa7c2eeca2830e0377eea82818fa4fef85615357c03"
+        },
+        {
+          "file": "sections/viem-mang-ngoai-tim.txt",
+          "sha256": "2848342f66f53b9eb0c423dd63a86262263a229cfcf4943bc75c72f0aed55ce0"
+        },
+        {
+          "file": "sections/viem-noi-tam-mac-nhiem-khuan.txt",
+          "sha256": "0794888542b03985944c7c10984dc0658e592699ef22bc0f5a98ea264efa4d81"
+        },
+        {
+          "file": "sections/viem-phe-quan-cap.txt",
+          "sha256": "3da6005c19e1382d6be193e63aa8a41529f30472c2e73383563efb5bd48f58d9"
+        },
+        {
+          "file": "sections/viem-phoi-benh-vien.txt",
+          "sha256": "0df4c7d49d834318a0d5c58bc25368bf4cfbe48814d782c0f1d2803513681484"
+        },
+        {
+          "file": "sections/viem-phoi-cong-dong.txt",
+          "sha256": "c21c7e8b52ef92cd7f40a86bb34a4a658f4974ecad5fcd7fc00442a63f9c6f6a"
+        },
+        {
+          "file": "sections/viem-quanh-khop-vai.txt",
+          "sha256": "b35d0486e4d95970485b782b869ba134fda0c85dcbba591e400bacb516f680e7"
+        },
+        {
+          "file": "sections/viem-tuy-cap.txt",
+          "sha256": "a8a8f9b76b4befbc436bcdc46cac80516281fcd1c2d5f9f926c8bd4eeb700d06"
+        },
+        {
+          "file": "sections/xo-cung-bi.txt",
+          "sha256": "f1f0e498761e0bacacfb4460acddff0c4670681cf86c03f643ed403e700f0d90"
+        },
+        {
+          "file": "sections/xo-gan.txt",
+          "sha256": "ea7163050a4d10b70b72d1721ae902e924e7223b8c23f59e956060d6fafa1160"
+        },
+        {
+          "file": "sections/xuat-huyet-tieu-hoa-do-loet-da-day-ta-trang.txt",
+          "sha256": "7f514bf822279c79bccb1dfb923433c842a6c94d553ed8c21df3bb3a73bed7ef"
+        },
+        {
+          "file": "sections/xuat-huyet-tieu-hoa-tren-do-tang-altmc.txt",
+          "sha256": "9c012d6d0a940b6371bf181641f0edb3f11cad5787ee316db94ab0ae5ce45eeb"
+        },
+        {
+          "file": "sources/EASL_Gallstones_2016.pdf",
+          "sha256": "c91b865677d0b4677623a69c21ed47a299f8c4922b354c6dd993ee3d5e4d3b70"
+        },
+        {
+          "file": "sources/WHO_ICD11_Reference_Guide.pdf",
+          "sha256": "55808d0d1d9358c1bdade96a29541c610624d8d6ebcb76081d87ec882cde48b1"
+        },
+        {
+          "file": "sources/WSES_Appendicitis_2020.pdf",
+          "sha256": "530143ba24421e8c35152ac41fda8e6f65b7e7dd682383d0067dd69ee152e5cc"
+        },
+        {
+          "file": "text/EASL_Gallstones_2016.txt",
+          "sha256": "7df009fb065abd69bc7a732eee155f68e6a191523bd993640265e8fec56c413e"
+        },
+        {
+          "file": "text/WHO_ICD11_Reference_Guide.txt",
+          "sha256": "412211154a965816e5bd09287fbed68b97142a28fbe6948f4ad7cdb9dd0e173d"
+        },
+        {
+          "file": "text/WSES_Appendicitis_2020.txt",
+          "sha256": "0c9fd76e955034e2877b0da8b5b41132738f1e9ca8a9aadf4f6e7fda6aafbbd1"
+        },
+        {
+          "file": "text/_extract.log",
+          "sha256": "ceb35711e65ee801c6fb229192f9c92b33f1319d5b28224e44a785e345bf93d0"
+        },
+        {
+          "file": "text/benh-hoc-noi-khoa-1.txt",
+          "sha256": "334899978958528b67eadbd01bfd168ece876d21b939b5f4e5d6892c305e2cb3"
+        },
+        {
+          "file": "text/benh-hoc-noi-khoa-2.txt",
+          "sha256": "3012f5f958c225c298d08ec05c835799ed8039a8804928e80b65826ac5675ad1"
+        },
+        {
+          "file": "text/chunks.jsonl",
+          "sha256": "6fccbb8fb45a51dee474ab70af349e5983f48df9a6844ef989ac1137b01c91dc"
+        },
+        {
+          "file": "text/giai-phau-yhn.txt",
+          "sha256": "9da1d70501fc8902d1fe95167a9a320c14f1ec037bf5aab429d8bdcbbb88beed"
+        },
+        {
+          "file": "text/guyton-13.txt",
+          "sha256": "7339fd0c82069c9a41654473a5cb620385e3521b458dd3fc4d2f2e0b09af3577"
+        },
+        {
+          "file": "text/guyton-15.txt",
+          "sha256": "80d7b43bf6c48dc601b7200fdd456b73e418059167707722125dca208456ccb3"
+        },
+        {
+          "file": "text/sinh-ly-hoc-byt.txt",
+          "sha256": "63b3d1c7bb947989a723aaa40cd1762272dc8f44320864a474d61c977c6e8d1e"
+        },
+        {
+          "file": "text/trieu-chung-hoc-1.txt",
+          "sha256": "c94156d1c09c20df5d9e7302d12d9d0bf00794138088b8b89d70266e3d8b0ae3"
+        },
+        {
+          "file": "text/trieu-chung-hoc-2.txt",
+          "sha256": "c8b54ff9140f6663be9b0350e3d804a7ff62a75009e773391a9bb400d2e8c74d"
+        },
+        {
+          "file": "translations/en.json",
+          "sha256": "7e31275176374d7927a4e89d9dfc76f4bf3d61f06837fe5d51f8b06f111234fe"
+        },
+        {
+          "file": "translations/source_vi.json",
+          "sha256": "f9edcfa3314eeeeddb6d2fdf6ba7b2a7051f5a173d42f60d14558fb7fb34061a"
+        },
+        {
+          "file": "translations/zh.json",
+          "sha256": "acd325bc7a814571435f3a893c1e21a0fb5a49a99e407c903a8745c799defcf1"
+        }
+      ]
+    },
+    {
+      "from": "research",
+      "to": "Soma_Fe/docs/research",
+      "files": [
+        {
+          "file": "wondersnap/ADAPTIVE-QUALITY-20261007.md",
+          "sha256": "45f8a163416d70481f671205edbab285c280f3f0d0714ba3a6b3b137b2c783d0"
+        },
+        {
+          "file": "wondersnap/ANCHOR-ROTATION-20261007.md",
+          "sha256": "18284bf5e9b0a2dd7364b8ac42762da6c7e750d7ffbd0e1fe9eebcfbc5ffb5fe"
+        },
+        {
+          "file": "wondersnap/INSPECTION-AUDIT.md",
+          "sha256": "20596e2e747ceec52ce1b2a32eced2098d55f9173c2c2d57c894b8225b5e42b3"
+        },
+        {
+          "file": "wondersnap/INTEGRATED-CAMERA-SCAN-20261007.md",
+          "sha256": "c3c630013bdd7811d5597d0592911077111a9f67a48e5413e89244fe4ce98099"
+        },
+        {
+          "file": "wondersnap/LABELS-SCAN-20261007.md",
+          "sha256": "009d696730936685263d0416f4812b3865e5e2409acacae7b4140414aa16dce3"
+        },
+        {
+          "file": "wondersnap/RESTORED-SCAN-20261007.md",
+          "sha256": "d0806c8efd95bdc9b2fb547b4d223b453e0ba44c6b4a6d894fd05c22a55556bb"
+        },
+        {
+          "file": "wondersnap/RULES-CHO-AGENT.md",
+          "sha256": "94771eedf84737e037610d8c573ec9364924aabc95b04931fee85a1c741d0c5b"
+        },
+        {
+          "file": "wondersnap/SOURCE-DETAIL-20261007.md",
+          "sha256": "e9c4fcdfea8653436d6806e92dbb55dd80f3ca1f9526480607a73388d2c4bb28"
+        },
+        {
+          "file": "wondersnap/UI-UX-AUDIT-20261008.md",
+          "sha256": "e8a7d705ad56bf150f877cb287bd878e668d41d240b9cba8b80431aed3cdc771"
+        },
+        {
+          "file": "wondersnap/UI-UX-camera-off-20261008.png",
+          "sha256": "1cc475cbca1148e314704e6eb8d6a5920b5788d1a66fe13af6c8bd8c088caaeb"
+        },
+        {
+          "file": "wondersnap/UI-UX-desktop-20261008.png",
+          "sha256": "52ad06f1d671c47619aeee444213ab5bfb05cba21762e31668d1e43db3b6b557"
+        },
+        {
+          "file": "wondersnap/UI-UX-laptop-20261008.png",
+          "sha256": "fdf624a56e0bb36b2d8aaec39059d9ce060f531b2027fd85474cb8a08e6e9f6b"
+        },
+        {
+          "file": "wondersnap/UI-UX-mobile-20261008.png",
+          "sha256": "be11e52f789df59ba1e885b51fd1f6982b4fba9dc51ee2f0daaa6a8e8d05f69e"
+        },
+        {
+          "file": "wondersnap/UI-UX-mobile-expanded-20261008.png",
+          "sha256": "eaad8512fe77cb5fc7daaebf8cd42baf71cfb6e74b3e86dc8b7c4658c9029674"
+        },
+        {
+          "file": "wondersnap/UI-UX-muscles-20261008.png",
+          "sha256": "3239994c28e9caf65f59d616264405c2e79a44e52ebdb46d99dd9191c58da5d3"
+        },
+        {
+          "file": "wondersnap/VISION-BONE-SPLIT-20261008.png",
+          "sha256": "6e3bcdb4e0c1ad966ba29c7fdd2a2b9846b26f59740961b80e89c0dfaa80b283"
+        },
+        {
+          "file": "wondersnap/VISION-FOREARM-SPLIT-20261008.png",
+          "sha256": "000a6d2c03cd3e0d25670f93c1ed02748d5ea578521b81b56fe56e64f9db9472"
+        },
+        {
+          "file": "wondersnap/VISION-HANDED-LIKE-20261008.png",
+          "sha256": "c880c52e09d0002f347feb0378986e75f178cf605e47f773e10c85eac6fce616"
+        },
+        {
+          "file": "wondersnap/VISION-ICONS-20261008.png",
+          "sha256": "6d063d5279e93285c86089ec6c67c7ba234c9c8428919bbb649b2fab4809885b"
+        },
+        {
+          "file": "wondersnap/VISION-INSPECTION-20261008.png",
+          "sha256": "589d4350cacc92b7a1a2fa782ff8d20c4c8941bfcf297107bacfbce17ce25150"
+        },
+        {
+          "file": "wondersnap/VISION-INSPECTION-CONTROLS-20261008.md",
+          "sha256": "fb48fcebf2655e95c38176374e9e7058e059dcef006e1437039795f02fcf95aa"
+        },
+        {
+          "file": "wondersnap/VISION-SCAN-FIX-20261008.md",
+          "sha256": "e9fefda7eabaaaf0bdf94ada9930f946bd325f4a8ddeee9ecf08554be0402ee4"
+        },
+        {
+          "file": "wondersnap/VISION-SCAN-LAYOUT-20261008.png",
+          "sha256": "43d29be094b2e39cabceabe71ec20e9e6036ee6371fb19b35ce1cc5cf2958b29"
+        },
+        {
+          "file": "wondersnap/VISION-SCAN-MOBILE-QA-20261008.png",
+          "sha256": "9243cda72b9c18518e69160f2f0d24b2dca4f86eb59bd735310370cfa4590d2c"
+        },
+        {
+          "file": "wondersnap/VISION-UPRIGHT-FRONT-20261008.png",
+          "sha256": "601a5d8331a0411e05aeed7490d8b22fc42e07873000d67890845e88fe1de74b"
+        },
+        {
+          "file": "wondersnap/VISION-WRIST-GRAB-20261008.png",
+          "sha256": "30f29f781301aa1704e40b04e5a81219002a971037b666e6a71d2f53b695cdf2"
+        },
+        {
+          "file": "wondersnap/VOICE-AUDIT-20261007.md",
+          "sha256": "86e5d1daacb077aa0172bd873dfd5d82f91e025ae0aabd614119cdc2f190edbe"
+        },
+        {
+          "file": "wondersnap/VOICE-STANDARDIZATION-20261008.md",
+          "sha256": "cdded21513c5465ecc0fd5b8f1a8eaed9ff6148e7f8ced8ca7c65767fea29ac3"
+        },
+        {
+          "file": "wondersnap/WONDER-ROTATION-AUDIT-20261008.md",
+          "sha256": "41fe50c8a6cea04eba09be5bbefe059216eb97158994ea6be0dbfd20027b394e"
+        },
+        {
+          "file": "wondersnap/adaptive-quality.jpg",
+          "sha256": "c4f8125fd5d6c752f70465725b5b98defa2f45411e44694f1641696d98ead767"
+        },
+        {
+          "file": "wondersnap/atlas-transition.jpg",
+          "sha256": "6487f87bd7859322e76f82ae111d25c1907228008a852e6a7c8818871b94e1ba"
+        },
+        {
+          "file": "wondersnap/audit-results.json",
+          "sha256": "eb00b54cfce7b3da61116ee9a94d8fbc2599cdb986fe26fc44db739810dc8863"
+        },
+        {
+          "file": "wondersnap/bodyparts3d-bust.jpg",
+          "sha256": "978645c181fb580c6d819ddcf44a00959cfeac5a8251f3a6210c72f08b9fab27"
+        },
+        {
+          "file": "wondersnap/camera-toast-fix.jpg",
+          "sha256": "8a3f643bd4cb8e97ea3205c125c4c1eda02fa3004a2667dbb8825e692c6179ef"
+        },
+        {
+          "file": "wondersnap/detail-tags.jpg",
+          "sha256": "c6769567019aa039f6cc8bd6b725ee876d195ecab1dc1fbec48ac9b17b462f61"
+        },
+        {
+          "file": "wondersnap/detailed-solid-hand.jpg",
+          "sha256": "2cd1b0ef8f898eab8968bb14bfa5a7755ba3fc5f44e80a46f00d334c515a9b30"
+        },
+        {
+          "file": "wondersnap/forearm-anchor-fixed.jpg",
+          "sha256": "4a0bacc174b5583645b81d959ac04306b7a6e1f29f1e83db47b55395dcbe69e6"
+        },
+        {
+          "file": "wondersnap/inspection-audit.json",
+          "sha256": "41eb43b1642ee06ffce11348f0dec8ecb4e3d508fd4e508c0a5603917688f65f"
+        },
+        {
+          "file": "wondersnap/inspection-scaphoid.jpg",
+          "sha256": "f7d6ee1e36201b55c5c82f31560b5d4ce8cee6eb4004735673f14f3378be95cd"
+        },
+        {
+          "file": "wondersnap/integrated-camera-scan.jpg",
+          "sha256": "54d28956b8aaf753f21887fcc55eb5759ed78f241bc92b299ec63f8800a394ce"
+        },
+        {
+          "file": "wondersnap/labels-exploded-fixed.jpg",
+          "sha256": "62e4510debd0715a889950a78a7b35309dd68d508781beb02ff4a37d0bb17926"
+        },
+        {
+          "file": "wondersnap/muscle-separation.jpg",
+          "sha256": "39aa7da7c2e0a54941f31c7392b8bd5f39bac153bf256654efef664416fb567e"
+        },
+        {
+          "file": "wondersnap/neutral-anatomy-workspace.jpg",
+          "sha256": "6b87284d308190ef601aa9df5a4ff626a30b84b084b2dd155334c9623c19c848"
+        },
+        {
+          "file": "wondersnap/restored-scan-camera-kept.jpg",
+          "sha256": "42217d4b9aaaeb7c52305f770c6cdca9142afbd9191f63d3c3831d39390d0d55"
+        },
+        {
+          "file": "wondersnap/restored-scan-framing.jpg",
+          "sha256": "d16444fb559c8f7d78111d81df1c3477cfed1d76ca87e93ad4fa24fb3835b0a2"
+        },
+        {
+          "file": "wondersnap/restored-scan-results.jpg",
+          "sha256": "ed7fe3e555ac27bd6705e0cbfd6bfdd8225f182b0ff06a26c3350def67221457"
+        },
+        {
+          "file": "wondersnap/scan-control-handoff.jpg",
+          "sha256": "9067563c3f50db7b432c4b4443416c081861eee5bca381a78f39c9dc2e760f3b"
+        },
+        {
+          "file": "wondersnap/scan-unified-fixed.jpg",
+          "sha256": "f6adfe765c54837dcb00df3e4fc0ad79aad69ddc045a80e684c554536052f56d"
+        },
+        {
+          "file": "wondersnap/solid-bust.jpg",
+          "sha256": "49ab32b481370db77e59cded49a56a90c4ec66f10b254b21ea8b7ab0cec1c214"
+        },
+        {
+          "file": "wondersnap/solid-pancreas-spleen.jpg",
+          "sha256": "52d0866ea8f71ba1abd0270067e440f57aa2763623ad83e48010710a8293f952"
+        },
+        {
+          "file": "wondersnap/solid-separated-systems.jpg",
+          "sha256": "fbb03459b5b0004f88191444669d5ae4390954f81fd0cb5d0b98193010d7620c"
+        },
+        {
+          "file": "wondersnap/source-detail-hand.jpg",
+          "sha256": "8d01c823df5cbf2ea7072dab9096831edbfeca350c6d26e277e9fc87bf07cdf1"
+        },
+        {
+          "file": "wondersnap/source-detail-head.jpg",
+          "sha256": "b2b6c641972fb57a818935d201c18fe7b665e0d7ff793e76f306712313359134"
+        },
+        {
+          "file": "wondersnap/surface-picking-context.jpg",
+          "sha256": "a334bfc926d5f35332f725fee32620e664f7d2ebc53c7384ab45b0eb5980cdcb"
+        },
+        {
+          "file": "wondersnap/unified-bust.jpg",
+          "sha256": "ae41df1d42d954c1d454eb3071225d0d723362e13ac8cbd895b3ca4a130dcd57"
+        },
+        {
+          "file": "wondersnap/vision-voice-audit.json",
+          "sha256": "4ecdf525fd6cb6ca982745edca7fc4000e0c9d186af830e0864f44fecdff0ebf"
+        },
+        {
+          "file": "wondersnap/voice-standardization-20261008.png",
+          "sha256": "924154751d5192fb81a0ad73441562f97d1ef4c7a03da086ef5859c8ab30f5a8"
+        }
+      ]
+    },
+    {
+      "from": ".thumbnails-cu",
+      "to": "Soma_Fe/docs/reference-assets/thumbnails",
+      "files": [
+        {
+          "file": "ban-chan-chi-tiet.jpg",
+          "sha256": "e4c26ac1386fd78c59bec6814a358950a4ab6748b93b60a006c4d16bda5e1f13"
+        },
+        {
+          "file": "ban-chan.jpg",
+          "sha256": "fe428483142a0ef3f184af0cfe6cb3a28895e9598d2d89c2da55bcb58e27a441"
+        },
+        {
+          "file": "ban-tay.jpg",
+          "sha256": "39259aba1db5ffed6a853812564f5f3448661455514dbe55b2e66d4c1b8be11e"
+        },
+        {
+          "file": "bo-rang.jpg",
+          "sha256": "f8b0c628cfb7f5d8aa62d568e2e7b331180cde5f32021b0ce1d1641438faf4cc"
+        },
+        {
+          "file": "cang-chan-ban-chan.jpg",
+          "sha256": "4399daca9289d86bd78cac827bd58eca6197a47fb8060c45b9be0c2205d57975"
+        },
+        {
+          "file": "chau-hong-day-chau.jpg",
+          "sha256": "cabe2fbd5100c4ff804bb44318be62bc656df76ae21b1e46ec3dce926b221cd8"
+        },
+        {
+          "file": "co-bung.jpg",
+          "sha256": "7c6070b7350f81b62a6a0334d9c009bb7d6514b80432c8c88f77f49a38103514"
+        },
+        {
+          "file": "co-canh-tay.jpg",
+          "sha256": "72412bf6fe5cecc6f5eb4bc58c03f938135699c67e80ad00a9400f31a938396d"
+        },
+        {
+          "file": "co-dui-mong.jpg",
+          "sha256": "ce2efd369f8e171d8469d39469254b39afc483d70d3f7b81f4aff920d52b282c"
+        },
+        {
+          "file": "co-hoanh-day-du.jpg",
+          "sha256": "886ffaa96c8665b3a58aecd708c20665fa0777a23903cbe8b8fda8584ad651d3"
+        },
+        {
+          "file": "co-mat-than-kinh-vii.jpg",
+          "sha256": "0ec4da0595b93e51716f5245ad55dda6ebdaa1e4ee73a2955e6ada56f73cd171"
+        },
+        {
+          "file": "co-mat.jpg",
+          "sha256": "8627febf64205c21b13c3acb8bd7bbd700f53ae2a54baccc2b6bee68066d2818"
+        },
+        {
+          "file": "co-quan-sinh-duc-nam.jpg",
+          "sha256": "d0f35927ee438cf679277eba3d8469fca0a78d67039ba5686bb966c4d62756fc"
+        },
+        {
+          "file": "co-tay-ong-co-tay.jpg",
+          "sha256": "bf6c5537a131afd8a9fe09d101737e115d8f7dc0a136f9b889041c522aac6c40"
+        },
+        {
+          "file": "cot-song-co.jpg",
+          "sha256": "7ae069afff31b609a2aadd8429f35a5d98ae4150021a80729165b128c583f619"
+        },
+        {
+          "file": "cot-song-nguc.jpg",
+          "sha256": "7115a68b5f5d98b3e973e1b8ddb8ca442c14c2d13cdf11b7ce7c6a6ee6bf177e"
+        },
+        {
+          "file": "cot-song-that-lung.jpg",
+          "sha256": "e012893234fbbaf218792e25a6011a0061798e0a53aa06697218cfc8b21eccde"
+        },
+        {
+          "file": "cot-song.jpg",
+          "sha256": "16640dd653b9b5e877bb441d69bd4b75409d19170036f5357bcdc1857756d5d4"
+        },
+        {
+          "file": "da-day-ta-trang.jpg",
+          "sha256": "3ed7623be0c3c62a7a4625ad405bcb731a0a4b2d77b2422e060dcb9c48b71ba1"
+        },
+        {
+          "file": "da-giac-willis.jpg",
+          "sha256": "a588e050cb09eda3528798828c775ff8f23d765a1e8d87a0db3dcd0dd6faea3a"
+        },
+        {
+          "file": "dai-nao.jpg",
+          "sha256": "d59be6e2b27c91f0520a66b324ec006a7e33aac942236f03be46640b28d56f02"
+        },
+        {
+          "file": "dai-vai-chi-tren.jpg",
+          "sha256": "134eb2686aa8e5bdddb1874e68fc8fb1d76d5f81e0b4e6745678511ed65c674e"
+        },
+        {
+          "file": "dam-roi-that-lung-cung.jpg",
+          "sha256": "910f26c40de18e4143789bc8f91e9c79cad9fbe47377643f48cd3d139dfc250e"
+        },
+        {
+          "file": "dong-mach-vanh.jpg",
+          "sha256": "035378a07d2da5204522e908d846a18b8d65a8d9ea9c3f8ec408211e6692c38b"
+        },
+        {
+          "file": "gan-duong-mat.jpg",
+          "sha256": "38189b4a936e62b1d798ce706c7c5c44821bf261b5b7b2d9c2ba1daea924434b"
+        },
+        {
+          "file": "giai-phau-ban-tay.jpg",
+          "sha256": "d4445bb9e1e0fc225726fcb61f84f4301379302e8a08ae67c4a093c9e5aae72b"
+        },
+        {
+          "file": "giai-phau-cang-tay.jpg",
+          "sha256": "ff0d982e54f41cf809790a33bc79d7fa69cf0c5886734bf9d7a5be0a0eb044f5"
+        },
+        {
+          "file": "giai-phau-canh-tay.jpg",
+          "sha256": "114f9a96932bb6ab90553c10c46e495f698e36b293c1977258ce6b2cf86da720"
+        },
+        {
+          "file": "giai-phau-co.jpg",
+          "sha256": "78ca928f82951d222e2d2ffb66f15ddb7a798e5c60013020926e5b554d0007bc"
+        },
+        {
+          "file": "giai-phau-dai-vai.jpg",
+          "sha256": "88bdee6723e94e44deb21da29da992a162114a11fb09c0c7ad5774f0627c8277"
+        },
+        {
+          "file": "giai-phau-dau.jpg",
+          "sha256": "f1551d24a965a7fbf055822b7f08ac4b348d51e5a5ecbf1c52be01cf225c6bba"
+        },
+        {
+          "file": "giai-phau-gan.jpg",
+          "sha256": "ca06bbe9197fcc5d9bd4e841b3983813f0418fb611e2abc0c0281f8eb5fb6bf2"
+        },
+        {
+          "file": "giai-phau-mat.jpg",
+          "sha256": "876ac1bd7e2decd5d48e77a738ccedca6ef4897fe7fd89d705015f0dd0a5f454"
+        },
+        {
+          "file": "giai-phau-phoi.jpg",
+          "sha256": "1f81eb2c0f136fff82db4693e397b7f87d65484e1d3e4c919042b37c2264e49a"
+        },
+        {
+          "file": "giai-phau-so.jpg",
+          "sha256": "a5e7e49a0454290fb87c6713f3f22bd2c60449f899c99833dc2488e8625ebc59"
+        },
+        {
+          "file": "giai-phau-than.jpg",
+          "sha256": "1aba6198b3da8414f6cc897e22c66a5b28d6e410f20a48a08374e5f1c09fc6cf"
+        },
+        {
+          "file": "giai-phau-tim.jpg",
+          "sha256": "53c1bdb3eb763cb95e2853ddaa7b67ea9532143c57645eae6b717d52ee9a0e1a"
+        },
+        {
+          "file": "gian-nao-he-vien.jpg",
+          "sha256": "26c931ef1572f6a442476a7dffbc55255010447963b8efbbffc192151f6d4911"
+        },
+        {
+          "file": "hau-thanh-quan.jpg",
+          "sha256": "5b6a499b631c9b50c46d10bf475fa8140953114f0628c3d019477c1b5b680687"
+        },
+        {
+          "file": "he-bach-huyet.jpg",
+          "sha256": "0c9b3d0c058d2b6d48193c6906a06e64219e7b38b0ede11b0bd961a19dc24b4a"
+        },
+        {
+          "file": "he-dong-mach-chu.jpg",
+          "sha256": "4b87e7d8d27bec7aec8927c9d8f855bbeebb1927bddd0269cfa2bf3e5966090a"
+        },
+        {
+          "file": "he-mac.jpg",
+          "sha256": "aff0b510be2b7d0ebacc97c9d028c2adcaceccf2aa1bb2695b51112cd85780a6"
+        },
+        {
+          "file": "he-sinh-san-nam.jpg",
+          "sha256": "38e69f24c4ea4c38cd99c2785ba5e1f25c5381b7880659eebf8ff1cb0c60a225"
+        },
+        {
+          "file": "he-thinh-giac.jpg",
+          "sha256": "90a7e60fef4ed788184e7b8194c59102392df2292ee8e78fc99a35b84d114e66"
+        },
+        {
+          "file": "he-tiet-nieu.jpg",
+          "sha256": "39369f602d81f7e0f479b3244001c5c701c69ad59c237da59081b591dc0ee7b4"
+        },
+        {
+          "file": "he-tinh-mach-chu-cua.jpg",
+          "sha256": "0cdb379ccf4455bc6f4ba3a2180ef9d42263a9ea97fe0f865627abc23295ef1b"
+        },
+        {
+          "file": "ho-khoeo.jpg",
+          "sha256": "b2d95bace7225578a26488fd8fa0454db12c9dcbc0530d33d36826b5a82d8ed8"
+        },
+        {
+          "file": "hoc-mat.jpg",
+          "sha256": "0da0239616f8c4e9c29a3827f7122e82f77163eeb2a29bd716a681da564281fc"
+        },
+        {
+          "file": "khoang-sau-phuc-mac.jpg",
+          "sha256": "063e2aaf9f49df2fc132b4f98ab0b79cf2d970af892e2c393fef588cbf03fbe9"
+        },
+        {
+          "file": "khop-co-chan.jpg",
+          "sha256": "06bc8b5352159249cd1a1ead8858333abad19fffc0c7fa8383b3b681ee1bc409"
+        },
+        {
+          "file": "khop-goi.jpg",
+          "sha256": "f80bdc16a3a54b23a69f16f043c28314cd2fd6d7e36c9d4ed9b62b36741e5a81"
+        },
+        {
+          "file": "khop-hang-dui.jpg",
+          "sha256": "a34f4a5e27f14fe79952c17c295398519e5e4347ecd7540506de1ac71e1657cc"
+        },
+        {
+          "file": "khop-hang.jpg",
+          "sha256": "a1fbbeac6e2d0b22d021dcd7a01de43fe8451febc12005f2ce576f06c13ddfdc"
+        },
+        {
+          "file": "khop-khuyu.jpg",
+          "sha256": "023024b49fcbed524c8eaace7200e1941b59f9e87997c9bcad7e2ef241432fdb"
+        },
+        {
+          "file": "khop-thai-duong-ham.jpg",
+          "sha256": "fb61067f75393f41ad742aaaf7c1516e763d2c34cd0fcdd186f93804a78cb67d"
+        },
+        {
+          "file": "khop-vai-khuyu.jpg",
+          "sha256": "a05f24983c0c033d11742e2bf67b1438acf905f8e072ff9b4c501d9e1bf75ec1"
+        },
+        {
+          "file": "long-nguc.jpg",
+          "sha256": "f16ae99659ba48965c5f97dec7b3d357c8ca5c1d68cee5d50f6bf2eecc1c8a8e"
+        },
+        {
+          "file": "mat-cat-ngang-bung.jpg",
+          "sha256": "5f80cf0f8f9788a3bd59b8061608bf1084d08f6a236f8d15c4dc5dd47edbdf18"
+        },
+        {
+          "file": "mieng-luoi-rang.jpg",
+          "sha256": "fc6a9157a6ec5daa8d48e578f57caa43a8e4c318145ecf28abedc0578857108a"
+        },
+        {
+          "file": "mui-xoang.jpg",
+          "sha256": "0e961cef22a0f8014139c139ca73784f25c4daeeb9b7fc3c89b302b34750dbd5"
+        },
+        {
+          "file": "nao-that-mang-nao.jpg",
+          "sha256": "7697c1af8eb0b75b9d394dd70731d9346ea2ab051de15e23a769be7520138bb8"
+        },
+        {
+          "file": "phoi-cay-phe-quan.jpg",
+          "sha256": "c36e6a93e8f8639c0a484a2ef97df432d8d21a43aec05051eec265fceb496111"
+        },
+        {
+          "file": "phuc-mac-mac-treo.jpg",
+          "sha256": "937c0446d5d7240556f587b84ca4361c202f53fd2869d580da316189213c20e1"
+        },
+        {
+          "file": "ruot-non-ruot-gia.jpg",
+          "sha256": "9fbd6a13db88274ca148062f34ed2566e8117ae7f53b8d0c5a1db6f13909d992"
+        },
+        {
+          "file": "so-nen-so.jpg",
+          "sha256": "16d50a51185ab9a2cd61693a3bf0525358c834fcf21196419dc133a7136c315e"
+        },
+        {
+          "file": "tai-day-du.jpg",
+          "sha256": "e347829a2e92829b41dcd5efcedf3b40e9c5a1d67e925335dea64e3c311f6b2d"
+        },
+        {
+          "file": "tam-giac-co.jpg",
+          "sha256": "a311c5598d93a03e4dfe70fbcd146d9da718c04151d581add4afeccccd4f188b"
+        },
+        {
+          "file": "than-nao-day-so-full.jpg",
+          "sha256": "34f5b1b2edcf4501bdc1e03e553e154e1329abe29dc6d1c05a48c0c5b2675b98"
+        },
+        {
+          "file": "than-nao-day-so.jpg",
+          "sha256": "03c5dcf3b670fd02311885c878eb231a710078df1a4651e1a648009b2ccf9e32"
+        },
+        {
+          "file": "than-nieu-quan.jpg",
+          "sha256": "1292f078731dcd024aa3d59eddb4a88d0b122703537687244d56632670fb4d8f"
+        },
+        {
+          "file": "thanh-bung.jpg",
+          "sha256": "fac69af0fed1e34f696dd4cfe6defaa1f5a4f09905db390b1c912cfb6d4bb9fe"
+        },
+        {
+          "file": "thanh-nguc.jpg",
+          "sha256": "b7f4130b5e167c59397a3e0a320da4d63b0318247a691c81db4beb4cad406339"
+        },
+        {
+          "file": "thanh-quan.jpg",
+          "sha256": "061da7040338150dd2b45b8688161a65d679ecaaa703b66849f54f33318caeeb"
+        },
+        {
+          "file": "tieu-nao-day-du.jpg",
+          "sha256": "052d2eb320e288b0d5101cefaede624b482f3ebadf9347bdf7af770f31a71b1f"
+        },
+        {
+          "file": "tieu-nao.jpg",
+          "sha256": "f8f38c649685946b0b2cee8483045e86bbb3ab33e01911613f908f79685bf636"
+        },
+        {
+          "file": "tim-day-du.jpg",
+          "sha256": "d414ea40b1795cd3ad82e0e3decac9f455e76fdc854ee5ad86b674e1a64f341f"
+        },
+        {
+          "file": "tong-quan-he-tieu-hoa.jpg",
+          "sha256": "e97f9114178d4c40f08e90e9003884efc965c86cbd6601f77adf4788abea01f6"
+        },
+        {
+          "file": "trung-that.jpg",
+          "sha256": "113493af6f2bab09b7f9d64490b44de76ce8b080e6be68caa194f7a1fbb2678b"
+        },
+        {
+          "file": "tuy-lach.jpg",
+          "sha256": "ef6a0aadcbe44c9992a02d9f5bc361b817fc6354438051f96af8fd5b27e14327"
+        },
+        {
+          "file": "tuy-song-dam-roi.jpg",
+          "sha256": "f2e74695573a0b6d81e4252df488e33e45d9a054360f2f1f97b09674e3918216"
+        },
+        {
+          "file": "tuyen-noi-tiet.jpg",
+          "sha256": "d4c63dceca44259ea643bd685a1f818aedfcf0cbf1b25e2c558a02f0c6369d1c"
+        },
+        {
+          "file": "tuyen-nuoc-bot.jpg",
+          "sha256": "f7212156c15612bf04a3a721b53ce47d064ffb036b099cc307ecd59700ddca5e"
+        },
+        {
+          "file": "vai-ho-nach.jpg",
+          "sha256": "4e5103fe0ec14d632d02c8f3d7759146af1495ec94203f260f58896ecde45cca"
+        },
+        {
+          "file": "vung-ben.jpg",
+          "sha256": "1bf94cef30970887a6d1f4950e2fa65f454a462fe323a07eb2afaa84c0939aef"
+        },
+        {
+          "file": "vung-lung.jpg",
+          "sha256": "c2e60495743ae8c7b52a40076a9dccbc60ade416c2576ac938eeacfe804fee2e"
+        },
+        {
+          "file": "vung-mong.jpg",
+          "sha256": "dae40fdbf9008832fca70b0cb122631870a1c557a667293c5dd0152859be0a6e"
+        },
+        {
+          "file": "xoang-tinh-mach-mang-cung.jpg",
+          "sha256": "634a480f8b2bfd57c7b38bc5457cf9219b6ff21abaec30445f382923d5383654"
+        }
+      ]
+    },
+    {
+      "from": "15cd9501-37f8-4739-8dd9-a616d6197a39.jpg",
+      "to": "Soma_Fe/docs/reference-assets/15cd9501-37f8-4739-8dd9-a616d6197a39.jpg",
+      "files": [
+        {
+          "file": "15cd9501-37f8-4739-8dd9-a616d6197a39.jpg",
+          "sha256": "f9fa4d53ed667c7b35f6b8650e2d92cf1872acfebf0a0214b6b1036717e3f83e"
+        }
+      ]
+    },
+    {
+      "from": "91c6229d-ed6e-40f7-9472-9f6fedce4ea4.jpg",
+      "to": "Soma_Fe/docs/reference-assets/91c6229d-ed6e-40f7-9472-9f6fedce4ea4.jpg",
+      "files": [
+        {
+          "file": "91c6229d-ed6e-40f7-9472-9f6fedce4ea4.jpg",
+          "sha256": "44d4e8cfabb6d6aa776edea9b790efe4b873009dea599cacc0645abd5fa77291"
+        }
+      ]
+    },
+    {
+      "from": "e5546594-ccc2-4838-9f29-79742249802b.jpg",
+      "to": "Soma_Fe/docs/reference-assets/e5546594-ccc2-4838-9f29-79742249802b.jpg",
+      "files": [
+        {
+          "file": "e5546594-ccc2-4838-9f29-79742249802b.jpg",
+          "sha256": "43c1cc82fb75a3f4962b9f224a33f2aa5ec36b49797da53bec5c5603c9ba65f0"
+        }
+      ]
+    },
+    {
+      "from": "Gemini_Generated_Image_re34elre34elre34.png",
+      "to": "Soma_Fe/docs/reference-assets/Gemini_Generated_Image_re34elre34elre34.png",
+      "files": [
+        {
+          "file": "Gemini_Generated_Image_re34elre34elre34.png",
+          "sha256": "c101ee4c2ba25d3da9ce47593c263a260abecf63eac589e0f8f4515c1a9585c9"
+        }
+      ]
+    },
+    {
+      "from": "video_contact.jpg",
+      "to": "Soma_Fe/docs/reference-assets/video_contact.jpg",
+      "files": [
+        {
+          "file": "video_contact.jpg",
+          "sha256": "5efb191a69634a7a6f5b495ac5aa06ac7c8dee8f051bfffdc743366610c55788"
+        }
+      ]
+    },
+    {
+      "from": "video_detail.png",
+      "to": "Soma_Fe/docs/reference-assets/video_detail.png",
+      "files": [
+        {
+          "file": "video_detail.png",
+          "sha256": "5ff75394d0897714438acabf1fb6c21af9114578dc44c467a9e300c86fd265f4"
+        }
+      ]
+    }
+  ],
+  "verifiedAt": "2026-10-14T16:40:36.891Z",
+  "passed": true,
+  "verifiedFiles": 1020
+}

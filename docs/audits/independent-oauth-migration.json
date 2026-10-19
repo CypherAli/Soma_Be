@@ -1,0 +1,46 @@
+{
+  "beforeAt": "2026-10-15T05:15:02.864Z",
+  "dump": ".backup-qa/oauth-identities-before-1792041302131.dump",
+  "users": [
+    {
+      "id": "cmsy16pdx00002o8t78ds7lhb",
+      "fingerprint": "2d1d5b0fa66d1b4de7ad6dc55cef23e4"
+    },
+    {
+      "id": "cmszjwute0000tw8ta3bwbu3b",
+      "fingerprint": "b0d7cfa12967b8228c4b67d995c46ab1"
+    },
+    {
+      "id": "cmv91o3ao0002ns8twuy5t9ts",
+      "fingerprint": "70723ebea886714921845e393ad67950"
+    }
+  ],
+  "learning": {
+    "personal_docs": {
+      "count": 2,
+      "fingerprint": "26eb33b9c3102195f4dfe741543b43b7"
+    },
+    "personal_questions": {
+      "count": 20,
+      "fingerprint": "c54da82f68e6c18aa2be7c9e84c3d4f0"
+    },
+    "quiz_attempts": {
+      "count": 3,
+      "fingerprint": "8dafad68aa12a6a7a4b17588c3c237c1"
+    },
+    "review_items": {
+      "count": 37,
+      "fingerprint": "76668411d9c40ccb76563c7553c8c528"
+    },
+    "study_paths": {
+      "count": 2,
+      "fingerprint": "e9c62c0cd4e1c19b0f8bd6a298725bf2"
+    },
+    "chat_memory": {
+      "count": 0,
+      "fingerprint": "d41d8cd98f00b204e9800998ecf8427e"
+    }
+  },
+  "verifiedAt": "2026-10-15T05:19:45.804Z",
+  "passed": true
+}

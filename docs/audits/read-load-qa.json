@@ -1,0 +1,512 @@
+{
+  "at": "2026-10-14T13:01:27.134Z",
+  "environment": "local workstation; read-only HTTP",
+  "requests": 100,
+  "concurrency": 20,
+  "failures": 0,
+  "p50": 497,
+  "p95": 1086,
+  "max": 1614,
+  "rows": [
+    {
+      "route": "/api/species",
+      "status": 200,
+      "ms": 574
+    },
+    {
+      "route": "/api/health",
+      "status": 200,
+      "ms": 625
+    },
+    {
+      "route": "/api/species",
+      "status": 200,
+      "ms": 570
+    },
+    {
+      "route": "/api/health",
+      "status": 200,
+      "ms": 571
+    },
+    {
+      "route": "/api/species",
+      "status": 200,
+      "ms": 572
+    },
+    {
+      "route": "/api/health",
+      "status": 200,
+      "ms": 580
+    },
+    {
+      "route": "/api/species",
+      "status": 200,
+      "ms": 583
+    },
+    {
+      "route": "/api/health",
+      "status": 200,
+      "ms": 590
+    },
+    {
+      "route": "/api/species",
+      "status": 200,
+      "ms": 593
+    },
+    {
+      "route": "/api/species",
+      "status": 200,
+      "ms": 605
+    },
+    {
+      "route": "/api/health",
+      "status": 200,
+      "ms": 97
+    },
+    {
+      "route": "/api/health",
+      "status": 200,
+      "ms": 94
+    },
+    {
+      "route": "/api/species",
+      "status": 200,
+      "ms": 86
+    },
+    {
+      "route": "/api/health",
+      "status": 200,
+      "ms": 698
+    },
+    {
+      "route": "/api/species",
+      "status": 200,
+      "ms": 131
+    },
+    {
+      "route": "/api/health",
+      "status": 200,
+      "ms": 109
+    },
+    {
+      "route": "/api/species",
+      "status": 200,
+      "ms": 123
+    },
+    {
+      "route": "/api/pathologies",
+      "status": 200,
+      "ms": 778
+    },
+    {
+      "route": "/api/pathologies",
+      "status": 200,
+      "ms": 840
+    },
+    {
+      "route": "/api/health",
+      "status": 200,
+      "ms": 874
+    },
+    {
+      "route": "/api/pathologies",
+      "status": 200,
+      "ms": 933
+    },
+    {
+      "route": "/api/health",
+      "status": 200,
+      "ms": 269
+    },
+    {
+      "route": "/api/species",
+      "status": 200,
+      "ms": 974
+    },
+    {
+      "route": "/api/species",
+      "status": 200,
+      "ms": 308
+    },
+    {
+      "route": "/api/health",
+      "status": 200,
+      "ms": 321
+    },
+    {
+      "route": "/api/pathologies",
+      "status": 200,
+      "ms": 1086
+    },
+    {
+      "route": "/api/pathologies",
+      "status": 200,
+      "ms": 1116
+    },
+    {
+      "route": "/api/species",
+      "status": 200,
+      "ms": 338
+    },
+    {
+      "route": "/api/health",
+      "status": 200,
+      "ms": 1150
+    },
+    {
+      "route": "/api/species",
+      "status": 200,
+      "ms": 498
+    },
+    {
+      "route": "/api/health",
+      "status": 200,
+      "ms": 497
+    },
+    {
+      "route": "/api/pathologies",
+      "status": 200,
+      "ms": 720
+    },
+    {
+      "route": "/api/pathologies",
+      "status": 200,
+      "ms": 749
+    },
+    {
+      "route": "/api/health",
+      "status": 200,
+      "ms": 451
+    },
+    {
+      "route": "/api/species",
+      "status": 200,
+      "ms": 389
+    },
+    {
+      "route": "/api/pathologies",
+      "status": 200,
+      "ms": 809
+    },
+    {
+      "route": "/api/pathologies",
+      "status": 200,
+      "ms": 832
+    },
+    {
+      "route": "/api/health",
+      "status": 200,
+      "ms": 486
+    },
+    {
+      "route": "/api/species",
+      "status": 200,
+      "ms": 485
+    },
+    {
+      "route": "/api/health",
+      "status": 200,
+      "ms": 386
+    },
+    {
+      "route": "/api/health",
+      "status": 200,
+      "ms": 389
+    },
+    {
+      "route": "/api/species",
+      "status": 200,
+      "ms": 345
+    },
+    {
+      "route": "/api/pathologies",
+      "status": 200,
+      "ms": 1614
+    },
+    {
+      "route": "/api/health",
+      "status": 200,
+      "ms": 323
+    },
+    {
+      "route": "/api/species",
+      "status": 200,
+      "ms": 289
+    },
+    {
+      "route": "/api/health",
+      "status": 200,
+      "ms": 291
+    },
+    {
+      "route": "/api/species",
+      "status": 200,
+      "ms": 511
+    },
+    {
+      "route": "/api/pathologies",
+      "status": 200,
+      "ms": 1059
+    },
+    {
+      "route": "/api/health",
+      "status": 200,
+      "ms": 347
+    },
+    {
+      "route": "/api/species",
+      "status": 200,
+      "ms": 346
+    },
+    {
+      "route": "/api/pathologies",
+      "status": 200,
+      "ms": 1135
+    },
+    {
+      "route": "/api/species",
+      "status": 200,
+      "ms": 445
+    },
+    {
+      "route": "/api/pathologies",
+      "status": 200,
+      "ms": 921
+    },
+    {
+      "route": "/api/pathologies",
+      "status": 200,
+      "ms": 1059
+    },
+    {
+      "route": "/api/health",
+      "status": 200,
+      "ms": 400
+    },
+    {
+      "route": "/api/species",
+      "status": 200,
+      "ms": 429
+    },
+    {
+      "route": "/api/pathologies",
+      "status": 200,
+      "ms": 1014
+    },
+    {
+      "route": "/api/health",
+      "status": 200,
+      "ms": 419
+    },
+    {
+      "route": "/api/species",
+      "status": 200,
+      "ms": 421
+    },
+    {
+      "route": "/api/health",
+      "status": 200,
+      "ms": 428
+    },
+    {
+      "route": "/api/species",
+      "status": 200,
+      "ms": 328
+    },
+    {
+      "route": "/api/health",
+      "status": 200,
+      "ms": 303
+    },
+    {
+      "route": "/api/pathologies",
+      "status": 200,
+      "ms": 948
+    },
+    {
+      "route": "/api/health",
+      "status": 200,
+      "ms": 311
+    },
+    {
+      "route": "/api/species",
+      "status": 200,
+      "ms": 267
+    },
+    {
+      "route": "/api/pathologies",
+      "status": 200,
+      "ms": 1112
+    },
+    {
+      "route": "/api/pathologies",
+      "status": 200,
+      "ms": 950
+    },
+    {
+      "route": "/api/species",
+      "status": 200,
+      "ms": 437
+    },
+    {
+      "route": "/api/health",
+      "status": 200,
+      "ms": 348
+    },
+    {
+      "route": "/api/species",
+      "status": 200,
+      "ms": 297
+    },
+    {
+      "route": "/api/health",
+      "status": 200,
+      "ms": 294
+    },
+    {
+      "route": "/api/species",
+      "status": 200,
+      "ms": 275
+    },
+    {
+      "route": "/api/pathologies",
+      "status": 200,
+      "ms": 775
+    },
+    {
+      "route": "/api/health",
+      "status": 200,
+      "ms": 296
+    },
+    {
+      "route": "/api/species",
+      "status": 200,
+      "ms": 245
+    },
+    {
+      "route": "/api/health",
+      "status": 200,
+      "ms": 244
+    },
+    {
+      "route": "/api/pathologies",
+      "status": 200,
+      "ms": 1026
+    },
+    {
+      "route": "/api/pathologies",
+      "status": 200,
+      "ms": 1034
+    },
+    {
+      "route": "/api/pathologies",
+      "status": 200,
+      "ms": 951
+    },
+    {
+      "route": "/api/species",
+      "status": 200,
+      "ms": 356
+    },
+    {
+      "route": "/api/health",
+      "status": 200,
+      "ms": 314
+    },
+    {
+      "route": "/api/species",
+      "status": 200,
+      "ms": 272
+    },
+    {
+      "route": "/api/health",
+      "status": 200,
+      "ms": 269
+    },
+    {
+      "route": "/api/species",
+      "status": 200,
+      "ms": 268
+    },
+    {
+      "route": "/api/pathologies",
+      "status": 200,
+      "ms": 839
+    },
+    {
+      "route": "/api/pathologies",
+      "status": 200,
+      "ms": 896
+    },
+    {
+      "route": "/api/health",
+      "status": 200,
+      "ms": 387
+    },
+    {
+      "route": "/api/pathologies",
+      "status": 200,
+      "ms": 910
+    },
+    {
+      "route": "/api/health",
+      "status": 200,
+      "ms": 394
+    },
+    {
+      "route": "/api/species",
+      "status": 200,
+      "ms": 354
+    },
+    {
+      "route": "/api/pathologies",
+      "status": 200,
+      "ms": 889
+    },
+    {
+      "route": "/api/health",
+      "status": 200,
+      "ms": 333
+    },
+    {
+      "route": "/api/species",
+      "status": 200,
+      "ms": 522
+    },
+    {
+      "route": "/api/pathologies",
+      "status": 200,
+      "ms": 929
+    },
+    {
+      "route": "/api/pathologies",
+      "status": 200,
+      "ms": 674
+    },
+    {
+      "route": "/api/pathologies",
+      "status": 200,
+      "ms": 948
+    },
+    {
+      "route": "/api/pathologies",
+      "status": 200,
+      "ms": 936
+    },
+    {
+      "route": "/api/pathologies",
+      "status": 200,
+      "ms": 930
+    },
+    {
+      "route": "/api/pathologies",
+      "status": 200,
+      "ms": 884
+    },
+    {
+      "route": "/api/pathologies",
+      "status": 200,
+      "ms": 787
+    }
+  ]
+}

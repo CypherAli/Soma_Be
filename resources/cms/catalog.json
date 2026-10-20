@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "contractHash": "ee372eac68d508739f744c557cde5c23ef6f3f10426a4370e301e580d393af97",
+  "contractHash": "f4798a16d1b06ca9c0b9ab714dc99c63226a0904a9d6de76d0a8ce02ec7b27da",
   "documents": [
     {
       "id": "atlas:FJ1252",
@@ -27246,6 +27246,28 @@
       }
     },
     {
+      "id": "copy:src/app/[locale]/nguon-du-lieu/page.tsx",
+      "title": "Chữ giao diện · page",
+      "source": "src/app/[locale]/nguon-du-lieu/page.tsx",
+      "category": "interface",
+      "payload": {
+        "texts": {
+          "t1mc9hxd_13": "Trở lại atlas",
+          "t4rikgu_4": "返回图谱",
+          "tmrpuk0_13": "Back to atlas",
+          "t1nbuguc_17": "Nguồn và ghi công",
+          "t1q4rthr_5": "来源与署名",
+          "t1tmcnxt_23": "Sources and attribution",
+          "t22avo8_116": "Bản ghi công gốc của atlas BodyParts3D, gồm nguồn hình học, giấy phép, các thay đổi đã thực hiện và tài sản lịch sử.",
+          "t8j4l4u_40": "BodyParts3D 图谱的原始署名，包括几何来源、许可、改编记录和历史资源。",
+          "tl9a0m1_117": "The original BodyParts3D atlas attribution, including geometry sources, licensing, adaptations and historical assets.",
+          "tinzvil_26": "Tải bản ghi công gốc (.md)",
+          "t16kw229_14": "下载原始署名文件 (.md)",
+          "te3yij7_35": "Download original attribution (.md)"
+        }
+      }
+    },
+    {
       "id": "copy:src/app/[locale]/oauth-callback/page.tsx",
       "title": "Chữ giao diện · page",
       "source": "src/app/[locale]/oauth-callback/page.tsx",
@@ -30126,7 +30148,6 @@
           "t96awue_7": "checked",
           "t1ser8jf_9": "unchecked",
           "t179wkws_34": "Không tải được danh mục giải phẫu.",
-          "t1shj4x3_18": "CẤU TRÚC ĐANG CHỌN",
           "t1uti0e0_22": "KHO CẤU TRÚC GIẢI PHẪU",
           "tzu219f_24": "CÁC CẤU TRÚC ĐÃ TÁCH RỜI",
           "t10mst6z_24": "NGƯỜI TRƯỞNG THÀNH · NAM",
@@ -30137,6 +30158,9 @@
           "t13k73vs_15": "Bảng điều khiển",
           "t1oc52r3_6": "active",
           "tuwzpgi_16": "Tìm một cấu trúc",
+          "t1srx1ua_4": "Nhãn",
+          "tbydnm0_2": "标签",
+          "t1t3p50q_6": "Labels",
           "t1yxcqsx_13": "Về bộ dữ liệu",
           "t1b8ek32_11": "mobile-open",
           "t1kyudil_17": "Các lớp giải phẫu",
@@ -30168,7 +30192,6 @@
           "t1twhp3z_29": "Đặt lại khung nhìn và các lớp",
           "t1htndha_7": "Đặt lại",
           "t5waqno_11": "Mở bảng lớp",
-          "tm44y8w_3": "Lớp",
           "t1n7vczl_18": "Tách rời giải phẫu",
           "t1qk7t94_5": "front",
           "t1fjjft_11": "Nguyên khối",
@@ -31426,6 +31449,26 @@
       "category": "interface",
       "payload": {
         "texts": {
+          "t9ligp5_3": "Tim",
+          "t1eqoqyr_5": "Heart",
+          "t82jqh3_2": "心脏",
+          "t14h7btn_3": "Não",
+          "tnmergz_5": "Brain",
+          "t18ki46p_3": "Gan",
+          "tgw8ef_5": "Liver",
+          "toxajlp_6": "Dạ dày",
+          "th3yxme_7": "Stomach",
+          "tu7eq59_4": "Lách",
+          "tpvc2mu_6": "Spleen",
+          "tb98hip_3": "Tụy",
+          "t164d83s_8": "Pancreas",
+          "t6ojevj_2": "胰腺",
+          "t16faymi_10": "Bàng quang",
+          "tzdhm5b_15": "Urinary bladder",
+          "t181qhpm_2": "膀胱",
+          "tukn3gg_8": "Khí quản",
+          "t19j7pgj_7": "Trachea",
+          "tk9b7k6_2": "气管",
           "tp6dz0d_4": "trái",
           "t52pxm8_4": "left",
           "t166r8m9_4": "phải",
@@ -58076,6 +58119,56 @@
             "description": "Sụn, dây chằng và các mô liên kết khác nâng đỡ, nối và ngăn cách các cấu trúc. Chúng giữ vững khớp và phân tán tải cơ học."
           }
         ]
+      }
+    },
+    {
+      "id": "data:src/lib/humanAtlas/partNames.ts#CONCEPT_NAMES",
+      "title": "CONCEPT_NAMES",
+      "source": "src/lib/humanAtlas/partNames.ts",
+      "category": "explanations",
+      "payload": {
+        "value": {
+          "heart": {
+            "vi": "Tim",
+            "en": "Heart",
+            "zh": "心脏"
+          },
+          "brain": {
+            "vi": "Não",
+            "en": "Brain",
+            "zh": "脑"
+          },
+          "liver": {
+            "vi": "Gan",
+            "en": "Liver",
+            "zh": "肝"
+          },
+          "stomach": {
+            "vi": "Dạ dày",
+            "en": "Stomach",
+            "zh": "胃"
+          },
+          "spleen": {
+            "vi": "Lách",
+            "en": "Spleen",
+            "zh": "脾"
+          },
+          "pancreas": {
+            "vi": "Tụy",
+            "en": "Pancreas",
+            "zh": "胰腺"
+          },
+          "urinary bladder": {
+            "vi": "Bàng quang",
+            "en": "Urinary bladder",
+            "zh": "膀胱"
+          },
+          "trachea": {
+            "vi": "Khí quản",
+            "en": "Trachea",
+            "zh": "气管"
+          }
+        }
       }
     },
     {
@@ -91948,11 +92041,6 @@
                 "FJ1599",
                 "FJ1600",
                 "FJ1601",
-                "FJ2418",
-                "FJ2419",
-                "FJ2429",
-                "FJ2430",
-                "FJ2437",
                 "FJ2542",
                 "FJ2543",
                 "FJ2544",
@@ -92002,12 +92090,9 @@
                 "zh": "心脏"
               },
               "parts": [
-                "FJ1730",
-                "FJ1731",
-                "FJ1752",
-                "FJ1767",
-                "FJ1814",
                 "FJ2417",
+                "FJ2418",
+                "FJ2419",
                 "FJ2420",
                 "FJ2421",
                 "FJ2422",
@@ -92017,12 +92102,15 @@
                 "FJ2426",
                 "FJ2427",
                 "FJ2428",
+                "FJ2429",
+                "FJ2430",
                 "FJ2431",
                 "FJ2432",
                 "FJ2433",
                 "FJ2434",
                 "FJ2435",
                 "FJ2436",
+                "FJ2437",
                 "FJ2438",
                 "FJ2439"
               ]
@@ -93187,6 +93275,8 @@
                 "FJ1376",
                 "FJ1377",
                 "FJ1381",
+                "FJ1730",
+                "FJ1731",
                 "FJ1732",
                 "FJ1733",
                 "FJ1734",
@@ -93207,6 +93297,7 @@
                 "FJ1749",
                 "FJ1750",
                 "FJ1751",
+                "FJ1752",
                 "FJ1753",
                 "FJ1754",
                 "FJ1756",
@@ -93219,6 +93310,7 @@
                 "FJ1763",
                 "FJ1764",
                 "FJ1766",
+                "FJ1767",
                 "FJ1768",
                 "FJ1769",
                 "FJ1770",
@@ -93262,6 +93354,7 @@
                 "FJ1811",
                 "FJ1812",
                 "FJ1813",
+                "FJ1814",
                 "FJ1815",
                 "FJ1816",
                 "FJ1816M",

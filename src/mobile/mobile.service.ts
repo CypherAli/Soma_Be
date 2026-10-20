@@ -38,6 +38,7 @@ type Scene = {
 @Injectable()
 export class MobileService {
   readonly root: string;
+  private readonly assetOrigins: Set<string>;
   constructor(
     private readonly content: ContentService,
     private readonly auth: AuthService,
@@ -47,6 +48,18 @@ export class MobileService {
   ) {
     this.root = resolve(
       config.get<string>('MOBILE_ASSETS_DIR') ?? 'resources/mobile',
+    );
+    this.assetOrigins = new Set(
+      ['API_URL', 'MOBILE_OAUTH_API_URL'].flatMap((key) => {
+        try {
+          const configured =
+            config.get<string>(key) ||
+            (key === 'API_URL' ? 'http://localhost:4000/api' : '');
+          return [new URL(configured).origin];
+        } catch {
+          return [];
+        }
+      }),
     );
   }
 
@@ -201,10 +214,23 @@ export class MobileService {
         ).value
       : null;
     const file = scene?.modelFile;
-    if (file?.startsWith('/api/content/assets/')) {
-      const asset = await this.content.asset(
-        file.slice('/api/content/assets/'.length),
-      );
+    let assetPath = file;
+    if (file && /^https?:\/\//.test(file)) {
+      const url = new URL(file);
+      assetPath =
+        this.assetOrigins.has(url.origin) &&
+        !url.username &&
+        !url.password &&
+        !url.search &&
+        !url.hash
+          ? url.pathname
+          : undefined;
+    }
+    const assetId = assetPath?.match(
+      /^\/api\/content\/assets\/([a-f0-9-]+)$/,
+    )?.[1];
+    if (assetId) {
+      const asset = await this.content.asset(assetId);
       if (asset.mime !== 'model/gltf-binary')
         throw new ServiceUnavailableException(
           'Tài nguyên mô hình không phải GLB',

@@ -31,6 +31,10 @@ import {
 
 @Injectable()
 export class ContentService {
+  readonly studySources: {
+    atlas: { page: number; hotspotKey: string }[];
+    schools: { id: string; file: string }[];
+  };
   readonly definitions: Map<string, ContentDefinition>;
   private readonly sourceMeshes: Record<string, string[]>;
   private readonly atlasParts: Set<string>;
@@ -60,8 +64,10 @@ export class ContentService {
       meshes: Record<string, string[]>;
       atlasParts: string[];
       contractHash?: string;
+      studySources?: ContentService['studySources'];
     };
     this.definitions = new Map(catalog.documents.map((doc) => [doc.id, doc]));
+    this.studySources = catalog.studySources ?? { atlas: [], schools: [] };
     this.sourceMeshes = catalog.meshes;
     this.atlasParts = new Set(catalog.atlasParts);
     this.contractHash = catalog.contractHash ?? '';

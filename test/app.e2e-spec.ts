@@ -115,6 +115,33 @@ describe('AppController (e2e)', () => {
       .expect(400);
   });
 
+  it('rejects client-supplied grades on the public attempt endpoint', () =>
+    request(app.getHttpServer())
+      .post('/api/study/attempts')
+      .send({
+        clientRequestId: 'f3548a21-1da2-42b3-8c55-417bc5eb5583',
+        source: 'model',
+        score: 1,
+        total: 1,
+        answers: [{ questionId: 'hand/bone#identify', answerId: 'hand/bone' }],
+      })
+      .expect(400));
+
+  it('requires a real session for an otherwise valid answer submission', () =>
+    request(app.getHttpServer())
+      .post('/api/study/attempts')
+      .send({
+        clientRequestId: 'f3548a21-1da2-42b3-8c55-417bc5eb5583',
+        source: 'model',
+        answers: [{ questionId: 'hand/bone#identify', answerId: 'hand/bone' }],
+      })
+      .expect(401));
+
+  it('does not accept a session token through an OAuth query string', () =>
+    request(app.getHttpServer())
+      .get('/api/auth/oauth/google?link=legacy-token')
+      .expect(400));
+
   afterAll(async () => {
     await app.close();
   });

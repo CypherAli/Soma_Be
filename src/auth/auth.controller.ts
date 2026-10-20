@@ -14,6 +14,7 @@ import {
   HttpException,
   HttpStatus,
   UnauthorizedException,
+  BadRequestException,
 } from '@nestjs/common';
 import { ApiBearerAuth, ApiOperation, ApiTags } from '@nestjs/swagger';
 import { AuthService } from './auth.service';
@@ -189,7 +190,11 @@ export class AuthController {
     @Param('provider') provider: 'google' | 'github' | 'facebook',
     @Query('link') link?: string,
   ) {
-    return { url: await this.authService.oauthUrl(provider, link) };
+    if (link !== undefined)
+      throw new BadRequestException(
+        'Dùng POST /auth/oauth/:provider/link với Bearer header để liên kết tài khoản.',
+      );
+    return { url: await this.authService.oauthUrl(provider) };
   }
 
   @ApiBearerAuth()

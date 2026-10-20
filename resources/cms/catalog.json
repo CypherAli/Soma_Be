@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "contractHash": "e20d94a504bdc6f78e7abe47f5733e0f3798c3d1f129a00670588ccb17d54225",
+  "contractHash": "ee372eac68d508739f744c557cde5c23ef6f3f10426a4370e301e580d393af97",
   "documents": [
     {
       "id": "atlas:FJ1252",
@@ -30350,6 +30350,7 @@
       "category": "interface",
       "payload": {
         "texts": {
+          "t163alcb_48": "Địa chỉ đăng nhập của nhà cung cấp không hợp lệ.",
           "tih94x9_18": "Tệp không phải ảnh",
           "tzmbb37_34": "Trình duyệt không hỗ trợ xử lý ảnh",
           "t1hxmwud_17": "Thiết bị không rõ",
@@ -355173,5 +355174,182 @@
     "FJ3657",
     "FJ3658",
     "FJ3659"
-  ]
+  ],
+  "studySources": {
+    "atlas": [
+      {
+        "page": 14,
+        "hotspotKey": "temporal"
+      },
+      {
+        "page": 16,
+        "hotspotKey": "mandible"
+      },
+      {
+        "page": 34,
+        "hotspotKey": "subclavian-artery"
+      },
+      {
+        "page": 59,
+        "hotspotKey": "epiglottis"
+      },
+      {
+        "page": 75,
+        "hotspotKey": "thyroid"
+      },
+      {
+        "page": 84,
+        "hotspotKey": "eyeball"
+      },
+      {
+        "page": 121,
+        "hotspotKey": "optic-nerve"
+      },
+      {
+        "page": 123,
+        "hotspotKey": "trigeminal"
+      },
+      {
+        "page": 125,
+        "hotspotKey": "vestibule"
+      },
+      {
+        "page": 127,
+        "hotspotKey": "vagus"
+      },
+      {
+        "page": 129,
+        "hotspotKey": "hypoglossal"
+      },
+      {
+        "page": 158,
+        "hotspotKey": "sacrum"
+      },
+      {
+        "page": 187,
+        "hotspotKey": "ribs"
+      },
+      {
+        "page": 191,
+        "hotspotKey": "pleura"
+      },
+      {
+        "page": 203,
+        "hotspotKey": "trachea"
+      },
+      {
+        "page": 224,
+        "hotspotKey": "left-ventricle"
+      },
+      {
+        "page": 236,
+        "hotspotKey": "oesophagus"
+      },
+      {
+        "page": 274,
+        "hotspotKey": "greater-omentum"
+      },
+      {
+        "page": 277,
+        "hotspotKey": "stomach"
+      },
+      {
+        "page": 283,
+        "hotspotKey": "duodenum"
+      },
+      {
+        "page": 288,
+        "hotspotKey": "vermiform-appendix"
+      },
+      {
+        "page": 301,
+        "hotspotKey": "gallbladder"
+      },
+      {
+        "page": 303,
+        "hotspotKey": "ivc"
+      },
+      {
+        "page": 308,
+        "hotspotKey": "coeliac"
+      },
+      {
+        "page": 317,
+        "hotspotKey": "portal-vein"
+      },
+      {
+        "page": 340,
+        "hotspotKey": "renal"
+      },
+      {
+        "page": 345,
+        "hotspotKey": "ureter-l"
+      },
+      {
+        "page": 346,
+        "hotspotKey": "bladder"
+      },
+      {
+        "page": 347,
+        "hotspotKey": "kidney-l"
+      },
+      {
+        "page": 351,
+        "hotspotKey": "suprarenal"
+      },
+      {
+        "page": 387,
+        "hotspotKey": "urethra"
+      },
+      {
+        "page": 389,
+        "hotspotKey": "prostate"
+      },
+      {
+        "page": 396,
+        "hotspotKey": "rectum"
+      },
+      {
+        "page": 400,
+        "hotspotKey": "external-anal-sphincter"
+      },
+      {
+        "page": 424,
+        "hotspotKey": "clavicle"
+      },
+      {
+        "page": 425,
+        "hotspotKey": "humerus"
+      },
+      {
+        "page": 432,
+        "hotspotKey": "axillary-artery"
+      },
+      {
+        "page": 438,
+        "hotspotKey": "brachial-artery"
+      },
+      {
+        "page": 445,
+        "hotspotKey": "radius"
+      },
+      {
+        "page": 468,
+        "hotspotKey": "lumbricals"
+      },
+      {
+        "page": 481,
+        "hotspotKey": "ulnar-nerve"
+      },
+      {
+        "page": 482,
+        "hotspotKey": "radial-nerve"
+      },
+      {
+        "page": 501,
+        "hotspotKey": "iliacus"
+      }
+    ],
+    "schools": []
+  }
 }

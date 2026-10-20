@@ -3,6 +3,7 @@
 FROM node:24-slim AS deps
 WORKDIR /app
 COPY package.json package-lock.json ./
+COPY scripts/patch-dependencies.cjs ./scripts/patch-dependencies.cjs
 COPY prisma ./prisma
 COPY prisma.config.ts ./
 RUN npm ci && npx prisma generate

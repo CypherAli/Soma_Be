@@ -27,7 +27,9 @@
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
     "db:citations": "ts-node -P prisma/tsconfig.seed.json prisma/backfill-citations.ts",
-    "role": "ts-node -P prisma/tsconfig.seed.json prisma/grant-role.ts"
+    "role": "ts-node -P prisma/tsconfig.seed.json prisma/grant-role.ts",
+    "postinstall": "node scripts/patch-dependencies.cjs",
+    "test:security": "node scripts/test-dependency-security.cjs"
   },
   "dependencies": {
     "@nestjs/common": "^11.0.1",
@@ -93,5 +95,10 @@
     ],
     "coverageDirectory": "../coverage",
     "testEnvironment": "node"
+  },
+  "overrides": {
+    "@nestjs/swagger": {
+      "js-yaml": "^5.4.1"
+    }
   }
 }

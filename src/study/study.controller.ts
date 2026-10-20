@@ -15,14 +15,18 @@ import {
   ApiTags,
 } from '@nestjs/swagger';
 import { StudyService } from './study.service';
-import { RecordAttemptDto } from './dto/record-attempt.dto';
+import { SubmitAttemptDto } from './dto/submit-attempt.dto';
+import { WebAttemptsService } from './web-attempts.service';
 import { SavePathDto } from './dto/save-path.dto';
 
 @ApiTags('study')
 @ApiBearerAuth()
 @Controller('study')
 export class StudyController {
-  constructor(private readonly service: StudyService) {}
+  constructor(
+    private readonly service: StudyService,
+    private readonly webAttempts: WebAttemptsService,
+  ) {}
 
   private token(value?: string) {
     return value?.startsWith('Bearer ') ? value.slice(7) : undefined;
@@ -30,13 +34,14 @@ export class StudyController {
 
   @Post('attempts')
   @ApiOperation({
-    summary: 'Ghi một lượt làm bài đã nộp và cập nhật lịch ôn cho từng câu',
+    summary:
+      'Chấm phương án bằng nội dung đã xuất bản, ghi lượt làm bài và cập nhật lịch ôn',
   })
   record(
-    @Body() dto: RecordAttemptDto,
+    @Body() dto: SubmitAttemptDto,
     @Headers('authorization') auth?: string,
   ) {
-    return this.service.recordAttempt(dto, this.token(auth));
+    return this.webAttempts.submit(dto, this.token(auth));
   }
 
   @Get('history')

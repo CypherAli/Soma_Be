@@ -21,6 +21,58 @@ const ANSWER_PAGE = `ĐÁP ÁN
 3-A. Xương thuyền nằm ở hàng gần, cạnh xương nguyệt.`;
 
 describe('parseMcq', () => {
+  it('does not lose a numbered question whose stem begins with a number', () => {
+    const report = parseMcq([
+      'Câu hỏi 3:\n12 đôi dây thần kinh sọ xuất phát từ đâu?\nA. Phương án một\nB. Phương án hai\nC. Phương án ba\nĐáp án: A',
+    ]);
+    expect(report.questions[0]?.number).toBe(3);
+    expect(report.questions[0]?.stem).toContain('12 đôi');
+  });
+
+  it('recognises Câu hỏi N headings with standalone option labels and explicit keys', () => {
+    const report = parseMcq([
+      `Câu hỏi 1:
+Liên quan đúng của tk giữa là:
+A
+nó bắt chéo sau động mạch cánh tay.
+B
+ở khuỷu nó nằm sau trẽ gân cơ nhị đầu.
+C
+nó đi sau cơ sấp tròn.
+D
+ở cẳng tay, càng xuống dưới nó càng gần bờ trong cơ gấp các ngón nông.
+Đáp án: B`,
+    ]);
+    expect(report.questions).toHaveLength(1);
+    expect(report.questions[0]).toMatchObject({
+      number: 1,
+      stem: 'Liên quan đúng của tk giữa là:',
+      answer: 'B',
+      page: 1,
+    });
+    expect(report.questions[0].options.D).toBe(
+      'ở cẳng tay, càng xuống dưới nó càng gần bờ trong cơ gấp các ngón nông',
+    );
+  });
+
+  it('counts numbered source questions without inventing keys lost with PDF colours', () => {
+    const report = parseMcq([
+      `Câu hỏi 1:
+Liên quan đúng của tk giữa là:
+A
+nó bắt chéo sau động mạch cánh tay.
+B
+ở khuỷu nó nằm sau trẽ gân cơ nhị đầu.
+C
+nó đi sau cơ sấp tròn.
+D
+ở cẳng tay, càng xuống dưới nó càng gần bờ trong cơ gấp các ngón nông.`,
+    ]);
+    expect(report.questions).toEqual([]);
+    expect(report.missingAnswer).toBe(1);
+    expect(report.malformed).toBe(0);
+  });
+
   it('bóc được câu có phương án chung dòng và vùng đáp án kèm lời giải', () => {
     const report = parseMcq([QUESTION_PAGE, ANSWER_PAGE]);
 

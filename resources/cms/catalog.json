@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "contractHash": "f4798a16d1b06ca9c0b9ab714dc99c63226a0904a9d6de76d0a8ce02ec7b27da",
+  "contractHash": "bbd324e1eb6513db1fb2c629896fe00325c476cd0330db01c92f65745ed55bde",
   "documents": [
     {
       "id": "atlas:FJ1252",
@@ -27838,6 +27838,9 @@
           "t1sv2hhc_23": "Click to change sorting",
           "tdv9dsq_12": "Sắp xếp: {0}",
           "tt3sgld_7": " active",
+          "txmeiyp_31": "Không tìm thấy mô hình phù hợp.",
+          "tcg3yhf_9": "未找到匹配的模型。",
+          "t1utmijt_25": "No matching models found.",
           "t1fl67d2_27": "Chưa có nội dung ở mục này.",
           "t1bxie6m_8": "此分类暂无内容。",
           "t1mxyfyy_32": "No content in this category yet.",
@@ -28299,6 +28302,42 @@
       }
     },
     {
+      "id": "copy:src/components/information/InformationPage.tsx",
+      "title": "Chữ giao diện · InformationPage",
+      "source": "src/components/information/InformationPage.tsx",
+      "category": "interface",
+      "payload": {
+        "texts": {
+          "t5v4ree_10": "Soma Atlas",
+          "t10bcj1g_55": "Quan sát cấu trúc · Hiểu mối liên hệ · Học có dẫn nguồn",
+          "t12kp31u_69": "Observe structures · Understand relationships · Learn with references",
+          "tgk7pjk_18": "观察结构 · 理解联系 · 有据学习",
+          "tpabbwk_15": "Đường dẫn trang",
+          "tdfc3fw_10": "Breadcrumb",
+          "t1isq78l_5": "面包屑导航",
+          "t1orq7up_9": "Trang chủ",
+          "tn0mxf2_4": "Home",
+          "t1ow5v10_2": "首页",
+          "tzw7mnq_4": "page",
+          "t17ry68g_13": "Nguồn dữ liệu",
+          "tmqj6mj_12": "Data sources",
+          "t16hya6u_4": "数据来源",
+          "t1y8lsr1_18": "Điều khoản sử dụng",
+          "t15eqa9y_12": "Terms of use",
+          "t2s14et_4": "使用条款",
+          "t1sb2524_18": "Chính sách bảo mật",
+          "tfhaxvj_14": "Privacy policy",
+          "t137ly9n_4": "隐私政策",
+          "t1um95x5_16": "Cần hỗ trợ thêm?",
+          "t1lu5bdu_15": "Need more help?",
+          "t1wg45mq_7": "需要更多帮助？",
+          "tjyla27_27": "trinhviethoangawm@gmail.com",
+          "tjkdld8_6": "_blank",
+          "t1817xpj_19": "noopener noreferrer"
+        }
+      }
+    },
+    {
       "id": "copy:src/components/LanguageSwitcher.tsx",
       "title": "Chữ giao diện · LanguageSwitcher",
       "source": "src/components/LanguageSwitcher.tsx",
@@ -28474,8 +28513,6 @@
         "texts": {
           "t1vfar18_15": "Hỏi về bệnh này",
           "tkngdwt_49": "Vd: tiêu chuẩn chẩn đoán? phân biệt với bệnh nào?",
-          "t1k5owh0_15": "Tóm tắt bài này",
-          "t1p0czfa_140": "Tóm tắt GỌN bài này trong ≤180 từ, đúng 4 gạch đầu dòng: định nghĩa · triệu chứng chính · chẩn đoán · hướng điều trị. Không chép nguyên văn.",
           "t1geuohm_20": "Tra theo triệu chứng",
           "t6iy9q2_47": "Vd: sưng đau khớp ngón chân cái về đêm, sốt nhẹ",
           "tydkk7n_3": "Hỏi",
@@ -28491,8 +28528,6 @@
           "t120l90b_72": "Công cụ tra tài liệu học tập. Không chẩn đoán, không thay thế khám bệnh.",
           "t1jhcizw_24": "Ask about this condition",
           "t1jqjxm5_49": "E.g. diagnostic criteria? differential diagnosis?",
-          "t9wzsrf_22": "Summarise this article",
-          "t1iuospg_129": "Summarise this article in ≤180 words, exactly 4 bullets: definition · key symptoms · diagnosis · treatment. Do not copy verbatim.",
           "t1lekw9d_17": "Search by symptom",
           "tlfcj6f_54": "E.g. night-time swelling and pain in the big toe joint",
           "tyohkfm_3": "Ask",
@@ -28508,8 +28543,6 @@
           "t11hgikz_79": "Study reference tool. Not a diagnosis and not a substitute for seeing a doctor.",
           "t4ktfae_4": "询问本病",
           "t1jo8qqf_15": "例如：诊断标准？与哪些病鉴别？",
-          "t15u1cp2_4": "概括本篇",
-          "t1dboyhs_39": "用≤180字概括本篇，正好4条：定义·主要症状·诊断·治疗方向。不要照抄原文。",
           "trwu9rz_5": "按症状检索",
           "t1hdey1l_17": "例如：夜间大脚趾关节红肿疼痛，低热",
           "t1d6smr7_2": "提问",
@@ -28561,6 +28594,8 @@
           "t1scefju_9": "Tổng quan",
           "twiwb9p_23": "Lâm sàng & cận lâm sàng",
           "t1dmwebt_18": "Chẩn đoán hình ảnh",
+          "t1w9sk5x_15": "Tóm tắt bài học",
+          "t1k4afv9_66": "Bản tóm lược biên soạn sẵn từ hồ sơ bệnh học, kèm nguồn đối chiếu.",
           "thtvs1a_23": "Tiến triển & biến chứng",
           "t1vapx54_18": "Điều trị tham khảo",
           "tahs7lb_107": "Chưa có phần bệnh học chi tiết. Hồ sơ hiện dẫn thẳng tới đúng trang trong giáo trình để bạn đọc nguyên bản.",
@@ -28605,6 +28640,8 @@
           "tthnxru_8": "Overview",
           "t7v20xn_21": "Clinical & laboratory",
           "txxbx08_18": "Diagnostic imaging",
+          "th1h95h_15": "Article summary",
+          "t1tynae6_71": "Prepared from the condition record, with its source for cross-checking.",
           "togt1yl_27": "Progression & complications",
           "t1a7i8xa_19": "Treatment reference",
           "tdxx6ti_124": "The detailed pathology has not been written yet. This record points to the exact textbook page so you can read the original.",
@@ -28648,6 +28685,8 @@
           "t1989i0f_2": "概述",
           "t1exyuh7_6": "临床与实验室",
           "t1xundtc_4": "医学影像",
+          "t1fr3xgv_4": "本篇摘要",
+          "ta1ltzh_19": "根据疾病档案预先编写，附有来源供核对。",
           "tslqzyh_6": "进展与并发症",
           "t1ymbvsk_4": "参考治疗",
           "tlyqp2q_32": "详细病理内容尚未撰写。本档案直接指向教材对应页码，便于查阅原文。",
@@ -28757,6 +28796,8 @@
           "t1s4ufli_5": "wrong",
           "tzqhj5g_12": " has-sidebar",
           "tdda5kb_9": " dl-study",
+          "t1j3itt7_25": "Bộ đề từ tài liệu của bạn",
+          "t9a26a6_6": "您的资料试卷",
           "tc1kjel_22": "Bộ đề Đại học Y Hà Nội",
           "t1ftfisd_8": "河内医科大学题库",
           "t6cnjtx_68": "Trình duyệt không lưu được tiến độ. Bạn vẫn có thể tiếp tục làm bài.",
@@ -28793,6 +28834,8 @@
           "t1cm49zm_2": "分钟",
           "t1j1y9yw_16": "Xáo trộn câu hỏi",
           "t1e3qg7l_6": "随机题目顺序",
+          "t1yp0cm6_96": "Bài làm được giữ trong phiên hiện tại. Tài liệu và các câu đã duyệt nằm trong tài khoản của bạn.",
+          "teo5xh6_29": "答题进度保留在当前会话；资料与已审阅题目保存在您的账户中。",
           "t1kqiuyk_53": "Tiến độ và kho câu sai được lưu trên trình duyệt này.",
           "t7elfx7_14": "进度与错题保存在当前浏览器。",
           "t1wnzta8_78": "câu chưa có đáp án đánh dấu trong PDF, được giữ lại để đọc và không tính điểm.",
@@ -28891,6 +28934,8 @@
           "t1omjy1e_3": "下一题",
           "tu792ny_7": "Kết quả",
           "tq9h21m_2": "结果",
+          "tezsuai_19": "Về tài liệu của bạn",
+          "tv1l3r0_6": "返回您的资料",
           "t1jnqka_63": "Nguồn học khác: mô hình 3D, giáo trình, atlas, tài liệu của bạn",
           "t159nump_21": "其他来源：3D 模型、教材、图谱、个人资料",
           "thi56uc_29": "Nguồn: 30 PDF do bạn cung cấp",
@@ -28918,12 +28963,18 @@
           "t8lwjzr_54": "Bạn đã trả lời tất cả câu hỏi. Nộp bài để xem kết quả.",
           "tgj7k5d_15": "所有题目已回答。提交查看结果。",
           "t13rq2ny_12": "Tiếp tục làm",
+          "tirab7z_12": "Về tài liệu?",
+          "t16n7frh_5": "返回资料？",
           "t1thbh66_20": "Chuyển sang đề khác?",
           "t1es3idi_5": "切换题库？",
+          "teariyy_87": "Thoát sẽ kết thúc phiên làm bài hiện tại. Các câu đã nhập vẫn được giữ trong tài khoản.",
+          "t157fkjb_23": "离开将结束当前答题，导入的题目仍保存在账户中。",
           "t4q4ajp_66": "Bài đang làm đã được lưu. Bạn có thể tiếp tục khi quay lại đề này.",
           "t1n4wza6_16": "当前进度已保存，可返回继续答题。",
           "tz5rlav_5": "Ở lại",
           "t1hcfwp9_2": "留下",
+          "txkb92y_9": "Thoát bài",
+          "t1xaq363_4": "退出答题",
           "t2ywux5_9": "Chuyển đề",
           "t1fl58wc_2": "切换"
         }
@@ -28950,7 +29001,9 @@
         "texts": {
           "tscvxkf_2": "ok",
           "txjidwl_5": "right",
-          "tqe2gnr_3": "tr."
+          "tqe2gnr_3": "tr.",
+          "t1c6lasb_4": "none",
+          "t1rn9ykk_4": "copy"
         }
       }
     },
@@ -28961,8 +29014,12 @@
       "category": "interface",
       "payload": {
         "texts": {
+          "tezsuai_19": "Về tài liệu của bạn",
+          "tv1l3r0_6": "返回您的资料",
           "t12m6el9_12": "Tất cả bộ đề",
           "t96owc4_4": "全部题库",
+          "t1fg8y6j_16": "Tài liệu của bạn",
+          "t2ae4ay_4": "您的资料",
           "t1dc5tnu_16": "Đại học Y Hà Nội",
           "tovz9d8_6": "河内医科大学",
           "tn1bd94_13": "đề hoàn thành",
@@ -29272,6 +29329,10 @@
           "tjlis74_21": "Chưa có tài liệu nào.",
           "t1up8yn0_8": "Duyệt đề",
           "t196rc95_23": "Duyệt tất cả câu hợp lệ",
+          "tub7ci3_29": "Duyệt các câu hợp lệ & tạo đề",
+          "txxqwhd_7": "Câu {0}",
+          "t1fsry9k_9": "Phương án",
+          "t44193b_21": "Gợi ý & hình lời giải",
           "t16cmgpc_20": "Đã duyệt {0} câu{1}.",
           "typ9tfl_33": ", bỏ qua {0} câu hỏng khoá đáp án",
           "t916wgb_12": "Xoá tài liệu",
@@ -29285,7 +29346,15 @@
           "tnh4zob_7": "Xoá câu",
           "t4enexi_24": "Không lưu được thay đổi.",
           "t10jlggq_17": "Không bóc được đề",
-          "t11l9bl9_135": "Bộ bóc nhận dạng câu đánh số (\"12.\" hoặc \"Câu 12.\") kèm phương án A–E và đáp án (vùng đáp án \"12-C\" hoặc chốt sau mỗi câu \"Đáp án: C\").",
+          "t1ngs6qo_31": "Chọn tệp PDF hoặc Word (.docx).",
+          "t1p4j2m9_43": "Mỗi lần chỉ chọn một tài liệu để phân tích.",
+          "t160q4a5_70": "Đăng nhập để phân tích PDF và lưu bộ đề riêng; tệp vẫn đang được chọn.",
+          "tljegm0_27": "Đã tìm thấy đề của tài liệu",
+          "t123k7jz_53": "Đã nhận diện đúng tài liệu: {0} câu sẵn sàng làm bài.",
+          "t1kfesp6_109": "Tài liệu này đã có bản nhập trong thư viện, giữ câu hỏi, đáp án và hình gốc. Mở đề để luyện tập hoặc thi thử.",
+          "t1tarfjj_16": "Mở đề và làm bài",
+          "t13cxjl5_50": "Chọn lại tệp và bấm Phân tích tài liệu để thử lại.",
+          "tz6h98v_183": "Đọc câu đánh số và câu dạng “Câu hỏi 12:”, giữ hình và lời giải. Nhận khóa đáp án bằng chữ hoặc nhãn/khoanh tròn màu xanh trong PDF dạng bộ đề; câu thiếu khóa được giữ để bạn bổ sung.",
           "tpj1lly_28": "Đề trộn theo yêu cầu của bạn",
           "tnoejj7_13": "{0} · {1} câu",
           "t58y3dh_10": "Bỏ đề trộn",
@@ -29443,6 +29512,9 @@
           "t1ny1r3g_17": "No documents yet.",
           "t1q6398c_16": "Review questions",
           "t1qgbqfa_27": "Approve all valid questions",
+          "ts366nq_37": "Approve valid questions & create quiz",
+          "t6f5qk4_6": "Option",
+          "t1d1073n_21": "Explanation & figures",
           "tyjg48z_15": "Delete document",
           "tvfvdxu_46": "Delete this document and all of its questions?",
           "t17tlqsp_19": "← Back to documents",
@@ -29452,6 +29524,13 @@
           "tdln7lq_15": "Delete question",
           "t1vz25id_26": "Could not save the change.",
           "t1o5t7un_18": "No questions found",
+          "t1m0xyal_34": "Choose a PDF or Word (.docx) file.",
+          "tttda28_30": "Choose one document at a time.",
+          "t64hq55_89": "Sign in to analyse your PDF and save a private question set; your file is still selected.",
+          "tnspsvo_27": "Document question set found",
+          "tyk60z7_139": "This document already has a library import preserving the original questions, answers and figures. Open it to practise or take a mock exam.",
+          "tnal697_17": "Open question set",
+          "t1x9audz_59": "Select the file again and choose Analyse document to retry.",
           "t1wf7qya_99": "The extractor looks for numbered questions (\"12.\") with options A–E and an answer section (\"12-C\").",
           "tkibq9w_29": "Mixed paper from your request",
           "t1l90wb3_17": "Clear mixed paper",
@@ -29606,6 +29685,10 @@
           "tje2ng0_6": "还没有资料。",
           "t1sizps5_4": "审阅题目",
           "t1yre2ve_8": "通过所有有效题目",
+          "t14jqf5j_11": "审阅有效题目并创建试卷",
+          "t8h000l_7": "第 {0} 题",
+          "t1u8q6av_2": "选项",
+          "tvn19rj_5": "解析与图片",
           "teug9qj_13": "已通过 {0} 题{1}。",
           "tbab8bf_14": "，跳过 {0} 题答案键有误",
           "te6n0tu_4": "删除资料",
@@ -29619,6 +29702,14 @@
           "t1pfz50c_4": "删除该题",
           "t122qgw2_7": "修改未能保存。",
           "tefobl1_5": "未找到题目",
+          "t13e46dy_26": "请选择 PDF 或 Word (.docx) 文件。",
+          "t17m569u_10": "每次请选择一份资料。",
+          "tafrxuk_27": "请登录以分析 PDF 并保存私人试卷；文件仍保持选中。",
+          "t81kxtv_10": "已找到资料对应的试卷",
+          "t10bw9r_19": "已精确识别资料：{0} 题可开始作答。",
+          "tsvmku0_39": "题库已有这份资料的完整导入，保留原题、答案及图片。打开试卷即可练习或模拟考试。",
+          "t1oikdw_7": "打开试卷并作答",
+          "t9w68og_18": "请重新选择文件，点击分析资料以重试。",
           "t16ibdgm_40": "提取器识别带编号的题目（\"12.\"）、A–E 选项，以及答案区（\"12-C\"）。",
           "t1bupwzq_9": "按你的要求混合出题",
           "tokp5oz_11": "{0} · {1} 题",
@@ -30789,9 +30880,6 @@
           "t7ngwei_11": "Hệ sinh sản",
           "tsnhi1s_19": "Reproductive system",
           "typt41u_4": "生殖系统",
-          "tuh3r6r_6": "Hệ mạc",
-          "tc2a7ax_14": "Fascial system",
-          "t1k3dklo_4": "筋膜系统",
           "tw52gyp_11": "Mô liên kết",
           "t1qmnk4_17": "Connective tissue",
           "tjzk3hr_4": "结缔组织",
@@ -31311,12 +31399,12 @@
           "tkrbqg8_16": "Thư viện mô hình",
           "tcvkyap_13": "Model library",
           "tm07mo2_3": "模型库",
-          "tmhhtrx_25": "Học liệu Đại học Y Hà Nội",
-          "t1kug650_34": "Hanoi Medical University resources",
-          "t1wg22nt_10": "河内医科大学学习资料",
-          "t11k3z9v_13": "Y học Bộ Y tế",
-          "tzj8al7_27": "Ministry of Health medicine",
-          "t1rqeqaz_7": "卫生部医学资料",
+          "t1dc5tnu_16": "Đại học Y Hà Nội",
+          "trfx8up_24": "Hanoi Medical University",
+          "tovz9d8_6": "河内医科大学",
+          "tsiwbzg_7": "Bộ Y tế",
+          "t1vf93vd_18": "Ministry of Health",
+          "t15o3sud_3": "卫生部",
           "t1eptp1h_9": "Z-Anatomy",
           "t1c4b473_19": "BodyParts3D (DBCLS)",
           "t1x2vslj_19": "Chăm sóc khách hàng",
@@ -41865,6 +41953,290 @@
           "t1ewmlae_269": "Tiểu não trên (từ ngọn động mạch nền), tiểu não trước-dưới (từ thân nền) và tiểu não sau-dưới (từ động mạch đốt sống). Tắc tiểu não sau-dưới gây hội chứng Wallenberg — nhồi máu hành não bên: chóng mặt, nuốt khó, mất cảm giác đau-nhiệt mặt cùng bên và thân bên đối diện.",
           "t1f9rups_325": "Superior cerebellar (from the top of the basilar), anterior inferior (from the basilar trunk) and posterior inferior (from the vertebral). PICA occlusion causes Wallenberg syndrome — lateral medullary infarction: vertigo, dysphagia, and loss of pain-temperature on the same side of the face and the opposite side of the body.",
           "tz18faq_102": "小脑上动脉（发自基底动脉顶端）、小脑前下动脉（发自基底动脉干）和小脑后下动脉（发自椎动脉）。小脑后下动脉闭塞导致Wallenberg综合征——延髓背外侧梗死：眩晕、吞咽困难、同侧面部及对侧躯体痛温觉丧失。"
+        }
+      }
+    },
+    {
+      "id": "copy:src/lib/informationPages.ts",
+      "title": "Chữ giao diện · informationPages",
+      "source": "src/lib/informationPages.ts",
+      "category": "interface",
+      "payload": {
+        "texts": {
+          "t12so1p2_10": "Giới thiệu",
+          "twgoa3a_10": "About Soma",
+          "t1671shc_7": "关于 Soma",
+          "tzxbztq_18": "Hỗ trợ & hướng dẫn",
+          "t1fd7221_13": "Help & guides",
+          "t1c7tjl4_5": "帮助与指南",
+          "tm31vo2_10": "Chính sách",
+          "traqot3_8": "Policies",
+          "t7g9v60_2": "政策",
+          "t11c459v_13": "Về Soma Atlas",
+          "t1h1m2i1_16": "About Soma Atlas",
+          "tx3bjt3_13": "关于 Soma Atlas",
+          "t3zwtee_101": "Một thư viện giải phẫu số để quan sát cấu trúc, hiểu mối liên hệ và học bằng chính thao tác khám phá.",
+          "tp2bc64_113": "A digital anatomy library for observing structures, understanding relationships and learning through exploration.",
+          "tf1eg6q_30": "通过观察结构、理解相互关系与亲手探索来学习的数字解剖资料库。",
+          "ts4lwov_41": "Từ hình ảnh phẳng đến không gian ba chiều",
+          "t9etweg_36": "From flat images to three dimensions",
+          "tr3zpiy_10": "从平面图像到三维空间",
+          "t1dqrxc6_198": "Soma Atlas là đồ án tốt nghiệp về nền tảng học giải phẫu tương tác. Người học có thể xoay, phóng to, chọn cấu trúc và quan sát từng lớp để hình dung vị trí, hình dạng và tương quan giữa các cơ quan.",
+          "t1gis9cf_202": "Soma Atlas is a graduation project focused on interactive anatomy learning. Learners can rotate, zoom, select structures and inspect layers to understand the position, shape and relationships of organs.",
+          "t1kmmc3m_64": "Soma Atlas 是一个交互式解剖学习平台毕业设计。学习者可旋转、缩放、选择结构并逐层观察，理解器官的位置、形态及毗邻关系。",
+          "t1jp8j4b_38": "Một nơi để quan sát, tra cứu và ôn tập",
+          "t1octz9s_27": "Observe, look up and revise",
+          "thb6k72_8": "观察、检索与复习",
+          "t19g48zs_274": "Atlas người được tổ chức theo hệ cơ quan, vùng cơ thể và từng bài mô hình. Bên cạnh mô hình 3D là kho tài liệu y khoa, trắc nghiệm, giải phẫu so sánh và trợ lý Soma có liên kết tới nội dung tham khảo. Điều khiển cử chỉ giúp khám phá mô hình bằng webcam trên thiết bị hỗ trợ.",
+          "t1kmi3dt_278": "Human anatomy is organised by system, region and individual model lesson. The 3D library is accompanied by medical documents, quizzes, comparative anatomy and a Soma assistant with reference links. Gesture control supports model exploration using a compatible webcam and device.",
+          "tdahnja_72": "人体图谱按器官系统、身体区域与模型课程组织，同时提供医学资料、测验、比较解剖及附参考链接的 Soma 助手。兼容设备还可通过摄像头手势操作模型。",
+          "t16qw117_20": "Khám phá atlas người",
+          "tdtjsj8_21": "Explore human anatomy",
+          "t7jd993_6": "探索人体解剖",
+          "tqn5a1g_21": "Học tập & trắc nghiệm",
+          "t176kfh8_18": "Learning & quizzes",
+          "t1r1z76o_5": "学习与测验",
+          "tnd1w6d_34": "Dành cho người học y khoa và thú y",
+          "t1jlb155_35": "For medical and veterinary learners",
+          "tcrifrq_10": "面向医学与兽医学习者",
+          "t1lcm8se_250": "Soma hướng đến sinh viên y khoa, người học thú y và người cần ôn lại kiến thức giải phẫu. Mô hình là phương tiện hỗ trợ học tập; hãy đối chiếu với giáo trình và nguồn gốc dữ liệu. Nội dung trên nền tảng không thay thế chẩn đoán hay chỉ định điều trị.",
+          "t1dmro5h_245": "Soma is intended for medical students, veterinary learners and anyone revising anatomy. Models support learning and should be checked against textbooks and source data. Platform content does not replace clinical diagnosis or treatment decisions.",
+          "t1oa2mb2_64": "Soma 面向医学生、兽医学习者及需要复习解剖的人群。模型辅助学习，应结合教材及源数据核对；平台内容不能替代临床诊断或治疗决定。",
+          "t1ah3e05_24": "Cùng hoàn thiện thư viện",
+          "t18hej66_24": "Help improve the library",
+          "t1jicnk4_7": "共同完善资料库",
+          "t10p21v8_242": "Nếu phát hiện nhãn chưa đúng, thiếu cấu trúc hoặc liên kết không hoạt động, hãy gửi tên mô hình, đường dẫn và mô tả vấn đề tới trinhviethoangawm@gmail.com. Những phần chưa có dữ liệu cần được ghi rõ thay vì dựng thêm cấu trúc không có căn cứ.",
+          "tdiicax_241": "Report incorrect labels, missing structures or broken links to trinhviethoangawm@gmail.com, including the model name, URL and a description. Missing source data should be stated explicitly instead of filling gaps with unsupported structures.",
+          "t1nt0lnc_85": "发现标注错误、结构缺失或链接失效时，请将模型名称、网址及问题描述发送至 trinhviethoangawm@gmail.com。缺少源数据时应明确说明，不能凭空补造结构。",
+          "t1au4q61_19": "Sứ mệnh & nguồn gốc",
+          "t1ytxek4_17": "Mission & origins",
+          "t142ss34_5": "使命与缘起",
+          "tnd2g0q_95": "Giúp kiến thức giải phẫu dễ tiếp cận hơn bằng quan sát trực tiếp và học liệu có thể kiểm chứng.",
+          "tkgoyus_89": "Make anatomy more accessible through direct observation and verifiable learning material.",
+          "t97ln6t_26": "通过直观观察与可核查的学习资料，让解剖知识更易获取。",
+          "t1j59upy_32": "Bắt đầu từ nhu cầu học giải phẫu",
+          "t8ii9b1_29": "Built around anatomy learning",
+          "t7z7xt9_9": "从解剖学习需求出发",
+          "ts6zvm1_224": "Một hình vẽ thường chỉ cho thấy một góc nhìn. Soma Atlas được phát triển trong khuôn khổ đồ án tốt nghiệp để người học chủ động thay đổi góc quan sát, tách lớp và nối kiến thức trong giáo trình với cấu trúc trong không gian.",
+          "tt1sa74_198": "A drawing usually shows one viewpoint. Soma Atlas was developed as a graduation project so learners can change their viewpoint, inspect layers and connect textbook knowledge with spatial structures.",
+          "tj0ot8r_64": "一幅图通常只展示一个视角。Soma Atlas 作为毕业设计开发，让学习者自主改变视角、观察分层，将教材知识与空间结构联系起来。",
+          "tpm4wae_22": "Ba nguyên tắc xây dựng",
+          "t5qrnbp_24": "Three guiding principles",
+          "ti9hs0f_6": "三项建设原则",
+          "tza8dtx_193": "Trực quan: bắt đầu từ mô hình, vị trí và tương quan. Có căn cứ: giữ nguồn dữ liệu và ghi công cho tài nguyên sử dụng. Trung thực về giới hạn: cấu trúc chưa có trong bộ dữ liệu phải được nêu rõ.",
+          "t1hnmz73_203": "Visual learning starts with models, positions and relationships. Evidence requires source records and attribution. Honesty about limitations means explicitly identifying structures absent from a dataset.",
+          "t1ginpyj_52": "直观学习以模型、位置与毗邻关系为起点；有据学习保留来源与署名；诚实说明局限，明确指出数据集中缺失的结构。",
+          "tadar8_166": "Dự án kết hợp dữ liệu mở với công cụ tra cứu và ôn tập. Việc sử dụng dữ liệu từ một tổ chức không đồng nghĩa Soma là sản phẩm chính thức hoặc được tổ chức đó bảo trợ.",
+          "t1oul6y0_162": "The project combines open data with search and revision tools. Using an organisation's data does not imply that Soma is its official product or is endorsed by it.",
+          "thwzn6a_48": "项目结合开放数据与检索、复习工具。使用某机构的数据并不代表 Soma 是其官方产品或获得其背书。",
+          "tn89u4o_21": "Dữ liệu & phương pháp",
+          "tqlsssc_18": "Data & methodology",
+          "td8fr5p_5": "数据与方法",
+          "t1bpar7q_111": "Từ dữ liệu nguồn đến mô hình học tập: giữ danh tính cấu trúc, tổ chức lại để dễ quan sát và công khai giới hạn.",
+          "trj6q3j_119": "From source data to learning models: preserve structure identity, organise views for learning and disclose limitations.",
+          "trwv48c_34": "从源数据到学习模型：保留结构标识、组织便于学习的视图并公开数据局限。",
+          "t1eeirnu_27": "Nguồn hình học và thuật ngữ",
+          "td47eab_24": "Geometry and terminology",
+          "tlrg1o2_7": "几何数据与术语",
+          "t1uhfhuk_232": "Thư viện người sử dụng các mô hình từ Z-Anatomy và atlas BodyParts3D. Các bài chuyên đề nhóm cấu trúc theo cơ quan hoặc vùng. Tên tiếng Việt được đối chiếu với thuật ngữ giải phẫu; tên nguồn và tên Latin được giữ để hỗ trợ kiểm tra.",
+          "t1b08lgm_230": "The human library uses Z-Anatomy models and the BodyParts3D atlas. Lessons group structures by organ or region. Vietnamese labels are checked against anatomical terminology, while source names and Latin names support verification.",
+          "tw4k3tg_75": "人体资料库使用 Z-Anatomy 模型与 BodyParts3D 图谱，按器官或区域组织课程。越南语名称对照解剖术语，并保留源名称与拉丁名以便核查。",
+          "t1usvlj1_27": "Xem nguồn và ghi công atlas",
+          "t1tohpgy_29": "Atlas sources and attribution",
+          "txhwjis_7": "图谱来源与署名",
+          "t192otxw_32": "Chuẩn bị mô hình để học trên web",
+          "t22y7pd_28": "Preparing models for the web",
+          "tohrthi_9": "为网页学习准备模型",
+          "t18a78jd_238": "Dữ liệu được chuẩn hóa trục, đơn vị và vị trí; hình học được tối ưu cho trình duyệt. Tên và mã cấu trúc giúp liên kết mô hình với nhãn. Màu theo hệ, lớp ẩn/mờ và nhóm bài học là cách trình bày để quan sát, không phải màu thật của mô sống.",
+          "t84ruz9_259": "Data axes, units and positions are normalised and geometry is optimised for browsers. Structure identifiers connect geometry to labels. System colours, visibility layers and lesson groups are presentation aids rather than the natural colours of living tissue.",
+          "t1vhnibp_73": "数据统一坐标轴、单位及位置，并优化几何以适应浏览器。结构标识连接网格与标签；系统配色、隐藏或淡化分层及课程分组是观察辅助，并非活体组织的真实颜色。",
+          "t133u92a_40": "Tra cứu có dẫn nguồn và giới hạn dữ liệu",
+          "t18t76kb_34": "References and dataset limitations",
+          "tp2d4bf_9": "参考依据与数据局限",
+          "t18e09ne_287": "Kết quả tra cứu tài liệu có tên nguồn và vị trí trang khi dữ liệu hỗ trợ. Một bộ mô hình tham chiếu không thể đại diện mọi biến thể giải phẫu. Khi thiếu cấu trúc trong atlas toàn thân, bài học có thể dùng mô hình Z-Anatomy riêng; không đổi một bài sang cơ quan khác chỉ để lấp chỗ trống.",
+          "t1bswj2o_270": "Document results include source names and page locations where available. A reference dataset cannot represent every anatomical variation. A separate Z-Anatomy model can cover structures absent from the whole-body atlas; an unrelated organ should not replace the lesson.",
+          "t1q4dudh_76": "资料检索在数据支持时提供来源名称与页码。参考模型不能覆盖所有解剖变异；全身图谱缺少结构时可使用独立的 Z-Anatomy 模型，不应以无关器官替换课程。",
+          "tcntfly_16": "Trung tâm hỗ trợ",
+          "t12i5do5_11": "Help centre",
+          "t1q1aq0k_4": "帮助中心",
+          "tvavsi8_81": "Tìm hướng dẫn, xử lý vấn đề thường gặp hoặc liên hệ trực tiếp khi bạn cần hỗ trợ.",
+          "t1is1tat_72": "Find guides, troubleshoot common issues or contact us directly for help.",
+          "t1axj2jk_24": "查阅指南、处理常见问题，或直接联系我们获取帮助。",
+          "t8uaqdl_16": "Bắt đầu với Soma",
+          "t1hcyv4u_15": "Getting started",
+          "t8hpas1_9": "开始使用 Soma",
+          "tgx17u_169": "Mở hướng dẫn để làm quen với atlas, trắc nghiệm, tài liệu và điều khiển cử chỉ. Trang câu hỏi thường gặp giải đáp việc đăng nhập, quyền camera và mô hình không hiển thị.",
+          "t16p1ugh_146": "Use the guide to explore the atlas, quizzes, documents and gesture control. The FAQ covers sign-in, camera access and models that fail to display.",
+          "t1az4x2x_42": "通过指南了解图谱、测验、资料与手势控制；常见问题涵盖登录、摄像头权限与模型显示问题。",
+          "tthgq00_17": "Hướng dẫn sử dụng",
+          "t1k66u1q_10": "User guide",
+          "tfu6qa0_4": "使用指南",
+          "t1mnnrhb_18": "Câu hỏi thường gặp",
+          "t1rdfr1l_26": "Frequently asked questions",
+          "t820twk_4": "常见问题",
+          "t9j1uss_31": "Gửi yêu cầu hỗ trợ hoặc báo lỗi",
+          "txvf9wv_31": "Ask for help or report an issue",
+          "t1698gi0_9": "寻求帮助或报告问题",
+          "t1ey2k6c_206": "Gửi email tới trinhviethoangawm@gmail.com hoặc gọi 0848 565 650. Khi báo lỗi, kèm đường dẫn trang, tên mô hình, thao tác vừa thực hiện và ảnh lỗi nếu có. Không gửi mật khẩu hay dữ liệu nhận dạng người bệnh.",
+          "t1wvpejv_197": "Email trinhviethoangawm@gmail.com or call 0848 565 650. Include the page URL, model name, steps you took and a screenshot where available. Do not send passwords or identifiable patient information.",
+          "t1c7nxch_93": "请发邮件至 trinhviethoangawm@gmail.com 或致电 0848 565 650，并提供页面网址、模型名称、操作步骤及可用的问题截图；请勿发送密码或可识别患者的信息。",
+          "t1io2bgm_16": "Gửi email hỗ trợ",
+          "t1ghmtig_13": "Email support",
+          "t6zgwzf_6": "发送支持邮件",
+          "t14wzrzt_16": "Gọi 0848 565 650",
+          "t17us5yu_17": "Call 0848 565 650",
+          "t87yd8n_15": "致电 0848 565 650",
+          "tz2mkhx_67": "Những điều cần biết khi xem mô hình, ôn tập và sử dụng trợ lý Soma.",
+          "t1nkl0zq_73": "What to know about viewing models, studying and using the Soma assistant.",
+          "t1qkalst_26": "关于查看模型、复习与使用 Soma 助手的常见疑问。",
+          "t1edp096_42": "Tôi có cần đăng nhập để xem mô hình không?",
+          "tukv6yj_36": "Do I need to sign in to view models?",
+          "t1k5g7hw_11": "查看模型是否需要登录？",
+          "t1wqiq6t_166": "Các mô hình và học liệu công khai có thể xem trước khi đăng nhập. Tài liệu cá nhân và các công cụ gắn với tài khoản cần đăng nhập tại trang Đăng nhập / Tạo tài khoản.",
+          "tnenyys_148": "Public models and materials can be explored before signing in. Personal documents and account-based tools require signing in through the login page.",
+          "t6gmzye_38": "公开模型与学习资料可在登录前查看；个人资料与账户相关工具需通过登录页面登录。",
+          "t15x3mjh_29": "Vì sao mô hình chưa hiển thị?",
+          "t1ofxojf_30": "Why is a model not displaying?",
+          "t1u7ljj8_10": "为什么模型没有显示？",
+          "t1wn9kwh_226": "Chờ tải xong dữ liệu, kiểm tra kết nối và thử tải lại trang. Nếu vẫn trống, dùng trình duyệt có WebGL và bật tăng tốc đồ họa khi thiết bị hỗ trợ. Gửi đường dẫn cùng tên thiết bị và trình duyệt tới email hỗ trợ nếu lỗi lặp lại.",
+          "t1bwxfan_229": "Allow data to finish loading, check your connection and reload. If the view remains blank, use a WebGL-capable browser with graphics acceleration where supported. Report persistent issues with the URL, device and browser details.",
+          "tr4szvm_74": "请等待数据加载、检查连接并刷新页面；若仍空白，请使用支持 WebGL 的浏览器，并在设备支持时启用图形加速。持续出错时请提供网址、设备与浏览器信息。",
+          "t1ytgfcg_44": "Vì sao một số cấu trúc không có trong atlas?",
+          "t11aya8u_32": "Why are some structures missing?",
+          "t1y2xtcz_10": "为什么某些结构缺失？",
+          "tiiu70s_251": "Mỗi bộ dữ liệu có phạm vi riêng. Atlas toàn thân và mô hình Z-Anatomy không có cùng độ phủ; một bài riêng có thể có chi tiết không hiện trong atlas toàn thân. Phần mô tả bài học cần nêu giới hạn của dữ liệu, không mặc định rằng mọi cấu trúc đều đã có.",
+          "t176ug1v_248": "Datasets have different coverage. The whole-body atlas and Z-Anatomy models do not contain exactly the same structures; an individual lesson may include details absent from the whole-body atlas. Lesson descriptions should explain these limitations.",
+          "tn5qjme_69": "不同数据集的覆盖范围不同，全身图谱与 Z-Anatomy 不含完全相同的结构；独立课程可能包含全身图谱没有的细节，应在课程说明中注明局限。",
+          "tyck4jx_25": "Camera có bắt buộc không?",
+          "trw96ev_21": "Is a camera required?",
+          "t9lw3az_10": "是否必须使用摄像头？",
+          "t68aj5f_164": "Không. Bạn có thể dùng chuột hoặc cảm ứng để xem mô hình. Điều khiển cử chỉ cần bạn cấp quyền camera; khi không cấp quyền, hãy dùng các nút điều khiển thông thường.",
+          "tg20t7q_146": "No. Models can be explored with a mouse or touch. Gesture control requires camera permission; ordinary model controls remain available without it.",
+          "tr3qhqe_44": "不需要，可使用鼠标或触控浏览模型。手势控制需要摄像头权限；未授权时仍可使用常规模型控制。",
+          "tqpfc39_53": "Câu trả lời của Soma có thay thế ý kiến bác sĩ không?",
+          "toqlghd_32": "Can Soma replace medical advice?",
+          "t14677yd_14": "Soma 能否替代医生意见？",
+          "tj26ob8_168": "Không. Trợ lý và nội dung trên Soma phục vụ học tập. Hãy mở nguồn tham khảo đi kèm để kiểm chứng; quyết định chẩn đoán và điều trị thuộc về người có chuyên môn phù hợp.",
+          "tfo66ty_172": "No. Soma and its assistant support learning. Open the linked references to check answers; diagnosis and treatment decisions belong to appropriately qualified professionals.",
+          "t1pn4dd0_52": "不能。Soma 与其助手用于学习，请打开附带参考资料核查；诊断与治疗决定应由具备相应资质的专业人士作出。",
+          "ty4dzg5_46": "Tôi báo lỗi nhãn hoặc yêu cầu xóa email ở đâu?",
+          "tu63aio_46": "Where can I report a label or remove my email?",
+          "t13vezy5_17": "在哪里报告标注问题或申请删除邮箱？",
+          "to8mlge_171": "Gửi yêu cầu tới trinhviethoangawm@gmail.com. Với lỗi nội dung, ghi rõ tên cấu trúc và đường dẫn. Với đăng ký nhận tin, dùng email đã đăng ký để yêu cầu xóa khỏi danh sách.",
+          "tv546up_169": "Contact trinhviethoangawm@gmail.com. For content issues, include the structure name and URL. To leave the newsletter, send a removal request from the subscribed address.",
+          "t1xmmgz1_68": "请联系 trinhviethoangawm@gmail.com。报告内容问题时提供结构名称与网址；取消订阅请使用已订阅邮箱发送删除请求。",
+          "t1uhey66_84": "Bắt đầu từ một mô hình, quan sát cấu trúc rồi kết hợp tài liệu và câu hỏi để ôn tập.",
+          "tuumt1o_87": "Start with a model, inspect its structures, then use documents and questions to revise.",
+          "toiomxt_24": "从一个模型开始，观察结构，再结合资料与试题复习。",
+          "t1drsybi_20": "1. Tìm và mở mô hình",
+          "tlrlske_24": "1. Find and open a model",
+          "tf8bz3u_10": "1. 查找并打开模型",
+          "t8u6z8z_189": "Vào Giải phẫu người, chọn hệ cơ quan hoặc vùng cơ thể; cũng có thể nhập tên cấu trúc trong ô tìm kiếm. Bấm thẻ mô hình để mở bài. Dùng chuột kéo để xoay và con lăn để phóng to hoặc thu nhỏ.",
+          "t1x7d8k5_174": "Open Human anatomy and choose a system or region, or enter a structure name in search. Select a model card to open its lesson. Drag to rotate and use the mouse wheel to zoom.",
+          "t1cfcu01_51": "进入人体解剖，选择系统或身体区域，也可在搜索框输入结构名称。点击模型卡片打开课程，拖动旋转、滚轮缩放。",
+          "tzp262a_19": "Mở thư viện mô hình",
+          "tr7tvn4_22": "Open the model library",
+          "txg6nuj_5": "打开模型库",
+          "t54nng0_25": "2. Quan sát từng cấu trúc",
+          "t1n13f4i_32": "2. Inspect individual structures",
+          "t19824xg_9": "2. 观察单个结构",
+          "t3rp4di_200": "Chọn cấu trúc trên mô hình hoặc trong danh sách nhãn để đọc tên và ghi chú. Dùng ẩn, làm mờ, cô lập hoặc mặt cắt nếu bài đang mở hỗ trợ. Đặt lại giúp khôi phục góc nhìn và trạng thái quan sát của bài.",
+          "tusm5jr_198": "Select a structure in the model or label list to read its name and notes. Use hide, fade, isolate or clipping where the lesson supports them. Reset restores the lesson's initial view and visibility.",
+          "txf2y0o_58": "在模型或标签列表中选择结构以阅读名称与说明；课程支持时可隐藏、淡化、单独显示或切面观察。重置恢复初始视角与显示状态。",
+          "tuh5enq_22": "3. Đọc nguồn và ôn tập",
+          "t142yvo1_26": "3. Read sources and revise",
+          "tv2ftfw_10": "3. 阅读来源并复习",
+          "t1jpfi07_205": "Kho tài liệu y khoa cho phép tra cứu nội dung đã lập chỉ mục và mở trang tài liệu tương ứng. Trong Quiz, chọn bộ đề để luyện tập hoặc thi thử và xem lại câu sai. Công cụ tài liệu cá nhân yêu cầu đăng nhập.",
+          "tkhshkh_196": "The medical library searches indexed material and opens matching document pages. In Quiz, select a set to practise or take a mock exam and review mistakes. Personal document tools require sign-in.",
+          "tum0t43_54": "医学资料库可检索已索引内容并打开对应文档页；在测验中选择题库练习或模拟考试并复习错题。个人文档工具需要登录。",
+          "t100wo3t_16": "Tra cứu tài liệu",
+          "todv2x3_16": "Search documents",
+          "tsrddzt_4": "检索文档",
+          "t1cddq02_7": "Mở Quiz",
+          "tck13ra_9": "Open Quiz",
+          "t8a2zmp_4": "打开测验",
+          "t1xeqyp9_24": "4. Dùng cử chỉ và trợ lý",
+          "tq35mu2_33": "4. Use gestures and the assistant",
+          "t1va17yq_10": "4. 使用手势与助手",
+          "t17u7rfj_251": "Trang Cử chỉ hướng dẫn cấp quyền camera và các thao tác tay được hỗ trợ. Đặt tay trong khung hình, đủ sáng và làm theo chỉ dẫn trên màn hình. Với câu hỏi giải phẫu hoặc cách sử dụng web, mở Trợ lý Soma và kiểm tra các nguồn được dẫn trong câu trả lời.",
+          "t11iejqh_244": "The Gesture page explains camera access and supported hand actions. Keep your hands in view with adequate lighting and follow the on-screen instructions. For anatomy or product questions, use the Soma assistant and check its referenced sources.",
+          "t8aylvz_69": "手势页面说明摄像头授权与支持的手势；请在充足光线下将手保持在画面中并遵循提示。解剖或使用问题可询问 Soma 助手，并核查回答引用的来源。",
+          "tyw7k06_20": "Mở điều khiển cử chỉ",
+          "t1llssw3_20": "Open gesture control",
+          "tg4i8ht_6": "打开手势控制",
+          "t17pxxp9_15": "Hỏi trợ lý Soma",
+          "tdlipqq_8": "Ask Soma",
+          "t1e7hzn7_7": "询问 Soma",
+          "t1yznz9j_21": "Bản quyền & giấy phép",
+          "t6ogmq4_20": "Copyright & licences",
+          "teef8pr_5": "版权与许可",
+          "tzuyf79_115": "Mỗi nguồn dữ liệu giữ giấy phép riêng. Hãy kiểm tra nguồn của tài nguyên trước khi tải lại, chia sẻ hoặc chỉnh sửa.",
+          "tc2csx9_111": "Each dataset keeps its own licence. Check the source of an asset before redistributing, sharing or adapting it.",
+          "t8zcsy3_32": "各数据源保留各自许可；重新分发、分享或修改资源前，请查阅其来源。",
+          "tn6ac5e_11": "BodyParts3D",
+          "t1ofgy8x_298": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International. Trang giấy phép của DBCLS cập nhật ngày 27/02/2025 công bố CC BY 4.0. Bản ghi công của Soma lưu nguồn hình học và những thay đổi đã thực hiện; không gộp giấy phép này với các mô hình từ nguồn khác.",
+          "t1rfcxeg_290": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International. DBCLS's licence page, updated 27 February 2025, specifies CC BY 4.0. Soma's attribution records geometry sources and adaptations; this licence is separate from those of other model sources.",
+          "t3gmbef_173": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International。DBCLS 于2025年2月27日更新的许可页面规定 CC BY 4.0；Soma 的署名记录保留几何来源与改动，不将其与其他模型来源的许可混同。",
+          "t1vps6du_26": "Giấy phép chính thức DBCLS",
+          "t1qwfts9_22": "Official DBCLS licence",
+          "t16tgkn5_10": "DBCLS 官方许可",
+          "t1kmrgjb_26": "Nguồn và ghi công của Soma",
+          "ttza87b_28": "Soma sources and attribution",
+          "t1ebx7od_10": "Soma 来源与署名",
+          "t1g6ukd2_30": "Z-Anatomy và các học liệu khác",
+          "t650lls_29": "Z-Anatomy and other materials",
+          "t1f7ek2m_17": "Z-Anatomy 与其他学习资料",
+          "t1mc92um_302": "Các mô hình Z-Anatomy sử dụng giấy phép CC BY-SA theo nguồn dự án. Khi sử dụng lại, giữ tên tác giả, nguồn và thông tin giấy phép; kiểm tra yêu cầu chia sẻ tương tự áp dụng cho bản phái sinh. PDF, giáo trình và hình ảnh có thể có điều kiện riêng; khả năng xem trên Soma không tự cấp quyền tái xuất bản.",
+          "t1v1lppe_293": "Z-Anatomy models use CC BY-SA under the source project's terms. Reuse should retain author, source and licence information and comply with the applicable share-alike terms. PDFs, textbooks and images may have separate conditions; access through Soma does not itself grant republication rights.",
+          "t1aesxzq_97": "Z-Anatomy 模型按源项目采用 CC BY-SA。重用时需保留作者、来源与许可信息，并遵守适用的相同方式共享要求。PDF、教材与图片可能有独立条件，在 Soma 查看不等于取得再出版许可。",
+          "t167ofta_15": "Nguồn Z-Anatomy",
+          "t1ilp78a_16": "Z-Anatomy source",
+          "tyg9lei_12": "Z-Anatomy 来源",
+          "th7f9qe_18": "Góp ý về bản quyền",
+          "tsf5ur7_19": "Copyright enquiries",
+          "t1el9tju_4": "版权咨询",
+          "t18d8nr2_192": "Nếu là chủ sở hữu quyền và thấy thiếu ghi công hoặc tài nguyên được sử dụng chưa phù hợp, gửi đường dẫn, tên tài nguyên và thông tin xác minh tới trinhviethoangawm@gmail.com để dự án kiểm tra.",
+          "t1vpk9ph_177": "Rights holders can report missing attribution or inappropriate use to trinhviethoangawm@gmail.com, including the URL, asset name and supporting ownership information for review.",
+          "tmsrm3o_66": "权利人发现署名缺失或使用不当，可将网址、资源名称及权利证明发送至 trinhviethoangawm@gmail.com 以供核查。",
+          "t8ieqse_15": "Cam kết sử dụng",
+          "tk40k71_16": "Usage commitment",
+          "t1o64fpz_4": "使用承诺",
+          "two6n2g_85": "Sử dụng Soma để học tập có trách nhiệm, kiểm chứng thông tin và tôn trọng người khác.",
+          "tz67lb0_73": "Use Soma responsibly for learning, verify information and respect others.",
+          "tha6qjg_25": "负责任地使用 Soma 学习、核查信息并尊重他人。",
+          "t803b5y_27": "Đối chiếu trước khi áp dụng",
+          "t9epo0e_21": "Check before applying",
+          "t1sw89t3_5": "应用前核对",
+          "t1rgoc1s_198": "Mô hình và trợ lý hỗ trợ hiểu kiến thức giải phẫu. Bạn cần đối chiếu nguồn tham khảo và giáo trình; không dùng câu trả lời tự động làm căn cứ duy nhất cho chẩn đoán, kê đơn hoặc quyết định điều trị.",
+          "tyil5k1_186": "Models and the assistant support anatomy learning. Cross-check references and textbooks; do not use automated answers as the sole basis for diagnosis, prescribing or treatment decisions.",
+          "t8un74z_52": "模型与助手辅助理解解剖知识，请结合参考资料与教材核对；不能将自动回答作为诊断、处方或治疗决定的唯一依据。",
+          "t19j1h0p_30": "Tôn trọng tài khoản và dữ liệu",
+          "t1udauae_25": "Respect accounts and data",
+          "tem8jyt_7": "尊重账户与数据",
+          "tqbssqv_213": "Giữ an toàn thông tin đăng nhập, chỉ tải lên tài liệu bạn có quyền sử dụng và không đưa dữ liệu nhận dạng người bệnh vào câu hỏi hoặc nội dung chia sẻ. Khi phát hiện lỗi, gửi phản hồi kèm nguồn để có thể kiểm tra.",
+          "t15d9g9_198": "Keep credentials secure, upload only material you are entitled to use and avoid including identifiable patient data in questions or shared content. Report errors with sources so they can be checked.",
+          "t1w3m7vx_56": "请保护登录凭据，仅上传有权使用的资料，并避免在提问或分享内容中包含可识别患者的数据。报告错误时附上来源便于核查。",
+          "t13w18ho_22": "Đọc điều khoản sử dụng",
+          "try0fu1_21": "Read the terms of use",
+          "t1b7535d_6": "阅读使用条款",
+          "tl7adve_17": "Bảo vệ tài nguyên",
+          "t4m81sw_19": "Resource protection",
+          "thx6060_4": "资源保护",
+          "t12wgcxk_77": "Giữ nguồn gốc học liệu rõ ràng và bảo đảm thư viện tiếp tục phục vụ việc học.",
+          "tafnfty_70": "Preserve material provenance and keep the library useful for learners.",
+          "t14qfqe3_20": "保留学习资料来源，维护资料库的学习用途。",
+          "t1953n1r_24": "Giữ ghi công khi chia sẻ",
+          "tbe15e7_29": "Keep attribution when sharing",
+          "tkd6tsf_7": "分享时保留署名",
+          "tqysn08_231": "Khi chia sẻ hình hoặc tài nguyên được giấy phép cho phép, giữ tên bộ dữ liệu, tác giả, liên kết nguồn, giấy phép và ghi chú thay đổi nếu có. Quyền sử dụng tùy tài nguyên; không mặc định mọi nội dung trên website cùng một giấy phép.",
+          "tnixur4_219": "When the licence permits sharing an image or asset, retain the dataset, author, source link, licence and adaptation notes where applicable. Rights depend on the asset; do not assume all website content uses one licence.",
+          "tlihsi7_64": "在许可允许分享图像或资源时，应保留数据集、作者、来源链接、许可与适用的修改说明。使用权依资源而定，不应假设全站内容采用同一许可。",
+          "t161wqv0_29": "Sử dụng dịch vụ đúng mục đích",
+          "t13ve0tc_27": "Use the service responsibly",
+          "t1462mk1_8": "负责任地使用服务",
+          "tqijnkf_221": "Không khai thác lỗi để truy cập tài liệu cá nhân của người khác, vượt quyền tài khoản hoặc gây quá tải hệ thống. Nếu cần dữ liệu mở với số lượng lớn, sử dụng kênh tải chính thức của bộ dữ liệu và tuân thủ giấy phép nguồn.",
+          "td78cef_198": "Do not exploit faults to access others' private documents, bypass account permissions or overload the service. For bulk open data, use the dataset's official download channel and follow its licence.",
+          "tfac8px_57": "不得利用漏洞访问他人私人文档、越过账户权限或使服务过载。批量获取开放数据时请使用数据集官方下载渠道，并遵守其许可。"
         }
       }
     },
@@ -53912,6 +54284,18 @@
           "tec48ee_42": "Lấy trọn bàn chân từ cổ chân tới đầu ngón.",
           "tnfapfv_40": "Frame the whole foot from ankle to toes.",
           "t1dvlf38_11": "从踝到趾完整取景足部。",
+          "t1lol75q_9": "Toàn thân",
+          "tsfpxa0_10": "Whole body",
+          "t175klh0_2": "全身",
+          "t1p7hkzb_39": "Lùi ra để thấy từ đầu tới hai bàn chân.",
+          "t1aq8iet_29": "Frame the head and both feet.",
+          "tmomb1r_13": "后退使头部和双脚进入画面。",
+          "t1xil59_13": "Nửa thân trên",
+          "t1qyxpf9_10": "Upper body",
+          "t1vlv22i_3": "上半身",
+          "t1i8iulw_38": "Lấy cả hai vai và phần thân vào khung.",
+          "t1eicc5d_35": "Frame both shoulders and the torso.",
+          "t1hq0mdv_11": "使双肩和躯干进入画面。",
           "tqyaqaj_7": "cái đầu",
           "t11vfs2_6": "hộp sọ",
           "t19mnzh9_2": "sọ",
@@ -55208,8 +55592,6 @@
           "vi": {
             "diseaseTitle": "Hỏi về bệnh này",
             "diseasePlaceholder": "Vd: tiêu chuẩn chẩn đoán? phân biệt với bệnh nào?",
-            "summarize": "Tóm tắt bài này",
-            "summarizePrompt": "Tóm tắt GỌN bài này trong ≤180 từ, đúng 4 gạch đầu dòng: định nghĩa · triệu chứng chính · chẩn đoán · hướng điều trị. Không chép nguyên văn.",
             "symptomTitle": "Tra theo triệu chứng",
             "symptomPlaceholder": "Vd: sưng đau khớp ngón chân cái về đêm, sốt nhẹ",
             "send": "Hỏi",
@@ -55229,8 +55611,6 @@
           "en": {
             "diseaseTitle": "Ask about this condition",
             "diseasePlaceholder": "E.g. diagnostic criteria? differential diagnosis?",
-            "summarize": "Summarise this article",
-            "summarizePrompt": "Summarise this article in ≤180 words, exactly 4 bullets: definition · key symptoms · diagnosis · treatment. Do not copy verbatim.",
             "symptomTitle": "Search by symptom",
             "symptomPlaceholder": "E.g. night-time swelling and pain in the big toe joint",
             "send": "Ask",
@@ -55250,8 +55630,6 @@
           "zh": {
             "diseaseTitle": "询问本病",
             "diseasePlaceholder": "例如：诊断标准？与哪些病鉴别？",
-            "summarize": "概括本篇",
-            "summarizePrompt": "用≤180字概括本篇，正好4条：定义·主要症状·诊断·治疗方向。不要照抄原文。",
             "symptomTitle": "按症状检索",
             "symptomPlaceholder": "例如：夜间大脚趾关节红肿疼痛，低热",
             "send": "提问",
@@ -55307,6 +55685,8 @@
             "overview": "Tổng quan",
             "clinical": "Lâm sàng & cận lâm sàng",
             "imaging": "Chẩn đoán hình ảnh",
+            "summary": "Tóm tắt bài học",
+            "summaryNote": "Bản tóm lược biên soạn sẵn từ hồ sơ bệnh học, kèm nguồn đối chiếu.",
             "progression": "Tiến triển & biến chứng",
             "treatment": "Điều trị tham khảo",
             "incomplete": "Chưa có phần bệnh học chi tiết. Hồ sơ hiện dẫn thẳng tới đúng trang trong giáo trình để bạn đọc nguyên bản.",
@@ -55356,6 +55736,8 @@
             "overview": "Overview",
             "clinical": "Clinical & laboratory",
             "imaging": "Diagnostic imaging",
+            "summary": "Article summary",
+            "summaryNote": "Prepared from the condition record, with its source for cross-checking.",
             "progression": "Progression & complications",
             "treatment": "Treatment reference",
             "incomplete": "The detailed pathology has not been written yet. This record points to the exact textbook page so you can read the original.",
@@ -55405,6 +55787,8 @@
             "overview": "概述",
             "clinical": "临床与实验室",
             "imaging": "医学影像",
+            "summary": "本篇摘要",
+            "summaryNote": "根据疾病档案预先编写，附有来源供核对。",
             "progression": "进展与并发症",
             "treatment": "参考治疗",
             "incomplete": "详细病理内容尚未撰写。本档案直接指向教材对应页码，便于查阅原文。",
@@ -55891,6 +56275,7 @@
               "group": "Giải phẫu theo vùng",
               "topic": "abdomen-pelvis",
               "file": "cau-hoi-dung-sai-co-than-chung-la-bung.json",
+              "sourceHash": "7593cc1502f0e388bd0fc9e6c7bce3eb88a6ed660d7097411e3eb24dae8d9e0b",
               "count": 38,
               "gradableCount": 38,
               "imageCount": 13,
@@ -55904,6 +56289,7 @@
               "group": "Giải phẫu theo vùng",
               "topic": "abdomen-pelvis",
               "file": "da-day-gan-ruot.json",
+              "sourceHash": "019acf7963c5faec58797a9b12a0d9e05b10d181a3ada41fd793567717aeba5d",
               "count": 74,
               "gradableCount": 74,
               "imageCount": 33,
@@ -55917,6 +56303,7 @@
               "group": "Giải phẫu theo vùng",
               "topic": "lower-limb",
               "file": "giai-phau-chi-duoi.json",
+              "sourceHash": "28754ca6f00b37e509bd0037586bbc181a9719c926825b5a34943eadb8ce05ee",
               "count": 155,
               "gradableCount": 155,
               "imageCount": 121,
@@ -55930,6 +56317,7 @@
               "group": "Giải phẫu theo vùng",
               "topic": "upper-limb",
               "file": "giai-phau-chi-tren.json",
+              "sourceHash": "815295af964892cae264f7a1256c88bf2eba28a2dd9c8f51c6b7b05ffc0b14c1",
               "count": 145,
               "gradableCount": 145,
               "imageCount": 124,
@@ -55943,6 +56331,7 @@
               "group": "Giải phẫu theo vùng",
               "topic": "abdomen-pelvis",
               "file": "giai-phau-chau-hong.json",
+              "sourceHash": "3eda7a6c92d9a70f9f9cd187116b617d7f42e7486947fd7f0f4913e59e6007c3",
               "count": 34,
               "gradableCount": 34,
               "imageCount": 0,
@@ -55956,6 +56345,7 @@
               "group": "Giải phẫu theo vùng",
               "topic": "senses",
               "file": "giai-phau-mat.json",
+              "sourceHash": "3f07b6ebc662708bd2e06a28a2c577f54b7e2c3368dce61e29c107cc67d66e30",
               "count": 23,
               "gradableCount": 23,
               "imageCount": 16,
@@ -55969,6 +56359,7 @@
               "group": "Giải phẫu theo vùng",
               "topic": "thorax",
               "file": "giai-phau-nguc.json",
+              "sourceHash": "36079e6c487ca6242620b7c0ec798aabdfd1a1b0a7566ec8f1faee641fba6176",
               "count": 195,
               "gradableCount": 195,
               "imageCount": 182,
@@ -55982,6 +56373,7 @@
               "group": "Giải phẫu theo vùng",
               "topic": "abdomen-pelvis",
               "file": "giai-phau-phuc-mac.json",
+              "sourceHash": "a6f845703b19c3da9722b93fd17b30398b7d20827a14b16b03736cb7c130ad58",
               "count": 18,
               "gradableCount": 18,
               "imageCount": 7,
@@ -55995,6 +56387,7 @@
               "group": "Giải phẫu theo vùng",
               "topic": "senses",
               "file": "giai-phau-tai.json",
+              "sourceHash": "db7ef3e736ca54bb83f21aa08c50be59f9a9793f95f406703bdc9ba48ee627e0",
               "count": 29,
               "gradableCount": 29,
               "imageCount": 20,
@@ -56008,6 +56401,7 @@
               "group": "Giải phẫu theo vùng",
               "topic": "abdomen-pelvis",
               "file": "giai-phau-thanh-bung-ong-ben.json",
+              "sourceHash": "a38a8eddb7b4fce4bf1b16e394355163f3509bcca250779e39e5d4238e1cabdc",
               "count": 26,
               "gradableCount": 26,
               "imageCount": 13,
@@ -56021,6 +56415,7 @@
               "group": "Giải phẫu theo vùng",
               "topic": "nervous",
               "file": "giai-phau-than-kinh.json",
+              "sourceHash": "cb78f45e940869df57a83fc3c1ee9a476b2b814bf455ba3a2bea703eafe4a4df",
               "count": 45,
               "gradableCount": 45,
               "imageCount": 55,
@@ -56034,6 +56429,7 @@
               "group": "Giải phẫu theo vùng",
               "topic": "abdomen-pelvis",
               "file": "giai-phau-than-tu-cung-nieu-quan-am-dao.json",
+              "sourceHash": "1ec7d978d360f4684f46c120e8b88f0cf2be3c6d3e7e5da2fe103ebcc0b1d866",
               "count": 41,
               "gradableCount": 41,
               "imageCount": 23,
@@ -56047,6 +56443,7 @@
               "group": "Giải phẫu theo vùng",
               "topic": "head-neck",
               "file": "mcq-dau-mat-co.json",
+              "sourceHash": "fb5408d242cc149a299f8f6f6d570a4c7af95e57f735c8324039b4ff92dfa066",
               "count": 41,
               "gradableCount": 41,
               "imageCount": 21,
@@ -56060,6 +56457,7 @@
               "group": "Giải phẫu theo vùng",
               "topic": "nervous",
               "file": "than-kinh-trung-uong.json",
+              "sourceHash": "43503ff3d77de14a236fd33b0ae6d9d75ed6e9c7aa7473b66b05c606adc79cc5",
               "count": 23,
               "gradableCount": 23,
               "imageCount": 1,
@@ -56073,6 +56471,7 @@
               "group": "Giải phẫu theo vùng",
               "topic": "head-neck",
               "file": "dung-sai-dau-mat-co.json",
+              "sourceHash": "70c0b715d4baa0c42a081e9b8c7d81c84b2be6739e8aae9a466367732437dbaa",
               "count": 61,
               "gradableCount": 61,
               "imageCount": 120,
@@ -56086,6 +56485,7 @@
               "group": "Giải phẫu theo vùng",
               "topic": "head-neck",
               "file": "dau-mat-co.json",
+              "sourceHash": "6b62f42b543bcf03f8d0a9cc19f24dc0849fc7d1003ea0df3da64c74f6d0e33a",
               "count": 71,
               "gradableCount": 71,
               "imageCount": 62,
@@ -56099,6 +56499,7 @@
               "group": "Case lâm sàng",
               "topic": "clinical",
               "file": "tong-hop-cac-case-lam-sang-quan-trong.json",
+              "sourceHash": "0e04bea96c3e2e35b469c82298b03ed7a823f634e60c01cc49ae1c18718f5676",
               "count": 193,
               "gradableCount": 193,
               "imageCount": 10,
@@ -56112,6 +56513,7 @@
               "group": "Ôn tập tổng hợp",
               "topic": "review",
               "file": "on-tap-giai-phau-1.json",
+              "sourceHash": "1140bc9839410a0c890c0cddcb0f12521ad814d24799e7b1705962dd2e02fc4b",
               "count": 58,
               "gradableCount": 58,
               "imageCount": 1,
@@ -56125,6 +56527,7 @@
               "group": "Ôn tập tổng hợp",
               "topic": "review",
               "file": "on-tap-giai-phau-2.json",
+              "sourceHash": "f9af7ce0dadbd805f64cba04acefce9749c96980ea2914ec2825a460eb20a292",
               "count": 83,
               "gradableCount": 83,
               "imageCount": 0,
@@ -56138,6 +56541,7 @@
               "group": "Ôn tập tổng hợp",
               "topic": "review",
               "file": "on-tap-giai-phau-3.json",
+              "sourceHash": "592374a55dafe434511c5b411d843eaf1486c87212b9dca6b50eb043bf8a7c90",
               "count": 50,
               "gradableCount": 50,
               "imageCount": 0,
@@ -56151,6 +56555,7 @@
               "group": "Ôn tập tổng hợp",
               "topic": "review",
               "file": "on-tap-giai-phau-4.json",
+              "sourceHash": "37ac018a940d430e673b6ae6e198203f55b48ad17e618234f47fd6d295a08ee6",
               "count": 45,
               "gradableCount": 45,
               "imageCount": 0,
@@ -56164,6 +56569,7 @@
               "group": "Đề thi thử",
               "topic": "mock",
               "file": "de-thi-thu-1.json",
+              "sourceHash": "839e2bf6b668916ebee23d67014553c92b8664e23cabc98dfd2e0750bd436d0f",
               "count": 155,
               "gradableCount": 155,
               "imageCount": 78,
@@ -56177,6 +56583,7 @@
               "group": "Đề thi thử",
               "topic": "mock",
               "file": "de-thi-thu-2.json",
+              "sourceHash": "ed035823b952d45cf0bbed93e0500835e5bc7e35c26a7fcb4c5ae80ca83593f2",
               "count": 150,
               "gradableCount": 150,
               "imageCount": 105,
@@ -56190,6 +56597,7 @@
               "group": "Đề thi thử",
               "topic": "mock",
               "file": "de-thi-thu-3.json",
+              "sourceHash": "4ad83d9840cb350ade863906bbd50ecfc6297ead504471633fa7e45ab573300c",
               "count": 150,
               "gradableCount": 150,
               "imageCount": 98,
@@ -56203,6 +56611,7 @@
               "group": "Đề thi thử",
               "topic": "mock",
               "file": "de-thi-thu-4.json",
+              "sourceHash": "a4a2914225865e76c6a3c166d965d1402d6558c586b0d86f705a354121e2af67",
               "count": 150,
               "gradableCount": 150,
               "imageCount": 64,
@@ -56216,6 +56625,7 @@
               "group": "Đề thi thử",
               "topic": "mock",
               "file": "de-thi-thu-5.json",
+              "sourceHash": "faf0545a12bcda51eaeab73ed5c86d8db3bcec04ca0a4e0592baa2f18f509cf2",
               "count": 153,
               "gradableCount": 153,
               "imageCount": 53,
@@ -56229,6 +56639,7 @@
               "group": "Đề thi thử",
               "topic": "mock",
               "file": "de-thi-thu-6.json",
+              "sourceHash": "549e0b83608614f3e2ab26db3b3fb3c3edc988a29abbb1c2f147ffef6a6e3969",
               "count": 150,
               "gradableCount": 150,
               "imageCount": 55,
@@ -56242,6 +56653,7 @@
               "group": "Đề thi thử",
               "topic": "mock",
               "file": "de-thi-thu-7.json",
+              "sourceHash": "9221a8d3b0e15fdc43eac8b4f0c986d85466bf9cb25af30f86f932c2eb090348",
               "count": 150,
               "gradableCount": 150,
               "imageCount": 68,
@@ -56255,6 +56667,7 @@
               "group": "Đề thi thử",
               "topic": "mock",
               "file": "de-thi-thu-8.json",
+              "sourceHash": "2fa7f2fcc0601a4989021825f1fa97cbb3ecb359c01b7dc3f57d35bb8fdbc916",
               "count": 150,
               "gradableCount": 150,
               "imageCount": 29,
@@ -56268,6 +56681,7 @@
               "group": "Đề thi thử",
               "topic": "mock",
               "file": "de-thi-thu-9.json",
+              "sourceHash": "83eb9ebb455969f3cdc04d1fbf308d86be07e839cdba1841178d3e6c96f78c4e",
               "count": 154,
               "gradableCount": 154,
               "imageCount": 45,
@@ -57070,17 +57484,6 @@
             "accent": "g-repro"
           },
           {
-            "key": "fascia",
-            "slug": "he-mac-nhom",
-            "label": {
-              "vi": "Hệ mạc",
-              "en": "Fascial system",
-              "zh": "筋膜系统"
-            },
-            "icon": "i-cell",
-            "accent": "g-fascia"
-          },
-          {
             "key": "connective",
             "slug": "mo-lien-ket-nhom",
             "label": {
@@ -57300,7 +57703,7 @@
                 "en": "Organ systems",
                 "zh": "器官系统"
               },
-              "href": "/giai-phau/theo-he"
+              "href": "/giai-phau/tat-ca"
             },
             {
               "label": {
@@ -57742,7 +58145,7 @@
                       "en": "About Soma Atlas",
                       "zh": "关于 Soma Atlas"
                     },
-                    "href": "/"
+                    "href": "/gioi-thieu/ve-soma-atlas"
                   },
                   {
                     "label": {
@@ -57750,7 +58153,7 @@
                       "en": "Mission & origins",
                       "zh": "使命与来源"
                     },
-                    "href": "/tai-lieu-y-khoa"
+                    "href": "/gioi-thieu/su-menh-nguon-goc"
                   },
                   {
                     "label": {
@@ -57758,7 +58161,7 @@
                       "en": "Data & methodology",
                       "zh": "数据与方法"
                     },
-                    "href": "/tai-lieu-y-khoa"
+                    "href": "/gioi-thieu/du-lieu-phuong-phap"
                   }
                 ]
               },
@@ -57822,18 +58225,18 @@
                   },
                   {
                     "label": {
-                      "vi": "Học liệu Đại học Y Hà Nội",
-                      "en": "Hanoi Medical University resources",
-                      "zh": "河内医科大学学习资料"
+                      "vi": "Đại học Y Hà Nội",
+                      "en": "Hanoi Medical University",
+                      "zh": "河内医科大学"
                     },
                     "href": "https://hmu.edu.vn/",
                     "external": true
                   },
                   {
                     "label": {
-                      "vi": "Y học Bộ Y tế",
-                      "en": "Ministry of Health medicine",
-                      "zh": "卫生部医学资料"
+                      "vi": "Bộ Y tế",
+                      "en": "Ministry of Health",
+                      "zh": "卫生部"
                     },
                     "href": "https://moh.gov.vn/",
                     "external": true
@@ -57872,7 +58275,7 @@
                       "en": "Help center",
                       "zh": "帮助中心"
                     },
-                    "href": "/tro-ly"
+                    "href": "/ho-tro/trung-tam-ho-tro"
                   },
                   {
                     "label": {
@@ -57880,7 +58283,7 @@
                       "en": "Frequently asked questions",
                       "zh": "常见问题"
                     },
-                    "href": "/tro-ly"
+                    "href": "/ho-tro/cau-hoi-thuong-gap"
                   },
                   {
                     "label": {
@@ -57888,7 +58291,7 @@
                       "en": "User guide",
                       "zh": "使用指南"
                     },
-                    "href": "/tai-lieu-y-khoa"
+                    "href": "/ho-tro/huong-dan-su-dung"
                   },
                   {
                     "label": {
@@ -57904,7 +58307,7 @@
                       "en": "Report content issue",
                       "zh": "报告内容问题"
                     },
-                    "href": "mailto:support@somaatlas.vn"
+                    "href": "mailto:trinhviethoangawm@gmail.com"
                   }
                 ]
               },
@@ -57922,8 +58325,7 @@
                       "en": "Copyright & licences",
                       "zh": "版权与许可"
                     },
-                    "href": "https://creativecommons.org/licenses/by-sa/4.0/",
-                    "external": true
+                    "href": "/chinh-sach/ban-quyen-giay-phep"
                   },
                   {
                     "label": {
@@ -57931,7 +58333,7 @@
                       "en": "Data sources",
                       "zh": "数据来源"
                     },
-                    "href": "/tai-lieu-y-khoa"
+                    "href": "/nguon-du-lieu"
                   },
                   {
                     "label": {
@@ -57939,7 +58341,7 @@
                       "en": "Usage commitment",
                       "zh": "使用承诺"
                     },
-                    "href": "/tai-lieu-y-khoa"
+                    "href": "/chinh-sach/cam-ket-su-dung"
                   },
                   {
                     "label": {
@@ -57947,7 +58349,7 @@
                       "en": "Resource protection",
                       "zh": "资源保护"
                     },
-                    "href": "/tai-lieu-y-khoa"
+                    "href": "/chinh-sach/bao-ve-tai-nguyen"
                   },
                   {
                     "label": {
@@ -58002,7 +58404,7 @@
             "social": [
               {
                 "label": "Facebook",
-                "href": "https://www.facebook.com/"
+                "href": "https://www.facebook.com/trinh.hoang.262568?locale=vi_VN"
               },
               {
                 "label": "Instagram",
@@ -58574,7 +58976,7 @@
       "category": "models",
       "payload": {
         "value": {
-          "slug": "tai-day-du",
+          "slug": "dong-mach-nao-truoc",
           "title": {
             "vi": "Động mạch não trước và nhánh vỏ",
             "en": "The Anterior Cerebral Artery",
@@ -85361,7 +85763,7 @@
       "category": "models",
       "payload": {
         "value": {
-          "slug": "he-thinh-giac",
+          "slug": "co-truoc-cot-song-co",
           "title": {
             "vi": "Cơ trước cột sống cổ và cơ bậc thang",
             "en": "Prevertebral and Scalene Muscles",
@@ -94003,6 +94405,733 @@
           "replacement": {
             "modelFile": "",
             "hotspots": []
+          }
+        }
+      }
+    },
+    {
+      "id": "data:src/lib/informationPages.ts#informationGroups",
+      "title": "informationGroups",
+      "source": "src/lib/informationPages.ts",
+      "category": "interface",
+      "payload": {
+        "value": {
+          "gioi-thieu": {
+            "vi": "Giới thiệu",
+            "en": "About Soma",
+            "zh": "关于 Soma"
+          },
+          "ho-tro": {
+            "vi": "Hỗ trợ & hướng dẫn",
+            "en": "Help & guides",
+            "zh": "帮助与指南"
+          },
+          "chinh-sach": {
+            "vi": "Chính sách",
+            "en": "Policies",
+            "zh": "政策"
+          }
+        }
+      }
+    },
+    {
+      "id": "data:src/lib/informationPages.ts#informationPages",
+      "title": "informationPages",
+      "source": "src/lib/informationPages.ts",
+      "category": "interface",
+      "payload": {
+        "value": {
+          "ve-soma-atlas": {
+            "group": "gioi-thieu",
+            "title": {
+              "vi": "Về Soma Atlas",
+              "en": "About Soma Atlas",
+              "zh": "关于 Soma Atlas"
+            },
+            "intro": {
+              "vi": "Một thư viện giải phẫu số để quan sát cấu trúc, hiểu mối liên hệ và học bằng chính thao tác khám phá.",
+              "en": "A digital anatomy library for observing structures, understanding relationships and learning through exploration.",
+              "zh": "通过观察结构、理解相互关系与亲手探索来学习的数字解剖资料库。"
+            },
+            "sections": [
+              {
+                "title": {
+                  "vi": "Từ hình ảnh phẳng đến không gian ba chiều",
+                  "en": "From flat images to three dimensions",
+                  "zh": "从平面图像到三维空间"
+                },
+                "paragraphs": [
+                  {
+                    "vi": "Soma Atlas là đồ án tốt nghiệp về nền tảng học giải phẫu tương tác. Người học có thể xoay, phóng to, chọn cấu trúc và quan sát từng lớp để hình dung vị trí, hình dạng và tương quan giữa các cơ quan.",
+                    "en": "Soma Atlas is a graduation project focused on interactive anatomy learning. Learners can rotate, zoom, select structures and inspect layers to understand the position, shape and relationships of organs.",
+                    "zh": "Soma Atlas 是一个交互式解剖学习平台毕业设计。学习者可旋转、缩放、选择结构并逐层观察，理解器官的位置、形态及毗邻关系。"
+                  }
+                ]
+              },
+              {
+                "title": {
+                  "vi": "Một nơi để quan sát, tra cứu và ôn tập",
+                  "en": "Observe, look up and revise",
+                  "zh": "观察、检索与复习"
+                },
+                "paragraphs": [
+                  {
+                    "vi": "Atlas người được tổ chức theo hệ cơ quan, vùng cơ thể và từng bài mô hình. Bên cạnh mô hình 3D là kho tài liệu y khoa, trắc nghiệm, giải phẫu so sánh và trợ lý Soma có liên kết tới nội dung tham khảo. Điều khiển cử chỉ giúp khám phá mô hình bằng webcam trên thiết bị hỗ trợ.",
+                    "en": "Human anatomy is organised by system, region and individual model lesson. The 3D library is accompanied by medical documents, quizzes, comparative anatomy and a Soma assistant with reference links. Gesture control supports model exploration using a compatible webcam and device.",
+                    "zh": "人体图谱按器官系统、身体区域与模型课程组织，同时提供医学资料、测验、比较解剖及附参考链接的 Soma 助手。兼容设备还可通过摄像头手势操作模型。"
+                  }
+                ],
+                "links": [
+                  {
+                    "label": {
+                      "vi": "Khám phá atlas người",
+                      "en": "Explore human anatomy",
+                      "zh": "探索人体解剖"
+                    },
+                    "href": "/nguoi"
+                  },
+                  {
+                    "label": {
+                      "vi": "Học tập & trắc nghiệm",
+                      "en": "Learning & quizzes",
+                      "zh": "学习与测验"
+                    },
+                    "href": "/quiz"
+                  }
+                ]
+              },
+              {
+                "title": {
+                  "vi": "Dành cho người học y khoa và thú y",
+                  "en": "For medical and veterinary learners",
+                  "zh": "面向医学与兽医学习者"
+                },
+                "paragraphs": [
+                  {
+                    "vi": "Soma hướng đến sinh viên y khoa, người học thú y và người cần ôn lại kiến thức giải phẫu. Mô hình là phương tiện hỗ trợ học tập; hãy đối chiếu với giáo trình và nguồn gốc dữ liệu. Nội dung trên nền tảng không thay thế chẩn đoán hay chỉ định điều trị.",
+                    "en": "Soma is intended for medical students, veterinary learners and anyone revising anatomy. Models support learning and should be checked against textbooks and source data. Platform content does not replace clinical diagnosis or treatment decisions.",
+                    "zh": "Soma 面向医学生、兽医学习者及需要复习解剖的人群。模型辅助学习，应结合教材及源数据核对；平台内容不能替代临床诊断或治疗决定。"
+                  }
+                ]
+              },
+              {
+                "title": {
+                  "vi": "Cùng hoàn thiện thư viện",
+                  "en": "Help improve the library",
+                  "zh": "共同完善资料库"
+                },
+                "paragraphs": [
+                  {
+                    "vi": "Nếu phát hiện nhãn chưa đúng, thiếu cấu trúc hoặc liên kết không hoạt động, hãy gửi tên mô hình, đường dẫn và mô tả vấn đề tới trinhviethoangawm@gmail.com. Những phần chưa có dữ liệu cần được ghi rõ thay vì dựng thêm cấu trúc không có căn cứ.",
+                    "en": "Report incorrect labels, missing structures or broken links to trinhviethoangawm@gmail.com, including the model name, URL and a description. Missing source data should be stated explicitly instead of filling gaps with unsupported structures.",
+                    "zh": "发现标注错误、结构缺失或链接失效时，请将模型名称、网址及问题描述发送至 trinhviethoangawm@gmail.com。缺少源数据时应明确说明，不能凭空补造结构。"
+                  }
+                ]
+              }
+            ]
+          },
+          "su-menh-nguon-goc": {
+            "group": "gioi-thieu",
+            "title": {
+              "vi": "Sứ mệnh & nguồn gốc",
+              "en": "Mission & origins",
+              "zh": "使命与缘起"
+            },
+            "intro": {
+              "vi": "Giúp kiến thức giải phẫu dễ tiếp cận hơn bằng quan sát trực tiếp và học liệu có thể kiểm chứng.",
+              "en": "Make anatomy more accessible through direct observation and verifiable learning material.",
+              "zh": "通过直观观察与可核查的学习资料，让解剖知识更易获取。"
+            },
+            "sections": [
+              {
+                "title": {
+                  "vi": "Bắt đầu từ nhu cầu học giải phẫu",
+                  "en": "Built around anatomy learning",
+                  "zh": "从解剖学习需求出发"
+                },
+                "paragraphs": [
+                  {
+                    "vi": "Một hình vẽ thường chỉ cho thấy một góc nhìn. Soma Atlas được phát triển trong khuôn khổ đồ án tốt nghiệp để người học chủ động thay đổi góc quan sát, tách lớp và nối kiến thức trong giáo trình với cấu trúc trong không gian.",
+                    "en": "A drawing usually shows one viewpoint. Soma Atlas was developed as a graduation project so learners can change their viewpoint, inspect layers and connect textbook knowledge with spatial structures.",
+                    "zh": "一幅图通常只展示一个视角。Soma Atlas 作为毕业设计开发，让学习者自主改变视角、观察分层，将教材知识与空间结构联系起来。"
+                  }
+                ]
+              },
+              {
+                "title": {
+                  "vi": "Ba nguyên tắc xây dựng",
+                  "en": "Three guiding principles",
+                  "zh": "三项建设原则"
+                },
+                "paragraphs": [
+                  {
+                    "vi": "Trực quan: bắt đầu từ mô hình, vị trí và tương quan. Có căn cứ: giữ nguồn dữ liệu và ghi công cho tài nguyên sử dụng. Trung thực về giới hạn: cấu trúc chưa có trong bộ dữ liệu phải được nêu rõ.",
+                    "en": "Visual learning starts with models, positions and relationships. Evidence requires source records and attribution. Honesty about limitations means explicitly identifying structures absent from a dataset.",
+                    "zh": "直观学习以模型、位置与毗邻关系为起点；有据学习保留来源与署名；诚实说明局限，明确指出数据集中缺失的结构。"
+                  },
+                  {
+                    "vi": "Dự án kết hợp dữ liệu mở với công cụ tra cứu và ôn tập. Việc sử dụng dữ liệu từ một tổ chức không đồng nghĩa Soma là sản phẩm chính thức hoặc được tổ chức đó bảo trợ.",
+                    "en": "The project combines open data with search and revision tools. Using an organisation's data does not imply that Soma is its official product or is endorsed by it.",
+                    "zh": "项目结合开放数据与检索、复习工具。使用某机构的数据并不代表 Soma 是其官方产品或获得其背书。"
+                  }
+                ]
+              }
+            ]
+          },
+          "du-lieu-phuong-phap": {
+            "group": "gioi-thieu",
+            "title": {
+              "vi": "Dữ liệu & phương pháp",
+              "en": "Data & methodology",
+              "zh": "数据与方法"
+            },
+            "intro": {
+              "vi": "Từ dữ liệu nguồn đến mô hình học tập: giữ danh tính cấu trúc, tổ chức lại để dễ quan sát và công khai giới hạn.",
+              "en": "From source data to learning models: preserve structure identity, organise views for learning and disclose limitations.",
+              "zh": "从源数据到学习模型：保留结构标识、组织便于学习的视图并公开数据局限。"
+            },
+            "sections": [
+              {
+                "title": {
+                  "vi": "Nguồn hình học và thuật ngữ",
+                  "en": "Geometry and terminology",
+                  "zh": "几何数据与术语"
+                },
+                "paragraphs": [
+                  {
+                    "vi": "Thư viện người sử dụng các mô hình từ Z-Anatomy và atlas BodyParts3D. Các bài chuyên đề nhóm cấu trúc theo cơ quan hoặc vùng. Tên tiếng Việt được đối chiếu với thuật ngữ giải phẫu; tên nguồn và tên Latin được giữ để hỗ trợ kiểm tra.",
+                    "en": "The human library uses Z-Anatomy models and the BodyParts3D atlas. Lessons group structures by organ or region. Vietnamese labels are checked against anatomical terminology, while source names and Latin names support verification.",
+                    "zh": "人体资料库使用 Z-Anatomy 模型与 BodyParts3D 图谱，按器官或区域组织课程。越南语名称对照解剖术语，并保留源名称与拉丁名以便核查。"
+                  }
+                ],
+                "links": [
+                  {
+                    "label": {
+                      "vi": "Xem nguồn và ghi công atlas",
+                      "en": "Atlas sources and attribution",
+                      "zh": "图谱来源与署名"
+                    },
+                    "href": "/nguon-du-lieu"
+                  }
+                ]
+              },
+              {
+                "title": {
+                  "vi": "Chuẩn bị mô hình để học trên web",
+                  "en": "Preparing models for the web",
+                  "zh": "为网页学习准备模型"
+                },
+                "paragraphs": [
+                  {
+                    "vi": "Dữ liệu được chuẩn hóa trục, đơn vị và vị trí; hình học được tối ưu cho trình duyệt. Tên và mã cấu trúc giúp liên kết mô hình với nhãn. Màu theo hệ, lớp ẩn/mờ và nhóm bài học là cách trình bày để quan sát, không phải màu thật của mô sống.",
+                    "en": "Data axes, units and positions are normalised and geometry is optimised for browsers. Structure identifiers connect geometry to labels. System colours, visibility layers and lesson groups are presentation aids rather than the natural colours of living tissue.",
+                    "zh": "数据统一坐标轴、单位及位置，并优化几何以适应浏览器。结构标识连接网格与标签；系统配色、隐藏或淡化分层及课程分组是观察辅助，并非活体组织的真实颜色。"
+                  }
+                ]
+              },
+              {
+                "title": {
+                  "vi": "Tra cứu có dẫn nguồn và giới hạn dữ liệu",
+                  "en": "References and dataset limitations",
+                  "zh": "参考依据与数据局限"
+                },
+                "paragraphs": [
+                  {
+                    "vi": "Kết quả tra cứu tài liệu có tên nguồn và vị trí trang khi dữ liệu hỗ trợ. Một bộ mô hình tham chiếu không thể đại diện mọi biến thể giải phẫu. Khi thiếu cấu trúc trong atlas toàn thân, bài học có thể dùng mô hình Z-Anatomy riêng; không đổi một bài sang cơ quan khác chỉ để lấp chỗ trống.",
+                    "en": "Document results include source names and page locations where available. A reference dataset cannot represent every anatomical variation. A separate Z-Anatomy model can cover structures absent from the whole-body atlas; an unrelated organ should not replace the lesson.",
+                    "zh": "资料检索在数据支持时提供来源名称与页码。参考模型不能覆盖所有解剖变异；全身图谱缺少结构时可使用独立的 Z-Anatomy 模型，不应以无关器官替换课程。"
+                  }
+                ]
+              }
+            ]
+          },
+          "trung-tam-ho-tro": {
+            "group": "ho-tro",
+            "title": {
+              "vi": "Trung tâm hỗ trợ",
+              "en": "Help centre",
+              "zh": "帮助中心"
+            },
+            "intro": {
+              "vi": "Tìm hướng dẫn, xử lý vấn đề thường gặp hoặc liên hệ trực tiếp khi bạn cần hỗ trợ.",
+              "en": "Find guides, troubleshoot common issues or contact us directly for help.",
+              "zh": "查阅指南、处理常见问题，或直接联系我们获取帮助。"
+            },
+            "sections": [
+              {
+                "title": {
+                  "vi": "Bắt đầu với Soma",
+                  "en": "Getting started",
+                  "zh": "开始使用 Soma"
+                },
+                "paragraphs": [
+                  {
+                    "vi": "Mở hướng dẫn để làm quen với atlas, trắc nghiệm, tài liệu và điều khiển cử chỉ. Trang câu hỏi thường gặp giải đáp việc đăng nhập, quyền camera và mô hình không hiển thị.",
+                    "en": "Use the guide to explore the atlas, quizzes, documents and gesture control. The FAQ covers sign-in, camera access and models that fail to display.",
+                    "zh": "通过指南了解图谱、测验、资料与手势控制；常见问题涵盖登录、摄像头权限与模型显示问题。"
+                  }
+                ],
+                "links": [
+                  {
+                    "label": {
+                      "vi": "Hướng dẫn sử dụng",
+                      "en": "User guide",
+                      "zh": "使用指南"
+                    },
+                    "href": "/ho-tro/huong-dan-su-dung"
+                  },
+                  {
+                    "label": {
+                      "vi": "Câu hỏi thường gặp",
+                      "en": "Frequently asked questions",
+                      "zh": "常见问题"
+                    },
+                    "href": "/ho-tro/cau-hoi-thuong-gap"
+                  }
+                ]
+              },
+              {
+                "title": {
+                  "vi": "Gửi yêu cầu hỗ trợ hoặc báo lỗi",
+                  "en": "Ask for help or report an issue",
+                  "zh": "寻求帮助或报告问题"
+                },
+                "paragraphs": [
+                  {
+                    "vi": "Gửi email tới trinhviethoangawm@gmail.com hoặc gọi 0848 565 650. Khi báo lỗi, kèm đường dẫn trang, tên mô hình, thao tác vừa thực hiện và ảnh lỗi nếu có. Không gửi mật khẩu hay dữ liệu nhận dạng người bệnh.",
+                    "en": "Email trinhviethoangawm@gmail.com or call 0848 565 650. Include the page URL, model name, steps you took and a screenshot where available. Do not send passwords or identifiable patient information.",
+                    "zh": "请发邮件至 trinhviethoangawm@gmail.com 或致电 0848 565 650，并提供页面网址、模型名称、操作步骤及可用的问题截图；请勿发送密码或可识别患者的信息。"
+                  }
+                ],
+                "links": [
+                  {
+                    "label": {
+                      "vi": "Gửi email hỗ trợ",
+                      "en": "Email support",
+                      "zh": "发送支持邮件"
+                    },
+                    "href": "mailto:trinhviethoangawm@gmail.com"
+                  },
+                  {
+                    "label": {
+                      "vi": "Gọi 0848 565 650",
+                      "en": "Call 0848 565 650",
+                      "zh": "致电 0848 565 650"
+                    },
+                    "href": "tel:0848565650"
+                  }
+                ]
+              }
+            ]
+          },
+          "cau-hoi-thuong-gap": {
+            "group": "ho-tro",
+            "title": {
+              "vi": "Câu hỏi thường gặp",
+              "en": "Frequently asked questions",
+              "zh": "常见问题"
+            },
+            "intro": {
+              "vi": "Những điều cần biết khi xem mô hình, ôn tập và sử dụng trợ lý Soma.",
+              "en": "What to know about viewing models, studying and using the Soma assistant.",
+              "zh": "关于查看模型、复习与使用 Soma 助手的常见疑问。"
+            },
+            "sections": [
+              {
+                "title": {
+                  "vi": "Tôi có cần đăng nhập để xem mô hình không?",
+                  "en": "Do I need to sign in to view models?",
+                  "zh": "查看模型是否需要登录？"
+                },
+                "paragraphs": [
+                  {
+                    "vi": "Các mô hình và học liệu công khai có thể xem trước khi đăng nhập. Tài liệu cá nhân và các công cụ gắn với tài khoản cần đăng nhập tại trang Đăng nhập / Tạo tài khoản.",
+                    "en": "Public models and materials can be explored before signing in. Personal documents and account-based tools require signing in through the login page.",
+                    "zh": "公开模型与学习资料可在登录前查看；个人资料与账户相关工具需通过登录页面登录。"
+                  }
+                ]
+              },
+              {
+                "title": {
+                  "vi": "Vì sao mô hình chưa hiển thị?",
+                  "en": "Why is a model not displaying?",
+                  "zh": "为什么模型没有显示？"
+                },
+                "paragraphs": [
+                  {
+                    "vi": "Chờ tải xong dữ liệu, kiểm tra kết nối và thử tải lại trang. Nếu vẫn trống, dùng trình duyệt có WebGL và bật tăng tốc đồ họa khi thiết bị hỗ trợ. Gửi đường dẫn cùng tên thiết bị và trình duyệt tới email hỗ trợ nếu lỗi lặp lại.",
+                    "en": "Allow data to finish loading, check your connection and reload. If the view remains blank, use a WebGL-capable browser with graphics acceleration where supported. Report persistent issues with the URL, device and browser details.",
+                    "zh": "请等待数据加载、检查连接并刷新页面；若仍空白，请使用支持 WebGL 的浏览器，并在设备支持时启用图形加速。持续出错时请提供网址、设备与浏览器信息。"
+                  }
+                ]
+              },
+              {
+                "title": {
+                  "vi": "Vì sao một số cấu trúc không có trong atlas?",
+                  "en": "Why are some structures missing?",
+                  "zh": "为什么某些结构缺失？"
+                },
+                "paragraphs": [
+                  {
+                    "vi": "Mỗi bộ dữ liệu có phạm vi riêng. Atlas toàn thân và mô hình Z-Anatomy không có cùng độ phủ; một bài riêng có thể có chi tiết không hiện trong atlas toàn thân. Phần mô tả bài học cần nêu giới hạn của dữ liệu, không mặc định rằng mọi cấu trúc đều đã có.",
+                    "en": "Datasets have different coverage. The whole-body atlas and Z-Anatomy models do not contain exactly the same structures; an individual lesson may include details absent from the whole-body atlas. Lesson descriptions should explain these limitations.",
+                    "zh": "不同数据集的覆盖范围不同，全身图谱与 Z-Anatomy 不含完全相同的结构；独立课程可能包含全身图谱没有的细节，应在课程说明中注明局限。"
+                  }
+                ]
+              },
+              {
+                "title": {
+                  "vi": "Camera có bắt buộc không?",
+                  "en": "Is a camera required?",
+                  "zh": "是否必须使用摄像头？"
+                },
+                "paragraphs": [
+                  {
+                    "vi": "Không. Bạn có thể dùng chuột hoặc cảm ứng để xem mô hình. Điều khiển cử chỉ cần bạn cấp quyền camera; khi không cấp quyền, hãy dùng các nút điều khiển thông thường.",
+                    "en": "No. Models can be explored with a mouse or touch. Gesture control requires camera permission; ordinary model controls remain available without it.",
+                    "zh": "不需要，可使用鼠标或触控浏览模型。手势控制需要摄像头权限；未授权时仍可使用常规模型控制。"
+                  }
+                ]
+              },
+              {
+                "title": {
+                  "vi": "Câu trả lời của Soma có thay thế ý kiến bác sĩ không?",
+                  "en": "Can Soma replace medical advice?",
+                  "zh": "Soma 能否替代医生意见？"
+                },
+                "paragraphs": [
+                  {
+                    "vi": "Không. Trợ lý và nội dung trên Soma phục vụ học tập. Hãy mở nguồn tham khảo đi kèm để kiểm chứng; quyết định chẩn đoán và điều trị thuộc về người có chuyên môn phù hợp.",
+                    "en": "No. Soma and its assistant support learning. Open the linked references to check answers; diagnosis and treatment decisions belong to appropriately qualified professionals.",
+                    "zh": "不能。Soma 与其助手用于学习，请打开附带参考资料核查；诊断与治疗决定应由具备相应资质的专业人士作出。"
+                  }
+                ]
+              },
+              {
+                "title": {
+                  "vi": "Tôi báo lỗi nhãn hoặc yêu cầu xóa email ở đâu?",
+                  "en": "Where can I report a label or remove my email?",
+                  "zh": "在哪里报告标注问题或申请删除邮箱？"
+                },
+                "paragraphs": [
+                  {
+                    "vi": "Gửi yêu cầu tới trinhviethoangawm@gmail.com. Với lỗi nội dung, ghi rõ tên cấu trúc và đường dẫn. Với đăng ký nhận tin, dùng email đã đăng ký để yêu cầu xóa khỏi danh sách.",
+                    "en": "Contact trinhviethoangawm@gmail.com. For content issues, include the structure name and URL. To leave the newsletter, send a removal request from the subscribed address.",
+                    "zh": "请联系 trinhviethoangawm@gmail.com。报告内容问题时提供结构名称与网址；取消订阅请使用已订阅邮箱发送删除请求。"
+                  }
+                ]
+              }
+            ]
+          },
+          "huong-dan-su-dung": {
+            "group": "ho-tro",
+            "title": {
+              "vi": "Hướng dẫn sử dụng",
+              "en": "User guide",
+              "zh": "使用指南"
+            },
+            "intro": {
+              "vi": "Bắt đầu từ một mô hình, quan sát cấu trúc rồi kết hợp tài liệu và câu hỏi để ôn tập.",
+              "en": "Start with a model, inspect its structures, then use documents and questions to revise.",
+              "zh": "从一个模型开始，观察结构，再结合资料与试题复习。"
+            },
+            "sections": [
+              {
+                "title": {
+                  "vi": "1. Tìm và mở mô hình",
+                  "en": "1. Find and open a model",
+                  "zh": "1. 查找并打开模型"
+                },
+                "paragraphs": [
+                  {
+                    "vi": "Vào Giải phẫu người, chọn hệ cơ quan hoặc vùng cơ thể; cũng có thể nhập tên cấu trúc trong ô tìm kiếm. Bấm thẻ mô hình để mở bài. Dùng chuột kéo để xoay và con lăn để phóng to hoặc thu nhỏ.",
+                    "en": "Open Human anatomy and choose a system or region, or enter a structure name in search. Select a model card to open its lesson. Drag to rotate and use the mouse wheel to zoom.",
+                    "zh": "进入人体解剖，选择系统或身体区域，也可在搜索框输入结构名称。点击模型卡片打开课程，拖动旋转、滚轮缩放。"
+                  }
+                ],
+                "links": [
+                  {
+                    "label": {
+                      "vi": "Mở thư viện mô hình",
+                      "en": "Open the model library",
+                      "zh": "打开模型库"
+                    },
+                    "href": "/giai-phau/tat-ca"
+                  }
+                ]
+              },
+              {
+                "title": {
+                  "vi": "2. Quan sát từng cấu trúc",
+                  "en": "2. Inspect individual structures",
+                  "zh": "2. 观察单个结构"
+                },
+                "paragraphs": [
+                  {
+                    "vi": "Chọn cấu trúc trên mô hình hoặc trong danh sách nhãn để đọc tên và ghi chú. Dùng ẩn, làm mờ, cô lập hoặc mặt cắt nếu bài đang mở hỗ trợ. Đặt lại giúp khôi phục góc nhìn và trạng thái quan sát của bài.",
+                    "en": "Select a structure in the model or label list to read its name and notes. Use hide, fade, isolate or clipping where the lesson supports them. Reset restores the lesson's initial view and visibility.",
+                    "zh": "在模型或标签列表中选择结构以阅读名称与说明；课程支持时可隐藏、淡化、单独显示或切面观察。重置恢复初始视角与显示状态。"
+                  }
+                ]
+              },
+              {
+                "title": {
+                  "vi": "3. Đọc nguồn và ôn tập",
+                  "en": "3. Read sources and revise",
+                  "zh": "3. 阅读来源并复习"
+                },
+                "paragraphs": [
+                  {
+                    "vi": "Kho tài liệu y khoa cho phép tra cứu nội dung đã lập chỉ mục và mở trang tài liệu tương ứng. Trong Quiz, chọn bộ đề để luyện tập hoặc thi thử và xem lại câu sai. Công cụ tài liệu cá nhân yêu cầu đăng nhập.",
+                    "en": "The medical library searches indexed material and opens matching document pages. In Quiz, select a set to practise or take a mock exam and review mistakes. Personal document tools require sign-in.",
+                    "zh": "医学资料库可检索已索引内容并打开对应文档页；在测验中选择题库练习或模拟考试并复习错题。个人文档工具需要登录。"
+                  }
+                ],
+                "links": [
+                  {
+                    "label": {
+                      "vi": "Tra cứu tài liệu",
+                      "en": "Search documents",
+                      "zh": "检索文档"
+                    },
+                    "href": "/tai-lieu-y-khoa"
+                  },
+                  {
+                    "label": {
+                      "vi": "Mở Quiz",
+                      "en": "Open Quiz",
+                      "zh": "打开测验"
+                    },
+                    "href": "/quiz"
+                  }
+                ]
+              },
+              {
+                "title": {
+                  "vi": "4. Dùng cử chỉ và trợ lý",
+                  "en": "4. Use gestures and the assistant",
+                  "zh": "4. 使用手势与助手"
+                },
+                "paragraphs": [
+                  {
+                    "vi": "Trang Cử chỉ hướng dẫn cấp quyền camera và các thao tác tay được hỗ trợ. Đặt tay trong khung hình, đủ sáng và làm theo chỉ dẫn trên màn hình. Với câu hỏi giải phẫu hoặc cách sử dụng web, mở Trợ lý Soma và kiểm tra các nguồn được dẫn trong câu trả lời.",
+                    "en": "The Gesture page explains camera access and supported hand actions. Keep your hands in view with adequate lighting and follow the on-screen instructions. For anatomy or product questions, use the Soma assistant and check its referenced sources.",
+                    "zh": "手势页面说明摄像头授权与支持的手势；请在充足光线下将手保持在画面中并遵循提示。解剖或使用问题可询问 Soma 助手，并核查回答引用的来源。"
+                  }
+                ],
+                "links": [
+                  {
+                    "label": {
+                      "vi": "Mở điều khiển cử chỉ",
+                      "en": "Open gesture control",
+                      "zh": "打开手势控制"
+                    },
+                    "href": "/cu-chi"
+                  },
+                  {
+                    "label": {
+                      "vi": "Hỏi trợ lý Soma",
+                      "en": "Ask Soma",
+                      "zh": "询问 Soma"
+                    },
+                    "href": "/tro-ly"
+                  }
+                ]
+              }
+            ]
+          },
+          "ban-quyen-giay-phep": {
+            "group": "chinh-sach",
+            "title": {
+              "vi": "Bản quyền & giấy phép",
+              "en": "Copyright & licences",
+              "zh": "版权与许可"
+            },
+            "intro": {
+              "vi": "Mỗi nguồn dữ liệu giữ giấy phép riêng. Hãy kiểm tra nguồn của tài nguyên trước khi tải lại, chia sẻ hoặc chỉnh sửa.",
+              "en": "Each dataset keeps its own licence. Check the source of an asset before redistributing, sharing or adapting it.",
+              "zh": "各数据源保留各自许可；重新分发、分享或修改资源前，请查阅其来源。"
+            },
+            "sections": [
+              {
+                "title": {
+                  "vi": "BodyParts3D",
+                  "en": "BodyParts3D",
+                  "zh": "BodyParts3D"
+                },
+                "paragraphs": [
+                  {
+                    "vi": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International. Trang giấy phép của DBCLS cập nhật ngày 27/02/2025 công bố CC BY 4.0. Bản ghi công của Soma lưu nguồn hình học và những thay đổi đã thực hiện; không gộp giấy phép này với các mô hình từ nguồn khác.",
+                    "en": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International. DBCLS's licence page, updated 27 February 2025, specifies CC BY 4.0. Soma's attribution records geometry sources and adaptations; this licence is separate from those of other model sources.",
+                    "zh": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International。DBCLS 于2025年2月27日更新的许可页面规定 CC BY 4.0；Soma 的署名记录保留几何来源与改动，不将其与其他模型来源的许可混同。"
+                  }
+                ],
+                "links": [
+                  {
+                    "label": {
+                      "vi": "Giấy phép chính thức DBCLS",
+                      "en": "Official DBCLS licence",
+                      "zh": "DBCLS 官方许可"
+                    },
+                    "href": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html",
+                    "external": true
+                  },
+                  {
+                    "label": {
+                      "vi": "Nguồn và ghi công của Soma",
+                      "en": "Soma sources and attribution",
+                      "zh": "Soma 来源与署名"
+                    },
+                    "href": "/nguon-du-lieu"
+                  }
+                ]
+              },
+              {
+                "title": {
+                  "vi": "Z-Anatomy và các học liệu khác",
+                  "en": "Z-Anatomy and other materials",
+                  "zh": "Z-Anatomy 与其他学习资料"
+                },
+                "paragraphs": [
+                  {
+                    "vi": "Các mô hình Z-Anatomy sử dụng giấy phép CC BY-SA theo nguồn dự án. Khi sử dụng lại, giữ tên tác giả, nguồn và thông tin giấy phép; kiểm tra yêu cầu chia sẻ tương tự áp dụng cho bản phái sinh. PDF, giáo trình và hình ảnh có thể có điều kiện riêng; khả năng xem trên Soma không tự cấp quyền tái xuất bản.",
+                    "en": "Z-Anatomy models use CC BY-SA under the source project's terms. Reuse should retain author, source and licence information and comply with the applicable share-alike terms. PDFs, textbooks and images may have separate conditions; access through Soma does not itself grant republication rights.",
+                    "zh": "Z-Anatomy 模型按源项目采用 CC BY-SA。重用时需保留作者、来源与许可信息，并遵守适用的相同方式共享要求。PDF、教材与图片可能有独立条件，在 Soma 查看不等于取得再出版许可。"
+                  }
+                ],
+                "links": [
+                  {
+                    "label": {
+                      "vi": "Nguồn Z-Anatomy",
+                      "en": "Z-Anatomy source",
+                      "zh": "Z-Anatomy 来源"
+                    },
+                    "href": "https://github.com/Z-Anatomy/Models-of-human-anatomy",
+                    "external": true
+                  }
+                ]
+              },
+              {
+                "title": {
+                  "vi": "Góp ý về bản quyền",
+                  "en": "Copyright enquiries",
+                  "zh": "版权咨询"
+                },
+                "paragraphs": [
+                  {
+                    "vi": "Nếu là chủ sở hữu quyền và thấy thiếu ghi công hoặc tài nguyên được sử dụng chưa phù hợp, gửi đường dẫn, tên tài nguyên và thông tin xác minh tới trinhviethoangawm@gmail.com để dự án kiểm tra.",
+                    "en": "Rights holders can report missing attribution or inappropriate use to trinhviethoangawm@gmail.com, including the URL, asset name and supporting ownership information for review.",
+                    "zh": "权利人发现署名缺失或使用不当，可将网址、资源名称及权利证明发送至 trinhviethoangawm@gmail.com 以供核查。"
+                  }
+                ]
+              }
+            ]
+          },
+          "cam-ket-su-dung": {
+            "group": "chinh-sach",
+            "title": {
+              "vi": "Cam kết sử dụng",
+              "en": "Usage commitment",
+              "zh": "使用承诺"
+            },
+            "intro": {
+              "vi": "Sử dụng Soma để học tập có trách nhiệm, kiểm chứng thông tin và tôn trọng người khác.",
+              "en": "Use Soma responsibly for learning, verify information and respect others.",
+              "zh": "负责任地使用 Soma 学习、核查信息并尊重他人。"
+            },
+            "sections": [
+              {
+                "title": {
+                  "vi": "Đối chiếu trước khi áp dụng",
+                  "en": "Check before applying",
+                  "zh": "应用前核对"
+                },
+                "paragraphs": [
+                  {
+                    "vi": "Mô hình và trợ lý hỗ trợ hiểu kiến thức giải phẫu. Bạn cần đối chiếu nguồn tham khảo và giáo trình; không dùng câu trả lời tự động làm căn cứ duy nhất cho chẩn đoán, kê đơn hoặc quyết định điều trị.",
+                    "en": "Models and the assistant support anatomy learning. Cross-check references and textbooks; do not use automated answers as the sole basis for diagnosis, prescribing or treatment decisions.",
+                    "zh": "模型与助手辅助理解解剖知识，请结合参考资料与教材核对；不能将自动回答作为诊断、处方或治疗决定的唯一依据。"
+                  }
+                ]
+              },
+              {
+                "title": {
+                  "vi": "Tôn trọng tài khoản và dữ liệu",
+                  "en": "Respect accounts and data",
+                  "zh": "尊重账户与数据"
+                },
+                "paragraphs": [
+                  {
+                    "vi": "Giữ an toàn thông tin đăng nhập, chỉ tải lên tài liệu bạn có quyền sử dụng và không đưa dữ liệu nhận dạng người bệnh vào câu hỏi hoặc nội dung chia sẻ. Khi phát hiện lỗi, gửi phản hồi kèm nguồn để có thể kiểm tra.",
+                    "en": "Keep credentials secure, upload only material you are entitled to use and avoid including identifiable patient data in questions or shared content. Report errors with sources so they can be checked.",
+                    "zh": "请保护登录凭据，仅上传有权使用的资料，并避免在提问或分享内容中包含可识别患者的数据。报告错误时附上来源便于核查。"
+                  }
+                ],
+                "links": [
+                  {
+                    "label": {
+                      "vi": "Đọc điều khoản sử dụng",
+                      "en": "Read the terms of use",
+                      "zh": "阅读使用条款"
+                    },
+                    "href": "/dieu-khoan"
+                  }
+                ]
+              }
+            ]
+          },
+          "bao-ve-tai-nguyen": {
+            "group": "chinh-sach",
+            "title": {
+              "vi": "Bảo vệ tài nguyên",
+              "en": "Resource protection",
+              "zh": "资源保护"
+            },
+            "intro": {
+              "vi": "Giữ nguồn gốc học liệu rõ ràng và bảo đảm thư viện tiếp tục phục vụ việc học.",
+              "en": "Preserve material provenance and keep the library useful for learners.",
+              "zh": "保留学习资料来源，维护资料库的学习用途。"
+            },
+            "sections": [
+              {
+                "title": {
+                  "vi": "Giữ ghi công khi chia sẻ",
+                  "en": "Keep attribution when sharing",
+                  "zh": "分享时保留署名"
+                },
+                "paragraphs": [
+                  {
+                    "vi": "Khi chia sẻ hình hoặc tài nguyên được giấy phép cho phép, giữ tên bộ dữ liệu, tác giả, liên kết nguồn, giấy phép và ghi chú thay đổi nếu có. Quyền sử dụng tùy tài nguyên; không mặc định mọi nội dung trên website cùng một giấy phép.",
+                    "en": "When the licence permits sharing an image or asset, retain the dataset, author, source link, licence and adaptation notes where applicable. Rights depend on the asset; do not assume all website content uses one licence.",
+                    "zh": "在许可允许分享图像或资源时，应保留数据集、作者、来源链接、许可与适用的修改说明。使用权依资源而定，不应假设全站内容采用同一许可。"
+                  }
+                ]
+              },
+              {
+                "title": {
+                  "vi": "Sử dụng dịch vụ đúng mục đích",
+                  "en": "Use the service responsibly",
+                  "zh": "负责任地使用服务"
+                },
+                "paragraphs": [
+                  {
+                    "vi": "Không khai thác lỗi để truy cập tài liệu cá nhân của người khác, vượt quyền tài khoản hoặc gây quá tải hệ thống. Nếu cần dữ liệu mở với số lượng lớn, sử dụng kênh tải chính thức của bộ dữ liệu và tuân thủ giấy phép nguồn.",
+                    "en": "Do not exploit faults to access others' private documents, bypass account permissions or overload the service. For bulk open data, use the dataset's official download channel and follow its licence.",
+                    "zh": "不得利用漏洞访问他人私人文档、越过账户权限或使服务过载。批量获取开放数据时请使用数据集官方下载渠道，并遵守其许可。"
+                  }
+                ],
+                "links": [
+                  {
+                    "label": {
+                      "vi": "Bản quyền & giấy phép",
+                      "en": "Copyright & licences",
+                      "zh": "版权与许可"
+                    },
+                    "href": "/chinh-sach/ban-quyen-giay-phep"
+                  }
+                ]
+              }
+            ]
           }
         }
       }
@@ -146961,6 +148090,49 @@
               "ban-chan",
               "khop-co-chan",
               "gan-got-ong-co-chan"
+            ]
+          },
+          {
+            "key": "whole-body",
+            "label": {
+              "vi": "Toàn thân",
+              "en": "Whole body",
+              "zh": "全身"
+            },
+            "hint": {
+              "vi": "Lùi ra để thấy từ đầu tới hai bàn chân.",
+              "en": "Frame the head and both feet.",
+              "zh": "后退使头部和双脚进入画面。"
+            },
+            "children": [
+              "upper-body",
+              "hip",
+              "thigh",
+              "leg"
+            ],
+            "scenes": [
+              "toan-than"
+            ]
+          },
+          {
+            "key": "upper-body",
+            "label": {
+              "vi": "Nửa thân trên",
+              "en": "Upper body",
+              "zh": "上半身"
+            },
+            "hint": {
+              "vi": "Lấy cả hai vai và phần thân vào khung.",
+              "en": "Frame both shoulders and the torso.",
+              "zh": "使双肩和躯干进入画面。"
+            },
+            "children": [
+              "chest",
+              "abdomen",
+              "shoulder"
+            ],
+            "scenes": [
+              "nua-than-tren"
             ]
           }
         ]

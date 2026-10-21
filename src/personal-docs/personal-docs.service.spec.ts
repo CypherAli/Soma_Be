@@ -134,7 +134,7 @@ describe('personal document lifecycle', () => {
 
   it('bulk approval includes only questions with a usable answer', async () => {
     prisma.personalQuestion.findMany.mockResolvedValue([
-      { id: 'valid', options: { A: 'One' }, answer: 'A' },
+      { id: 'valid', options: { A: 'One', B: 'Two' }, answer: 'A' },
       { id: 'invalid', options: { B: 'Two' }, answer: 'A' },
     ]);
     await expect(service.approveAll('doc1', 'session')).resolves.toEqual({

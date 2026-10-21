@@ -7,7 +7,7 @@ import {
 import { ConfigService } from '@nestjs/config';
 import { Prisma } from '@prisma/client';
 import { createHash, randomBytes, randomUUID } from 'node:crypto';
-import { readFileSync } from 'node:fs';
+import { readFileSync, statSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { validateBytes } from 'gltf-validator';
 import { PrismaService } from '../prisma/prisma.service';
@@ -31,14 +31,16 @@ import {
 
 @Injectable()
 export class ContentService {
-  readonly studySources: {
+  studySources!: {
     atlas: { page: number; hotspotKey: string }[];
     schools: { id: string; file: string }[];
   };
-  readonly definitions: Map<string, ContentDefinition>;
-  private readonly sourceMeshes: Record<string, string[]>;
-  private readonly atlasParts: Set<string>;
-  readonly contractHash: string;
+  definitions!: Map<string, ContentDefinition>;
+  private sourceMeshes!: Record<string, string[]>;
+  private atlasParts!: Set<string>;
+  contractHash!: string;
+  private readonly catalogPath: string;
+  private catalogStamp = '';
   private readonly activeAtlasBySlug = new Map<string, string>();
   private readonly routeAliasNames = new Map<string, string[]>();
   private readonly searchIndex = new Map<string, ContentSearchEntry>();
@@ -51,15 +53,18 @@ export class ContentService {
     private readonly prisma: PrismaService,
     config: ConfigService,
   ) {
-    const catalog = JSON.parse(
-      readFileSync(
-        resolve(
-          config.get<string>('CMS_CATALOG_PATH') ??
-            'resources/cms/catalog.json',
-        ),
-        'utf8',
-      ),
-    ) as {
+    this.catalogPath = resolve(
+      config.get<string>('CMS_CATALOG_PATH') ?? 'resources/cms/catalog.json',
+    );
+    this.refreshCatalog();
+  }
+
+  /** A source sync must replace both the contract and indexes without a restart. */
+  private refreshCatalog() {
+    const metadata = statSync(this.catalogPath);
+    const stamp = `${metadata.mtimeMs}:${metadata.size}`;
+    if (stamp === this.catalogStamp) return;
+    const catalog = JSON.parse(readFileSync(this.catalogPath, 'utf8')) as {
       documents: ContentDefinition[];
       meshes: Record<string, string[]>;
       atlasParts: string[];
@@ -71,6 +76,9 @@ export class ContentService {
     this.sourceMeshes = catalog.meshes;
     this.atlasParts = new Set(catalog.atlasParts);
     this.contractHash = catalog.contractHash ?? '';
+    this.searchIndex.clear();
+    this.activeAtlasBySlug.clear();
+    this.routeAliasNames.clear();
     for (const doc of catalog.documents) {
       const entry = contentSearchEntry(doc);
       this.searchIndex.set(doc.id, entry);
@@ -80,6 +88,7 @@ export class ContentService {
     // Mirrors the public atlasSceneAliases route in humanAtlas/scenes/index.ts.
     const aliases: Record<string, string> = {
       'tieu-nao-day-du': 'hoi-vo-dai-nao',
+      'co-quan-sinh-duc-nam': 'he-sinh-san-nam',
     };
     for (const [alias, slug] of Object.entries(aliases)) {
       const target = this.activeAtlasBySlug.get(slug);
@@ -91,22 +100,27 @@ export class ContentService {
         this.routeAliasNames.set(target, [...(legacy?.names ?? []), alias]);
       }
     }
+    this.catalogStamp = stamp;
+    this.snapshotCache = undefined;
   }
 
   /** The public route renders an atlas scene before a legacy GLB with the same slug. */
   private effectiveId(id: string) {
     const doc = this.definitions.get(id);
-    if (!doc || contentSearchEntry(doc).kind !== 'glb') return id;
+    if (!doc || !['glb', 'atlas-scene'].includes(contentSearchEntry(doc).kind))
+      return id;
     const slug = contentSearchEntry(doc).identifier;
     return this.activeAtlasBySlug.get(slug) ?? id;
   }
   private definition(id: string) {
+    this.refreshCatalog();
     const definition = this.definitions.get(id);
     if (!definition) throw new NotFoundException('Không tìm thấy nội dung');
     return definition;
   }
 
   async list(category?: string, q = '', page = 1, kind = '', scope = 'title') {
+    this.refreshCatalog();
     const order: Record<string, number> = {
       interface: 0,
       models: 1,
@@ -191,6 +205,7 @@ export class ContentService {
   }
 
   async detail(id: string) {
+    this.refreshCatalog();
     const requestedId = id;
     id = this.effectiveId(id);
     const definition = this.definition(id);
@@ -214,6 +229,7 @@ export class ContentService {
   }
 
   async snapshot() {
+    this.refreshCatalog();
     if (this.snapshotCache && this.snapshotCache.expires > Date.now())
       return structuredClone(this.snapshotCache.value);
     const value = await this.readSnapshot();
@@ -358,6 +374,7 @@ export class ContentService {
     action: string,
     publish = false,
   ) {
+    this.refreshCatalog();
     if (this.effectiveId(id) !== id)
       throw new ConflictException(
         'Mô hình này có bản atlas đang được website dùng. Mở lại để sửa đúng bản đang hiển thị.',
@@ -627,6 +644,7 @@ export class ContentService {
     return { items, total, page: current, pageSize: 24 };
   }
   async models() {
+    this.refreshCatalog();
     const uploaded = await this.prisma.siteAsset.findMany({
       where: { mime: 'model/gltf-binary' },
       select: { id: true, meshNames: true },

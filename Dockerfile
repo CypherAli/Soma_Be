@@ -17,6 +17,15 @@ RUN npm run build
 FROM node:24-slim AS run
 WORKDIR /app
 ENV NODE_ENV=production
+# Isolate the PDF reader from Debian's managed Python installation.
+COPY scripts/pdf_quiz/requirements.txt /tmp/pdf-requirements.txt
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends python3 python3-venv \
+    && python3 -m venv /opt/pdf-reader \
+    && /opt/pdf-reader/bin/pip install --no-cache-dir -r /tmp/pdf-requirements.txt \
+    && rm -rf /var/lib/apt/lists/* /tmp/pdf-requirements.txt
+ENV PDF_PYTHON_BIN=/opt/pdf-reader/bin/python
+COPY scripts/pdf_quiz/extract.py ./scripts/pdf_quiz/extract.py
 COPY --from=build /app/node_modules ./node_modules
 COPY --from=build /app/dist ./dist
 COPY --from=build /app/prisma ./prisma

@@ -538,6 +538,13 @@ model PersonalQuestion {
   /// { "A": "...", "B": "..." } — giữ nguyên nhãn chữ cái của tài liệu gốc
   options     Json
   answer      String
+  answers     String[] @default([])
+  number      Int?
+  sequence    Int      @default(0)
+  context     String?  @db.Text
+  images      String[] @default([])
+  explanationImages String[] @default([])
+  reviewNote  String?  @db.Text
   explanation String? @db.Text
   page        Int?
   approved    Boolean @default(false)

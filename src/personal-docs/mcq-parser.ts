@@ -41,10 +41,10 @@ export type ParseReport = {
 /** Chữ C thường và dấu chấm rơi mất là hai lỗi OCR gặp ở gần như mọi bản scan. */
 const OPT_RE = /(?:(?<=^)|(?<=\s))([A-Ea-e])[.)]?\s+(?=\S)/g;
 /**
- * Mở đầu câu hỏi: "12.", "12)", "Câu 12.", "Câu 12:" — đề ôn Word ở Việt Nam
+ * Mở đầu câu hỏi: "12.", "12)", "Câu 12.", "Câu hỏi 12:" — đề ôn Word ở Việt Nam
  * viết "Câu N" nhiều hơn đánh số trần, regex cũ bỏ sót gần hết file Review.
  */
-const Q_START_RE = /^[ \t]*(?:câu\s+)?(\d{1,3})[.):)]\s+(?=\D)/gim;
+const Q_START_RE = /^[ \t]*(?:câu(?:\s+hỏi)?\s+)?(\d{1,3})[.):]\s+(?=\S)/gim;
 /** "12-C." hoặc "12 – c" — kèm lời giải phía sau. */
 const ANS_EXPL_RE = /^[ \t]*(?:câu\s+)?(\d{1,3})\s*[-–—]\s*([A-Ea-e])[.\s]/gim;
 /**

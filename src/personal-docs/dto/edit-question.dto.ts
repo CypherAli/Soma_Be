@@ -1,6 +1,9 @@
 import { ApiPropertyOptional } from '@nestjs/swagger';
 import {
   IsBoolean,
+  IsArray,
+  ArrayMaxSize,
+  ArrayUnique,
   IsObject,
   IsOptional,
   IsString,
@@ -28,6 +31,17 @@ export class EditQuestionDto {
   @IsString()
   @Matches(/^[A-F]$/, { message: 'Đáp án phải là một chữ cái A–F' })
   answer?: string;
+
+  @ApiPropertyOptional({
+    description: 'Các nhãn đáp án đúng trong nguồn',
+    type: [String],
+  })
+  @IsOptional()
+  @IsArray()
+  @ArrayMaxSize(6)
+  @ArrayUnique()
+  @Matches(/^[A-F]$/, { each: true })
+  answers?: string[];
 
   @ApiPropertyOptional()
   @IsOptional()

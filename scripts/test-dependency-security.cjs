@@ -8,6 +8,19 @@ for (const key of Object.keys(packages)) {
   const folder = path.join(root, key);
   if (!key || !fs.existsSync(path.join(folder, 'package.json'))) continue;
   const { name, version } = JSON.parse(fs.readFileSync(path.join(folder, 'package.json'), 'utf8'));
+  if (name === 'deepmerge') {
+    const merge = require(folder), symbol = Symbol('normal-data');
+    const malicious = JSON.parse('{"__proto__":{"poisoned":true},"constructor":{"prototype":{"poisoned":true}},"prototype":{"poisoned":true},"safe":{"b":2}}');
+    for (const target of [{}, Object.create(null), JSON.parse('{"__proto__":{"poisoned":true}}')]) {
+      const result = merge(target, malicious);
+      assert.equal(Object.getPrototypeOf(result), Object.prototype);
+      assert.equal(result.poisoned, undefined); assert.equal(Object.prototype.poisoned, undefined);
+      for (const key of ['__proto__', 'constructor', 'prototype']) assert.equal(Object.hasOwn(result, key), false);
+      assert.equal(result.safe.b, 2);
+    }
+    assert.deepEqual(merge({ items: [1], [symbol]: 'kept' }, { items: [2] }), { items: [1, 2], [symbol]: 'kept' });
+    checks++;
+  }
   if (name === 'braces' && version === '3.0.3') {
     const braces = require(folder);
     assert.deepEqual(braces.expand('file-{a,b}.js'), ['file-a.js', 'file-b.js']);

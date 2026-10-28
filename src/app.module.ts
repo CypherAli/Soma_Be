@@ -17,10 +17,14 @@ import { PersonalDocsModule } from './personal-docs/personal-docs.module';
 import { AdminModule } from './admin/admin.module';
 import { ContentModule } from './content/content.module';
 import { MobileModule } from './mobile/mobile.module';
+import { MembershipModule } from './membership/membership.module';
 
 @Module({
   imports: [
-    ConfigModule.forRoot({ isGlobal: true }),
+    ConfigModule.forRoot({
+      isGlobal: true,
+      envFilePath: ['.env.sepay.local', '.env'],
+    }),
     PrismaModule,
     SpeciesModule,
     AnatomySystemsModule,
@@ -36,6 +40,7 @@ import { MobileModule } from './mobile/mobile.module';
     AdminModule,
     ContentModule,
     MobileModule,
+    MembershipModule,
   ],
   controllers: [AppController],
   providers: [AppService],

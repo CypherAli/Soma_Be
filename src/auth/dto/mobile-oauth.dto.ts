@@ -1,6 +1,11 @@
-import { IsString, Matches } from 'class-validator';
+import { IsOptional, IsString, Matches, MaxLength } from 'class-validator';
 
 export class MobileOAuthStartDto {
+  @IsOptional()
+  @IsString()
+  @MaxLength(512)
+  returnUrl?: string;
+
   @IsString()
   @Matches(/^[A-Za-z0-9_-]{43}$/)
   challenge: string;

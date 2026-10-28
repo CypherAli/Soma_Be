@@ -12,6 +12,7 @@ describe('mobile OAuth shares provider identity without putting session tokens i
   const envKeys = [
     'API_URL',
     'MOBILE_OAUTH_API_URL',
+    'MOBILE_OAUTH_RETURN_URLS',
     'GOOGLE_CLIENT_ID',
     'GOOGLE_CLIENT_SECRET',
   ] as const;
@@ -163,6 +164,35 @@ describe('mobile OAuth shares provider identity without putting session tokens i
     await expect(
       service.oauthUrl('google', undefined, { state: mobileState, challenge }),
     ).rejects.toThrow('HTTPS');
+  });
+  it('hands the provider identity back to an explicitly allowed Expo Go route', async () => {
+    const { service, controller, user } = setup();
+    const returnUrl = 'exp://192.168.1.12:8081/--/oauth';
+    process.env.MOBILE_OAUTH_RETURN_URLS = returnUrl;
+    const authorize = new URL(
+      await service.oauthUrl('google', undefined, {
+        state: mobileState,
+        challenge,
+        returnUrl,
+      }),
+    );
+    const result = await controller.oauthCallback(
+      'google',
+      'provider-code',
+      authorize.searchParams.get('state')!,
+    );
+    expect(result.url.startsWith(returnUrl + '?')).toBe(true);
+    const code = new URL(result.url).searchParams.get('code')!;
+    expect(
+      (await controller.mobileOAuthExchange({ code, verifier })).user.id,
+    ).toBe(user.id);
+    await expect(
+      service.oauthUrl('google', undefined, {
+        state: mobileState,
+        challenge,
+        returnUrl: returnUrl.replace('8081', '8082'),
+      }),
+    ).rejects.toThrow('chưa được cho phép');
   });
   it('returns one-use PKCE code and logs into the exact existing web identity', async () => {
     const { callback, controller, prisma, user } = setup();

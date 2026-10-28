@@ -46,8 +46,8 @@ export class AuthController {
   }
 
   @Get('mobile/capabilities')
-  mobileCapabilities() {
-    return this.authService.mobileCapabilities();
+  mobileCapabilities(@Query('returnUrl') returnUrl?: string) {
+    return this.authService.mobileCapabilities(returnUrl);
   }
 
   @Post('register') register(
@@ -162,6 +162,19 @@ export class AuthController {
   }
 
   /** `link` = token phiên hiện tại: gắn thêm cách đăng nhập thay vì đăng nhập mới. */
+  @Post('mobile/oauth/:provider/link')
+  @ApiBearerAuth()
+  @HttpCode(200)
+  async mobileOAuthLink(
+    @Param('provider') provider: 'google' | 'github' | 'facebook',
+    @Body() dto: MobileOAuthStartDto,
+    @Headers('authorization') authorization?: string,
+  ) {
+    const token = this.bearerToken(authorization);
+    if (!token) throw new UnauthorizedException('Cần đăng nhập');
+    return { url: await this.authService.oauthUrl(provider, token, dto) };
+  }
+
   @Post('mobile/oauth/:provider')
   @HttpCode(200)
   async mobileOAuthStart(
@@ -234,12 +247,12 @@ export class AuthController {
       if (!mobile) throw error;
       await this.authService.discardOAuthState(mobile.id);
       return {
-        url: `soma://oauth?${new URLSearchParams({ state: mobile.state, error: providerError === 'access_denied' ? 'cancelled' : 'failed' })}`,
+        url: `${mobile.returnUrl}?${new URLSearchParams({ state: mobile.state, error: providerError === 'access_denied' ? 'cancelled' : 'failed' })}`,
       };
     }
     if ('mobileCode' in result) {
       return {
-        url: `soma://oauth?${new URLSearchParams({ code: result.mobileCode, state: result.mobileState })}`,
+        url: `${mobile?.returnUrl || 'soma://oauth'}?${new URLSearchParams({ code: result.mobileCode, state: result.mobileState })}`,
       };
     }
     const frontend = process.env.FRONTEND_URL ?? 'http://localhost:3000';

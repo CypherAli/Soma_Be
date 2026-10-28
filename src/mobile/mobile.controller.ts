@@ -63,12 +63,24 @@ export class MobileController {
   @Header('Cache-Control', 'no-cache')
   @Header('X-Content-Type-Options', 'nosniff')
   @ApiOperation({
-    summary: 'Read a model from the five-model mobile allowlist',
+    summary: 'Read a published GLB model from the shared web catalogue',
   })
   async model(@Param('id') id: string) {
     return new StreamableFile(await this.mobile.modelFile(id), {
       type: 'model/gltf-binary',
     });
+  }
+
+  @Get('assets/:key')
+  @Header('Cache-Control', 'public, max-age=31536000, immutable')
+  @Header('X-Content-Type-Options', 'nosniff')
+  @ApiOperation({
+    summary:
+      'Read a versioned atlas chunk or thumbnail from the prepared asset manifest',
+  })
+  asset(@Param('key') key: string) {
+    const asset = this.mobile.asset(key);
+    return new StreamableFile(asset.data, { type: asset.type });
   }
 
   @Get('viewer/:id')

@@ -24,6 +24,8 @@ import { ForgotPasswordDto } from './dto/forgot-password.dto';
 import { ResetPasswordDto } from './dto/reset-password.dto';
 import { MailService } from './mail.service';
 import { MobileOAuthStartDto } from './dto/mobile-oauth.dto';
+import { mobileReturnUrl } from './mobile-return';
+import { activePlan } from '../membership/policy';
 
 const scrypt = promisify(scryptCallback);
 const SESSION_LIFETIME_MS = 1000 * 60 * 60 * 24 * 30;
@@ -81,9 +83,10 @@ export class AuthService {
   }
 
   /** Mật khẩu mạnh tối thiểu: ≥8 ký tự, có cả chữ và số. */
-  mobileCapabilities() {
+  mobileCapabilities(returnUrl?: string) {
     const ready = (provider: Provider) => {
-      if (!this.mobileOAuthBase()) return false;
+      if (!this.mobileOAuthBase(returnUrl) || !mobileReturnUrl(returnUrl))
+        return false;
       try {
         this.providerConfig(provider, true);
         return true;
@@ -92,7 +95,10 @@ export class AuthService {
       }
     };
     return {
-      mobileOAuth: Boolean(this.mobileOAuthBase()),
+      mobileOAuth:
+        Boolean(this.mobileOAuthBase(returnUrl)) &&
+        Boolean(mobileReturnUrl(returnUrl)),
+      returnAllowed: Boolean(mobileReturnUrl(returnUrl)),
       oauth: {
         google: ready('google'),
         github: ready('github'),
@@ -311,8 +317,15 @@ export class AuthService {
     linkToken?: string,
     mobile?: MobileOAuthStartDto,
   ) {
+    const returnUrl = mobile ? mobileReturnUrl(mobile.returnUrl) : null;
+    if (mobile && !returnUrl)
+      throw new BadRequestException(
+        'Đường dẫn quay lại ứng dụng chưa được cho phép trên máy chủ.',
+      );
     const config = this.providerConfig(provider, Boolean(mobile));
-    const mobileBase = mobile ? this.mobileOAuthBase() : null;
+    const mobileBase = mobile
+      ? this.mobileOAuthBase(returnUrl || undefined)
+      : null;
     if (mobile && !mobileBase)
       throw new ConflictException(
         'Đăng nhập mạng xã hội trên app đang chờ cấu hình callback HTTPS.',
@@ -345,6 +358,7 @@ export class AuthService {
           ? {
               mobileChallenge: mobile.challenge,
               mobileState: mobile.state,
+              mobileReturnUrl: returnUrl,
               callbackUrl: callback,
             }
           : {}),
@@ -404,8 +418,24 @@ export class AuthService {
     const profile = await this.providerProfile(provider, tokens.access_token);
     const idField = `${provider}Id`;
 
-    if (record.linkUserId)
-      return this.linkProvider(record.linkUserId, provider, profile.id);
+    if (record.linkUserId) {
+      const linked = await this.linkProvider(
+        record.linkUserId,
+        provider,
+        profile.id,
+      );
+      if (!record.mobileChallenge || !record.mobileState) return linked;
+      const mobileCode = randomBytes(32).toString('base64url');
+      await this.prisma.mobileOAuthCode.create({
+        data: {
+          codeHash: this.hashToken(mobileCode),
+          userId: linked.user.id,
+          challenge: record.mobileChallenge,
+          expiresAt: new Date(Date.now() + 60000),
+        },
+      });
+      return { mobileCode, mobileState: record.mobileState };
+    }
 
     // A provider ID identifies its account. Equal contact emails never merge
     // accounts; sharing an account requires an explicit authenticated link.
@@ -437,7 +467,34 @@ export class AuthService {
     return this.createSession(user, userAgent);
   }
 
-  private mobileOAuthBase() {
+  private mobileOAuthBase(returnUrl?: string) {
+    // Desktop Expo may use a configured loopback callback without a public tunnel.
+    // Both addresses are server-owned; an arbitrary return URL cannot select it.
+    if (
+      returnUrl &&
+      mobileReturnUrl(returnUrl) &&
+      process.env.NODE_ENV !== 'production'
+    ) {
+      try {
+        const target = new URL(returnUrl);
+        const desktop = new URL(process.env.DESKTOP_OAUTH_API_URL || '');
+        const loopback = (url: URL) =>
+          ['localhost', '127.0.0.1', '[::1]'].includes(url.hostname);
+        if (
+          target.protocol === 'http:' &&
+          loopback(target) &&
+          desktop.protocol === 'http:' &&
+          loopback(desktop) &&
+          !desktop.username &&
+          !desktop.password &&
+          !desktop.search &&
+          !desktop.hash
+        )
+          return desktop.href.replace(/\/$/, '');
+      } catch {
+        /* Fall through to the public mobile callback. */
+      }
+    }
     // Server configuration only. Never derive an OAuth redirect from Host or a client URL.
     try {
       const url = new URL(process.env.MOBILE_OAUTH_API_URL || '');
@@ -465,7 +522,11 @@ export class AuthService {
       },
     });
     return record?.mobileState
-      ? { state: record.mobileState, id: record.id }
+      ? {
+          state: record.mobileState,
+          id: record.id,
+          returnUrl: record.mobileReturnUrl || 'soma://oauth',
+        }
       : null;
   }
 
@@ -548,7 +609,16 @@ export class AuthService {
   async updateProfile(dto: UpdateProfileDto, token?: string) {
     const session = await this.requireSession(token);
 
-    const data: { name?: string; avatar?: string | null } = {};
+    const data: {
+      name?: string;
+      avatar?: string | null;
+      learningRole?: string;
+    } = {};
+    if (dto.learningRole !== undefined) {
+      if (!['learner', 'teacher'].includes(dto.learningRole))
+        throw new BadRequestException('Vai trò học tập không hợp lệ');
+      data.learningRole = dto.learningRole;
+    }
     if (dto.name !== undefined) {
       const name = dto.name.trim();
       if (name.length < 2) {
@@ -873,9 +943,19 @@ export class AuthService {
    * mờ đi từ trước chứ không đợi máy chủ từ chối.
    */
   private profile(user: User) {
+    const sandbox =
+      process.env.SEPAY_PG_ENABLED === 'true' &&
+      process.env.SEPAY_PG_ENV === 'sandbox';
     return {
       ...this.publicUser(user),
-      plan: user.plan,
+      plan: activePlan(user, new Date(), sandbox),
+      learningRole: user.learningRole,
+      premiumUntil:
+        sandbox &&
+        user.sandboxPremiumUntil &&
+        (!user.premiumUntil || user.sandboxPremiumUntil > user.premiumUntil)
+          ? user.sandboxPremiumUntil
+          : user.premiumUntil,
       avatar: user.avatar,
       createdAt: user.createdAt,
       hasPassword: Boolean(user.passwordHash),

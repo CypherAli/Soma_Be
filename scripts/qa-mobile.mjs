@@ -1,9 +1,11 @@
 import 'dotenv/config';
 import assert from 'node:assert/strict';
 import { randomUUID } from 'node:crypto';
+import { readFileSync } from 'node:fs';
 import pg from 'pg';
 
 const base = process.env.MOBILE_QA_API_URL ?? 'http://localhost:4000/api';
+const gateway = process.env.MOBILE_QA_GATEWAY === '1';
 const created = [];
 const db = new pg.Client({ connectionString: process.env.DATABASE_URL });
 async function call(path, body, token, expected = 200) {
@@ -26,7 +28,9 @@ async function call(path, body, token, expected = 200) {
 try {
   await db.connect();
   const catalog = await call('/mobile/bootstrap');
-  assert.equal(catalog.models.length, 5);
+  const manifest = JSON.parse(readFileSync(new URL('../resources/mobile/manifest.json', import.meta.url), 'utf8'));
+  assert.equal(catalog.schemaVersion, manifest.schemaVersion);
+  assert.deepEqual(catalog.models.map((model) => model.id), manifest.models.map((model) => model.id));
   assert.ok(catalog.questions.length >= 20);
   for (const q of catalog.questions) {
     assert.equal(q.options.length, 4);
@@ -35,13 +39,16 @@ try {
   }
   for (let i = 0; i < 2; i++) {
     const email = `mobile-qa-${randomUUID()}@example.invalid`;
+    const password = `Qa1_${randomUUID()}`;
     const account = await call(
       '/auth/register',
-      { name: 'Mobile QA', email, password: `Qa1_${randomUUID()}` },
+      { name: 'Mobile QA', email, password },
       undefined,
       201,
     );
     created.push({ ...account, email });
+    const signedIn = await call('/auth/login', { email, password });
+    assert.equal(signedIn.user.id, account.user.id);
   }
   const questions = catalog.questions.slice(0, 10);
   const dto = {
@@ -96,7 +103,7 @@ try {
     [created[0].user.id],
   );
   assert.equal(changed.rowCount, 10);
-  const due = await call('/study/due', undefined, created[0].token);
+  const due = await call(gateway ? '/mobile/due' : '/study/due', undefined, created[0].token);
   assert.equal(due.items.length, 10);
   assert.ok(
     due.items.every((item) =>
@@ -107,13 +114,11 @@ try {
     `INSERT INTO review_items (id,"userId","itemKey",source,scope,lapses,"dueAt") SELECT 'mobile-overflow-'||$1||'-'||i, $1, 'book:mobile-overflow/'||i, 'book', 'all', 100, '2000-01-01'::timestamp FROM generate_series(1,201) i`,
     [created[0].user.id],
   );
-  const overflow = await call(
-    '/study/due?limit=200',
-    undefined,
-    created[0].token,
-  );
-  assert.equal(overflow.items.length, 200);
-  assert.ok(overflow.items.every((item) => item.source === 'book'));
+  if (!gateway) {
+    const overflow = await call('/study/due?limit=200', undefined, created[0].token);
+    assert.equal(overflow.items.length, 200);
+    assert.ok(overflow.items.every((item) => item.source === 'book'));
+  }
   const mobileDue = await call('/mobile/due', undefined, created[0].token);
   assert.equal(mobileDue.items.length, 10);
   assert.ok(
@@ -121,7 +126,9 @@ try {
       catalog.questions.some((q) => q.itemKey === item.itemKey),
     ),
   );
-  const model = await fetch(base + '/mobile/models/ban-tay/file');
+  const glb = catalog.models.find((model) => model.kind === 'glb');
+  assert.ok(glb, 'The current catalogue must contain a published GLB for decoder/allowlist QA');
+  const model = await fetch(base + `/mobile/models/${glb.id}/file`);
   assert.equal(model.status, 200);
   assert.equal(
     Buffer.from(await model.arrayBuffer()).toString('ascii', 0, 4),
@@ -140,6 +147,7 @@ try {
       models: catalog.models.length,
       questions: catalog.questions.length,
       checks: [
+        'email registration and login share the same identity',
         'server grading',
         'concurrent retry deduplication',
         'conflicting UUID rejected',

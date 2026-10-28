@@ -316,6 +316,9 @@ model User {
   passwordEmail String? @unique
   role         UserRole @default(user)
   plan         UserPlan @default(free)
+  learningRole String   @default("learner")
+  premiumUntil DateTime?
+  sandboxPremiumUntil DateTime?
   /// Ảnh đại diện lưu THẲNG dưới dạng data URL (ảnh đã thu nhỏ ở trình duyệt,
   /// tối đa ~200 KB). Máy chủ chưa có nơi lưu tệp tĩnh nào, dựng thêm thư mục
   /// upload + đường phục vụ ảnh chỉ để nuôi một tấm avatar là không đáng.
@@ -336,9 +339,38 @@ model User {
   studyPath    StudyPath?
   reviewItems  ReviewItem[]
   personalDocs PersonalDoc[]
+  assistantUsage AssistantUsage[]
+  premiumOrders PremiumOrder[]
 
   @@map("users")
   @@index([email])
+}
+
+model AssistantUsage {
+  userId String
+  month String
+  used Int @default(0)
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@id([userId, month])
+  @@map("assistant_usage")
+}
+
+model PremiumOrder {
+  paymentSession Json?
+  provider String @default("bank-webhook")
+  id String @id @default(cuid())
+  code String @unique
+  userId String
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  amount Int @default(25000)
+  status String @default("pending")
+  createdAt DateTime @default(now())
+  paidAt DateTime?
+  transactionId String? @unique
+
+  @@index([userId, createdAt])
+  @@map("premium_orders")
 }
 
 model OAuthState {
@@ -349,6 +381,7 @@ model OAuthState {
   /// Mobile uses the same provider account, with a separate PKCE handoff.
   mobileChallenge String?
   mobileState String?
+  mobileReturnUrl String?
   callbackUrl String?
   /// Khác rỗng nghĩa là luồng "liên kết tài khoản đang đăng nhập" chứ không
   /// phải luồng đăng nhập: callback sẽ gắn id nhà cung cấp vào đúng người này.

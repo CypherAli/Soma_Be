@@ -1,7 +1,18 @@
 import { ApiPropertyOptional } from '@nestjs/swagger';
-import { IsOptional, IsString, MaxLength, MinLength } from 'class-validator';
+import {
+  IsIn,
+  IsOptional,
+  IsString,
+  MaxLength,
+  MinLength,
+} from 'class-validator';
 
 export class UpdateProfileDto {
+  @ApiPropertyOptional({ enum: ['learner', 'teacher'] })
+  @IsOptional()
+  @IsIn(['learner', 'teacher'])
+  learningRole?: 'learner' | 'teacher';
+
   @ApiPropertyOptional({ description: 'Tên hiển thị', minLength: 2 })
   @IsOptional()
   @IsString()

@@ -2,7 +2,9 @@ node_modules
 dist
 .git
 *.log
-.env
+.env*
+*.pem
+*.key
 coverage
 resources/medical_kb
 deploy

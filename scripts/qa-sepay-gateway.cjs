@@ -33,7 +33,7 @@ let userId;
     assert.equal(order.transferContent,'PAYQA000');assert.equal(order.qrUrl,'https://pay-sandbox.sepay.vn/test-qr.png');
     assert.equal((await service.order(userId,order.id)).checkoutUrl,order.checkoutUrl);
     await assert.rejects(()=>service.simulate('another-user',order.id),e=>e.getStatus()===404);
-    assert.equal(order.amount,25000);assert.equal(fields.order_amount,25000);assert.equal(fields.order_description,'Premium soma');assert.equal(fields.customer_id,userId);
+    assert.equal(order.amount,25000);assert.equal(fields.order_amount,25000);assert.equal(fields.order_description,'PREMIUM');assert.equal(fields.customer_id,userId);
     assert.equal(order.sandbox,true);assert.equal(order.checkout.url,'https://pay-sandbox.sepay.vn/v1/checkout/init');
     assert.ok(!JSON.stringify(order).includes(secret));
     const signed = Object.entries(fields).filter(([key])=>key!=='signature').map(([key,value])=>`${key}=${value}`).join(',');

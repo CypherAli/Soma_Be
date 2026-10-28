@@ -1,5 +1,5 @@
 export const PREMIUM_PRICE = 25000;
-export const PREMIUM_DESCRIPTION = 'Premium soma';
+export const PREMIUM_DESCRIPTION = 'PREMIUM';
 
 export function monthWindow(now = new Date()) {
   const local = new Date(now.getTime() + 7 * 3600000);

@@ -52,6 +52,7 @@ export class MembershipService {
   }
 
   async status(userId: string) {
+    await this.reconcilePending(userId);
     const user = await this.prisma.user.findUnique({ where: { id: userId } });
     if (!user) throw new NotFoundException('Không tìm thấy tài khoản');
     const window = monthWindow(),
@@ -80,6 +81,27 @@ export class MembershipService {
       paymentEnabled: !!this.gateway.provider || this.paymentConfig().enabled,
       sandbox: this.gateway.provider === 'sepay-sandbox',
     };
+  }
+
+  /** Returning to the account screen also recovers a missed payment notification. */
+  private async reconcilePending(userId: string) {
+    const provider = this.gateway.provider;
+    if (!provider) return;
+    const order = await this.prisma.premiumOrder.findFirst({
+      where: { userId, status: 'pending', provider },
+      orderBy: { createdAt: 'desc' },
+    });
+    if (!order) return;
+    let verified: Awaited<ReturnType<SePayGateway['verifiedPayment']>>;
+    try {
+      verified = await this.checkPayment(order);
+    } catch (cause) {
+      // A payment-provider outage must not hide the account's existing plan.
+      if (cause instanceof ServiceUnavailableException) return;
+      throw cause;
+    }
+    if (verified)
+      await this.settle(order.code, verified.transactionId, provider);
   }
 
   /** One atomic conditional increment; parallel tabs cannot exceed the account limit. */

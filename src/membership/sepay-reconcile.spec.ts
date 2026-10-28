@@ -52,17 +52,33 @@ describe('SePay authenticated order reconciliation', () => {
       $queryRaw: jest.fn().mockResolvedValue([]),
     };
     const prisma = {
-      premiumOrder: {
-        findFirst: jest
+      user: {
+        findUnique: jest
           .fn()
-          .mockImplementation(
-            ({ where }: { where: { id: string; userId: string } }) =>
-              Promise.resolve(
-                where.id === order.id && where.userId === user.id
-                  ? { ...order }
-                  : null,
-              ),
-          ),
+          .mockImplementation(() => Promise.resolve({ ...user })),
+      },
+      assistantUsage: { findUnique: jest.fn().mockResolvedValue({ used: 0 }) },
+      premiumOrder: {
+        findFirst: jest.fn().mockImplementation(
+          ({
+            where,
+          }: {
+            where: {
+              id?: string;
+              userId: string;
+              status?: string;
+              provider?: string;
+            };
+          }) =>
+            Promise.resolve(
+              (!where.id || where.id === order.id) &&
+                where.userId === user.id &&
+                (!where.status || where.status === order.status) &&
+                (!where.provider || where.provider === order.provider)
+                ? { ...order }
+                : null,
+            ),
+        ),
         findFirstOrThrow: jest
           .fn()
           .mockImplementation(() => Promise.resolve({ ...order })),
@@ -113,6 +129,37 @@ describe('SePay authenticated order reconciliation', () => {
     expect(user.premiumUntil?.toISOString()).toBe(expiry);
     expect(update).toHaveBeenCalledTimes(1);
     expect(provider).toHaveBeenCalledTimes(1);
+  });
+  it('recovers payment from the account overview without reopening checkout', async () => {
+    reply(captured);
+    const { service, user, update } = setup();
+    const status = await service.status(user.id);
+    expect(status.plan).toBe('pro');
+    expect(status.limit).toBe(30);
+    expect(status.remaining).toBe(30);
+    expect(status.premiumUntil).toBeInstanceOf(Date);
+    const again = await service.status(user.id);
+    expect(again.premiumUntil).toEqual(status.premiumUntil);
+    expect(update).toHaveBeenCalledTimes(1);
+    expect(provider).toHaveBeenCalledTimes(1);
+  });
+  it('never reconciles another account while reading membership', async () => {
+    reply(captured);
+    const { service, update } = setup();
+    await service.status('other-owner');
+    expect(provider).not.toHaveBeenCalled();
+    expect(update).not.toHaveBeenCalled();
+  });
+  it('still returns the existing plan when SePay is temporarily unavailable', async () => {
+    provider.mockRejectedValueOnce(new Error('network outage'));
+    const { service, user, update } = setup();
+    user.plan = 'pro';
+    user.premiumUntil = new Date(Date.now() + 86400000);
+    expect((await service.status(user.id)).plan).toBe('pro');
+    expect(update).not.toHaveBeenCalled();
+    reply(captured);
+    expect((await service.status(user.id)).plan).toBe('pro');
+    expect(update).toHaveBeenCalledTimes(1);
   });
   it("never checks or credits another owner's order", async () => {
     reply(captured);

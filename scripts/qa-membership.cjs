@@ -27,7 +27,7 @@ const userIds = [];
     const order = pending[0];
     assert.equal(order.amount, 25000);assert.ok(order.qrUrl.includes(order.code));
     assert.equal(new URL(order.qrUrl).searchParams.get('amount'),'25000');
-    assert.equal(new URL(order.qrUrl).searchParams.get('des'),'Premium soma '+order.code);
+    assert.equal(new URL(order.qrUrl).searchParams.get('des'),'PREMIUM '+order.code);
     await assert.rejects(() => service.order(userIds[1], order.id), error => error.getStatus() === 404);
     const event = { id: 700000001, gateway: 'QA', transferType: 'in', accountNumber: '0000000000', transferAmount: 25000, content: order.code };
     await service.webhook('Apikey '+key, { ...event, transferAmount: 24999 });

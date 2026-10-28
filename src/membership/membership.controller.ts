@@ -2,6 +2,7 @@ import {
   Body,
   Controller,
   Get,
+  Header,
   Headers,
   HttpCode,
   Param,
@@ -20,6 +21,7 @@ export class MembershipController {
   constructor(private readonly membership: MembershipService) {}
 
   @Get()
+  @Header('Cache-Control', 'private, no-store')
   @UseGuards(AuthGuard)
   @ApiBearerAuth()
   @ApiOperation({
@@ -50,6 +52,7 @@ export class MembershipController {
   }
 
   @Get('orders/:id')
+  @Header('Cache-Control', 'private, no-store')
   @UseGuards(AuthGuard)
   @ApiBearerAuth()
   order(@CurrentUser() user: AuthUser, @Param('id') id: string) {

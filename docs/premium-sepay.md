@@ -16,7 +16,9 @@ SEPAY_PG_PUBLIC_BASE_URL=https://<public-payment-ingress>
 
 Secret chỉ được backend dùng để ký form bằng SDK chính thức `sepay-pg-node` và gọi API kiểm tra đơn. Frontend nhận form đã ký, số tiền cố định 25.000đ, mã đơn riêng và URL quay lại. Không dùng đoạn SDK có secret bên trong component React chạy ở trình duyệt.
 
-Mô tả đơn hiển thị là `Premium soma`. Với QR trực tiếp, số tiền được điền sẵn 25.000đ và nội dung là `Premium soma SOMA<mã đơn>`. Với QR do cổng SePay phát hành, nội dung chuyển khoản do SePay cấp (ví dụ `PAY...`) cần được giữ nguyên để tự đối soát; `order_description` là mô tả hiển thị, không phải tham số ghi đè nội dung chuyển khoản. QR tài khoản tĩnh không thay thế QR theo từng đơn của checkout.
+Mô tả đơn hiển thị là `PREMIUM`. Với QR trực tiếp, số tiền được điền sẵn 25.000đ và nội dung là `PREMIUM SOMA<mã đơn>`. Với QR do cổng SePay phát hành, nội dung chuyển khoản do SePay cấp (ví dụ `PAY...`) cần được giữ nguyên để tự đối soát; `order_description` là mô tả hiển thị, không phải tham số ghi đè nội dung chuyển khoản. QR tài khoản tĩnh không thay thế QR theo từng đơn của checkout.
+
+Đọc membership từ màn tài khoản cũng kiểm tra đơn chờ thuộc đúng người dùng/môi trường và xác minh qua API SePay, để khôi phục IPN bị bỏ lỡ mà không cần mở checkout. Dùng chung bộ nhớ đệm 4 giây với kiểm tra đơn; một đơn chỉ cộng thời hạn một lần. Nếu SePay tạm lỗi, vẫn trả gói hiện có từ DB, không tự cấp Premium. Phản hồi membership và đơn thanh toán dùng `Cache-Control: private, no-store`.
 
 ### QR tại trang tài khoản
 

@@ -4,16 +4,16 @@ import { NestFactory } from '@nestjs/core';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import { AppModule } from './app.module';
 import type { NestExpressApplication } from '@nestjs/platform-express';
+import { configureHttpSecurity } from './security/http-security';
 
 async function bootstrap() {
-  const app = await NestFactory.create<NestExpressApplication>(AppModule);
-  app.useBodyParser('json', { limit: '10mb' });
+  const app = await NestFactory.create<NestExpressApplication>(AppModule, {
+    bodyParser: false,
+  });
+  configureHttpSecurity(app);
 
   // Tiền tố chung cho mọi API — FE gọi qua /api/...
   app.setGlobalPrefix('api');
-
-  // Cho phép FE (cổng khác) gọi API.
-  app.enableCors({ origin: true, credentials: true });
 
   // Kiểm tra dữ liệu vào tự động theo DTO + class-validator.
   app.useGlobalPipes(
@@ -43,10 +43,15 @@ async function bootstrap() {
     .addTag('personal-docs', 'Tài liệu cá nhân và bộ đề riêng')
     .addTag('admin', 'Back office: quản trị nội dung, tài khoản, nhật ký')
     .build();
-  const document = SwaggerModule.createDocument(app, swaggerConfig);
-  SwaggerModule.setup('api/docs', app, document, {
-    swaggerOptions: { persistAuthorization: true },
-  });
+  if (
+    process.env.NODE_ENV !== 'production' ||
+    process.env.ENABLE_SWAGGER === 'true'
+  ) {
+    const document = SwaggerModule.createDocument(app, swaggerConfig);
+    SwaggerModule.setup('api/docs', app, document, {
+      swaggerOptions: { persistAuthorization: true },
+    });
+  }
 
   const port = process.env.PORT ?? 4000;
   await app.listen(port);

@@ -26,6 +26,7 @@ import { MailService } from './mail.service';
 import { MobileOAuthStartDto } from './dto/mobile-oauth.dto';
 import { mobileReturnUrl } from './mobile-return';
 import { activePlan } from '../membership/policy';
+import { passwordResetFrontend } from './password-reset-url';
 
 const scrypt = promisify(scryptCallback);
 const SESSION_LIFETIME_MS = 1000 * 60 * 60 * 24 * 30;
@@ -66,7 +67,7 @@ export class AuthService {
 
   capabilities() {
     return {
-      passwordReset: this.mail.configured,
+      passwordReset: this.mail.configured && Boolean(passwordResetFrontend()),
       mobileOAuth: Boolean(this.mobileOAuthBase()),
       oauth: {
         google: Boolean(
@@ -229,6 +230,12 @@ export class AuthService {
         'Chức năng gửi email chưa được cấu hình. Vui lòng liên hệ quản trị viên.',
       );
     }
+    const frontend = passwordResetFrontend();
+    if (!frontend) {
+      throw new ServiceUnavailableException(
+        'Địa chỉ web đặt lại mật khẩu chưa hợp lệ. Quản trị viên cần cấu hình PASSWORD_RESET_FRONTEND_URL bằng địa chỉ HTTPS truy cập được.',
+      );
+    }
     const email = dto.email.trim().toLowerCase();
     const user = await this.prisma.user.findUnique({
       where: { passwordEmail: email },
@@ -246,9 +253,6 @@ export class AuthService {
           expiresAt: new Date(Date.now() + 15 * 60 * 1000),
         },
       });
-      const frontend = (
-        process.env.FRONTEND_URL ?? 'http://localhost:3000'
-      ).replace(/\/$/, '');
       const link = `${frontend}/vi/dat-lai-mat-khau?token=${encodeURIComponent(token)}`;
       const delivery = await this.mail.sendPasswordReset(email, link);
       if (!delivery.sent) {

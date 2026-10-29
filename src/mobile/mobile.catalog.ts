@@ -1,18 +1,5 @@
 import { createHash } from 'node:crypto';
 
-export const MOBILE_MODELS = [
-  { id: 'ban-tay', file: 'hand_bones.glb', system: 'skeletal' },
-  { id: 'giai-phau-tim', file: 'heart_anatomy.glb', system: 'cardiovascular' },
-  { id: 'giai-phau-phoi', file: 'lung_anatomy.glb', system: 'visceral' },
-  { id: 'giai-phau-gan', file: 'liver_anatomy.glb', system: 'visceral' },
-  {
-    id: 'than-nao-day-so',
-    file: 'brainstem_cranial_nerves.glb',
-    system: 'nervous',
-  },
-] as const;
-
-export type MobileModelId = (typeof MOBILE_MODELS)[number]['id'];
 export type Structure = {
   id: string;
   meshName: string;
@@ -20,6 +7,9 @@ export type Structure = {
   english: string;
   latin: string;
   note: string;
+  meshNames?: string[];
+  sources?: { title: string; page?: number; url?: string }[];
+  landmarks?: { label: string; latin: string; note: string; source: string }[];
 };
 export type MobileModel = {
   id: string;
@@ -31,6 +21,8 @@ export type MobileModel = {
   viewerPath: string;
   structures: Structure[];
   attribution: string;
+  kind?: 'atlas' | 'glb';
+  thumbnailPath?: string;
 };
 export type MobileQuestion = {
   itemKey: string;
@@ -79,7 +71,7 @@ export function questionsFromModels(models: MobileModel[]): MobileQuestion[] {
         ],
         correctOptionId: fact.id,
         explanation: fact.note,
-        citation: `Thư viện Soma · ${model.title}. Thuật ngữ Terminologia Anatomica; mô hình Z-Anatomy (CC-BY-SA).`,
+        citation: `Thư viện Soma · ${model.title}. ${model.attribution}`,
       };
       result.push({ ...value, version: digest(value) });
     }

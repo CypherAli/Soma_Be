@@ -33,6 +33,7 @@ services:
       PORT: 4000
       API_URL: ${PUBLIC_API_URL:-http://localhost:4000/api}
       FRONTEND_URL: ${PUBLIC_SITE_URL:-http://localhost:3000}
+      MOBILE_WEB_URL: http://fe:3000
       MEDICAL_KB_ROOT: /app/resources/medical_kb
       MEDICAL_PATHOLOGY_INDEX: /app/resources/pathology-chunks.jsonl
     env_file:

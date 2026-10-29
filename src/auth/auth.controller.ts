@@ -4,6 +4,7 @@ import {
   Delete,
   Get,
   Headers,
+  Header,
   HttpCode,
   Ip,
   Param,
@@ -18,6 +19,7 @@ import {
 } from '@nestjs/common';
 import { ApiBearerAuth, ApiOperation, ApiTags } from '@nestjs/swagger';
 import { AuthService } from './auth.service';
+import { Throttle } from '@nestjs/throttler';
 import { ChangePasswordDto } from './dto/change-password.dto';
 import { ForgotPasswordDto } from './dto/forgot-password.dto';
 import { ResetPasswordDto } from './dto/reset-password.dto';
@@ -46,11 +48,13 @@ export class AuthController {
   }
 
   @Get('mobile/capabilities')
-  mobileCapabilities() {
-    return this.authService.mobileCapabilities();
+  mobileCapabilities(@Query('returnUrl') returnUrl?: string) {
+    return this.authService.mobileCapabilities(returnUrl);
   }
 
-  @Post('register') register(
+  @Throttle({ auth: { limit: 5, ttl: 60_000 } })
+  @Post('register')
+  register(
     @Body() dto: RegisterDto,
     @Headers('user-agent') userAgent?: string,
   ) {
@@ -59,6 +63,7 @@ export class AuthController {
 
   @HttpCode(200)
   @Post('login')
+  @Throttle({ auth: { limit: 12, ttl: 60_000 } })
   async login(
     @Body() dto: LoginDto,
     @Headers('user-agent') userAgent?: string,
@@ -84,18 +89,21 @@ export class AuthController {
 
   @HttpCode(200)
   @Post('forgot-password')
+  @Throttle({ auth: { limit: 3, ttl: 3_600_000 } })
   forgotPassword(@Body() dto: ForgotPasswordDto) {
     return this.authService.forgotPassword(dto);
   }
 
   @HttpCode(200)
   @Post('reset-password')
+  @Throttle({ auth: { limit: 10, ttl: 60_000 } })
   resetPassword(@Body() dto: ResetPasswordDto) {
     return this.authService.resetPassword(dto);
   }
 
   @ApiBearerAuth()
   @Get('me')
+  @Header('Cache-Control', 'private, no-store')
   me(@Headers('authorization') value?: string) {
     return this.authService.me(this.bearerToken(value));
   }
@@ -162,6 +170,19 @@ export class AuthController {
   }
 
   /** `link` = token phiên hiện tại: gắn thêm cách đăng nhập thay vì đăng nhập mới. */
+  @Post('mobile/oauth/:provider/link')
+  @ApiBearerAuth()
+  @HttpCode(200)
+  async mobileOAuthLink(
+    @Param('provider') provider: 'google' | 'github' | 'facebook',
+    @Body() dto: MobileOAuthStartDto,
+    @Headers('authorization') authorization?: string,
+  ) {
+    const token = this.bearerToken(authorization);
+    if (!token) throw new UnauthorizedException('Cần đăng nhập');
+    return { url: await this.authService.oauthUrl(provider, token, dto) };
+  }
+
   @Post('mobile/oauth/:provider')
   @HttpCode(200)
   async mobileOAuthStart(
@@ -234,12 +255,12 @@ export class AuthController {
       if (!mobile) throw error;
       await this.authService.discardOAuthState(mobile.id);
       return {
-        url: `soma://oauth?${new URLSearchParams({ state: mobile.state, error: providerError === 'access_denied' ? 'cancelled' : 'failed' })}`,
+        url: `${mobile.returnUrl}?${new URLSearchParams({ state: mobile.state, error: providerError === 'access_denied' ? 'cancelled' : 'failed' })}`,
       };
     }
     if ('mobileCode' in result) {
       return {
-        url: `soma://oauth?${new URLSearchParams({ code: result.mobileCode, state: result.mobileState })}`,
+        url: `${mobile?.returnUrl || 'soma://oauth'}?${new URLSearchParams({ code: result.mobileCode, state: result.mobileState })}`,
       };
     }
     const frontend = process.env.FRONTEND_URL ?? 'http://localhost:3000';

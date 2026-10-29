@@ -6,39 +6,32 @@ import {
   ServiceUnavailableException,
 } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
-import { existsSync, readFileSync } from 'node:fs';
-import { join, resolve } from 'node:path';
+import { existsSync, readFileSync, statSync } from 'node:fs';
+import { join, resolve, sep } from 'node:path';
 import { AuthService } from '../auth/auth.service';
 import { ContentService } from '../content/content.service';
 import { PrismaService } from '../prisma/prisma.service';
 import { StudyService } from '../study/study.service';
 import {
-  MOBILE_MODELS,
   digest,
   questionsFromModels,
   type MobileModel,
 } from './mobile.catalog';
 import { SubmitMobileAttemptDto } from './mobile.dto';
+import {
+  modelFromScene,
+  type MobileScene,
+  type PreparedManifest,
+  type PreparedTarget,
+} from './mobile.models';
 
-type Localized = { vi?: string; en?: string };
-type Scene = {
-  slug: string;
-  title: Localized;
-  description: Localized;
-  modelFile?: string;
-  hotspots: {
-    key: string;
-    meshName: string;
-    label?: Localized;
-    latinName?: string;
-    note?: Localized;
-  }[];
-};
+type Snapshot = Awaited<ReturnType<ContentService['snapshot']>>;
 
 @Injectable()
 export class MobileService {
   readonly root: string;
   private readonly assetOrigins: Set<string>;
+  private prepared?: { stamp: string; value: PreparedManifest };
   constructor(
     private readonly content: ContentService,
     private readonly auth: AuthService,
@@ -65,43 +58,16 @@ export class MobileService {
 
   async bootstrap() {
     const snapshot = await this.content.snapshot();
+    const manifest = this.manifest();
     const models: MobileModel[] = [];
-    for (const target of MOBILE_MODELS) {
-      const definition = [...this.content.definitions.values()].find(
-        (d) =>
-          d.source.startsWith('src/lib/scenes/') &&
-          (d.payload.value as unknown as Scene)?.slug === target.id,
-      );
-      if (!definition) continue;
-      const payload = (snapshot.documents[definition.id] ??
-        definition.payload) as { value: Scene };
-      const scene = payload.value;
-      if (!scene?.title?.vi || !Array.isArray(scene.hotspots)) continue;
-      models.push({
-        id: target.id,
-        title: scene.title.vi,
-        english: scene.title.en ?? '',
-        description: scene.description?.vi ?? '',
-        system: target.system,
-        modelPath: `/mobile/models/${target.id}/file`,
-        viewerPath: `/mobile/viewer/${target.id}`,
-        structures: scene.hotspots
-          .filter((h) => h.key && h.meshName && h.label?.vi)
-          .map((h) => ({
-            id: h.key,
-            meshName: h.meshName,
-            label: h.label!.vi!,
-            english: h.label?.en ?? '',
-            latin: h.latinName ?? '',
-            note: h.note?.vi ?? '',
-          })),
-        attribution:
-          'Z-Anatomy / BodyParts3D · CC-BY-SA. Nội dung và thuật ngữ: thư viện Soma.',
-      });
+    for (const target of manifest.models) {
+      const scene = this.scene(target, snapshot);
+      if (!scene?.title?.vi) continue;
+      models.push(modelFromScene(target, scene, manifest.atlasKey));
     }
     const questions = questionsFromModels(models);
     return {
-      schemaVersion: 1,
+      schemaVersion: 2,
       version: digest({ models, questions }),
       models,
       questions,
@@ -192,29 +158,102 @@ export class MobileService {
   }
 
   private target(id: string) {
-    const value = MOBILE_MODELS.find((m) => m.id === id);
+    const value = this.manifest().models.find((m) => m.id === id);
     if (!value)
       throw new NotFoundException('Mô hình không thuộc phiên bản app');
     return value;
   }
 
+  private manifest(): PreparedManifest {
+    const file = join(this.root, 'manifest.json');
+    if (!existsSync(file))
+      throw new ServiceUnavailableException(
+        'Chạy npm run prepare:backend trong Soma_App để đồng bộ thư viện web.',
+      );
+    const metadata = statSync(file),
+      stamp = `${metadata.mtimeMs}:${metadata.size}`;
+    if (this.prepared?.stamp === stamp) return this.prepared.value;
+    const value = JSON.parse(readFileSync(file, 'utf8')) as PreparedManifest;
+    if (
+      value.schemaVersion !== 2 ||
+      !Array.isArray(value.models) ||
+      !value.assets ||
+      !value.parts
+    )
+      throw new ServiceUnavailableException(
+        'Gói mô hình mobile cần được đồng bộ lại từ web.',
+      );
+    this.prepared = { stamp, value };
+    return value;
+  }
+
+  private scene(target: PreparedTarget, snapshot: Snapshot): MobileScene {
+    let sourceId = target.sourceId;
+    const path: string[] = [];
+    while (
+      sourceId &&
+      !this.content.definitions.has(sourceId) &&
+      !Object.hasOwn(snapshot.documents, sourceId)
+    ) {
+      const slash = sourceId.lastIndexOf('/');
+      if (slash <= sourceId.indexOf('#')) {
+        sourceId = undefined;
+        break;
+      }
+      path.unshift(sourceId.slice(slash + 1));
+      sourceId = sourceId.slice(0, slash);
+    }
+    const definition = sourceId
+      ? this.content.definitions.get(sourceId)
+      : undefined;
+    const payload = sourceId
+      ? (snapshot.documents[sourceId] ?? definition?.payload)
+      : undefined;
+    let value: unknown = (payload as { value?: unknown } | undefined)?.value;
+    for (const key of path)
+      value =
+        value && typeof value === 'object' && Object.hasOwn(value, key)
+          ? (value as Record<string, unknown>)[key]
+          : undefined;
+    const scene = (value as MobileScene | undefined) ?? target.definition;
+    // The web registry enriches skull/tooth scenes with shared surface landmarks.
+    // Preserve that enrichment when the CMS source document has no landmarks field.
+    return {
+      ...scene,
+      ...(scene.groups
+        ? {
+            groups: scene.groups.map((group) => ({
+              ...group,
+              landmarks:
+                group.landmarks ??
+                target.definition.groups?.find(
+                  (original) => original.key === group.key,
+                )?.landmarks,
+            })),
+          }
+        : {}),
+    };
+  }
+
+  asset(key: string) {
+    const asset = Object.hasOwn(this.manifest().assets, key)
+      ? this.manifest().assets[key]
+      : undefined;
+    if (!asset || !/^assets\/[a-f0-9]{24}\.[a-z0-9]+$/.test(asset.file))
+      throw new NotFoundException('Tài nguyên không thuộc thư viện mobile');
+    return { data: this.readAsset(asset.file), type: asset.type };
+  }
+
   async modelFile(id: string) {
     const target = this.target(id);
     const snapshot = await this.content.snapshot();
-    const doc = [...this.content.definitions.values()].find(
-      (d) =>
-        d.source.startsWith('src/lib/scenes/') &&
-        (d.payload.value as unknown as Scene)?.slug === id,
-    );
-    const scene = doc
-      ? (
-          (snapshot.documents[doc.id] ?? doc.payload) as unknown as {
-            value: Scene;
-          }
-        ).value
-      : null;
-    const file = scene?.modelFile;
-    let assetPath = file;
+    const scene = this.scene(target, snapshot);
+    const file = scene.replacement?.modelFile || scene.modelFile;
+    if (!file)
+      throw new NotFoundException(
+        'Mô hình này dùng dữ liệu Atlas, không có tệp GLB riêng.',
+      );
+    let assetPath: string | undefined = file;
     if (file && /^https?:\/\//.test(file)) {
       const url = new URL(file);
       assetPath =
@@ -237,15 +276,21 @@ export class MobileService {
         );
       return Buffer.from(asset.data);
     }
-    if (file && file !== `/models/${target.file}`)
+    const preparedAsset = Object.entries(this.manifest().assets).find(
+      ([, asset]) =>
+        asset.source === file && asset.type === 'model/gltf-binary',
+    );
+    if (!preparedAsset)
       throw new ServiceUnavailableException(
         'Model thay thế chưa nằm trong gói mobile. Cần chuẩn bị lại tài nguyên.',
       );
-    return this.readAsset(`models/${target.file}`);
+    return this.asset(preparedAsset[0]).data;
   }
 
   readAsset(key: string) {
-    const file = join(this.root, key);
+    const file = resolve(this.root, key);
+    if (!file.startsWith(this.root + sep))
+      throw new NotFoundException('Tài nguyên không tồn tại');
     if (!existsSync(file))
       throw new ServiceUnavailableException(
         'Thiếu tài nguyên app. Chạy npm run prepare:backend trong Soma_App.',
@@ -254,11 +299,55 @@ export class MobileService {
   }
 
   async viewer(id: string, dark = false) {
-    this.target(id);
-    const { models } = await this.bootstrap();
-    const model = models.find((m) => m.id === id);
-    if (!model) throw new NotFoundException('Chưa có nội dung mô hình');
-    const config = JSON.stringify({ model, dark }).replace(/</g, '\\u003c');
+    const target = this.target(id);
+    const snapshot = await this.content.snapshot();
+    const manifest = this.manifest(),
+      scene = this.scene(target, snapshot);
+    const model = modelFromScene(target, scene, manifest.atlasKey);
+    const ids = new Set(scene.groups?.flatMap((group) => group.parts) ?? []);
+    const parts = Object.fromEntries(
+      [...ids].map((partId) => {
+        const part = manifest.parts[partId];
+        if (!part)
+          throw new ServiceUnavailableException(
+            'Dữ liệu Atlas mới cần đồng bộ gói mobile.',
+          );
+        const published = snapshot.documents[
+          `learning:${partId}`
+        ] as unknown as
+          | {
+              value?: {
+                name?: { vi?: string };
+                latin?: string;
+                note?: { vi?: string };
+                sources?: typeof part.sources;
+              };
+            }
+          | undefined;
+        const learning = published?.value;
+        return [
+          partId,
+          {
+            ...part,
+            ...(learning?.name?.vi ? { label: learning.name.vi } : {}),
+            ...(learning?.latin ? { latin: learning.latin } : {}),
+            ...(learning?.note?.vi ? { note: learning.note.vi } : {}),
+            ...(learning?.sources ? { sources: learning.sources } : {}),
+          },
+        ];
+      }),
+    );
+    const systemsPayload = snapshot.documents[
+      'data:src/lib/humanAtlas/anatomy.ts#SYSTEMS'
+    ] as unknown as { value?: PreparedManifest['systems'] } | undefined;
+    const config = JSON.stringify({
+      model,
+      dark,
+      scene,
+      parts,
+      systems: systemsPayload?.value ?? manifest.systems,
+      atlasPath: `../assets/${manifest.atlasKey}`,
+    }).replace(/</g, '\\u003c');
     return this.readAsset('viewer/index.html')
       .toString('utf8')
       .replace('/*__SOMA_CONFIG__*/', `window.SOMA_VIEWER_CONFIG=${config};`);

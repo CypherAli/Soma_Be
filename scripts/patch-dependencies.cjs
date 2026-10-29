@@ -16,6 +16,15 @@ for (const key of Object.keys(packages)) {
   const folder = path.join(root, key);
   if (!key || !fs.existsSync(path.join(folder, 'package.json'))) continue;
   const { name, version } = JSON.parse(fs.readFileSync(path.join(folder, 'package.json'), 'utf8'));
+  if (name === 'deepmerge' && version === '4.3.1') {
+    for (const relative of ['index.js', 'dist/cjs.js', 'dist/umd.js']) {
+      const file = path.join(folder, relative);
+      if (fs.existsSync(file)) patch(file,
+        'return Object.keys(target).concat(getEnumerableOwnPropertySymbols(target))',
+        "// SOMA security: filter prototype-sensitive keys before any destination writes.\n\treturn Object.keys(target).concat(getEnumerableOwnPropertySymbols(target)).filter(function(key) { return key !== '__proto__' && key !== 'constructor' && key !== 'prototype' })",
+        'SOMA security: filter prototype-sensitive keys');
+    }
+  }
   if (name === 'braces' && version === '3.0.3') {
     // GHSA-vfj7-8cjw-p6xm: reject deep input before AST parsing and recursive walkers.
     patch(path.join(folder, 'lib/parse.js'), '      depth++;', "      depth++;\n      // SOMA security: bound brace nesting before recursive walkers.\n      if (depth > 64) throw new RangeError('Brace nesting exceeds 64 levels');", 'SOMA security: bound brace');

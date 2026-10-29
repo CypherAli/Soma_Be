@@ -5,9 +5,39 @@ import type { AuthService } from '../auth/auth.service';
 import type { PrismaService } from '../prisma/prisma.service';
 import type { StudyService } from '../study/study.service';
 import type { ConfigService } from '@nestjs/config';
+import { mkdtempSync, writeFileSync, rmSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
 
 describe('mobile CMS replacement asset references', () => {
+  const roots: string[] = [];
+  afterEach(() => {
+    for (const root of roots.splice(0))
+      if (root.startsWith(join(tmpdir(), 'soma-mobile-assets-')))
+        rmSync(root, { recursive: true, force: true });
+  });
   function setup(file: string) {
+    const root = mkdtempSync(join(tmpdir(), 'soma-mobile-assets-'));
+    roots.push(root);
+    writeFileSync(
+      join(root, 'manifest.json'),
+      JSON.stringify({
+        schemaVersion: 2,
+        atlasKey: '',
+        assets: {},
+        parts: {},
+        systems: [],
+        models: [
+          {
+            id: 'ban-tay',
+            kind: 'glb',
+            system: 'skeletal',
+            sourceId: 'scene',
+            definition: { slug: 'ban-tay' },
+          },
+        ],
+      }),
+    );
     const content = {
       definitions: new Map([
         [
@@ -35,7 +65,11 @@ describe('mobile CMS replacement asset references', () => {
       {} as StudyService,
       {
         get: (key: string) =>
-          key === 'API_URL' ? 'https://api.soma.test/api' : undefined,
+          key === 'API_URL'
+            ? 'https://api.soma.test/api'
+            : key === 'MOBILE_ASSETS_DIR'
+              ? root
+              : undefined,
       } as ConfigService,
     );
     return { service, content };

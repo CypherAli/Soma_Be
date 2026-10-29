@@ -17,10 +17,18 @@ import { PersonalDocsModule } from './personal-docs/personal-docs.module';
 import { AdminModule } from './admin/admin.module';
 import { ContentModule } from './content/content.module';
 import { MobileModule } from './mobile/mobile.module';
+import { MembershipModule } from './membership/membership.module';
+import { APP_GUARD } from '@nestjs/core';
+import { ThrottlerGuard, ThrottlerModule } from '@nestjs/throttler';
+import { rateLimits } from './security/rate-limits';
 
 @Module({
   imports: [
-    ConfigModule.forRoot({ isGlobal: true }),
+    ThrottlerModule.forRoot(rateLimits),
+    ConfigModule.forRoot({
+      isGlobal: true,
+      envFilePath: ['.env.sepay.local', '.env'],
+    }),
     PrismaModule,
     SpeciesModule,
     AnatomySystemsModule,
@@ -36,8 +44,9 @@ import { MobileModule } from './mobile/mobile.module';
     AdminModule,
     ContentModule,
     MobileModule,
+    MembershipModule,
   ],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [AppService, { provide: APP_GUARD, useClass: ThrottlerGuard }],
 })
 export class AppModule {}

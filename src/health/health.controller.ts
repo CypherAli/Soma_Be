@@ -1,4 +1,4 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, ServiceUnavailableException } from '@nestjs/common';
 import { ApiOperation, ApiTags } from '@nestjs/swagger';
 import { PrismaService } from '../prisma/prisma.service';
 
@@ -10,15 +10,18 @@ export class HealthController {
   @Get()
   @ApiOperation({ summary: 'Kiểm tra API + kết nối database' })
   async check() {
-    let db = 'up';
     try {
       await this.prisma.$queryRaw`SELECT 1`;
     } catch {
-      db = 'down';
+      throw new ServiceUnavailableException({
+        status: 'degraded',
+        db: 'down',
+        timestamp: new Date().toISOString(),
+      });
     }
     return {
-      status: db === 'up' ? 'ok' : 'degraded',
-      db,
+      status: 'ok',
+      db: 'up',
       timestamp: new Date().toISOString(),
     };
   }

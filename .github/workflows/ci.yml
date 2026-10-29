@@ -14,5 +14,7 @@ jobs:
       - run: npm ci
       - run: npx prisma generate
       - run: npm run lint
+      - run: npm run test:security
+      - run: npm audit --audit-level=moderate
       - run: npx jest
       - run: npm run build

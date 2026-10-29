@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "contractHash": "bbd324e1eb6513db1fb2c629896fe00325c476cd0330db01c92f65745ed55bde",
+  "contractHash": "069a57df5049fc3af1b4652f8b30401bceeba2065cc1e940bf97335578c16d3c",
   "documents": [
     {
       "id": "atlas:FJ1252",
@@ -27024,9 +27024,12 @@
           "t1aqgvyh_13": "dừng ghi hình",
           "t1ur2uhg_8": "kiểm tra",
           "tgzxr0_13": "dừng kiểm tra",
+          "t1ggyvz7_15": "tách giải phẫu ",
+          "tssvlah_3": " độ",
           "tziaoyd_9": "Vision AI",
-          "t1abnl2h_34": "bg-[var(--ink)] text-[var(--surf)]",
-          "t14mni8q_46": "text-[var(--body-fg)] hover:bg-[var(--surf-2)]",
+          "tfegyk0_14": "Anatomy studio",
+          "teg8bur_5": "解剖工作室",
+          "tznubqk_24": "Không gian học giải phẫu",
           "t8e0rxk_3": " · ",
           "t1w01p1s_44": "Vision AI — điều khiển giải phẫu bằng cử chỉ",
           "t1ftns0b_45": "absolute inset-0 overflow-hidden bg-[#191c1f]",
@@ -27611,14 +27614,14 @@
           "tv7g1o8_61": "Máy này chưa cài giọng đọc tiếng Việt nên mình chưa đọc được.",
           "t1romyqn_9": "Ẩn trợ lý",
           "t1kx6i56_17": "Hiện lại Soma Bot",
-          "t2xjsmk_13": "Nghe liên tục",
-          "t1pa5n5r_51": "Đang nghe liên tục — nói lệnh, hoặc “Soma …” để hỏi",
-          "ts1uvf3_17": "Tắt nghe liên tục",
+          "t5t6hbf_25": "Trò chuyện bằng giọng nói",
+          "toum9h6_62": "Đang nghe — hỏi trực tiếp khi mở chat; gọi “Soma…” khi thu nhỏ",
+          "t7m6gav_25": "Dừng trò chuyện giọng nói",
           "t11pyhab_5": "Xong.",
           "t7psy06_30": "Không thực hiện được lệnh này.",
           "t1k5uu46_54": "Chưa hiểu lệnh “{0}”. Nói “trợ giúp” để nghe các lệnh.",
           "t1lrzer5_29": "Hết lượt hỏi của chế độ khách",
-          "t17yy8uj_146": "Khách chỉ hỏi được {0} câu mỗi phiên và hội thoại không được lưu lại. Đăng nhập để hỏi không giới hạn và giữ lại mạch hội thoại trên mọi thiết bị.",
+          "t1qrc7yq_97": "Đăng nhập để lưu hội thoại và dùng 10 câu hỏi/tháng ở gói Thường hoặc 30 câu/tháng ở gói Premium.",
           "txgrx4x_25": "Đăng nhập / Tạo tài khoản",
           "t7680pq_17": "Anatomy assistant",
           "tt8abtf_101": "Hi, I’m Soma Bot. I can look up atlas structures, explain terminology and open the relevant 3D model.",
@@ -27649,12 +27652,13 @@
           "t1y8we7i_58": "This device has no English text-to-speech voice installed.",
           "thqectx_14": "Hide assistant",
           "t1ruh4h9_19": "Show Soma Bot again",
-          "t1rp8936_10": "Hands-free",
-          "t1wynj0m_56": "Listening hands-free — say a command, or “Soma …” to ask",
-          "tnht7kk_15": "Stop hands-free",
+          "ts9iqn8_18": "Voice conversation",
+          "t1t56l99_60": "Listening — ask directly in chat; say “Soma…” when minimized",
+          "t288lu_23": "Stop voice conversation",
           "tn1act_5": "Done.",
           "t12v8hgm_38": "That command could not be carried out.",
           "t1g8umv0_23": "Guest questions used up",
+          "tcbt6yu_97": "Sign in to save your conversations and use 10 questions/month on Standard or 30/month on Premium.",
           "t1crsnfd_24": "Sign in / Create account",
           "t2xg5zw_4": "解剖助手",
           "t1cvb69_39": "你好，我是 Soma Bot。我可以检索图谱结构、解释术语并打开相关三维模型。",
@@ -27692,7 +27696,7 @@
           "t1hgjuvn_8": "无法执行该指令。",
           "tabkwrm_25": "没有听懂指令“{0}”。说“帮助”可听取指令列表。",
           "t18x3w43_9": "访客提问次数已用完",
-          "t1k7km13_46": "访客每次会话只能提问 {0} 次，且对话不会保存。登录后可无限提问，并在任何设备上保留对话。",
+          "t1afp59g_33": "登录以保存会话，普通套餐每月10次提问，Premium每月30次。",
           "t6l2hk2_5": "登录／注册",
           "t1d34awt_30": "Bệnh lý nào liên quan đến tim?",
           "t8v1xx4_28": "Mở cấu trúc gan trên mô hình",
@@ -28556,8 +28560,17 @@
           "t1hdhz7o_6": "黄疸、尿色深",
           "t1c5czrs_9": "长期发热、体重下降",
           "t1g1c6lr_19": "学习检索工具。不作诊断，不能替代就医。",
-          "t1b9u3qo_7": "i-spark",
-          "tw4keg7_7": "i-steth"
+          "t15rzt0y_45": "Open an article to read its prepared summary.",
+          "to8e15a_16": "请先打开文章，阅读已编写的摘要。",
+          "t11y14vn_45": "Mở một bài bệnh lý để đọc bản tóm tắt có sẵn.",
+          "t4f8j2q_24": "Prepared article summary",
+          "tj5urnk_8": "已编写的文章摘要",
+          "te9qges_28": "Bản tóm tắt có sẵn trong bài",
+          "tllawpc_7": "Tóm tắt",
+          "ti4c62b_7": "Summary",
+          "t11hciei_21": "Read prepared summary",
+          "t14g7y2z_6": "阅读已有摘要",
+          "t1fh24dg_18": "Đọc tóm tắt có sẵn"
         }
       }
     },
@@ -28740,7 +28753,10 @@
           "tw4keg7_7": "i-steth",
           "trjya1f_8": "i-search",
           "t837wgw_9": " is-blank",
-          "t7r1o4y_2": "3D"
+          "t7r1o4y_2": "3D",
+          "tn7l0h0_17": "Read full article",
+          "t9lkyis_4": "阅读全文",
+          "t17l5sha_19": "Đọc nội dung đầy đủ"
         }
       }
     },
@@ -29885,6 +29901,99 @@
       }
     },
     {
+      "id": "copy:src/components/settings/MembershipCard.tsx",
+      "title": "Chữ giao diện · MembershipCard",
+      "source": "src/components/settings/MembershipCard.tsx",
+      "category": "interface",
+      "payload": {
+        "texts": {
+          "t1vdu57g_13": "Gói tài khoản",
+          "t2uzgxh_4": "账户套餐",
+          "t1rlrvie_45": "Chế độ thử nghiệm · Chưa nhận thanh toán thật",
+          "t1xm8b08_15": "测试模式 · 尚未启用真实付款",
+          "tdm5kgu_7": "Premium",
+          "ts2uz9t_6": "Thường",
+          "t6y5tbl_2": "普通",
+          "tmmpb7h_21": "câu còn lại tháng này",
+          "t18mcddp_6": "本月剩余提问",
+          "tqz8jj2_16": "Lượt hỏi đã dùng",
+          "t1f4088g_6": "已用提问次数",
+          "t12c90s8_19": "Làm mới hạn mức vào",
+          "t7u3rp5_6": "额度重置日期",
+          "t2qnfe1_23": "Premium có hiệu lực đến",
+          "t1andlzp_12": "Premium 有效期至",
+          "ti0m0wq_2": "0đ",
+          "t11idt0w_13": "câu hỏi/tháng",
+          "t1w6f60x_5": "次提问/月",
+          "t1kbmn4l_42": "Toàn bộ mô hình, quiz và tài liệu cá nhân.",
+          "te6omzj_13": "全部模型、测验和个人文档。",
+          "t10h8bq5_7": "25.000đ",
+          "t1ck0vgn_5": "tháng",
+          "t11iflsc_53": "Giữ lượt đã dùng khi nâng cấp. Không tự động gia hạn.",
+          "t1l10l9i_16": "升级保留已使用次数，不自动续费。",
+          "t116rdh9_13": "Đang tạo đơn…",
+          "t7f2c4g_7": "正在创建订单…",
+          "th3zn2q_15": "Gia hạn Premium",
+          "tws82yy_10": "续费 Premium",
+          "tcmlaud_18": "Nâng cấp · 25.000đ",
+          "tpodis8_15": "升级 · 25,000 越南盾",
+          "t1abrk0h_31": "Thanh toán đang được thiết lập.",
+          "tp9otka_8": "支付正在设置中。",
+          "t1e4yqbi_34": "Tóm tắt có sẵn không trừ lượt hỏi.",
+          "t11klxyk_12": "已有摘要不消耗提问额度。",
+          "t8f0765_18": "Thanh toán Premium",
+          "t1mhr9x_10": "Premium 支付",
+          "t1pory7l_21": "Thanh toán thử nghiệm",
+          "t1tjhzs3_4": "测试付款",
+          "t14ye2am_22": "Chuyển khoản ngân hàng",
+          "t1uzoqwt_4": "银行转账",
+          "t1ur7eyd_22": "Premium soma · 25.000đ",
+          "t13v01s9_69": "Mã minh họa — không dùng ứng dụng ngân hàng để quét hoặc chuyển tiền.",
+          "t1hjwr6h_19": "仅为演示，请勿使用银行应用扫码或转账。",
+          "tlto0w8_55": "Quét bằng ứng dụng ngân hàng. Số tiền đã được điền sẵn.",
+          "t1vligzu_15": "使用银行应用扫码，金额已填好。",
+          "t1r1ykzb_61": "Mở trang thử nghiệm của SePay để mô phỏng thanh toán 25.000đ.",
+          "t13v3t5s_27": "打开 SePay 沙盒模拟支付 25,000 越南盾。",
+          "t1a1qj6q_49": "Tiếp tục đến SePay để quét QR thanh toán 25.000đ.",
+          "trboqqd_25": "前往 SePay 扫码支付 25,000 越南盾。",
+          "t1da1b4h_18": "Tiếp tục đến SePay",
+          "t1li4omq_8": "前往 SePay",
+          "t1sflhii_8": " is-test",
+          "tjuobv4_34": "QR minh họa, không thanh toán thật",
+          "tg9x2em_11": "演示二维码，非真实支付",
+          "t1cyoe2z_26": "Mã QR chuyển khoản 25.000đ",
+          "tc9929s_15": "25,000 越南盾转账二维码",
+          "t1l71big_27": "SePay Sandbox · QR minh họa",
+          "twvk2s4_16": "SePay 沙盒 · 演示二维码",
+          "tpqvdt_14": "VietQR · SePay",
+          "tn99dql_9": "Ngân hàng",
+          "t1de650f_2": "银行",
+          "t1fwb8bt_9": "Tài khoản",
+          "th6nnsa_2": "账户",
+          "t1yye11_10": "Người nhận",
+          "tc99lkt_3": "收款人",
+          "te14taz_7": "Số tiền",
+          "t1jl9r8z_2": "金额",
+          "tfe18yl_8": "Nội dung",
+          "t13vt695_2": "附言",
+          "t10ihjkr_95": "QR minh họa Sandbox; không chuyển tiền thật. Bấm giả lập để thử kích hoạt Premium ngay tại đây.",
+          "t1p6w1yc_23": "沙盒演示二维码，请勿真实转账，可在此模拟支付。",
+          "tjks6ss_14": "Đang xác nhận…",
+          "txzifz4_4": "确认中…",
+          "t1gr9k34_18": "Giả lập thanh toán",
+          "tiqzt6m_4": "模拟支付",
+          "t1tu0qgc_16": "Mở trang SePay ↗",
+          "t1kz536p_10": "打开 SePay ↗",
+          "t1yjvkms_69": "Đang chờ xác nhận thử nghiệm. Premium sẽ tự cập nhật trong khung này.",
+          "t14bmyeq_23": "等待测试确认，Premium 将在此自动更新。",
+          "t1bktlfc_114": "Đang chờ ngân hàng xác nhận. Giữ đúng số tiền và nội dung chuyển khoản; Premium sẽ tự cập nhật khi nhận được tiền.",
+          "t10rrxyt_34": "等待银行确认，请保留准确金额和附言，收款后自动开通 Premium。",
+          "tioo48j_49": "Thanh toán thành công. Premium đã được kích hoạt.",
+          "tpgtzjf_17": "付款成功，Premium 已开通。"
+        }
+      }
+    },
+    {
       "id": "copy:src/components/settings/parts.tsx",
       "title": "Chữ giao diện · parts",
       "source": "src/components/settings/parts.tsx",
@@ -29892,6 +30001,7 @@
       "payload": {
         "texts": {
           "t3vmxau_4": " pro",
+          "tdm5kgu_7": "Premium",
           "t8tu6a1_8": "st-error",
           "t1neax53_5": "st-ok",
           "t1ezk3cp_5": "alert",
@@ -29917,6 +30027,19 @@
           "t1qvkxm7_5": "light",
           "t1pq5lc5_4": "dark",
           "tc2h86b_6": " is-on"
+        }
+      }
+    },
+    {
+      "id": "copy:src/components/settings/ProfileTab.tsx",
+      "title": "Chữ giao diện · ProfileTab",
+      "source": "src/components/settings/ProfileTab.tsx",
+      "category": "interface",
+      "payload": {
+        "texts": {
+          "t1vv02jm_9": "Giáo viên",
+          "t7cu1px_7": "Teacher",
+          "t1r9ot5g_2": "教师"
         }
       }
     },
@@ -30822,6 +30945,24 @@
           "top7x7s_5": "người",
           "tiycml9_8": "offtopic",
           "t1wmo1vv_6": "lookup"
+        }
+      }
+    },
+    {
+      "id": "copy:src/lib/assistantQuota.ts",
+      "title": "Chữ giao diện · assistantQuota",
+      "source": "src/lib/assistantQuota.ts",
+      "category": "interface",
+      "payload": {
+        "texts": {
+          "t1vev9df_67": "Đăng nhập để hỏi trợ lý: Thường 10 câu/tháng, Premium 30 câu/tháng.",
+          "t1k57fv6_27": "请登录：普通套餐每月10次，Premium每月30次。",
+          "t1mhsmgp_118": "Bạn đã dùng hết lượt hỏi tháng này. Gói Thường có 10 câu, Premium có 30 câu/tháng. Bạn có thể xem gói trong Tài khoản.",
+          "t1g01x2z_41": "本月提问次数已用完。普通套餐每月10次，Premium每月30次，请查看账户套餐。",
+          "tky3i41_70": "Không xác minh được hạn mức tài khoản. Hãy đăng nhập lại hoặc thử sau.",
+          "t1i95i7l_18": "无法验证额度，请重新登录或稍后重试。",
+          "t1l4yg7o_58": "Chưa kết nối được dịch vụ tài khoản. Vui lòng thử lại sau.",
+          "t7e8afw_15": "账户服务暂不可用，请稍后重试。"
         }
       }
     },
@@ -42484,6 +42625,37 @@
       }
     },
     {
+      "id": "copy:src/lib/pathologySummary.ts",
+      "title": "Chữ giao diện · pathologySummary",
+      "source": "src/lib/pathologySummary.ts",
+      "category": "interface",
+      "payload": {
+        "texts": {
+          "t1scefju_9": "Tổng quan",
+          "t16brgb_21": "Lâm sàng và chẩn đoán",
+          "t1dmwebt_18": "Chẩn đoán hình ảnh",
+          "t1p6qbas_24": "Tiến triển và biến chứng",
+          "t1vapx54_18": "Điều trị tham khảo",
+          "tthnxru_8": "Overview",
+          "t1wxmn32_31": "Clinical findings and diagnosis",
+          "txxbx08_18": "Diagnostic imaging",
+          "t1nnkaxa_29": "Progression and complications",
+          "t1a7i8xa_19": "Treatment reference",
+          "t1989i0f_2": "概述",
+          "t1vpmhfq_5": "临床与诊断",
+          "t1xundtc_4": "医学影像",
+          "tslqzyh_6": "进展与并发症",
+          "t1ymbvsk_4": "参考治疗",
+          "tgq77j4_2": "vi",
+          "t1tjymlo_87": "No prepared summary is available for this article yet. Please consult the cited source.",
+          "t1v9eg3_20": "本篇尚无预先编写的摘要，请查阅所引来源。",
+          "t1aspozt_82": "Bài này chưa có bản tóm tắt biên soạn sẵn. Bạn có thể đọc giáo trình ở phần nguồn.",
+          "t17bth61_81": "Showing the prepared Vietnamese summary; an English version is not available yet.",
+          "tp6efv6_21": "暂无本篇译文，以下显示已编写的越南语摘要。"
+        }
+      }
+    },
+    {
       "id": "copy:src/lib/personalDocs.ts",
       "title": "Chữ giao diện · personalDocs",
       "source": "src/lib/personalDocs.ts",
@@ -51218,25 +51390,25 @@
           "t1380rnq_10": "Gói thường",
           "trzoxv2_9": "Free plan",
           "t196d7ae_4": "普通套餐",
-          "t39pdel_7": "Gói Pro",
-          "t1xwdqkb_8": "Pro plan",
-          "t1k909if_6": "Pro 套餐",
+          "tmx6icf_11": "Gói Premium",
+          "t29agn5_12": "Premium plan",
+          "tbpod5x_10": "Premium 套餐",
           "ts2uz9t_6": "Thường",
           "t7va5tn_4": "Free",
           "t6y5tbl_2": "普通",
-          "t1ecxypk_3": "Pro",
+          "tdm5kgu_7": "Premium",
           "t1vdu57g_13": "Gói tài khoản",
           "t8icj76_4": "Plan",
           "t1lt567m_2": "套餐",
-          "togv8v_106": "Gói thường dùng được toàn bộ mô hình, quiz và tài liệu cá nhân. Hạn mức hỏi trợ lý SomaBot tính theo ngày.",
-          "t1deunba_99": "The free plan covers every model, quiz and personal document. SomaBot questions are capped per day.",
-          "tnomlrk_35": "普通套餐可使用全部模型、测验与个人文档，SomaBot 提问按天限量。",
-          "tq9vmds_113": "Gói Pro sẽ mở hạn mức hỏi trợ lý và các tính năng học sâu hơn. Chưa mở bán — tài khoản của bạn đang ở gói thường.",
-          "t1wj2cjs_119": "Pro will lift the assistant quota and unlock deeper study features. Not on sale yet — your account is on the free plan.",
-          "tmdbs0e_42": "Pro 将放宽助手额度并解锁更多学习功能。尚未开放购买 — 你的账户目前为普通套餐。",
-          "t1ji3j11_25": "Tài khoản đang ở gói Pro.",
-          "th2j44g_32": "This account is on the Pro plan.",
-          "tmb13yf_12": "该账户为 Pro 套餐。",
+          "tg5rsct_86": "Gói thường gồm toàn bộ mô hình, quiz, tài liệu cá nhân và 10 câu hỏi trợ lý mỗi tháng.",
+          "t3vbm6f_95": "Standard includes all models, quizzes, personal documents and 10 assistant questions per month.",
+          "tr8m4jc_29": "普通套餐包含全部模型、测验、个人文档及每月10次助手提问。",
+          "t1xwpua3_93": "Premium có 30 câu hỏi trợ lý mỗi tháng, phí 25.000đ/tháng. Tóm tắt có sẵn không trừ lượt hỏi.",
+          "tk2agka_112": "Premium includes 30 assistant questions per month for 25,000 VND/month. Prepared summaries do not use the quota.",
+          "t1dtorkt_41": "Premium每月25,000越南盾，包含每月30次助手提问，已有摘要不消耗额度。",
+          "twmoy8n_29": "Tài khoản đang ở gói Premium.",
+          "t4d7yvy_36": "This account is on the Premium plan.",
+          "t1navolp_16": "该账户为 Premium 套餐。",
           "te28zj9_6": "Sắp có",
           "t14ho4vt_11": "Coming soon",
           "t1dm3bqa_4": "即将推出",
@@ -95177,6 +95349,37 @@
       }
     },
     {
+      "id": "data:src/lib/pathologySummary.ts#headings",
+      "title": "headings",
+      "source": "src/lib/pathologySummary.ts",
+      "category": "interface",
+      "payload": {
+        "value": {
+          "vi": [
+            "Tổng quan",
+            "Lâm sàng và chẩn đoán",
+            "Chẩn đoán hình ảnh",
+            "Tiến triển và biến chứng",
+            "Điều trị tham khảo"
+          ],
+          "en": [
+            "Overview",
+            "Clinical findings and diagnosis",
+            "Diagnostic imaging",
+            "Progression and complications",
+            "Treatment reference"
+          ],
+          "zh": [
+            "概述",
+            "临床与诊断",
+            "医学影像",
+            "进展与并发症",
+            "参考治疗"
+          ]
+        }
+      }
+    },
+    {
       "id": "data:src/lib/scenes/auditory.ts#auditoryScenes",
       "title": "auditoryScenes",
       "source": "src/lib/scenes/auditory.ts",
@@ -137013,9 +137216,9 @@
               "zh": "普通套餐"
             },
             "pro": {
-              "vi": "Gói Pro",
-              "en": "Pro plan",
-              "zh": "Pro 套餐"
+              "vi": "Gói Premium",
+              "en": "Premium plan",
+              "zh": "Premium 套餐"
             },
             "freeShort": {
               "vi": "Thường",
@@ -137023,9 +137226,9 @@
               "zh": "普通"
             },
             "proShort": {
-              "vi": "Pro",
-              "en": "Pro",
-              "zh": "Pro"
+              "vi": "Premium",
+              "en": "Premium",
+              "zh": "Premium"
             },
             "heading": {
               "vi": "Gói tài khoản",
@@ -137033,19 +137236,19 @@
               "zh": "套餐"
             },
             "freeBody": {
-              "vi": "Gói thường dùng được toàn bộ mô hình, quiz và tài liệu cá nhân. Hạn mức hỏi trợ lý SomaBot tính theo ngày.",
-              "en": "The free plan covers every model, quiz and personal document. SomaBot questions are capped per day.",
-              "zh": "普通套餐可使用全部模型、测验与个人文档，SomaBot 提问按天限量。"
+              "vi": "Gói thường gồm toàn bộ mô hình, quiz, tài liệu cá nhân và 10 câu hỏi trợ lý mỗi tháng.",
+              "en": "Standard includes all models, quizzes, personal documents and 10 assistant questions per month.",
+              "zh": "普通套餐包含全部模型、测验、个人文档及每月10次助手提问。"
             },
             "proBody": {
-              "vi": "Gói Pro sẽ mở hạn mức hỏi trợ lý và các tính năng học sâu hơn. Chưa mở bán — tài khoản của bạn đang ở gói thường.",
-              "en": "Pro will lift the assistant quota and unlock deeper study features. Not on sale yet — your account is on the free plan.",
-              "zh": "Pro 将放宽助手额度并解锁更多学习功能。尚未开放购买 — 你的账户目前为普通套餐。"
+              "vi": "Premium có 30 câu hỏi trợ lý mỗi tháng, phí 25.000đ/tháng. Tóm tắt có sẵn không trừ lượt hỏi.",
+              "en": "Premium includes 30 assistant questions per month for 25,000 VND/month. Prepared summaries do not use the quota.",
+              "zh": "Premium每月25,000越南盾，包含每月30次助手提问，已有摘要不消耗额度。"
             },
             "proActive": {
-              "vi": "Tài khoản đang ở gói Pro.",
-              "en": "This account is on the Pro plan.",
-              "zh": "该账户为 Pro 套餐。"
+              "vi": "Tài khoản đang ở gói Premium.",
+              "en": "This account is on the Premium plan.",
+              "zh": "该账户为 Premium 套餐。"
             },
             "soon": {
               "vi": "Sắp có",

@@ -29,7 +29,16 @@ export class MobileAccountController {
   @Header('Cache-Control', 'private, no-store')
   async overview(@Headers('authorization') authorization?: string) {
     const { user } = await this.auth.me(tokenOf(authorization));
-    return { user, membership: await this.membership.status(user.id) };
+    const membership = await this.membership.status(user.id);
+    // Payment reconciliation may activate Premium after the profile was read.
+    return {
+      user: {
+        ...user,
+        plan: membership.plan,
+        premiumUntil: membership.premiumUntil,
+      },
+      membership,
+    };
   }
   @Get('sessions')
   @Header('Cache-Control', 'private, no-store')

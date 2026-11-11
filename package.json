@@ -105,6 +105,13 @@
     "@nestjs/swagger": {
       "js-yaml": "^5.4.1"
     },
+    "glob": "^14.0.4",
+    "@typescript-eslint/typescript-estree": {
+      "minimatch": "^11.0.8"
+    },
+    "test-exclude": {
+      "minimatch": "^11.0.8"
+    },
     "body-parser": "^2.4.0",
     "multer": "^2.5.0"
   }

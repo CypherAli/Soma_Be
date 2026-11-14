@@ -2,11 +2,16 @@
 # cần OpenSSL mà Alpine không có sẵn.
 FROM node:24-slim AS deps
 WORKDIR /app
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends openssl \
+    && rm -rf /var/lib/apt/lists/*
 COPY package.json package-lock.json ./
 COPY scripts/patch-dependencies.cjs ./scripts/patch-dependencies.cjs
 COPY prisma ./prisma
 COPY prisma.config.ts ./
-RUN npm ci && npx prisma generate
+RUN --mount=type=cache,target=/root/.npm \
+    npm ci --fetch-retries=5 --fetch-retry-mintimeout=20000 --fetch-retry-maxtimeout=120000 \
+    && npx prisma generate
 
 FROM node:24-slim AS build
 WORKDIR /app
@@ -30,6 +35,7 @@ COPY --from=build /app/node_modules ./node_modules
 COPY --from=build /app/dist ./dist
 COPY --from=build /app/prisma ./prisma
 COPY --from=build /app/prisma.config.ts ./prisma.config.ts
+COPY --from=build /app/tsconfig.json ./tsconfig.json
 COPY --from=build /app/resources ./resources
 COPY package.json ./
 EXPOSE 4000

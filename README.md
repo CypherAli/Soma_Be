@@ -82,8 +82,42 @@ npm run start:prod
 Từ thư mục `đồ án`:
 
 ```bash
-docker compose -f soma_be/deploy/docker-compose.yml up --build
+docker compose -f soma_be/deploy/docker-compose.yml up --build -d
+docker compose -f soma_be/deploy/docker-compose.yml ps
 ```
+
+Compose chạy PostgreSQL, backend (4000), website (3000) và back office (3001).
+Backend chỉ được đánh dấu sẵn sàng khi `/api/health` trả thành công; FE/BO sẽ
+đợi trạng thái này. Lần đầu dùng một database trống, chạy seed **một lần** sau
+khi backend healthy để có dữ liệu mẫu:
+
+```bash
+docker compose -f soma_be/deploy/docker-compose.yml exec be npm run db:seed
+```
+
+Nếu cần cổng API giới hạn cho ứng dụng mobile, bật profile `mobile` (cổng 8083):
+
+```bash
+docker compose -f soma_be/deploy/docker-compose.yml --profile mobile up --build -d
+```
+
+Profile này chỉ đóng gói **gateway API**. Bản Expo web trên laptop vẫn chạy
+theo `Soma_App/README.md`; APK được build riêng và chạy trực tiếp trên Android,
+không chạy bên trong container. Với demo local, địa chỉ gateway là
+`http://127.0.0.1:8083/api`.
+
+Kiểm tra sau khi khởi động: mở `http://localhost:4000/api/health`,
+`http://localhost:3000`, `http://localhost:3001`; nếu bật profile mobile,
+kiểm tra thêm `http://localhost:8083/api/health`. Xem log và dừng stack bằng:
+
+```bash
+docker compose -f soma_be/deploy/docker-compose.yml logs -f
+docker compose -f soma_be/deploy/docker-compose.yml --profile mobile down
+```
+
+`down` giữ lại volume PostgreSQL và newsletter. Mật khẩu PostgreSQL trong Compose
+chỉ dành cho demo local; khi triển khai công khai phải dùng bí mật riêng và cấu
+hình địa chỉ HTTPS thật.
 
 Mẫu cấu hình nằm trong `deploy/.env.compose.example`. Khi cần, sao chép thành
 `deploy/.env` và điền cấu hình thật. Compose mount kho y khoa và chỉ mục bệnh

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "contractHash": "31164c28fd2e550a947690f8b2bce0889bf1a14c24b7915774830a984cce228d",
+  "contractHash": "d625133a2be46394676d362995cb8b0db069e7a307a44c5a36cec4b2e76789d5",
   "documents": [
     {
       "id": "atlas:FJ1252",
@@ -27031,6 +27031,8 @@
           "teg8bur_5": "解剖工作室",
           "tznubqk_24": "Không gian học giải phẫu",
           "t8e0rxk_3": " · ",
+          "t1rjmh4s_41": "Vision AI — anatomy controlled by gesture",
+          "tna25lp_18": "Vision AI — 手势控制解剖",
           "t1w01p1s_44": "Vision AI — điều khiển giải phẫu bằng cử chỉ",
           "t1ftns0b_45": "absolute inset-0 overflow-hidden bg-[#191c1f]",
           "t1wa75fd_6": "hidden",
@@ -30384,95 +30386,140 @@
           "t1ndnejh_10": "Nhìn trước",
           "t1s4m1z3_8": "Nhìn bên",
           "t1eu8f5e_8": "Nhìn sau",
+          "t16ihlzn_15": "Skeletal system",
+          "t1dzvq0j_4": "骨骼系统",
+          "t18ea8lw_15": "Muscular system",
+          "tx189s8_4": "肌肉系统",
+          "t1eqoqyr_5": "Heart",
+          "t82jqh3_2": "心脏",
+          "t1qmum2c_14": "Sensory organs",
+          "t1tbetx9_4": "感觉器官",
+          "t1uyoxvc_8": "Arteries",
+          "t109ww56_2": "动脉",
+          "t17kampk_5": "Veins",
+          "t15w4m5j_2": "静脉",
+          "t9sohja_14": "Nervous system",
+          "thi1c1g_4": "神经系统",
+          "t1qg2gtc_18": "Respiratory system",
+          "t1kqzsu3_4": "呼吸系统",
+          "t14gkz0a_16": "Digestive system",
+          "t1bjf8at_4": "消化系统",
+          "t9go6fy_14": "Urinary system",
+          "tuda2su_4": "泌尿系统",
+          "t13s9dw5_16": "Lymphatic system",
+          "tmrqo90_4": "淋巴系统",
+          "te6ix95_16": "Endocrine system",
+          "tgsag90_5": "内分泌系统",
+          "tsnhi1s_19": "Reproductive system",
+          "typt41u_4": "生殖系统",
+          "tw8z816_12": "Body surface",
+          "t1hpyfzy_2": "体表",
+          "t1qmnk4_17": "Connective tissue",
+          "tjzk3hr_4": "结缔组织",
+          "t17ratul_42": "Mid-sagittal cut (vertical sagittal plane)",
+          "t10ftewd_12": "正中矢状切（垂直矢状面）",
+          "t14zb6kv_33": "Transverse cut (horizontal plane)",
+          "t1p5jzbr_8": "横断切（水平面）",
+          "ti8aota_36": "Coronal cut (vertical coronal plane)",
+          "t7kb84d_10": "冠状切（垂直冠状面）",
+          "t8govk7_5": "vi-VN",
+          "t191jr7d_5": "en-US",
+          "taju3hv_5": "zh-CN",
           "t96awue_7": "checked",
           "t1ser8jf_9": "unchecked",
-          "t179wkws_34": "Không tải được danh mục giải phẫu.",
           "t1uti0e0_22": "KHO CẤU TRÚC GIẢI PHẪU",
+          "txumour_3": "结构库",
           "tzu219f_24": "CÁC CẤU TRÚC ĐÃ TÁCH RỜI",
+          "t1mojs7f_5": "结构已分离",
           "t10mst6z_24": "NGƯỜI TRƯỞNG THÀNH · NAM",
+          "t1h3lgi2_7": "成年 · 男性",
+          "tjx4kqk_25": "Quay lại thư viện mô hình",
+          "te1vol4_5": "返回模型库",
+          "t110t0c1_17": "Quay lại thư viện",
           "t17bfz69_15": "Atlas toàn thân",
+          "t11gg38d_4": "全身图谱",
           "t7r1o4y_2": "3D",
-          "t1mff4uk_13": " mảnh mô hình",
           "trpxtck_12": " BodyParts3D",
           "t13k73vs_15": "Bảng điều khiển",
+          "t1a1sprf_4": "控制面板",
           "t1oc52r3_6": "active",
-          "tuwzpgi_16": "Tìm một cấu trúc",
           "t1srx1ua_4": "Nhãn",
-          "tbydnm0_2": "标签",
-          "t1t3p50q_6": "Labels",
-          "t1yxcqsx_13": "Về bộ dữ liệu",
+          "t18o5le2_2": "标注",
           "t1b8ek32_11": "mobile-open",
-          "t1kyudil_17": "Các lớp giải phẫu",
-          "ttugg25_10": "Hệ cơ quan",
-          "tb84tuz_4": "Đóng",
-          "tal4s1w_6": "Tất cả",
-          "tafjexo_8": "Bộ xương",
-          "twik6ux_8": "Nội tạng",
           "tthi8u_7": "enabled",
           "t1e4z66j_12": "Chỉ hiện {0}",
+          "tggk3ju_6": "仅显示{0}",
           "t1u8ikk5_8": "Hiện {0}",
-          "tti3e9o_15": " mảnh đang hiện",
-          "t1k9tlh4_6": "Ẩn hết",
-          "t1rs5trg_11": "Mặt cắt lát",
+          "t1i6j3mt_5": "显示{0}",
           "tv0lcxv_15": "Bật mặt cắt lát",
-          "t1qc77u0_14": "Vị trí lát cắt",
-          "t96lbyh_9": "Đảo chiều",
+          "ttnehq_6": "开启断层切面",
           "t16nl6pg_12": "Tìm cấu trúc",
+          "t1cdumrc_4": "结构搜索",
           "t19ra6ws_13": "Đóng tìm kiếm",
+          "tre5pxf_4": "关闭搜索",
           "t15jemk0_28": "Heart, femur, cranial nerve…",
           "tcondb0_31": "Tìm theo tên cấu trúc giải phẫu",
+          "t11wjcw5_9": "按解剖结构名称搜索",
           "t1hbjo42_27": "Không có cấu trúc nào khớp.",
-          "tdlck0x_5": " mảnh",
+          "t1544576_8": "没有匹配的结构。",
+          "tildp1r_4": "mảnh",
+          "tc6zarf_3": "个部件",
           "tuegih7_62": "Hiện tối đa 80 kết quả. Gõ cụ thể hơn để tìm các cấu trúc nhỏ.",
+          "t7kky9e_30": "最多显示 80 条结果。输入更具体的关键词可找到更小的结构。",
           "te83iw7_122": "Tên cấu trúc theo BodyParts3D nên ở dạng tiếng Anh. Bắt đầu từ một tạng lớn, hoặc tìm trong toàn bộ 3.432 cấu trúc có tên.",
+          "t1vxnxfn_55": "结构名称沿用 BodyParts3D，因此为英文。建议从一个大型器官开始，或搜索全部 3,432 个具名结构。",
           "t1bklgx1_18": "Điều khiển máy ảnh",
-          "tlzyx2m_9": "Dừng xoay",
-          "t1y0refx_7": "Tự xoay",
+          "t424hj0_4": "视角控制",
           "t1twhp3z_29": "Đặt lại khung nhìn và các lớp",
-          "t1htndha_7": "Đặt lại",
+          "tlq7jsx_7": "重置视角与层次",
           "t5waqno_11": "Mở bảng lớp",
-          "t1n7vczl_18": "Tách rời giải phẫu",
+          "t1crk7xs_6": "打开层次面板",
           "t1qk7t94_5": "front",
-          "t1fjjft_11": "Nguyên khối",
-          "twkmjt3_9": "Từng mảnh",
           "t1gsfzvr_19": "Ghép lại và đặt lại",
-          "t11uk0e0_10": "Kéo để dời",
-          "t2bci89_11": "Kéo để xoay",
-          "t1e1s8d6_15": " Cuộn để phóng ",
-          "tvu1kix_20": " Bấm để xem chi tiết",
-          "t10tu2yr_21": "Nguồn &amp; ghi công ",
-          "tben2vu_21": "Đang chuẩn bị mô hình",
-          "t1mlz9av_12": "% · Đang tải",
+          "t139vg5i_5": "复原并重置",
+          "t1y2plyp_8": "Đang tải",
+          "t1suljud_4": "正在加载",
           "t1iiptlt_7": "Tải lại",
+          "t1ghz5wv_4": "重新加载",
           "t1nbwfiv_11": "is-isolated",
           "t1c2zejp_17": "Chi tiết cấu trúc",
+          "tttyxcr_4": "结构详情",
           "t10xo3xx_9": "GIẢI PHẪU",
+          "t1n0kdsc_2": "解剖",
           "t1uwrikz_10": "Mã tra cứu",
+          "tq1dbc5_4": "查询编号",
           "t1gwlxe6_17": "Số mảnh đang chọn",
+          "tf0oj8m_4": "已选部件",
           "t64vo65_23": "Các cấu trúc thành phần",
-          "t1inktkb_2": "Và",
-          "txwhien_10": " mảnh nữa.",
-          "t1u395bq_20": "Xem nguồn giải phẫu ",
-          "t1w8wzep_8": "Hiện lại",
-          "t9hfg1n_2": "Ẩn",
-          "tuacgl1_9": "Bỏ làm mờ",
-          "t1xeun96_6": "Làm mờ",
-          "t1u5g6ts_29": "Hiện lại giải phẫu xung quanh",
-          "t1lq9ysd_15": "Cô lập cấu trúc",
-          "t1m27zpi_7": "Bỏ chọn",
+          "t182k0rj_4": "组成部分",
+          "t1nei527_16": "Và {0} mảnh nữa.",
+          "t1sgrxei_11": "还有 {0} 个部件。",
+          "t1hmfhxu_19": "Xem nguồn giải phẫu",
+          "t6detrx_6": "查看解剖来源",
           "t1silae1_16": "Nguồn và phạm vi",
-          "ttjd110_19": "NGUỒN &amp; PHẠM VI",
+          "tc43vdp_5": "来源与范围",
+          "t7vhauv_15": "NGUỒN & PHẠM VI",
           "t1fhqf8m_27": "Một cơ thể, mở ra từng lớp.",
-          "t1j6pxpf_17": "Nam · BodyParts3D",
+          "t4osuq5_10": "一具身体，逐层展开。",
+          "t1lt5107_16": "男性 · BodyParts3D",
           "t154q55z_100": "2.234 mesh riêng lẻ và 3.432 cấu trúc có tên, lấy từ bộ giải phẫu tham chiếu người trưởng thành nam.",
+          "tqzqua5_39": "2,234 个独立网格与 3,432 个具名结构，取自成年男性参考解剖数据集。",
           "t12ro98n_156": "Bộ tham chiếu này không chứa mọi cấu trúc hay mọi biến thể giải phẫu ở người. Một cấu trúc có tên có thể gồm nhiều mảnh; mỗi mesh nguồn chỉ được vẽ một lần.",
+          "tkqfjnp_50": "该参考数据集并不包含人体的全部结构或解剖变异。一个具名结构可能由多个部件组成；每个源网格只绘制一次。",
           "t12d3tur_202": "Màu sắc và cách nhóm theo hệ là quy ước phục vụ việc học. Hình học đã được đơn giản hoá để chạy trên trình duyệt. Đây là tài liệu tham khảo phục vụ giáo dục, không phải công cụ chẩn đoán hay phẫu thuật.",
+          "t1dxth0y_50": "颜色与系统分组属于教学约定。几何模型已简化以便在浏览器中运行。本资料仅供教育参考，不用于诊断或手术。",
           "t17ry68g_13": "Nguồn dữ liệu",
+          "t16hya6u_4": "数据来源",
           "tvjl8bl_96": "BodyParts3D, © The Database Center for Life Science, giấy phép CC Attribution 4.0 International.",
-          "t8nwjhn_21": "Giấy phép bộ dữ liệu ",
-          "t8iq4df_29": "Hình học và siêu dữ liệu gốc ",
-          "tu51bqa_22": "Bài báo công bố nguồn ",
-          "t1j40dio_16": "Ghi công đầy đủ "
+          "tsch28w_90": "BodyParts3D，© The Database Center for Life Science，采用 CC Attribution 4.0 International 许可。",
+          "t1bc8gq1_20": "Giấy phép bộ dữ liệu",
+          "tvuo95a_5": "数据集许可",
+          "t1sl25ch_28": "Hình học và siêu dữ liệu gốc",
+          "tzja879_8": "原始几何与元数据",
+          "t1lcc1ti_21": "Bài báo công bố nguồn",
+          "t19mm657_4": "来源论文",
+          "t1ap8ru8_15": "Ghi công đầy đủ",
+          "ta66dln_4": "完整致谢"
         }
       }
     },
@@ -56329,6 +56376,111 @@
             "title": "Cắt trước sau (mặt phẳng đứng ngang)"
           }
         ]
+      }
+    },
+    {
+      "id": "data:src/components/viewer/atlas/AtlasViewer.tsx#CLIP_TITLES",
+      "title": "CLIP_TITLES",
+      "source": "src/components/viewer/atlas/AtlasViewer.tsx",
+      "category": "interface",
+      "payload": {
+        "value": {
+          "x": {
+            "en": "Mid-sagittal cut (vertical sagittal plane)",
+            "zh": "正中矢状切（垂直矢状面）"
+          },
+          "y": {
+            "en": "Transverse cut (horizontal plane)",
+            "zh": "横断切（水平面）"
+          },
+          "z": {
+            "en": "Coronal cut (vertical coronal plane)",
+            "zh": "冠状切（垂直冠状面）"
+          }
+        }
+      }
+    },
+    {
+      "id": "data:src/components/viewer/atlas/AtlasViewer.tsx#NUMBER_LOCALE",
+      "title": "NUMBER_LOCALE",
+      "source": "src/components/viewer/atlas/AtlasViewer.tsx",
+      "category": "interface",
+      "payload": {
+        "value": {
+          "vi": "vi-VN",
+          "en": "en-US",
+          "zh": "zh-CN"
+        }
+      }
+    },
+    {
+      "id": "data:src/components/viewer/atlas/AtlasViewer.tsx#SYSTEM_NAMES",
+      "title": "SYSTEM_NAMES",
+      "source": "src/components/viewer/atlas/AtlasViewer.tsx",
+      "category": "interface",
+      "payload": {
+        "value": {
+          "skeletal": {
+            "en": "Skeletal system",
+            "zh": "骨骼系统"
+          },
+          "muscular": {
+            "en": "Muscular system",
+            "zh": "肌肉系统"
+          },
+          "cardiac": {
+            "en": "Heart",
+            "zh": "心脏"
+          },
+          "sensory": {
+            "en": "Sensory organs",
+            "zh": "感觉器官"
+          },
+          "arterial": {
+            "en": "Arteries",
+            "zh": "动脉"
+          },
+          "venous": {
+            "en": "Veins",
+            "zh": "静脉"
+          },
+          "nervous": {
+            "en": "Nervous system",
+            "zh": "神经系统"
+          },
+          "respiratory": {
+            "en": "Respiratory system",
+            "zh": "呼吸系统"
+          },
+          "digestive": {
+            "en": "Digestive system",
+            "zh": "消化系统"
+          },
+          "urinary": {
+            "en": "Urinary system",
+            "zh": "泌尿系统"
+          },
+          "lymphatic": {
+            "en": "Lymphatic system",
+            "zh": "淋巴系统"
+          },
+          "endocrine": {
+            "en": "Endocrine system",
+            "zh": "内分泌系统"
+          },
+          "reproductive": {
+            "en": "Reproductive system",
+            "zh": "生殖系统"
+          },
+          "integumentary": {
+            "en": "Body surface",
+            "zh": "体表"
+          },
+          "connective": {
+            "en": "Connective tissue",
+            "zh": "结缔组织"
+          }
+        }
       }
     },
     {
@@ -278042,7 +278194,7 @@
         "value": {
           "sources": [],
           "topics": [
-            "he-thinh-giac/truoc-song",
+            "co-truoc-cot-song-co/truoc-song",
             "giai-phau-co/truoc-song"
           ]
         }
@@ -278120,7 +278272,7 @@
         "value": {
           "sources": [],
           "topics": [
-            "he-thinh-giac/truoc-song",
+            "co-truoc-cot-song-co/truoc-song",
             "giai-phau-co/truoc-song"
           ]
         }
@@ -278233,7 +278385,7 @@
         "value": {
           "sources": [],
           "topics": [
-            "he-thinh-giac/thang-dau",
+            "co-truoc-cot-song-co/thang-dau",
             "giai-phau-co/truoc-song"
           ]
         }
@@ -278276,7 +278428,7 @@
         "value": {
           "sources": [],
           "topics": [
-            "he-thinh-giac/thang-dau",
+            "co-truoc-cot-song-co/thang-dau",
             "giai-phau-co/truoc-song"
           ]
         }
@@ -278298,7 +278450,7 @@
           "topics": [
             "tuyen-noi-tiet/bac-thang",
             "giai-phau-co/bac-thang",
-            "he-thinh-giac/bac-thang"
+            "co-truoc-cot-song-co/bac-thang"
           ],
           "name": {
             "vi": "Cơ bậc thang trước",
@@ -278320,7 +278472,7 @@
           "topics": [
             "tuyen-noi-tiet/bac-thang",
             "giai-phau-co/bac-thang",
-            "he-thinh-giac/bac-thang"
+            "co-truoc-cot-song-co/bac-thang"
           ]
         }
       }
@@ -278335,7 +278487,7 @@
           "sources": [],
           "topics": [
             "giai-phau-co/bac-thang",
-            "he-thinh-giac/bac-thang"
+            "co-truoc-cot-song-co/bac-thang"
           ]
         }
       }
@@ -278523,7 +278675,7 @@
         "value": {
           "sources": [],
           "topics": [
-            "he-thinh-giac/truoc-song",
+            "co-truoc-cot-song-co/truoc-song",
             "giai-phau-co/truoc-song"
           ]
         }
@@ -278661,7 +278813,7 @@
         "value": {
           "sources": [],
           "topics": [
-            "he-thinh-giac/thang-dau",
+            "co-truoc-cot-song-co/thang-dau",
             "giai-phau-co/truoc-song"
           ]
         }
@@ -278704,7 +278856,7 @@
         "value": {
           "sources": [],
           "topics": [
-            "he-thinh-giac/thang-dau",
+            "co-truoc-cot-song-co/thang-dau",
             "giai-phau-co/truoc-song"
           ]
         }
@@ -278726,7 +278878,7 @@
           "topics": [
             "tuyen-noi-tiet/bac-thang",
             "giai-phau-co/bac-thang",
-            "he-thinh-giac/bac-thang"
+            "co-truoc-cot-song-co/bac-thang"
           ],
           "name": {
             "vi": "Cơ bậc thang trước",
@@ -278753,7 +278905,7 @@
           "topics": [
             "tuyen-noi-tiet/bac-thang",
             "giai-phau-co/bac-thang",
-            "he-thinh-giac/bac-thang"
+            "co-truoc-cot-song-co/bac-thang"
           ]
         }
       }
@@ -278768,7 +278920,7 @@
           "sources": [],
           "topics": [
             "giai-phau-co/bac-thang",
-            "he-thinh-giac/bac-thang"
+            "co-truoc-cot-song-co/bac-thang"
           ]
         }
       }
@@ -278891,7 +279043,7 @@
         "value": {
           "sources": [],
           "topics": [
-            "he-thinh-giac/truoc-song",
+            "co-truoc-cot-song-co/truoc-song",
             "giai-phau-co/truoc-song"
           ]
         }
@@ -278906,7 +279058,7 @@
         "value": {
           "sources": [],
           "topics": [
-            "he-thinh-giac/truoc-song",
+            "co-truoc-cot-song-co/truoc-song",
             "giai-phau-co/truoc-song"
           ]
         }
@@ -278932,7 +279084,7 @@
           ],
           "topics": [
             "da-giac-willis/dm-nao-truoc",
-            "tai-day-du/goc",
+            "dong-mach-nao-truoc/goc",
             "he-dong-mach-chu/vong-willis",
             "giai-phau-dau/mach"
           ],
@@ -278965,7 +279117,7 @@
           ],
           "topics": [
             "da-giac-willis/dm-nao-truoc",
-            "tai-day-du/goc",
+            "dong-mach-nao-truoc/goc",
             "he-dong-mach-chu/vong-willis",
             "giai-phau-dau/mach"
           ],
@@ -278998,7 +279150,7 @@
           ],
           "topics": [
             "da-giac-willis/dm-thong-truoc",
-            "tai-day-du/goc",
+            "dong-mach-nao-truoc/goc",
             "he-dong-mach-chu/vong-willis",
             "giai-phau-dau/mach"
           ],
@@ -279459,7 +279611,7 @@
         "value": {
           "sources": [],
           "topics": [
-            "tai-day-du/quanh"
+            "dong-mach-nao-truoc/quanh"
           ]
         }
       }
@@ -279473,7 +279625,7 @@
         "value": {
           "sources": [],
           "topics": [
-            "tai-day-du/quanh"
+            "dong-mach-nao-truoc/quanh"
           ]
         }
       }
@@ -279607,7 +279759,7 @@
         "value": {
           "sources": [],
           "topics": [
-            "tai-day-du/vien"
+            "dong-mach-nao-truoc/vien"
           ]
         }
       }
@@ -279621,7 +279773,7 @@
         "value": {
           "sources": [],
           "topics": [
-            "tai-day-du/vien"
+            "dong-mach-nao-truoc/vien"
           ]
         }
       }
@@ -279747,7 +279899,7 @@
         "value": {
           "sources": [],
           "topics": [
-            "tai-day-du/vien"
+            "dong-mach-nao-truoc/vien"
           ]
         }
       }
@@ -279761,7 +279913,7 @@
         "value": {
           "sources": [],
           "topics": [
-            "tai-day-du/vien"
+            "dong-mach-nao-truoc/vien"
           ]
         }
       }
@@ -279786,7 +279938,7 @@
           ],
           "topics": [
             "da-giac-willis/dm-canh-trong",
-            "tai-day-du/canh",
+            "dong-mach-nao-truoc/canh",
             "tam-giac-co/canh",
             "dong-mach-canh/canh-trong",
             "he-dong-mach-chu/cap-mau-nao",
@@ -279823,7 +279975,7 @@
           ],
           "topics": [
             "da-giac-willis/dm-canh-trong",
-            "tai-day-du/canh",
+            "dong-mach-nao-truoc/canh",
             "tam-giac-co/canh",
             "dong-mach-canh/canh-trong",
             "he-dong-mach-chu/cap-mau-nao",
@@ -280059,12 +280211,12 @@
           "sources": [
             {
               "title": "Bài giải phẫu Soma",
-              "path": "src/lib/humanAtlas/scenes (tai-day-du/nen)",
-              "url": "/giai-phau/mo-hinh/tai-day-du?focus=nen"
+              "path": "src/lib/humanAtlas/scenes (dong-mach-nao-truoc/nen)",
+              "url": "/giai-phau/mo-hinh/dong-mach-nao-truoc?focus=nen"
             }
           ],
           "topics": [
-            "tai-day-du/nen"
+            "dong-mach-nao-truoc/nen"
           ],
           "name": {
             "vi": "Động mạch trán–nền trong",
@@ -280090,12 +280242,12 @@
           "sources": [
             {
               "title": "Bài giải phẫu Soma",
-              "path": "src/lib/humanAtlas/scenes (tai-day-du/nen)",
-              "url": "/giai-phau/mo-hinh/tai-day-du?focus=nen"
+              "path": "src/lib/humanAtlas/scenes (dong-mach-nao-truoc/nen)",
+              "url": "/giai-phau/mo-hinh/dong-mach-nao-truoc?focus=nen"
             }
           ],
           "topics": [
-            "tai-day-du/nen"
+            "dong-mach-nao-truoc/nen"
           ],
           "name": {
             "vi": "Động mạch trán–nền trong",
@@ -280268,7 +280420,7 @@
         "value": {
           "sources": [],
           "topics": [
-            "tai-day-du/vien"
+            "dong-mach-nao-truoc/vien"
           ]
         }
       }
@@ -280282,7 +280434,7 @@
         "value": {
           "sources": [],
           "topics": [
-            "tai-day-du/vien"
+            "dong-mach-nao-truoc/vien"
           ]
         }
       }
@@ -280296,7 +280448,7 @@
         "value": {
           "sources": [],
           "topics": [
-            "tai-day-du/vien"
+            "dong-mach-nao-truoc/vien"
           ]
         }
       }
@@ -280310,7 +280462,7 @@
         "value": {
           "sources": [],
           "topics": [
-            "tai-day-du/vien"
+            "dong-mach-nao-truoc/vien"
           ]
         }
       }
@@ -280324,7 +280476,7 @@
         "value": {
           "sources": [],
           "topics": [
-            "tai-day-du/vien"
+            "dong-mach-nao-truoc/vien"
           ]
         }
       }
@@ -280338,7 +280490,7 @@
         "value": {
           "sources": [],
           "topics": [
-            "tai-day-du/vien"
+            "dong-mach-nao-truoc/vien"
           ]
         }
       }
@@ -280352,7 +280504,7 @@
         "value": {
           "sources": [],
           "topics": [
-            "tai-day-du/quanh"
+            "dong-mach-nao-truoc/quanh"
           ]
         }
       }
@@ -280366,7 +280518,7 @@
         "value": {
           "sources": [],
           "topics": [
-            "tai-day-du/quanh"
+            "dong-mach-nao-truoc/quanh"
           ]
         }
       }
@@ -281097,7 +281249,7 @@
         "value": {
           "sources": [],
           "topics": [
-            "tai-day-du/vien"
+            "dong-mach-nao-truoc/vien"
           ]
         }
       }
@@ -281111,7 +281263,7 @@
         "value": {
           "sources": [],
           "topics": [
-            "tai-day-du/vien"
+            "dong-mach-nao-truoc/vien"
           ]
         }
       }
@@ -281203,7 +281355,7 @@
             "dong-mach-canh/dot-song",
             "than-nao-day-so/than-nen",
             "goc-cau-tieu-nao/dot-song",
-            "he-thinh-giac/mach",
+            "co-truoc-cot-song-co/mach",
             "he-dong-mach-chu/cap-mau-nao",
             "so-nen-so/mach",
             "giai-phau-co/dm-canh",
@@ -281243,7 +281395,7 @@
             "dong-mach-canh/dot-song",
             "than-nao-day-so/than-nen",
             "goc-cau-tieu-nao/dot-song",
-            "he-thinh-giac/mach",
+            "co-truoc-cot-song-co/mach",
             "he-dong-mach-chu/cap-mau-nao",
             "so-nen-so/mach",
             "giai-phau-co/dm-canh",
@@ -281626,7 +281778,7 @@
           "topics": [
             "gian-nao-he-vien/hoi-dai",
             "hoi-vo-dai-nao/vien",
-            "tai-day-du/nao",
+            "dong-mach-nao-truoc/nao",
             "dai-nao/he-vien",
             "giai-phau-dau/dai-nao"
           ],
@@ -281660,7 +281812,7 @@
           ],
           "topics": [
             "gian-nao-he-vien/hoi-dai",
-            "tai-day-du/nao",
+            "dong-mach-nao-truoc/nao",
             "dai-nao/he-vien",
             "giai-phau-dau/dai-nao"
           ],
@@ -281709,7 +281861,7 @@
           ],
           "topics": [
             "co-mat-than-kinh-vii/the-chai",
-            "tai-day-du/nao",
+            "dong-mach-nao-truoc/nao",
             "dai-nao/the-chai",
             "nao-that-mang-nao/thanh",
             "hoi-vo-dai-nao/moc"
@@ -302296,7 +302448,7 @@
             "co-vung-gay/xuong",
             "giai-phau-co/xuong",
             "dong-mach-canh/moc",
-            "he-thinh-giac/xuong"
+            "co-truoc-cot-song-co/xuong"
           ],
           "name": {
             "vi": "Đốt đội (C1)",
@@ -302333,7 +302485,7 @@
             "co-vung-gay/xuong",
             "giai-phau-co/xuong",
             "dong-mach-canh/moc",
-            "he-thinh-giac/xuong"
+            "co-truoc-cot-song-co/xuong"
           ],
           "name": {
             "vi": "Đốt trục (C2)",
@@ -305508,7 +305660,7 @@
             "so-nen-so/cham",
             "co-vung-gay/xuong",
             "giai-phau-dau/so-nao",
-            "he-thinh-giac/xuong"
+            "co-truoc-cot-song-co/xuong"
           ],
           "name": {
             "vi": "Xương chẩm",
@@ -308443,7 +308595,7 @@
           "topics": [
             "khop-vai-khuyu/nach",
             "dong-mach-canh/duoi-don",
-            "he-thinh-giac/mach",
+            "co-truoc-cot-song-co/mach",
             "he-dong-mach-chu/nhanh-cung",
             "khop-uc-don/dm",
             "dong-mach-chi-tren/dm-duoi-don",
@@ -309659,7 +309811,7 @@
           "sources": [],
           "topics": [
             "dong-mach-canh/duoi-don",
-            "he-thinh-giac/mach",
+            "co-truoc-cot-song-co/mach",
             "he-dong-mach-chu/nhanh-cung",
             "khop-uc-don/dm",
             "trung-that/dm-chu",
@@ -315458,6 +315610,126 @@
       }
     },
     {
+      "id": "topic:co-truoc-cot-song-co/bac-thang",
+      "title": "Ba cơ bậc thang",
+      "source": "src/lib/humanAtlas/data/learning.generated.json",
+      "category": "explanations",
+      "payload": {
+        "value": {
+          "name": {
+            "vi": "Ba cơ bậc thang",
+            "en": "The three scalenes",
+            "zh": "三块斜角肌"
+          },
+          "latin": "Mm. scaleni anterior, medius, posterior",
+          "note": {
+            "vi": "Bậc thang trước bám củ cơ bậc thang ở sườn I. Dây hoành chạy chéo trên mặt trước cơ này. Tĩnh mạch dưới đòn đi trước cơ, còn động mạch dưới đòn đi sau.",
+            "en": "Scalenus anterior inserts on the scalene tubercle of rib 1. The phrenic nerve slants down across its front. The subclavian vein passes in front of it, the artery behind.",
+            "zh": "前斜角肌止于第1肋斜角肌结节，膈神经斜行于其前面。锁骨下静脉经其前方，锁骨下动脉经其后方。"
+          },
+          "slug": "co-truoc-cot-song-co",
+          "key": "bac-thang",
+          "parts": 6
+        }
+      }
+    },
+    {
+      "id": "topic:co-truoc-cot-song-co/mach",
+      "title": "Động mạch dưới đòn và đốt sống",
+      "source": "src/lib/humanAtlas/data/learning.generated.json",
+      "category": "explanations",
+      "payload": {
+        "value": {
+          "name": {
+            "vi": "Động mạch dưới đòn và đốt sống",
+            "en": "Subclavian and vertebral arteries",
+            "zh": "锁骨下动脉与椎动脉"
+          },
+          "latin": "A. subclavia · A. vertebralis",
+          "note": {
+            "vi": "Động mạch đốt sống chui vào lỗ mỏm ngang C6, trong tam giác giữa cơ dài cổ và bậc thang trước.",
+            "en": "The vertebral artery enters the C6 transverse foramen from the triangle between longus colli and scalenus anterior.",
+            "zh": "椎动脉自颈长肌与前斜角肌之间的三角进入C6横突孔。"
+          },
+          "slug": "co-truoc-cot-song-co",
+          "key": "mach",
+          "parts": 4
+        }
+      }
+    },
+    {
+      "id": "topic:co-truoc-cot-song-co/thang-dau",
+      "title": "Cơ thẳng đầu trước và ngoài",
+      "source": "src/lib/humanAtlas/data/learning.generated.json",
+      "category": "explanations",
+      "payload": {
+        "value": {
+          "name": {
+            "vi": "Cơ thẳng đầu trước và ngoài",
+            "en": "Rectus capitis anterior and lateralis",
+            "zh": "头前直肌与头外侧直肌"
+          },
+          "latin": "Mm. rectus capitis anterior et lateralis",
+          "note": {
+            "vi": "Hai cơ ngắn nối đốt đội với nền xương chẩm, gấp và nghiêng đầu tại khớp đội–chẩm.",
+            "en": "Two short muscles linking the atlas to the occipital base, flexing and tilting the head at the atlanto-occipital joint.",
+            "zh": "两块短肌连接寰椎与枕骨底，在寰枕关节处屈头和侧屈头。"
+          },
+          "slug": "co-truoc-cot-song-co",
+          "key": "thang-dau",
+          "parts": 4
+        }
+      }
+    },
+    {
+      "id": "topic:co-truoc-cot-song-co/truoc-song",
+      "title": "Cơ dài cổ và dài đầu",
+      "source": "src/lib/humanAtlas/data/learning.generated.json",
+      "category": "explanations",
+      "payload": {
+        "value": {
+          "name": {
+            "vi": "Cơ dài cổ và dài đầu",
+            "en": "Longus colli and longus capitis",
+            "zh": "颈长肌与头长肌"
+          },
+          "latin": "Mm. longus colli, longus capitis",
+          "note": {
+            "vi": "Cơ dài cổ có ba phần (chéo trên, dọc giữa, chéo dưới) ôm mặt trước thân đốt từ đốt đội tới T3. Thân giao cảm cổ nằm ngay trên mặt trước cơ.",
+            "en": "Longus colli has three parts (superior oblique, vertical, inferior oblique) hugging the vertebral bodies from atlas to T3. The cervical sympathetic trunk lies on its front.",
+            "zh": "颈长肌分上斜部、垂直部、下斜部，贴附寰椎至T3椎体前面。颈交感干位于其前面。"
+          },
+          "slug": "co-truoc-cot-song-co",
+          "key": "truoc-song",
+          "parts": 5
+        }
+      }
+    },
+    {
+      "id": "topic:co-truoc-cot-song-co/xuong",
+      "title": "Cột sống cổ, sườn I–II, xương chẩm (mốc)",
+      "source": "src/lib/humanAtlas/data/learning.generated.json",
+      "category": "explanations",
+      "payload": {
+        "value": {
+          "name": {
+            "vi": "Cột sống cổ, sườn I–II, xương chẩm (mốc)",
+            "en": "Cervical spine, ribs 1–2, occipital (landmarks)",
+            "zh": "颈椎、第1–2肋、枕骨（标志）"
+          },
+          "latin": "Vertebrae cervicales · Costae I–II · Os occipitale",
+          "note": {
+            "vi": "Mờ sẵn.",
+            "en": "Faded.",
+            "zh": "淡化。"
+          },
+          "slug": "co-truoc-cot-song-co",
+          "key": "xuong",
+          "parts": 15
+        }
+      }
+    },
+    {
       "id": "topic:co-vung-gay/ban-gai-dai",
       "title": "Cơ bán gai và cơ dài (đầu, cổ)",
       "source": "src/lib/humanAtlas/data/learning.generated.json",
@@ -318214,6 +318486,150 @@
           "slug": "dong-mach-chi-tren",
           "key": "xuong-moc",
           "parts": 32
+        }
+      }
+    },
+    {
+      "id": "topic:dong-mach-nao-truoc/canh",
+      "title": "Động mạch cảnh trong (nguồn)",
+      "source": "src/lib/humanAtlas/data/learning.generated.json",
+      "category": "explanations",
+      "payload": {
+        "value": {
+          "name": {
+            "vi": "Động mạch cảnh trong (nguồn)",
+            "en": "Internal carotid artery (source)",
+            "zh": "颈内动脉（来源）"
+          },
+          "latin": "A. carotis interna",
+          "note": {
+            "vi": "Chia tận thành động mạch não trước và não giữa ở mặt dưới não, cạnh chất thủng trước.",
+            "en": "Ends by dividing into the anterior and middle cerebral arteries under the brain, beside the anterior perforated substance.",
+            "zh": "在脑底前穿质旁分为大脑前动脉和大脑中动脉。"
+          },
+          "slug": "dong-mach-nao-truoc",
+          "key": "canh",
+          "parts": 2
+        }
+      }
+    },
+    {
+      "id": "topic:dong-mach-nao-truoc/goc",
+      "title": "Đoạn đầu (A1) và động mạch thông trước",
+      "source": "src/lib/humanAtlas/data/learning.generated.json",
+      "category": "explanations",
+      "payload": {
+        "value": {
+          "name": {
+            "vi": "Đoạn đầu (A1) và động mạch thông trước",
+            "en": "First segment (A1) and anterior communicating artery",
+            "zh": "A1段与前交通动脉"
+          },
+          "latin": "A. cerebri anterior (pars precommunicalis) · A. communicans anterior",
+          "note": {
+            "vi": "Động mạch thông trước ngắn, nối hai bên và là vị trí phình mạch não hay gặp nhất. Phình ở đây vỡ gây xuất huyết dưới nhện.",
+            "en": "The short anterior communicating artery links the two sides and is the commonest site of cerebral aneurysm; rupture causes subarachnoid haemorrhage.",
+            "zh": "前交通动脉短小，连接两侧，是颅内动脉瘤最常见部位，破裂致蛛网膜下腔出血。"
+          },
+          "slug": "dong-mach-nao-truoc",
+          "key": "goc",
+          "parts": 3
+        }
+      }
+    },
+    {
+      "id": "topic:dong-mach-nao-truoc/nao",
+      "title": "Thể chai và bán cầu (mốc)",
+      "source": "src/lib/humanAtlas/data/learning.generated.json",
+      "category": "explanations",
+      "payload": {
+        "value": {
+          "name": {
+            "vi": "Thể chai và bán cầu (mốc)",
+            "en": "Corpus callosum and hemispheres (landmarks)",
+            "zh": "胼胝体与大脑半球（标志）"
+          },
+          "latin": "Corpus callosum · Hemispheria",
+          "note": {
+            "vi": "Mờ sẵn. Bỏ mờ thể chai để thấy động mạch quanh thể chai ôm lấy nó.",
+            "en": "Faded. Unfade the corpus callosum to see the pericallosal artery wrapping it.",
+            "zh": "淡化。取消胼胝体淡化可见胼周动脉环绕之。"
+          },
+          "slug": "dong-mach-nao-truoc",
+          "key": "nao",
+          "parts": 3
+        }
+      }
+    },
+    {
+      "id": "topic:dong-mach-nao-truoc/nen",
+      "title": "Động mạch trán–nền trong",
+      "source": "src/lib/humanAtlas/data/learning.generated.json",
+      "category": "explanations",
+      "payload": {
+        "value": {
+          "name": {
+            "vi": "Động mạch trán–nền trong",
+            "en": "Medial frontobasal artery",
+            "zh": "额底内侧动脉"
+          },
+          "latin": "A. frontobasalis medialis",
+          "note": {
+            "vi": "Nhánh đầu tiên sau động mạch thông trước, nuôi mặt dưới trong thuỳ trán (hồi thẳng, hành khứu).",
+            "en": "The first branch after the anterior communicating artery, supplying the inferomedial frontal lobe (gyrus rectus, olfactory bulb).",
+            "zh": "前交通动脉后的第一支，供应额叶下内侧面（直回、嗅球）。"
+          },
+          "slug": "dong-mach-nao-truoc",
+          "key": "nen",
+          "parts": 2
+        }
+      }
+    },
+    {
+      "id": "topic:dong-mach-nao-truoc/quanh",
+      "title": "Động mạch quanh thể chai và nhánh trước chêm",
+      "source": "src/lib/humanAtlas/data/learning.generated.json",
+      "category": "explanations",
+      "payload": {
+        "value": {
+          "name": {
+            "vi": "Động mạch quanh thể chai và nhánh trước chêm",
+            "en": "Pericallosal artery and precuneal branch",
+            "zh": "胼周动脉与楔前支"
+          },
+          "latin": "A. pericallosa · R. precunealis",
+          "note": {
+            "vi": "Chạy sát mặt trên thể chai về sau, tới lồi thể chai. Nhánh trước chêm nuôi hồi trước chêm ở mặt trong thuỳ đỉnh.",
+            "en": "Runs back along the upper surface of the corpus callosum to the splenium. The precuneal branch supplies the precuneus on the medial parietal surface.",
+            "zh": "沿胼胝体上面向后至压部。楔前支供应顶叶内侧面的楔前叶。"
+          },
+          "slug": "dong-mach-nao-truoc",
+          "key": "quanh",
+          "parts": 4
+        }
+      }
+    },
+    {
+      "id": "topic:dong-mach-nao-truoc/vien",
+      "title": "Động mạch viền–thể chai và các nhánh",
+      "source": "src/lib/humanAtlas/data/learning.generated.json",
+      "category": "explanations",
+      "payload": {
+        "value": {
+          "name": {
+            "vi": "Động mạch viền–thể chai và các nhánh",
+            "en": "Callosomarginal artery and its branches",
+            "zh": "胼缘动脉及其分支"
+          },
+          "latin": "A. callosomarginalis et rami",
+          "note": {
+            "vi": "Chạy trong rãnh đai, cho các nhánh trán trong (trước, giữa, sau) và nhánh cạnh trung tâm. Nhánh cạnh trung tâm nuôi tiểu thuỳ cạnh trung tâm, nơi chỉ huy vận động chân và bàng quang.",
+            "en": "Runs in the cingulate sulcus and gives the internal frontal branches (anterior, intermediate, posterior) and the paracentral branch. The paracentral branch feeds the paracentral lobule, which controls the leg and bladder.",
+            "zh": "行于扣带沟内，发出额内侧支（前、中、后）和旁中央支。旁中央支供应旁中央小叶，支配下肢和膀胱。"
+          },
+          "slug": "dong-mach-nao-truoc",
+          "key": "vien",
+          "parts": 12
         }
       }
     },
@@ -323062,126 +323478,6 @@
           "slug": "he-sinh-san-nam",
           "key": "tui-tinh",
           "parts": 2
-        }
-      }
-    },
-    {
-      "id": "topic:he-thinh-giac/bac-thang",
-      "title": "Ba cơ bậc thang",
-      "source": "src/lib/humanAtlas/data/learning.generated.json",
-      "category": "explanations",
-      "payload": {
-        "value": {
-          "name": {
-            "vi": "Ba cơ bậc thang",
-            "en": "The three scalenes",
-            "zh": "三块斜角肌"
-          },
-          "latin": "Mm. scaleni anterior, medius, posterior",
-          "note": {
-            "vi": "Bậc thang trước bám củ cơ bậc thang ở sườn I. Dây hoành chạy chéo trên mặt trước cơ này. Tĩnh mạch dưới đòn đi trước cơ, còn động mạch dưới đòn đi sau.",
-            "en": "Scalenus anterior inserts on the scalene tubercle of rib 1. The phrenic nerve slants down across its front. The subclavian vein passes in front of it, the artery behind.",
-            "zh": "前斜角肌止于第1肋斜角肌结节，膈神经斜行于其前面。锁骨下静脉经其前方，锁骨下动脉经其后方。"
-          },
-          "slug": "he-thinh-giac",
-          "key": "bac-thang",
-          "parts": 6
-        }
-      }
-    },
-    {
-      "id": "topic:he-thinh-giac/mach",
-      "title": "Động mạch dưới đòn và đốt sống",
-      "source": "src/lib/humanAtlas/data/learning.generated.json",
-      "category": "explanations",
-      "payload": {
-        "value": {
-          "name": {
-            "vi": "Động mạch dưới đòn và đốt sống",
-            "en": "Subclavian and vertebral arteries",
-            "zh": "锁骨下动脉与椎动脉"
-          },
-          "latin": "A. subclavia · A. vertebralis",
-          "note": {
-            "vi": "Động mạch đốt sống chui vào lỗ mỏm ngang C6, trong tam giác giữa cơ dài cổ và bậc thang trước.",
-            "en": "The vertebral artery enters the C6 transverse foramen from the triangle between longus colli and scalenus anterior.",
-            "zh": "椎动脉自颈长肌与前斜角肌之间的三角进入C6横突孔。"
-          },
-          "slug": "he-thinh-giac",
-          "key": "mach",
-          "parts": 4
-        }
-      }
-    },
-    {
-      "id": "topic:he-thinh-giac/thang-dau",
-      "title": "Cơ thẳng đầu trước và ngoài",
-      "source": "src/lib/humanAtlas/data/learning.generated.json",
-      "category": "explanations",
-      "payload": {
-        "value": {
-          "name": {
-            "vi": "Cơ thẳng đầu trước và ngoài",
-            "en": "Rectus capitis anterior and lateralis",
-            "zh": "头前直肌与头外侧直肌"
-          },
-          "latin": "Mm. rectus capitis anterior et lateralis",
-          "note": {
-            "vi": "Hai cơ ngắn nối đốt đội với nền xương chẩm, gấp và nghiêng đầu tại khớp đội–chẩm.",
-            "en": "Two short muscles linking the atlas to the occipital base, flexing and tilting the head at the atlanto-occipital joint.",
-            "zh": "两块短肌连接寰椎与枕骨底，在寰枕关节处屈头和侧屈头。"
-          },
-          "slug": "he-thinh-giac",
-          "key": "thang-dau",
-          "parts": 4
-        }
-      }
-    },
-    {
-      "id": "topic:he-thinh-giac/truoc-song",
-      "title": "Cơ dài cổ và dài đầu",
-      "source": "src/lib/humanAtlas/data/learning.generated.json",
-      "category": "explanations",
-      "payload": {
-        "value": {
-          "name": {
-            "vi": "Cơ dài cổ và dài đầu",
-            "en": "Longus colli and longus capitis",
-            "zh": "颈长肌与头长肌"
-          },
-          "latin": "Mm. longus colli, longus capitis",
-          "note": {
-            "vi": "Cơ dài cổ có ba phần (chéo trên, dọc giữa, chéo dưới) ôm mặt trước thân đốt từ đốt đội tới T3. Thân giao cảm cổ nằm ngay trên mặt trước cơ.",
-            "en": "Longus colli has three parts (superior oblique, vertical, inferior oblique) hugging the vertebral bodies from atlas to T3. The cervical sympathetic trunk lies on its front.",
-            "zh": "颈长肌分上斜部、垂直部、下斜部，贴附寰椎至T3椎体前面。颈交感干位于其前面。"
-          },
-          "slug": "he-thinh-giac",
-          "key": "truoc-song",
-          "parts": 5
-        }
-      }
-    },
-    {
-      "id": "topic:he-thinh-giac/xuong",
-      "title": "Cột sống cổ, sườn I–II, xương chẩm (mốc)",
-      "source": "src/lib/humanAtlas/data/learning.generated.json",
-      "category": "explanations",
-      "payload": {
-        "value": {
-          "name": {
-            "vi": "Cột sống cổ, sườn I–II, xương chẩm (mốc)",
-            "en": "Cervical spine, ribs 1–2, occipital (landmarks)",
-            "zh": "颈椎、第1–2肋、枕骨（标志）"
-          },
-          "latin": "Vertebrae cervicales · Costae I–II · Os occipitale",
-          "note": {
-            "vi": "Mờ sẵn.",
-            "en": "Faded.",
-            "zh": "淡化。"
-          },
-          "slug": "he-thinh-giac",
-          "key": "xuong",
-          "parts": 15
         }
       }
     },
@@ -328534,150 +328830,6 @@
           "slug": "so-nen-so",
           "key": "yen",
           "parts": 7
-        }
-      }
-    },
-    {
-      "id": "topic:tai-day-du/canh",
-      "title": "Động mạch cảnh trong (nguồn)",
-      "source": "src/lib/humanAtlas/data/learning.generated.json",
-      "category": "explanations",
-      "payload": {
-        "value": {
-          "name": {
-            "vi": "Động mạch cảnh trong (nguồn)",
-            "en": "Internal carotid artery (source)",
-            "zh": "颈内动脉（来源）"
-          },
-          "latin": "A. carotis interna",
-          "note": {
-            "vi": "Chia tận thành động mạch não trước và não giữa ở mặt dưới não, cạnh chất thủng trước.",
-            "en": "Ends by dividing into the anterior and middle cerebral arteries under the brain, beside the anterior perforated substance.",
-            "zh": "在脑底前穿质旁分为大脑前动脉和大脑中动脉。"
-          },
-          "slug": "tai-day-du",
-          "key": "canh",
-          "parts": 2
-        }
-      }
-    },
-    {
-      "id": "topic:tai-day-du/goc",
-      "title": "Đoạn đầu (A1) và động mạch thông trước",
-      "source": "src/lib/humanAtlas/data/learning.generated.json",
-      "category": "explanations",
-      "payload": {
-        "value": {
-          "name": {
-            "vi": "Đoạn đầu (A1) và động mạch thông trước",
-            "en": "First segment (A1) and anterior communicating artery",
-            "zh": "A1段与前交通动脉"
-          },
-          "latin": "A. cerebri anterior (pars precommunicalis) · A. communicans anterior",
-          "note": {
-            "vi": "Động mạch thông trước ngắn, nối hai bên và là vị trí phình mạch não hay gặp nhất. Phình ở đây vỡ gây xuất huyết dưới nhện.",
-            "en": "The short anterior communicating artery links the two sides and is the commonest site of cerebral aneurysm; rupture causes subarachnoid haemorrhage.",
-            "zh": "前交通动脉短小，连接两侧，是颅内动脉瘤最常见部位，破裂致蛛网膜下腔出血。"
-          },
-          "slug": "tai-day-du",
-          "key": "goc",
-          "parts": 3
-        }
-      }
-    },
-    {
-      "id": "topic:tai-day-du/nao",
-      "title": "Thể chai và bán cầu (mốc)",
-      "source": "src/lib/humanAtlas/data/learning.generated.json",
-      "category": "explanations",
-      "payload": {
-        "value": {
-          "name": {
-            "vi": "Thể chai và bán cầu (mốc)",
-            "en": "Corpus callosum and hemispheres (landmarks)",
-            "zh": "胼胝体与大脑半球（标志）"
-          },
-          "latin": "Corpus callosum · Hemispheria",
-          "note": {
-            "vi": "Mờ sẵn. Bỏ mờ thể chai để thấy động mạch quanh thể chai ôm lấy nó.",
-            "en": "Faded. Unfade the corpus callosum to see the pericallosal artery wrapping it.",
-            "zh": "淡化。取消胼胝体淡化可见胼周动脉环绕之。"
-          },
-          "slug": "tai-day-du",
-          "key": "nao",
-          "parts": 3
-        }
-      }
-    },
-    {
-      "id": "topic:tai-day-du/nen",
-      "title": "Động mạch trán–nền trong",
-      "source": "src/lib/humanAtlas/data/learning.generated.json",
-      "category": "explanations",
-      "payload": {
-        "value": {
-          "name": {
-            "vi": "Động mạch trán–nền trong",
-            "en": "Medial frontobasal artery",
-            "zh": "额底内侧动脉"
-          },
-          "latin": "A. frontobasalis medialis",
-          "note": {
-            "vi": "Nhánh đầu tiên sau động mạch thông trước, nuôi mặt dưới trong thuỳ trán (hồi thẳng, hành khứu).",
-            "en": "The first branch after the anterior communicating artery, supplying the inferomedial frontal lobe (gyrus rectus, olfactory bulb).",
-            "zh": "前交通动脉后的第一支，供应额叶下内侧面（直回、嗅球）。"
-          },
-          "slug": "tai-day-du",
-          "key": "nen",
-          "parts": 2
-        }
-      }
-    },
-    {
-      "id": "topic:tai-day-du/quanh",
-      "title": "Động mạch quanh thể chai và nhánh trước chêm",
-      "source": "src/lib/humanAtlas/data/learning.generated.json",
-      "category": "explanations",
-      "payload": {
-        "value": {
-          "name": {
-            "vi": "Động mạch quanh thể chai và nhánh trước chêm",
-            "en": "Pericallosal artery and precuneal branch",
-            "zh": "胼周动脉与楔前支"
-          },
-          "latin": "A. pericallosa · R. precunealis",
-          "note": {
-            "vi": "Chạy sát mặt trên thể chai về sau, tới lồi thể chai. Nhánh trước chêm nuôi hồi trước chêm ở mặt trong thuỳ đỉnh.",
-            "en": "Runs back along the upper surface of the corpus callosum to the splenium. The precuneal branch supplies the precuneus on the medial parietal surface.",
-            "zh": "沿胼胝体上面向后至压部。楔前支供应顶叶内侧面的楔前叶。"
-          },
-          "slug": "tai-day-du",
-          "key": "quanh",
-          "parts": 4
-        }
-      }
-    },
-    {
-      "id": "topic:tai-day-du/vien",
-      "title": "Động mạch viền–thể chai và các nhánh",
-      "source": "src/lib/humanAtlas/data/learning.generated.json",
-      "category": "explanations",
-      "payload": {
-        "value": {
-          "name": {
-            "vi": "Động mạch viền–thể chai và các nhánh",
-            "en": "Callosomarginal artery and its branches",
-            "zh": "胼缘动脉及其分支"
-          },
-          "latin": "A. callosomarginalis et rami",
-          "note": {
-            "vi": "Chạy trong rãnh đai, cho các nhánh trán trong (trước, giữa, sau) và nhánh cạnh trung tâm. Nhánh cạnh trung tâm nuôi tiểu thuỳ cạnh trung tâm, nơi chỉ huy vận động chân và bàng quang.",
-            "en": "Runs in the cingulate sulcus and gives the internal frontal branches (anterior, intermediate, posterior) and the paracentral branch. The paracentral branch feeds the paracentral lobule, which controls the leg and bladder.",
-            "zh": "行于扣带沟内，发出额内侧支（前、中、后）和旁中央支。旁中央支供应旁中央小叶，支配下肢和膀胱。"
-          },
-          "slug": "tai-day-du",
-          "key": "vien",
-          "parts": 12
         }
       }
     },

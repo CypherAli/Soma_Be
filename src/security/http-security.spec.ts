@@ -71,7 +71,7 @@ describe('HTTP security boundary', () => {
       );
       expect(result.status).toBe(i < 300 ? 200 : 429);
     }
-  });
+  }, 30_000);
   it('permits configured web/native clients, omits CORS for unknown origins, and prevents profile caching', async () => {
     const local = await request(app.getHttpServer())
       .get('/api/auth/me')

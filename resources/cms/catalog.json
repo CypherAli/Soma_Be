@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "contractHash": "d625133a2be46394676d362995cb8b0db069e7a307a44c5a36cec4b2e76789d5",
+  "contractHash": "baf087695b405b9ce5f4c5b9222ea38745aa25091262e576e39d2c48b6b607d7",
   "documents": [
     {
       "id": "atlas:FJ1252",
@@ -27638,12 +27638,16 @@
           "t1sj70lk_23": "Tim có những buồng nào?",
           "t1brbka7_14": "Gan nằm ở đâu?",
           "t1wgk997_31": "Dây thần kinh giữa chi phối gì?",
-          "tv7g1o8_61": "Máy này chưa cài giọng đọc tiếng Việt nên mình chưa đọc được.",
+          "taq53h1_128": "Trình duyệt chưa có giọng đọc tiếng Việt. Hãy thêm giọng tiếng Việt trong cài đặt giọng nói của thiết bị rồi mở lại trình duyệt.",
           "t1romyqn_9": "Ẩn trợ lý",
           "t1kx6i56_17": "Hiện lại Soma Bot",
           "t5t6hbf_25": "Trò chuyện bằng giọng nói",
           "toum9h6_62": "Đang nghe — hỏi trực tiếp khi mở chat; gọi “Soma…” khi thu nhỏ",
           "t7m6gav_25": "Dừng trò chuyện giọng nói",
+          "t11vfi1n_13": "Đã tắt micro.",
+          "t1lxuurg_9": "tắt micro",
+          "tyhwoop_9": "dừng nghe",
+          "t1gavlrk_10": "ngừng nghe",
           "t11pyhab_5": "Xong.",
           "t7psy06_30": "Không thực hiện được lệnh này.",
           "t1k5uu46_54": "Chưa hiểu lệnh “{0}”. Nói “trợ giúp” để nghe các lệnh.",
@@ -27682,6 +27686,9 @@
           "ts9iqn8_18": "Voice conversation",
           "t1t56l99_60": "Listening — ask directly in chat; say “Soma…” when minimized",
           "t288lu_23": "Stop voice conversation",
+          "t149el8a_22": "Microphone turned off.",
+          "t1ewb5p4_23": "turn off the microphone",
+          "t1bn5oj4_14": "stop listening",
           "tn1act_5": "Done.",
           "t12v8hgm_38": "That command could not be carried out.",
           "t1g8umv0_23": "Guest questions used up",
@@ -27719,6 +27726,8 @@
           "t1pb60w9_4": "持续收听",
           "ttmehll_26": "正在持续收听——直接说指令，或说“Soma …”提问",
           "tysoj2b_6": "停止持续收听",
+          "t1x0q85w_7": "麦克风已关闭。",
+          "t1sd2g0g_5": "关闭麦克风",
           "tycdu6x_3": "完成。",
           "t1hgjuvn_8": "无法执行该指令。",
           "tabkwrm_25": "没有听懂指令“{0}”。说“帮助”可听取指令列表。",
@@ -27733,9 +27742,6 @@
           "t1pa5gio_21": "Xương trán nằm ở đâu?",
           "tdzw7v4_26": "Hộp sọ gồm những phần nào?",
           "t1193x5s_21": "Mở mô hình xương đỉnh",
-          "t8govk7_5": "vi-VN",
-          "taju3hv_5": "zh-CN",
-          "t191jr7d_5": "en-US",
           "twiz1w2_8": " is-open",
           "txnd2y_12": " is-thinking",
           "t7m3rt7_13": " is-listening",
@@ -54926,8 +54932,7 @@
           "t1lu1ipf_6": "device",
           "trqc1dw_6": "silent",
           "tgma3ow_11": "unsupported",
-          "t1qc7sfo_6": "failed",
-          "tj99vz3_2": "zh"
+          "t1qc7sfo_6": "failed"
         }
       }
     },
